@@ -1,7 +1,8 @@
 # Table of contents
 
-* [What is ETNA Trader?](README.md)
 ## ADMINISTRATOR GUIDE
+
+* [What is ETNA Trader?](README.md)
 * [Getting Started](getting-started/README.md)
   * [Signing Up](getting-started/signing-up.md)
   * [Private-Labeling](getting-started/private-labeling/README.md)
