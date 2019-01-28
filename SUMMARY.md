@@ -1,6 +1,5 @@
 # Table of contents
 
-
 * [What is ETNA Trader?](README.md)
 ## ADMINISTRATOR GUIDE
 * [Getting Started](getting-started/README.md)
