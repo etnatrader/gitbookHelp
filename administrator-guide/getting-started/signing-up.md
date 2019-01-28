@@ -1,5 +1,5 @@
 ---
-description: Learn how to sign up for ETNA Trader as an Administrator
+description: Sign Up for ETNA Trader as an administrator
 ---
 
 # Signing Up
