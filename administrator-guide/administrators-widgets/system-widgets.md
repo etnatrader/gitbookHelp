@@ -1,13 +1,13 @@
 # System Widgets
 
-## Introduction
+### Introduction
 
 ETNA Trader comes with a multitude of different trading widgets out of the box. These built-in widgets are more than enough for trading-related purposes; however, many companies prefer to extend the existing functionality with their own custom widgets. Suppose you need to embed a news feed from a particular website via iframe or perhaps you'd like to develop your own custom widget using JavaScript — ETNA Trader enables you to embed such widgets effortlessly. This functionality is provided via the **System Widgets** widget, and it enables developers to embed two types of custom widgets:
 
 1. Externally referenced content via HTML \(e.g. iframe\).
 2. Custom JavaScript widgets.
 
-## Adding the _System Widgets_ Widget
+### Adding the _System Widgets_ Widget
 
 To add the _**System Widgets**_ widget, click **Add Widget** and the click **System Widgets**.
 
@@ -28,7 +28,7 @@ The widget will appear, listing all of the current configurable widgets \(some o
 
 You can inspect the existing widgets by clicking **Edit**. To delete a widget, click **X**.
 
-## Adding a New Widget
+### Adding a New Widget
 
 To add a new widget, click **Add**.
 
@@ -38,17 +38,17 @@ The widget creation window will appear, prompting you to configure the new widge
 
 ![](../../.gitbook/assets/screenshot-2019-01-28-at-15.28.22.png)
 
-### Widget Type
+#### Widget Type
 
 As explained earlier, this is the name of the widget that circulates throughout the platform. Users will see the widget listed under this name in the widget list.
 
-### Groupable
+#### Groupable
 
 In ETNA Trader, groupable widgets collectively subscribe to all events that happen to any member of the group. Such widgets are linked by color — for example, you can have three widgets linked by the green color. In such scenario, if you perform some action in one of these widget, this event will be extrapolated to the other widgets from this group.
 
 For example, suppose you have two widgets in one group — **Trade Ticket** and **Market Depth**. Specifying **TSLA** in the **Trade Ticket** will automatically display the market depth for the Tesla stock in the **Market Depth** widget. What this means is that you should only group certain widgets in case they have common properties \(ticker symbol, for instance\).
 
-### Widget Markup
+#### Widget Markup
 
 Widget Markup is the HTML part of the widget. If you want to embed an iframe or some other HTML text into the widget — this is the place to do it. Alternatively, you can use this text field to store some ancillary HTML elements for your JavaScript in the next text field.
 
@@ -63,7 +63,7 @@ Here's an example of the widget markup from the **Stock Twits** widget:
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Widget Script
+#### Widget Script
 
 Widget Script is the main text field where you specify the JavaScript code that will be interpreted at the time the widget is displayed. In the following example you can see the JavaScript code of the **Stock Twits** widget. Notice that the script references the HTML elements from the **Widget Markup** text field. 
 
