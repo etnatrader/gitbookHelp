@@ -57,9 +57,7 @@ Here's an example of the widget markup from the **Stock Twits** widget:
 {% code-tabs %}
 {% code-tabs-item title="Widget Markup" %}
 ```markup
-<div i
-d="stocktwits-widget-news" width: '100%', height: '100%>
-</div>
+<div id="stocktwits-widget-news" width: '100%', height: '100%> </div>
 <a href='http://stocktwits.com' style='font-size: 0px; ''>StockTwits</a>
 ```
 {% endcode-tabs-item %}
@@ -67,9 +65,7 @@ d="stocktwits-widget-news" width: '100%', height: '100%>
 
 ### Widget Script
 
-Widget Script is the main text field where you specify the JavaScript code that will be interpreted at the time the widget is displayed.
-
-In the following example you can see the JavaScript code of the **Stock Twits** widget. Notice that the script references the HTML elements from the **Widget Markup** text field.
+Widget Script is the main text field where you specify the JavaScript code that will be interpreted at the time the widget is displayed. In the following example you can see the JavaScript code of the **Stock Twits** widget. Notice that the script references the HTML elements from the **Widget Markup** text field. 
 
 {% code-tabs %}
 {% code-tabs-item title="Widget Script" %}
@@ -108,4 +104,40 @@ STWT.Widget({container: 'stocktwits-widget-news', symbol: '%symbol%', width: wid
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+Also, it's worth mentioning that you could leverage our [external API](https://etnatraderapi.atlassian.net/wiki) to fetch market quotes, users' positions, etc.
+
+#### Refresh Timeout
+
+By default, the content in the widget is never refreshed after it's initially loaded. This is because the **Refresh Timeout** option is set to 0 \(seconds\). If you want your content to be refreshed with a certain frequency, specify the required refresh delay in seconds, and the content in the widget will be updated accordingly.
+
+Once you're done configuring the script, click **OK**.
+
+### Adding Custom Widgets to Users
+
+By default, ETNA Trader does not automatically add new widgets to all new or existing users. If you want to add the newly created widget to certain users, it has to be done through the [user groups widget](managing-user-groups.md#widgets). Move the widget from the **Available** column to the **Permitted** column, and then click **OK**.
+
+![](../../.gitbook/assets/screenshot-2019-01-28-at-20.53.42.png)
+
+From now on the users belonging to this user group will be able to add this widget to their web terminal.
+
+![](../../.gitbook/assets/screenshot-2019-01-28-at-21.00.28.png)
+
+### User-Created Widgets
+
+The previously discussed **System Widgets** widget is available exclusively to administrators. In other words, regular users are unable to create such widgets. What users can do, however, is create their own personal widgets that are available only for them. They can do that via the **Widget Designer** widget.
+
+![](../../.gitbook/assets/screenshot-2019-01-28-at-21.09.38.png)
+
+This widget's functionality is identical to that of **System Widgets**. A user should simply click on the little gear icon and proceed to configure their own custom widget using HTML and JavaScript.
+
+![](../../.gitbook/assets/screenshot-2019-01-28-at-21.11.27.png)
+
+![](../../.gitbook/assets/screenshot-2019-01-28-at-21.18.11.png)
+
+Once the user is finished configuring the widget, they should click **OK**. And the widget will immediately display the required content. As stated previously, user-created widgets are available only to them personally; other users or administrators will not have access to that widget.
+
+{% hint style="info" %}
+If you need a more sophisticated widget with rich functionality and deep integration with ETNA Trader, feel free to contact our [support team](https://www.etnasoft.com/contact-support/).
+{% endhint %}
 
