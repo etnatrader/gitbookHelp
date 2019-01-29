@@ -54,19 +54,27 @@ The action creation window will appear, prompting you to configure the following
 
 ![](../../../.gitbook/assets/screenshot-2019-01-29-at-18.55.26.png)
 
+Once you're finished configuring the action, click **OK**.
 
+### Mapping Actions to Hotkeys
 
+As an administrator, once you have configured all of the required actions, go ahead and map those actions to the default user's hotkeys. These hotkeys will automatically be available to each new user, as the default user's settings are always copied to new users. Actions can be mapped to hotkeys through the **Hotkeys** widget.
 
+![](../../../.gitbook/assets/screenshot-2019-01-29-at-19.58.23.png)
 
+This widget lists all of the existing shortcuts, and it also allows you to modify or remove them. To create a new hotkey, click **Add**.
 
+![](../../../.gitbook/assets/screenshot-2019-01-29-at-20.02.36.png)
 
+In the appeared pop-up window, indicate the following parameters:
 
+* **Shortcut**. This is the key combination that will trigger the associated action.
+* **Action**. Expand the drop-down menu and select one of the actions you've created on the **System Hotkey Actions** widget.
+* **Parameters**. These are the parameters that are passed to the action's JavaScript methods. 
 
+![](../../../.gitbook/assets/screenshot-2019-01-29-at-20.09.40.png)
 
-
-
-
-
+When done, click **Save**, and from now on the default user \(and all other subsequently created users\) will be able to use this hotkey to place buy orders at the market price.
 
 
 
