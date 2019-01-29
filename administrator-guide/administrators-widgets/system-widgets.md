@@ -123,6 +123,10 @@ From now on the users belonging to this user group will be able to add this widg
 
 ![](../../.gitbook/assets/screenshot-2019-01-28-at-21.00.28.png)
 
+{% hint style="warning" %}
+If your users don't see the widget in the widget list, perhaps they should simply refresh the page.
+{% endhint %}
+
 ### User-Created Widgets
 
 The previously discussed **System Widgets** widget is available exclusively to administrators. In other words, regular users are unable to create such widgets. What users can do, however, is create their own personal widgets that are available only for them. They can do that via the **Widget Designer** widget.
