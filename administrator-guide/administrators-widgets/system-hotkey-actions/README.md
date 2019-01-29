@@ -12,11 +12,11 @@ To add the System Hotkey Actions widget, click **Add Widget** and then click **S
 If you don't see the **System Hotkey Actions** widget, it's likely that you're logged in as a user, and not as an administrator \(this widget is only available to administrators\).
 {% endhint %}
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-15.24.02.png)
+![](../../../.gitbook/assets/screenshot-2019-01-29-at-15.24.02.png)
 
 The widget will appear, listing all of the default events that can later be mapped to certain keys.
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-15.34.05.png)
+![](../../../.gitbook/assets/screenshot-2019-01-29-at-15.34.05.png)
 
 In the following sections we'll cover the default actions and also how you can create your own custom actions.
 
@@ -43,16 +43,16 @@ Out of the box, ETNA Trader provides 14 actions that users can map to certain ke
 
 In addition to creating your own custom actions, you may also modify the existing ones. To modify an action, click on the edit icon \(the third column\). To add a new action, click **Add Action**.
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-18.16.36%20%281%29.png)
+![](../../../.gitbook/assets/screenshot-2019-01-29-at-18.16.36%20%281%29.png)
 
 The action creation window will appear, prompting you to configure the following action properties:
 
 1. **Name**. This is the name of the new action — the users will see it in the action list when creating hotkeys.
 2. **Description**. This is the description of the new action. 
 3. **Parameters**. These are the parameters that users will have to specify when creating a hotkey. For example, if a user is creating a hotkey for an action that increases the quantity of shares in the **Trade Ticket** widget, they'll have to specify the increase value here.
-4. **Action**. This is the JavaScript code that will be executed when a user triggers a hotkey.
+4. **Action**. This is the JavaScript code that will be executed when a user triggers a hotkey. To learn more about the syntax of these actions, read our [dedicated article](action-syntax.md).
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-18.55.26.png)
+![](../../../.gitbook/assets/screenshot-2019-01-29-at-18.55.26.png)
 
 
 
