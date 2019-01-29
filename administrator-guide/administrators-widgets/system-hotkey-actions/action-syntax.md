@@ -2,47 +2,59 @@
 
 ### Introduction
 
-When a user triggers a hotkey, the [previously defined action](./) associated with this hotkey is executed.
-
-When web actions are firing with widget selection there are several types of widget context available in _**`widgetContext`**_ ``property of action function _**`params`**_ **``**parameter. 
+When a user triggers a hotkey, the [previously defined action](./) associated with this hotkey is executed. These actions represent JavaScript code that developers can use to simplify trading routines. For example, you can create an action that doubles the number of shares in the **Trade Ticket** widget. But before that you should learn how to access the data in such widgets. In this article we outline the syntax for hotkey actions and demonstrate real-world examples that are implemented in our own actions.
 
 ### Context Types <a id="Webactionsdevelopment-ContextTypes"></a>
 
-Context types can have different set of functions but can be resolved using  _**`getContextType`**_ **``**function and global constants:
+There are several types of widget contexts that are available in the _**`widgetContext`**_property of the _**`params`**_parameter \(accessible by _**`params.widgetContext`**_\). Use this property to determine which widget you're in \(`switch` on it\) before you proceed to perform any data modifications.
 
-* _**`window.ETNA.WidgetContext.Types.MarketDepth`**_ – market depth widget context
-* _**`window.ETNA.WidgetContext.Types.Chart`**_ ``– chart widget context
-* _**`window.ETNA.WidgetContext.Types.TradeTicket`**_ ``– trade ticket widget context
+Different context types \(widgets\) can have different sets of functions, and you can request the current context with the help of the global _**`getContextType()`**_function and the following global constants:
 
-### Market depth widget context reference <a id="Webactionsdevelopment-Marketdepthwidgetcontextreference"></a>
+* _**`window.ETNA.WidgetContext.Types.MarketDepth`**_ – market depth widget context;
+* _**`window.ETNA.WidgetContext.Types.Chart`**_– chart widget context;
+* _**`window.ETNA.WidgetContext.Types.TradeTicket`**_– trade ticket widget context.
 
-_**`widgetContext.getContextType()`**_
+### Market Depth Widget Context <a id="Webactionsdevelopment-Marketdepthwidgetcontextreference"></a>
 
-Returns _**`window.ETNA.WidgetContext.Types.MarketDepth`**_  constant value.
-
-_**`widgetContext.getSymbol()`**_
-
-Returns widget currently selected symbol.
-
-_**`widgetContext.getQuoteData()`**_
-
-Returns widget current quote.
-
-### Chart widget context reference <a id="Webactionsdevelopment-Chartwidgetcontextreference"></a>
+#### 1. Get the Current Context
 
 _**`widgetContext.getContextType()`**_
 
-Returns _**`window.ETNA.WidgetContext.Types.Chart`**_ constant value.
+This method returns _**`window.ETNA.WidgetContext.Types.MarketDepth`**_.
+
+#### 2. Get the Current Ticker Symbol
 
 _**`widgetContext.getSymbol()`**_
 
-Returns widget currently selected symbol.
+This method returns the ticker symbol of a selected security.
+
+#### 3. Get the Current Quote
 
 _**`widgetContext.getQuoteData()`**_
 
-Returns widget current quote.
+This method returns the currently selected security's quote.
 
-### Trade ticket widget context reference <a id="Webactionsdevelopment-Tradeticketwidgetcontextreference"></a>
+### Chart Widget Context <a id="Webactionsdevelopment-Chartwidgetcontextreference"></a>
+
+#### 1. Get the Current Context
+
+_**`widgetContext.getContextType()`**_
+
+This method returns _**`window.ETNA.WidgetContext.Types.Chart`**_.
+
+#### 2. Get the Current Ticker Symbol
+
+_**`widgetContext.getSymbol()`**_
+
+This method returns the ticker symbol of the displayed security.
+
+#### 3. Get the Current Quote
+
+_**`widgetContext.getQuoteData()`**_
+
+This method returns the currently selected security's quote.
+
+### Trade Ticket Widget Context <a id="Webactionsdevelopment-Tradeticketwidgetcontextreference"></a>
 
 _**`widgetContext.getContextType()`**_
 
