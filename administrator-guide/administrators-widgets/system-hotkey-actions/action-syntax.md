@@ -28,11 +28,15 @@ This method returns the ticker symbol of a selected security.
 
 _**`widgetContext.getSymbol()`**_
 
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-15.55.21.png)
+
 ### 3. Get the Current Quote
 
 This method returns the currently selected security's quote.
 
 _**`widgetContext.getQuoteData()`**_
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-15.55.21-2.png)
 
 ## Chart Widget Context
 
@@ -48,11 +52,15 @@ This method returns the ticker symbol of the displayed security.
 
 _**`widgetContext.getSymbol()`**_
 
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.00.45.png)
+
 ### 3. Get the Current Quote
 
 This method returns the currently selected security's quote.
 
 _**`widgetContext.getQuoteData()`**_
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.00.45-2.png)
 
 ## Trade Ticket Widget Context
 
@@ -67,6 +75,8 @@ _**`widgetContext.getContextType()`**_
 This method returns the ticker symbol of the security that's being traded.
 
 _**`widgetContext.getSymbol()`**_
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.04.15.png)
 
 ### 3. Get the Limit Price 
 
@@ -94,10 +104,13 @@ where:
       <td style="text-align:left">Boolean</td>
       <td style="text-align:left">A boolean value which indicates if the limit price should be retrieved
         from the second ticket. By default, the value is retrieved from the first
-        ticket.</td>
+        ticket. This argument should be provided only if the trade ticket type
+        is either OTO or OCO.</td>
     </tr>
   </tbody>
-</table>### 4. Set the Limit Price 
+</table>![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.05.46.png)
+
+### 4. Set the Limit Price 
 
 This method sets the limit price for an order in the _**Trade Ticket**_ widget.
 
@@ -108,7 +121,9 @@ where:
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | _**`value`**_ | Number | A number that represents the required limit price for the traded security. |
-| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the limit price should be set to the second ticket. By default, the value is set to the first ticket. |
+| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the limit price should be set to the second ticket. By default, the value is set to the first ticket. This argument should be provided only if the trade ticket type is either OTO or OCO |
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.05.46.png)
 
 ### 5. Get the Stop Price
 
@@ -120,7 +135,9 @@ where:
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
-| _**`getFromSecondTicket`**_ | Boolean | A boolean value that indicates if the stop price should be retrieved from the second ticket. By default, the value is retrieved from the first ticket. |
+| _**`getFromSecondTicket`**_ | Boolean | A boolean value that indicates if the stop price should be retrieved from the second ticket. By default, the value is retrieved from the first ticket. This argument should be provided only if the trade ticket type is either OTO or OCO |
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.07.23.png)
 
 ### 6. Set the Stop Price
 
@@ -133,7 +150,9 @@ where:
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | _**`value`**_ | Number | A number that represents the required stop price for the traded security. |
-| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the stop price should be set in the second ticket. By default, the value is set in the first ticket. |
+| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the stop price should be set in the second ticket. By default, the value is set in the first ticket. This argument should be provided only if the trade ticket type is either OTO or OCO |
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.07.23.png)
 
 ### 7. Get the Number of Shares 
 
@@ -145,7 +164,9 @@ where:
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
-| _**`getFromSecondTicket`**_ | Boolean | A boolean value that indicates if the number of shares should be retrieved from the second ticket. By default, the value is retrieved from the first ticket. |
+| _**`getFromSecondTicket`**_ | Boolean | A boolean value that indicates if the number of shares should be retrieved from the second ticket. By default, the value is retrieved from the first ticket. This argument should be provided only if the trade ticket type is either OTO or OCO |
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.09.50.png)
 
 ### 8. Set the Number of Shares
 
@@ -158,7 +179,9 @@ where:
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | _**`value`**_ | Number | A number that represents the required number of shares for the order. |
-| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the specified number of shares should be set in the second ticket. By default, the specified number of shares is set in the first ticket. |
+| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the specified number of shares should be set in the second ticket. By default, the specified number of shares is set in the first ticket. This argument should be provided only if the trade ticket type is either OTO or OCO |
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.09.50.png)
 
 ### 9. Get the Security's Quote
 
@@ -177,4 +200,6 @@ _**`widgetContext.getTradeTicketType()`**_
 | Simple | String | Regular order |
 | OTO | String | The "one-triggers-the-other" type of order |
 | OCO | String | The "one-cancels-the-other" type of order |
+
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-16.13.55.png)
 
