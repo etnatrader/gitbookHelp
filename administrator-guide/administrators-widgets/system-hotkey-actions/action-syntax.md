@@ -2,134 +2,179 @@
 
 ### Introduction
 
-When a user triggers a hotkey, the [previously defined action](./) associated with this hotkey is executed. These actions represent JavaScript code that developers can use to simplify trading routines. For example, you can create an action that doubles the number of shares in the **Trade Ticket** widget. But before that you should learn how to access the data in such widgets. In this article we outline the syntax for hotkey actions and demonstrate real-world examples that are implemented in our own actions.
+When a user triggers a hotkey, the [previously defined action](./) associated with this hotkey is executed. Such action represents JavaScript code that developers can implement to simplify trading routines. For example, you can create an action that doubles the number of shares in the **Trade Ticket** widget. But before that you should learn how to access the data in such widgets. In this article we outline the syntax for hotkey actions and demonstrate real-world examples that are implemented in our own actions.
 
 ### Context Types <a id="Webactionsdevelopment-ContextTypes"></a>
 
 There are several types of widget contexts that are available in the _**`widgetContext`**_property of the _**`params`**_parameter \(accessible by _**`params.widgetContext`**_\). Use this property to determine which widget you're in \(`switch` on it\) before you proceed to perform any data modifications.
 
-Different context types \(widgets\) can have different sets of functions, and you can request the current context with the help of the global _**`getContextType()`**_function and the following global constants:
+Different context types \(widgets\) can have different sets of functions, and you can determine the current context with the help of the global _**`getContextType()`**_function and the following global constants:
 
 * _**`window.ETNA.WidgetContext.Types.MarketDepth`**_ – market depth widget context;
 * _**`window.ETNA.WidgetContext.Types.Chart`**_– chart widget context;
 * _**`window.ETNA.WidgetContext.Types.TradeTicket`**_– trade ticket widget context.
 
-### Market Depth Widget Context <a id="Webactionsdevelopment-Marketdepthwidgetcontextreference"></a>
+## Market Depth Widget Context
 
-#### 1. Get the Current Context
+### 1. Get the Current Context
+
+This method returns _**`window.ETNA.WidgetContext.Types.MarketDepth`**_\(constant value\).
 
 _**`widgetContext.getContextType()`**_
 
-This method returns _**`window.ETNA.WidgetContext.Types.MarketDepth`**_.
-
-#### 2. Get the Current Ticker Symbol
-
-_**`widgetContext.getSymbol()`**_
+### 2. Get the Current Ticker Symbol
 
 This method returns the ticker symbol of a selected security.
 
-#### 3. Get the Current Quote
+_**`widgetContext.getSymbol()`**_
 
-_**`widgetContext.getQuoteData()`**_
+### 3. Get the Current Quote
 
 This method returns the currently selected security's quote.
 
-### Chart Widget Context <a id="Webactionsdevelopment-Chartwidgetcontextreference"></a>
+_**`widgetContext.getQuoteData()`**_
 
-#### 1. Get the Current Context
+## Chart Widget Context
+
+### 1. Get the Current Context
+
+This method returns _**`window.ETNA.WidgetContext.Types.Chart`**_\(constant value\).
 
 _**`widgetContext.getContextType()`**_
 
-This method returns _**`window.ETNA.WidgetContext.Types.Chart`**_.
-
-#### 2. Get the Current Ticker Symbol
-
-_**`widgetContext.getSymbol()`**_
+### 2. Get the Current Ticker Symbol
 
 This method returns the ticker symbol of the displayed security.
 
-#### 3. Get the Current Quote
+_**`widgetContext.getSymbol()`**_
 
-_**`widgetContext.getQuoteData()`**_
+### 3. Get the Current Quote
 
 This method returns the currently selected security's quote.
 
-### Trade Ticket Widget Context <a id="Webactionsdevelopment-Tradeticketwidgetcontextreference"></a>
+_**`widgetContext.getQuoteData()`**_
+
+## Trade Ticket Widget Context
+
+### 1. Get the Current Context 
+
+This method returns _**`window.ETNA.WidgetContext.Types.TradeTicket`**_\(constant value\).
 
 _**`widgetContext.getContextType()`**_
 
-Returns _**`window.ETNA.WidgetContext.Types.TradeTicket`**_ ``constant value.
+### 2. Get the Current Ticker Symbol
 
-_**`widgetContext.getSymbol`**_
+This method returns the ticker symbol of the security that's being traded.
 
-Returns widget currently selected symbol.
+_**`widgetContext.getSymbol()`**_
+
+### 3. Get the Limit Price 
+
+This method returns the specified limit price for an order in the _**Trade Ticket**_ widget.
 
 _**`widgetContext.getLimitPrice(getFromSecondTicket)`**_
 
-_**`getFromSecondTicket`**_:Boolean ``
+where:
 
-determines whether the value should be retrieved from  second ticket. Value will be retrieved from first by default.
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <p><em><b><code>getFromSecondTicket</code></b></em>
+        </p>
+      </td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">A boolean value which indicates if the limit price should be retrieved
+        from the second ticket. By default, the value is retrieved from the first
+        ticket.</td>
+    </tr>
+  </tbody>
+</table>### 4. Set the Limit Price 
 
-Retruns limit price set on target ticket
+This method sets the limit price for an order in the _**Trade Ticket**_ widget.
 
 _**`widgetContext.setLimitPrice(value, setToSecondTicket)`**_
 
-_**`value:Number`**_
+where:
 
-value to be set on ticket limit price
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| _**`value`**_ | Number | A number that represents the required limit price for the traded security. |
+| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the limit price should be set to the second ticket. By default, the value is set to the first ticket. |
 
-_**`setToSecondTicket`**_:Boolean ``
+### 5. Get the Stop Price
 
-determines whether the value should be set on second ticket. Value will be set on first by default
+This method returns the stop price of an order from the _**Trade Ticket**_ widget.
 
-Sets specified value on target ticket limit price.
+_**`widgetContext.getStopPrice(getFromSecondTicket)`**_
 
-_**`widgetContext.getStopPrice(getFromSecondTicket`**_\)
+where:
 
-_**`getFromSecondTicket`**_:Boolean ``
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| _**`getFromSecondTicket`**_ | Boolean | A boolean value that indicates if the stop price should be retrieved from the second ticket. By default, the value is retrieved from the first ticket. |
 
-determines whether the value should be retrieved from second ticket. Value will be retrieved from first by default.
+### 6. Set the Stop Price
 
-Retruns stop price set on target ticket
+This method sets the stop price for an order in the _**Trade Ticket**_ widget.
 
-_**`widgetContext.setStopPrice(value, setToSecondTicket`**_\)
+_**`widgetContext.setStopPrice(value, setToSecondTicket)`**_
 
-_**`value:Number`**_
+where:
 
-value to be set on ticket stop price
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| _**`value`**_ | Number | A number that represents the required stop price for the traded security. |
+| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the stop price should be set in the second ticket. By default, the value is set in the first ticket. |
 
-_**`setToSecondTicket`**_:Boolean ``
+### 7. Get the Number of Shares 
 
-determines whether the value should be set on second ticket. Value will be set on first by default
-
-Sets specified value on target ticket stop price.
+This method returns the number of shares in an order.
 
 _**`widgetContext.getQuantity(getFromSecondTicket)`**_
 
-_**`getFromSecondTicket`**_:Boolean ``
+where:
 
-determines whether the value should be retrieved from second ticket. Value will be retrieved from first by default.
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| _**`getFromSecondTicket`**_ | Boolean | A boolean value that indicates if the number of shares should be retrieved from the second ticket. By default, the value is retrieved from the first ticket. |
 
-Retruns quantity set on target ticket
+### 8. Set the Number of Shares
 
-_**`widgetContext.setQuantity(value, setToSecondTicket`**_\)
+This method sets the number of shares in an order.
 
-_**`value:Number`**_
+_**`widgetContext.setQuantity(value, setToSecondTicket)`**_
 
-quantity to be set on ticket stop price
+where:
 
-_**`setToSecondTicket`**_:Boolean ``
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| _**`value`**_ | Number | A number that represents the required number of shares for the order. |
+| _**`setToSecondTicket`**_ | Boolean | A boolean value that indicates if the specified number of shares should be set in the second ticket. By default, the specified number of shares is set in the first ticket. |
 
-determines whether the value should be set on second ticket. Value will be set on first by default
+### 9. Get the Security's Quote
 
-Sets specified quantity on target ticket.
+This method returns the latest quote for the currently specified ticker symbol.
 
-_**`widgetContext.getQuoteData`**_
+_**`widgetContext.getQuoteData()`**_
 
-Returns widget current quote.
+### 10. Get the Trade Ticket's Type
 
-_**`widgetContext.getTradeTicketType`**_
+This method returns the current trade ticket's type.
 
-Returns trade ticket type. Possible values: 'Simple', 'OTO', 'OCO'  
+_**`widgetContext.getTradeTicketType()`**_
 
+| Return Value | Type | Description |
+| :--- | :--- | :--- |
+| Simple | String | Regular order |
+| OTO | String | The "one-triggers-the-other" type of order |
+| OCO | String | The "one-cancels-the-other" type of order |
 
