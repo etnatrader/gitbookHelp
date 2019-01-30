@@ -8,7 +8,7 @@ When a user triggers a hotkey, the [previously defined action](./) associated wi
 
 There are several types of widget contexts that are available in the _**`widgetContext`**_property of the _**`params`**_parameter \(accessible by _**`params.widgetContext`**_\). Use this property to determine which widget you're in \(`switch` on it\) before you proceed to perform any data modifications.
 
-Different context types \(widgets\) can have different sets of functions, and you can determine the current context with the help of the global _**`getContextType()`**_function and the following global constants:
+Different context types \(widgets\) can have different sets of functions, and you can determine the current context with the help of the _**`params.widgetContext.getContextType()`**_function and the following global constants:
 
 * _**`window.ETNA.WidgetContext.Types.MarketDepth`**_ – market depth widget context;
 * _**`window.ETNA.WidgetContext.Types.Chart`**_– chart widget context;
