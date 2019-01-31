@@ -2,7 +2,7 @@
 
 ### Conditions
 
-Each risk rule can have multiple conditions, and an order must simultaneously satisfy all conditions of an active rule before it is detected by the system and then sent for review. There is a total of 25? different conditions that can be specified in the system.
+In ETNA Trader, each risk rule can have multiple conditions, and an order must simultaneously satisfy all conditions of an active rule before it is detected by the system and then sent for review. There are a total of 29 different conditions that can be specified in each rule.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-16.50.44.png)
 
@@ -38,7 +38,7 @@ Use this condition to apply the order review mechanism to the options whose expi
 
 #### 6. Exchange Destination
 
-???
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.59.19.png)
 
 #### 7. Exchange Working Hours
 
