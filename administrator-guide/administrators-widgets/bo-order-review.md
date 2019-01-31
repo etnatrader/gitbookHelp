@@ -13,7 +13,7 @@ There are two components to order reviews:
 
 The risk rule designer is located at **admin.yourWebTerminal.com**, and it allows you to create order review rules for all of your users. For example, you can create a rule that will force all orders places on the London Stock Exchange to first be reviewed by administrators. Also, you can automatically reject all orders placed during pre- or post-market hours — the range of possible conditions is quite extensive.
 
-Once the rules are set in place, the administrators in your company will have to review all orders whose characteristics satisfy the conditions in one of those rules. Until the suspended order is reviewed, users will see the following message after placing the order: 
+Once the rules are set in place, the administrators in your company will have to review all orders whose characteristics satisfy the conditions in one of those rules. Until a suspended order is reviewed, users will see the following message after placing the order: 
 
 ![](../../.gitbook/assets/screenshot-2019-01-30-at-18.09.56.png)
 
@@ -23,11 +23,49 @@ The notifications for such orders will contain the following text:
 
 ### Configuring Risk Rules
 
-The first step in configuring the order review is to go to the ETNA Trader's administrator portal \(**admin.yourWebTerminal.com**\) and sign in using your special credentials \(they're different from the user or administrator credentials\).
+The first step in configuring the order review is to go to the ETNA Trader's administrator portal \(**admin.yourWebTerminal.com**\) and sign in using your administrator credentials \(regular credentials are invalid for the administrator portal\).
 
 {% hint style="warning" %}
-ETNA Trader's administrator portal requires your computer to have Microsoft SilverLight installed, and it can only be accessed through Internet Explorer.
+ETNA Trader's administrator portal requires your computer to have [Microsoft Silverlight](https://www.microsoft.com/silverlight/) installed, and it can only be accessed through Internet Explorer.
 {% endhint %}
+
+![](../../.gitbook/assets/screenshot-2019-01-31-at-15.05.24.png)
+
+Once you've logged in to the administrator portal, navigate to the **Risk** tab. This is the tab where all rules are configured.
+
+![](../../.gitbook/assets/screenshot-2019-01-31-at-15.10.19.png)
+
+On this tab you can see all of the existing rules, examine their type and description as well as enable, disable, or remove them altogether. To add a new rule, click **Add**.
+
+![](../../.gitbook/assets/screenshot-2019-01-31-at-15.20.15.png)
+
+The rule creation window will pop-up, prompting you to configure a new rule.
+
+![](../../.gitbook/assets/screenshot-2019-01-31-at-16.20.28.png)
+
+Here you should specify the following parameters:
+
+1. **Priority**. This is the priority of the newly created rule. All rules are prioritized based on the value specified in this text field.
+2. **Enabled**. This checkbox indicates if the rules is enabled. If you leave this option disabled, all orders whose characteristics satisfy this rule will be automatically executed.
+3. **Result**. Here you can either choose **Review** or **Reject**. With **Review**, all orders whose characteristics satisfy this rule will be sent for review to the company's administrators. With **Reject**, all such orders will automatically be rejected and therefore will not be executed. 
+4. **Message**. This is the message that users will see whenever they place an order whose characteristics satisfy this rule. 
+5. **Conditions**. These are the conditions of this rule. It is by far the most important aspect of the rules, since these conditions determine which orders are automatically sent for review and which are to be executed without prior approval.
+
+### Conditions
+
+Each risk rule can have multiple conditions, and an order must simultaneously satisfy all conditions of an active rule before it is detected by the system and then sent for review. There is a total of 25? different conditions that can be specified in the system.
+
+![](../../.gitbook/assets/screenshot-2019-01-31-at-16.50.44.png)
+
+#### **1. Account**
+
+Use this condition to apply the order review mechanism only to specific trading accounts. You can specify multiple accounts, and this rule will be applied to all of them. Alternatively, you can specify to which accounts this rule should not be applied by selecting the **NotIn** option.
+
+![](../../.gitbook/assets/screenshot-2019-01-31-at-17.14.25%20%281%29.png)
+
+#### **2. Average Daily Volume**
+
+Use this condition to apply the order review mechanism only to to those trading accounts whose average daily volume exceeds or is less than the specified amount.
 
 
 
