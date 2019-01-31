@@ -15,11 +15,11 @@ The risk rule designer is located at **admin.yourWebTerminal.com**, and it allow
 
 Once the rules are set in place, the administrators in your company will have to review all orders whose characteristics satisfy the conditions in one of those rules. Until a suspended order is reviewed, users will see the following message after placing the order: 
 
-![](../../.gitbook/assets/screenshot-2019-01-30-at-18.09.56.png)
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-18.09.56.png)
 
 The notifications for such orders will contain the following text:
 
-![](../../.gitbook/assets/screenshot-2019-01-30-at-18.09.30.png)
+![](../../../.gitbook/assets/screenshot-2019-01-30-at-18.09.30.png)
 
 ### Configuring Risk Rules
 
@@ -29,19 +29,19 @@ The first step in configuring the order review is to go to the ETNA Trader's adm
 ETNA Trader's administrator portal requires your computer to have [Microsoft Silverlight](https://www.microsoft.com/silverlight/) installed, and it can only be accessed through Internet Explorer.
 {% endhint %}
 
-![](../../.gitbook/assets/screenshot-2019-01-31-at-15.05.24.png)
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-15.05.24.png)
 
 Once you've logged in to the administrator portal, navigate to the **Risk** tab. This is the tab where all rules are configured.
 
-![](../../.gitbook/assets/screenshot-2019-01-31-at-15.10.19.png)
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-15.10.19.png)
 
 On this tab you can see all of the existing rules, examine their type and description as well as enable, disable, or remove them altogether. To add a new rule, click **Add**.
 
-![](../../.gitbook/assets/screenshot-2019-01-31-at-15.20.15.png)
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-15.20.15.png)
 
 The rule creation window will pop-up, prompting you to configure a new rule.
 
-![](../../.gitbook/assets/screenshot-2019-01-31-at-16.20.28.png)
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-16.20.28.png)
 
 Here you should specify the following parameters:
 
@@ -49,57 +49,25 @@ Here you should specify the following parameters:
 2. **Enabled**. This checkbox indicates if the rules is enabled. If you leave this option disabled, all orders whose characteristics satisfy this rule will be automatically executed.
 3. **Result**. Here you can either choose **Review** or **Reject**. With **Review**, all orders whose characteristics satisfy this rule will be sent for review to the company's administrators. With **Reject**, all such orders will automatically be rejected and therefore will not be executed. 
 4. **Message**. This is the message that users will see whenever they place an order whose characteristics satisfy this rule. 
-5. **Conditions**. These are the conditions of this rule. It is by far the most important aspect of the rules, since these conditions determine which orders are automatically sent for review and which are to be executed without prior approval.
+5. **Conditions**. These are the conditions of this rule. It is by far the most important aspect of the rules, since these conditions determine which orders are automatically sent for review and which are to be executed without prior approval. The complete list of all conditions is available in a [dedicated article](types-of-conditions.md).
 
-### Conditions
+Once you've configured and, importantly, enabled all of the required rules, you can exit the administrator portal. From now on all trading accounts and all orders with characteristics that satisfy the conditions of these rules will automatically be suspended until they're reviewed by an administrator.
 
-Each risk rule can have multiple conditions, and an order must simultaneously satisfy all conditions of an active rule before it is detected by the system and then sent for review. There is a total of 25? different conditions that can be specified in the system.
+### Reviewing Orders
 
-![](../../.gitbook/assets/screenshot-2019-01-31-at-16.50.44.png)
+All suspended orders have to be reviewed by administrators who should in turn either approve or reject these orders. The order review process transpires in the **BO Order Review** widget that you can add from the widget list in the web terminal.
 
-#### **1. Account**
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.40.42.png)
 
-Use this condition to apply the order review mechanism only to specific trading accounts. You can specify multiple accounts, and this rule will be applied to all of them. Alternatively, you can specify to which accounts this rule should not be applied by selecting the **NotIn** option.
+Once you've added this widget, notice that it lists all orders that have been suspended due to some active rule. In this case we put in place a rule that would suspend all trade orders that dealt with the Facebook stock. When the user placed this order, they were immediately notified that their order is on review. 
 
-![](../../.gitbook/assets/screenshot-2019-01-31-at-17.14.25%20%281%29.png)
+To review an order, click **Take**.
 
-#### **2. Average Daily Volume**
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.44.29.png)
 
-Use this condition to apply the order review mechanism only to to those trading accounts whose average daily volume exceeds or is less than the specified amount. Gt refers to "greater" while Lt refers to "less than".
+When reviewing an order, specify the reason why you chose to accept or reject the order. Then click **Accept** or **Reject**.
 
-![](../../.gitbook/assets/screenshot-2019-01-31-at-17.50.28.png)
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.56.32.png)
 
-#### 3. Clearing Firm
-
-Use this condition to apply the order review mechanism only to those trading accounts who belong to a particular clearing firm that is indicated in the the text field. Alternatively, you can enforce this rule for all accounts except for the specified by selecting **NotIn** in the drop-down menu.
-
-![](../../.gitbook/assets/screenshot-2019-01-31-at-17.51.28%20%282%29.png)
-
-#### 4. Day Loss
-
-Use this condition to apply the order review mechanism only to those trading accounts whose current day loss is greater than or equal to the specified amount.
-
-![](../../.gitbook/assets/screenshot-2019-01-31-at-18.04.28.png)
-
-#### 5. **Days to Expiration**
-
-Use this condition to apply the order review mechanism to the options whose expiration date is exactly the specified number of days from now.
-
-![](../../.gitbook/assets/screenshot-2019-01-31-at-18.07.13.png)
-
-#### 6. Exchange Destination
-
-???
-
-#### 7. Exchange Working Hours
-
-Use this condition to apply the order review mechanism to all orders placed during specific trading hours. For example, you can use this rule to review all orders placed during the pre- and post-market hours.
-
-![](../../.gitbook/assets/screenshot-2019-01-31-at-18.12.51.png)
-
-#### 8. Execution Instructions
-
-???
-
-
+If you clicked **Accept**, the order was executed. Conversely, if you clicked **Reject**, the order was rejected.
 
