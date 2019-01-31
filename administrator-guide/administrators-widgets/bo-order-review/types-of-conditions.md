@@ -36,7 +36,7 @@ Use this condition to apply the order review mechanism to the options whose expi
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.07.13.png)
 
-#### 6. Exchange Destination
+#### 6. Exchange Destination ???
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.59.19.png)
 
@@ -46,41 +46,51 @@ Use this condition to apply the order review mechanism to all orders placed duri
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.12.51%20%281%29.png)
 
-#### 8. Execution Instructions
+#### 8. Execution Instructions 
 
-Use this condition to apply the order review mechanism to all orders 
+Use this condition to apply the order review mechanism to all orders that must either be executed entirely or not at all. 
+
+{% hint style="info" %}
+Options **DoNotIncrease** and **DoNotReduce** are currently unavailable.
+{% endhint %}
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.22.54.png)
 
 #### 9. Execution Venue
 
+Use this condition to apply the order review mechanism to all orders that are executed in ETNA Emulator.
+
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.02.45.png)
 
 #### 10. Extended Hours
 
+Use this condition to apply the order review mechanism to all orders that are placed during extended market hours.
+
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.24.05.png)
 
-#### 11. Extended Hours Exchange Working Hours
+#### 11. Extended Hours Exchange Working Hours ???
+
+Use this condition to apply the order review mechanism to all orders that are placed 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.27.20.png)
 
-#### 12. Is Halted Security
+#### 12. Is Halted Security ??? 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.28.29.png)
 
-#### 13. Is contingent
+#### 13. Is contingent ??? 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.29.44.png)
 
-#### 14. Legs Quantity
+#### 14. Legs Quantity ??? 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.30.15.png)
 
-#### 15. Margin Requirement Cash
+#### 15. Margin Requirement Cash ??? 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.30.50.png)
 
-#### 16. Opening/Closing Order
+#### 16. Opening/Closing Order ???
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.33.57.png)
 
@@ -88,11 +98,11 @@ Use this condition to apply the order review mechanism to all orders
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.34.52.png)
 
-#### 18. Order Duration
+#### 18. Order Duration ??? 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.36.33.png)
 
-#### 19. Order Fields
+#### 19. Order Fields ???
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.37.37.png)
 
@@ -100,11 +110,11 @@ Use this condition to apply the order review mechanism to all orders
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.38.25.png)
 
-#### 21. Order Total
+#### 21. Order Total ???
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.39.05.png)
 
-#### 22. Order Type
+#### 22. Order Type ???
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.40.00.png)
 
@@ -128,7 +138,7 @@ Use this condition to apply the order review mechanism to all orders
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.47.01.png)
 
-#### 28. Security Exchange Working Hours
+#### 28. Security Exchange Working Hours ???
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.47.37.png)
 
