@@ -48,7 +48,7 @@ Use this condition to apply the order review mechanism to all orders placed duri
 
 #### 8. Execution Instructions
 
-wer
+Use this condition to apply the order review mechanism to all orders 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.22.54.png)
 
@@ -67,6 +67,76 @@ wer
 #### 12. Is Halted Security
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.28.29.png)
+
+#### 13. Is contingent
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.29.44.png)
+
+#### 14. Legs Quantity
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.30.15.png)
+
+#### 15. Margin Requirement Cash
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.30.50.png)
+
+#### 16. Opening/Closing Order
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.33.57.png)
+
+#### 17. Option Expiration Type
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.34.52.png)
+
+#### 18. Order Duration
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.36.33.png)
+
+#### 19. Order Fields
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.37.37.png)
+
+#### 20. Order Side
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.38.25.png)
+
+#### 21. Order Total
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.39.05.png)
+
+#### 22. Order Type
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.40.00.png)
+
+#### 23. Overall Quantity
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.43.30.png)
+
+#### 24. Price
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.44.47.png)
+
+#### 25. Quantity
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.45.16.png)
+
+#### 26. Security
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.46.04.png)
+
+#### 27. Security Exchange
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.47.01.png)
+
+#### 28. Security Exchange Working Hours
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.47.37.png)
+
+#### 29. Security Type
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.48.26.png)
+
+
 
 
 

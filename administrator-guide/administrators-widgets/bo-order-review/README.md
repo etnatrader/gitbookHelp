@@ -59,7 +59,7 @@ All suspended orders have to be reviewed by administrators who should in turn ei
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.40.42.png)
 
-Once you've added this widget, notice that it lists all orders that have been suspended due to some active rule. In this case we put in place a rule that would suspend all trade orders that dealt with the Facebook stock. When the user placed this order, they were immediately notified that their order is on review. 
+Once you've added this widget, notice that it lists all orders that have been suspended due to some active rule. In this case we put in place a rule that would suspend all trade orders that dealt with the Facebook stock. When the user placed this order, they were immediately notified that their order is under review. 
 
 To review an order, click **Take**.
 
