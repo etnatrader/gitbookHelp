@@ -52,5 +52,21 @@ wer
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.22.54.png)
 
-#### 9. 
+#### 9. Execution Venue
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.02.45.png)
+
+#### 10. Extended Hours
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.24.05.png)
+
+#### 11. Extended Hours Exchange Working Hours
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.27.20.png)
+
+#### 12. Is Halted Security
+
+![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.28.29.png)
+
+
 
