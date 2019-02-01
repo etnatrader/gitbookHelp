@@ -58,7 +58,7 @@ Options **DoNotIncrease** and **DoNotReduce** are currently unavailable.
 
 #### 9. Execution Venue
 
-Use this condition to apply the order review mechanism to all orders that are executed in ETNA Emulator.
+Use this condition to apply the order review mechanism to all orders that should be placed on the selected exchanges \(the list of options may vary depending on which exchanges are available to your company\).
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.02.45.png)
 
@@ -70,11 +70,13 @@ Use this condition to apply the order review mechanism to all orders that are pl
 
 #### 11. Extended Hours Exchange Working Hours ???
 
-Use this condition to apply the order review mechanism to all orders that are placed 
+Use this condition to apply the order review mechanism to all orders that are placed ???
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.27.20.png)
 
-#### 12. Is Halted Security ??? 
+#### 12. Is Halted Security
+
+Use this condition to apply the order review mechanism to all orders in which the underlying security is suspended from trading by the relevant exchange.  
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.28.29.png)
 
@@ -82,7 +84,9 @@ Use this condition to apply the order review mechanism to all orders that are pl
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.29.44.png)
 
-#### 14. Legs Quantity ??? 
+#### 14. Legs Quantity
+
+Use this condition to apply the order review mechanism to all multi-leg option orders. A multi-leg order is a type of order used to buy or sell options with more than one strike price, expiration date, or sensitivity to the underlying security's price. In the text field you should specify the number of legs of an order that should be flagged and sent for review.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.30.15.png)
 
@@ -90,31 +94,56 @@ Use this condition to apply the order review mechanism to all orders that are pl
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.30.50.png)
 
-#### 16. Opening/Closing Order ???
+#### 16. Opening/Closing Order
+
+Use this condition to apply the order review mechanism to all orders that are either opening a new position or closing an existing position.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.33.57.png)
 
 #### 17. Option Expiration Type
 
+Use this condition to apply the order review mechanism to all option orders with a particular expiration type. Alternatively, you could apply the order review mechanism to all expiration types except for the selected ones by selecting the **NotIn** option.
+
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.34.52.png)
 
-#### 18. Order Duration ??? 
+#### 18. Order Duration 
+
+Use this condition to apply the order review mechanism to all orders with a particular duration. There are three duration types to choose from:
+
+1. **Day**. This rule will only be applied to orders that expire at the end of the current trading session. 
+2. **GoodTillCancel**. This rule will only be applied to orders that are active until cancelled.
+3. **GoodTillDate**. This rule will only be applied to orders that expire at a particular date.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.36.33.png)
 
-#### 19. Order Fields ???
+#### 19. Order Fields
+
+Use this condition to apply the order review mechanism to all orders where particular fields have been modified. This rule might be useful in preventing placement of orders with fields that are not supported on particular exchanges.
+
+Some of these fields are not available in the web terminal and can only be used when invoking our external API.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.37.37.png)
 
 #### 20. Order Side
 
+Use this condition to apply the order review mechanism to all orders with a particular trade side. There are four options to choose from:
+
+1. **Buy**. These are the types of orders that concern buying securities.
+2. **Sell**. These are the types of orders that concern selling securities.
+3. **SellShort**. These are the types of orders in which a trader is selling the broker's shares in an attempt to buy them back cheaper, and return those shares with interest back to the broker while pocketing the profit from the security price depreciation.
+4. **BuyToCover**. These are the types of orders in which a trader is buying back the shares they had previously sold short \(to return the shares back to the broker\).
+
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.38.25.png)
 
-#### 21. Order Total ???
+#### 21. Order Total 
+
+Use this condition to apply the order review mechanism to all orders whose total price \(number of shares multiplied by the limit price\) exceeds or is less than the specified amount. For example, if you set the order total  to $100'000, whenever one of your users places an order with a higher total price, that order will be flagged and sent for review.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.39.05.png)
 
-#### 22. Order Type ???
+#### 22. Order Type
+
+
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.40.00.png)
 
