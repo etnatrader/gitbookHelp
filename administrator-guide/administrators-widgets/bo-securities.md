@@ -44,7 +44,40 @@ Every once in while a certain security is missing from the list of available ins
 
 The security addition window will appear, prompting you to specify the following parameters:
 
-1. wer
+1. **Symbol**. This is ticker symbol for the specified security.
+2. **Type**. This is the type of the financial instrument \(stocks, options, futures, and so forth\).
+3. **Suffix**. 
+4. **Option Type**. This is the type of options \(applicable only when **Type** is Option\).
+5. **Description**.
+6. **Expiration Type**. This is the expiration type of the option \(applicable only when **Type** is Option\).
+7. **Enabled**. This indicates if the financial instrument should be enabled.
+8. **Allow Trade**. This indicates if the financial instrument should be tradable by users.
+9. **Allow Margin**. This indicates if the financial instrument can be traded on margin.
+10. **Allow Short**. This indicates if the financial instrument can be sold short.
+11. **Exchange**. This indicates the exchange on which the financial instrument is listed.
+12. **Currency**. This is the currency in which the financial instrument is denominated.
+13. **Parent ID**. This is the internal ID of the underlying security of an option \(applicable only when **Type** is Option\). You can request this parameter from our support team at support@etnasoft.com.
+14. **Series ID**.
+15. **Source**.
+16. **Source ID**.
+17. **Unit**.
+18. **Price**.
+19. **Strike Price.**
+20. **Margin Rate**.
+21. **Contract Size**.
+22. **Underlying Security Symbol**.
+23. **Quote Subscription Key**.
+24. **Sector**.
+25. **Industry**.
+26. **Precision**.
+27. **Volume Precision**.
+28. **ISIN**.
+29. **SEDOL**.
+30. **CUSIP**.
+31. **Leverage**.
+32. **Expiration Date**. This is the expiration date of the option \(applicable only when **Type** is Option\).
+
+    .
 
 ![](../../.gitbook/assets/screenshot-2019-02-01-at-19.43.08.png)
 
