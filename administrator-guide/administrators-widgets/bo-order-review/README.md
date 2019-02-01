@@ -2,7 +2,7 @@
 
 ### Introduction
 
-By default, all placed orders in ETNA Trader are automatically executed without prior approval from the user's administrator. Consequently, users can place market, limit, and stop-loss orders without any limitations which might lead to unintended consequences like amateur traders selling options or trading on margin. For this reason ETNA traders offers comprehensive order review functionality that enables administrators to configure meticulous rules for each user.
+By default, all placed orders in ETNA Trader are automatically placed without prior approval from the user's administrator. Consequently, users can place market, limit, and stop-loss orders without any limitations which might lead to unintended consequences like amateur traders selling options or trading on margin. For this reason ETNA traders offers comprehensive order review functionality that enables administrators to configure meticulous rules for each user.
 
 ### Understanding Order Review
 
