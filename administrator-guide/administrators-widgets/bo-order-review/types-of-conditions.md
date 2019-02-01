@@ -167,17 +167,19 @@ Use this condition to apply the order review mechanism to all orders in which th
 
 #### 25. Quantity
 
-Use this condition to apply the order review mechanism to all orders in which the number of shares exceeds or is less than 
+Use this condition to apply the order review mechanism to all orders in which the number of shares exceeds or is less than the specified value.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.45.16.png)
 
 #### 26. Security
 
-Use this condition to apply the order review mechanism to all orders in which the type of security is 
+Use this condition to apply the order review mechanism to all orders in which the underlying security is specified in this condition. For example, you can use this rule to review all trades of the stocks that you deem extremely volatile.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.46.04.png)
 
 #### 27. Security Exchange
+
+Use this condition to apply the order review mechanism to all orders that are placed on the specified stock exchanges. 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.47.01.png)
 
@@ -187,9 +189,9 @@ Use this condition to apply the order review mechanism to all orders in which th
 
 #### 29. Security Type
 
+Use this condition to apply the order review mechanism to all orders that concern specific security types. Alternatively, you can review all securities by default except for the selected ones by selecting the **NotIn** option in the second drop-down menu
+
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.48.26.png)
 
-
-
-
+Once all the conditions are configured, you can close the rules creation window and they will automatically be applied to all new trades whose characteristics satisfy the conditions in these rules.
 
