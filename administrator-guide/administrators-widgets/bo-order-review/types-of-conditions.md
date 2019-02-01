@@ -143,23 +143,37 @@ Use this condition to apply the order review mechanism to all orders whose total
 
 #### 22. Order Type
 
+Use this condition to apply the order review mechanism to all orders of a specific type. There are six options to choose from:
 
+1. **Market**. These are the types of orders in which securities are purchased at market price.
+2. **Limit**. These are the types of orders in which securities are purchased at a specified price \(or better\).
+3. **Stop**. These are the types of orders in which securities are automatically purchased or sold when their price moves past a certain point.
+4. **StopLimit**. These are the types of orders in which securities should be purchased or sold once the security's price has reached the target, at which point the order is converted into a stop order.
+5. **Pegged**. These are the types of orders in which securities are purchased at the bid or ask price offset by a certain amount. 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.40.00.png)
 
 #### 23. Overall Quantity
 
+Use this condition to apply the order review mechanism to all orders in which the total number of shares exceeds or is less than the specified value. 
+
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.43.30.png)
 
 #### 24. Price
+
+Use this condition to apply the order review mechanism to all orders in which the target price is equal to, not equal to, exceeds, exceeds or equal to, is less than, is less than or equal to the specified value.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.44.47.png)
 
 #### 25. Quantity
 
+Use this condition to apply the order review mechanism to all orders in which the number of shares exceeds or is less than 
+
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.45.16.png)
 
 #### 26. Security
+
+Use this condition to apply the order review mechanism to all orders in which the type of security is 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.46.04.png)
 
