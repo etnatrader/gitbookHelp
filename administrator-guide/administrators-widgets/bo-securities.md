@@ -31,8 +31,8 @@ There are a total of 13 columns in this table that represent various information
 7. **Precision**. This represents the number of decimal places that is be displayed in the financial instrument's price.
 8. **Price**. This is the price of the financial instrument.
 9. **ISIN**. This abbreviation stands for International Securities Identification Number and it serves as a security's unique identifier.
-10. **SEDOL**. This abbreviation stands for Stock Exchange Daily Official List and it's primarily used by the London Stock Exchange and various other smaller stock exchanges.in the United Kingdom 
-11. **Cusip**. This abbreviation stands for Committee on Uniform Security Identification Procedures and it serves as an alternative identifier for stocks and bonds circulating in the United States and Canada.
+10. **SEDOL**. This abbreviation stands for Stock Exchange Daily Official List and it's primarily used by the London Stock Exchange and various other smaller stock exchanges.in the United Kingdom. 
+11. **CUSIP**. This abbreviation stands for Committee on Uniform Security Identification Procedures and it serves as an alternative identifier for stocks and bonds circulating in the United States and Canada.
 12. **Enabled**. This field indicates if the financially instrument is enabled or disabled \(unavailable for trading\).
 13. **Edit**. Use this column to edit information about a particular security \(this might be useful if you spotted a mistake in a particular\).
 
@@ -57,29 +57,33 @@ The security addition window will appear, prompting you to specify the following
 11. **Exchange**. This indicates the exchange on which the financial instrument is listed.
 12. **Currency**. This is the currency in which the financial instrument is denominated.
 13. **Parent ID**. This is the internal ID of the underlying security of an option \(applicable only when **Type** is Option\). You can request this parameter from our support team at support@etnasoft.com.
-14. **Series ID**.
-15. **Source**.
-16. **Source ID**.
-17. **Unit**.
-18. **Price**.
-19. **Strike Price.**
-20. **Margin Rate**.
-21. **Contract Size**.
-22. **Underlying Security Symbol**.
-23. **Quote Subscription Key**.
-24. **Sector**.
-25. **Industry**.
-26. **Precision**.
-27. **Volume Precision**.
-28. **ISIN**.
-29. **SEDOL**.
-30. **CUSIP**.
-31. **Leverage**.
+14. **Series ID**. This is the internal ID of the option series. You can request this parameter from our support team at support@etnasoft.com.
+15. **Source**. This is an internal parameter set by our collector services. You can request this parameter from our support team at support@etnasoft.com.
+16. **Source ID**. This is an internal parameter set by our collector services. You can request this parameter from our support team at support@etnasoft.com.
+17. **Unit** \(optional\). This indicates the unit of measurement for the commodity.
+18. **Price**. This is the closing price of the financial instrument. It's critical to be careful with this field.
+19. **Strike Price.** This is the strike price of the option \(applicable only when **Type** is Option\)
+20. **Margin Rate**. This is the margin rate for this financial instrument.
+21. **Contract Size**. This is the minimum contract size for this financial instrument.
+22. **Underlying Security Symbol**. This is the ticker symbol of the underlying security in an option \(applicable only when **Type** is Option\).
+23. **Quote Subscription Key** \(optional\). This is the quote subscription key for this financial instrument.
+24. **Sector** \(optional\). This is the sector in which the company operates.
+25. **Industry**. This is the industry in which the company operates.
+26. **Precision**. This is the number of decimal places in the price of the financial instrument.
+27. **Volume Precision**. This is the number of decimal places in the security volume \(only applicable for fractional shares\).
+28. **ISIN**. This abbreviation stands for International Securities Identification Number and it serves as a security's unique identifier.
+29. **SEDOL**. This abbreviation stands for Stock Exchange Daily Official List and it's primarily used by the London Stock Exchange and various other smaller stock exchanges.in the United Kingdom 
+30. **CUSIP**. This abbreviation stands for Committee on Uniform Security Identification Procedures and it serves as an alternative identifier for stocks and bonds circulating in the United States and Canada.
+31. **Leverage**. This is the amount of leverage that should be available to users trading this financial instrument.
 32. **Expiration Date**. This is the expiration date of the option \(applicable only when **Type** is Option\).
 
-    .
-
 ![](../../.gitbook/assets/screenshot-2019-02-01-at-19.43.08.png)
+
+Once you've completed configuring a new security, click **OK**. From now on this newly created security will be available for trading purposed to your users. 
+
+{% hint style="warning" %}
+If your users don't see the newly created security, it's likely that this security was improperly configured.
+{% endhint %}
 
 
 
