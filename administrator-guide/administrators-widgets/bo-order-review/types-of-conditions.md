@@ -36,9 +36,11 @@ Use this condition to apply the order review mechanism to the options whose expi
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.07.13.png)
 
-#### 6. Exchange Destination ???
+#### 6. Exchange Destination
 
-![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.59.19.png)
+Use this condition to apply the order review mechanism to all orders in which the target stock exchange is specified in the text field of this condition.
+
+![](../../../.gitbook/assets/screenshot-2019-02-04-at-13.10.29.png)
 
 #### 7. Exchange Working Hours
 
@@ -46,9 +48,9 @@ Use this condition to apply the order review mechanism to all orders placed duri
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.12.51%20%281%29.png)
 
-#### 8. Execution Instructions 
+#### 8. Execution Instructions
 
-Use this condition to apply the order review mechanism to all orders that must either be executed entirely or not at all. 
+Use this condition to apply the order review mechanism to all orders that must either be executed entirely or not at all.
 
 {% hint style="info" %}
 Options **DoNotIncrease** and **DoNotReduce** are currently unavailable.
@@ -58,7 +60,7 @@ Options **DoNotIncrease** and **DoNotReduce** are currently unavailable.
 
 #### 9. Execution Venue
 
-Use this condition to apply the order review mechanism to all orders that should be placed on the selected exchanges \(the list of options may vary depending on which exchanges are available to your company\).
+Use this condition to apply the order review mechanism to all orders in which the executor venue is selected in the drop-down menu of this condition \(the list of options may vary depending on which exchanges are available to your company\). The provided values are assigned by the OMS router. 
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.02.45.png)
 
@@ -68,9 +70,11 @@ Use this condition to apply the order review mechanism to all orders that are pl
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.24.05.png)
 
-#### 11. Extended Hours Exchange Working Hours ???
+#### 11. Extended Hours Exchange Working Hours
 
-Use this condition to apply the order review mechanism to all orders that are placed ???
+{% hint style="info" %}
+This condition is identical to **Extended Hours** \(\#10\).
+{% endhint %}
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.27.20.png)
 
@@ -80,7 +84,11 @@ Use this condition to apply the order review mechanism to all orders in which th
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.28.29.png)
 
-#### 13. Is contingent ??? 
+#### 13. Is contingent 
+
+Use this condition to apply the order review mechanism to all orders with a contingent execution instruction.
+
+![](../../../.gitbook/assets/screenshot-2019-02-04-at-13.51.53.png)
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.29.44.png)
 
@@ -90,7 +98,9 @@ Use this condition to apply the order review mechanism to all multi-leg option o
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.30.15.png)
 
-#### 15. Margin Requirement Cash ??? 
+#### 15. Margin Requirement Cash
+
+Use this condition to apply the order review mechanism to all orders with the specified initial margin requirements.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.30.50.png)
 
@@ -183,7 +193,9 @@ Use this condition to apply the order review mechanism to all orders that are pl
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.47.01.png)
 
-#### 28. Security Exchange Working Hours ???
+#### 28. Security Exchange Working Hours 
+
+Use this condition to apply the order review mechanism to all orders placed during the selected working hours on the exchange that lists the traded security.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-20.47.37.png)
 
