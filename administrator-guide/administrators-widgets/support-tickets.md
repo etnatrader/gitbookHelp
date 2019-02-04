@@ -2,7 +2,7 @@
 
 ### Introduction
 
-ETNA Trader provides powerful and versatile user feedback functionality that enables companies to receive, track, and respond to messages from their users. Whenever a user experiences some technical issue or wants to enquire about some widget, they can submit a troubleshooting ticket within the web terminal. This ticket is then registered in our system and you get notified about it via email or the **BO Support Tickets** widget.
+ETNA Trader provides wide-ranging, versatile user feedback functionality that enables companies to receive, track, and respond to messages from their users. Whenever a user experiences some technical issue or wants to enquire about some widget, they can submit a troubleshooting ticket within the web terminal. This ticket is then registered in our system and you get notified about it via email or the **BO Support Tickets** widget.
 
 Apart from email notifications and the support ticket widget, you can also integrate your own ticket management system like Zendesk or Freshdesk into ETNA Trader. That way our system will automatically send all user feedback to your ticket management system, where you can proceed to handle customer issues. 
 
