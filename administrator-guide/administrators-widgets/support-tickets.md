@@ -18,13 +18,19 @@ Whenever a user needs technical assistance, they should file a troubleshooting r
 
 In the appeared pop-up window, they should describe the experienced issue and then click **Submit**. They could also optionally attach up to five files, each sized no more than 10 megabytes.
 
-At the top there are two links: one for the user guide and the other for the video that your users can watch. Both of these links can be configured in the [**BO companies** widget](bo-companies/15.-headers.md), on the **Header** tab of the company modification window.
+At the top there are two links: one for the user guide and the other for the video that your users can watch. Both of these links can be configured in the **BO companies** widget, on the [**Main** tab](bo-companies/main-tab.md) of the company modification window.
 
 ![](../../.gitbook/assets/screenshot-2019-02-04-at-16.15.08.png)
 
 ### Exploring the BO Support Tickets Widget
 
-The default way of tracking and examining user feedback in ETNA Trader is to use a widget entitled **BO Support Tickets**. 
+The default way of tracking and examining user feedback in ETNA Trader is to use a widget entitled **BO Support Tickets**. This widget is used to track, filter, and examine all of the existing user reports. To add the widget, click **Add Widget** and then click **BO Support Tickets**.
+
+![](../../.gitbook/assets/screenshot-2019-02-04-at-16.37.07.png)
+
+The widget will be added to your current tab, listing all of the existing support tickets.
+
+
 
 
 
