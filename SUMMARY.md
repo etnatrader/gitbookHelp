@@ -37,9 +37,9 @@
     * [Action Syntax](administrator-guide/administrators-widgets/system-hotkey-actions/action-syntax.md)
   * [Order Reviews](administrator-guide/administrators-widgets/bo-order-review/README.md)
     * [Types of Conditions](administrator-guide/administrators-widgets/bo-order-review/types-of-conditions.md)
-  * [BO Dashboard](administrator-guide/administrators-widgets/bo-dashboard.md)
   * [Tracking Securities](administrator-guide/administrators-widgets/bo-securities.md)
   * [Support Tickets](administrator-guide/administrators-widgets/support-tickets.md)
+  * [BO Dashboard](administrator-guide/administrators-widgets/bo-dashboard.md)
   * [System Actions](administrator-guide/administrators-widgets/system-system-actions.md)
   * [RIA Models](administrator-guide/administrators-widgets/ria-models.md)
 
