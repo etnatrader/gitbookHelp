@@ -44,7 +44,7 @@ Use this condition to apply the order review mechanism to all orders in which th
 
 #### 7. Exchange Working Hours
 
-Use this condition to apply the order review mechanism to all orders placed during specific trading hours. For example, you can use this rule to review all orders placed during the pre- and post-market hours.
+Use this condition to apply the order review mechanism to all orders placed during specific trading hours on the exchange specified in the \#9 condition \(Execution Venue\). For example, you can use this rule to review all orders placed during the pre- and post-market hours.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-18.12.51%20%281%29.png)
 
