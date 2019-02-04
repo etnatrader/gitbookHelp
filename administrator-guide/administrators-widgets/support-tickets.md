@@ -22,13 +22,39 @@ At the top there are two links: one for the user guide and the other for the vid
 
 ![](../../.gitbook/assets/screenshot-2019-02-04-at-16.15.08.png)
 
+When the report is submitted, it is automatically sent to the **BO Support Tickets** widget.
+
 ### Exploring the BO Support Tickets Widget
 
 The default way of tracking and examining user feedback in ETNA Trader is to use a widget entitled **BO Support Tickets**. This widget is used to track, filter, and examine all of the existing user reports. To add the widget, click **Add Widget** and then click **BO Support Tickets**.
 
 ![](../../.gitbook/assets/screenshot-2019-02-04-at-16.37.07.png)
 
-The widget will be added to your current tab, listing all of the existing support tickets.
+The widget will be added to your current tab, listing all of the existing support tickets in a table. This table contains six columns:
+
+1. **Subject**. This is the subject line of the support ticket.
+2. **User ID**. This is the ID of the user who filed the ticket.
+3. **Contacts**. This is the contact information of the user \(usually their email address\).
+4. **User agent**. This is the user agent \(Google Chrome masquerades as Mozilla/5.0\).
+5. **Date**. This is the date on which the report was filed.
+6. **Version**. This is the version of ETNA Trader in which the user was experiencing issues.
+
+![](../../.gitbook/assets/screenshot-2019-02-04-at-16.42.16.png)
+
+You can filter the support ticket by the following criteria:
+
+1. **User ID**. Use it to list all tickets from a particular user.
+2. **Date range**. Use it to list all tickets that were filed during the specified timeframe.
+
+To reset filters, click **Reset filters**.
+
+### 
+
+
+
+
+
+
 
 
 
