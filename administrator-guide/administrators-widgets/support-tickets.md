@@ -58,6 +58,8 @@ Specify the required email address, and click **OK**.
 
 ![](../../.gitbook/assets/screenshot-2019-02-04-at-17.52.58.png)
 
+From now on all user feedback will automatically be sent to the specified email address.
+
 
 
 
