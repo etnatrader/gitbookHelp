@@ -48,6 +48,16 @@ You can filter the support ticket by the following criteria:
 
 To reset filters, click **Reset filters**.
 
+### Configuring the Feedback Email
+
+In addition to the **BO Support Tickets** widget, all user-filed tickets are automatically being sent to the feedback email configured in your company's settings. On the **Mail** tab, edit the key-value pair under the key **FeedbackEmail**. To learn more about the mail settings, head over to the documentation on [company management](bo-companies/2.-email.md).
+
+![](../../.gitbook/assets/screenshot-2019-02-04-at-17.37.25.png)
+
+
+
+
+
 ### 
 
 
