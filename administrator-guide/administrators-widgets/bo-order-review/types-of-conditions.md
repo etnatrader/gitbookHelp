@@ -72,9 +72,9 @@ Use this condition to apply the order review mechanism to all orders that are pl
 
 #### 11. Extended Hours Exchange Working Hours
 
-{% hint style="info" %}
-This condition is identical to **Extended Hours** \(\#10\).
-{% endhint %}
+Use this condition to apply the order review mechanism to all orders which are explicitly placed during selected extended hours.
+
+![](../../../.gitbook/assets/screenshot-2019-02-04-at-14.09.46.png)
 
 ![](../../../.gitbook/assets/screenshot-2019-01-31-at-19.27.20.png)
 
