@@ -1,0 +1,59 @@
+
+[[_watchlists_removesecurity]]
+==== Removes security.
+....
+DELETE /v{version}/users/{userId}/watchlists/{watchlistId}/securities
+....
+
+
+===== Description
+Removes security from watchlist by security symbol and exchange.
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Header**|**Authorization** +
+__required__|Bearer type token string|string|
+|**Header**|**Et-App-Key** +
+__required__|Application key|string|
+|**Path**|**userId** +
+__required__|User identifier|integer(int32)|
+|**Path**|**version** +
+__required__|The requested API version|string|`"1"`
+|**Path**|**watchlistId** +
+__required__|Watchlist identifier|integer(int32)|
+|**Body**|**body** +
+__required__|Security symbol and exchange|<<_securitysignature,SecuritySignature>>|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Changed watchlist with securities|<<_watchlistmodel,WatchlistModel>>
+|**401**|Authorization has been denied for this request.|No Content
+|**403**|Application key is not defined or does not exist|No Content
+|**409**|Security was not found|No Content
+|**422**|Validation error occurred while processing entity|No Content
+|**500**|Internal server error|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+* `text/json`
+
+
+===== Produces
+
+* `application/json`
+* `text/json`
+
+
+
