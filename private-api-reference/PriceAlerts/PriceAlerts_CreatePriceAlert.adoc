@@ -1,0 +1,56 @@
+
+[[_pricealerts_createpricealert]]
+==== Create price alert
+....
+POST /v{version}/users/{userId}/pricealerts
+....
+
+
+===== Description
+Create new price alert for specified user.
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Header**|**Authorization** +
+__required__|Bearer type token string|string|
+|**Header**|**Et-App-Key** +
+__required__|Application key|string|
+|**Path**|**userId** +
+__required__|User identifier|integer(int32)|
+|**Path**|**version** +
+__required__|The requested API version|string|`"1"`
+|**Body**|**body** +
+__required__|Price alert model|<<_pricealerteditablemodel,PriceAlertEditableModel>>|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Created price alert|<<_pricealertinfomodel,PriceAlertInfoModel>>
+|**401**|Authorization has been denied for this request.|No Content
+|**403**|Application key is not defined or does not exist|No Content
+|**422**|Validation error occurred while processing entity|No Content
+|**500**|Internal server error|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+* `text/json`
+
+
+===== Produces
+
+* `application/json`
+* `text/json`
+
+
+
