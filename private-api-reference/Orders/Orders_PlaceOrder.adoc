@@ -1,0 +1,58 @@
+
+[[_orders_placeorder]]
+==== Place order
+....
+POST /v{version}/accounts/{accountId}/orders
+....
+
+
+===== Description
+Place or verify order
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Header**|**Authorization** +
+__required__|Bearer type token string|string|
+|**Header**|**Et-App-Key** +
+__required__|Application key|string|
+|**Path**|**accountId** +
+__required__|Account identifier|integer(int32)|
+|**Path**|**version** +
+__required__|The requested API version|string|`"1"`
+|**Query**|**dryRun** +
+__optional__|Preview order place results without sending it to the market|boolean|`"false"`
+|**Body**|**body** +
+__required__|Place order parameters|<<_createordermodel,CreateOrderModel>>|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Placed order model|<<_ordermodel,OrderModel>>
+|**401**|Authorization has been denied for this request.|No Content
+|**403**|Application key is not defined or does not exist|No Content
+|**422**|Validation error occurred while processing entity|No Content
+|**500**|Internal server error|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+* `text/json`
+
+
+===== Produces
+
+* `application/json`
+* `text/json`
+
+
+
