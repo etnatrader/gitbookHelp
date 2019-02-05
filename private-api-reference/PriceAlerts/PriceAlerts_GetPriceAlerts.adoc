@@ -1,0 +1,56 @@
+
+[[_pricealerts_getpricealerts]]
+==== Get price alerts
+....
+GET /v{version}/users/{userId}/pricealerts
+....
+
+
+===== Description
+Provides price alerts collection related to specified user
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Header**|**Authorization** +
+__required__|Bearer type token string|string|
+|**Header**|**Et-App-Key** +
+__required__|Application key|string|
+|**Path**|**userId** +
+__required__|User identifier|integer(int32)|
+|**Path**|**version** +
+__required__|The requested API version|string|`"1"`
+|**Query**|**isDesc** +
+__required__|Sorting direction. Desc if true, otherwise is asc|boolean|
+|**Query**|**pageNumber** +
+__required__|Page number|integer(int32)|
+|**Query**|**pageSize** +
+__required__|Page size|integer(int32)|
+|**Query**|**sortBy** +
+__required__|Sorting field|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Price alerts collection|<<_pagingresult_pricealertinfomodel,PagingResult[PriceAlertInfoModel]>>
+|**401**|Authorization has been denied for this request.|No Content
+|**403**|Application key is not defined or does not exist|No Content
+|**422**|Validation error occurred while processing entity|No Content
+|**500**|Internal server error|No Content
+|===
+
+
+===== Produces
+
+* `application/json`
+* `text/json`
+
+
+
