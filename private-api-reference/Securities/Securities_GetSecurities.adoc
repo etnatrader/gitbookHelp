@@ -1,0 +1,50 @@
+
+[[_securities_getsecurities]]
+==== Get securities by mask
+....
+GET /v{version}/securities
+....
+
+
+===== Description
+Provides securities collection by specified mask
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Header**|**Authorization** +
+__required__|Bearer type token string|string|
+|**Header**|**Et-App-Key** +
+__required__|Application key|string|
+|**Path**|**version** +
+__required__|The requested API version|string|`"1"`
+|**Query**|**mask** +
+__required__|Mask to search by|string|
+|**Query**|**maxCount** +
+__required__|Maximum securities count|integer(int32)|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|Securities models collection|< <<_securitymodel,SecurityModel>> > array
+|**401**|Authorization has been denied for this request.|No Content
+|**403**|Application key is not defined or does not exist|No Content
+|**422**|Validation error occurred while processing entity|No Content
+|**500**|Internal server error|No Content
+|===
+
+
+===== Produces
+
+* `application/json`
+* `text/json`
+
+
+
