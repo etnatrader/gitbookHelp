@@ -40,20 +40,24 @@
   * [Tracking Securities](administrator-guide/administrators-widgets/bo-securities.md)
   * [Support Tickets](administrator-guide/administrators-widgets/support-tickets.md)
 
-## ETNA Trader REST API
+## PUBLIC REST API
 
-* [Introduction](etna-trader-rest-api/introduction.md)
-* [Authentication](etna-trader-rest-api/authentication/README.md)
-  * [Requesting Tokens](etna-trader-rest-api/authentication/requesting-tokens/README.md)
-    * [Syntax](etna-trader-rest-api/authentication/requesting-tokens/get_token.md)
-* [Managing Users](etna-trader-rest-api/managing-users.md)
-* [User Accounts](etna-trader-rest-api/user-accounts.md)
-* [Orders](etna-trader-rest-api/orders.md)
-* [Positions](etna-trader-rest-api/positions.md)
-* [Securities](etna-trader-rest-api/securities.md)
-* [Watchlists](etna-trader-rest-api/watchlists.md)
-* [Price Alerts](etna-trader-rest-api/price-alerts.md)
-* [Historical Data](etna-trader-rest-api/historical-data.md)
-* [Feedback](etna-trader-rest-api/feedback.md)
-* [Managing Transactions](etna-trader-rest-api/managing-transactions.md)
+* [Introduction](public-rest-api/introduction.md)
+* [Authentication](public-rest-api/authentication/README.md)
+  * [Requesting Tokens](public-rest-api/authentication/requesting-tokens/README.md)
+    * [Syntax](public-rest-api/authentication/requesting-tokens/get_token.md)
+* [Managing Users](public-rest-api/managing-users.md)
+* [User Accounts](public-rest-api/user-accounts.md)
+* [Orders](public-rest-api/orders.md)
+* [Positions](public-rest-api/positions.md)
+* [Securities](public-rest-api/securities.md)
+* [Watchlists](public-rest-api/watchlists.md)
+* [Price Alerts](public-rest-api/price-alerts.md)
+* [Historical Data](public-rest-api/historical-data.md)
+* [Feedback](public-rest-api/feedback.md)
+* [Managing Transactions](public-rest-api/managing-transactions.md)
+
+## private rest api
+
+* [Untitled](private-rest-api/untitled.md)
 
