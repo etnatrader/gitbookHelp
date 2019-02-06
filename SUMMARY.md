@@ -39,7 +39,6 @@
     * [Types of Conditions](administrator-guide/administrators-widgets/bo-order-review/types-of-conditions.md)
   * [Tracking Securities](administrator-guide/administrators-widgets/bo-securities.md)
   * [Support Tickets](administrator-guide/administrators-widgets/support-tickets.md)
-  * [Sample Page](administrator-guide/administrators-widgets/get_token.md)
 
 ## ETNA Trader REST API
 
@@ -47,5 +46,6 @@
 * [Public API](etna-trader-rest-api/public-api/README.md)
   * [Authentication](etna-trader-rest-api/public-api/authentication/README.md)
     * [Requesting Tokens](etna-trader-rest-api/public-api/authentication/requesting-tokens.md)
+      * [Syntax](etna-trader-rest-api/public-api/Login/Get_token.md)   
 * [Private API](etna-trader-rest-api/private-api.md)
 
