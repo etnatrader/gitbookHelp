@@ -1,7 +1,3 @@
----
-description: Request an authentication token used in all other API requests
----
-
 # Requesting Tokens
 
 ### Introduction

@@ -43,9 +43,17 @@
 ## ETNA Trader REST API
 
 * [Introduction](etna-trader-rest-api/introduction.md)
-* [Public API](etna-trader-rest-api/public-api/README.md)
-  * [Authentication](etna-trader-rest-api/public-api/authentication/README.md)
-    * [Requesting Tokens](etna-trader-rest-api/public-api/authentication/requesting-tokens.md)
-      * [Syntax](etna-trader-rest-api/public-api/Login/Get_token.md)   
-* [Private API](etna-trader-rest-api/private-api.md)
+* [Authentication](etna-trader-rest-api/authentication/README.md)
+  * [Requesting Tokens](etna-trader-rest-api/authentication/requesting-tokens/README.md)
+    * [Syntax](etna-trader-rest-api/authentication/requesting-tokens/get_token.md)
+* [Managing Users](etna-trader-rest-api/managing-users.md)
+* [User Accounts](etna-trader-rest-api/user-accounts.md)
+* [Orders](etna-trader-rest-api/orders.md)
+* [Positions](etna-trader-rest-api/positions.md)
+* [Securities](etna-trader-rest-api/securities.md)
+* [Watchlists](etna-trader-rest-api/watchlists.md)
+* [Price Alerts](etna-trader-rest-api/price-alerts.md)
+* [Historical Data](etna-trader-rest-api/historical-data.md)
+* [Feedback](etna-trader-rest-api/feedback.md)
+* [Managing Transactions](etna-trader-rest-api/managing-transactions.md)
 
