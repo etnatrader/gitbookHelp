@@ -43,6 +43,7 @@
 ## PUBLIC REST API
 
 * [Introduction](public-rest-api/introduction.md)
+* [Overview](public-rest-api/overview.md)
 * [Authentication](public-rest-api/authentication/README.md)
   * [Requesting Tokens](public-rest-api/authentication/requesting-tokens/README.md)
     * [Syntax](public-rest-api/authentication/requesting-tokens/get_token.md)
@@ -59,5 +60,5 @@
 
 ## private rest api
 
-* [Untitled](private-rest-api/untitled.md)
+* [Overview](private-rest-api/untitled.md)
 

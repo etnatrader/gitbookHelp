@@ -1,8 +1,8 @@
 # Overview
 
-### Introduction <a id="introduction"></a>
+### Introduction
 
-ETNA Trader's private API mimics the functionality of administrator widgets. Namely, you can invoke the API to perform regular administrative operations like like managing payments, creating allocation requests, and so forth. You can use this API to create custom JavaScript-based widgets or develop your own UI that invokes our API to settle transactions. Note that the public API provides a limited number of methods compared to the private API that offers far more functionality.
+ETNA Trader's public API mimics the functionality of user widgets. Namely, you can invoke the API to perform regular trading operations like placing orders, getting quotes, configuring price alerts, and so forth. You can use this API to create custom JavaScript-based widgets or develop your own UI that invokes our API to settle transactions. Note that the public API provides a limited number of methods compared to the private API that offers far more functionality.
 
 The public API is structured by categories, each representing a different set of functionality. The first section — Authentication — covers the process of generating authentication tokens that must be provided in the header of all other requests. All subsequent sections cover different aspects of ETNA Trader, ranging from order placement to submitting user feedback.
 
