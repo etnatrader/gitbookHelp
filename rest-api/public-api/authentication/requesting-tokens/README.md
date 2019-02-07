@@ -24,9 +24,7 @@ APIBaseURL + /token
 
 The header of this request must contain the following three parameters:
 
-**1. Et-App-Key**. This is the API key of your company that can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
-
-![](../../../../.gitbook/assets/image.png)
+**1. Et-App-Key**. This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
 
 **2.** **Username**. This is the username of the user on whose behalf all future requests will be made.
 
