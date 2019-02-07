@@ -122,4 +122,5 @@
   * [Overview](public-rest-api/private-api/untitled.md)
   * [Authentication](public-rest-api/private-api/authentication/README.md)
     * [Requesting Tokens](public-rest-api/private-api/authentication/requesting-tokens.md)
+      * [Syntax](etna-trader-rest-api/private-api/Login/Get_token.md)
 
