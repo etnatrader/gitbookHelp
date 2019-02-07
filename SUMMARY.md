@@ -120,4 +120,6 @@
       * [Syntax](public-rest-api/public-api/managing-transactions/get-transactions/transactions_getactionspage.md)
 * [Private API](public-rest-api/private-api/README.md)
   * [Overview](public-rest-api/private-api/untitled.md)
+  * [Authentication](public-rest-api/private-api/authentication/README.md)
+    * [Requesting Tokens](public-rest-api/private-api/authentication/requesting-tokens.md)
 
