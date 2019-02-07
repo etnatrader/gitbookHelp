@@ -12,7 +12,7 @@ This endpoint enables you to request a user's information by supplying their uni
 In order to request information about a particular user, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
-There are three required parameters that must be provided in the request:
+There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
@@ -45,7 +45,7 @@ As a response, you'll receive a JSON file with the information about this user:
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when requesting a token:
+Here are some of the common mistakes that developers make when requesting a user's information:
 
 #### Requesting as a Non-Administrator
 
