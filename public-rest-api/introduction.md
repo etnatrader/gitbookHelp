@@ -14,5 +14,9 @@ ETNA Trader offers two main types of API:
 
 **1. Public**. This is the public API that invokes actions typically performed by user widgets: placing orders, getting quotes, configuring price alerts, and so forth. This API can be called from anywhere simply using your app's API key and a user's credentials. 
 
+{% page-ref page="public-api/" %}
+
 **2. Private**. Unlike the public API, the private API can only be called within your private network \(AWS EC2 network, to be precise\). This limitation is put in place to ensure that critical data could not be modified by ill-intentioned third parties. In addition to all methods from the public API, the private API also includes the ability to perform administrative tasks like managing payments, creating allocation requests, and so forth.
+
+{% page-ref page="private-api/" %}
 
