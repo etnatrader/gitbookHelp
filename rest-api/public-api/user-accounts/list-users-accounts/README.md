@@ -1,3 +1,7 @@
+---
+description: List all trading accounts of a particular user
+---
+
 # List User's Accounts
 
 ### Overview 
