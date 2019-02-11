@@ -26,7 +26,7 @@ The header of this request must contain the following three parameters:
 
 **1. Et-App-Key**. This is the API key of your company that can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
 
-![](../../../../.gitbook/assets/image.png)
+![](../../../../.gitbook/assets/image%20%281%29.png)
 
 **2.** **Username**. This is the username of the user on whose behalf all future requests will be made.
 
