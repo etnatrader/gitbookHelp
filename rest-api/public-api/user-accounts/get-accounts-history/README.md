@@ -140,3 +140,5 @@ If the query parameters are missing or incorrectly specified , the following err
 }
 ```
 
+In the following article we provide in-depth coverage of the syntax for this API request.
+
