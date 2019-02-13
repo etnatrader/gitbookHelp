@@ -1,4 +1,4 @@
-# Get Security's Info by Internal ID
+# Get Equity Info by Internal ID
 
 ### Overview
 

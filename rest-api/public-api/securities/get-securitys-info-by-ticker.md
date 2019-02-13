@@ -1,4 +1,4 @@
-# Get Security's Info by Ticker
+# Get Equity Info by Ticker
 
 ### Overview
 
