@@ -129,7 +129,7 @@ Unit                                  = 40
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to place a new order. 
+Here are some of the common mistakes that developers make when attempting to list the existing positions. 
 
 #### Requesting as a Non-Administrator
 
