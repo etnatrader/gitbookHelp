@@ -1,24 +1,24 @@
-# Get Security's Info by Internal ID
+# Get Security's Info by Ticker
 
 ### Overview
 
-This GET endpoint enables you to retrieve information about a particular security by specifying its internal ID in the request's path. This information is not retrieved directly from the exchange; rather, it's the information about the security that is specific to ETNA Trader.
+This GET endpoint enables you to retrieve information about a particular security by specifying its ticker symbol in the request's path. This information is not retrieved directly from the exchange; rather, it's the information about the security that is specific to ETNA Trader.
 
 {% hint style="warning" %}
-In order to retrieve information about a particular security, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to retrieve information about a particular security by its ticker, you must use an [authorization token](../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/requesting-tokens/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **ID** \(path\). This is the internal ID of the security whose information you'd like to retrieve. 
+4. **Ticker symbol** \(path\). This is the ticker symbol of the security \(as displayed on the exchange\) whose information you'd like to retrieve. 
 
 Here's the final template for this API request:
 
 ```text
-GET apiURL/v1.0/equities/4 //Apple Inc.
+GET apiURL/v1.0/equities/AAPL //Apple Inc.
 ```
 
 ### Response
@@ -71,7 +71,7 @@ Here are some of the common mistakes that developers make when attempting to ret
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about a particular security by its ticker symbol, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about a particular security, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {
