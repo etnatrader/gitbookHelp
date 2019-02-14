@@ -13,7 +13,7 @@ There are four required parameters that must be provided in the request's header
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/requesting-tokens/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **underlying** \(query\). This is the ID of the option whose information you'd like to retrieve.
+4. **underlying** \(query\). This is the ID of the option whose expiration data you'd like to retrieve.
 
 Here's the final template for this API request:
 
@@ -53,6 +53,15 @@ In response to this API request, you'll receive a list of expiration dates for o
     },
 ]
 ```
+
+where:
+
+| Parameter | Description |
+| :--- | :--- |
+| SeriesId | This is the internal identifier of the option series to which this option belongs. |
+| SeriesType | This is the type of option series. Possible values: Standard, NonStandard, Binary, Flex, Undefined.  |
+| ExpirationDate | This is the expiration date of the option. |
+| ExpirationType | This is the expiration type of the option. Possible values: Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard.  |
 
 ### Common Mistakes
 

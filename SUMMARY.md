@@ -83,6 +83,7 @@
     * [Get Option Info by Internal ID](rest-api/public-api/securities/get-option-info-by-internal-id.md)
     * [Get Option Info by Ticker](rest-api/public-api/securities/get-option-info-by-ticker.md)
     * [Get Options Expiration Dates](rest-api/public-api/securities/get-options-expiration-dates.md)
+    * [Get Filtered Options](rest-api/public-api/securities/get-filtered-options.md)
   * [Watchlists](rest-api/public-api/watchlists/README.md)
     * [Add Security to Watchlist by ID](rest-api/public-api/watchlists/add-security-to-watchlist-by-id/README.md)
       * [Syntax](rest-api/public-api/watchlists/add-security-to-watchlist-by-id/watchlists_addsecuritybyid.md)
