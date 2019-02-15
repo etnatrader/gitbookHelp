@@ -5,7 +5,7 @@
 This GET endpoint enables you to retrieve options sorted by a specified field. 
 
 {% hint style="warning" %}
-In order to retrieve the a list of filtered options, you must use an [authorization token](../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to retrieve a list of filtered options, you must use an [authorization token](../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are seven required parameters that must be provided in the request:

@@ -81,7 +81,7 @@ where:
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve an option's information by their ID. 
+Here are some of the common mistakes that developers make when attempting to retrieve an option's information by their internal ID. 
 
 #### Requesting as a Non-Administrator
 
