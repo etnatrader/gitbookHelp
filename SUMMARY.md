@@ -95,7 +95,7 @@
       * [Syntax](rest-api/public-api/watchlists/delete-watchlist/watchlists_deletewatchlist.md)
     * [Get Specific Watchlist](rest-api/public-api/watchlists/get-specific-watchlist/README.md)
       * [Syntax](rest-api/public-api/watchlists/get-specific-watchlist/watchlists_getwatchlist.md)
-    * [Get User's Watchlist](rest-api/public-api/watchlists/get-users-watchlist/README.md)
+    * [Get User's Watchlists](rest-api/public-api/watchlists/get-users-watchlist/README.md)
       * [Syntax](rest-api/public-api/watchlists/get-users-watchlist/watchlists_getuserwatchlists.md)
     * [Remove Security From Watchlist by ID](rest-api/public-api/watchlists/remove-security-from-watchlist-by-id/README.md)
       * [Syntax](rest-api/public-api/watchlists/remove-security-from-watchlist-by-id/watchlists_removesecuritybyid.md)

@@ -1,4 +1,4 @@
-# Get User's Watchlist
+# Get User's Watchlists
 
 ### Overview
 
