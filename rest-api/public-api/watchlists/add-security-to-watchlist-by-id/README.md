@@ -2,7 +2,7 @@
 
 ### Overview
 
-This PUT endpoint enables you to add a specific security to a specific watchlist of the user whose id is provided in the request's header. 
+This PUT endpoint enables you to add a specific security to a specific watchlist of the user whose id is provided in the request's path. 
 
 {% hint style="warning" %}
 In order to add a specific security to a specific watchlist of a particular user, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.

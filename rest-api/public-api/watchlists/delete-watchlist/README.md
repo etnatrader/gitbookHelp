@@ -2,7 +2,7 @@
 
 ### Overview
 
-This DELETE endpoint enables you to delete a specific watchlist of the user whose id is provided in the request's header.
+This DELETE endpoint enables you to delete a specific watchlist of the user whose id is provided in the request's path.
 
 {% hint style="warning" %}
 In order to delete a particular watchlist of a particular user, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.

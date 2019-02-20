@@ -2,7 +2,7 @@
 
 ### Overview
 
-This POST endpoint enables you to create a new watchlist for a user whose internal ID is provided in the request's header. The newly created watchlist can initially have either no securities or it could have a list of initial securities provided as an array. 
+This POST endpoint enables you to create a new watchlist for a user whose internal ID is provided in the request's path. The newly created watchlist can initially have either no securities or it could have a list of initial securities provided as an array. 
 
 {% hint style="warning" %}
 In order to create a new watchlist for a particular user, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.

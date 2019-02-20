@@ -2,7 +2,7 @@
 
 ### Overview
 
-This GET endpoint enables you to retrieve the list of watchlists of a user whose ID is provided in the request's header. The watchlists can be retrieved either with only information about the watchlists or including the list of securities in every watchlist. 
+This GET endpoint enables you to retrieve the list of watchlists of a user whose ID is provided in the request's path. The watchlists can be retrieved either with only information about the watchlists or including the list of securities in every watchlist. 
 
 {% hint style="warning" %}
 In order to retrieve the list of a user's watchlists, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
