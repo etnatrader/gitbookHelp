@@ -84,3 +84,29 @@ Note that if a user belongs to multiple groups an each group has a different wid
 
 ![](../../.gitbook/assets/screenshot-2019-01-21-at-20.21.42.png)
 
+## Cloning User Groups
+
+If there's an urgent necessity to clone an existing group and make a few modifications to it, you can do that by clicking **Clone.**
+
+![](../../.gitbook/assets/screenshot-2019-02-20-at-20.39.20.png)
+
+In the appeared pop-up window, specify which group must be cloned in the drop-down menu. Afterward, select the parameters that must be copied from the selected user group to the new user group. The remaining settings will have to be configured manually. Click **OK**.
+
+![](../../.gitbook/assets/screenshot-2019-02-20-at-20.39.33.png)
+
+{% hint style="warning" %}
+Be cautious with automatically adding users from the old group to the newly created group, as that might lead to unintended consequences.
+{% endhint %}
+
+Next, you'll be prompted with the familiar user group modification window where you'll have to go through the regular 8 tabs \(some which will already be configured\).
+
+![](../../.gitbook/assets/screenshot-2019-02-20-at-20.35.46.png)
+
+Once you have completed configuring the new group, click **OK**, and from then on the group will be active and ready to be used as the default group for some company.
+
+
+
+
+
+
+
