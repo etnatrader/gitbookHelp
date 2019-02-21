@@ -117,7 +117,7 @@
   * [Historical Data](rest-api/public-api/historical-data/README.md)
     * [Get Chart Data](rest-api/public-api/historical-data/get-chart-data/README.md)
       * [Syntax](rest-api/public-api/historical-data/get-chart-data/historicaltradedata_getchartcomparedata.md)
-    * [Get Candles and Indicators for Charts](rest-api/public-api/historical-data/get-candles-and-indicators-for-charts/README.md)
+    * [Get Candles and Indicators for a Security](rest-api/public-api/historical-data/get-candles-and-indicators-for-charts/README.md)
       * [Syntax](rest-api/public-api/historical-data/get-candles-and-indicators-for-charts/historicaltradedata_getchartbasicdata.md)
   * [User Feedback](rest-api/public-api/feedback/README.md)
     * [Submit Feedback](rest-api/public-api/feedback/submit-feedback/README.md)
