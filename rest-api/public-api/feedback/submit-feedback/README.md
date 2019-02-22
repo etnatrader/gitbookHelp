@@ -41,7 +41,7 @@ where:
 | Subject | This is the feedback's subject line. |
 | ImagesToUpload | This is an array of files that can be attached to the feedback. |
 | Name | This is the name of the attached file. |
-| Data | This is the attached file in the Base64 format. When the user provides a particular attachment file, covert it to Base64 and then insert into this field. |
+| Data | This is the attached file in the Base64 format. When a user attaches a particular file, convert it to a Base64 string and then insert it into this field. |
 | Type | This is the extension of the attached file. |
 
 {% hint style="warning" %}
