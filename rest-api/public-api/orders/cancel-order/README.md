@@ -18,7 +18,7 @@ There are five required parameters that must be provided in the request header:
 
 This API request must be sent to the following URL:
 
-```javascript
+```text
 apiURL/v1.0/accounts/6303/orders/73552
 ```
 

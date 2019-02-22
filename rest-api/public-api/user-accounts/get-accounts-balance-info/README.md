@@ -93,14 +93,6 @@ where:
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">changeAbsolute</td>
-      <td style="text-align:left">—</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">changePercent</td>
-      <td style="text-align:left">—</td>
-    </tr>
-    <tr>
       <td style="text-align:left">equityTotal</td>
       <td style="text-align:left">This is the gross valuation of all equity on the trading account.</td>
     </tr>

@@ -43,6 +43,20 @@ As a response, you'll receive a JSON file with the information about this user:
 }
 ```
 
+where:
+
+| Parameter | Description |
+| :--- | :--- |
+| UserId | This is the internal ID of the user in ETNA Trader. |
+| FirstName | This is the first name of the user. |
+| MiddleName | This is the middle name of the user. |
+| LastName | This is the last name of the user. |
+| Login | This is the user's login in ETNA Trader. |
+| Email | This is the email address of the user in ETNA Trader. |
+| AddedDate | This is the date on which this user account was added to ETNA Trader. |
+| Salutation | This is a special salutation used to address this user in emails. |
+| Suffix | This is the suffix used when addressing the user \(Jr, Sr, I, II, III, etc.\) |
+
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting a user's information:

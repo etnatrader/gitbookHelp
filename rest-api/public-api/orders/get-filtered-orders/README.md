@@ -134,55 +134,236 @@ In response to this API request, you'll receive the following JSON file that lis
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| Id | This is the internal ID of the order |
-| SecurityId | This is the internal ID of the underlying security of the order |
-| Quantity | This is the number of shares in the order |
-| StopPrice | This is the stop price of the order \(if there's no stop price — the value of this parameter will be 0\) |
-| ClientId??? | This is the  |
-| ExecutedQuantity | This is the number of shares that have been purchased or sold  |
-| LastPrice | This is the price of the last executed order for the underlying security |
-| LastQuantity |  |
-| LeavesQuantity |  |
-| AveragePrice | This is the average price at which the order was executed |
-| Side | This is the type of order \(could be "Buy", "Sell", "SellShort", or "BuyToCover"\) |
-| Date | This is the date on which the order was placed by the user |
-| TransactionDate | This is the date on which  |
-| SettDate |  |
-| Status |  |
-| ExecutionStatus | This is the execution status of the order.  |
-| Type |  |
-| RequestStatus |  |
-| Target |  |
-| TimeInForce |  |
-| ExecInst |  |
-| ExpireDate |  |
-| CounterPartyOrderId |  |
-| AccountId |  |
-| UserId |  |
-| RequestId |  |
-| StateId |  |
-| ParentId |  |
-| Legs |  |
-| Exchange |  |
-| ExecutionVenue |  |
-| TrailingStopAmountType |  |
-| TrailingStopAmount |  |
-| TrailingLimitAmountType |  |
-| TrailingLimitAmount |  |
-| CreateDate |  |
-| InitialType |  |
-| IsExternal |  |
-| ExecBrocker |  |
-| ExecutionInstructions |  |
-| TransType |  |
-| ExecId |  |
-| ValidationsToBypass |  |
-| ParentRequestId |  |
-| SettlementDate |  |
-
-### Common Mistakes
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Id</td>
+      <td style="text-align:left">This is the internal ID of the order.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SecurityId</td>
+      <td style="text-align:left">This is the internal ID of the underlying security of the order.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Quantity</td>
+      <td style="text-align:left">This is the number of shares in the order.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">StopPrice</td>
+      <td style="text-align:left">This is the stop price of the order (if there's no stop price — the value
+        of this parameter will be 0).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ClientId</td>
+      <td style="text-align:left">This is the order ID on the client's side.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExecutedQuantity</td>
+      <td style="text-align:left">This is the number of shares that have been purchased or sold.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">LastPrice</td>
+      <td style="text-align:left">This is the price of the last executed order for the underlying security.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">LastQuantity</td>
+      <td style="text-align:left">This is the number of shares that were traded in the last transaction.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">LeavesQuantity</td>
+      <td style="text-align:left">This is the number of shares in the order that are yet to be purchased.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AveragePrice</td>
+      <td style="text-align:left">This is the average price at which the order was executed</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Side</td>
+      <td style="text-align:left">This is the type of order (could be "Buy", "Sell", "SellShort", or "BuyToCover")</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Date</td>
+      <td style="text-align:left">This is the date on which the order was placed by the user</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TransactionDate</td>
+      <td style="text-align:left">This is the date on which the transaction took place.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Status</td>
+      <td style="text-align:left">
+        <p>This is the current status of the order. Possible values:</p>
+        <p>0 - New</p>
+        <p>1 - Partially Filled</p>
+        <p>2 - Filled</p>
+        <p>3 - Done For Day</p>
+        <p>4 - Canceled</p>
+        <p>5 - Replaced</p>
+        <p>6 - Pending Cancel</p>
+        <p>7 - Stopped</p>
+        <p>8 - Rejected</p>
+        <p>9 - Suspended</p>
+        <p>10 - Pending New</p>
+        <p>11 - Calculated</p>
+        <p>12 - Expired</p>
+        <p>13 - Accepted For Bidding</p>
+        <p>14 - Pending Replace</p>
+        <p>15 - Error</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExecutionStatus</td>
+      <td style="text-align:left">This is the execution status of the order.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Type</td>
+      <td style="text-align:left">This is the type of the order. The range of possible values includes: <b>Market</b>, <b>Limit</b>, <b>Stop</b>, <b>Stop Limit</b>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">RequestStatus</td>
+      <td style="text-align:left">This is the status of the order modification request.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Target</td>
+      <td style="text-align:left">This is the target price of the underlying company so to</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TimeInForce</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Indicates the time frame in which the order will be active. Possible Values:</p>
+        <ol>
+          <li><b>Day</b>. The order automatically expires at the end of the regular
+            trading session if it weren't executed.</li>
+          <li><b>GTC </b>(Good-till-Canceled). The order persists indefinitely until
+            it is executed or manually cancelled.</li>
+          <li><b>AtTheOpening</b>. The order should be filled at the opening of the
+            marketplace or cancelled.</li>
+          <li><b>ImmediateOrCancel</b>. The order should be completely or partially
+            filled immediately. If partially filled, the remaining part of the order
+            should be cancelled.</li>
+          <li><b>FillOrKill</b>. The order should be filled immediately and entirely
+            or cancelled right away.</li>
+          <li><b>GoodTillCrossing</b>. The order will be active until the market enters
+            the auction phase.</li>
+          <li><b>GoodTillDate</b>. The order will be active until the date specified
+            in the ExpireDate attribute (unless it is executed or cancelled).</li>
+          <li><b>GoodTillTime</b>. The order will be active until a certain time point.</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExecInst</td>
+      <td style="text-align:left">Indicates if the order should be filled either entirely in one transaction
+        or not at all. Possible values: <b>'DoNotIncrease'</b>, <b>'DoNotReduce'</b>, <b>'AllOrNone'</b>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExpireDate</td>
+      <td style="text-align:left">This is the expiration of the order. If the order isn't executed until
+        the specified date, it'll automatically be cancelled.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">CounterPartyOrderId</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AccountId</td>
+      <td style="text-align:left">This is the identifier of the trading account.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">UserId</td>
+      <td style="text-align:left">This is the ID of the user on whose trading account the order was executed.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">RequestId</td>
+      <td style="text-align:left">This is the identifier of the request modification.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">StateId</td>
+      <td style="text-align:left">The is the identifier of the order's state in ETNA Trader</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ParentId</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Legs</td>
+      <td style="text-align:left">These are the legs of a multi-leg order</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Exchange</td>
+      <td style="text-align:left">This is the exchange on which the order should be executed.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExecutionVenue</td>
+      <td style="text-align:left">This is the execution venue of the order (the list of options may vary
+        depending on which exchanges are available to your company).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TrailingStopAmountType</td>
+      <td style="text-align:left">This is the type of the trailing stop (<b>Absolute</b> or <b>Persentage</b>).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TrailingStopAmount</td>
+      <td style="text-align:left">This is the trailing amount of the trailing stop (in percentage terms
+        or in the currency units).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TrailingLimitAmountType</td>
+      <td style="text-align:left">This is the type of the trailing limit (<b>Absolute</b> or <b>Persentage</b>).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TrailingLimitAmount</td>
+      <td style="text-align:left">This is the trailing amount (in percentage terms or in the currency units).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">CreateDate</td>
+      <td style="text-align:left">This is the date on which the order was created.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">InitialType</td>
+      <td style="text-align:left">This is the initial type of the order.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">IsExternal</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExecBrocker</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExecutionInstructions</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TransType</td>
+      <td style="text-align:left">This is the type of the transaction.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExecId</td>
+      <td style="text-align:left">This is the identifier of the execution</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ValidationsToBypass</td>
+      <td style="text-align:left">Indicates the validation rules that must be skipped</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ParentRequestId</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SettlementDate</td>
+      <td style="text-align:left">This is the date on which the order was settled.</td>
+    </tr>
+  </tbody>
+</table>### Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting the list of all outstanding and executed orders. 
 
