@@ -200,4 +200,6 @@
   * [Managing Transactions](rest-api/private-api/managing-transactions/README.md)
     * [Get Transactions](rest-api/private-api/managing-transactions/get-transactions/README.md)
       * [Syntax](rest-api/private-api/managing-transactions/get-transactions/syntax.md)
+  * [Policies](rest-api/private-api/policies/README.md)
+    * [List All User's Policies](rest-api/private-api/policies/list-all-users-policies.md)
 
