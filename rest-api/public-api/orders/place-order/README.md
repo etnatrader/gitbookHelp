@@ -24,36 +24,7 @@ POST apiURL/v1.0/accounts/{accountID}/orders
 
 ### Request Body
 
-The body of this request represents the information about the to-be-created order. It must be sent in the JSON format in the following way:
-
-```javascript
-{
-  "Symbol": "string",
-  "ClientId": "string",
-  "ExpireDate": "2019-02-12T12:04:52.868Z",
-  "Type": "Market",
-  "Side": "Buy",
-  "ExecInst": "AllOrNone",
-  "TimeInforce": "Day",
-  "Quantity": 0,
-  "Price": 0,
-  "StopPrice": 0,
-  "Exchange": "string",
-  "TrailingStopAmountType": "Absolute",
-  "TrailingStopAmount": 0,
-  "TrailingLimitAmountType": "Absolute",
-  "TrailingLimitAmount": 0,
-  "ExtendedHours": "string",
-  "Token": "string",
-  "ExecutionInstructions": {},
-  "ValidationsToBypass": 0,
-  "Legs": [
-    {}
-  ]
-}
-```
-
-where:
+The body of this request represents the information about the to-be-created order. It must be sent in the JSON format with the parameters described in the following table:
 
 <table>
   <thead>
@@ -154,28 +125,125 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">Token</td>
-      <td style="text-align:left">Optional token (additional identity key)</td>
+      <td style="text-align:left">Optional token (additional identity key).</td>
     </tr>
     <tr>
       <td style="text-align:left">ExecutionInstructions</td>
-      <td style="text-align:left">Execution instructions for algorithmic trades</td>
+      <td style="text-align:left">Execution instructions for algorithmic trades.</td>
     </tr>
     <tr>
       <td style="text-align:left">ValidationsToBypass</td>
-      <td style="text-align:left">Indicates the validation rules that must be skipped</td>
+      <td style="text-align:left">Indicates the validation rules that must be skipped.</td>
     </tr>
     <tr>
       <td style="text-align:left">Legs</td>
-      <td style="text-align:left">These are the legs of a multi-leg order</td>
+      <td style="text-align:left">These are the legs of a multi-leg order.</td>
     </tr>
   </tbody>
-</table>### Response
-
-In response to this request, you'll receive a JSON file confirming that the order has been successfully placed:
+</table>#### Market Order Sample
 
 ```javascript
-
+{
+  "Symbol": "AAPL", //Buying 100 shares of the Apple stock
+  "Type": "Market",
+  "Side": "Buy",
+  "Quantity": 100
+}
 ```
+
+#### Limit Order Sample
+
+```javascript
+{
+  "SecurityId": 4, //Buying 100 shares of the Apple stock
+  "Type": "Limit",
+  "Side": "Buy",
+  "Quantity": 100,
+  "Price" : 170 //The limit price of the order
+}
+```
+
+#### Stop Order Sample
+
+```javascript
+{
+  "SecurityId": 4, //Buying 100 shares of the Apple stock
+  "Type": "Stop",
+  "Side": "Buy",
+  "Quantity": 100,
+  "StopPrice" : 150 //The stop price of the order
+}
+```
+
+#### Stop-Limit Order Sample
+
+```javascript
+{
+  "SecurityId": 4, //Buying 100 shares of the Apple stock
+  "Type": "StopLimit",
+  "Side": "Buy",
+  "Quantity": 100,
+  "StopPrice" : 149, //The stop price of the order
+  "Price": 150 //The limit price of the order
+}
+```
+
+### Response
+
+In response to this request, you'll receive a JSON file with comprehensive information about the newly created order:
+
+```javascript
+{
+    "Id": 80328,
+    "SecurityId": 4,
+    "Quantity": 100,
+    "Price": 0,
+    "StopPrice": 0,
+    "ClientId": "2029837977",
+    "ExecutedQuantity": 0,
+    "LastPrice": 0,
+    "LastQuantity": 0,
+    "LeavesQuantity": 0,
+    "AveragePrice": 0,
+    "Side": "Buy",
+    "Date": "2019-02-25T13:33:40.9022856Z",
+    "TransactionDate": "2019-02-25T13:33:40.9022856Z",
+    "SettDate": "0001-01-01T00:00:00Z",
+    "Status": "PendingNew",
+    "ExecutionStatus": "PendingNew",
+    "Type": "Market",
+    "RequestStatus": "RequireValidation",
+    "Target": "New",
+    "TimeInForce": "Day",
+    "ExecInst": 0,
+    "ExpireDate": "2019-02-25T21:00:00Z",
+    "AccountId": 6303,
+    "UserId": 7125,
+    "RequestId": 105467,
+    "StateId": 0,
+    "ParentId": -1,
+    "Legs": [],
+    "TrailingStopAmountType": "Absolute",
+    "TrailingStopAmount": 0,
+    "TrailingLimitAmountType": "Absolute",
+    "TrailingLimitAmount": 0,
+    "CreateDate": "2019-02-25T13:33:40.9022856Z",
+    "InitialType": "Market",
+    "IsExternal": false,
+    "ExecutionInstructions": {
+        "CorrelationId": "ade9537995f84dcc840eabc724107487",
+        "CreateOrderRequestTimeUnix": "636866984209012879"
+    },
+    "TransType": "New",
+    "ValidationsToBypass": 0,
+    "ParentRequestId": 0,
+    "SettlementDate": "0001-01-01T00:00:00Z"
+}
+```
+
+{% hint style="warning" %}
+Please note that you may receive the 200 status code even if the order was improperly configured. For example, if you attempt to create a limit order and specify the stop price instead of the limit price, the order will be registered in the system but will eventually be rejected. Please monitor the order's status \(it's _PendingNew_ by default\) to determine if the order has been rejected or placed.
+{% endhint %}
 
 ### Common Mistakes
 

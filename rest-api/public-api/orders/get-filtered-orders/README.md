@@ -181,15 +181,15 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">AveragePrice</td>
-      <td style="text-align:left">This is the average price at which the order was executed</td>
+      <td style="text-align:left">This is the average price at which the order was executed.</td>
     </tr>
     <tr>
       <td style="text-align:left">Side</td>
-      <td style="text-align:left">This is the type of order (could be "Buy", "Sell", "SellShort", or "BuyToCover")</td>
+      <td style="text-align:left">This is the type of order (could be "Buy", "Sell", "SellShort", or "BuyToCover").</td>
     </tr>
     <tr>
       <td style="text-align:left">Date</td>
-      <td style="text-align:left">This is the date on which the order was placed by the user</td>
+      <td style="text-align:left">This is the date on which the order was placed by the user.</td>
     </tr>
     <tr>
       <td style="text-align:left">TransactionDate</td>
@@ -219,7 +219,10 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">ExecutionStatus</td>
-      <td style="text-align:left">This is the execution status of the order.</td>
+      <td style="text-align:left">This is the execution status of the order. It's usually identical to Status
+        with the exception of emergency situations. For example, if an order modification
+        request was rejected by the exchange because the order has already been
+        filled, the status will be <b>Filled</b> and the execution status will be <b>Rejected</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
@@ -231,12 +234,11 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">Target</td>
-      <td style="text-align:left">This is the target price of the underlying company so to</td>
+      <td style="text-align:left">This is the target operation of the order. Possible values: <b>new</b>, <b>cancel</b>, <b>modify</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left">TimeInForce</td>
       <td style="text-align:left">
-        <p></p>
         <p>Indicates the time frame in which the order will be active. Possible Values:</p>
         <ol>
           <li><b>Day</b>. The order automatically expires at the end of the regular
@@ -270,7 +272,8 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">CounterPartyOrderId</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This is the order of the order counterparty on the execution venue (set
+        by the executor).</td>
     </tr>
     <tr>
       <td style="text-align:left">AccountId</td>
@@ -286,15 +289,15 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">StateId</td>
-      <td style="text-align:left">The is the identifier of the order's state in ETNA Trader</td>
+      <td style="text-align:left">The is the identifier of the order's state in ETNA Trader.</td>
     </tr>
     <tr>
       <td style="text-align:left">ParentId</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This is the ID of the parent security in a multi-leg order.</td>
     </tr>
     <tr>
       <td style="text-align:left">Legs</td>
-      <td style="text-align:left">These are the legs of a multi-leg order</td>
+      <td style="text-align:left">These are the legs of a multi-leg order.</td>
     </tr>
     <tr>
       <td style="text-align:left">Exchange</td>
@@ -332,31 +335,33 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">IsExternal</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This field indicates if the order was placed externally. For example,
+        a user can place an order manually by calling their broker without using
+        ETNA Trader.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExecBrocker</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This is the final executor of the order.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExecutionInstructions</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">These are instructions specified as part of the order.</td>
     </tr>
     <tr>
       <td style="text-align:left">TransType</td>
-      <td style="text-align:left">This is the type of the transaction.</td>
+      <td style="text-align:left">This is the type of the execution transaction. Possible values: <b>New</b>, <b>Correct</b>, <b>Cancel</b>, <b>Status</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExecId</td>
-      <td style="text-align:left">This is the identifier of the execution</td>
+      <td style="text-align:left">This is the identifier of the execution on the execution venue.</td>
     </tr>
     <tr>
       <td style="text-align:left">ValidationsToBypass</td>
-      <td style="text-align:left">Indicates the validation rules that must be skipped</td>
+      <td style="text-align:left">Indicates the validation rules that must be skipped.</td>
     </tr>
     <tr>
       <td style="text-align:left">ParentRequestId</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This is an internal ETNA Trader field that should not be used.</td>
     </tr>
     <tr>
       <td style="text-align:left">SettlementDate</td>
