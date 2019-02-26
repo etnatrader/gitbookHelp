@@ -1,3 +1,7 @@
+---
+description: List security policies applicable to a particular user
+---
+
 # List All User's Policies
 
 ### Overview
