@@ -1,17 +1,15 @@
 ---
-description: >-
-  Fetch information about a particular security by providing the security's
-  ticker symbol
+description: Fetch information about a particular option by providing its internal ID
 ---
 
-# Get Security's Info by its Ticker Symbol
+# Get Option's Info by ID
 
 ### Overview
 
-This GET endpoint enables you to retrieve information about a particular security by specifying its ticker symbol in the request's path. This information is not retrieved directly from the exchange; rather, it's the information about the security that is specific to ETNA Trader.
+This GET endpoint enables you to retrieve information about a particular option. Whereas the last four methods deal with equities' information, this endpoint provides information exclusively about options. 
 
 {% hint style="warning" %}
-In order to retrieve information about a particular security by its ticker, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to retrieve information about a particular option, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are four required parameters that must be provided in the request:
@@ -19,35 +17,42 @@ There are four required parameters that must be provided in the request:
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **Ticker symbol** \(path\). This is the ticker symbol of the security \(as displayed on the exchange\) whose information you'd like to retrieve. 
+4. **ID** \(path\). This is the ID of the option whose information you'd like to retrieve. This ID can be fetched using the [API request that lists filtered options](get-sorted-options.md).
 
 Here's the final template for this API request:
 
 ```text
-GET apiURL/v1.0/equities/AAPL //Apple Inc.
+GET apiURL/v1.0/options/{optionID}
 ```
 
 ### Response
 
-In response to this API request, you'll receive a JSON file with all the information about the enquired security:
+In response to this API request, you'll receive a JSON file with comprehensive information about the enquired option:
 
 ```javascript
 {
-    "Id": 4,
-    "Symbol": "AAPL",
-    "Description": "Apple Inc.",
-    "Exchange": "XNAS",
+    "Id": 13210821,
+    "Symbol": "VSSQ1 260117P00008000",
+    "Description": "PUT Virtual Stock (static quotes) $8.00000000 EXP 01/17/26",
+    "Exchange": "VIRTEX",
     "Currency": "USD",
-    "AddedDate": "2012-11-29T16:05:43.993Z",
-    "ModifyDate": "2018-12-10T08:00:22.2867686Z",
-    "Type": "CommonStock",
+    "AddedDate": "2018-09-11T07:20:10.318803Z",
+    "ModifyDate": "2018-12-19T17:10:36.943Z",
+    "Type": "Option",
     "Precision": 2,
     "VolumePrecision": 0,
     "TickSize": 0.01,
     "Enabled": true,
     "AllowTrade": true,
     "AllowMargin": true,
-    "AllowShort": true
+    "AllowShort": true,
+    "OptionType": "Put",
+    "ExpirationType": "Flex",
+    "ExpirationDate": "2026-01-17T00:00:00Z",
+    "StrikePrice": 8,
+    "SeriesId": 125685,
+    "UnderlyingAssetSymbol": "VSSQ1",
+    "ContractSize": 100
 }
 ```
 
@@ -62,7 +67,7 @@ where:
 | Currency | This is the currency in which the security is denominated. |
 | AddedDate | This is the date on which the security was added to the database. |
 | ModifyDate | This is the date in which the security's information was last modified. |
-| Type | This is the type of the security. |
+| Type | This is the type of the security — option in the case of this API request. |
 | Precision | This is the number of decimal places in the security's price. |
 | VolumePrecision | This is the number of decimal places in the security's trading volume \(might be useful for cryptocurrencies\). |
 | TickSize | This is the minimum price change of the security. For example, if this property equals 0.01 for AAPL, the minimum price change for AAPL is 0.01 \(150.67 —&gt; 150.68, but not 150.675\). For securities with the market price of less than $1, the TickSize is equal to 0.0001. |
@@ -70,14 +75,21 @@ where:
 | AllowTrade | This field indicates is the security if permitted for trading. |
 | AllowMargin | This field indicates if the security is allowed to be traded on margin. |
 | AllowShort | This field indicates if the security can be sold short. |
+| OptionType | This is the type of option. Possible values: call, put. |
+| ExpirationType | This is the expiration type of the option. Possible values: Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard.  |
+| ExpirationDate | This is the expiration date of the option. |
+| StrikePrice | This is the price at which the holder of the option can buy or sell the underlying asset. |
+| SeriesId | This is the internal ID of the option series in ETNA Trader. |
+| UnderlyingAssetSymbol | This is the ticker symbol of the underlying asset. |
+| ContractSize | This is the deliverable quantity of the option's underlying asset. |
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve information about a particular security by its ticker. 
+Here are some of the common mistakes that developers make when attempting to retrieve an option's information by their internal ID. 
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about a particular security, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about a particular option, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {
@@ -96,6 +108,10 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
     "error": "Application key is not defined or does not exist"
 }
 ```
+
+#### Specifying the Underlying Security's Ticker instead of the Option ID
+
+Another common mistake in retrieving information about a particular option is specifying the underlying security's ticker symbol instead of the enquired option's ID. Doing so will lead to the 409 status code.
 
 The following article covers the syntax for this API request in detail.
 
