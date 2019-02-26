@@ -208,4 +208,7 @@
       * [Syntax](rest-api/private-api/managing-transactions/get-transactions/syntax.md)
   * [Policies](rest-api/private-api/policies/README.md)
     * [List All User's Policies](rest-api/private-api/policies/list-all-users-policies.md)
+  * [User Addresses](rest-api/private-api/user-addresses/README.md)
+    * [Get User's Address](rest-api/private-api/user-addresses/get-users-address.md)
+    * [Modify User's Address](rest-api/private-api/user-addresses/modify-users-address.md)
 
