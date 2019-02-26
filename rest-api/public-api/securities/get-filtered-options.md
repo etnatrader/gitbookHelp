@@ -1,3 +1,7 @@
+---
+description: Retrieve options sorted by a particular field and split into multiple pages
+---
+
 # Get Filtered Options
 
 ### Overview

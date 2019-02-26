@@ -1,3 +1,7 @@
+---
+description: Create a new price alert
+---
+
 # Create Price Alert
 
 ### Overview

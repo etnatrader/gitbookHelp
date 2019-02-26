@@ -1,3 +1,7 @@
+---
+description: List a user's watchlists
+---
+
 # Get User's Watchlists
 
 ### Overview

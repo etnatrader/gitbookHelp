@@ -1,3 +1,7 @@
+---
+description: Get started with ETNA Trader's public REST API
+---
+
 # Overview
 
 ### Introduction

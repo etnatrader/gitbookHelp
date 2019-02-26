@@ -1,3 +1,7 @@
+---
+description: List a user's outstanding and executed orders
+---
+
 # Get Filtered Orders
 
 ### Overview

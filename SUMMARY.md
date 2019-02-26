@@ -159,6 +159,8 @@
       * [Syntax](rest-api/private-api/securities/get-securitys-info-by-mask/securities_getsecurities.md)
     * [Get Security's Info by Internal ID](rest-api/private-api/securities/get-securitys-info-by-internal-id/README.md)
       * [Syntax](rest-api/private-api/securities/get-securitys-info-by-internal-id/securities_getsecuritybyid.md)
+    * [Get Security's Info by its Ticket Symbol](rest-api/private-api/securities/get-securitys-info-by-its-ticket-symbol.md)
+    * [Get Filtered Securities](rest-api/private-api/securities/get-filtered-securities.md)
   * [Watchlists](rest-api/private-api/watchlists/README.md)
     * [Add Security to Watchlist by ID](rest-api/private-api/watchlists/add-security-to-watchlist-by-id/README.md)
       * [Syntax](rest-api/private-api/watchlists/add-security-to-watchlist-by-id/watchlists_addsecuritybyid.md)

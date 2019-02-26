@@ -1,3 +1,7 @@
+---
+description: Create a new watchlist for a particular user
+---
+
 # Create New Watchlist
 
 ### Overview

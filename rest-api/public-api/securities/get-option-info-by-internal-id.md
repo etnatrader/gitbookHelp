@@ -1,3 +1,7 @@
+---
+description: Fetch information about a particular option by providing its internal ID
+---
+
 # Get Option Info by Internal ID
 
 ### Overview

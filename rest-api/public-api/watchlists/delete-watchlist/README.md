@@ -1,3 +1,7 @@
+---
+description: Delete an existing watchlist
+---
+
 # Delete Watchlist
 
 ### Overview

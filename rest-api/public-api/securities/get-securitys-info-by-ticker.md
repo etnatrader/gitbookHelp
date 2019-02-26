@@ -1,3 +1,7 @@
+---
+description: Fetch information about a particular equity by providing its ticker symbol
+---
+
 # Get Equity Info by Ticker
 
 ### Overview

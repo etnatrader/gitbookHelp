@@ -1,3 +1,7 @@
+---
+description: Fetch information about a particular option by providing its ticker symbol
+---
+
 # Get Option Info by Ticker
 
 ### Overview

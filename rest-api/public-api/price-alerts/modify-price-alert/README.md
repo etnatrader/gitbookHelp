@@ -1,3 +1,7 @@
+---
+description: Modify an existing price alert
+---
+
 # Modify Price Alert
 
 ### Overview

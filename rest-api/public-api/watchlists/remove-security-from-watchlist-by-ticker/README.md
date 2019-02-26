@@ -1,3 +1,9 @@
+---
+description: >-
+  Remove a particular security from a watchlist by providing the security's
+  ticker symbol
+---
+
 # Remove Security from Watchlist by Ticker
 
 ### Overview

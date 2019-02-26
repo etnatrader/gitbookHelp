@@ -1,3 +1,7 @@
+---
+description: List all user's positions in a particular security
+---
+
 # Get User's Positions in Security
 
 ### Overview

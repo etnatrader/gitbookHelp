@@ -1,3 +1,7 @@
+---
+description: List transactions of a particular user
+---
+
 # Get Transactions
 
 ### Overview

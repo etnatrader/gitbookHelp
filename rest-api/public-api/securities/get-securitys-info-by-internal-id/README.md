@@ -1,3 +1,7 @@
+---
+description: Fetch information about a particular equity by providing its internal ID
+---
+
 # Get Equity Info by Internal ID
 
 ### Overview

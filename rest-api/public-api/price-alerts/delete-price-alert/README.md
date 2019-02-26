@@ -1,3 +1,7 @@
+---
+description: Remove an existing price alert
+---
+
 # Delete Price Alert
 
 ### Overview

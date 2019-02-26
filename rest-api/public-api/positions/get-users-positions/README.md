@@ -1,3 +1,7 @@
+---
+description: List all existing positions of a user
+---
+
 # Get User's Positions
 
 ### Overview

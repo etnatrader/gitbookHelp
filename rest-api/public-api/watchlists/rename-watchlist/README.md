@@ -1,3 +1,7 @@
+---
+description: Rename an existing watchlist
+---
+
 # Rename Watchlist
 
 ### Overview

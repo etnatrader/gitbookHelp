@@ -1,3 +1,7 @@
+---
+description: Fetch information about a specific watchlist
+---
+
 # Get Specific Watchlist
 
 ### Overview

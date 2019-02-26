@@ -1,8 +1,12 @@
+---
+description: Get comprehensive information about an order
+---
+
 # Get Order's Info
 
 ### Overview
 
-This GET endpoint enables you to retrieve information about an outstanding order of the user whose authorization token is provided in the header request. If the user has buy, sell, short-sell, or a buy-to-cover orders pending, you can request information on one of these orders by sending this API request.
+This GET endpoint enables you to retrieve information about an outstanding order of the user whose authorization token is provided in the header request. If the user has buy, sell, short-sell, or buy-to-cover orders pending, you can request information on one of those orders by sending this API request.
 
 {% hint style="warning" %}
 In order to retrieve information about an outstanding order of a particular user, you must use an [authorization token](../../../public-api/authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
@@ -83,7 +87,7 @@ Here are some of the common mistakes that developers make when trying to retriev
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about a particular user, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about a particular order, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {

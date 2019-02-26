@@ -1,3 +1,7 @@
+---
+description: Fetch information about a specific price alert
+---
+
 # Get Specific Alert
 
 ### Overview

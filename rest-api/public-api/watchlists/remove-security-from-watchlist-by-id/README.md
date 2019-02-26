@@ -1,3 +1,9 @@
+---
+description: >-
+  Remove a particular security from a watchlist by providing the security's
+  internal ID
+---
+
 # Remove Security From Watchlist by ID
 
 ### Overview

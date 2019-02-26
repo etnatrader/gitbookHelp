@@ -1,3 +1,7 @@
+---
+description: List all price alerts of a particular user
+---
+
 # Get User's Price Alerts
 
 ### Overview

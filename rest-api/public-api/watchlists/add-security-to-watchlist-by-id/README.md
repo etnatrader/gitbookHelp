@@ -1,3 +1,9 @@
+---
+description: >-
+  Add a security to an existing watchlist by providing the security's internal
+  ID
+---
+
 # Add Security to Watchlist by ID
 
 ### Overview

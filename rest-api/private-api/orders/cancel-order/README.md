@@ -1,3 +1,7 @@
+---
+description: Cancel an existing outstanding order
+---
+
 # Cancel Order
 
 ### Overview
@@ -32,7 +36,7 @@ Here are some of the common mistakes that developers make when trying to cancel 
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for cancelling an order of a particular user, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for cancelling an order of a particular order, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {

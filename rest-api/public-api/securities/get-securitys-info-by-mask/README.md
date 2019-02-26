@@ -1,3 +1,9 @@
+---
+description: >-
+  Fetch information about a particular equity by providing a keyword that will
+  be queried in all equities' symbol, exchange, and description fields.
+---
+
 # Get Equity Info by Mask
 
 ### Overview

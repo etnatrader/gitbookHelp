@@ -1,3 +1,7 @@
+---
+description: Get balance information of a particular trading account
+---
+
 # Get Account's Balance Info
 
 ### Overview
@@ -67,7 +71,7 @@ where:
 | netCash | This the amount of funds available on the account minus all liabilities \(short positions, etc.\). |
 | excess | This is the amount of funds that can either be withdrawn or used to open new positions. |
 | changeAbsolute | This is the average difference between the opening and the closing price.   |
-| changePercent | ? |
+| changePercent | This is the average difference between the opening and the closing price expressed in percentage terms. |
 | equityTotal | This is the gross valuation of all equity on the trading account. |
 | pendingOrdersCount | This is the number of pending orders on the account. |
 | netLiquidity | This is the amount of funds that will be available to the user after all active positions are terminated. |

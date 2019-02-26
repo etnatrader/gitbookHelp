@@ -1,3 +1,7 @@
+---
+description: Fetch expiration dates of options with a particular underlying security
+---
+
 # Get Options Expiration Dates
 
 ### Overview

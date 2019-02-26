@@ -1,3 +1,7 @@
+---
+description: Fetch trading data for a set of securities
+---
+
 # Get Chart Data
 
 ### Overview
