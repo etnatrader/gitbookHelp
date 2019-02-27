@@ -30,15 +30,19 @@ PUT apiURL/v1.0/accounts/{accountID}/orders/{existingOrderID}
 
 The body of this request represents the information that must be replaced in an existing order. It must be sent in the JSON format with mandatory parameters about the order and also those parameters that need to be modified.
 
-The first two parameters — **SecurityID** and **ID** — are mandatory, while the remaining parameters should only be provided in case they need to be modified.
+The first five parameters — **ID**, **Quantity**, **Price**, **ExecutionInstructions**, **Legs** — are mandatory, while the remaining parameters should only be provided in case they need to be modified.
 
 #### Order Modification Sample
 
 ```javascript
 {
-  "SecurityId": 4,  
-  "Id": "80431",
-  "Price" : 149 //Changing the price in an existing order.
+  "Id": 178941,
+  "Quantity": 5,
+  "Price": 49,
+  "ExecutionInstructions": {},
+  "Legs": [
+    {}
+  ]
 }
 ```
 
