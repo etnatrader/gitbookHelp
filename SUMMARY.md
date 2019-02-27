@@ -211,4 +211,8 @@
   * [User Addresses](rest-api/private-api/user-addresses/README.md)
     * [Get User's Address](rest-api/private-api/user-addresses/get-users-address.md)
     * [Modify User's Address](rest-api/private-api/user-addresses/modify-users-address.md)
+  * [Allocations](rest-api/private-api/allocations/README.md)
+    * [Create Allocation Requests](rest-api/private-api/allocations/create-allocation-requests.md)
+    * [Create Batch Allocation Requests](rest-api/private-api/allocations/create-batch-allocation-requests.md)
+    * [Create Multi-Leg Allocation Requests](rest-api/private-api/allocations/create-multi-leg-allocation-requests.md)
 
