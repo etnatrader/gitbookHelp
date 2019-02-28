@@ -1,8 +1,8 @@
-# Create Multi-Leg Allocation Requests
+# Create Batch Multi-Leg Allocation Requests
 
 ### Overview
 
-This PUT endpoint enables you to create and send an allocation request for multi-leg orders. Multi-leg orders are orders that consist of multiple legs — separate orders that are part of a particular strategy. For example, you can employ the covered call strategy in which you sell call options against the stocks you intend to purchase. In this case, selling call options would be the first leg of the order and purchasing stocks would be the second leg of the order.
+This POST endpoint enables you to create and send multiple allocation requests for multi-leg orders. Multi-leg orders are orders that consist of multiple legs — separate orders that are part of a particular strategy. For example, you can employ the covered call strategy in which you sell call options against the stocks you intend to purchase. In this case, selling call options would be the first leg of the order and purchasing stocks would be the second leg of the order.
 
 Allocation requests are used to purchase securities in bulk for multiple users to reduce the exchange commission applied to the order \(the higher the volume — the lower the commission\). Usually, there's a separate trading account on which securities are purchased. Afterward, the purchased securities are transferred to users' trading accounts proportionally to the amount of funds they have contributed.
 
@@ -10,9 +10,9 @@ For example, if one user has contributed 20% of the funds, another user — 30%,
 
 From a technical standpoint, transference of securities from one account to another during allocation is executed like a regular sale — the source account is selling securities to the target account. You specify the price at which the securities must be transferred, indicate the applicable commission, and at the end of the trading session this transaction is registered with the clearing firm.
 
-Please bear in mind that there are certain regulations that apply to allocations like prohibition of selling securities to users  at a premium. Therefore, please ensure that your allocations comply with the regulator's requirements.
+Please bear in mind that there are certain regulations that apply to allocations like prohibition of selling securities to users at a premium. Therefore, please ensure that your allocations comply with the regulator's requirements.
 
-Multi-leg allocation requests combine the functionality of allocation requests and multi-leg orders and enable you to allocate multi-leg orders to your users proportionally to the amount of funds they have contributed.
+Batch multi-leg allocation requests combine the functionality of allocation requests and multi-leg orders and enable you to allocate multi-leg orders to your users proportionally to the amount of funds they have contributed.
 
 {% hint style="warning" %}
 In order to create a multi-leg allocation request, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
@@ -23,33 +23,37 @@ There are four required parameters that must be provided in the request:
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **requestInfos** \(body\). This is a JSON dictionary that contains information about the new multi-leg allocation.
+4. **requestInfos** \(body\). This is a JSON dictionary that contains information about the new batch multi-leg allocation.
 
 #### Multi-leg Allocation Request Sample
 
+Each multi-leg batch allocation request must be provided in the JSON format as an element of the request array:
+
 ```javascript
-{
-  "FromAccount": "6688",
-  "ToAccount": "6687",
-  "AccountType": "Cash",
-  "Comment": "Sample transfer",
-  "Commission": 1.39,
-  "Legs": [
-    {
-      "Symbol": "VAT",
-      "Price": 60,
-      "Quantity": 100,
-      "Action": "Buy"
-    },
-	{
-      "Symbol": "VAT Jan 2025 45.00 Call",
-      "Price": 148,
-      "Quantity": -1, //indicates that the option is being sold
-      "Action": "Buy"
-    }
-  ],
-  "Instructions": {}
-}
+[ 
+  {
+    "FromAccount": "6688",
+    "ToAccount": "6687",
+    "AccountType": "Cash",
+    "Comment": "Sample transfer",
+    "Commission": 1.39,
+    "Legs": [
+      {
+        "Symbol": "VAT",
+        "Price": 60,
+        "Quantity": 100,
+        "Action": "Buy"
+      },
+  	{
+        "Symbol": "VAT Jan 2025 45.00 Call",
+        "Price": 148,
+        "Quantity": -1, //indicates that the option is being sold
+        "Action": "Buy"
+      }
+    ],
+    "Instructions": {}
+  }
+]
 ```
 
 where:
@@ -71,7 +75,7 @@ where:
 Here's the final template for this API request:
 
 ```text
-PUT apiURL/v1.0/allocations/multileg    
+POST apiURL/v1.0/allocations/multileg    
 ```
 
 ### Response
@@ -79,41 +83,43 @@ PUT apiURL/v1.0/allocations/multileg
 In response to this API request, you'll receive a JSON file with the multi-leg allocation request details along with one extra parameter — **IsSucceed** — which indicates if the multi-leg allocation has been successfully carried out.
 
 ```javascript
-{
-  "Request" : {
-    "FromAccount": "6688",
-    "ToAccount": "6687",
-    "AccountType": "Cash",
-    "Comment": "Sample transfer",
-    "Commission": 1.39,
-    "Legs": [
-      {
-        "Symbol": "VAT",
-        "Price": 60,
-        "Quantity": 100,
-        "Action": "Buy"
+[
+  {
+    "Request" : {
+      "FromAccount": "6688",
+      "ToAccount": "6687",
+      "AccountType": "Cash",
+      "Comment": "Sample transfer",
+      "Commission": 1.39,
+      "Legs": [
+        {
+          "Symbol": "VAT",
+          "Price": 60,
+          "Quantity": 100,
+          "Action": "Buy"
+        },
+    	{
+          "Symbol": "VAT Jan 2025 45.00 Call",
+          "Price": 148,
+          "Quantity": -1, //indicates that the option is being sold
+          "Action": "Buy"
+        }
+      ],
+      "Instructions": {}
       },
-  	{
-        "Symbol": "VAT Jan 2025 45.00 Call",
-        "Price": 148,
-        "Quantity": -1, //indicates that the option is being sold
-        "Action": "Buy"
-      }
-    ],
-    "Instructions": {}
-    },
-    "IsSucceed" : true,
-    "Description" : "description"
-}
+      "IsSucceed" : true,
+      "Description" : "description"
+  }
+]
 ```
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to create multi-leg allocation requests.
+Here are some of the common mistakes that developers make when attempting to create batch multi-leg allocation requests.
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for creating multi-leg allocation requests, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for creating batch multi-leg allocation requests, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {
@@ -135,5 +141,5 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 
 #### Specifying User Accounts instead of Trading Accounts
 
-Another common mistake is either specifying user accounts instead of trading accounts when creating a multi-leg allocation request. Doing so will lead to the 409 status code. The IsSucceed parameter in this case would be set to false.
+Another common mistake is either specifying user accounts instead of trading accounts when creating a batch multi-leg allocation request. Doing so will lead to the 409 status code. The IsSucceed parameter in this case would be set to false.
 

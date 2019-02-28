@@ -19,7 +19,7 @@ There are four required parameters that must be provided in the request:
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **requestInfos** \(body\). This is a JSON dictionary that contains information about the new allocation.
+4. **requestInfo** \(body\). This is a JSON dictionary that contains information about the new allocation.
 
 #### Allocation Request Sample
 
@@ -85,11 +85,11 @@ In response to this API request, you'll receive a JSON file with the allocation 
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to modify a user's address.
+Here are some of the common mistakes that developers make when attempting to create allocation requests.
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for modifying user addresses, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for creating allocation requests, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {

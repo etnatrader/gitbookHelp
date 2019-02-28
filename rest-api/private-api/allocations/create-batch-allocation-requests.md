@@ -89,11 +89,11 @@ In response to this API request, you'll receive a JSON file with the allocation 
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to modify a user's address.
+Here are some of the common mistakes that developers make when attempting to create batch allocation requests.
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for modifying user addresses, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for creating batch allocation requests, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {
@@ -115,7 +115,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 
 #### Specifying User Accounts instead of Trading Accounts
 
-Another common mistake is either specifying user accounts instead of trading accounts when creating an allocation request. Doing so will lead to the 409 status code and the following error message:
+Another common mistake is either specifying user accounts instead of trading accounts when creating a batch allocation request. Doing so will lead to the 409 status code and the following error message:
 
 ```javascript
 [

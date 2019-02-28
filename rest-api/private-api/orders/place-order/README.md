@@ -44,12 +44,12 @@ The body of this request represents the information about the to-be-created orde
     </tr>
     <tr>
       <td style="text-align:left">ClientId</td>
-      <td style="text-align:left">This is the order ID on the client's side.</td>
+      <td style="text-align:left">This is the order ID on the client&apos;s side.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExpireDate</td>
-      <td style="text-align:left">This is the expiration of the order. If the order isn't executed until
-        the specified date, it'll automatically be cancelled.</td>
+      <td style="text-align:left">This is the expiration of the order. If the order isn&apos;t executed
+        until the specified date, it&apos;ll automatically be cancelled.</td>
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
@@ -62,7 +62,7 @@ The body of this request represents the information about the to-be-created orde
     <tr>
       <td style="text-align:left">ExecInst</td>
       <td style="text-align:left">Indicates if the order should be filled either entirely in one transaction
-        or not at all. Possible values: <b>'DoNotIncrease'</b>, <b>'DoNotReduce'</b>, <b>'AllOrNone'</b>.</td>
+        or not at all. Possible values: <b>&apos;DoNotIncrease&apos;</b>, <b>&apos;DoNotReduce&apos;</b>, <b>&apos;AllOrNone&apos;</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left">TimeInforce</td>
@@ -70,7 +70,7 @@ The body of this request represents the information about the to-be-created orde
         <p>Indicates the time frame in which the order will be active. Possible Values:</p>
         <ol>
           <li><b>Day</b>. The order automatically expires at the end of the regular
-            trading session if it weren't executed.</li>
+            trading session if it weren&apos;t executed.</li>
           <li><b>GTC </b>(Good-till-Canceled). The order persists indefinitely until
             it is executed or manually cancelled.</li>
           <li><b>AtTheOpening</b>. The order should be filled at the opening of the

@@ -160,12 +160,12 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">StopPrice</td>
-      <td style="text-align:left">This is the stop price of the order (if there's no stop price — the value
-        of this parameter will be 0).</td>
+      <td style="text-align:left">This is the stop price of the order (if there&apos;s no stop price &#x2014;
+        the value of this parameter will be 0).</td>
     </tr>
     <tr>
       <td style="text-align:left">ClientId</td>
-      <td style="text-align:left">This is the order ID on the client's side.</td>
+      <td style="text-align:left">This is the order ID on the client&apos;s side.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExecutedQuantity</td>
@@ -189,7 +189,8 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">Side</td>
-      <td style="text-align:left">This is the type of order (could be "Buy", "Sell", "SellShort", or "BuyToCover").</td>
+      <td style="text-align:left">This is the type of order (could be &quot;Buy&quot;, &quot;Sell&quot;,
+        &quot;SellShort&quot;, or &quot;BuyToCover&quot;).</td>
     </tr>
     <tr>
       <td style="text-align:left">Date</td>
@@ -223,10 +224,11 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">ExecutionStatus</td>
-      <td style="text-align:left">This is the execution status of the order. It's usually identical to Status
-        with the exception of emergency situations. For example, if an order modification
-        request was rejected by the exchange because the order has already been
-        filled, the status will be <b>Filled</b> and the execution status will be <b>Rejected</b>.</td>
+      <td style="text-align:left">This is the execution status of the order. It&apos;s usually identical
+        to Status with the exception of emergency situations. For example, if an
+        order modification request was rejected by the exchange because the order
+        has already been filled, the status will be <b>Filled</b> and the execution
+        status will be <b>Rejected</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left">Type</td>
@@ -246,7 +248,7 @@ where:
         <p>Indicates the time frame in which the order will be active. Possible Values:</p>
         <ol>
           <li><b>Day</b>. The order automatically expires at the end of the regular
-            trading session if it weren't executed.</li>
+            trading session if it weren&apos;t executed.</li>
           <li><b>GTC </b>(Good-till-Canceled). The order persists indefinitely until
             it is executed or manually cancelled.</li>
           <li><b>AtTheOpening</b>. The order should be filled at the opening of the
@@ -267,12 +269,12 @@ where:
     <tr>
       <td style="text-align:left">ExecInst</td>
       <td style="text-align:left">Indicates if the order should be filled either entirely in one transaction
-        or not at all. Possible values: <b>'DoNotIncrease'</b>, <b>'DoNotReduce'</b>, <b>'AllOrNone'</b>.</td>
+        or not at all. Possible values: <b>&apos;DoNotIncrease&apos;</b>, <b>&apos;DoNotReduce&apos;</b>, <b>&apos;AllOrNone&apos;</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExpireDate</td>
-      <td style="text-align:left">This is the expiration of the order. If the order isn't executed until
-        the specified date, it'll automatically be cancelled.</td>
+      <td style="text-align:left">This is the expiration of the order. If the order isn&apos;t executed
+        until the specified date, it&apos;ll automatically be cancelled.</td>
     </tr>
     <tr>
       <td style="text-align:left">CounterPartyOrderId</td>
@@ -293,7 +295,7 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">StateId</td>
-      <td style="text-align:left">The is the identifier of the order's state in ETNA Trader.</td>
+      <td style="text-align:left">The is the identifier of the order&apos;s state in ETNA Trader.</td>
     </tr>
     <tr>
       <td style="text-align:left">ParentId</td>

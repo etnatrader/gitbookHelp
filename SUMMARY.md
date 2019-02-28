@@ -215,4 +215,5 @@
     * [Create Allocation Requests](rest-api/private-api/allocations/create-allocation-requests.md)
     * [Create Batch Allocation Requests](rest-api/private-api/allocations/create-batch-allocation-requests.md)
     * [Create Multi-Leg Allocation Requests](rest-api/private-api/allocations/create-multi-leg-allocation-requests.md)
+    * [Create Batch Multi-Leg Allocation Requests](rest-api/private-api/allocations/create-batch-multi-leg-allocation-requests.md)
 
