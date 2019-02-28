@@ -216,4 +216,8 @@
     * [Create Batch Allocation Requests](rest-api/private-api/allocations/create-batch-allocation-requests.md)
     * [Create Multi-Leg Allocation Requests](rest-api/private-api/allocations/create-multi-leg-allocation-requests.md)
     * [Create Batch Multi-Leg Allocation Requests](rest-api/private-api/allocations/create-batch-multi-leg-allocation-requests.md)
+  * [Internal Feedback](rest-api/private-api/internal-feedback/README.md)
+    * [List Users' Feedback](rest-api/private-api/internal-feedback/list-users-feedback.md)
+  * [Internal Positions](rest-api/private-api/internal-positions/README.md)
+    * [Add New Position](rest-api/private-api/internal-positions/add-new-position.md)
 
