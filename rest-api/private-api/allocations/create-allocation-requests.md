@@ -1,3 +1,7 @@
+---
+description: Create a new allocation request
+---
+
 # Create Allocation Requests
 
 ### Overview

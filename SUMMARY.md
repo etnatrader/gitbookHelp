@@ -220,4 +220,5 @@
     * [List Users' Feedback](rest-api/private-api/internal-feedback/list-users-feedback.md)
   * [Internal Positions](rest-api/private-api/internal-positions/README.md)
     * [Add New Position](rest-api/private-api/internal-positions/add-new-position.md)
+    * [Modify Existing Positions](rest-api/private-api/internal-positions/modify-existing-positions.md)
 

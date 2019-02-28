@@ -1,3 +1,7 @@
+---
+description: Create a new batch allocation request
+---
+
 # Create Batch Allocation Requests
 
 ### Overview

@@ -1,3 +1,7 @@
+---
+description: Manually add a new position on a trading account
+---
+
 # Add New Position
 
 ### Overview

@@ -1,3 +1,7 @@
+---
+description: Create a new batch multi-leg allocation request
+---
+
 # Create Batch Multi-Leg Allocation Requests
 
 ### Overview
