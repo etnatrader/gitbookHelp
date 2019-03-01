@@ -6,7 +6,7 @@ description: Manually add a new position on a trading account
 
 ### Overview
 
-This POST endpoint enables you to create positions in securities, bypassing the regular oder creation mechanism. Every once in a while some breakdown takes place on the exchange or in ETNA Trader, forcing you to use our Back Office to manually add the required position to the user's trading account. This procedure must be carried out with caution so as to prevent any conflicts.
+This POST endpoint enables you to create positions in securities, bypassing the regular order creation mechanism. Every once in a while some breakdown takes place on the exchange or in ETNA Trader, forcing you to use our Back Office to manually add the required position to the user's trading account. This procedure must be carried out with caution so as to prevent any conflicts.
 
 {% hint style="warning" %}
 In order to add a new position, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
@@ -22,7 +22,66 @@ There are five required parameters that must be provided in the request:
 
 #### New Position Syntax
 
-Following is a sample of a new position that can be added to a user's trading account. The first three parameters — **AccountId**, **SecurityId**, and **Quantity** — are mandatory while the rest can be configured depending on the circumstances. If you intend to increase the number of securities in an existing position, you must also provide the **Id** parameter.
+Following is a sample of a new position that can be added to a user's trading account. The first three parameters — **AccountId**, **SecurityId**, and **Quantity** — are mandatory while the rest can be configured depending on the circumstances.
+
+```javascript
+{
+  "AccountId": 6688, //required
+  "SecurityId": 4 ,  //required
+  "Quantity": 107, //required
+  "CostBasis": 0,
+  "DailyCostBasis": 0,
+  "CreateDate": "2019-02-27T10:24:18.492Z",
+  "ModifyDate": "2019-02-27T10:24:18.492Z",
+  "RealizedProfitLoss": 0,
+  "AverageOpenPrice": 0,
+  "AverageClosePrice": 0,
+  "StopLossPrice": 0,
+  "TakeProfitPrice": 0,
+  "DailyCloseProfitLoss": 0,
+  "ExcessChanges": 0,
+  "DayQuantity": 0,
+  "OpenQuantity": 0,
+  "LastLot": 0,
+  "Unsettled": 0,
+  "UnsettledDate": "2019-02-27T10:24:18.492Z",
+  "MarginType": "Empty",
+  "Locked": true,
+  "SpreadQuantity": 0
+}
+```
+
+where:
+
+| Parameter | Description |
+| :--- | :--- |
+| AccountId | This is the internal identifier of the trading account. |
+| SecurityId | This is the internal identifier of the underlying security in ETNA Trader. You can get this ID using [this API method](../securities/get-securitys-info-by-its-ticket-symbol.md). |
+| Quantity | This is the number of securities in the new position. |
+| CostBasis | This is the weighted average execution price of the order. |
+| Id | This is the internal identifier of an existing position to which you intend to add securities. |
+| DailyCostBasis | The gross cost of all positions during the day. After the trading session this variable resets to the PrevCloseMarketValue variable. |
+| CreatedDate | This is the date on which the position was created. |
+| ModifyDate | This is the date on which the position was modified. |
+| RealizedProfitLoss | Realized profit or loss. |
+| AverageOpenPrice | The average opening price of the position. |
+| AverageClosePrice | The average closing price of the position.  |
+| StopLossPrice | This is the price at which the position should be terminated if the market value reaches the price. |
+| TakeProfitPrice | This is the price at which the profit of the position should be realized if the market value reaches the price. |
+| DailyCloseProfitLoss | This is the unrealized profit or loss of the position measured against the last closing price. |
+| ExcessChanges | — |
+| DayQuantity | — |
+| OpenQuantity | — |
+| LastLot | — |
+| Unsettled | — |
+| UnsettledDate | — |
+| MarginType | This is the trading account type. Possible values: **Cash**, **Margin**, **DayTrader**. |
+| Locked | — |
+| SpreadQuantity | — |
+
+### Response
+
+In response to this API request, you'll receive a JSON file with the same request information that you sent earlier.
 
 ```javascript
 {
@@ -52,22 +111,44 @@ Following is a sample of a new position that can be added to a user's trading ac
 }
 ```
 
-where:
+### Common Mistakes
 
-| Parameter | Description |
-| :--- | :--- |
-| AccountId | This is the internal identifier of the trading account. |
-| SecurityId | This is the internal identifier of the underlying security in ETNA Trader. You can get this ID using [this API method](../securities/get-securitys-info-by-its-ticket-symbol.md). |
-| Quantity | This is the number of securities in the new position. |
-| CostBasis | This is the weighted average execution price of the order. |
-| Id | This is the internal identifier of an existing position to which you intend to add securities. |
-| DailyCostBasis | The gross cost of all positions during the day. After the trading session this variable resets to the PrevCloseMarketValue variable. |
-| CreatedDate | This is the date on which the position was created. |
-| ModifyDate | This is the date on which the position was modified. |
-| RealizedProfitLoss | Realized profit or loss. |
-| AverageOpenPrice | The average opening price of the position. |
-| AverageClosePrice | The average closing price of the position.  |
-| StopLossPrice | This is the price at which the position should be terminated if the market value reaches the price. |
-| TakeProfitPrice | This is the price at which the profit of the position should be realized if the market value reaches the price. |
-| DailyCloseProfitLoss |  |
+Here are some of the common mistakes that developers make when attempting to create a new position, bypassing the regular order placement mechanism.
+
+#### Requesting as a Non-Administrator
+
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for manually adding new positions, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+
+```javascript
+{
+    "Message": "Authorization has been denied for this request."
+}
+```
+
+So be sure to use the authorization token generated with an administrator's credentials.
+
+#### Failing to Specify the Et-App-Key Parameter
+
+If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
+
+```javascript
+{
+    "error": "Application key is not defined or does not exist"
+}
+```
+
+#### Failing to Specify the Query Parameters
+
+It's crucial to understand that the _**pageSize, pageNumber, isDesc, and sortBy**_ parameters must be provided in the request; otherwise you'll receive the 404 status code and the following message:
+
+```javascript
+{
+    "Error": {
+        "Code": "UnsupportedApiVersion",
+        "Message": "The requested resource with API version '1.0' does not support HTTP method 'GET'."
+    }
+}
+```
+
+The following article covers the syntax for this API request in detail.
 

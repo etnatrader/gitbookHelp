@@ -22,7 +22,7 @@ There are seven required parameters that must be provided in the request:
 6. **sortBy** \(query\). This is the field by which the retrieved user feedbacks should be sorted. For example, if the value of this parameter is set to **Contacts**, the retrieved feedbacks will be sorted by the users' contact information.
 7. **isDesc** \(query\). This field indicates if the list of retrieved feedbacks should be sorted in the descending \(true\) or ascending \(false\) order.
 
-### Overview
+### Response
 
 ```javascript
 {

@@ -221,4 +221,7 @@
   * [Internal Positions](rest-api/private-api/internal-positions/README.md)
     * [Add New Position](rest-api/private-api/internal-positions/add-new-position.md)
     * [Modify Existing Positions](rest-api/private-api/internal-positions/modify-existing-positions.md)
+  * [Internal Securities](rest-api/private-api/internal-securities/README.md)
+    * [Get Security Info by Ticker](rest-api/private-api/internal-securities/get-security-info-by-ticker.md)
+    * [Get Security Info by ID](rest-api/private-api/internal-securities/get-security-by-id.md)
 
