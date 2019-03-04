@@ -72,7 +72,7 @@
   * [Positions](rest-api/public-api/positions/README.md)
     * [Get User's Positions](rest-api/public-api/positions/get-users-positions/README.md)
       * [Syntax](rest-api/public-api/positions/get-users-positions/positions_getpositions.md)
-    * [Get User's Positions in Security](rest-api/public-api/positions/get-users-positions-in-security.md)
+    * [Get User's Positions in a Security](rest-api/public-api/positions/get-users-positions-in-security.md)
   * [Securities](rest-api/public-api/securities/README.md)
     * [Get Equity Info by Internal ID](rest-api/public-api/securities/get-securitys-info-by-internal-id/README.md)
       * [Syntax](rest-api/public-api/securities/get-securitys-info-by-internal-id/securities_getsecuritybyid.md)
@@ -224,4 +224,11 @@
   * [Internal Securities](rest-api/private-api/internal-securities/README.md)
     * [Get Security Info by Ticker](rest-api/private-api/internal-securities/get-security-info-by-ticker.md)
     * [Get Security Info by ID](rest-api/private-api/internal-securities/get-security-by-id.md)
+    * [Modify Securities](rest-api/private-api/internal-securities/modify-securities.md)
+    * [Add a New Security](rest-api/private-api/internal-securities/add-a-new-security.md)
+
+## Release Notes
+
+* [ETNA Trader](release-notes/etna-trader/README.md)
+  * [Release 1.2.47](release-notes/etna-trader/release-1.2.47.md)
 

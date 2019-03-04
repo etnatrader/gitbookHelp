@@ -69,15 +69,21 @@ where:
 | StopLossPrice | This is the price at which the position should be terminated if the market value reaches the price. |
 | TakeProfitPrice | This is the price at which the profit of the position should be realized if the market value reaches the price. |
 | DailyCloseProfitLoss | This is the unrealized profit or loss of the position measured against the last closing price. |
-| ExcessChanges | — |
-| DayQuantity | — |
-| OpenQuantity | — |
-| LastLot | — |
-| Unsettled | — |
-| UnsettledDate | — |
+| ExcessChanges | This is an internal field in ETNA Trader and it shouldn't be used by third parties. |
+| DayQuantity | This is an internal field in ETNA Trader and it shouldn't be used by third parties. |
+| OpenQuantity | This is an internal field in ETNA Trader and it shouldn't be used by third parties. |
+| LastLot | This is an internal field in ETNA Trader and it shouldn't be used by third parties. |
+| Unsettled | This is an internal field in ETNA Trader and it shouldn't be used by third parties. |
+| UnsettledDate | This is an internal field in ETNA Trader and it shouldn't be used by third parties. |
 | MarginType | This is the trading account type. Possible values: **Cash**, **Margin**, **DayTrader**. |
-| Locked | — |
-| SpreadQuantity | — |
+| Locked | This is an internal field in ETNA Trader and it shouldn't be used by third parties. |
+| SpreadQuantity | This is an internal field in ETNA Trader and it shouldn't be used by third parties. |
+
+Here's the final template for this API request:
+
+```text
+POST apiURL/v1.0/positions
+```
 
 ### Response
 
