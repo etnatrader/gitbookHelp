@@ -8,9 +8,13 @@ description: 'Web API updates, support for Thomson Reuters Beta FIX Protocol'
 
 ETNA Trader receives another major update that brings a set of significant features and improvements. In release 1.2.47 we focused on expanding the functionality of our Web API and also made a few under-the-hood tweaks in the back end to improve performance and user experience. We've also addressed a few discovered bugs, improving the overall stability of ETNA Trader.
 
-### Web API Improvements
+### Public Web API Improvements
 
-The biggest improvement of release 1.2.47 is the update of our Web API. First, we've made a few changes to the existing methods for retrieving security information, account information, and placing new orders. Second, we've added a new method for retrieving chart data in the Microsoft Excel format.
+The biggest improvement of release 1.2.47 is the update of our public Web API. First, we've made a few changes to the existing methods for retrieving security information, account information, and placing new orders. Second, we've added a new method for retrieving chart data in the Microsoft Excel format.
+
+{% hint style="info" %}
+These changes have only been made to the [public API](../../rest-api/public-api/); the [private API](../../rest-api/private-api/) has not yet been updated.
+{% endhint %}
 
 #### Retrieving Users' Positions
 
