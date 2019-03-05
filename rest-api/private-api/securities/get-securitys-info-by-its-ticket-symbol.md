@@ -1,10 +1,10 @@
 ---
 description: >-
-  Fetch information about a particular security by providing the security's
-  ticker symbol
+  Fetch information about a particular equity by providing the security's ticker
+  symbol
 ---
 
-# Get Security's Info by its Ticker Symbol
+# Get Equity's Info by its Ticker Symbol
 
 ### Overview
 

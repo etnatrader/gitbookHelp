@@ -1,10 +1,10 @@
 ---
 description: >-
-  Fetch information about a particular security by providing a keyword that will
+  Fetch information about a particular equity by providing a keyword that will
   be searched for in all equity databases
 ---
 
-# Get Security's Info by Mask
+# Get Equity's Info by Mask
 
 ### Overview
 

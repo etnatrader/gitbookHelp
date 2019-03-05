@@ -13,15 +13,23 @@ ETNA Trader receives another major update that brings a set of significant featu
 The biggest improvement of release 1.2.47 is the update of our Web API. First, we've made a few changes to the existing methods for retrieving security information, account information, and placing new orders. Second, we've added a new method for retrieving chart data in the Microsoft Excel format.
 
 {% hint style="danger" %}
-If your solution is integrated with our web API, please note that the following endpoints are no no longer supported:
+If your solution is integrated with our web API, please note that the following endpoints are no longer supported:
 
-* Get Securities By Mask \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities) [/v{version}/securities](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities)\);
+* Get Securities By Mask \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities) [/v{version}/securities](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities)\):
+  * Replaced by [Get Equity Info By Mask](../../rest-api/public-api/securities/get-securitys-info-by-mask/) and [Get Option Info By Ticker](../../rest-api/private-api/securities/get-options-info-by-ticker.md).
 * Get Securities by ID \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurityById) [/v{version}/securities/{securityId}](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurityById)\).
+  * Replaced by [Get Equity's Info by ID](../../rest-api/private-api/securities/get-securitys-info-by-internal-id/) and [Get Option Info by ID](../../rest-api/private-api/securities/get-options-info-by-id.md).
 
 And the following endpoints have been modified:
 
 * Place Order \([POST](https://priv-api-et-demo-prod.etnasoft.us/api/reference/index#!/Orders/Orders_PlaceOrder) [/v{version}/accounts/{accountId}/orders](https://priv-api-et-demo-prod.etnasoft.us/api/reference/index#!/Orders/Orders_PlaceOrder)\);
+  1. The **SecurityID** parameter has been replaced with **Symbol** \(ticker\);
+  2. The **dryRun** parameter has been transformed into a [separate endpoint](../../rest-api/private-api/orders/validate-order-placement.md).
 * Replace Order \([PUT](https://priv-api-etnatrader-dev.etnasoft.us/api/reference/index#!/Orders/Orders_ReplaceOrder) [/v{version}/accounts/{accountId}/orders/{orderId}](https://priv-api-etnatrader-dev.etnasoft.us/api/reference/index#!/Orders/Orders_ReplaceOrder)\).
+
+  1. The **SecurityID** parameter has been replaced with **Symbol** \(ticker\);
+
+      2. The **dryRun** parameter has been transformed into a [separate endpoint](../../rest-api/private-api/orders/validate-order-replacement.md).
 {% endhint %}
 
 #### Retrieving Users' Positions
@@ -29,10 +37,6 @@ And the following endpoints have been modified:
 Starting from version 1.2.47, users' current positions in a particular security can only be retrieved by **providing the ticker symbol** of this security \(as opposed to providing the internal ID of the security in previous releases\).
 
 {% page-ref page="../../rest-api/public-api/positions/get-users-positions-in-security.md" %}
-
-{% hint style="danger" %}
-Retrieving users' positions in a particular security via ID is no longer supported.
-{% endhint %}
 
 #### Retrieving Security Information
 

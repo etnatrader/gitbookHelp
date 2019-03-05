@@ -2,7 +2,7 @@
 description: Fetch options sorted by a particular field and split into multiple pages
 ---
 
-# Get Sorted Options
+# Get Filtered Options
 
 ### Overview
 

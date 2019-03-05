@@ -2,7 +2,7 @@
 description: Fetch securities filtered by a particular field and split into multiple pages
 ---
 
-# Get Filtered Securities
+# Get Filtered Equities
 
 ### Overview
 

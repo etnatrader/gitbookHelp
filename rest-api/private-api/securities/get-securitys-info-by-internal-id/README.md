@@ -1,10 +1,10 @@
 ---
 description: >-
-  Fetch information about a particular security by providing the security's
+  Fetch information about a particular equity by providing the security's
   internal identifier
 ---
 
-# Get Security's Info by Internal ID
+# Get Equity's Info by Internal ID
 
 ### Overview
 
