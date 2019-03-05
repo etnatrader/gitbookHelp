@@ -69,6 +69,8 @@
       * [Syntax](rest-api/public-api/orders/place-order/orders_placeorder.md)
     * [Replace Order](rest-api/public-api/orders/replace-order/README.md)
       * [Syntax](rest-api/public-api/orders/replace-order/orders_replaceorder.md)
+    * [Validate Order Placement](rest-api/public-api/orders/validate-order-placement.md)
+    * [Validate Order Replacement](rest-api/public-api/orders/validate-order-replacement.md)
   * [Positions](rest-api/public-api/positions/README.md)
     * [Get User's Positions](rest-api/public-api/positions/get-users-positions/README.md)
       * [Syntax](rest-api/public-api/positions/get-users-positions/positions_getpositions.md)
