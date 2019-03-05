@@ -232,6 +232,8 @@
     * [Get Security Info by ID](rest-api/private-api/internal-securities/get-security-by-id.md)
     * [Modify Securities](rest-api/private-api/internal-securities/modify-securities.md)
     * [Add a New Security](rest-api/private-api/internal-securities/add-a-new-security.md)
+  * [Internal Users](rest-api/private-api/internal-users/README.md)
+    * [Get Users' Info](rest-api/private-api/internal-users/get-users-info.md)
 
 ## Release Notes
 
