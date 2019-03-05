@@ -26,19 +26,16 @@ POST apiURL/v1.0/accounts/{accountID}/preview/orders
 
 The body of this request represents the information of the new order that must be validated before you can proceed to place it. The order must be sent in the JSON format with mandatory parameters about the order.
 
-The first five parameters — **ID**, **Quantity**, **Price**, **ExecutionInstructions**, and **Legs** — are mandatory, while the remaining parameters should only be provided if necessary.
+The first five parameters — **Symbol**, **Quantity**, **Type**, and **Side** — are mandatory, while the remaining parameters should only be provided if necessary.
 
 #### Order Modification Validation Sample
 
 ```javascript
 {
-  "Symbol": "AAPL",
-  "Quantity": 100,
-  "Price": 169,
-  "ExecutionInstructions": {},
-  "Legs": [
-    {}
-  ]
+  "Symbol": "VMSFT",
+  "Type": "Market",
+  "Side": "Buy",
+  "Quantity": 8
 }
 ```
 
