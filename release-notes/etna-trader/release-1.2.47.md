@@ -50,15 +50,21 @@ We've also added two new methods for listing all existing equities and options:
 
 #### Placing New Orders
 
-The last change we made to our Web API is the revamped order placement mechanism. Previously, if you wanted to ensure that a new order is properly constructed, you could simply add the dryRun parameter in the request header. Starting from version 1.2.47, we've separated the order placement and replacement procedures into two separate methods:
+The last change we made to our Web API is the revamped order placement mechanism. Previously, if you wanted to ensure that a new order is properly constructed, you could simply add the **dryRun** parameter in the request header. Starting from version 1.2.47, we've split the order placement and replacement procedures into two separate methods:
 
-{% page-ref page="release-1.2.47.md" %}
+{% page-ref page="../../rest-api/private-api/orders/validate-order-placement.md" %}
 
-{% page-ref page="release-1.2.47.md" %}
+{% page-ref page="../../rest-api/private-api/orders/validate-order-replacement.md" %}
+
+Once you've ensured that an order is properly constructed, you may proceed to place it \(or replace it\) with the regular order placement and replacement API requests. Also note that in release 1.2.47 we've changed the list of required parameters that must be provided in a new order — instead of providing securities' internal ID in ETNA Trader you should simply provide its ticker symbol.
+
+{% page-ref page="../../rest-api/private-api/orders/place-order/" %}
+
+{% page-ref page="../../rest-api/private-api/orders/replace-order/" %}
 
 ### Balance Attributes
 
-The first notable improvement of release 1.2.47 is the ability to manage trading accounts' balance attributes. These attributes are displayed in ETNA Trader's **Account Info** widget, and from now on you can determine which of these attributes should be visible to the users.
+Another notable improvement of release 1.2.47 is the ability to manage trading accounts' balance attributes. These attributes are displayed in ETNA Trader's **Account Info** widget, and from now on you can determine which of these attributes should be visible to the users.
 
 ![](../../.gitbook/assets/screenshot-2019-03-04-at-20.23.29.png)
 
@@ -66,5 +72,17 @@ These attributes can be managed in ETNA Trader's Back Office. There you can enab
 
 ![](../../.gitbook/assets/releasenotes1247-1.png)
 
-### 
+### Changes to the Mark Price Formula
+
+In release 1.2.47 we've also changed the way the mark price is calculated for stocks. From now on, the mark price for every stock during the regular trading hours is equal to:
+
+* the **last** price if Bid &lt; LastPrice &lt; Ask;
+* the current **ask** price if Last &gt;= Ask ;
+* the current **bid** price if Last =&lt; Bid.
+
+During the pre-market, post-market, and non-trading hours, the mark price is equal to the last closing price. 
+
+### Support for Thomson Reuters Beta Fix Protocol
+
+The last highlight of release 1.2.47 is the support for the FIX protocol provided by Thomson Reuters BETA.
 

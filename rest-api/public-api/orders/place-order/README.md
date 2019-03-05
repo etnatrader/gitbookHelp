@@ -159,7 +159,7 @@ The body of this request represents the information about the to-be-created orde
 
 ```javascript
 {
-  "SecurityId": 4, //Buying 100 shares of the Apple stock
+  "Symbol": "AAPL", //Buying 100 shares of the Apple stock
   "Type": "Limit",
   "Side": "Buy",
   "Quantity": 100,
@@ -171,7 +171,7 @@ The body of this request represents the information about the to-be-created orde
 
 ```javascript
 {
-  "SecurityId": 4, //Buying 100 shares of the Apple stock
+  "Symbol": "AAPL", //Buying 100 shares of the Apple stock
   "Type": "Stop",
   "Side": "Buy",
   "Quantity": 100,
@@ -183,7 +183,7 @@ The body of this request represents the information about the to-be-created orde
 
 ```javascript
 {
-  "SecurityId": 4, //Buying 100 shares of the Apple stock
+  "Symbol": "AAPL", //Buying 100 shares of the Apple stock
   "Type": "StopLimit",
   "Side": "Buy",
   "Quantity": 100,

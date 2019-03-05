@@ -151,6 +151,8 @@
       * [Syntax](rest-api/private-api/orders/place-order/orders_placeorder.md)
     * [Replace Order](rest-api/private-api/orders/replace-order/README.md)
       * [Syntax](rest-api/private-api/orders/replace-order/orders_replaceorder.md)
+    * [Validate Order Placement](rest-api/private-api/orders/validate-order-placement.md)
+    * [Validate Order Replacement](rest-api/private-api/orders/validate-order-replacement.md)
   * [Positions](rest-api/private-api/positions/README.md)
     * [Get User's Positions](rest-api/private-api/positions/get-users-positions/README.md)
       * [Syntax](rest-api/private-api/positions/get-users-positions/positions_getpositions.md)
