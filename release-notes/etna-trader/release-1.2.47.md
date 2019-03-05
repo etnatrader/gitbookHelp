@@ -16,7 +16,7 @@ The biggest improvement of release 1.2.47 is the update of our Web API. First, w
 If your solution is integrated with our web API, please note that the following endpoints are no longer supported:
 
 * Get Securities By Mask \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities) [/v{version}/securities](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities)\):
-  * Replaced by [Get Equity Info By Mask](../../rest-api/public-api/securities/get-securitys-info-by-mask/) and [Get Option Info By Ticker](../../rest-api/private-api/securities/get-options-info-by-ticker.md).
+  * Replaced by [Get Equity Info By Mask](../../rest-api/private-api/securities/get-securitys-info-by-mask/) and [Get Option Info By Ticker](../../rest-api/private-api/securities/get-options-info-by-ticker.md).
 * Get Securities by ID \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurityById) [/v{version}/securities/{securityId}](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurityById)\).
   * Replaced by [Get Equity's Info by ID](../../rest-api/private-api/securities/get-securitys-info-by-internal-id/) and [Get Option Info by ID](../../rest-api/private-api/securities/get-options-info-by-id.md).
 
