@@ -24,12 +24,10 @@ And the following endpoints have been modified:
 
 * Place Order \([POST](https://priv-api-et-demo-prod.etnasoft.us/api/reference/index#!/Orders/Orders_PlaceOrder) [/v{version}/accounts/{accountId}/orders](https://priv-api-et-demo-prod.etnasoft.us/api/reference/index#!/Orders/Orders_PlaceOrder)\);
   1. The **SecurityID** parameter has been replaced with **Symbol** \(ticker\);
-  2. The **dryRun** parameter has been transformed into a [separate endpoint](../../rest-api/private-api/orders/validate-order-placement.md).
+  2. The **dryRun** parameter is no longer available — there's a [separate endpoint](../../rest-api/private-api/orders/validate-order-placement.md) for order placement validation.
 * Replace Order \([PUT](https://priv-api-etnatrader-dev.etnasoft.us/api/reference/index#!/Orders/Orders_ReplaceOrder) [/v{version}/accounts/{accountId}/orders/{orderId}](https://priv-api-etnatrader-dev.etnasoft.us/api/reference/index#!/Orders/Orders_ReplaceOrder)\).
-
   1. The **SecurityID** parameter has been replaced with **Symbol** \(ticker\);
-
-      2. The **dryRun** parameter has been transformed into a [separate endpoint](../../rest-api/private-api/orders/validate-order-replacement.md).
+  2. The **dryRun** parameter is no longer available — there's a [separate endpoint](../../rest-api/private-api/orders/validate-order-replacement.md) for order    replacement validation.
 {% endhint %}
 
 #### Retrieving Users' Positions
