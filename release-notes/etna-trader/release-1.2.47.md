@@ -10,7 +10,7 @@ ETNA Trader receives another major update that brings a set of significant featu
 
 ### Web API Improvements
 
-By far the biggest improvement of release 1.2.47 is the update of our Web API. First, we've made a few changes to the existing methods for retrieving security information, account information, and placing new orders. Second, we've added a new method for retrieving chart data in the Microsoft Excel format.
+The biggest improvement of release 1.2.47 is the update of our Web API. First, we've made a few changes to the existing methods for retrieving security information, account information, and placing new orders. Second, we've added a new method for retrieving chart data in the Microsoft Excel format.
 
 #### Retrieving Users' Positions
 
@@ -56,11 +56,17 @@ The last change we made to our Web API is the revamped order placement mechanism
 
 {% page-ref page="../../rest-api/private-api/orders/validate-order-replacement.md" %}
 
-Once you've ensured that an order is properly constructed, you may proceed to place it \(or replace it\) with the regular order placement and replacement API requests. Also note that in release 1.2.47 we've changed the list of required parameters that must be provided in a new order — instead of providing securities' internal ID in ETNA Trader you should simply provide its ticker symbol.
+Once you've ensured that an order is properly constructed, you may proceed to place it \(or replace it\) with the regular order placement and replacement API requests. Also note that in release 1.2.47 we've changed the list of required parameters that must be provided in a new order — instead of providing a security's internal ID in ETNA Trader you should simply provide its ticker symbol.
 
 {% page-ref page="../../rest-api/private-api/orders/place-order/" %}
 
 {% page-ref page="../../rest-api/private-api/orders/replace-order/" %}
+
+#### Exporting Chart Data in the Microsoft Excel Format
+
+The last addition to our Web API is the ability to export chart data in the Microsoft Excel Format:
+
+{% page-ref page="../../rest-api/private-api/historical-data/get-chart-data-in-the-excel-format.md" %}
 
 ### Balance Attributes
 
