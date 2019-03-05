@@ -1,5 +1,5 @@
 ---
-description: 'Web API updates, support for Thomson Reuters Beta''s FIX Protocol'
+description: 'Web API updates, support for Thomson Reuters Beta FIX Protocol'
 ---
 
 # Release 1.2.47
