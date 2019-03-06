@@ -234,6 +234,8 @@
     * [Add a New Security](rest-api/private-api/internal-securities/add-a-new-security.md)
   * [Internal Users](rest-api/private-api/internal-users/README.md)
     * [Get Users' Info](rest-api/private-api/internal-users/get-users-info.md)
+    * [List All Users](rest-api/private-api/internal-users/list-all-users.md)
+    * [Create a New User](rest-api/private-api/internal-users/create-a-new-user.md)
 
 ## Release Notes
 

@@ -64,7 +64,7 @@ We've also added two new methods for listing all existing equities and options:
 
 #### Placing New Orders
 
-The last change we made to our Web API is the revamped order placement mechanism. Previously, if you wanted to ensure that a new order is properly constructed, you could simply add the **dryRun** parameter in the request header. Starting from version 1.2.47, we've split the order placement and replacement procedures into two separate methods:
+The last change we made to our Web API is the revamped order placement mechanism. Previously, if you wanted to ensure that a new order is properly constructed, you could simply add the **dryRun** parameter in the request header. Starting from version 1.2.47, the **dryRun** parameter is eliminated from the order placement and replacement requests and instead we're introducing separate order placement and replacement endpoints:
 
 {% page-ref page="../../rest-api/private-api/orders/validate-order-placement.md" %}
 
