@@ -236,6 +236,9 @@
     * [Get Users' Info](rest-api/private-api/internal-users/get-users-info.md)
     * [List All Users](rest-api/private-api/internal-users/list-all-users.md)
     * [Create a New User](rest-api/private-api/internal-users/create-a-new-user.md)
+    * [Modify a User](rest-api/private-api/internal-users/modify-a-user.md)
+  * [Internal Accounts](rest-api/private-api/internal-accounts/README.md)
+    * [Get Trading Account Info by ID](rest-api/private-api/internal-accounts/get-trading-account-info-by-id.md)
 
 ## Release Notes
 
