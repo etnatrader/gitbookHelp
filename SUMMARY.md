@@ -239,6 +239,8 @@
     * [Modify a User](rest-api/private-api/internal-users/modify-a-user.md)
   * [Internal Accounts](rest-api/private-api/internal-accounts/README.md)
     * [Get Trading Account Info by ID](rest-api/private-api/internal-accounts/get-trading-account-info-by-id.md)
+    * [List Account Users](rest-api/private-api/internal-accounts/list-account-users.md)
+    * [List All Accounts](rest-api/private-api/internal-accounts/list-all-accounts.md)
 
 ## Release Notes
 

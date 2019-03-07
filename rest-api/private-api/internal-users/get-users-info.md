@@ -6,7 +6,7 @@ description: Retrieve information about a particular user
 
 ### Overview
 
-This GET endpoint enables you to retrieve information about a particular user by providing their internal identifier in ETNA Trader in the request header.
+This GET endpoint enables you to retrieve information about a particular user by providing their internal identifier in ETNA Trader in the request path.
 
 {% hint style="warning" %}
 In order to retrieve information about a particular user, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
