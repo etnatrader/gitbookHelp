@@ -242,6 +242,9 @@
     * [List Account Users](rest-api/private-api/internal-accounts/list-account-users.md)
     * [List All Accounts](rest-api/private-api/internal-accounts/list-all-accounts.md)
     * [Create a New Trading Account](rest-api/private-api/internal-accounts/create-a-new-trading-account.md)
+    * [Update a Trading Account](rest-api/private-api/internal-accounts/update-a-trading-account.md)
+    * [Deposit Funds into an Account](rest-api/private-api/internal-accounts/deposit-funds-into-an-account.md)
+    * [Withdraw Funds from an Account](rest-api/private-api/internal-accounts/withdraw-funds-from-an-account.md)
 
 ## Release Notes
 

@@ -9,7 +9,7 @@ description: List all trading accounts registered within your company
 This GET endpoint enables you to retrieve the list of all trading accounts that have been created by the users of your company. All accounts are split into pages, each of which can be individually retrieved with the help of this endpoint.
 
 {% hint style="warning" %}
-In order to list all trading accounts of your company you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to list all trading accounts of your company, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are four required parameters that must be provided in the request:
