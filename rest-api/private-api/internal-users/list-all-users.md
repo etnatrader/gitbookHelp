@@ -18,7 +18,7 @@ There are seven required parameters that must be provided in the request:
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **pageSize** \(query\). This field indicates the number of users that need to be retrieved per page.
-5. **pageNumber** \(query\). This field indicates the number of the page that need to be retrieved \(all users are split into a set of pages that can be loaded one by one\).
+5. **pageNumber** \(query\). This field indicates the number of the page that needs to be retrieved \(all users are split into a set of pages that can be loaded one by one\).
 6. **sortBy** \(query\). This is the field by which the retrieved users should be sorted. For example, if the value of this parameter is set to **Id**, the retrieved feedbacks will be sorted by the users' internal identifier in ETNA Trader.
 7. **isDesc** \(query\). This field indicates if the list of retrieved users should be sorted in the descending \(true\) or ascending \(false\) order.
 

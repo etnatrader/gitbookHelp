@@ -1,3 +1,7 @@
+---
+description: Get information about a particular trading account
+---
+
 # Get Trading Account Info by ID
 
 ### Overview
@@ -83,7 +87,8 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">SubscriptionPlanId</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">This is an internal field in ETNA Trader and it shouldn&apos;t be used
+        by third-party developers.</td>
     </tr>
     <tr>
       <td style="text-align:left">ClearingAccount</td>
@@ -103,7 +108,8 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">IsChanged</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">This is an internal field in ETNA Trader and it shouldn&apos;t be used
+        by third-party developers.</td>
     </tr>
     <tr>
       <td style="text-align:left">Cash</td>
@@ -112,28 +118,44 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">Currency</td>
-      <td style="text-align:left">This is the currency of the trading account.</td>
+      <td style="text-align:left">This is the currency of the trading account. At the moment only US dollars
+        are supported.</td>
     </tr>
     <tr>
       <td style="text-align:left">Status</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">
+        <p>This is the status of the trading account. Possible values:</p>
+        <ul>
+          <li>New &#x2014; the trading account has been created;</li>
+          <li>SentToClearing &#x2014; the trading account has been sent to the clearing
+            firm;</li>
+          <li>Approved &#x2014; the trading account has been approved by the clearing
+            firm;</li>
+          <li>Rejected &#x2014; the trading account has been rejected by the clearing
+            firm.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">MarginInterestRate</td>
-      <td style="text-align:left">This is the interest rate applied to funds borrowed to finance margin
+      <td style="text-align:left">This is the interest rate applied to the funds borrowed to finance margin
         positions.</td>
     </tr>
     <tr>
       <td style="text-align:left">CashInterestRate</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">This is an obsolete field and it shouldn&apos;t be used by third-party
+        developers.</td>
     </tr>
     <tr>
       <td style="text-align:left">CloseEquity</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">This is the trading account&apos;s equity before the start of a new trading
+        session (calculated based on the closing price of the previous trading
+        session).</td>
     </tr>
     <tr>
       <td style="text-align:left">OpenExcess</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">This field indicates the account&apos;s excess funds calculated at the
+        opening of the trading session.</td>
     </tr>
     <tr>
       <td style="text-align:left">OptionLevel</td>
@@ -162,20 +184,35 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">BaseCash</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">This is the trading account&apos;s excessive funds that are used for calculating
+        DayTradingBuyingPower.</td>
     </tr>
     <tr>
       <td style="text-align:left">Sweep</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">This is an internal field and it shouldn&apos;t be used by third-party
+        developers.</td>
     </tr>
     <tr>
       <td style="text-align:left">OwnerType</td>
-      <td style="text-align:left">&#x2014;</td>
+      <td style="text-align:left">
+        <p>This is the type of the trading account&apos;s owner. Possible values:</p>
+        <ul>
+          <li>IndividualCustomer = 0</li>
+          <li>InstitutionalCustomer = 1,</li>
+          <li>Combined = 2,</li>
+          <li>EmployeeAccount = 3,</li>
+          <li>MarketMaking = 4,</li>
+          <li>OtherProprietary = 5,</li>
+          <li>Unknown = 6,</li>
+          <li>ErrorAccount = 7</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">DayTradingBuyingPower</td>
-      <td style="text-align:left">This is the amount of funds that can be employed to make trades during
-        a day trading session.</td>
+      <td style="text-align:left">This is the amount of funds that can be employed to make trades on day
+        trading accounts. Usually the value of this field is equal to <em>BaseCash</em> multiplied
+        by four.</td>
     </tr>
     <tr>
       <td style="text-align:left">DayTrades</td>
@@ -212,29 +249,29 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">TradeDayBalance</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a trade day balance call.</td>
+      <td style="text-align:left">This is the amount of funds that the trading account owes to the broker.</td>
     </tr>
     <tr>
       <td style="text-align:left">MoneyMarket</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">These are the money market funds on the trading account.</td>
     </tr>
     <tr>
       <td style="text-align:left">Cip</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This is the Carriage and Insurance Paid To (CIP).</td>
     </tr>
     <tr>
       <td style="text-align:left">IsAverageAccount</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This field indicates if this trading account is used to allocate shares
+        to other trading accounts.</td>
     </tr>
     <tr>
       <td style="text-align:left">MarginEquity</td>
-      <td style="text-align:left">This is the portion of the equity that is reserved by the broker if margin
-        operations are taking place.</td>
+      <td style="text-align:left">This is the portion of the account&apos;s equity that was purchased on
+        margin.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExcessEquity</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This is the withdrawable portion of the equity.</td>
     </tr>
   </tbody>
 </table>### Common Mistakes

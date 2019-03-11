@@ -241,6 +241,7 @@
     * [Get Trading Account Info by ID](rest-api/private-api/internal-accounts/get-trading-account-info-by-id.md)
     * [List Account Users](rest-api/private-api/internal-accounts/list-account-users.md)
     * [List All Accounts](rest-api/private-api/internal-accounts/list-all-accounts.md)
+    * [Create a New Trading Account](rest-api/private-api/internal-accounts/create-a-new-trading-account.md)
 
 ## Release Notes
 
