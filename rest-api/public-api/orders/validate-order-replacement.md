@@ -36,10 +36,7 @@ The first five parameters — **ID**, **Quantity**, **Price**, **ExecutionInstru
   "Id": 76320,
   "Quantity": 100,
   "Price": 169,
-  "ExecutionInstructions": {},
-  "Legs": [
-    {}
-  ]
+  "ExecutionInstructions": {}
 }
 ```
 

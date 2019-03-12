@@ -1,3 +1,7 @@
+---
+description: Add a new security to ETNA Trader
+---
+
 # Add a New Security
 
 ### Overview

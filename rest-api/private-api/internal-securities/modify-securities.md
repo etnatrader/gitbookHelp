@@ -1,3 +1,7 @@
+---
+description: Modify information about a particular security
+---
+
 # Modify Securities
 
 ### Overview
