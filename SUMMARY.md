@@ -245,6 +245,8 @@
     * [Update a Trading Account](rest-api/private-api/internal-accounts/update-a-trading-account.md)
     * [Deposit Funds into an Account](rest-api/private-api/internal-accounts/deposit-funds-into-an-account.md)
     * [Withdraw Funds from an Account](rest-api/private-api/internal-accounts/withdraw-funds-from-an-account.md)
+    * [Bind an Account to a User](rest-api/private-api/internal-accounts/bind-an-account-to-a-user.md)
+    * [Remove a Trading Account from a User](rest-api/private-api/internal-accounts/remove-a-trading-account-from-a-user.md)
 
 ## Release Notes
 
