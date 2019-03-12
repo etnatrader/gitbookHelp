@@ -1,3 +1,7 @@
+---
+description: Validate a new order before placing it
+---
+
 # Validate Order Placement
 
 ### Overview

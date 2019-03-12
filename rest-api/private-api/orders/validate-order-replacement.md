@@ -1,3 +1,7 @@
+---
+description: Validate order information before updating it in an existing order
+---
+
 # Validate Order Replacement
 
 ### Overview
