@@ -66,19 +66,31 @@ Some these parameters can be examined in the **Account Info** widget.
 
 Let's examine each of these parameters in detail.
 
-#### Cash
+### Cash
 
 Cash indicates the amount of funds that the account's user can withdraw or spend to open new positions. 
 
-#### Pending Cash
+### NetCash
+
+NetCash represents the amount of available funds adjusted for the option maintenance margin. It is calculated according to the following formula:
+
+$$
+NetCash = Cash - OptionMaintenanceMargin
+$$
+
+### Base Cash
+
+Base cash is an indicator that is retrieved daily from the clearing firm.
+
+### Pending Cash
 
 Pending Cash indicates the amount of money that is reserved to carry out current transactions. This reserve is withheld from the Cash parameter and it is calculated as the sum of the transaction commission and the cost of the securities purchased during the transaction.
 
 $$
-Pending Cash = Cash - Commissions - OrderCost
+Pending Cash = Σ Commissions + ΣOrderCost
 $$
 
-#### Account Value
+### Account Value
 
 Account value represents the sum of the available Cash and the aggregate market value of all long and short positions.
 
@@ -86,7 +98,7 @@ $$
 AccountValue = Cash + Market Value
 $$
 
-#### Market Value
+### Market Value
 
 Market Value represents the sum of four other trading account parameters:
 
@@ -99,13 +111,49 @@ $$
 MarketValue = stockLongMarketValue + stockShortMarketValue + optionLongMarketValue + optionShortMarketValue
 $$
 
-#### Base Cash
+### Excess
 
-Base cash indica
+Excess represents the available funds that can be used to open new positions. This is a base parameter that is retrieved daily from the clearing firm. Throughout the trading session, this parameter is calculated differently depending on the configuration of your environment:
 
-#### 
+* **Default**
 
-#### 
+$$
+Excess = Cash + StockMarketValue - MaintenanceMargin - PendingCash
+$$
+
+* **Real-time Excess**
+
+$$
+Excess=Cash+StockMarketValue−MaintenanceMargin−PendingCash
+$$
+
+* **Excess with Unsettled Cash**
+
+$$
+Excess = Base Cash - UnsettledCash - PendingCash
+$$
+
+### Excess Back
+
+Excess back is in most cases identical to Base Cash except for the **Real-time Excess** configuration where it is calculated as:
+
+$$
+ExcessBack = Equity - MaintenanceMargin
+$$
+
+### Equity
+
+Equity represents the sum of Cash and the net market value of all positions in stocks:
+
+$$
+Equity = Cash + StockMarketValue
+$$
+
+
+
+$$
+StockMarketValue = StockLongMarketValue + StockShortMarketValue
+$$
 
 where:
 

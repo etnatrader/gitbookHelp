@@ -9,13 +9,13 @@ description: List a fraction of all user feedback
 This GET endpoint enables you to list user feedback across the entire company. This feedback is split into numerous pages, and you can retrieve each page with a separate API call. Unlike the regular user feedback listing functionality that fetches feedback for a particular user, this method retrieves the entirety of feedback provided by all users.
 
 {% hint style="warning" %}
-In order to list users's, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to list users's, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are seven required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **pageSize** \(query\). This field indicates the number of user feedbacks that need to be retrieved per page.
 5. **pageNumber** \(query\). This field indicates the number of the page that need to be retrieved \(all user feedbacks are split into a set of pages that can be loaded one by one\).

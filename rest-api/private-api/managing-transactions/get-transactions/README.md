@@ -9,13 +9,13 @@ description: List transactions of a particular user
 This GET endpoint enables you to retrieve a list of transactions that the have been made on a particular trading account. The number of retrieved transactions can be specified in the request header.
 
 {% hint style="warning" %}
-In order to retrieve transactions of a particular trading account, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to retrieve transactions of a particular trading account, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are eight required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **accountId** \(query\). This is the ID of the trading account whose transactions need to be retrieved.
 5. **pageSize** \(query\). This field indicates the number of transactions that needs to be retrieved per page.

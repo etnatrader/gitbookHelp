@@ -9,13 +9,13 @@ description: Bind a new trading account to an existing user
 This PUT endpoint enables you to bind a new or an existing trading account to an existing user. If you don't have any active trading accounts, go ahead and [create a new one](create-a-new-trading-account.md). Once the account is created and bound to an existing user, you can verify that this user is indeed using this account by leveraging [this API endpoint](../user-accounts/list-users-accounts/).
 
 {% hint style="warning" %}
-In order to bind a trading account to a user, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to bind a trading account to a user, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are six required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **accountID** \(path\). This is the internal identifier of the trading account which is to be bound to an existing user.
 5. **userID** \(query\). This is the internal identifier of the user to whom an existing trading account must be bound.

@@ -9,13 +9,13 @@ description: List a user's price alerts
 This GET endpoint enables you to retrieve the list of a user's price alerts. Price alerts are essentially notifications that are sent to the user when the alert's conditions are satisfied by the market. For example, a user may have a price alert that will notify them when the price of the Apple stock exceeds $200.
 
 {% hint style="warning" %}
-In order to retrieve a user's price alerts, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to retrieve a user's price alerts, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are eight required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **userID** \(path\). This is the ID of the user whose particular watchlist needs to be have one security removed.
 5. **pageSize** \(query\). This field indicates the number of price alerts that needs to be retrieved per page.

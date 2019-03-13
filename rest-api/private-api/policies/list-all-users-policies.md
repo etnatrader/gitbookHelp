@@ -11,13 +11,13 @@ This GET endpoint enables you to list all security policies that apply to the us
 In ETNA Trader, each [user group](../../../administrator-guide/administrators-widgets/managing-user-groups.md) must have a [**security policy**](../../../administrator-guide/administrators-widgets/system-security-policies.md) that defines various security-related settings like minimum password length, two-factor authentication, and so forth. These security policies can be configured in the **System Security Policies** widget \(only available to administrators\).
 
 {% hint style="warning" %}
-In order to modify a particular price alert, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to modify a particular price alert, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are three required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 
 Here's the final template for this API request:
