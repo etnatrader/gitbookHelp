@@ -17,7 +17,7 @@ Create new price alert for specified user.
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**userId**  <br>*required*|User identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
 |**Body**|**body**  <br>*required*|Price alert model|[PriceAlertEditableModel](#pricealerteditablemodel)||
 
 
