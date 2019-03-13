@@ -26,7 +26,7 @@
 
 |Name|Schema|
 |---|---|
-|**Securities**  <br>*optional*|< [SecurityModel](#securitymodel) > array|
+|**Securities**  <br>*optional*|< [SecuritySignature](#securitysignature) > array|
 |**SecuritiesHistorySettings**  <br>*optional*|[SecurityHistoryRequestSettings](#securityhistoryrequestsettings)|
 
 
@@ -46,12 +46,12 @@
 |Name|Schema|
 |---|---|
 |**IndicatorsHistorySettings**  <br>*optional*|< [IndicatorHistoryRequestSettings](#indicatorhistoryrequestsettings) > array|
-|**Security**  <br>*optional*|[SecurityModel](#securitymodel)|
+|**Security**  <br>*optional*|[SecuritySignature](#securitysignature)|
 |**SecurityHistorySettings**  <br>*optional*|[SecurityHistoryRequestSettings](#securityhistoryrequestsettings)|
 
 
-<a name="createordermodel"></a>
-### CreateOrderModel
+<a name="createorderresource"></a>
+### CreateOrderResource
 
 |Name|Description|Schema|
 |---|---|---|
@@ -61,19 +61,19 @@
 |**ExecutionInstructions**  <br>*optional*|Algo order execution instructions.|< string, string > map|
 |**ExpireDate**  <br>*optional*|Expire date. Assigned by client.|string (date-time)|
 |**ExtendedHours**  <br>*optional*|indicates the extended trading session for GTX order execution (pre-market session, post-market session)<br>if empty - than there is no specific requirement for extended session|string|
-|**Legs**  <br>*optional*|Order legs|< [CreateOrderModel](#createordermodel) > array|
+|**Legs**  <br>*optional*|Order legs|< [CreateOrderResource](#createorderresource) > array|
 |**Price**  <br>*optional*|Price (not used for some order types).|number (double)|
 |**Quantity**  <br>*optional*|Quantity. Assigned by client.  <br>**Minimum value** : `0`|number (double)|
-|**SecurityId**  <br>*optional*|Security id.  <br>**Minimum value** : `1`  <br>**Maximum value** : `2147483647`|integer (int32)|
 |**Side**  <br>*optional*|Client side comments.|enum (Buy, Sell, SellShort, BuyToCover)|
 |**StopPrice**  <br>*optional*|Stop price (used for stop orders).|number (double)|
+|**Symbol**  <br>*optional*|Security symbol.|string|
 |**TimeInforce**  <br>*optional*|Time in force.|enum (Day, GoodTillCancel, AtTheOpening, ImmediateOrCancel, FillOrKill, GoodTillCrossing, GoodTillDate, GoodTillTime)|
 |**Token**  <br>*optional*|Additional identity key (usid in market scanner).|string|
 |**TrailingLimitAmount**  <br>*optional*||number (double)|
 |**TrailingLimitAmountType**  <br>*optional*||enum (Absolute, Persentage)|
 |**TrailingStopAmount**  <br>*optional*||number (double)|
 |**TrailingStopAmountType**  <br>*optional*||enum (Absolute, Persentage)|
-|**Type**  <br>*optional*|Type. Assigned by client.|enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, External)|
+|**Type**  <br>*optional*|Type. Assigned by client.|enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External)|
 |**ValidationsToBypass**  <br>*optional*|Flag property indicating validation rules to bypass|integer (int32)|
 
 
@@ -86,6 +86,15 @@
 |**Securities**  <br>*optional*|< integer (int32) > array|
 
 
+<a name="earninginfo"></a>
+### EarningInfo
+
+|Name|Schema|
+|---|---|
+|**Percent**  <br>*optional*|number (double)|
+|**Value**  <br>*optional*|number (double)|
+
+
 <a name="editablehotkeymodel"></a>
 ### EditableHotkeyModel
 
@@ -95,6 +104,28 @@
 |**Description**  <br>*optional*|string|
 |**KeyboardShortcut**  <br>*optional*|string|
 |**Parameters**  <br>*optional*|< [HotkeyParameterMapModel](#hotkeyparametermapmodel) > array|
+
+
+<a name="equityresource"></a>
+### EquityResource
+
+|Name|Schema|
+|---|---|
+|**AddedDate**  <br>*optional*|string (date-time)|
+|**AllowMargin**  <br>*optional*|boolean|
+|**AllowShort**  <br>*optional*|boolean|
+|**AllowTrade**  <br>*optional*|boolean|
+|**Currency**  <br>*optional*|string|
+|**Description**  <br>*optional*|string|
+|**Enabled**  <br>*optional*|boolean|
+|**Exchange**  <br>*optional*|string|
+|**Id**  <br>*optional*|integer (int32)|
+|**ModifyDate**  <br>*optional*|string (date-time)|
+|**Precision**  <br>*optional*|integer (int32)|
+|**Symbol**  <br>*optional*|string|
+|**TickSize**  <br>*optional*|number (double)|
+|**Type**  <br>*optional*|enum (BankersAcceptance, CertificateOfDeposit, CollateralizeMortgageObligation, CorporateBond, CommercialPaper, CorporatePrivatePlacement, CommonStock, FederalHousingAuthority, FederalHomeLoan, FederalNationalMortgageAssociation, ForeignExchangeContract, Future, GovernmentNationalMortgageAssociation, TreasuriesPlusAgencyDebenture, MutualFund, MortgageInterestOnly, MortgagePrincipleOnly, MortgagePrivatePlacement, MiscellaneousPassThru, MunicipalBond, NoIsitcSecurityType, Option, PreferredStock, RepurchaseAgreement, ReverseRepurchaseAgreement, StudentLoanMarketingAssociation, TimeDeposit, UsTreasuryBill, Warrant, CatsTigersLions, WildcardEntry, ConvertibleBond, MortgageIoette, Index, FakeStockForNonStandartOption, Right, Cryptocurrency, ETF, DepositoryReceipt, CoveredWarrant, Unit)|
+|**VolumePrecision**  <br>*optional*|integer (int32)|
 
 
 <a name="expecting"></a>
@@ -152,6 +183,28 @@ Formula model
 |**Name**  <br>*optional*|string|
 |**TargetPercent**  <br>*optional*|number (double)|
 |**Tolerance**  <br>*optional*|number (double)|
+
+
+<a name="historicaltradedataexportdatamodel"></a>
+### HistoricalTradeDataExportDataModel
+
+|Name|Schema|
+|---|---|
+|**DefaultFileName**  <br>*optional*|string|
+|**Indicators**  <br>*optional*|< [HistoricalTradeDataExportIndicatorModel](#historicaltradedataexportindicatormodel) > array|
+|**Securities**  <br>*optional*|< integer (int32) > array|
+|**TimeFrame**  <br>*optional*|[TimeFrameModel](#timeframemodel)|
+
+
+<a name="historicaltradedataexportindicatormodel"></a>
+### HistoricalTradeDataExportIndicatorModel
+
+|Name|Schema|
+|---|---|
+|**Args**  <br>*optional*|< object > array|
+|**Name**  <br>*optional*|string|
+|**Text**  <br>*optional*|string|
+|**Type**  <br>*optional*|string|
 
 
 <a name="hotkeymapmodel"></a>
@@ -279,8 +332,8 @@ Formula model
 |**TopPrice**  <br>*optional*|number (double)|
 
 
-<a name="modifyordermodel"></a>
-### ModifyOrderModel
+<a name="modifyorderresource"></a>
+### ModifyOrderResource
 Modify order parameters
 
 
@@ -290,7 +343,7 @@ Modify order parameters
 |**ExecutionInstructions**  <br>*optional*|Algo order execution instructions.|< string, string > map|
 |**ExpireDate**  <br>*optional*|Expire date. Assigned by client.|string (date-time)|
 |**Id**  <br>*required*|Internal order id.  <br>**Minimum value** : `1`  <br>**Maximum value** : `2147483647`|integer (int32)|
-|**Legs**  <br>*optional*|Order legs|< [ModifyOrderModel](#modifyordermodel) > array|
+|**Legs**  <br>*optional*|Order legs|< [ModifyOrderResource](#modifyorderresource) > array|
 |**Price**  <br>*optional*|Price (not used for some order types).|number (double)|
 |**Quantity**  <br>*optional*|Quantity. Assigned by client.  <br>**Minimum value** : `0`|number (double)|
 |**StopPrice**  <br>*optional*|Stop price (used for stop orders).|number (double)|
@@ -301,8 +354,48 @@ Modify order parameters
 |**ValidationsToBypass**  <br>*optional*|Flag property indicating validation rules to bypass|integer (int32)|
 
 
-<a name="ordermodel"></a>
-### OrderModel
+<a name="optionexpirationresource"></a>
+### OptionExpirationResource
+
+|Name|Schema|
+|---|---|
+|**ExpirationDate**  <br>*optional*|string (date-time)|
+|**ExpirationType**  <br>*optional*|enum (Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard)|
+|**SeriesId**  <br>*optional*|integer (int32)|
+|**SeriesType**  <br>*optional*|enum (Standard, NonStandard, Binary, Flex, Undefined)|
+
+
+<a name="optionresource"></a>
+### OptionResource
+
+|Name|Schema|
+|---|---|
+|**AddedDate**  <br>*optional*|string (date-time)|
+|**AllowMargin**  <br>*optional*|boolean|
+|**AllowShort**  <br>*optional*|boolean|
+|**AllowTrade**  <br>*optional*|boolean|
+|**ContractSize**  <br>*optional*|number (double)|
+|**Currency**  <br>*optional*|string|
+|**Description**  <br>*optional*|string|
+|**Enabled**  <br>*optional*|boolean|
+|**Exchange**  <br>*optional*|string|
+|**ExpirationDate**  <br>*optional*|string (date-time)|
+|**ExpirationType**  <br>*optional*|enum (Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard)|
+|**Id**  <br>*optional*|integer (int32)|
+|**ModifyDate**  <br>*optional*|string (date-time)|
+|**OptionType**  <br>*optional*|enum (Call, Put, Undefined)|
+|**Precision**  <br>*optional*|integer (int32)|
+|**SeriesId**  <br>*optional*|integer (int32)|
+|**StrikePrice**  <br>*optional*|number (double)|
+|**Symbol**  <br>*optional*|string|
+|**TickSize**  <br>*optional*|number (double)|
+|**Type**  <br>*optional*|enum (BankersAcceptance, CertificateOfDeposit, CollateralizeMortgageObligation, CorporateBond, CommercialPaper, CorporatePrivatePlacement, CommonStock, FederalHousingAuthority, FederalHomeLoan, FederalNationalMortgageAssociation, ForeignExchangeContract, Future, GovernmentNationalMortgageAssociation, TreasuriesPlusAgencyDebenture, MutualFund, MortgageInterestOnly, MortgagePrincipleOnly, MortgagePrivatePlacement, MiscellaneousPassThru, MunicipalBond, NoIsitcSecurityType, Option, PreferredStock, RepurchaseAgreement, ReverseRepurchaseAgreement, StudentLoanMarketingAssociation, TimeDeposit, UsTreasuryBill, Warrant, CatsTigersLions, WildcardEntry, ConvertibleBond, MortgageIoette, Index, FakeStockForNonStandartOption, Right, Cryptocurrency, ETF, DepositoryReceipt, CoveredWarrant, Unit)|
+|**UnderlyingAssetSymbol**  <br>*optional*|string|
+|**VolumePrecision**  <br>*optional*|integer (int32)|
+
+
+<a name="orderresource"></a>
+### OrderResource
 
 |Name|Description|Schema|
 |---|---|---|
@@ -325,13 +418,13 @@ Modify order parameters
 |**ExpireDate**  <br>*optional*|Expire date. Assigned by client.|string (date-time)|
 |**ExtendedHours**  <br>*optional*|indicates the extended trading session for GTX order execution (pre-market session, post-market session)<br>if empty - than there is no specific requirement for extended session|string|
 |**Id**  <br>*optional*|Unique order id. Assigned by OMS.|integer (int32)|
-|**InitialType**  <br>*optional*|Initial type. Assigned by OMS.|enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, External)|
+|**InitialType**  <br>*optional*|Initial type. Assigned by OMS.|enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External)|
 |**IsExternal**  <br>*optional*|This property indicates that order was accepted from external system and fields like ClientOrderId should be persisted.<br>It's a hack for orders from MessageAcceptor.<br>Assigned be client.|boolean|
 |**LastMarket**  <br>*optional*|Exchange where order was filled. Assigned by executor.|string|
 |**LastPrice**  <br>*optional*|Last quote. Assigned by executor.|number (double)|
 |**LastQuantity**  <br>*optional*|Last transaction executed quantity. Assigned by executor.|number (double)|
 |**LeavesQuantity**  <br>*optional*|Unfilled quantity. Assigned by executor.|number (double)|
-|**Legs**  <br>*optional*|Multileg order legs. Assigned by client.|< [OrderModel](#ordermodel) > array|
+|**Legs**  <br>*optional*|Multileg order legs. Assigned by client.|< [OrderResource](#orderresource) > array|
 |**OrigClientId**  <br>*optional*|Client order id (ClOrdID). Assigned by OMS.|string|
 |**ParentClientId**  <br>*optional*|Client order id (ClOrdID) of parent order in a case of mleg order.|string|
 |**ParentId**  <br>*optional*|Parent order id. Assigned by OMS.|integer (int32)|
@@ -340,13 +433,14 @@ Modify order parameters
 |**Quantity**  <br>*optional*|Quantity. Assigned by client.|number (double)|
 |**RequestId**  <br>*optional*|Request id. Assigned by OMS.|integer (int32)|
 |**RequestStatus**  <br>*optional*|Indicate order processing status within OMS. Assigned by OMS.|enum (RequireValidation, Validated, Rejected, Executing, Complete, Error)|
-|**SecurityId**  <br>*optional*|Security id. Assigned by client.|integer (int32)|
+|**SecurityId**  <br>*optional*|Security internal id;|integer (int32)|
 |**SettDate**  <br>*optional*|date of settlement. Received from execution venue or calculated by OMS, assigned by OMS or executor.|string (date-time)|
 |**SettlementDate**  <br>*optional*|Date of settlement deal|string (date-time)|
 |**Side**  <br>*optional*|Side. Assigned by client.|enum (Buy, Sell, SellShort, BuyToCover)|
 |**StateId**  <br>*optional*|State id. Assigned by OMS.|integer (int32)|
 |**Status**  <br>*optional*|Current order status. Assigned by OMS or executor.|enum (New, PartiallyFilled, Filled, DoneForDay, Canceled, Replaced, PendingCancel, Stopped, Rejected, Suspended, PendingNew, Calculated, Expired, AcceptedForBidding, PendingReplace, Error, Held)|
 |**StopPrice**  <br>*optional*|Stop price (used for stop orders). Assigned by client.|number (double)|
+|**Symbol**  <br>*optional*||string|
 |**Target**  <br>*optional*|Execution target. Assigned by OMS.|enum (Ignore, New, Modify, Cancel, Execution, Status, CancelReject, Reject, Error, All)|
 |**TimeInForce**  <br>*optional*|Time in force. Assigned by client.|enum (Day, GoodTillCancel, AtTheOpening, ImmediateOrCancel, FillOrKill, GoodTillCrossing, GoodTillDate, GoodTillTime)|
 |**Token**  <br>*optional*|Additional identity key (usid in market scanner).|string|
@@ -356,7 +450,7 @@ Modify order parameters
 |**TrailingStopAmountType**  <br>*optional*|Assigned by client.|enum (Absolute, Persentage)|
 |**TransType**  <br>*optional*|Execution transaction type.|enum (New, Cancel, Correct, Status)|
 |**TransactionDate**  <br>*optional*|Last transaction date. Assigned by OMS or executor.|string (date-time)|
-|**Type**  <br>*optional*|Type. Assigned by client.|enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, External)|
+|**Type**  <br>*optional*|Type. Assigned by client.|enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External)|
 |**UserId**  <br>*optional*|User id. Assigned by OMS.|integer (int32)|
 |**ValidationsToBypass**  <br>*optional*|Flag property indicating validation rules to bypass|integer (int32)|
 
@@ -369,6 +463,17 @@ Modify order parameters
 |**NextPageLink**  <br>*optional*|Next page|string|
 |**PreviousPageLink**  <br>*optional*|Previous page|string|
 |**Result**  <br>*optional*|Result collection|< [HotkeyMapModel](#hotkeymapmodel) > array|
+|**TotalCount**  <br>*optional*|Items total count|integer (int32)|
+
+
+<a name="pagingresult-positionresource"></a>
+### PagingResult[PositionResource]
+
+|Name|Description|Schema|
+|---|---|---|
+|**NextPageLink**  <br>*optional*|Next page|string|
+|**PreviousPageLink**  <br>*optional*|Previous page|string|
+|**Result**  <br>*optional*|Result collection|< [PositionResource](#positionresource) > array|
 |**TotalCount**  <br>*optional*|Items total count|integer (int32)|
 
 
@@ -436,8 +541,8 @@ Modify order parameters
 |**PhoneNumberState**  <br>*optional*|enum (NotLinked, Active, Suspended, NotVerified)|
 
 
-<a name="positionmodel"></a>
-### PositionModel
+<a name="positionresource"></a>
+### PositionResource
 
 |Name|Schema|
 |---|---|
@@ -545,6 +650,17 @@ Price alert info
 |**Value**  <br>*optional*|number (double)|
 
 
+<a name="roboadvisorwhitelabelinfo"></a>
+### RoboadvisorWhitelabelInfo
+
+|Name|Schema|
+|---|---|
+|**Footer**  <br>*optional*|string|
+|**Icon**  <br>*optional*|[IFileUpload](#ifileupload)|
+|**Logo**  <br>*optional*|[IFileUpload](#ifileupload)|
+|**Title**  <br>*optional*|string|
+
+
 <a name="securitycontainerframe"></a>
 ### SecurityContainerFrame
 
@@ -628,6 +744,7 @@ Price alert info
 
 |Name|Schema|
 |---|---|
+|**Currency**  <br>*optional*|string|
 |**Exchange**  <br>*optional*|string|
 |**Symbol**  <br>*optional*|string|
 
@@ -673,6 +790,18 @@ Web API notification service subscription representation
 |**Levels**  <br>*optional*|< [LevelInfoMapModel](#levelinfomapmodel) > array|
 |**ResistancePrice**  <br>*optional*|number (double)|
 |**SupportPrice**  <br>*optional*|number (double)|
+
+
+<a name="timeframemodel"></a>
+### TimeFrameModel
+
+|Name|Schema|
+|---|---|
+|**CandlesCount**  <br>*optional*|integer (int32)|
+|**EndDate**  <br>*optional*|integer (int32)|
+|**IncludeNonMarketData**  <br>*optional*|boolean|
+|**Period**  <br>*optional*|string|
+|**StartDate**  <br>*optional*|integer (int32)|
 
 
 <a name="timeseriesvaluecandlemapmodel"></a>
@@ -779,6 +908,7 @@ Web API notification service subscription representation
 |**ErrorDescription**  <br>*optional*|Error description.|string|
 |**ErrorDescriptionArgs**  <br>*optional*|Error description arguments.|< string > array|
 |**IsSuccessful**  <br>*optional*|Result.|boolean|
+|**MarginChange**  <br>*optional*|Expected margin value changed.|number (double)|
 |**NetCost**  <br>*optional*|The net cost of the order.|number (double)|
 |**Quotes**  <br>*optional*|Order validation quotes.|< [QuoteModel](#quotemodel) > array|
 
