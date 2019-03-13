@@ -18,7 +18,7 @@ Adds security to watchlist by security Id.
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**securityId**  <br>*required*|Security identifier|integer (int32)||
 |**Path**|**userId**  <br>*required*|User identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
 |**Path**|**watchlistId**  <br>*required*|Watchlist identifier|integer (int32)||
 
 
