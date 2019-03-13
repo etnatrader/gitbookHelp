@@ -7,7 +7,7 @@ PUT /v{version}/accounts/{accountId}/orders/{orderId}
 
 
 ##### Description
-Replace or verify order
+Replace order
 
 
 ##### Parameters
@@ -16,18 +16,17 @@ Replace or verify order
 |---|---|---|---|---|
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Path**|**accountId**  <br>*required*||integer (int32)||
+|**Path**|**accountId**  <br>*required*|Account identifier|integer (int32)||
 |**Path**|**orderId**  <br>*required*|Order internal identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
-|**Query**|**dryRun**  <br>*optional*|Preview order replace results without sending it to the market|boolean|`"false"`|
-|**Body**|**body**  <br>*required*|Order modify params|[ModifyOrderModel](#modifyordermodel)||
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Body**|**body**  <br>*required*|Order modify params|[ModifyOrderResource](#modifyorderresource)||
 
 
 ##### Responses
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**200**|Replaced order model|[OrderModel](#ordermodel)|
+|**200**|Replaced order model|[OrderResource](#orderresource)|
 |**401**|Authorization has been denied for this request.|No Content|
 |**403**|Application key is not defined or does not exist|No Content|
 |**409**|Conflict|No Content|
