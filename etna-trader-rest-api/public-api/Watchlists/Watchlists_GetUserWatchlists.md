@@ -17,7 +17,7 @@ Retrieves all watchlists belongs to specified user. If parameter includeSecuriti
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**userId**  <br>*required*|User identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
 |**Query**|**includeSecurities**  <br>*required*|Include list of wathlist securities in result model|boolean||
 
 
