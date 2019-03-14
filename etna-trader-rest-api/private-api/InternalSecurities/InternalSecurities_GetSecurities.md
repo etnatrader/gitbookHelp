@@ -16,7 +16,7 @@ Provides securities collection by specified symbol
 |---|---|---|---|---|
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
 |**Query**|**pageNumber**  <br>*required*|Page number|integer (int32)||
 |**Query**|**pageSize**  <br>*required*|Page size|integer (int32)||
 |**Query**|**symbol**  <br>*required*|Symbol to search by|string||
@@ -26,7 +26,7 @@ Provides securities collection by specified symbol
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**200**|Internal securities models collection|[PagingResult[InternalSecurityModel]](#pagingresult-internalsecuritymodel)|
+|**200**|Internal securities models collection|[PagingResult[InternalSecurityResource]](#pagingresult-internalsecurityresource)|
 |**401**|Authorization has been denied for this request.|No Content|
 |**403**|Application key is not defined or does not exist|No Content|
 |**422**|Validation error occurred while processing entity|No Content|
