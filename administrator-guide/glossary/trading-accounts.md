@@ -135,7 +135,7 @@ $$
 
 ### Excess Back
 
-Excess back is in most cases identical to Base Cash except for the **Real-time Excess** configuration where it is calculated as:
+Excess back is in most cases identical to **Base Cash** except for the **Real-time Excess** configuration where it is calculated as:
 
 $$
 ExcessBack = Equity - MaintenanceMargin
@@ -149,233 +149,140 @@ $$
 Equity = Cash + StockMarketValue
 $$
 
+### Stock Market Value
 
+Stock market value is calculated as the net market value of all positions is stocks. The aggregate market value of all long stock positions is added to the aggregate market value of all short stock positions.
 
 $$
 StockMarketValue = StockLongMarketValue + StockShortMarketValue
 $$
 
+### Day Trades
+
+Day trades is the number of day trades that have been executed on this trading account during the last five trading sessions \(including the current one\).
+
+### Stock Buying Power
+
+This is the gross number of stocks that can be purchased on this trading account, adjusted for the available margin debt. 
+
+$$
+StockBuyingPower = Excess / MarginRate
+$$
+
+### Option Buying Power
+
+This is the gross number of options that can be purchased on this trading account, adjusted for the available margin debt. 
+
+$$
+OptionBuyingPower = Excess
+$$
+
+### Day Trading Buying Power
+
+Day trading buying power is a critical indicator that represents the amount of funds that the user can spend to open new positions. At the beginning of every trading session, this value is retrieved from the clearing firm. Throughout the trading session, Day Trading Buying Power fluctuates based on the performed trades — it decreases with each new long position and it increases with each position closing.
+
+It's calculated differently for stocks and options. For stocks, when you open a new long position, Day Trading Buying Power decreases according to the following formula:
+
+$$
+DayTradingBuyingPower -=  OrderCost * 4 * MarginRate + Commission * 4
+$$
+
 where:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Result</td>
-      <td style="text-align:left">This is an array that contains the requested trading accounts.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Id</td>
-      <td style="text-align:left">This is the internal identifier of the trading account that was provided
-        in the request path.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SubscriptionPlanId</td>
-      <td style="text-align:left">This is an internal field in ETNA Trader and it shouldn&apos;t be used
-        by third-party developers.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ClearingAccount</td>
-      <td style="text-align:left">This is the id of this account at the clearing firm.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CreatedDate</td>
-      <td style="text-align:left">This is the date on which the trading account was created.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ModifiedDate</td>
-      <td style="text-align:left">This is the date on which the trading account was last modified.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Enabled</td>
-      <td style="text-align:left">This field indicates if the trading account is enabled.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">IsChanged</td>
-      <td style="text-align:left">This is an internal field in ETNA Trader and it shouldn&apos;t be used
-        by third-party developers.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Cash</td>
-      <td style="text-align:left">This is the amount of funds on the trading account that the user can expend
-        on new positions.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Currency</td>
-      <td style="text-align:left">This is the currency of the trading account. At the moment only US dollars
-        are supported.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Status</td>
-      <td style="text-align:left">
-        <p>This is the status of the trading account. Possible values:</p>
-        <ul>
-          <li>New &#x2014; the trading account has been created;</li>
-          <li>SentToClearing &#x2014; the trading account has been sent to the clearing
-            firm;</li>
-          <li>Approved &#x2014; the trading account has been approved by the clearing
-            firm;</li>
-          <li>Rejected &#x2014; the trading account has been rejected by the clearing
-            firm.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CommissionPlan</td>
-      <td style="text-align:left">This is the commission plan (as provided by the clearing firm).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">RepCode</td>
-      <td style="text-align:left">This is a commission-related field (as provided by the clearing firm).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MarginInterestRate</td>
-      <td style="text-align:left">This is the interest rate applied to the funds borrowed to finance margin
-        positions.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CashInterestRate</td>
-      <td style="text-align:left">This is an obsolete field and it shouldn&apos;t be used by third-party
-        developers.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CloseEquity</td>
-      <td style="text-align:left">This is the trading account&apos;s equity before the start of a new trading
-        session (calculated based on the closing price of the previous trading
-        session).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">OpenExcess</td>
-      <td style="text-align:left">This field indicates the account&apos;s excess funds calculated at the
-        opening of the trading session.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">OptionLevel</td>
-      <td style="text-align:left">This field indicates which operations with options are permitted on this
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MarginType</td>
-      <td style="text-align:left">This is the account type. Read more about it <a href="../administrators-widgets/managing-users/#trading-accounts">here</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Permissions</td>
-      <td style="text-align:left">
-        <p>This field lists the operations permitted on this trading account. Possible
-          values:</p>
-        <ul>
-          <li>LongStock &#x2014; opening long positions in stocks is permitted;</li>
-          <li>ShortStock &#x2014; opening short positions in stocks is permitted;</li>
-          <li>LongOption &#x2014; opening long positions in options is permitted;</li>
-          <li>ShortOption &#x2014; opening short positions in options is permitted;</li>
-          <li>AllowTrade &#x2014; trading is permitted;</li>
-          <li>AllowMargin &#x2014; trading on margin is permitted;</li>
-          <li>AllowOpen &#x2014; opening positions on this account is permitted.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">BaseCash</td>
-      <td style="text-align:left">This is the trading account&apos;s excessive funds that are used for calculating
-        DayTradingBuyingPower.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Sweep</td>
-      <td style="text-align:left">This is an internal field and it shouldn&apos;t be used by third-party
-        developers.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">OwnerType</td>
-      <td style="text-align:left">
-        <p>This is the type of the trading account&apos;s owner. Possible values:</p>
-        <ul>
-          <li>IndividualCustomer = 0</li>
-          <li>InstitutionalCustomer = 1,</li>
-          <li>Combined = 2,</li>
-          <li>EmployeeAccount = 3,</li>
-          <li>MarketMaking = 4,</li>
-          <li>OtherProprietary = 5,</li>
-          <li>Unknown = 6,</li>
-          <li>ErrorAccount = 7</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">DayTradingBuyingPower</td>
-      <td style="text-align:left">This is the amount of funds that can be employed to make trades on day
-        trading accounts. Usually the value of this field is equal to <em>BaseCash</em> multiplied
-        by four.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">DayTrades</td>
-      <td style="text-align:left">This is the number of active day trades on the account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SmaBalance</td>
-      <td style="text-align:left">This is the amount of funds in a special memorandum account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">HouseCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a house call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MaintenanceCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a maintenance call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">EquityCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a minimum equity call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">InitialCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent an initial call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">DayTradeCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a day trade call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TradeDayBalance</td>
-      <td style="text-align:left">This is the amount of funds that the trading account owes to the broker.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MoneyMarket</td>
-      <td style="text-align:left">These are the money market funds on the trading account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Cip</td>
-      <td style="text-align:left">This is the Carriage and Insurance Paid To (CIP).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">IsAverageAccount</td>
-      <td style="text-align:left">This field indicates if this trading account is used to allocate shares
-        to other trading accounts.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MarginEquity</td>
-      <td style="text-align:left">This is the portion of the account&apos;s equity that was purchased on
-        margin.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ClearingFirm</td>
-      <td style="text-align:left">This is the clearing firm that handles this trading account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExcessEquity</td>
-      <td style="text-align:left">This is the withdrawable portion of the equity.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| :--- | :--- |
+| OrderCost | This is the cost of the order calculated as the order price multiplied by the number of purchased securities. |
+| 4 | Because brokers let their users borrow up to three times as much money to finance positions, the buying power of the entire account has to be decreased by the position cost multiplied by four \(1 is the user's funds and 3 is the margin debt\). |
+| MarginRate | This is the fraction of funds that the user must contribute if they're using margin debt. |
+| Commission | This is the commission that was applied to this order.  |
 
+{% hint style="info" %}
+Please note that the cost of the margin debt provided by the broker is not taken into account when calculating Day Trading Buying Power.
+{% endhint %}
 
+### Net Liquidity
+
+Net liquidity is identical to Market Value.
+
+### Maintenance Margin
+
+Maintenance margin represents the minimum amount of equity that should be maintained in a margin account.
+
+### Option Maintenance Margin
+
+This is the minimum amount of equity that must be maintained on the trading account in order to cover the existing option positions.
+
+### OpenPL
+
+OpenPL stands for **Open Profit/Loss** and it represents the amount of unrealized profit or loss of the trading account at the opening of the current trading session.
+
+### ClosePL
+
+ClosePL stands for **Close Profit/Loss** and it represents the amount of unrealized profit or loss of the trading account at the closing of the current trading session.
+
+### Status
+
+This is the current status of the trading account. The range of possible account statuses is as follows:
+
+* **New** — the trading account has been created;
+* **SentToClearing** — the trading account has been sent to the clearing firm;
+* **Approved** — the trading account has been approved by the clearing firm;
+* **Rejected** — the trading account has been rejected by the clearing firm.
+
+### MarginInterestRate
+
+Margin interest rate is the interest rate applied to the funds borrowed to finance margin positions.
+
+### OwnerType
+
+This is the type of the trading account's owner. The range of possible account statuses is as follows:
+
+* **IndividualCustomer** = 0
+* **InstitutionalCustomer** = 1, 
+* **Combined** = 2, 
+* **EmployeeAccount** = 3, 
+* **MarketMaking** = 4,
+* **OtherProprietary** = 5, 
+* **Unknown** = 6, 
+* **ErrorAccount** = 7.
+
+### Maintenance Call
+
+This field indicates the amount of funds that need to be deposited into the account in order to prevent a maintenance call.
+
+### Equity Call
+
+This field indicates the amount of funds that need to be deposited into the account in order to prevent a minimum equity call.
+
+### Initial Call
+
+This field indicates the amount of funds that need to be deposited into the account in order to prevent an initial call.
+
+### Day Trade Call
+
+This field indicates the amount of funds that need to be deposited into the account in order to prevent a day trade call.
+
+### Trade Day Balance
+
+Trade Day Balance represents the amount of funds this trading account owes to the broker.
+
+### Cip
+
+Cip is the Carriage and Insurance Paid To \(CIP\). This value is retrieved daily from the clearing firm.
+
+### SmaBalance
+
+SmaBalance is the amount of funds in a special memorandum account. This value is retrieved daily from the clearing firm.
+
+### Option Level
+
+Option level indicates which operations with options are permitted on this account. 
+
+### ChangeAbsolute
+
+ChangeAbsolute indicates the difference between the current market value of all positions less their market value at the closing of the previous trading session. 
+
+### ChangePercent
+
+ChangeAbsolute indicates the difference between the current market value of all positions less their market value at the closing of the previous trading session expressed in percentage terms.
 
