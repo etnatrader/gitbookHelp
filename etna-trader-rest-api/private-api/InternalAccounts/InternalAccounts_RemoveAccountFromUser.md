@@ -18,7 +18,7 @@ Removes account with specified identifier from user with specified identifier
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**accountId**  <br>*required*|Account identifier|integer (int32)||
 |**Path**|**userId**  <br>*required*|User identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
 
 
 ##### Responses
