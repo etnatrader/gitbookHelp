@@ -16,7 +16,7 @@ Add position without sending order request
 |---|---|---|---|---|
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
 |**Query**|**recalculate**  <br>*required*|Recalculate account cash|boolean||
 |**Body**|**body**  <br>*required*|Position to add|[InternalPositionModel](#internalpositionmodel)||
 
