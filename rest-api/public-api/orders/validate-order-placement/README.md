@@ -5,13 +5,13 @@
 This POST endpoint enables you to validate an order before placing it in ETNA Trader. This might be useful for ensuring that the user has properly constructed an order and prevent any issues related with defective orders.
 
 {% hint style="warning" %}
-In order to validate an order, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to validate an order, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **Trading Account ID** \(path\). This is the numeric ID of the trading account on which an existing order replacement must be validated.
 5. **placeParams** \(body\). This is a JSON file that contains the parameters of a new order that must be validated.

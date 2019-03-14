@@ -1,28 +1,28 @@
 ---
-description: Fetch information about a particular option by providing its ticker symbol
+description: Fetch information about a particular option by providing its internal ID
 ---
 
-# Get Option Info by Ticker
+# Get Option Info by Internal ID
 
 ### Overview
 
-This GET endpoint enables you to retrieve information about a particular option by providing the option's ticker symbol in the request's header. Whereas the first three methods in the _Securities_ section deal with equities' information, this endpoint provides information exclusively about options. 
+This GET endpoint enables you to retrieve information about a particular option. Whereas the last three methods deal with equities' information, this endpoint provides information exclusively about options. 
 
 {% hint style="warning" %}
-In order to retrieve information about a particular option by providing their ticker symbol, you must use an [authorization token](../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to retrieve information about a particular option, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. symbol \(path\). This is the ticker symbol of the option whose information you'd like to retrieve. This ticker symbol can be fetched using the [API request that lists filtered options](get-filtered-options.md).
+4. **ID** \(path\). This is the ID of the option whose information you'd like to retrieve. This ID can be fetched using the [API request that lists filtered options](../get-filtered-options/).
 
 Here's the final template for this API request:
 
 ```text
-apiURL/v1.0/options/VSSQ1 260117P00008000
+apiURL/v1.0/options/13210821
 ```
 
 ### Response
@@ -85,7 +85,7 @@ where:
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve an option's information by their ticker symbol. 
+Here are some of the common mistakes that developers make when attempting to retrieve an option's information by their internal ID. 
 
 #### Requesting as a Non-Administrator
 
@@ -109,9 +109,9 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the Underlying Security's Ticker instead of the Option's Ticker Symbol
+#### Specifying the Underlying Security's Ticker instead of the Option ID
 
-Another common mistake in retrieving information about a particular option is specifying the underlying security's ticker symbol instead of the enquired option's ticker symbol. Doing so will lead to the 409 status code.
+Another common mistake in retrieving information about a particular option is specifying the underlying security's ticker symbol instead of the enquired option's ID. Doing so will lead to the 409 status code.
 
 The following article covers the syntax for this API request in detail.
 

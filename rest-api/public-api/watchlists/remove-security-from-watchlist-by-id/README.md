@@ -21,7 +21,7 @@ There are six required parameters that must be provided in the request:
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **watchlistID** \(path\). This is the ID of the watchlist from which a security must be removed.
 5. **userID** \(path\). This is the ID of the user whose particular watchlist should have the specified security removed.
-6. **securityID** \(path\). This is the ID of the security that must be removed from a particular watchlist. You can fetch the ID of a particular security with [this method](../../securities/get-securitys-info-by-ticker.md).
+6. **securityID** \(path\). This is the ID of the security that must be removed from a particular watchlist. You can fetch the ID of a particular security with [this method](../../securities/get-securitys-info-by-ticker/).
 
 The final template for this request is as follows:
 

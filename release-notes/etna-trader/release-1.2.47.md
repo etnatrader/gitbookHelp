@@ -34,7 +34,7 @@ And the following endpoints have been modified:
 
 Starting from version 1.2.47, users' current positions in a particular security can only be retrieved by **providing the ticker symbol** of this security \(as opposed to providing the internal ID of the security in previous releases\).
 
-{% page-ref page="../../rest-api/public-api/positions/get-users-positions-in-security.md" %}
+{% page-ref page="../../rest-api/public-api/positions/get-users-positions-in-security/" %}
 
 #### Retrieving Security Information
 
@@ -44,23 +44,23 @@ Starting from version 1.2.47,  retrieving information about securities has been 
 {% tab title="Equities" %}
 {% page-ref page="../../rest-api/public-api/securities/get-securitys-info-by-internal-id/" %}
 
-{% page-ref page="../../rest-api/public-api/securities/get-securitys-info-by-ticker.md" %}
+{% page-ref page="../../rest-api/public-api/securities/get-securitys-info-by-ticker/" %}
 
 {% page-ref page="../../rest-api/public-api/securities/get-securitys-info-by-mask/" %}
 {% endtab %}
 
 {% tab title="Options" %}
-{% page-ref page="../../rest-api/public-api/securities/get-option-info-by-internal-id.md" %}
+{% page-ref page="../../rest-api/public-api/securities/get-option-info-by-internal-id/" %}
 
-{% page-ref page="../../rest-api/public-api/securities/get-option-info-by-ticker.md" %}
+{% page-ref page="../../rest-api/public-api/securities/get-option-info-by-ticker/" %}
 {% endtab %}
 {% endtabs %}
 
 We've also added two new methods for listing all existing equities and options:
 
-{% page-ref page="../../rest-api/public-api/securities/get-filtered-equities.md" %}
+{% page-ref page="../../rest-api/public-api/securities/get-filtered-equities/" %}
 
-{% page-ref page="../../rest-api/public-api/securities/get-filtered-options.md" %}
+{% page-ref page="../../rest-api/public-api/securities/get-filtered-options/" %}
 
 #### Placing New Orders
 

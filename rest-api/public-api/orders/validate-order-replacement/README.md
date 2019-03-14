@@ -5,16 +5,16 @@
 This PUT endpoint enables you to validate an order replacement before using it to replace an existing order in ETNA Trader. This might be useful for ensuring that the user has properly constructed an order and prevent any issues related with defective orders.
 
 {% hint style="warning" %}
-In order to validate an order replacement, you must use an [authorization token](../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to validate an order replacement, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are six required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **Trading Account ID** \(path\). This is the numeric ID of the trading account on which an existing order replacement must be validated.
-5. **orderId** \(path\). This is the id of the order which parameter replacement must be validated. You can retrieve IDs of orders of a particular trading account using this [API request](get-filtered-orders/).
+5. **orderId** \(path\). This is the id of the order which parameter replacement must be validated. You can retrieve IDs of orders of a particular trading account using this [API request](../get-filtered-orders/).
 6. **modifyParams** \(body\). This is a JSON file that contains the parameters that need to be modified in an existing order. 
 
 Here's the final template for this API request:

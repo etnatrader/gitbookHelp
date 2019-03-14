@@ -36,7 +36,7 @@ All new watchlists must be of the _**application/json**_ content type. The synta
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Internal ID of the required securities can be fetched using [this API request](../../securities/get-securitys-info-by-ticker.md).
+Internal ID of the required securities can be fetched using [this API request](../../securities/get-securitys-info-by-ticker/).
 
 Here's the final template for this API request:
 
