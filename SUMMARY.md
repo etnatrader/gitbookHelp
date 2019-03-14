@@ -149,7 +149,7 @@
       * [Syntax](rest-api/private-api/price-alerts/modify-price-alert/syntax.md)
   * [Authentication](rest-api/private-api/authentication/README.md)
     * [Requesting Tokens](rest-api/private-api/authentication/requesting-tokens/README.md)
-      * [Syntax](rest-api/private-api/authentication/requesting-tokens/get_token.md)
+      * [Syntax](etna-trader-rest-api/private-api/Login/Get_token.md)
   * [Managing Users](rest-api/private-api/managing-users/README.md)
     * [Get User's Info](rest-api/private-api/managing-users/get-users-info/README.md)
       * [Syntax](rest-api/private-api/managing-users/get-users-info/users_getuserinfo.md)
