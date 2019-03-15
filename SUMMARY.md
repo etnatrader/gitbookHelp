@@ -49,7 +49,7 @@
   * [Overview](rest-api/public-api/overview.md)
   * [Authentication](rest-api/public-api/authentication/README.md)
     * [Requesting Tokens](rest-api/public-api/authentication/requesting-tokens/README.md)
-      * [Syntax](rest-api/public-api/authentication/requesting-tokens/syntax.md)
+      * [Syntax](etna-trader-rest-api/public-api/Login/Get_token.md)
   * [Managing Users](rest-api/public-api/managing-users/README.md)
     * [Get User's Info](rest-api/public-api/managing-users/get-users-info/README.md)
       * [Syntax](rest-api/public-api/managing-users/get-users-info/users_getuserinfo.md)
