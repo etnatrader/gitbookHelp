@@ -171,7 +171,7 @@ $$
 
 ### Option Buying Power
 
-This is the gross number of options that can be purchased on this trading account, adjusted for the available margin debt. 
+This is the gross number of options that can be purchased on this trading account. 
 
 $$
 OptionBuyingPower = Excess
