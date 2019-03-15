@@ -252,6 +252,7 @@
       * [Syntax](etna-trader-rest-api/private-api/Transactions/Transactions_GetActionsPage.md)
   * [Extended Feedback](rest-api/private-api/internal-feedback/README.md)
     * [List Users' Feedback](rest-api/private-api/internal-feedback/list-users-feedback.md)
+      * [Syntax](etna-trader-rest-api/private-api/InternalFeedbacks/InternalFeedbacks_GetActionsPage.md)
   * [Extended Positions](rest-api/private-api/internal-positions/README.md)
     * [Add New Position](rest-api/private-api/internal-positions/add-new-position.md)
       * [Syntax](etna-trader-rest-api/private-api/InternalPositions/InternalPositions_AddPosition.md)
