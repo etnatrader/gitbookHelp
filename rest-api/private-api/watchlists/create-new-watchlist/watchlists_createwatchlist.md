@@ -17,7 +17,7 @@ Creates new watchlist for specified user. If parameter includeSecurities set to 
 | **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
 | **Header** | **Et-App-Key**   _required_ | Application key | string |  |
 | **Path** | **userId**   _required_ | User identifier | integer \(int32\) |  |
-| **Path** | **version**   _required_ | The requested API version | string | `"1"` |
+| **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
 | **Query** | **resultIncludeSecurities**   _required_ | Include list of wathlist securities in result model | boolean |  |
 | **Body** | **body**   _required_ | Watchlist identifier | [CreateWatchlistModel](watchlists_createwatchlist.md#createwatchlistmodel) |  |
 

@@ -21,7 +21,7 @@ There are six required parameters that must be provided in the request:
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **userID** \(path\). This is the ID of the user whose particular watchlist needs to be appended by a new security.
 5. **watchlistID** \(path\). This is the internal identifier of the watchlist that needs to be appended by a new security. You can retrieve the list of a user's watchlists with [this method](../get-users-watchlist/).
-6. **securityID** \(path\). This is the internal identifier if the security that needs to be added to the watchlist. You can find the ID of a particular security with [this method](../../securities/get-securitys-info-by-its-ticket-symbol.md).
+6. **securityID** \(path\). This is the internal identifier if the security that needs to be added to the watchlist. You can find the ID of a particular security with [this method](../../securities/get-securitys-info-by-its-ticket-symbol/).
 
 Here's the final template for this API request:
 

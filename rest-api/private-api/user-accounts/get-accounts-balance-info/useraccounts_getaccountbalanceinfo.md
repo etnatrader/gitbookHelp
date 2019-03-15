@@ -17,7 +17,7 @@ Provides specified account balance info
 | **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
 | **Header** | **Et-App-Key**   _required_ | Application key | string |  |
 | **Path** | **accountId**   _required_ | Account identifier | integer \(int32\) |  |
-| **Path** | **version**   _required_ | The requested API version | string | `"1"` |
+| **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
 
 ### Responses
 

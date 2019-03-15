@@ -16,18 +16,18 @@ The biggest improvement of release 1.2.47 is the update of our Web API. First, w
 If your solution is integrated with our web API, please note that the following endpoints are no longer supported:
 
 * Get Securities By Mask \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities) [/v{version}/securities](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities)\):
-  * Replaced by [Get Equity Info By Mask](../../rest-api/private-api/securities/get-securitys-info-by-mask/) and [Get Option Info By Ticker](../../rest-api/private-api/securities/get-options-info-by-ticker.md).
+  * Replaced by [Get Equity Info By Mask](../../rest-api/private-api/securities/get-securitys-info-by-mask/) and [Get Option Info By Ticker](../../rest-api/private-api/securities/get-options-info-by-ticker/).
 * Get Securities by ID \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurityById) [/v{version}/securities/{securityId}](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurityById)\).
-  * Replaced by [Get Equity's Info by ID](../../rest-api/private-api/securities/get-securitys-info-by-internal-id/) and [Get Option Info by ID](../../rest-api/private-api/securities/get-options-info-by-id.md).
+  * Replaced by [Get Equity's Info by ID](../../rest-api/private-api/securities/get-securitys-info-by-internal-id/) and [Get Option Info by ID](../../rest-api/private-api/securities/get-options-info-by-id/).
 
 And the following endpoints have been modified:
 
 * Place Order \([POST](https://priv-api-et-demo-prod.etnasoft.us/api/reference/index#!/Orders/Orders_PlaceOrder) [/v{version}/accounts/{accountId}/orders](https://priv-api-et-demo-prod.etnasoft.us/api/reference/index#!/Orders/Orders_PlaceOrder)\);
   1. The **SecurityID** parameter has been replaced with **Symbol** \(ticker\);
-  2. The **dryRun** parameter is no longer available — there's a [separate endpoint](../../rest-api/private-api/orders/validate-order-placement.md) for order placement validation.
+  2. The **dryRun** parameter is no longer available — there's a [separate endpoint](../../rest-api/private-api/orders/validate-order-placement/) for order placement validation.
 * Replace Order \([PUT](https://priv-api-etnatrader-dev.etnasoft.us/api/reference/index#!/Orders/Orders_ReplaceOrder) [/v{version}/accounts/{accountId}/orders/{orderId}](https://priv-api-etnatrader-dev.etnasoft.us/api/reference/index#!/Orders/Orders_ReplaceOrder)\).
   1. The **SecurityID** parameter has been replaced with **Symbol** \(ticker\);
-  2. The **dryRun** parameter is no longer available — there's a [separate endpoint](../../rest-api/private-api/orders/validate-order-replacement.md) for order    replacement validation.
+  2. The **dryRun** parameter is no longer available — there's a [separate endpoint](../../rest-api/private-api/orders/validate-order-replacement/) for order    replacement validation.
 {% endhint %}
 
 #### Retrieving Users' Positions
@@ -66,9 +66,9 @@ We've also added two new methods for listing all existing equities and options:
 
 The last change we made to our Web API is the revamped order placement mechanism. Previously, if you wanted to ensure that a new order is properly constructed, you could simply add the **dryRun** parameter in the request header. Starting from version 1.2.47, the **dryRun** parameter is eliminated from the order placement and replacement requests and instead we're introducing separate order placement and replacement endpoints:
 
-{% page-ref page="../../rest-api/private-api/orders/validate-order-placement.md" %}
+{% page-ref page="../../rest-api/private-api/orders/validate-order-placement/" %}
 
-{% page-ref page="../../rest-api/private-api/orders/validate-order-replacement.md" %}
+{% page-ref page="../../rest-api/private-api/orders/validate-order-replacement/" %}
 
 Once you've ensured that an order is properly constructed, you may proceed to place it \(or replace it\) with the regular order placement and replacement API requests. Also note that in release 1.2.47 we've changed the list of required parameters that must be provided in a new order — instead of providing a security's internal ID in ETNA Trader you should simply provide its ticker symbol.
 
@@ -80,7 +80,7 @@ Once you've ensured that an order is properly constructed, you may proceed to pl
 
 The last addition to our Web API is the ability to export chart data in the Microsoft Excel Format:
 
-{% page-ref page="../../rest-api/private-api/historical-data/get-chart-data-in-the-excel-format.md" %}
+{% page-ref page="../../rest-api/private-api/historical-data/get-chart-data-in-the-excel-format/" %}
 
 ### Balance Attributes
 

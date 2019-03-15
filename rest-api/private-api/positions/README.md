@@ -1,5 +1,5 @@
 ---
-description: Fetch users' positions
+description: Fetch users' current positions
 ---
 
 # Positions

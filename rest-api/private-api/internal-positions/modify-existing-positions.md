@@ -57,7 +57,7 @@ where:
 | Parameter | Description |
 | :--- | :--- |
 | AccountId | This is the internal identifier of the trading account. |
-| SecurityId | This is the internal identifier of the underlying security in ETNA Trader. You can get this ID using [this API method](../securities/get-securitys-info-by-its-ticket-symbol.md). |
+| SecurityId | This is the internal identifier of the underlying security in ETNA Trader. You can get this ID using [this API method](../securities/get-securitys-info-by-its-ticket-symbol/). |
 | Quantity | This is the number of securities in the new position. |
 | CostBasis | This is the weighted average execution price of the order. |
 | Id | This is the internal identifier of an existing position to which you intend to add securities. |

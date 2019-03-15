@@ -18,13 +18,13 @@ Get order by internal Id
 | **Header** | **Et-App-Key**   _required_ | Application key | string |  |
 | **Path** | **accountId**   _required_ | Account identifier | integer \(int32\) |  |
 | **Path** | **orderId**   _required_ | Order identifier | integer \(int32\) |  |
-| **Path** | **version**   _required_ | The requested API version | string | `"1"` |
+| **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Requested order model | [OrderModel](orders_getorder.md#ordermodel) |
+| **200** | Requested order model | [OrderResource](orders_getorder.md#orderresource) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

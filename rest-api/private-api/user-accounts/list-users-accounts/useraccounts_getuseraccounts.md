@@ -17,7 +17,7 @@ Provides collection of accounts bound to user
 | **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
 | **Header** | **Et-App-Key**   _required_ | Application key | string |  |
 | **Path** | **userId**   _required_ |  | integer \(int32\) |  |
-| **Path** | **version**   _required_ | The requested API version | string | `"1"` |
+| **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
 
 ### Responses
 
