@@ -21,6 +21,131 @@ There are six required parameters that must be provided in the request:
 5. **pageNumber** \(query\). Because there can be dozens of outstanding orders, we split them into pages which you can individually retrieve by specifying this parameter.
 6. **pageSize** \(query\). This parameter indicates the number of orders from a particular page that must be returned in the response.
 
+There's also one optional parameter worth examining:
+
+* filter \(query\). This is an SQL query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Syntax</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>CreateDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
+          <li>CreateDate between Range</li>
+        </ul>
+      </td>
+      <td style="text-align:left">This query enables you to retrieve orders that were created in the time
+        period specified in the Range parameter or exactly at the time specified
+        in the Date parameter.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>CreateDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
+          <li>CreateDate &gt;= #2019-03-13T18:31:42#</li>
+          <li>CreateDate &lt; #2019-03-12T19:31:42#</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <ul>
+          <li>ExpireDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
+          <li>ExpireDate between Range</li>
+        </ul>
+      </td>
+      <td style="text-align:left">This query enables you to retrieve orders that will expire in the time
+        period specified in the Range parameter or exactly at the time specified
+        in the Date parameter.</td>
+      <td style="text-align:left">
+        <p></p>
+        <ul>
+          <li>ExpireDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
+          <li>ExpireDate &gt;= #2019-03-13T18:31:42#</li>
+          <li>ExpireDate &lt; #2019-03-12T19:31:42#</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SecurityId = Number</td>
+      <td style="text-align:left">This query enables you to retrieve orders whose securityId parameter is
+        equal to the Id provided in the query.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>SecurityId = 4</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">InitialType = String</td>
+      <td style="text-align:left">This query enables you to retrieve orders with a particular initial type.</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>InitialType = Market</li>
+          <li>InitialType = Buy</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Side = String</td>
+      <td style="text-align:left">This query enables you to retrieve orders of a particular type (could
+        be &quot;Buy&quot;, &quot;Sell&quot;, &quot;SellShort&quot;, or &quot;BuyToCover&quot;).</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>Side = Buy</li>
+          <li>Side = Sell</li>
+          <li>Side = SellShort</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TimeInForce = String</td>
+      <td style="text-align:left">This query enables you to retrieve orders with the TimeInForce parameter
+        set to a particular value.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>TimeInForce = &apos;Day&apos;</li>
+          <li>TimeInForce = &apos;FillOrKill&apos;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExecutionStatus = String</td>
+      <td style="text-align:left">This query enables you to retrieve orders with the ExecutionStatus parameter
+        set to a particular value.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>ExecutionStatus = &apos;Filled&apos;</li>
+          <li>ExecutionStatus = &apos;Rejected&apos;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Status in (value1, value2, etc.)</td>
+      <td style="text-align:left">This query enables you to retrieve orders whose Status parameter is contained
+        in the query set.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Status in (0,1,4,5,7)</li>
+          <li>Status in (0)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>{% hint style="info" %}
+Note that you can combine different queries to create more complex requests:
+
+* SecurityId = 4 and Status in \(0,1,2,3,4,5,6,7,8,9,20\)
+{% endhint %}
+
 Here's the final template for this API request:
 
 ```text

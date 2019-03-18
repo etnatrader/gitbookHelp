@@ -16,7 +16,7 @@ Trading accounts can be created in one of the two following ways:
 
    ![](../../.gitbook/assets/screenshot-2019-03-13-at-15.01.24.png) 
 
-2. Through our [private REST API](../../rest-api/private-api/internal-accounts/create-a-new-trading-account.md).
+2. Through our [private REST API](../../rest-api/private-api/internal-accounts/create-a-new-trading-account/).
 
 As an administrator, you need to review each newly created trading account before ETNA Trader sends it for review to the clearing firm. After the account is approved by the clearing firm, it is becomes active and can be used to perform trades.
 
@@ -42,7 +42,7 @@ If you've created a new trading account, it's not automatically available to any
 
   ![](../../.gitbook/assets/screenshot-2019-03-13-at-15.49.39.png) 
 
-* ETNA Trader's [private REST API](../../rest-api/private-api/internal-accounts/bind-an-account-to-a-user.md).
+* ETNA Trader's [private REST API](../../rest-api/private-api/internal-accounts/bind-an-account-to-a-user/).
 
 During the binding process, you have to specify the access level that the user must have when operating this trading account.
 
@@ -53,7 +53,7 @@ During the binding process, you have to specify the access level that the user m
 | ClosePositionsOnly | **Close Positions Only**. The user can only close the positions without the ability to open new ones. |
 
 {% hint style="info" %}
-Access Level Value must be specified only when an account is bound to a user via ETNA Trader's [REST API](../../rest-api/private-api/internal-accounts/bind-an-account-to-a-user.md).
+Access Level Value must be specified only when an account is bound to a user via ETNA Trader's [REST API](../../rest-api/private-api/internal-accounts/bind-an-account-to-a-user/).
 {% endhint %}
 
 ### Trading Account Parameters
