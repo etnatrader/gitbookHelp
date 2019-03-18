@@ -26,9 +26,9 @@ POST apiURL/v1.0/accounts/{accountID}/preview/orders
 
 The body of this request represents the information of the new order that must be validated before you can proceed to place it. The order must be sent in the JSON format with mandatory parameters about the order.
 
-The first five parameters — **Symbol**, **Quantity**, **Type**, and **Side** — are mandatory, while the remaining parameters should only be provided if necessary.
+The first four parameters — **Symbol**, **Quantity**, **Type**, and **Side** — are mandatory, while the remaining parameters should only be provided if necessary.
 
-#### Order Modification Validation Sample
+#### Order Placement Validation Sample
 
 ```javascript
 {
@@ -76,6 +76,8 @@ where:
 | NetCost | This is the cost of the order less commission. |
 | Quotes | This is the last batch of quotes for this security. |
 | MarginChange | This is the amount by which the trading account margin requirements will be affected once this order is filled. |
+| ErrorDescription | This is the description of the error in case the provided order was improperly constructed. |
+| ErrorDescriptionArgs | This is an array with error description arguments. |
 
 ### Common Mistakes
 

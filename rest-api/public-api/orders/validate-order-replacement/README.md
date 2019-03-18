@@ -27,7 +27,7 @@ PUT apiURL/v1.0/accounts/{accountID}/preview/orders/{existingOrderID}
 
 The body of this request represents the information that must validated before being replaced in an existing order. It must be sent in the JSON format with mandatory parameters about the order.
 
-The first five parameters — **ID**, **Quantity**, **Price**, **ExecutionInstructions**, and **Legs** — are mandatory, while the remaining parameters should only be provided if necessary.
+The first four parameters — **ID**, **Quantity**, **Price**, **ExecutionInstructions**, and **Legs** — are mandatory, while the remaining parameters should only be provided if necessary.
 
 #### Order Modification Validation Sample
 
