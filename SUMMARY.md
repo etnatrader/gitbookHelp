@@ -140,7 +140,7 @@
   * [Managing Transactions](rest-api/public-api/managing-transactions/README.md)
     * [Get Transactions](rest-api/public-api/managing-transactions/get-transactions/README.md)
       * [Syntax](rest-api/public-api/managing-transactions/get-transactions/transactions_getactionspage.md)
-  * [Terms and Definitions](etna-trader-rest-api/public-api/Definitions.md) 
+  * [Terms and Definitions](rest-api/public-api/definitions.md)
 * [Private API](rest-api/private-api/README.md)
   * [Overview](rest-api/private-api/untitled.md)
   * [Authentication](rest-api/private-api/authentication/README.md)
@@ -245,7 +245,7 @@
       * [Syntax](rest-api/private-api/allocations/create-batch-allocation-requests/allocations_allocatesimplebatch.md)
     * [Create Multi-Leg Allocation Requests](rest-api/private-api/allocations/create-multi-leg-allocation-requests/README.md)
       * [Syntax](rest-api/private-api/allocations/create-multi-leg-allocation-requests/allocations_allocate.md)
-    * [\[Create Batch Multi-Leg Allocation Requests\]\(rest-api/private-api/allocations/create-batch-multi-leg](rest-api/private-api/allocations/create-batch-multi-leg-allocation-requests-rest-api-private-api-allocations-create-batch-multi-leg-a/README.md)
+    * [Create Batch Multi-Leg Allocation Requests](rest-api/private-api/allocations/create-batch-multi-leg-allocation-requests-rest-api-private-api-allocations-create-batch-multi-leg-a/README.md)
       * [Syntax](rest-api/private-api/allocations/create-batch-multi-leg-allocation-requests-rest-api-private-api-allocations-create-batch-multi-leg-a/allocations_allocatebatch.md)
   * [Managing Transactions](rest-api/private-api/managing-transactions/README.md)
     * [Get Transactions](rest-api/private-api/managing-transactions/get-transactions/README.md)
@@ -295,7 +295,7 @@
       * [Syntax](rest-api/private-api/internal-accounts/bind-an-account-to-a-user/internalaccounts_addaccounttouser.md)
     * [Remove a Trading Account from a User](rest-api/private-api/internal-accounts/remove-a-trading-account-from-a-user/README.md)
       * [Syntax](rest-api/private-api/internal-accounts/remove-a-trading-account-from-a-user/internalaccounts_removeaccountfromuser.md)
-  * [Terms and Definitions](etna-trader-rest-api/private-api/Definitions.md)
+  * [Terms and Definitions](rest-api/private-api/definitions.md)
 
 ## Release Notes
 
