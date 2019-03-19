@@ -28,7 +28,7 @@ There's also one optional parameter worth examining:
 
 #### Filter Syntax
 
-The syntax for filter queries is rather simple: each parameter of a trading account can serve as a filter. The condition that a parameter needs to be satisfied can be expressed in the following ways:
+The syntax for filter queries is rather simple: each parameter of a trading account can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
 
 1. **Parameter** \(=, &lt;, &gt;, &lt;=, &gt;=\) **value**. For example: `Id = 7420`
 2. **Parameter** \(=, contains, startsWith, endsWith\) **string**. For example: `Currency = 'USD'`
@@ -43,7 +43,57 @@ Strings must be highlighted with quotation marks: `'USD'`.
 
 Dates must be highlighted with with the pound sign: `#2019-08-09T18:31:42#`.
 
-{% hint style="info" %}
+The following table lists a set of sample queries:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Sample Query</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>CreatedDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
+          <li>CreatedDate &gt; #2019-03-15T18:00:00#</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves accounts whose creation date lies in the specified range.</li>
+          <li>Retrieves accounts whose creation date is earlier than in the provided
+            argument</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Cash = 0</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves accounts whose Cash parameter is equal to 0</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Enabled = false</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves disabled accounts</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>{% hint style="info" %}
 Note that you can combine different queries to create more complex requests:
 
 * `Cash >= 2500 and Status = 'Approved'`

@@ -22,6 +22,80 @@ There are seven required parameters that must be provided in the request:
 6. **sortBy** \(query\). This is the field by which the retrieved user feedbacks should be sorted. For example, if the value of this parameter is set to **Contacts**, the retrieved feedbacks will be sorted by the users' contact information.
 7. **isDesc** \(query\). This field indicates if the list of retrieved feedbacks should be sorted in the descending \(true\) or ascending \(false\) order.
 
+There's also one optional parameter worth examining:
+
+* filter \(request query\). This is an SQL query used to retrieve only those feedbacks that satisfy the conditions of the query. 
+
+#### Filter Syntax
+
+The syntax for filter queries is rather simple: each parameter of a trading account can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
+
+1. **Parameter** \(=, &lt;, &gt;, &lt;=, &gt;=\) **value**. For example: `Timestamp = 0`
+2. **Parameter** \(=, contains, startsWith, endsWith\) **string**. For example: `UserAgent contains 'Mozilla'`
+3. **Parameter** in \(**value1**, **value2**, etc.\). In this case the parameter has to be contained in the set of values in the parentheses to satisfy the filter condition. For example: `Id in (7420, 7630, 9870)`
+4. **Parameter** between **Value1** and **Value2**. In this case the parameter has to be in the specified range between Value1 and Value2 to satisfy the filter condition. For example: `Timestamp between 1552398906 and 1553590520`.
+
+Boolean values are provided in the following format: `true` and `false`.
+
+Numeric values are provided in the regular format: `2500`.
+
+Strings must be highlighted with quotation marks: `'USD'`.
+
+Dates must be highlighted with with the pound sign: `#2019-08-09T18:31:42#`.
+
+The following table lists a set of sample queries:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Sample Query</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Timestamp between 1552398906 and 1553590520</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves feedbacks whose submission date lies in the specified range.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>UserAgent contains &apos;macOS&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves feedbacks who were submitted from a macOS-like operating system.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>BuildVersion = &apos;1.2.47.149&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves feedbacks that were submitted from ETNA Trader of version 1.2.47.149</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>{% hint style="info" %}
+Note that you can combine different queries to create more complex requests:
+
+* UserAgent contains 'macOS' and BuildVersion = '1.2.47.149'
+{% endhint %}
+
 Here's the final template for this API request:
 
 ```text

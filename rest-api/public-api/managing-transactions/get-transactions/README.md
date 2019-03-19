@@ -23,6 +23,82 @@ There are eight required parameters that must be provided in the request:
 7. **sortBy** \(query\). This is the field by which the retrieved transactions ought to be sorted. For example, if you the value of this parameter is set to **Quantity**, the retrieved alerts will be sorted by the number of shares involved in the transaction.
 8. **isDesc** \(query\). This field indicates if the list of retrieved transactions should be sorted in the descending order \(true\) or ascending order \(false\).
 
+There's also one optional parameter worth examining:
+
+* filter \(request query\). This is an SQL query used to retrieve only those transactions that satisfy the conditions of the query. 
+
+#### Filter Syntax
+
+The syntax for filter queries is rather simple: each parameter of a trading account can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
+
+1. **Parameter** \(=, &lt;, &gt;, &lt;=, &gt;=\) **value**. For example: `SecurityId = 4`
+2. **Parameter** \(=, contains, startsWith, endsWith\) **string**. For example: `Date >= #2019-03-18T11:10:14.036Z#`
+3. **Parameter** in \(**value1**, **value2**, etc.\). In this case the parameter has to be contained in the set of values in the parentheses to satisfy the filter condition. For example: `Id in (7420, 7630, 9870)`
+4. **Parameter** between **Value1** and **Value2**. In this case the parameter has to be in the specified range between Value1 and Value2 to satisfy the filter condition. For example: `Quantity between 0 and 1000`.
+
+Boolean values are provided in the following format: `true` and `false`.
+
+Numeric values are provided in the regular format: `2500`.
+
+Strings must be highlighted with quotation marks: `'USD'`.
+
+Dates must be highlighted with the pound sign: `#2019-08-09T18:31:42#`.
+
+The following table lists a set of sample queries:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Sample Query</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>SecurityId = 4</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions with the Apple stock.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Date &gt;= #2019-03-18T11:10:14.036Z#</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions that were carried out prior to the specified
+            date.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Quantity between 0 and 1000</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions in which the number of transacted securities
+            lies in the range between 0 and 1000.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>{% hint style="info" %}
+Note that you can combine different queries to create more complex requests:
+
+* SecurityId = 4 and Quantity between 0 and 1000
+{% endhint %}
+
 Here's the final template for this API request:
 
 ```text

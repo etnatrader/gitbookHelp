@@ -22,6 +22,211 @@ There are seven required parameters that must be provided in the request:
 6. **sortField** \(query\). This is the field by which all retrieved options should be sorted. For example, if you specify **ExpirationDate**, first you'll receive options with the furthest expiration date while options with the closest expiration date will be listed in the end.
 7. **Desc** \(query\). This is a boolean field that indicates if the returned options should be sorted in the descending order.
 
+There's also one optional parameter worth examining:
+
+* filter \(query\). This is an SQL query used to retrieve only those options that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Syntax</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>AddedDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
+          <li>AddedDate between Range</li>
+        </ul>
+      </td>
+      <td style="text-align:left">This query enables you to retrieve options that were added in the time
+        period specified in the Range parameter or exactly at the time specified
+        in the Date parameter.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>AddedDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
+          <li>AddedDate &gt;= #2019-03-13T18:31:42#</li>
+          <li>AddedDate &lt; #2019-03-12T19:31:42#</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <ul>
+          <li>ModifyDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
+          <li>ModifyDate between Range</li>
+        </ul>
+      </td>
+      <td style="text-align:left">This query enables you to retrieve options that will expire in the time
+        period specified in the Range parameter or exactly at the time specified
+        in the Date parameter.</td>
+      <td style="text-align:left">
+        <p></p>
+        <ul>
+          <li>ModifyDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
+          <li>ModifyDate &gt;= #2019-03-13T18:31:42#</li>
+          <li>ModifyDate &lt; #2019-03-12T19:31:42#</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Symbol = String</td>
+      <td style="text-align:left">This query enables you to retrieve options whose Symbol parameter is equal
+        to the string provided in the query.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Symbol = &apos;AAPL&apos;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Exchange = String</td>
+      <td style="text-align:left">This query enables you to retrieve options whose Exchange parameter is
+        equal to the string provided in the query.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Exchange = &apos;XNAS&apos;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Currency = USD</td>
+      <td style="text-align:left">This query enables you to retrieve options that are denominated in the
+        currency provided in the query.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Currency = &apos;USD&apos;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Enabled = Bool</td>
+      <td style="text-align:left">This query enables you to retrieve options that are enabled (can be traded).</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>Enabled = false</li>
+          <li>Enabled = true</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AllowTrade = Bool</td>
+      <td style="text-align:left">This query enables you to retrieve options that are allowed to be traded.</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>AllowTrade = true</li>
+          <li>AllowTrade = false</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AllowMargin = Bool</td>
+      <td style="text-align:left">This query enables you to retrieve options that can be traded on margin.</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>AllowMargin = true</li>
+          <li>AllowMargin = false</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AllowShort = Bool</td>
+      <td style="text-align:left">This query enables you to retrieve options that can be sold short.</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>AllowShort = true</li>
+          <li>AllowShort = false</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Symbol in (value1, value2, etc.)</td>
+      <td style="text-align:left">This query enables you to retrieve options whose ticker symbol is contained
+        in the query set.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Symbol in (&apos;ZTS 190426P00108000&apos;)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">UnderlyingAssetSymbol</td>
+      <td style="text-align:left">This query enables you to retrieve options whose underlying ticker symbol
+        is equal to the one provided in the query.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>UnderlyingAssetSymbol = &apos;AAPL&apos;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SeriesId</td>
+      <td style="text-align:left">This query enables you to retrieve options who belong to the option series
+        whose ID was provided in the query.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>SeriesId = 46780</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">OptionType</td>
+      <td style="text-align:left">This query enables you to retrieve options of a particular type.</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>OptionType = &apos;Put&apos;</li>
+          <li>OptionType = &apos;Call&apos;</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ExpirationType</td>
+      <td style="text-align:left">This query enables you to retrieve options of a particular expiration
+        type.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>ExpirationType = &apos;Flex&apos;</li>
+          <li>ExpirationType = &apos;Regular&apos;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">StrikePrice</td>
+      <td style="text-align:left">This query enables you to retrieve options with a particular strike price.</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>StrikePrice = 100</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ContractSize</td>
+      <td style="text-align:left">This query enables you to retrieve options with a particular contract
+        size.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>ContractSize &gt; 100</li>
+          <li>ContractSize = 500</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>{% hint style="info" %}
+Note that you can combine different queries to create more complex requests:
+
+* `AllowMargin = true and AllowShort = false`
+{% endhint %}
+
 Here's the final template for this API request:
 
 ```text

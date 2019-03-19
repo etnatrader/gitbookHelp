@@ -19,6 +19,104 @@ There are four required parameters that must be provided in the request:
 3. **Trading Account ID** \(path\). This is the numeric ID of the trading account whose positions must be listed. 
 4. **API version** \(path\). Unless necessary, leave it at "1.0".
 
+There's also one optional parameter worth examining:
+
+* filter \(query\). This is an SQL query used to retrieve only those positions that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Syntax</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>CreateDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
+          <li>CreateDate between Range</li>
+        </ul>
+        <p></p>
+      </td>
+      <td style="text-align:left">This query enables you to retrieve positions that were created in the
+        time period specified in the Range parameter or exactly at the time specified
+        in the Date parameter.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>CreateDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
+          <li>CreateDate &gt;= #2019-03-13T18:31:42#</li>
+          <li>CreateDate &lt; #2019-03-12T19:31:42#</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <ul>
+          <li>ModifyDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
+          <li>ModifyDate between Range</li>
+        </ul>
+      </td>
+      <td style="text-align:left">This query enables you to retrieve positions that were modified in the
+        time period specified in the Range parameter or exactly at the time specified
+        in the Date parameter.</td>
+      <td style="text-align:left">
+        <p></p>
+        <ul>
+          <li>ModifyDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
+          <li>ModifyDate &gt;= #2019-03-13T18:31:42#</li>
+          <li>ModifyDate &lt; #2019-03-12T19:31:42#</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <ul>
+          <li>Quantity (&gt;, &gt;=, &lt;, &lt;=) Date</li>
+          <li>Quantity between Range</li>
+        </ul>
+      </td>
+      <td style="text-align:left">This query enables you to retrieve positions with the number of securities
+        being in the range indicated in the Range parameter or equal to the number
+        in the Number parameter.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Quantity = 100</li>
+          <li>Quantity &gt;= 100</li>
+          <li>Quantity between 100 and 1000</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">SecurityId = Number</td>
+      <td style="text-align:left">This query enables you to retrieve positions whose securityId parameter
+        is equal to the Id provided in the query.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>SecurityId = 4</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Symbol = String</td>
+      <td style="text-align:left">This query enables you to retrieve positions whose underlying security&apos;s
+        ticker symbol is equal to the string provided in the query.</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Symbol = &apos;AAPL&apos;</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>{% hint style="info" %}
+Note that you can combine different queries to create more complex requests:
+
+* SecurityId = 4 and CreateDate &gt;= \#2019-03-13T18:31:42\#
+{% endhint %}
+
 Here's the final template for this API request:
 
 ```text
