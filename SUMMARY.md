@@ -140,6 +140,7 @@
   * [Managing Transactions](rest-api/public-api/managing-transactions/README.md)
     * [Get Transactions](rest-api/public-api/managing-transactions/get-transactions/README.md)
       * [Syntax](rest-api/public-api/managing-transactions/get-transactions/transactions_getactionspage.md)
+  * [Terms and Definitions](etna-trader-rest-api/public-api/Definitions.md) 
 * [Private API](rest-api/private-api/README.md)
   * [Overview](rest-api/private-api/untitled.md)
   * [Authentication](rest-api/private-api/authentication/README.md)
@@ -294,6 +295,7 @@
       * [Syntax](rest-api/private-api/internal-accounts/bind-an-account-to-a-user/internalaccounts_addaccounttouser.md)
     * [Remove a Trading Account from a User](rest-api/private-api/internal-accounts/remove-a-trading-account-from-a-user/README.md)
       * [Syntax](rest-api/private-api/internal-accounts/remove-a-trading-account-from-a-user/internalaccounts_removeaccountfromuser.md)
+  * [Terms and Definitions](etna-trader-rest-api/private-api/Definitions.md)
 
 ## Release Notes
 
