@@ -68,27 +68,15 @@ Let's examine each of these parameters in detail.
 
 ### Cash
 
-Cash indicates the amount of funds that the account's user can withdraw or spend to open new positions. 
+Cash indicates the amount of funds that the account's user has deposited themselves or borrowed from the broker. You can think of it as the net balance of the account: if equity exceeds liabilities —  Cash is positive; if equity is lower than liabilities — Cash is negative.
 
-### NetCash
+For example, if you crate a new trading account, it's Cash parameter is initially equal to $0. After every deposit, Cash increases by the deposited amount — if you deposit $100, it'll increase from $0 to $100.
 
-NetCash represents the amount of available funds adjusted for the option maintenance margin. It is calculated according to the following formula:
+Now let's investigate how opening new positions affects Cash. Suppose your Cash is equal to $200 and you want to purchase $800 worth of Apple stock \($200 is your own money and the remaining $600 are margin debt\). The applicable commission for this transaction is $3.75 and it has to be included in the order cost — so you'll only be able to purchase $796.25 worth of stocks while the remaining $3.75 will be charged for the commission. In total, your Cash will be decreased by $800 and will be equal to —$600. In addition to negative Cash, your account will also have $796.25 worth of Apple stock.
 
-$$
-NetCash = Cash - OptionMaintenanceMargin
-$$
-
-### Base Cash
-
-Base cash is an indicator that is retrieved daily from the clearing firm.
-
-### Pending Cash
-
-Pending Cash indicates the amount of money that is reserved to carry out current transactions. This reserve is withheld from the Cash parameter and it is calculated as the sum of the transaction commission and the cost of the securities purchased during the transaction.
-
-$$
-Pending Cash = Σ Commissions + ΣOrderCost
-$$
+{% hint style="info" %}
+Cash is a base parameter that is retrieved daily from the clearing firm.
+{% endhint %}
 
 ### Account Value
 
@@ -98,68 +86,11 @@ $$
 AccountValue = Cash + Market Value
 $$
 
-### Market Value
+### Pending Order Count
 
-Market Value represents the sum of four other trading account parameters:
+Pending Order Count indicates the number of current outstanding orders \(the ones that are yet to be executed\).
 
-1. stockLongMarketValue — the aggregate market value of all long positions in stocks.
-2. stockShortMarketValue — the aggregate market value of all short positions in stocks.
-3. optionLongMarketValue — the aggregate market value of all long positions in options.
-4. optionShortMarketValue — the aggregate market value of all short positions in options.
 
-$$
-MarketValue = stockLongMarketValue + stockShortMarketValue + optionLongMarketValue + optionShortMarketValue
-$$
-
-### Excess
-
-Excess represents the available funds that can be used to open new positions. This is a base parameter that is retrieved daily from the clearing firm. Throughout the trading session, this parameter is calculated differently depending on the configuration of your environment:
-
-* **Default**
-
-$$
-Excess = Cash + StockMarketValue - MaintenanceMargin - PendingCash
-$$
-
-* **Real-time Excess**
-
-$$
-Excess=Cash+StockMarketValue−MaintenanceMargin−PendingCash
-$$
-
-* **Excess with Unsettled Cash**
-
-$$
-Excess = Base Cash - UnsettledCash - PendingCash
-$$
-
-### Excess Back
-
-Excess back is in most cases identical to **Base Cash** except for the **Real-time Excess** configuration where it is calculated as:
-
-$$
-ExcessBack = Equity - MaintenanceMargin
-$$
-
-### Equity
-
-Equity represents the sum of Cash and the net market value of all positions in stocks:
-
-$$
-Equity = Cash + StockMarketValue
-$$
-
-### Stock Market Value
-
-Stock market value is calculated as the net market value of all positions is stocks. The aggregate market value of all long stock positions is added to the aggregate market value of all short stock positions.
-
-$$
-StockMarketValue = StockLongMarketValue + StockShortMarketValue
-$$
-
-### Day Trades
-
-Day trades is the number of day trades that have been executed on this trading account during the last five trading sessions \(including the current one\).
 
 ### Stock Buying Power
 
@@ -200,17 +131,97 @@ where:
 Please note that the cost of the margin debt provided by the broker is not taken into account when calculating Day Trading Buying Power.
 {% endhint %}
 
-### Net Liquidity
+### Active Order Withholding \(Pending Cash\)
 
-Net liquidity is identical to Market Value.
+Active Order Withholding indicates the amount of funds reserved to carry out current transactions. This reserve is withheld from the Cash parameter and is calculated as the sum of the transaction commission and the cost of the securities purchased during the transaction.
+
+* For stocks,
+
+$$
+Active Order Withholding = Σ Commissions + 
+ΣOrderInitialMarginRequirements
+$$
+
+* For options,
+
+$$
+Active Order Withholding = Σ Commissions + ΣOrderCost + ΣOrderInitialMarginRequirements
+$$
 
 ### Maintenance Margin
 
-Maintenance margin represents the minimum amount of equity that should be maintained in a margin account.
+Maintenance margin represents the minimum amount of equity that should be maintained in a margin account to comply with FINRA's regulations.
 
 ### Option Maintenance Margin
 
 This is the minimum amount of equity that must be maintained on the trading account in order to cover the existing option positions.
+
+### Market Value
+
+Market Value represents the sum of four other trading account parameters:
+
+1. stockLongMarketValue — the aggregate market value of all long positions in stocks.
+2. stockShortMarketValue — the aggregate market value of all short positions in stocks.
+3. optionLongMarketValue — the aggregate market value of all long positions in options.
+4. optionShortMarketValue — the aggregate market value of all short positions in options.
+
+$$
+MarketValue = stockLongMarketValue + stockShortMarketValue + optionLongMarketValue + optionShortMarketValue
+$$
+
+### Excess
+
+Excess represents currently available funds that can be used to open new positions. This is a base parameter that is retrieved daily from the clearing firm. Throughout the trading session, this parameter is calculated differently depending on the configuration of your environment:
+
+* **Default**
+
+$$
+Excess = Excess Issued - Pending Cash
+$$
+
+* **Real-time Excess**
+
+$$
+Excess=Cash+MarketValue−MaintenanceMargin−PendingCash
+$$
+
+* **Excess with Unsettled Cash**
+
+$$
+Excess = ExcessIssued - UnsettledCash
+$$
+
+### Excess Issued
+
+Excess Issued represents the available funds that can be used to open new positions. 
+
+{% hint style="info" %}
+Excess Issued is a base parameter that is retrieved daily from the clearing firm. 
+{% endhint %}
+
+### Equity
+
+Equity represents the sum of Cash and the net market value of all positions in stocks:
+
+$$
+Equity = Cash + StockMarketValue
+$$
+
+### Stock Market Value
+
+Stock market value is calculated as the net market value of all positions is stocks. The aggregate market value of all long stock positions is added to the aggregate market value of all short stock positions.
+
+$$
+StockMarketValue = StockLongMarketValue + StockShortMarketValue
+$$
+
+### Day Trades
+
+Day trades is the number of day trades that have been executed on this trading account during the last five trading sessions \(including the current one\).
+
+### Net Liquidity
+
+Net liquidity is identical to Market Value.
 
 ### OpenPL
 
@@ -285,4 +296,12 @@ ChangeAbsolute indicates the difference between the current market value of all 
 ### ChangePercent
 
 ChangeAbsolute indicates the difference between the current market value of all positions less their market value at the closing of the previous trading session expressed in percentage terms.
+
+### NetCash
+
+NetCash represents the amount of available funds adjusted for the option maintenance margin. It is calculated according to the following formula:
+
+$$
+NetCash = Cash - OptionMaintenanceMargin
+$$
 

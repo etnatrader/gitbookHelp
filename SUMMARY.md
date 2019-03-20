@@ -149,6 +149,7 @@
   * [Positions](rest-api/private-api/positions/README.md)
     * [Get User's Positions](rest-api/private-api/positions/get-users-positions/README.md)
       * [Syntax](rest-api/private-api/positions/get-users-positions/positions_getpositions.md)
+    * [Get User's Positions in a Security](rest-api/private-api/positions/get-users-positions-in-a-security.md)
   * [Price Alerts](rest-api/private-api/price-alerts/README.md)
     * [Create Price Alert](rest-api/private-api/price-alerts/create-price-alert/README.md)
       * [Syntax](rest-api/private-api/price-alerts/create-price-alert/pricealerts_createpricealert.md)

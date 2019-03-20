@@ -75,7 +75,7 @@ There's also one optional parameter worth examining:
       <td style="text-align:left">
         <p></p>
         <ul>
-          <li>Quantity (&gt;, &gt;=, &lt;, &lt;=) Date</li>
+          <li>Quantity (&gt;, &gt;=, &lt;, &lt;=) Number</li>
           <li>Quantity between Range</li>
         </ul>
       </td>

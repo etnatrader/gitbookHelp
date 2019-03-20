@@ -1,131 +1,34 @@
 ---
-description: List all positions of a particular user
+description: Retrieve all positions of a user in a particular security
 ---
 
-# Get User's Positions
+# Get User's Positions in a Security
 
 ### Overview
 
-This GET endpoint enables you to list all existing positions of the user whose authorization token was used in the request's body. 
+This GET endpoint enables you to list all positions in a particular security of the user whose authorization token was used in the request's body. 
 
 {% hint style="warning" %}
-In order to list the existing positions of a particular user, you must use an [authorization token](../../../public-api/authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to list a user's positions in a particular security, you must use an [authorization token](../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
-There are four required parameters that must be provided in the request:
+There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../../public-api/authentication/requesting-tokens/).
-3. **Trading Account ID** \(path\). This is the numeric ID of the trading account whose positions must be listed. 
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
+3. **Trading Account ID** \(path\). This is the numeric ID of the trading account whose positions in a particular security must be listed. 
 4. **API version** \(path\). Unless necessary, leave it at "1.0".
-
-There's also one optional parameter worth examining:
-
-* filter \(query\). This is an SQL query used to retrieve only those positions that satisfy the conditions of the query. The following table outlines the parameter's syntax.
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Syntax</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>CreateDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
-          <li>CreateDate between Range</li>
-        </ul>
-        <p></p>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve positions that were created in the
-        time period specified in the Range parameter or exactly at the time specified
-        in the Date parameter.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>CreateDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
-          <li>CreateDate &gt;= #2019-03-13T18:31:42#</li>
-          <li>CreateDate &lt; #2019-03-12T19:31:42#</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <p></p>
-        <ul>
-          <li>ModifyDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
-          <li>ModifyDate between Range</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve positions that were modified in the
-        time period specified in the Range parameter or exactly at the time specified
-        in the Date parameter.</td>
-      <td style="text-align:left">
-        <p></p>
-        <ul>
-          <li>ModifyDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
-          <li>ModifyDate &gt;= #2019-03-13T18:31:42#</li>
-          <li>ModifyDate &lt; #2019-03-12T19:31:42#</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <p></p>
-        <ul>
-          <li>Quantity (&gt;, &gt;=, &lt;, &lt;=) Number</li>
-          <li>Quantity between Range</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve positions with the number of securities
-        being in the range indicated in the Range parameter or equal to the number
-        in the Number parameter.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>Quantity = 100</li>
-          <li>Quantity &gt;= 100</li>
-          <li>Quantity between 100 and 1000</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SecurityId = Number</td>
-      <td style="text-align:left">This query enables you to retrieve positions whose securityId parameter
-        is equal to the Id provided in the query.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>SecurityId = 4</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Symbol = String</td>
-      <td style="text-align:left">This query enables you to retrieve positions whose underlying security&apos;s
-        ticker symbol is equal to the string provided in the query.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>Symbol = &apos;AAPL&apos;</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>{% hint style="info" %}
-Note that you can combine different queries to create more complex requests:
-
-* SecurityId = 4 and CreateDate &gt;= \#2019-03-13T18:31:42\#
-{% endhint %}
+5. **Ticker Symbol** \(path\). This is the ticker symbol of the security whose positions you'd like to list. 
 
 Here's the final template for this API request:
 
 ```text
-GET apiURL/v1.0/accounts/{accountID}/positions
+GET apiURL/v1.0/accounts/{accountID}/positions/AAPL
 ```
 
 ### Response
 
-In response to this API request, you'll receive a JSON file with all of the user's existing positions. Following is an example of such response:
+In response to this API request, you'll receive a JSON file with all of the user's positions in the security. Following is an example of such response:
 
 ```javascript
 [
@@ -140,7 +43,7 @@ In response to this API request, you'll receive a JSON file with all of the user
         "SecurityType": "CommonStock",
         "ContractSize": 1,
         "CostBasis": 23485.5,
-        "DailyCostBasis": 25414.5,
+        "DailyCostBasis": 25422,
         "CreateDate": "2019-01-22T14:30:03.7328576Z",
         "ModifyDate": "2019-01-22T14:30:03.7328576Z",
         "Quantity": 150,
@@ -174,7 +77,7 @@ where:
 | CreateDate | This is the date on which the order was created |
 | ModifyDate | This is the date on which the order was last modified |
 | Quantity | This is the number of shares in the order |
-| RealizedProfitLostt | This is the realized profit or loss of this position |
+| RealizedProfitLoss | This is the realized profit or loss of this position |
 | AverageOpenPrice | The average opening price of all positions. This variable is calculated for positions of the same type — either Long or Short \(you can't simultaneously open a long and a short position on the same instrument\) |
 | AverageClosePrice | The average closing price of all positions. This variable is calculated for positions of the same type — either Long or Short \(you can't simultaneously open a long and a short position on the same instrument\) |
 | StopLossPrice | This the price at which the position should be terminated \(if this price point is reached\) |
@@ -231,11 +134,11 @@ Unit                                  = 40
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to list the existing positions. 
+Here are some of the common mistakes that developers make when attempting to list a user's positions in a particular security. 
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for listing positions of a particular user, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for listing a user's positions in a particular security, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {
@@ -266,15 +169,16 @@ Another common mistake when making this request is specifying the user ID instea
 }
 ```
 
-#### Specifying a Trading Account of a Different User
+#### Specifying the Internal ID of the Security instead of the Ticker
 
-It's critical to understand that when you use the authorization token of a particular user in this request's header, only this user's trading accounts can be used for listing current positions. Placing a new order on a trading account of a different user will lead to the 401 error.
+Bear in mind that this request requires the ticker symbol of the security \(as displayed on the exchange\) and not the internal ID in ETNA Trader. Specifying the internal ID will lead to the 500 status code and the following error message:
 
 ```javascript
 {
-    "Message": "Authorization has been denied for this request."
+    "message": "An error occurred while processing your request",
+    "error": "Unexpected server error"
 }
 ```
 
-In the following article we provide in-depth coverage of the syntax for this API request.
+The following article demonstrates the syntax for this API request in detail.
 
