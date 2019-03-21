@@ -1,2 +1,2 @@
-# Private API
+# Developer API
 

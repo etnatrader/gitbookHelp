@@ -45,7 +45,7 @@
 ## REST API
 
 * [Introduction](rest-api/introduction.md)
-* [Public API](rest-api/public-api/README.md)
+* [Trader API](rest-api/public-api/README.md)
   * [Overview](rest-api/public-api/overview.md)
   * [Authentication](rest-api/public-api/authentication/README.md)
     * [Requesting Tokens](rest-api/public-api/authentication/requesting-tokens/README.md)
@@ -141,7 +141,7 @@
     * [Get Transactions](rest-api/public-api/managing-transactions/get-transactions/README.md)
       * [Syntax](rest-api/public-api/managing-transactions/get-transactions/transactions_getactionspage.md)
   * [Terms and Definitions](rest-api/public-api/definitions.md)
-* [Private API](rest-api/private-api/README.md)
+* [Developer API](rest-api/private-api/README.md)
   * [Overview](rest-api/private-api/untitled.md)
   * [Authentication](rest-api/private-api/authentication/README.md)
     * [Requesting Tokens](rest-api/private-api/authentication/requesting-tokens/README.md)

@@ -192,6 +192,21 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
+#### Option Buying Limit Order Sample
+
+```javascript
+{
+  "Symbol": "STNE  190517P00055000", //the ID of the purchased option
+  "ExpireDate": "2019-03-24T17:32:28.824Z",
+  "Type": "Limit",
+  "Side": "Buy",
+  "Price":170,
+  "ExecInst": "DoNotIncrease",
+  "TimeInforce": "Day",
+  "Quantity": 1,
+}
+```
+
 ### Response
 
 In response to this request, you'll receive a JSON file with comprehensive information about the newly created order:

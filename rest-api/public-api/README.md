@@ -1,2 +1,2 @@
-# Public API
+# Trader API
 
