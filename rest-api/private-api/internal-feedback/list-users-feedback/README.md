@@ -28,7 +28,7 @@ There's also one optional parameter worth examining:
 
 #### Filter Syntax
 
-The syntax for filter queries is rather simple: each parameter of a trading account can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
+The syntax for filter queries is rather simple: each parameter of a feedback can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
 
 1. **Parameter** \(=, &lt;, &gt;, &lt;=, &gt;=\) **value**. For example: `Timestamp = 0`
 2. **Parameter** \(=, contains, startsWith, endsWith\) **string**. For example: `UserAgent contains 'Mozilla'`
