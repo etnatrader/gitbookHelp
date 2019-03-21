@@ -89,6 +89,80 @@ The following table lists a set of sample queries:
         </ul>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Id = 573</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves a specific feedback with ID 573.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Contacts endsWith &apos;etnasoft.com&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all feedbacks in which the sender&apos;s email address end with
+            a specific string.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Subject startsWith &apos;CRITICAL&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all feedbacks in which the feedback subject starts with the
+            word &apos;CRITICAL&apos;.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Comment = &apos;&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all feedbacks with empty subjects.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Login = &apos;robert.zak&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all feedbacks of a specific user.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>SupportTicket = &apos;string&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all feedbacks without a corresponding support ticket.</li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>{% hint style="info" %}
 Note that you can combine different queries to create more complex requests:

@@ -29,7 +29,9 @@ There's also one optional parameter worth examining:
 
 #### Filter Syntax
 
-The syntax for filter queries is rather simple: each parameter of a transaction can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
+The syntax for filter queries is rather simple: each primitive parameter of a transaction can serve as a filter \(strings, booleans, and numbers\). Non-primitive types cannot be used as filters — for example, the **Fee** parameter represents a JSON dictionary and therefore cannot be used as a filter.
+
+The conditions that a parameter needs to satisfy can be expressed in the following ways:
 
 1. **Parameter** \(=, &lt;, &gt;, &lt;=, &gt;=\) **value**. For example: `SecurityId = 4`
 2. **Parameter** \(=, contains, startsWith, endsWith\) **string**. For example: `Date >= #2019-03-18T11:10:14.036Z#`
@@ -92,6 +94,93 @@ The following table lists a set of sample queries:
         </ul>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Id = 4</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves a transaction with a particular internal identifier.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>OrderStateId &gt; 199600</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions where OrderStateId exceeds 199600.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>AccountId = 6303</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions that were carried out on a specific trading
+            account.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Value &lt; 0</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions that reduced the amount of cash on account
+            after the transaction was carried out.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Quantity = 100</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions in which precisely 100 securities were purchased.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>LeavesQuantity &gt; 0</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions where some securities are yet to be purchased
+            (for partial orders).</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>IsDayTrade = false</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all transactions that are classified as day trades.</li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>{% hint style="info" %}
 Note that you can combine different queries to create more complex requests:
@@ -107,7 +196,7 @@ GET apiURL/v1.0/accounts/6303/transactions/?pageNumber=0&pageSize=10&sortBy=Quan
 
 ### Response
 
-In response to this API request, you'll receive a JSON file with the list of transactions that have been made on the specified trading account.
+In response to this API request, you'll receive a JSON file with the list of transactions that have been carried out on the specified trading account.
 
 ```javascript
 {

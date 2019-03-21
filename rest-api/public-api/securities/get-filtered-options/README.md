@@ -177,49 +177,6 @@ There's also one optional parameter worth examining:
         </ul>
       </td>
     </tr>
-    <tr>
-      <td style="text-align:left">OptionType</td>
-      <td style="text-align:left">This query enables you to retrieve options of a particular type.</td>
-      <td
-      style="text-align:left">
-        <ul>
-          <li>OptionType = &apos;Put&apos;</li>
-          <li>OptionType = &apos;Call&apos;</li>
-        </ul>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExpirationType</td>
-      <td style="text-align:left">This query enables you to retrieve options of a particular expiration
-        type.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>ExpirationType = &apos;Flex&apos;</li>
-          <li>ExpirationType = &apos;Regular&apos;</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">StrikePrice</td>
-      <td style="text-align:left">This query enables you to retrieve options with a particular strike price.</td>
-      <td
-      style="text-align:left">
-        <ul>
-          <li>StrikePrice = 100</li>
-        </ul>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ContractSize</td>
-      <td style="text-align:left">This query enables you to retrieve options with a particular contract
-        size.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>ContractSize &gt; 100</li>
-          <li>ContractSize = 500</li>
-        </ul>
-      </td>
-    </tr>
   </tbody>
 </table>{% hint style="info" %}
 Note that you can combine different queries to create more complex requests:

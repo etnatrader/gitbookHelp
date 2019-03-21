@@ -92,6 +92,115 @@ The following table lists a set of sample queries:
         </ul>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>ClearingAccount = 6303</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves an account with a specific 6303</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Cash &gt; 0</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all accounts with a positive cash balance</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Currency = &apos;USD&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all accounts that are denominated is US dollars.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Status = &apos;Approved&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all accounts that have been approved by the clearing firm.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>MarginInterestRate = 0</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all accounts that are eligible to borrow broker&apos;s funds
+            at no cost.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>MarginType = &apos;Margin&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all accounts of a particular type.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>Permissions = 1</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all accounts who can open long positions in stock.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>OwnerType startsWith &apos;Individual&apos;</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all accounts whose owner type starts with the word <em>Individual</em>.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <ul>
+          <li>IsAverageAccount = true</li>
+        </ul>
+      </td>
+      <td style="text-align:left">
+        <ul>
+          <li>Retrieves all accounts that serve as the main account during allocations.</li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>{% hint style="info" %}
 Note that you can combine different queries to create more complex requests:
