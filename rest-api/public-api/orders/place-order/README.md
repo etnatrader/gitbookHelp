@@ -128,23 +128,15 @@ The body of this request represents the information about the to-be-created orde
         session, post-market session).</td>
     </tr>
     <tr>
-      <td style="text-align:left">Token</td>
-      <td style="text-align:left">Optional token (additional identity key).</td>
-    </tr>
-    <tr>
       <td style="text-align:left">ExecutionInstructions</td>
       <td style="text-align:left">Execution instructions for algorithmic trades.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ValidationsToBypass</td>
-      <td style="text-align:left">Indicates the validation rules that must be skipped.</td>
     </tr>
     <tr>
       <td style="text-align:left">Legs</td>
       <td style="text-align:left">These are the legs of a multi-leg order.</td>
     </tr>
   </tbody>
-</table>#### Market Order Sample
+</table>#### Smallest Market Order Sample
 
 ```javascript
 {
@@ -155,7 +147,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Limit Order Sample
+#### Smallest Limit Order Sample
 
 ```javascript
 {
@@ -167,7 +159,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Stop Order Sample
+#### Smallest Stop Order Sample
 
 ```javascript
 {
@@ -179,7 +171,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Stop-Limit Order Sample
+#### Smallest Stop-Limit Order Sample
 
 ```javascript
 {
@@ -192,11 +184,11 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Option Buying Limit Order Sample
+#### Smallest Limit Option-Buying Order Sample
 
 ```javascript
 {
-  "Symbol": "STNE  190517P00055000", //the ID of the purchased option
+  "Symbol": "STNE  190517P00055000", //the ticker symbol of the purchased option
   "ExpireDate": "2019-03-24T17:32:28.824Z",
   "Type": "Limit",
   "Side": "Buy",
@@ -206,6 +198,198 @@ The body of this request represents the information about the to-be-created orde
   "Quantity": 1,
 }
 ```
+
+#### Complex Option-Buying Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL  190503C00165000", //buying an Apple stock option
+  "ExpireDate": "2019-03-30T17:00:00.824Z",  
+  "Type": "Limit",
+  "Side": "Buy",
+  "Price":170,
+  "ExecInst": "DoNotIncrease",
+  "TimeInforce": "Day",
+  "Quantity": 1,
+  "Legs": [{ //simultaneously buying the Apple stock
+			"Symbol": "AAPL", 
+			"Type": "Market",
+			"Side": "Buy",
+			"Quantity": 100
+		}
+	]
+}
+```
+
+#### Comprehensive Limit Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-03-24T10:07:59.181Z",
+  "Type": "Limit",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 100,
+  "Price": 190,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REGPOST"
+}
+```
+
+#### Comprehensive Market Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-03-24T10:07:59.181Z",
+  "Type": "Market",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 445,
+  "Exchange": "XNAS",
+  "ExtendedHours": "PRE"
+}
+```
+
+#### Comprehensive Stop Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-07-30T10:07:59.181Z",
+  "Type": "Stop",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 100,
+  "StopPrice" : 200,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REG"
+}
+```
+
+#### Comprehensive Stop Limit Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-12-20T10:07:59.181Z",
+  "Type": "StopLimit",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 105,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REGPOST",
+   "Price" : 201,
+   "StopPrice" : 200
+}
+```
+
+#### Comprehensive Trailing Stop Order Type
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-12-20T10:07:59.181Z",
+  "Type": "TrailingStop",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 105,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REGPOST",
+  "TrailingStopAmountType" : "Persentage",
+  "TrailingStopAmount" : 2
+}
+```
+
+#### Comprehensive Trailing Stop Limit Order Type
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-12-20T10:07:59.181Z",
+  "Type": "TrailingStopLimit",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 1,
+  "Exchange": "XNAS",
+  "TrailingLimitAmountType" : "Absolute", //Limit offset
+  "TrailingLimitAmount" : 4,
+  "ExtendedHours": "REGPOST",
+  "TrailingStopAmountType" : "Absolute", //Trailing Stop
+  "TrailingStopAmount" : 10,
+}
+```
+
+#### One-Triggers-the-Other Order Type
+
+One-Triggers-the-Other is a type of conditional order in which execution of one order automatically triggers the other one. Each of the two orders has to be provided as a separate leg:
+
+```javascript
+{
+	"Type": "OneTriggerOther", //the type of the order
+        "Symbol": "AAPL",
+		"Legs": [{ //the array of two legs
+			"Symbol": "AAPL", //the first leg
+			"Type": "Limit",
+			"Price": 150,
+			"Side": "Buy",
+			"Quantity": 100
+		},
+		{
+			"Symbol": "TSLA", //the second leg
+			"Type": "Limit",
+			"Price": 100,
+			"Side": "Buy",
+			"Quantity": 100
+		}
+	]
+}
+```
+
+In this case, if the limit order to purchase the Apple stock gets executed, the second limit order to purchase the Tesla stock will automatically be triggered.
+
+{% hint style="warning" %}
+In One-Triggers-the-Other orders, the first leg cannot be a market order.
+{% endhint %}
+
+#### One-Cancels-the-Other Order Type
+
+One-Cancels-the-Other is a type of conditional order in which execution of one order automatically cancels the other one. Each of the two orders has to be provided as a separate leg:
+
+```javascript
+{
+	"Type": "OneCancelOther", //the type of the order
+        "Symbol": "AAPL",
+		"Legs": [{ //the array of two legs
+			"Symbol": "AAPL", //the first leg
+			"Type": "Limit",
+			"Price": 150,
+			"Side": "Buy",
+			"Quantity": 100
+		},
+		{
+			"Symbol": "TSLA", //the second leg
+			"Type": "Limit",
+			"Price": 100,
+			"Side": "Buy",
+			"Quantity": 100
+		}
+	]
+}
+```
+
+In this case, if the limit order to purchase the Apple stock gets executed, the second limit order to purchase the Tesla stock will automatically be cancelled.
+
+{% hint style="warning" %}
+In One-Cancels-the-Other orders, both legs cannot be market orders.
+{% endhint %}
 
 ### Response
 
@@ -363,7 +547,6 @@ class EtnaAPIRequest:
 #Performing initial Authentication
 sampleRequest = EtnaAPIRequest()
 sampleRequest.initialAuth()
-
 
 stopLimirOrder = {
   "Symbol": "AAPL",

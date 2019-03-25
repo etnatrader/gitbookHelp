@@ -205,7 +205,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Smallest Limit Option-Buying Order Sample
+#### Option-Buying Limit Order Sample
 
 ```javascript
 {
@@ -217,6 +217,28 @@ The body of this request represents the information about the to-be-created orde
   "ExecInst": "DoNotIncrease",
   "TimeInforce": "Day",
   "Quantity": 1,
+}
+```
+
+#### Complex Option-Buying Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL  190503C00165000", //buying an Apple stock option
+  "ExpireDate": "2019-03-30T17:00:00.824Z",  
+  "Type": "Limit",
+  "Side": "Buy",
+  "Price":170,
+  "ExecInst": "DoNotIncrease",
+  "TimeInforce": "Day",
+  "Quantity": 1,
+  "Legs": [{ //simultaneously buying the Apple stock
+			"Symbol": "AAPL", 
+			"Type": "Market",
+			"Side": "Buy",
+			"Quantity": 100
+		}
+	]
 }
 ```
 
@@ -323,6 +345,103 @@ The body of this request represents the information about the to-be-created orde
   "ExtendedHours": "REGPOST",
   "TrailingStopAmountType" : "Absolute", //Trailing Stop
   "TrailingStopAmount" : 10,
+}
+```
+
+#### One-Triggers-the-Other Order Type
+
+One-Triggers-the-Other is a type of conditional order in which execution of one order automatically triggers the other one. Each of the two orders has to be provided as a separate leg:
+
+```javascript
+{
+	"Type": "OneTriggerOther", //the type of the order
+        "Symbol": "AAPL",
+		"Legs": [{ //the array of two legs
+			"Symbol": "AAPL", //the first leg
+			"Type": "Limit",
+			"Price": 150,
+			"Side": "Buy",
+			"Quantity": 100
+		},
+		{
+			"Symbol": "TSLA", //the second leg
+			"Type": "Limit",
+			"Price": 100,
+			"Side": "Buy",
+			"Quantity": 100
+		}
+	]
+}
+```
+
+In this case, if the limit order to purchase the Apple stock gets executed, the second limit order to purchase the Tesla stock will automatically be triggered.
+
+{% hint style="warning" %}
+In One-Triggers-the-Other orders, the first leg cannot be a market order.
+{% endhint %}
+
+#### One-Cancels-the-Other Order Type
+
+One-Cancels-the-Other is a type of conditional order in which execution of one order automatically cancels the other one. Each of the two orders has to be provided as a separate leg:
+
+```javascript
+{
+	"Type": "OneCancelOther", //the type of the order
+        "Symbol": "AAPL",
+		"Legs": [{ //the array of two legs
+			"Symbol": "AAPL", //the first leg
+			"Type": "Limit",
+			"Price": 150,
+			"Side": "Buy",
+			"Quantity": 100
+		},
+		{
+			"Symbol": "TSLA", //the second leg
+			"Type": "Limit",
+			"Price": 100,
+			"Side": "Buy",
+			"Quantity": 100
+		}
+	]
+}
+```
+
+In this case, if the limit order to purchase the Apple stock gets executed, the second limit order to purchase the Tesla stock will automatically be cancelled.
+
+{% hint style="warning" %}
+In One-Cancels-the-Other orders, both legs cannot be market orders.
+{% endhint %}
+
+#### One-Triggers-OCO Order Type
+
+One-Triggers-OCO is a type of conditional order in which execution of one order triggers execution of a One-Cancels-the-Other order. This order type is useful in strategies where you purchase a security \(trigger\) and then automatically configure a stop-loss and a take-profit order \(OCO\). The first order — the trigger — is provided as the first leg while the OCO order is provided as the second and the third legs.
+
+```javascript
+{
+	"Type": "OneTriggerOneCancelOther",
+	"Symbol": "AAPL",
+	"Legs": [{
+			"Symbol": "AAPL", //the trigger order — the first leg
+			"Type": "Limit",
+			"Side": "Buy",
+			"Price": 190,
+			"Quantity": 100
+		},
+		{
+			"Symbol": "AAPL", //the first leg of the OCO order 
+			"Type": "Limit",
+			"Price": 200,
+			"Side": "Sell",
+			"Quantity": 100
+		},
+		{
+			"Symbol": "AAPL", //the second leg of the OCO order 
+			"Type": "Stop",
+			"StopPrice": 189,
+			"Side": "Sell",
+			"Quantity": 100
+		}
+	]
 }
 ```
 
