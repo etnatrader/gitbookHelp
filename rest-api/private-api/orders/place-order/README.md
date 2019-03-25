@@ -44,7 +44,9 @@ The body of this request represents the information about the to-be-created orde
     </tr>
     <tr>
       <td style="text-align:left">ClientId</td>
-      <td style="text-align:left">This is the order ID on the client&apos;s side.</td>
+      <td style="text-align:left">This is the order ID on the execution venue. ETNA Trader generates this
+        field automatically; however, if you want to use a custom ID &#x2014; feel
+        free to provide your own value.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExpireDate</td>
@@ -124,8 +126,18 @@ The body of this request represents the information about the to-be-created orde
     </tr>
     <tr>
       <td style="text-align:left">ExtendedHours</td>
-      <td style="text-align:left">Indicates if the order should be placed during the extended hours (pre-market
-        session, post-market session).</td>
+      <td style="text-align:left">
+        <p>Indicates if the order should be placed during the extended hours. Possible
+          values:</p>
+        <ul>
+          <li><b>PRE</b> &#x2014; Pre-market</li>
+          <li><b>POST</b> &#x2014; After-market</li>
+          <li><b>ALL</b> &#x2014; All sessions</li>
+          <li><b>REGPOST</b> &#x2014; Market hours + after-market hours</li>
+          <li><b>PREREG</b> &#x2014; Market hours + pre-market hours</li>
+          <li><b>PREPOST</b> &#x2014; pre-market hours + after-market hours</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">Token</td>
@@ -141,10 +153,11 @@ The body of this request represents the information about the to-be-created orde
     </tr>
     <tr>
       <td style="text-align:left">Legs</td>
-      <td style="text-align:left">These are the legs of a multi-leg order.</td>
+      <td style="text-align:left">These are the legs of a multi-leg order. Each leg must be provided like
+        a regular order as a JSON dictionary.</td>
     </tr>
   </tbody>
-</table>#### Market Order Sample
+</table>#### Smallest Market Order Sample
 
 ```javascript
 {
@@ -155,7 +168,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Limit Order Sample
+#### Smallest Limit Order Sample
 
 ```javascript
 {
@@ -167,7 +180,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Stop Order Sample
+#### Smallest Stop Order Sample
 
 ```javascript
 {
@@ -179,7 +192,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Stop-Limit Order Sample
+#### Smallest Stop-Limit Order Sample
 
 ```javascript
 {
@@ -189,6 +202,127 @@ The body of this request represents the information about the to-be-created orde
   "Quantity": 100,
   "StopPrice" : 149, //The stop price of the order
   "Price": 150 //The limit price of the order
+}
+```
+
+#### Smallest Limit Option-Buying Order Sample
+
+```javascript
+{
+  "Symbol": "STNE  190517P00055000", //the ID of the purchased option
+  "ExpireDate": "2019-03-24T17:32:28.824Z",
+  "Type": "Limit",
+  "Side": "Buy",
+  "Price":170,
+  "ExecInst": "DoNotIncrease",
+  "TimeInforce": "Day",
+  "Quantity": 1,
+}
+```
+
+#### Comprehensive Limit Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-03-24T10:07:59.181Z",
+  "Type": "Limit",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 100,
+  "Price": 190,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REGPOST"
+}
+```
+
+#### Comprehensive Market Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-03-24T10:07:59.181Z",
+  "Type": "Market",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 445,
+  "Exchange": "XNAS",
+  "ExtendedHours": "PRE"
+}
+```
+
+#### Comprehensive Stop Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-07-30T10:07:59.181Z",
+  "Type": "Stop",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 100,
+  "StopPrice" : 200,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REG"
+}
+```
+
+#### Comprehensive Stop Limit Order Sample
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-12-20T10:07:59.181Z",
+  "Type": "StopLimit",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 105,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REGPOST",
+   "Price" : 201,
+   "StopPrice" : 200
+}
+```
+
+#### Comprehensive Trailing Stop Order Type
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-12-20T10:07:59.181Z",
+  "Type": "TrailingStop",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 105,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REGPOST",
+  "TrailingStopAmountType" : "Persentage",
+  "TrailingStopAmount" : 2
+}
+```
+
+#### Comprehensive Trailing Stop Limit Order Type
+
+```javascript
+{
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-12-20T10:07:59.181Z",
+  "Type": "TrailingStopLimit",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 1,
+  "Exchange": "XNAS",
+  "TrailingLimitAmountType" : "Absolute", //Limit offset
+  "TrailingLimitAmount" : 4,
+  "ExtendedHours": "REGPOST",
+  "TrailingStopAmountType" : "Absolute", //Trailing Stop
+  "TrailingStopAmount" : 10,
 }
 ```
 
@@ -297,4 +431,75 @@ It's critical to understand that when you use the authorization token of a parti
 ```
 
 In the following article we provide in-depth coverage of the syntax for this API request.
+
+### Sample Code
+
+The following python script demonstrates how to place a new stop-limit order in ETNA Trader. 
+
+```python
+import requests
+
+class EtnaAPIRequest:
+
+	baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
+	EtAppKey = "your EtAppKey from the BO companies widget"
+
+	token = 'uninitialized'
+
+	username = "your username"
+	password = "your password"
+	
+	#performing initial authentication
+	def initialAuth(self):
+		authenticationRequest = requests.post(self.baseURL + 'token', headers = {"Accept" : "application/json", "Et-App-Key" : self.EtAppKey, "Username":self.username, "Password":self.password})
+		print('Authorization status code: ' + str(authenticationRequest.status_code) + '\n')
+
+		try:
+			responseJSON = authenticationRequest.json()
+			self.token = "Bearer " + responseJSON["Token"]
+			return responseJSON
+		except:
+			return "No response"
+
+	#For new order placements
+	def placeOrder(self, order, tradingAccount):
+
+		orderPlacementRequest = requests.post(self.baseURL + 'v1.0/accounts/' + str(tradingAccount) + '/orders',
+											  headers = {"Accept" : "application/json", "Et-App-Key" : self.EtAppKey, "Username":self.username, "Password":self.password, "Authorization":self.token},
+											  json = order)
+
+		print('Authorization status code: ' + str(orderPlacementRequest.status_code) + '\n')
+		try:
+			responseJSON = orderPlacementRequest.json()
+			print (responseJSON)
+			return responseJSON
+		except:
+			return "No response"
+
+
+#Performing initial Authentication
+sampleRequest = EtnaAPIRequest()
+sampleRequest.initialAuth()
+
+#new order sample
+stopLimirOrder = {
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-12-20T10:07:59.181Z",
+  "Type": "StopLimit",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 100,
+  "Price": 201,
+  "StopPrice" : 200,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REGPOST",
+}
+
+#the ID of the trading account on which the order is to be placed
+tradingAccount = 6303 
+
+#placing a new stop limit oder
+sampleRequest.placeOrder(stopLimirOrder, tradingAccount)
+```
 

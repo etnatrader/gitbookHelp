@@ -270,7 +270,7 @@ Here are some of the common mistakes that developers make when attempting to pla
 
 #### Requesting as a Non-Administrator
 
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for placing a new order, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
+One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator to place orders on trading accounts of other users. It's critical to understand that in order to be eligible for placing a new order on any trading account, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
 ```javascript
 {
@@ -312,4 +312,73 @@ It's critical to understand that when you use the authorization token of a parti
 ```
 
 In the following article we provide in-depth coverage of the syntax for this API request.
+
+### Sample Code
+
+The following python script demonstrates how to place a new stop-limit order in ETNA Trader. 
+
+```python
+import requests
+
+class EtnaAPIRequest:
+
+	baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
+	EtAppKey = "RQA2AEEAMABGADcAOQA5AC0AMABDADEARgAtADQAOABDAEMALQBBADAAMwA1AC0ANwA2AEEAMgBEADAARQA3ADAAMQBBADkA"
+
+	token = 'uninitialized'
+
+	username = "robert.zakiev@etnatrader.com"
+	password = "478591768etnademo"
+
+	# def __init__(self, username, password):
+		# self.username = username
+		# self.password = password
+
+	def initialAuth(self):
+		authenticationRequest = requests.post(self.baseURL + 'token', headers = {"Accept" : "application/json", "Et-App-Key" : self.EtAppKey, "Username":self.username, "Password":self.password})
+		print('Authorization status code: ' + str(authenticationRequest.status_code) + '\n')
+
+		try:
+			responseJSON = authenticationRequest.json()
+			self.token = "Bearer " + responseJSON["Token"]
+			return responseJSON
+		except:
+			return "No response"
+
+	def placeOrder(self, order, tradingAccount):
+
+		orderPlacementRequest = requests.post(self.baseURL + 'v1.0/accounts/' + str(tradingAccount) + '/orders',
+											  headers = {"Accept" : "application/json", "Et-App-Key" : self.EtAppKey, "Username":self.username, "Password":self.password, "Authorization":self.token},
+											  json = order)
+
+		print('Authorization status code: ' + str(orderPlacementRequest.status_code) + '\n')
+		try:
+			responseJSON = orderPlacementRequest.json()
+			print (responseJSON)
+			return responseJSON
+		except:
+			return "No response"
+
+
+#Performing initial Authentication
+sampleRequest = EtnaAPIRequest()
+sampleRequest.initialAuth()
+
+
+stopLimirOrder = {
+  "Symbol": "AAPL",
+  "ExpireDate": "2019-12-20T10:07:59.181Z",
+  "Type": "StopLimit",
+  "Side": "Buy",
+  "ExecInst": "AllOrNone",
+  "TimeInforce": "GTC",
+  "Quantity": 100,
+  "Price": 201,
+  "StopPrice" : 200,
+  "Exchange": "XNAS",
+  "ExtendedHours": "REGPOST",
+}
+
+sampleRequest.placeOrder(stopLimirOrder, 6303)
+```
 
