@@ -8,10 +8,6 @@ description: Place a new order
 
 This POST endpoint enables you to place a new order in ETNA Trader. The order is sent in the JSON format to our service which turns it into a new outstanding order that should eventually be fulfilled \(or suspended depending on the type of order and the [order review mechanisms](../../../../administrator-guide/administrators-widgets/bo-order-review/) applicable to this user\). 
 
-{% hint style="warning" %}
-In order to place a new order, you must use an [authorization token](../../../public-api/authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
@@ -505,18 +501,6 @@ Please note that you may receive the 200 status code even if the order was impro
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to place a new order. 
-
-#### Requesting as a Non-Administrator
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for placing a new order, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
-
-So be sure to use the authorization token generated with an administrator's credentials.
 
 #### Failing to Specify the Et-App-Key Parameter
 
