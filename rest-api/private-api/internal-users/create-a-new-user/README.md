@@ -30,6 +30,19 @@ POST apiURL/v1.0/users
 
 The body of the request represents a JSON file with mandatory parameters required for user creation.
 
+#### Smallest User Creation Sample
+
+```javascript
+{
+ "FirstName": "Robert",
+ "LastName": "Techie",
+ "EmailAddress": "robert@hello.com", 
+ "Login": "robert.techie"
+}
+```
+
+#### Comprehensive User Creation Sample
+
 ```javascript
 {
   "FirstName": "string", //required

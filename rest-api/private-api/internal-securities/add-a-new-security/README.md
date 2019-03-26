@@ -23,9 +23,37 @@ There are four required parameters that must be provided in the request:
 
 Following is a sample of a JSON file that contains information about the new security.
 
+#### Common Stock Creations Sample
+
 ```javascript
 {
-    "Id":0,
+  "Symbol": "TESTTICKER",
+  "AddedDate": "2019-03-02T10:09:04.543Z",
+  "ModifyDate": "2019-03-04T12:15:41.3202822Z",
+  "Enabled": true,
+  "AllowTrade": true,
+  "AllowMargin": true,
+  "AllowShort": true,
+  "Type": "CommonStock",
+  "Source": 1,
+  "SourceId": "DFFFFFF",
+  "ParentId": -1,
+  "MarginRate": 0,
+  "ContractSize": 10,
+  "Precision": 5,
+  "VolumePrecision": 2,
+  "Price": 100,
+  "Leverage": 1,
+  "TickSize": 0.01,
+  "Name": "Heyy",
+  "ExpirationName": "Jan 0001"
+}
+```
+
+#### Comprehensive Stock Creation Sample
+
+```javascript
+{
     "Symbol":"SGDFFD",
     "Suffix":null,
     "Description":null,
@@ -69,7 +97,6 @@ where:
 
 | Parameter | Description |
 | :--- | :--- |
-| Id | This is the new security's internal identifier in ETNA Trader. You can retrieve this identifier via this [API request](../get-security-info-by-ticker/). |
 | Symbol | This is the ticker symbol of the new security.  |
 | Suffix | This is an internal field in ETNA Trader and it shouldn't be used by third-party developers. |
 | Description | Usually this is the full name of the underlying company. |
