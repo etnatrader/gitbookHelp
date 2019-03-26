@@ -45,6 +45,7 @@
 ## REST API
 
 * [Introduction](rest-api/introduction.md)
+* [Code Samples](rest-api/code-samples.md)
 * [Trader API](rest-api/public-api/README.md)
   * [Overview](rest-api/public-api/overview.md)
   * [Authentication](rest-api/public-api/authentication/README.md)
