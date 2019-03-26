@@ -1,2 +1,2 @@
-# Developer API
+# Extended API
 

@@ -16,7 +16,7 @@ ETNA Trader offers two main types of API:
 
 {% page-ref page="public-api/" %}
 
-**2. Developer**. Unlike the trader API, the developer API can only be called within your private network \(AWS EC2 network, to be precise\). This limitation is put in place to ensure that critical data could not be modified by ill-intentioned third parties. In addition to all methods from the public API, the private API also includes the ability to perform administrative tasks like managing payments, creating allocation requests, and so forth.
+**2. Extended**. Unlike the trader API, the extended API can only be called within your private network \(AWS EC2 network, to be precise\). This limitation is put in place to ensure that critical data could not be modified by ill-intentioned third parties. In addition to all methods from the trader API, the extended API also includes the ability to perform administrative tasks like managing payments, creating allocation requests, and so forth.
 
 {% page-ref page="private-api/" %}
 

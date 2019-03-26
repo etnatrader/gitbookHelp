@@ -142,7 +142,7 @@
     * [Get Transactions](rest-api/public-api/managing-transactions/get-transactions/README.md)
       * [Syntax](rest-api/public-api/managing-transactions/get-transactions/transactions_getactionspage.md)
   * [Terms and Definitions](rest-api/public-api/definitions.md)
-* [Developer API](rest-api/private-api/README.md)
+* [Extended API](rest-api/private-api/README.md)
   * [Overview](rest-api/private-api/untitled.md)
   * [Authentication](rest-api/private-api/authentication/README.md)
     * [Requesting Tokens](rest-api/private-api/authentication/requesting-tokens/README.md)
