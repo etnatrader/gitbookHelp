@@ -15,7 +15,7 @@ In order to create a new watchlist for a particular user, you must use an [autho
 There are six required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **userID** \(path\). This is the ID of the user for whom a new watchlist will be created.
 5. **resultIncludeSecurities** \(query\). This field indicates if the retrieved watchlist should include its corresponding stocks.
@@ -25,16 +25,26 @@ There are six required parameters that must be provided in the request:
 
 All new watchlists must be of the _**application/json**_ content type. The syntax for new watchlists is as follows:
 
+#### Empty Watchlist Sample
+
 {% code-tabs %}
 {% code-tabs-item title="New Watchlist Template" %}
+```javascript
+{
+    "Name": "Nifty Fifty" 
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### A Comprehensive Watchlist Sample
+
 ```javascript
 {
     "Name": "Apple & Google" ,
     "Securities": [4,5] //internal ID of the securities in the new watchlist
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Internal ID of the required securities can be fetched using [this API request](../../../public-api/securities/get-securitys-info-by-ticker/).
 

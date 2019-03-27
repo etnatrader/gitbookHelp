@@ -8,14 +8,10 @@ description: Create a new user in ETNA Trader
 
 This POST endpoint enables you to create a new user in ETNA Trader. Information about the new user is provided in the request body as a JSON, and the new user is then automatically added to your company. 
 
-{% hint style="warning" %}
-In order to create a new user, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **sendInvitationEmail** \(query\). This is a boolean parameter that indicates if the newly created user should receive an invitation email.
 5. **user** \(body\). This a JSON file that contains information about the to-be-created user.
@@ -53,7 +49,7 @@ The body of the request represents a JSON file with mandatory parameters require
   "Salutation": "NoSalutation", 
   "Suffix": "NoSuffix", 
   "Enabled": true, 
-  "TimeZoneInfoId": "string", 
+  "TimeZoneInfoId": "New Zealand Standard Time", 
   "ExpirationDate": "2019-03-10T14:11:54.494Z",
   "PhoneNumber": "string",
   "EntitlementsPhoneNumber": "string"
@@ -76,6 +72,204 @@ where:
 | ExpirationDate | This is the date on which the user's account will be disabled. |
 | PhoneNumber / EntitlementsPhoneNumber | This the user's phone number. |
 
+#### TimeZoneInfoID Values Range
+
+```text
+Dateline Standard Time
+
+UTC-11
+
+Samoa Standard Time
+
+Hawaiian Standard Time
+
+Alaskan Standard Time
+
+Pacific Standard Time (Mexico)
+
+Pacific Standard Time
+
+US Mountain Standard Time
+
+Mountain Standard Time (Mexico)
+
+Mountain Standard Time
+
+Central America Standard Time
+
+Central Standard Time
+
+Central Standard Time (Mexico)
+
+Canada Central Standard Time
+
+SA Pacific Standard Time
+
+Eastern Standard Time
+
+US Eastern Standard Time
+
+Venezuela Standard Time
+
+Paraguay Standard Time
+
+Atlantic Standard Time
+
+Central Brazilian Standard Time
+
+SA Western Standard Time
+
+Pacific SA Standard Time
+
+Newfoundland Standard Time
+
+E. South America Standard Time
+
+Argentina Standard Time
+
+SA Eastern Standard Time
+
+Greenland Standard Time
+
+Montevideo Standard Time
+
+UTC-02
+
+Mid-Atlantic Standard Time
+
+Azores Standard Time
+
+Cape Verde Standard Time
+
+Morocco Standard Time
+
+UTC
+
+GMT Standard Time
+
+Greenwich Standard Time
+
+W. Europe Standard Time
+
+Central Europe Standard Time
+
+Romance Standard Time
+
+Central European Standard Time
+
+W. Central Africa Standard Time
+
+Namibia Standard Time
+
+Jordan Standard Time
+
+GTB Standard Time
+
+Middle East Standard Time
+
+Egypt Standard Time
+
+Syria Standard Time
+
+South Africa Standard Time
+
+FLE Standard Time
+
+Israel Standard Time
+
+E. Europe Standard Time
+
+Arabic Standard Time
+
+Arab Standard Time
+
+Russian Standard Time
+
+E. Africa Standard Time
+
+Iran Standard Time
+
+Arabian Standard Time
+
+Azerbaijan Standard Time
+
+Mauritius Standard Time
+
+Georgian Standard Time
+
+Caucasus Standard Time
+
+Afghanistan Standard Time
+
+Ekaterinburg Standard Time
+
+Pakistan Standard Time
+
+West Asia Standard Time
+
+India Standard Time
+
+Sri Lanka Standard Time
+
+Nepal Standard Time
+
+Central Asia Standard Time
+
+Bangladesh Standard Time
+
+N. Central Asia Standard Time
+
+Myanmar Standard Time
+
+SE Asia Standard Time
+
+North Asia Standard Time
+
+China Standard Time
+
+North Asia East Standard Time
+
+Singapore Standard Time
+
+W. Australia Standard Time
+
+Taipei Standard Time
+
+Ulaanbaatar Standard Time
+
+Tokyo Standard Time
+
+Korea Standard Time
+
+Yakutsk Standard Time
+
+Cen. Australia Standard Time
+
+AUS Central Standard Time
+
+E. Australia Standard Time
+
+AUS Eastern Standard Time
+
+West Pacific Standard Time
+
+Tasmania Standard Time
+
+Vladivostok Standard Time
+
+Central Pacific Standard Time
+
+New Zealand Standard Time
+
+UTC+12
+
+Fiji Standard Time
+
+Kamchatka Standard Time
+
+Tonga Standard Time
+```
+
 ### Response
 
 In response to this API request, you'll receive a JSON file that contains information you specified in the request body along with the new user's internal identifier in ETNA Trader:
@@ -93,7 +287,7 @@ In response to this API request, you'll receive a JSON file that contains inform
   "AddedDate": "2019-03-06T15:12:43.2333427Z",
   "Enabled": true,
   "Deleted": false,
-  "TimeZoneInfoId": "string",
+  "TimeZoneInfoId": "New Zealand Standard Time",
   "ExpirationDate": "2019-03-06T14:11:54.494Z",
   "PhoneNumber": "string",
   "EntitlementsPhoneNumber": "string"
@@ -103,18 +297,6 @@ In response to this API request, you'll receive a JSON file that contains inform
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to create a new user.
-
-#### Requesting as a Non-Administrator
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for creating users, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
-
-So be sure to use the authorization token generated with an administrator's credentials.
 
 #### Failing to Specify the Et-App-Key Parameter
 

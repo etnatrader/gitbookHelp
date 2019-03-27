@@ -25,16 +25,26 @@ There are six required parameters that must be provided in the request:
 
 All new watchlists must be of the _**application/json**_ content type. The syntax for new watchlists is as follows:
 
+#### Empty Watchlist Sample
+
 {% code-tabs %}
 {% code-tabs-item title="New Watchlist Template" %}
+```javascript
+{
+    "Name": "Nifty Fifty" 
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### A Comprehensive Watchlist Sample
+
 ```javascript
 {
     "Name": "Apple & Google" ,
     "Securities": [4,5] //internal ID of the securities in the new watchlist
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Internal ID of the required securities can be fetched using [this API request](../../securities/get-securitys-info-by-ticker/).
 
