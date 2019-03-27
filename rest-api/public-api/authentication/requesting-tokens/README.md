@@ -78,38 +78,5 @@ In the following article we outline in detail all of the required and optional h
 
 ### Sample Code
 
-The following python script demonstrates how to perform initial authentication in ETNA Trader. 
-
-```python
-import requests
-
-class EtnaAPIRequest:
-
-	baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
-	EtAppKey = "your EtAppKey from the BO companies widget"
-
-	token = 'uninitialized'
-
-	username = "your username"
-	password = "your password"
-
-	# def __init__(self, username, password):
-		# self.username = username
-		# self.password = password
-
-	def initialAuth(self):
-		authenticationRequest = requests.post(self.baseURL + 'token', headers = {"Accept" : "application/json", "Et-App-Key" : self.EtAppKey, "Username":self.username, "Password":self.password})
-		print('Authorization status code: ' + str(authenticationRequest.status_code) + '\n')
-
-		try:
-			responseJSON = authenticationRequest.json()
-			self.token = "Bearer " + responseJSON["Token"]
-			return responseJSON
-		except:
-			return "No response"
-			
-#Performing initial Authentication
-sampleRequest = EtnaAPIRequest()
-sampleRequest.initialAuth()
-```
+To see how initial authentication can be performed in code, feel free to examine our [sample requests](../../../code-samples.md) in a dedicated article.
 

@@ -10,10 +10,6 @@ description: Retrieve information about a particular order
 
 This GET endpoint enables you to retrieve information about an outstanding order of the user whose authorization token is provided in the header request. If the user has buy, sell, short-sell, or buy-to-cover orders pending, you can request information on one of those orders by sending this API request.
 
-{% hint style="warning" %}
-In order to retrieve information about an outstanding order of a particular user, you must use an [authorization token](../../../public-api/authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are five required parameters that must be provided in the request header:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service.  It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
@@ -86,18 +82,6 @@ In response to this API request, you'll receive a JSON file with comprehensive i
 #### Common Mistakes
 
 Here are some of the common mistakes that developers make when trying to retrieve information about an outstanding order.
-
-**Requesting as a Non-Administrator**
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about a particular order, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
-
-So be sure to use the authorization token generated with an administrator's credentials.
 
 **Failing to Specify the Et-App-Key Parameter**
 

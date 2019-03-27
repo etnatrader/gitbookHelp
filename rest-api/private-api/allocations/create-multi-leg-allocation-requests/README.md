@@ -18,10 +18,6 @@ Please bear in mind that there are certain regulations that apply to allocations
 
 Multi-leg allocation requests combine the functionality of allocation requests and multi-leg orders and enable you to allocate multi-leg orders to your users proportionally to the amount of funds they have contributed.
 
-{% hint style="warning" %}
-In order to create a multi-leg allocation request, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
@@ -114,18 +110,6 @@ In response to this API request, you'll receive a JSON file with the multi-leg a
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to create multi-leg allocation requests.
-
-#### Requesting as a Non-Administrator
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for creating multi-leg allocation requests, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
-
-So be sure to use the authorization token generated with an administrator's credentials.
 
 #### Failing to Specify the Et-App-Key Parameter
 

@@ -8,10 +8,6 @@ description: Fetch trading data for a set of securities
 
 This PUT endpoint enables you to retrieve and compare historical trading data for a set of securities. This data includes price ranges, candles, and various other non-market data. 
 
-{% hint style="warning" %}
-In order to retrieve historical trading data for a set of securities, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
@@ -313,18 +309,6 @@ where:
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve trading data for a set of securities.
-
-#### Requesting as a Non-Administrator
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving trade data for a set of securities, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
-
-So be sure to use the authorization token generated with an administrator's credentials.
 
 #### Failing to Specify the Et-App-Key Parameter
 

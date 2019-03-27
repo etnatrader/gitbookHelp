@@ -8,10 +8,6 @@ description: Get a user's information by their ETNA Trader identifier
 
 This endpoint enables you to request a user's information by supplying their unique ETNA Trader identifier in the header. In response, you'll receive a JSON file with the user's information.
 
-{% hint style="warning" %}
-In order to request information about a particular user, you must use an [authorization token](../../../public-api/authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are three required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service.  It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). ![](../../../../.gitbook/assets/image%20%281%29.png)
@@ -46,16 +42,6 @@ As a response, you'll receive a JSON file with the information about this user:
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting a token:
-
-#### Requesting as a Non-Administrator
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for receiving information about a particular user, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
 
 So be sure to use the authorization token generated with an administrator's credentials.
 

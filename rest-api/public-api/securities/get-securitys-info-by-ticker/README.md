@@ -8,10 +8,6 @@ description: Fetch information about a particular equity by providing its ticker
 
 This GET endpoint enables you to retrieve information about a particular security by specifying its ticker symbol in the request's path. This information is not retrieved directly from the exchange; rather, it's the information about the security that is specific to ETNA Trader.
 
-{% hint style="warning" %}
-In order to retrieve information about a particular security by its ticker, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.

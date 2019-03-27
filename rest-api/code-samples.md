@@ -4,13 +4,15 @@ description: Explore examples of code that leverages ETNA API requests
 
 # Code Samples
 
-### Introduction
+## Introduction
 
 This following sections of ETNA Trader's REST API documentation provide an in-depth look into the structure, syntax, and the range of possible responses for each endpoint of ETNA Trader's API. But before you proceed to examine each endpoint in detail, let's first walk through a few sample scripts that demonstrate how the API works in action.
 
 Each endpoint has its own URL and a set of parameters that must be provided in the request header, body, and query. For example, the initial authentication endpoint requires the credentials of a user in ETNA Trader as well as the application key that is retrievable from the BO Companies widget. It's critical to ensure that all required parameters are provided in the request; otherwise the request will fail.
 
 If the request is successful, you'll receive a confirmation message as well as the 200 status code. If the request is improperly constructed or some parameters are lacking, you'll receive a status code in the range between 400 and 500.
+
+## TRADER API
 
 ### Initial Authentication 
 
@@ -92,7 +94,7 @@ You can then extract the returned token and assign it to the `token` property.
 curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/json' --header 'Username: yourUsername' --header 'Password: yourPassword' --header 'Authorization: Bearer yourToken' --header 'Et-App-Key: yourEttAppKey' 'https://priv-api-et-demo-prod.etnasoft.us/api/token'
 ```
 
-### Placing New Orders
+### Placing New Orders 
 
 {% page-ref page="public-api/orders/place-order/" %}
 
@@ -231,6 +233,207 @@ This method — `getUsersInfo()` — enables you to retrieve detailed informatio
 ```text
 curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer yourToken+wefx0MhIL' --header 'Et-App-Key: yourKey' 'https://priv-api-et-demo-prod.etnasoft.us/api/v1.0/users/7420/info'
 ```
+
+### Getting a User's Positions
+
+{% page-ref page="public-api/positions/get-users-positions/" %}
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import requests
+
+class EtnaAPIRequest:
+
+	baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
+	EtAppKey = "your EtAppKey from the BO Companies widget"
+	token = 'the roken retrieved from the first endpoint'
+
+	def getUsersPositions(self, accountID):
+
+		queryParameters = {
+			"accoundId" : 6303,
+			"pageNumber" : 0,
+			"pageSize" : 10,
+			"sortField" : "Id",
+			"desc" : True
+		}
+
+		getUsersPositions = requests.get(self.baseURL + 'v1.0/accounts/' + str(accountID) + '/positions', 
+										 headers = {"Accept" : "application/json", "Et-App-Key" : self.EtAppKey, "Authorization":self.token},
+										 params = queryParameters
+										 )
+		try:
+			responseJSON = getUsersPositions.json()
+			print (responseJSON)
+			return responseJSON
+		except:
+			return "No response"
+
+
+#Performing initial Authentication
+sampleRequest = EtnaAPIRequest()
+sampleRequest.initialAuth()
+
+#retrieveing positions in account 6303
+sampleRequest.getUsersPositions(6303)
+
+```
+
+This method — `getUsersPositions()` — enables you to retrieve the list positions opened on a specific account in ETNA Trader. The ID of the enquired account must be specified in the base URL. In response to this request, you'll receive a JSON file with the list of currently open positions. 
+{% endtab %}
+
+{% tab title="JavaScript" %}
+
+{% endtab %}
+
+{% tab title="C\#" %}
+
+{% endtab %}
+{% endtabs %}
+
+```text
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUGqZLsz5mkidCvrdAY1TRgAAAAACAAAAAAAQZgAAAAEAACAAAAD7npupkHQns7X8egXdUEd9DN58PmhOqYh/LEz5FGZuCgAAAAAOgAAAAAIAACAAAACU/Q1qGPWZGNu/nWFJzuyltREDxZSNKw6V1fO++++/JVZxWO///yourToken' --header 'Et-App-Key: yourKey' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/accounts/6303/positions?pageNumber=0&pageSize=10&sortField=Id&desc=true'
+```
+
+### Get Candles and Indicators for a Security
+
+{% page-ref page="public-api/historical-data/get-candles-and-indicators-for-charts/" %}
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import requests
+
+class EtnaAPIRequest:
+
+	baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
+	EtAppKey = "your EtAppKey from the BO Companies widget"
+	token = 'the roken retrieved from the first endpoint'
+    
+    def getCandlesAndIndicators(self, securityInfoBody):
+
+		getCandlesAndIndicatorsRequest = requests.put(self.baseURL + 'v1.0/history/symbols/',
+													  headers = {"Accept" : "application/json", "Et-App-Key" : self.EtAppKey, "Authorization":self.token},
+													  json = securityInfoBody
+													  )
+
+		try:
+			responseJSON = getCandlesAndIndicatorsRequest.json()
+			print (responseJSON)
+			return responseJSON
+		except:
+			return "No response"
+			
+#Performing initial Authentication
+sampleRequest = EtnaAPIRequest()
+sampleRequest.initialAuth()
+
+#declaring chart model
+chartDataModel = {
+"Security":
+	{"Symbol":"AAPL",
+	"Exchange":"XNAS",
+	"Currency":"USD"},	
+"SecurityHistorySettings":
+	{"StartDate":1542776400,
+	"EndDate":1550764844,
+	"CandlesCount":-1,
+	"Period":"4h",
+	"Interval":-7,
+	"IncludeNonMarketData":False},
+"IndicatorsHistorySettings":[
+	{"Signature":"MACD|4h|false|12|26|9",
+	"Interval":-7,
+	"StartDate":1542776400,
+	"EndDate":1550764844,
+	"CandlesCount":-1,
+	"Offset":0,
+	"Indicator":{
+		"id":4,
+		"indicatorId":1,
+		"type":"movingAverageConvergenceDivergenceIndicator",
+		"position":"lower",
+		"external":True,
+		"settings":{
+			"id":4,
+			"type":"movingAverageConvergenceDivergenceIndicator",
+			"shortThickness":2,
+			"longThickness":2,
+			"shortBrush":"32c814",
+			"longBrush":"dc1414",
+			"signalBrush":"ff9900",
+			"shortPeriod":12,
+			"longPeriod":26,
+			"signalPeriod":9,
+			"showLastValue":True,
+			"showCurrentPoint":True,
+			"showLevelBands":False}}}]
+}
+
+#retrieving candles and indicators for the Apple stock
+sampleRequest.getCandlesAndIndicators(chartDataModel)
+```
+
+This method — `getCandlesAndIndicators()` — enables you to retrieve chart data \(candles and indicators\) for a specific security. In response to this request, you'll receive a JSON file with the pricing data that can be used to draw charts. 
+{% endtab %}
+
+{% tab title="JavaScript" %}
+
+{% endtab %}
+
+{% tab title="C\#" %}
+
+{% endtab %}
+{% endtabs %}
+
+#### CURL
+
+```text
+curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer yourToken' --header 'Et-App-Key: yourKey' -d '{"Security": \ 
+ 	{"Symbol":"AAPL", \ 
+ 	"Exchange":"XNAS", \ 
+ 	"Currency":"USD"}, \ 
+ 	 \ 
+ "SecurityHistorySettings": \ 
+ 	{"StartDate":1542776400, \ 
+ 	"EndDate":1550764844, \ 
+ 	"CandlesCount":-1, \ 
+ 	"Period":"4h", \ 
+ 	"Interval":-7, \ 
+ 	"IncludeNonMarketData":false}, \ 
+  \ 
+ "IndicatorsHistorySettings":[ \ 
+ 	{"Signature":"MACD|4h|false|12|26|9", \ 
+ 	"Interval":-7, \ 
+ 	"StartDate":1542776400, \ 
+ 	"EndDate":1550764844, \ 
+ 	"CandlesCount":-1, \ 
+ 	"Offset":0, \ 
+ 	"Indicator":{ \ 
+ 		"id":4, \ 
+ 		"indicatorId":1, \ 
+ 		"type":"movingAverageConvergenceDivergenceIndicator", \ 
+ 		"position":"lower", \ 
+ 		"external":true, \ 
+ 		"settings":{ \ 
+ 			"id":4, \ 
+ 			"type":"movingAverageConvergenceDivergenceIndicator", \ 
+ 			"shortThickness":2, \ 
+ 			"longThickness":2, \ 
+ 			"shortBrush":"32c814", \ 
+ 			"longBrush":"dc1414", \ 
+ 			"signalBrush":"ff9900", \ 
+ 			"shortPeriod":12, \ 
+ 			"longPeriod":26, \ 
+ 			"signalPeriod":9, \ 
+ 			"showLastValue":true, \ 
+ 			"showCurrentPoint":true, \ 
+ 			"showLevelBands":false}}}] \ 
+ }' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/history/symbols'
+```
+
+## EXTENDED API
 
 ### Create a New Trading Account
 

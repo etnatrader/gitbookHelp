@@ -8,10 +8,6 @@ description: Rename an existing watchlist
 
 This PUT endpoint enables you to rename a specific watchlist of the user whose id is provided in the request's path. 
 
-{% hint style="warning" %}
-In order to rename a specific watchlist of a particular user, you must use an [authorization token](../../authentication/requesting-tokens/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are six required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
@@ -41,18 +37,6 @@ In response to this API request, you'll receive a JSON file with a dictionary th
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to rename a specific watchlist.
-
-#### Requesting as a Non-Administrator
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for renaming specific watchlists, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
-
-So be sure to use the authorization token generated with an administrator's credentials.
 
 #### Failing to Specify the Et-App-Key Parameter
 

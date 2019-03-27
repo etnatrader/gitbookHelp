@@ -6,11 +6,7 @@ description: List a user's watchlists
 
 ### Overview
 
-This GET endpoint enables you to retrieve the list of watchlists of a user whose ID is provided in the request's path. The watchlists can be retrieved either with only information about the watchlists or including the list of securities in every watchlist. 
-
-{% hint style="warning" %}
-In order to retrieve the list of a user's watchlists, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
+This GET endpoint enables you to retrieve the list of watchlists of a user whose ID is provided in the request's path. The watchlists can be retrieved either with only information about the watchlists or including the list of securities in every watchlist.
 
 There are five required parameters that must be provided in the request:
 
@@ -136,18 +132,6 @@ If the _**includeSecurities**_ query parameter is set to true, the retrieved wat
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve a user's watchlists. 
-
-#### Requesting as a Non-Administrator
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving a user's watchlists, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
-
-So be sure to use the authorization token generated with an administrator's credentials.
 
 #### Failing to Specify the Et-App-Key Parameter
 

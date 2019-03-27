@@ -8,10 +8,6 @@ description: Fetch securities filtered by a particular field and split into mult
 
 This GET endpoint enables you to retrieve equites sorted by a specified field. 
 
-{% hint style="warning" %}
-In order to retrieve the a list of filtered equities, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
-{% endhint %}
-
 There are seven required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
@@ -244,18 +240,6 @@ where:
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve sorted equities. 
-
-#### Requesting as a Non-Administrator
-
-One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving sorted equities, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
-
-```javascript
-{
-    "Message": "Authorization has been denied for this request."
-}
-```
-
-So be sure to use the authorization token generated with an administrator's credentials.
 
 #### Failing to Specify the Et-App-Key Parameter
 
