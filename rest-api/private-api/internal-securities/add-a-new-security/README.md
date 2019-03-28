@@ -9,13 +9,13 @@ description: Add a new security to ETNA Trader
 This POST endpoint enables you to add a new security to ETNA Trader by sending a JSON file with the updated information. Whereas the public API only permits you to retrieve information about existing securities, the private API also permits addition of new securities. It's critical to be cautious with this procedure because providing incorrect information might lead to certain conflicts like the absence of quotes for a particular security.
 
 {% hint style="warning" %}
-In order to add a new security, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to add a new security, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **newSecurity** \(body\). This is a JSON file with the security's parameters that must be updated.
 
