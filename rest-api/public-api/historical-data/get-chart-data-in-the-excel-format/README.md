@@ -1,3 +1,7 @@
+---
+description: Retrieve trading data for charts in the Microsoft Excel format
+---
+
 # Get Chart Data in the Excel Format
 
 ### Overview

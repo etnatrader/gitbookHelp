@@ -24,7 +24,7 @@ Retrieves all watchlists belongs to specified user. If parameter includeSecuriti
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | User watchlists collection | &lt; [WatchlistModel](watchlists_getuserwatchlists.md#watchlistmodel) &gt; array |
+| **200** | User watchlists collection | &lt; [WatchlistModel](../../definitions.md#watchlistmodel) &gt; array |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

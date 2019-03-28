@@ -23,7 +23,7 @@ Provides information about user by user identifier
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Current user information model | [UserInfoModel](users_getuserinfo.md#userinfomodel) |
+| **200** | Current user information model | [UserInfoModel](../../definitions.md#userinfomodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

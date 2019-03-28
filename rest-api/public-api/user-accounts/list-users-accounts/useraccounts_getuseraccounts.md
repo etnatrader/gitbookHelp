@@ -23,7 +23,7 @@ Provides collection of accounts bound to user
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Collection of user account items | &lt; [UserAccountModel](useraccounts_getuseraccounts.md#useraccountmodel) &gt; array |
+| **200** | Collection of user account items | &lt; [UserAccountModel](../../definitions.md#useraccountmodel) &gt; array |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

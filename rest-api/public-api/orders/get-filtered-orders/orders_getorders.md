@@ -26,7 +26,7 @@ Get orders by type and statuses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Collection of order models | &lt; [OrderResource](orders_getorders.md#orderresource) &gt; array |
+| **200** | Collection of order models | &lt; [OrderResource](../../definitions.md#orderresource) &gt; array |
 | **400** | Filter query is invalid or contains unsupported operations | No Content |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |

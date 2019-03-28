@@ -18,13 +18,13 @@ Create new price alert for specified user.
 | **Header** | **Et-App-Key**   _required_ | Application key | string |  |
 | **Path** | **userId**   _required_ | User identifier | integer \(int32\) |  |
 | **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
-| **Body** | **body**   _required_ | Price alert model | [PriceAlertEditableModel](pricealerts_createpricealert.md#pricealerteditablemodel) |  |
+| **Body** | **body**   _required_ | Price alert model | [PriceAlertEditableModel](../../../public-api/definitions.md#pricealerteditablemodel) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Created price alert | [PriceAlertInfoModel](pricealerts_createpricealert.md#pricealertinfomodel) |
+| **200** | Created price alert | [PriceAlertInfoModel](../../../public-api/definitions.md#pricealertinfomodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

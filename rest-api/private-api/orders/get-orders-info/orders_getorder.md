@@ -24,7 +24,7 @@ Get order by internal Id
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Requested order model | [OrderResource](orders_getorder.md#orderresource) |
+| **200** | Requested order model | [OrderResource](../../../public-api/definitions.md#orderresource) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

@@ -27,7 +27,7 @@ Provides price alerts collection related to specified user
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Price alerts collection | [PagingResult\[PriceAlertInfoModel\]](pricealerts_getpricealerts.md#pagingresult-pricealertinfomodel) |
+| **200** | Price alerts collection | [PagingResult\[PriceAlertInfoModel\]](../../../public-api/definitions.md#pagingresult-pricealertinfomodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

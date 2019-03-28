@@ -25,7 +25,7 @@ Retrieves specified watchlist. If parameter includeSecurities set to true watchl
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Wathlist | [WatchlistModel](watchlists_getwatchlist.md#watchlistmodel) |
+| **200** | Wathlist | [WatchlistModel](../../definitions.md#watchlistmodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **409** | Watchlist does not exist | No Content |

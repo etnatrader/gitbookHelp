@@ -17,13 +17,13 @@ Get candles and indicators data for charting
 | **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
 | **Header** | **Et-App-Key**   _required_ | Application key | string |  |
 | **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
-| **Body** | **body**   _required_ |  | [ChartHistoryRequestModel](historicaltradedata_getchartbasicdata.md#charthistoryrequestmodel) |  |
+| **Body** | **body**   _required_ |  | [ChartHistoryRequestModel](../../definitions.md#charthistoryrequestmodel) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Requested candle and indicators data | [ChartHistoryModel](historicaltradedata_getchartbasicdata.md#charthistorymodel) |
+| **200** | Requested candle and indicators data | [ChartHistoryModel](../../definitions.md#charthistorymodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **409** | Requested data could not be provided | No Content |
