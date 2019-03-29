@@ -48,6 +48,47 @@ where:
 | State | This is the state of the request. Usually the value is set to Succeeded, meaning that the request has been successfully made. |
 | Token | This is the token that must be provided in all subsequent API requests as the authentication bearer token.  |
 
+### Two-factor authentication
+
+If the user account has two-factor authentication enabled, there's also two other mandatory parameters that must be provided in the header:
+
+* **VerificationCode** \(header\). This is the verification code that's sent by email or as an SMS message \(depending on the the user's settings\).
+* **Token** \(header\). This is the authorization token that will be returned in response to the initial request.
+
+These two parameter don't have to be provided in the initial request because the initial request because both authentication methods are performed in separate steps. In the first request, only username, password, and Et-App-Key must be provided. In response, you'll receive a JSON file with the **Step** parameter indicating the next authentication step:
+
+```javascript
+{
+    'Step': 'VerificationCode', 
+    'Reason': 'Expecting confirmation code', 
+    'State': 'Expecting', 
+    'Token': 'someToken+zrIbQGZl8sBT1LWQEY38SQ=='
+}
+```
+
+Also notice that the response contains the **Token** parameter which must be used in the subsequent request as a header parameter in the following format:
+
+* `"Authorization" : "Bearer + tokenFromTheRequest"`
+
+In total, the header of the second request must contain five parameters:
+
+1. **Username**;
+2. **Password**;
+3. **Et-App-Key**;
+4. **Authorization** \(Bearer + token\);
+5. **VerificationCode** \(the code received by email or SMS\).
+
+In response to the second request, you'll receive the same JSON file that is sent in case there's no two-factor authentication enabled on the account:
+
+```javascript
+{
+  "State": "Succeeded",
+  "Token": "someToken"
+}
+```
+
+The token parameter from the second request must be provided as the `Authorization` parameter in all future requests like placing orders, retrieving user's positions, etc. 
+
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting a token:
@@ -75,6 +116,14 @@ If you specify the wrong user credentials or fail to include them in the request
 ```
 
 In the following article we outline in detail all of the required and optional header parameters, the range of response status codes, as well as a comprehensive list of all possible responses.
+
+#### Failure to Provide the Authorization Token with Two-Factor Authentication
+
+Another common mistake that developers make during authentication is failure to provide the authorization token that is retrieved during the first request of a two-factor authentication. If the token is not provided in the request header, the entire authentication process will be rendered corrupt:
+
+```javascript
+{'State': 'Failed', 'Step': 'VerificationCode', 'Reason': 'Corrupted ticket'}
+```
 
 ### Sample Code
 
