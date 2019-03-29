@@ -25,7 +25,7 @@ Renames user watchlist.
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Watchlist id and changed name tuple | [Tuple\[Int32,String\]](watchlists_editwatchlistname.md#tuple-int32-string) |
+| **200** | Watchlist id and changed name tuple | [Tuple\[Int32,String\]](../../definitions.md#tuple-int-32-string) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **409** | Conflict | No Content |

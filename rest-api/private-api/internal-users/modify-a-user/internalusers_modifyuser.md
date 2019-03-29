@@ -19,13 +19,13 @@ Updates user
 | **Path** | **userId**   _required_ | User identifier | integer \(int32\) |  |
 | **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
 | **Query** | **sendInvitationEmail**   _required_ | Send email for created user | boolean |  |
-| **Body** | **body**   _required_ | User to update | [ModifyUserModel](internalusers_modifyuser.md#modifyusermodel) |  |
+| **Body** | **body**   _required_ | User to update | [ModifyUserModel](../../definitions.md#modifyusermodel) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Modified user | [UserModel](internalusers_modifyuser.md#usermodel) |
+| **200** | Modified user | [UserModel](../../definitions.md#usermodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **409** | Conflict occured while updating user | No Content |
