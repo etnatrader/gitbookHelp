@@ -32,6 +32,25 @@ The widget should be added and, as you can see, it lists all of the existing use
 
 ![](../../../.gitbook/assets/screenshot-2019-01-17-at-15.59.36.png)
 
+All users can be sorted by the following criteria:
+
+* Email;
+* First name;
+* Last name;
+* Login;
+* ID \(internal identifier of the user in ETNA Trader\);
+* Middle name;
+* Sign-up date;
+* Clearing Account Number.
+
+![](../../../.gitbook/assets/screenshot-2019-04-22-at-14.51.14.png)
+
+By default, disabled users are not displayed in the user list. To list both enabled and disabled users together, select the **Show disabled users** checkbox and then click **Filter**.
+
+![](../../../.gitbook/assets/untitled-2.png)
+
+## Adding New Users
+
 Now you can proceed to create a new user. Click **Add User**.
 
 ![](../../../.gitbook/assets/screenshot-2019-01-16-at-21.32.19.png)
