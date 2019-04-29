@@ -168,6 +168,7 @@
   * [Terms and Definitions](rest-api/trading-api/definitions/README.md)
     * [Part I](rest-api/trading-api/definitions/part-i.md)
     * [Part II](rest-api/trading-api/definitions/part-ii.md)
+    * [Part III](rest-api/trading-api/definitions/part-iii.md)
 * [Broker API](rest-api/broker-api/README.md)
   * [Overview](rest-api/broker-api/untitled.md)
   * [Authentication](rest-api/broker-api/authentication/README.md)
