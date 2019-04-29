@@ -26,7 +26,7 @@ Retrieve all positions by specified symbol
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Target symbol positions | &lt; [PositionResource](../../definitions.md#positionresource) &gt; array |
+| **200** | Target symbol positions | &lt; [PositionResource](../../definitions/#positionresource) &gt; array |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

@@ -23,7 +23,7 @@ Get account users and account access types
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | User models and account access types | [UserToAccountRelationModel](../../definitions.md#usertoaccountrelationmodel) |
+| **200** | User models and account access types | [UserToAccountRelationModel](../../definitions/#usertoaccountrelationmodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

@@ -49,7 +49,7 @@ In response to this request, you'll receive a JSON file confirming \(or rejectin
   "IsSuccessful": true,
   "Commission": 3.75,
   "Commissions": {
-    "Per Trade Commission": 3.75
+    "PerTradeCommission": 3.75
   },
   "Cost": 169000,
   "NetCost": 168996.25,

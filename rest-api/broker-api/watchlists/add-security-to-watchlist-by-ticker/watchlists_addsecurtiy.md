@@ -19,13 +19,13 @@ Adds security to watchlist by security symbol and exchange.
 | **Path** | **userId**   _required_ | User identifier | integer \(int32\) |  |
 | **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
 | **Path** | **watchlistId**   _required_ | Watchlist identifier | integer \(int32\) |  |
-| **Body** | **body**   _required_ | Security symbol and exchange | [SecuritySignature](../../definitions.md#securitysignature) |  |
+| **Body** | **body**   _required_ | Security symbol and exchange | [SecuritySignature](../../definitions/#securitysignature) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Changed watchlist with securities | [WatchlistModel](../../definitions.md#watchlistmodel) |
+| **200** | Changed watchlist with securities | [WatchlistModel](../../definitions/#watchlistmodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **409** | Security was not found | No Content |

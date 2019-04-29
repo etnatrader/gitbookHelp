@@ -1,6 +1,6 @@
 # Table of contents
 
-* [What's ETNA Trader?](README.md)
+* [What is ETNA Trader?](README.md)
 
 ## User guide
 
@@ -158,8 +158,16 @@
   * [Managing Transactions](rest-api/trading-api/managing-transactions/README.md)
     * [Get Transactions](rest-api/trading-api/managing-transactions/get-transactions/README.md)
       * [Syntax](rest-api/trading-api/managing-transactions/get-transactions/transactions_getactionspage.md)
-  * [Code Samples](rest-api/trading-api/code-samples.md)
-  * [Terms and Definitions](rest-api/trading-api/definitions.md)
+  * [Code Samples](rest-api/trading-api/code-samples/README.md)
+    * [Basic Authentication](rest-api/trading-api/code-samples/basic-authentication.md)
+    * [Two-Factor Autentication](rest-api/trading-api/code-samples/two-factor-autentication.md)
+    * [Placing New Orders](rest-api/trading-api/code-samples/placing-new-orders.md)
+    * [Get User Information](rest-api/trading-api/code-samples/get-user-information.md)
+    * [List User Positions](rest-api/trading-api/code-samples/list-user-positions.md)
+    * [Get Trading Data for Charts](rest-api/trading-api/code-samples/get-trading-data-for-charts.md)
+  * [Terms and Definitions](rest-api/trading-api/definitions/README.md)
+    * [Part I](rest-api/trading-api/definitions/part-i.md)
+    * [Part II](rest-api/trading-api/definitions/part-ii.md)
 * [Broker API](rest-api/broker-api/README.md)
   * [Overview](rest-api/broker-api/untitled.md)
   * [Authentication](rest-api/broker-api/authentication/README.md)
@@ -316,14 +324,26 @@
       * [Syntax](rest-api/broker-api/internal-accounts/bind-an-account-to-a-user/internalaccounts_addaccounttouser.md)
     * [Remove a Trading Account from a User](rest-api/broker-api/internal-accounts/remove-a-trading-account-from-a-user/README.md)
       * [Syntax](rest-api/broker-api/internal-accounts/remove-a-trading-account-from-a-user/internalaccounts_removeaccountfromuser.md)
-  * [Code Samples](rest-api/broker-api/code-samples.md)
-  * [Terms and Definitions](rest-api/broker-api/definitions.md)
+  * [Code Samples](rest-api/broker-api/code-samples/README.md)
+    * [Basic Authentication](rest-api/broker-api/code-samples/basic-authentication.md)
+    * [Two-Factor Authentication](rest-api/broker-api/code-samples/two-factor-authentication.md)
+    * [Placing Orders](rest-api/broker-api/code-samples/placing-orders.md)
+    * [Get User Info](rest-api/broker-api/code-samples/get-user-info.md)
+    * [List User Positions](rest-api/broker-api/code-samples/list-user-positions.md)
+    * [Get Trading Data for Charts](rest-api/broker-api/code-samples/get-trading-data-for-charts.md)
+    * [Creating New Trading Accounts](rest-api/broker-api/code-samples/creating-new-trading-accounts.md)
+    * [Creating New Users](rest-api/broker-api/code-samples/creating-new-users.md)
+  * [Terms and Definitions](rest-api/broker-api/definitions/README.md)
+    * [Part I](rest-api/broker-api/definitions/part-i.md)
+    * [Part II](rest-api/broker-api/definitions/part-ii.md)
 
 ## Release Notes
 
 * [ETNA Trader](release-notes/etna-trader/README.md)
-  * [Release 1.2.47](release-notes/etna-trader/release-1.2.47.md)
   * [Release 1.2.48](release-notes/etna-trader/release-1.2.48.md)
+  * [Release 1.2.47](release-notes/etna-trader/release-1.2.47.md)
+* [ETNA Trader for iOS](release-notes/etna-trader-for-ios/README.md)
+  * [Release 2.33.1](release-notes/etna-trader-for-ios/release-2.33.1.md)
 
 ## KNOWledge base
 

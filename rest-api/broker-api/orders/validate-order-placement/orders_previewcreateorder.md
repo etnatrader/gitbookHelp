@@ -20,13 +20,13 @@ Preview order place results without sending it to the market
 | **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
 | **Query** | **currency**   _optional_ | target currency, optional | string |  |
 | **Query** | **exchange**   _optional_ | target exchange, optional | string |  |
-| **Body** | **body**   _required_ | Place order parameters | [CreateOrderResource](../../definitions.md#createorderresource) |  |
+| **Body** | **body**   _required_ | Place order parameters | [CreateOrderResource](../../definitions/#createorderresource) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Placing order preview result | [VerifyOrderModel](../../definitions.md#verifyordermodel) |
+| **200** | Placing order preview result | [VerifyOrderModel](../../definitions/#verifyordermodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

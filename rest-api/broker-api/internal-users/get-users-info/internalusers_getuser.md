@@ -23,7 +23,7 @@ Provides user by user identifier
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | User model | [UserModel](../../definitions.md#usermodel) |
+| **200** | User model | [UserModel](../../definitions/#usermodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **409** | User with specified id was not found | No Content |

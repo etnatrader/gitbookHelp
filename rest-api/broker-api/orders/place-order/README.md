@@ -626,5 +626,9 @@ An attempt to place a stop-loss order without specifying its price will result i
 }
 ```
 
+### Sample Code
+
+Feel free to examine our [Code Samples](../../code-samples/placing-orders.md#placing-new-orders-and-checking-their-status) article that demonstrates how to place a new order with the help of a Python script.
+
 In the following article we provide in-depth coverage of the syntax for this API request.
 

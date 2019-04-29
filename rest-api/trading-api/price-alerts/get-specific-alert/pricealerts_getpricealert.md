@@ -24,7 +24,7 @@ Get specified price alert
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Price alert model | [PriceAlertInfoModel](../../definitions.md#pricealertinfomodel) |
+| **200** | Price alert model | [PriceAlertInfoModel](../../definitions/#pricealertinfomodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

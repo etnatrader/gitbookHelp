@@ -1,19 +1,25 @@
-# What's ETNA Trader?
+# What is ETNA Trader?
 
-ETNA Trader is a cross-platform white-label trading suite for brokers who are looking for a reliable, powerful, and robust trading platform.
+ETNA Trader is a cross-platform white-label web trading application for online broker-dealers looking for an all-in-one solution to operate a brokerage business online. 
 
-ETNA Trader offers several applications, including: a full spectrum white label trading technology suite for broker-dealers, a unique trading app bundle for developers, and it’s also used by individual traders who are looking for a customized platform to meet their personal needs.
+ETNA Trader consists of several components: white label HTML5 frontend, native mobile application for iOS and Android, middle and back office and trading APIs.
 
-With ETNA Trader, you can:
+ETNA Trader can be used either as a whole trading suite for running an online broker-dealer business or certain components can be private labeled such as: mobile application, trading API, back office or front end.
 
-* Create unlimited trading dashboards with tabs and customized layouts
-* Trade stocks, options, futures and Forex
-* Analyze markets via real-time charts with technical indicators and drawing tools
-* View option chain with built-in probability calculator
-* Monitor orders, positions and account balances
-* Take advantage of real-time quotes and news
+With ETNA Trader you can:
 
-Have a look at our video guide that demonstrates ETNA Trader in action:
+* Trade stocks, options \(including multi-legs\), ETFs, Forex with cryptocurrencies coming soon.
+* Customize layout and create unlimited widgets and tabs making it "a trading browser within a web browser" 
+* Analyze markets with streaming market data \(LI and LII\) and charts including technical indicators and drawing tools
+* Option Chains with built-in probability calculator
+* Monitor orders, positions and account balances in real time
+* Use platform either in paper trading/simulated trading mode or in real-time trading.
+
+Find more information about features of ETNA Trader here: [https://www.etnasoft.com/etna-trader/](https://www.etnasoft.com/etna-trader/)
+
+Try our free online demo: [https://www.etnasoft.com/etna-trading-simulator/](https://www.etnasoft.com/etna-trading-simulator/)
+
+Or, have a look at our video guide:
 
 {% embed url="https://www.youtube.com/watch?v=-Jz9aQqoYxg&feature=youtu.be" caption="" %}
 

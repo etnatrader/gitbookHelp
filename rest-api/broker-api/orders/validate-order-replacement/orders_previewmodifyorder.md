@@ -19,13 +19,13 @@ Preview order replace results without sending it to the market
 | **Path** | **accountId**   _required_ | Account identifier | integer \(int32\) |  |
 | **Path** | **orderId**   _required_ | Order internal identifier | integer \(int32\) |  |
 | **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
-| **Body** | **body**   _required_ | Order modify params | [ModifyOrderResource](../../definitions.md#modifyorderresource) |  |
+| **Body** | **body**   _required_ | Order modify params | [ModifyOrderResource](../../definitions/#modifyorderresource) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Replacing order preview result | [VerifyOrderModel](../../definitions.md#verifyordermodel) |
+| **200** | Replacing order preview result | [VerifyOrderModel](../../definitions/#verifyordermodel) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

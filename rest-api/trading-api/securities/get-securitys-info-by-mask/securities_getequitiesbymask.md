@@ -24,7 +24,7 @@ Get equity by mask
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Equities collection | &lt; [EquityResource](../../definitions.md#equityresource) &gt; array |
+| **200** | Equities collection | &lt; [EquityResource](../../definitions/#equityresource) &gt; array |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

@@ -6,7 +6,7 @@ description: Cancel an existing outstanding order
 
 ### Overview
 
-This DELETE endpoint enables you to cancel an outstanding order of the user whose authorization token is provided in the header request. If the user has buy, sell, short-sell, or buy-to-cover orders pending, you can cancel each one of them by sending this API request.
+This DELETE endpoint enables you to cancel an outstanding order of the user whose authorization token is provided in the header request. If the user has pending buy, sell, short-sell, or buy-to-cover orders, you can cancel each one of them by sending this API request.
 
 There are five required parameters that must be provided in the request header:
 

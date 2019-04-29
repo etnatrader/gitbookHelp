@@ -25,7 +25,7 @@ Provides securities collection by specified symbol
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Internal securities models collection | [PagingResult\[InternalSecurityResource\]](../../definitions.md#pagingresult-internalsecurityresource) |
+| **200** | Internal securities models collection | [PagingResult\[InternalSecurityResource\]](../../definitions/#pagingresult-internalsecurityresource) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

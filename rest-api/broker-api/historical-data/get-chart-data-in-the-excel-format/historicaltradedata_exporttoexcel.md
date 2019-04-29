@@ -17,7 +17,7 @@ Get excel file with chart data
 | **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
 | **Header** | **Et-App-Key**   _required_ | Application key | string |  |
 | **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
-| **Body** | **body**   _required_ |  | [HistoricalTradeDataExportDataModel](../../definitions.md#historicaltradedataexportdatamodel) |  |
+| **Body** | **body**   _required_ |  | [HistoricalTradeDataExportDataModel](../../definitions/#historicaltradedataexportdatamodel) |  |
 
 ### Responses
 

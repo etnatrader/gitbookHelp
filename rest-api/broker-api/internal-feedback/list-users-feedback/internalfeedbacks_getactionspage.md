@@ -27,7 +27,7 @@ Provides feedbacks paged result
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Feedbacks paging result | [PagingResult\[FeedbackModel\]](../../definitions.md#pagingresult-feedbackmodel) |
+| **200** | Feedbacks paging result | [PagingResult\[FeedbackModel\]](../../definitions/#pagingresult-feedbackmodel) |
 | **400** | Filter query is invalid or contains unsupported operations | No Content |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |

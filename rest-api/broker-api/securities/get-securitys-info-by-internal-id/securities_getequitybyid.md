@@ -23,7 +23,7 @@ Get equity by internal id
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Equity resource | [EquityResource](../../definitions.md#equityresource) |
+| **200** | Equity resource | [EquityResource](../../definitions/#equityresource) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **404** | Resource was not found | No Content |

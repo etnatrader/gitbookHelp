@@ -21,13 +21,13 @@ Place order
 | **Query** | **currency**   _optional_ | target currency, optional | string |  |
 | **Query** | **exchange**   _optional_ | target exchange, optional | string |  |
 | **Query** | **userId**   _optional_ | Post on behalf of another user, optional admin feature | integer \(int32\) | `0` |
-| **Body** | **body**   _required_ | Place order parameters | [CreateOrderResource](../../definitions.md#createorderresource) |  |
+| **Body** | **body**   _required_ | Place order parameters | [CreateOrderResource](../../definitions/#createorderresource) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Placed order model | [OrderResource](../../definitions.md#orderresource) |
+| **200** | Placed order model | [OrderResource](../../definitions/#orderresource) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

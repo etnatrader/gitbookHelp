@@ -23,7 +23,7 @@ apiURL/v1.0/users/644(userID)/info
 
 ### Response
 
-As a response, you'll receive a JSON file with the information about this user:
+In response, you'll receive a JSON file with the information about this user:
 
 ```javascript
 {
