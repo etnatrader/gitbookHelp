@@ -335,7 +335,9 @@
     * [Creating New Users](rest-api/broker-api/code-samples/creating-new-users.md)
   * [Terms and Definitions](rest-api/broker-api/definitions/README.md)
     * [Part I](rest-api/broker-api/definitions/part-i.md)
-    * [Part II](rest-api/broker-api/definitions/part-ii.md)
+    * [Part II](rest-api/broker-api/definitions/part-ii-1.md)
+    * [Part III](rest-api/broker-api/definitions/part-ii.md)
+    * [Part IV](rest-api/broker-api/definitions/part-iv.md)
 
 ## Release Notes
 
