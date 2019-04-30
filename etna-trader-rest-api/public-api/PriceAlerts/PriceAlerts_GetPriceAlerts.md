@@ -17,7 +17,7 @@ Provides price alerts collection related to specified user
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**userId**  <br>*required*|User identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Query**|**isDesc**  <br>*required*|Sorting direction. Desc if true, otherwise is asc|boolean||
 |**Query**|**pageNumber**  <br>*required*|Page number|integer (int32)||
 |**Query**|**pageSize**  <br>*required*|Page size|integer (int32)||
