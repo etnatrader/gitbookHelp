@@ -129,3 +129,5 @@ Another common mistake that developers make during authentication is failure to 
 
 To see how initial authentication can be performed in code, feel free to examine our [sample requests](../../code-samples/) in a dedicated article.
 
+In the following article we provide in-depth coverage of the syntax for this API request.
+

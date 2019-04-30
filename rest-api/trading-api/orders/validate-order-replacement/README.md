@@ -117,5 +117,3 @@ Another common mistake made when sending this API request is failing to provide 
 
 The following article covers the syntax for this API request in detail.
 
-The following article covers the syntax for this API request in detail.
-
