@@ -16,7 +16,7 @@ Get options expirations by underlying asset symbol
 |---|---|---|---|---|
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Query**|**currency**  <br>*optional*|Target currency, optional|string||
 |**Query**|**exchange**  <br>*optional*|Target exchange, optional|string||
 |**Query**|**underlying**  <br>*required*|Underlying asset symbol|string||
