@@ -9,13 +9,13 @@ description: Updated an existing position
 This PUT endpoint enables you to modify an existing position on a user's trading account, bypassing the regular order modification mechanism.  Every once in a while some breakdown takes place on the exchange or in ETNA Trader, forcing you to use our Back Office to manually modify an existing position on the user's trading account. This procedure must be carried out with caution so as to prevent any conflicts.
 
 {% hint style="warning" %}
-In order to modify an existing position, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to modify an existing position, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **recalculate** \(query\). This is a boolean field that indicates if the account's cash should be recalculated after modifying the position.
 5. **position** \(body\). This is a JSON file that contains information about the modified position. 

@@ -11,7 +11,7 @@ This GET endpoint enables you to retrieve the list of a user's price alerts. Pri
 There are eight required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **userID** \(path\). This is the ID of the user whose particular watchlist needs to be have one security removed.
 5. **pageSize** \(query\). This field indicates the number of price alerts that needs to be retrieved per page.
