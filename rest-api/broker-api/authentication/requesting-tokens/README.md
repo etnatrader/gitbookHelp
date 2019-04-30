@@ -118,5 +118,5 @@ Another common mistake that developers make during authentication is failure to 
 {'State': 'Failed', 'Step': 'VerificationCode', 'Reason': 'Corrupted ticket'}
 ```
 
-In the following article we outline in detail all of the required and optional header parameters, the range of response status codes, as well as a comprehensive list of all possible responses.
+The following article covers the syntax for this API request in detail.
 

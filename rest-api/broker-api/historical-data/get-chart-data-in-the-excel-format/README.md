@@ -93,3 +93,5 @@ Another common mistake when attempting to retrieve the chart data for a security
 }
 ```
 
+The following article covers the syntax for this API request in detail.
+

@@ -42,5 +42,3 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 
 The following article covers the syntax for this API request in detail.
 
-### 
-
