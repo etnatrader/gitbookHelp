@@ -16,7 +16,7 @@ Get equity by mask
 |---|---|---|---|---|
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Query**|**count**  <br>*required*|Response collection length|integer (int32)||
 |**Query**|**mask**  <br>*required*|Mask to search for|string||
 
