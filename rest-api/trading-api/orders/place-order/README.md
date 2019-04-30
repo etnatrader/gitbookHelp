@@ -579,3 +579,5 @@ Feel free to examine our [Code Samples](../../code-samples/placing-new-orders.md
 
 The following article covers the syntax for this API request in detail.
 
+The following article covers the syntax for this API request in detail.
+

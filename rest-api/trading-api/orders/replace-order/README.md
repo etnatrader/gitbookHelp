@@ -140,3 +140,5 @@ It's critical to understand that when you use the authorization token of a parti
 
 The following article covers the syntax for this API request in detail.
 
+The following article covers the syntax for this API request in detail.
+
