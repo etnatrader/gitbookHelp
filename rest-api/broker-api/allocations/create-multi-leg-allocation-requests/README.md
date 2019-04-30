@@ -123,5 +123,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 
 #### Specifying User Accounts instead of Trading Accounts
 
-Another common mistake is either specifying user accounts instead of trading accounts when creating a multi-leg allocation request. Doing so will lead to the 409 status code. The IsSucceed parameter in this case would be set to false.
+Another common mistake is either specifying user accounts instead of trading accounts when creating a multi-leg allocation request. Doing so will lead to the 409 status code. The `IsSucceed` parameter in this case would be set to false.
+
+In the following article we provide in-depth coverage of the syntax for this API request.
 

@@ -300,3 +300,5 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
+In the following article we provide in-depth coverage of the syntax for this API request.
+

@@ -65,3 +65,5 @@ Another common mistake when making this request is specifying the regular user I
 }
 ```
 
+In the following article we provide in-depth coverage of the syntax for this API request.
+

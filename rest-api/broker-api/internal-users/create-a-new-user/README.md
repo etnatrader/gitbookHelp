@@ -319,3 +319,5 @@ Another common mistake when making this API request is failing to provide all re
 }
 ```
 
+In the following article we provide in-depth coverage of the syntax for this API request.
+

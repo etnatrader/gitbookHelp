@@ -101,3 +101,5 @@ Another common mistake developers make when making this API request is specifyin
 }
 ```
 
+In the following article we provide in-depth coverage of the syntax for this API request.
+

@@ -126,5 +126,7 @@ Another common mistake is either specifying user accounts instead of trading acc
 ]
 ```
 
-As you can notice, the IsSucceed parameter is in this case set to false.
+As you can notice, the `IsSucceed` parameter is in this case set to false.
+
+In the following article we provide in-depth coverage of the syntax for this API request.
 
