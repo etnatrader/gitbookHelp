@@ -18,7 +18,7 @@ Preview order replace results without sending it to the market
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**accountId**  <br>*required*|Account identifier|integer (int32)||
 |**Path**|**orderId**  <br>*required*|Order internal identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Body**|**body**  <br>*required*|Order modify params|[ModifyOrderResource](#modifyorderresource)||
 
 
