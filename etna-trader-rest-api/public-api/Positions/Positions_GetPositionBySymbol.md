@@ -18,7 +18,7 @@ Retrieve all positions by specified symbol
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**accountId**  <br>*required*|Account identifier|integer (int32)||
 |**Path**|**symbol**  <br>*required*|Security symbol|string||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Query**|**currency**  <br>*optional*|Target currency, optional|string||
 |**Query**|**exchange**  <br>*optional*|Target exchange, optional|string||
 
