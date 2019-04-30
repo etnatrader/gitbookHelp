@@ -16,7 +16,7 @@ Get options with filtering
 |---|---|---|---|---|
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Query**|**desc**  <br>*required*|Is descendant order|boolean||
 |**Query**|**filter**  <br>*optional*|Options filter query|string (String)||
 |**Query**|**pageNumber**  <br>*required*|Target page number|integer (int32)||
