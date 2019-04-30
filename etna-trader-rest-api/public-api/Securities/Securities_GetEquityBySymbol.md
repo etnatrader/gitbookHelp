@@ -17,7 +17,7 @@ Get equity by symbol
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**symbol**  <br>*required*|Symbol, required|string||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Query**|**currency**  <br>*optional*|Target currency, optional|string||
 |**Query**|**exchange**  <br>*optional*|Target exchange, optional|string||
 
