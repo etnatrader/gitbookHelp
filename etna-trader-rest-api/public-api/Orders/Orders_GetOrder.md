@@ -18,7 +18,7 @@ Get order by internal Id
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**accountId**  <br>*required*|Account identifier|integer (int32)||
 |**Path**|**orderId**  <br>*required*|Order identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 
 
 ##### Responses
