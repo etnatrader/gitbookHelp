@@ -164,5 +164,5 @@ Bear in mind that this request requires the ticker symbol of the security \(as d
 }
 ```
 
-The following article demonstrates the syntax for this API request in detail.
+The following article covers the syntax for this API request in detail.
 
