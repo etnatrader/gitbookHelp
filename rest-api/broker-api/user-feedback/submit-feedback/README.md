@@ -101,5 +101,3 @@ Another common mistake when attempting to submit new user feedback for a particu
 
 The following article covers the syntax for this API request in detail.
 
-
-

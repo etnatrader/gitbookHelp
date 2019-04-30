@@ -573,3 +573,5 @@ An attempt to verify a stop-loss order without specifying its price will result 
 }
 ```
 
+The following article covers the syntax for this API request in detail.
+
