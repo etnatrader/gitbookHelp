@@ -27,7 +27,7 @@ Provides paged result of account items collection
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Paged result of account items | [PagingResult\[AccountModel\]](../../definitions/#pagingresult-accountmodel) |
+| **200** | Paged result of account items | [PagingResult\[AccountModel\]]() |
 | **400** | Filter query is invalid or contains unsupported operations | No Content |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |

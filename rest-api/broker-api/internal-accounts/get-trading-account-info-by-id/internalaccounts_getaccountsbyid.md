@@ -23,10 +23,10 @@ Provides account items with specified identifier
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Account model | &lt; [AccountModel](../../definitions/#accountmodel) &gt; array |
+| **200** | Account model | &lt; [AccountModel]() &gt; array |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
-| **404** | Specified account was not found | &lt; [AccountModel](../../definitions/#accountmodel) &gt; array |
+| **404** | Specified account was not found | &lt; [AccountModel]() &gt; array |
 | **422** | Validation error occurred while processing entity | No Content |
 | **500** | Internal server error | No Content |
 

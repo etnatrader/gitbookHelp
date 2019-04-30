@@ -109,7 +109,7 @@ Allocation request result
 | :--- | :--- | :--- |
 | **Description**   _optional_ | Error description | string |
 | **IsSucceed**   _optional_ | Is allocation request was successfully processed | boolean |
-| **Request**   _optional_ |  | [MultilegAllocationRequest](./#multilegallocationrequest) |
+| **Request**   _optional_ |  | [MultilegAllocationRequest]() |
 
 ### AllocationResultInfo\[SimpleAllocationRequest\]
 
@@ -119,7 +119,7 @@ Allocation request result
 | :--- | :--- | :--- |
 | **Description**   _optional_ | Error description | string |
 | **IsSucceed**   _optional_ | Is allocation request was successfully processed | boolean |
-| **Request**   _optional_ |  | [SimpleAllocationRequest](./#simpleallocationrequest) |
+| **Request**   _optional_ |  | [SimpleAllocationRequest]() |
 
 ### AppKey
 
@@ -136,24 +136,24 @@ Allocation request result
 
 | Name | Schema |
 | :--- | :--- |
-| **Securities**   _optional_ | &lt; [SecuritySignature](./#securitysignature) &gt; array |
-| **SecuritiesHistorySettings**   _optional_ | [SecurityHistoryRequestSettings](./#securityhistoryrequestsettings) |
+| **Securities**   _optional_ | &lt; [SecuritySignature]() &gt; array |
+| **SecuritiesHistorySettings**   _optional_ | [SecurityHistoryRequestSettings]() |
 
 ### ChartHistoryModel
 
 | Name | Schema |
 | :--- | :--- |
-| **IndicatorsHistory**   _optional_ | &lt; &lt; [IndicatorHistoryMapModel](./#indicatorhistorymapmodel) &gt; array &gt; array |
-| **SecurityHistory**   _optional_ | &lt; &lt; [TimeSeriesValueCandleMapModel](./#timeseriesvaluecandlemapmodel) &gt; array &gt; array |
-| **SupportResistanceHistory**   _optional_ | [SupportResistanceMapModel](./#supportresistancemapmodel) |
+| **IndicatorsHistory**   _optional_ | &lt; &lt; [IndicatorHistoryMapModel]() &gt; array &gt; array |
+| **SecurityHistory**   _optional_ | &lt; &lt; [TimeSeriesValueCandleMapModel]() &gt; array &gt; array |
+| **SupportResistanceHistory**   _optional_ | [SupportResistanceMapModel]() |
 
 ### ChartHistoryRequestModel
 
 | Name | Schema |
 | :--- | :--- |
-| **IndicatorsHistorySettings**   _optional_ | &lt; [IndicatorHistoryRequestSettings](./#indicatorhistoryrequestsettings) &gt; array |
-| **Security**   _optional_ | [SecuritySignature](./#securitysignature) |
-| **SecurityHistorySettings**   _optional_ | [SecurityHistoryRequestSettings](./#securityhistoryrequestsettings) |
+| **IndicatorsHistorySettings**   _optional_ | &lt; [IndicatorHistoryRequestSettings]() &gt; array |
+| **Security**   _optional_ | [SecuritySignature]() |
+| **SecurityHistorySettings**   _optional_ | [SecurityHistoryRequestSettings]() |
 
 ### ClearingAction
 
@@ -162,7 +162,7 @@ System action
 | Name | Description | Schema |
 | :--- | :--- | :--- |
 | **Disabled**   _optional_ | Is action disabled | boolean |
-| **Handlers**   _optional_ | List of actions handlers | &lt; [ClearingActionHandler](./#clearingactionhandler) &gt; array |
+| **Handlers**   _optional_ | List of actions handlers | &lt; [ClearingActionHandler]() &gt; array |
 | **Name**   _optional_ | System action name | string |
 
 ### ClearingActionHandler
@@ -191,7 +191,7 @@ System action handler
 | **ExecutionInstructions**   _optional_ | Algo order execution instructions. | &lt; string, string &gt; map |
 | **ExpireDate**   _optional_ | Expire date. Assigned by client. | string \(date-time\) |
 | **ExtendedHours**   _optional_ | indicates the extended trading session for GTX order execution \(pre-market session, post-market session\) if empty - than there is no specific requirement for extended session | string |
-| **Legs**   _optional_ | Order legs | &lt; [CreateOrderResource](./#createorderresource) &gt; array |
+| **Legs**   _optional_ | Order legs | &lt; [CreateOrderResource]() &gt; array |
 | **Price**   _optional_ | Price \(not used for some order types\). | number \(double\) |
 | **Quantity**   _optional_ | Quantity. Assigned by client.   **Minimum value** : `0` | number \(double\) |
 | **Side**   _optional_ | Client side comments. | enum \(Buy, Sell, SellShort, BuyToCover\) |
@@ -237,7 +237,7 @@ System action handler
 | **ActionId**   _optional_ | integer \(int32\) |
 | **Description**   _optional_ | string |
 | **KeyboardShortcut**   _optional_ | string |
-| **Parameters**   _optional_ | &lt; [HotkeyParameterMapModel](./#hotkeyparametermapmodel) &gt; array |
+| **Parameters**   _optional_ | &lt; [HotkeyParameterMapModel]() &gt; array |
 
 ### EquityResource
 

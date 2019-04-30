@@ -9,13 +9,13 @@ description: Retrieve security's information by providing the company's ticker s
 This GET endpoint enables you to retrieve detailed information about a collection of securities with a common keyword in their ticker symbol. Unlike the [regular security information method](../../securities/get-securitys-info-by-mask/), this method provides a more comprehensive set of information about a particular security. 
 
 {% hint style="warning" %}
-In order to retrieve information about a particular security, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to retrieve information about a particular security, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are six required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **symbol** \(path\). This is the keyword that will be queried in all securities' ticker symbol field.
 5. **pageSize** \(query\). This field indicates the number of securities that needs to be retrieved per page.

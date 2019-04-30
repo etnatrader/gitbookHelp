@@ -8,7 +8,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [AccountModel](./#accountmodel) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [AccountModel]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[FeedbackModel\]
@@ -17,7 +17,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [FeedbackModel](./#feedbackmodel) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [FeedbackModel]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[HotkeyMapModel\]
@@ -26,7 +26,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [HotkeyMapModel](./#hotkeymapmodel) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [HotkeyMapModel]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[IList\[UserModel\]\]
@@ -35,7 +35,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; &lt; [UserModel](./#usermodel) &gt; array &gt; array |
+| **Result**   _optional_ | Result collection | &lt; &lt; [UserModel]() &gt; array &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[InternalSecurityResource\]
@@ -44,7 +44,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [InternalSecurityResource](./#internalsecurityresource) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [InternalSecurityResource]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[LocalizationResourceMapModel\]
@@ -53,7 +53,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [LocalizationResourceMapModel](./#localizationresourcemapmodel) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [LocalizationResourceMapModel]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[PositionResource\]
@@ -62,7 +62,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [PositionResource](./#positionresource) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [PositionResource]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[PriceAlertInfoModel\]
@@ -71,7 +71,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [PriceAlertInfoModel](./#pricealertinfomodel) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [PriceAlertInfoModel]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[TransactionMapModel\]
@@ -80,7 +80,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [TransactionMapModel](./#transactionmapmodel) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [TransactionMapModel]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PagingResult\[WebActionMapModel\]
@@ -89,7 +89,7 @@
 | :--- | :--- | :--- |
 | **NextPageLink**   _optional_ | Next page | string |
 | **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [WebActionMapModel](./#webactionmapmodel) &gt; array |
+| **Result**   _optional_ | Result collection | &lt; [WebActionMapModel]() &gt; array |
 | **TotalCount**   _optional_ | Items total count | integer \(int32\) |
 
 ### PaymentInfoModel
@@ -122,7 +122,7 @@ Editable policy
 | **Date**   _optional_ | string \(date-time\) |
 | **Id**   _optional_ | integer \(int32\) |
 | **Name**   _optional_ | string |
-| **Rules**   _optional_ | &lt; [PolicyRuleInfoModel](./#policyruleinfomodel) &gt; array |
+| **Rules**   _optional_ | &lt; [PolicyRuleInfoModel]() &gt; array |
 
 ### PolicyRuleEditableModel
 

@@ -2,8 +2,6 @@
 
 ### Single-Factor Authentication 
 
-{% page-ref page="../authentication/" %}
-
 {% tabs %}
 {% tab title="Python" %}
 {% code-tabs %}

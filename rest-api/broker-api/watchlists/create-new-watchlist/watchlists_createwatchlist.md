@@ -19,16 +19,16 @@ Creates new watchlist for specified user. If parameter includeSecurities set to 
 | **Path** | **userId**   _required_ | User identifier | integer \(int32\) |  |
 | **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
 | **Query** | **resultIncludeSecurities**   _required_ | Include list of wathlist securities in result model | boolean |  |
-| **Body** | **body**   _required_ | Watchlist identifier | [CreateWatchlistModel](../../definitions/#createwatchlistmodel) |  |
+| **Body** | **body**   _required_ | Watchlist identifier | [CreateWatchlistModel]() |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Created watchlist | [WatchlistModel](../../definitions/#watchlistmodel) |
+| **200** | Created watchlist | [WatchlistModel]() |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
-| **409** | Watchlist with same name already exists or specified securities can not be added | [WatchlistModel](../../definitions/#watchlistmodel) |
+| **409** | Watchlist with same name already exists or specified securities can not be added | [WatchlistModel]() |
 | **422** | Validation error occurred while processing entity | No Content |
 | **500** | Internal server error | No Content |
 

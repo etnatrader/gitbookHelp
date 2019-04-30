@@ -20,7 +20,7 @@
 | **BuildVersion**   _optional_ | string |
 | **Comment**   _optional_ | string |
 | **Contacts**   _optional_ | string |
-| **Files**   _optional_ | &lt; [IAttachItem](./#iattachitem) &gt; array |
+| **Files**   _optional_ | &lt; [IAttachItem]() &gt; array |
 | **Id**   _optional_ | integer \(int32\) |
 | **Login**   _optional_ | string |
 | **Subject**   _optional_ | string |
@@ -43,9 +43,9 @@ Formula model
 | Name | Schema |
 | :--- | :--- |
 | **DefaultFileName**   _optional_ | string |
-| **Indicators**   _optional_ | &lt; [HistoricalTradeDataExportIndicatorModel](./#historicaltradedataexportindicatormodel) &gt; array |
+| **Indicators**   _optional_ | &lt; [HistoricalTradeDataExportIndicatorModel]() &gt; array |
 | **Securities**   _optional_ | &lt; integer \(int32\) &gt; array |
-| **TimeFrame**   _optional_ | [TimeFrameModel](./#timeframemodel) |
+| **TimeFrame**   _optional_ | [TimeFrameModel]() |
 
 ### HistoricalTradeDataExportIndicatorModel
 
@@ -62,11 +62,11 @@ Formula model
 | :--- | :--- |
 | **ActionId**   _optional_ | integer \(int32\) |
 | **ActionName**   _optional_ | string |
-| **ActionResource**   _optional_ | [WebActionMapModel](./#webactionmapmodel) |
+| **ActionResource**   _optional_ | [WebActionMapModel]() |
 | **Description**   _optional_ | string |
 | **Id**   _optional_ | integer \(int32\) |
 | **KeyboardShortcut**   _optional_ | string |
-| **Parameters**   _optional_ | &lt; [HotkeyParameterMapModel](./#hotkeyparametermapmodel) &gt; array |
+| **Parameters**   _optional_ | &lt; [HotkeyParameterMapModel]() &gt; array |
 
 ### HotkeyParameterMapModel
 
@@ -235,7 +235,7 @@ Modify order parameters
 | **ExecutionInstructions**   _optional_ | Algo order execution instructions. | &lt; string, string &gt; map |
 | **ExpireDate**   _optional_ | Expire date. Assigned by client. | string \(date-time\) |
 | **Id**   _required_ | Internal order id.   **Minimum value** : `1`   **Maximum value** : `2147483647` | integer \(int32\) |
-| **Legs**   _optional_ | Order legs | &lt; [ModifyOrderResource](./#modifyorderresource) &gt; array |
+| **Legs**   _optional_ | Order legs | &lt; [ModifyOrderResource]() &gt; array |
 | **Price**   _optional_ | Price \(not used for some order types\). | number \(double\) |
 | **Quantity**   _optional_ | Quantity. Assigned by client.   **Minimum value** : `0` | number \(double\) |
 | **StopPrice**   _optional_ | Stop price \(used for stop orders\). | number \(double\) |
@@ -270,7 +270,7 @@ Modify order parameters
 | **Commission**   _optional_ | number \(double\) |
 | **FromAccount**   _optional_ | string |
 | **Instructions**   _optional_ | &lt; string, string &gt; map |
-| **Legs**   _optional_ | &lt; [AllocationLegInfo](./#allocationleginfo) &gt; array |
+| **Legs**   _optional_ | &lt; [AllocationLegInfo]() &gt; array |
 | **ToAccount**   _optional_ | string |
 
 ### OptionExpirationResource
@@ -338,7 +338,7 @@ Modify order parameters
 | **LastPrice**   _optional_ | Last quote. Assigned by executor. | number \(double\) |
 | **LastQuantity**   _optional_ | Last transaction executed quantity. Assigned by executor. | number \(double\) |
 | **LeavesQuantity**   _optional_ | Unfilled quantity. Assigned by executor. | number \(double\) |
-| **Legs**   _optional_ | Multileg order legs. Assigned by client. | &lt; [OrderResource](./#orderresource) &gt; array |
+| **Legs**   _optional_ | Multileg order legs. Assigned by client. | &lt; [OrderResource]() &gt; array |
 | **OrigClientId**   _optional_ | Client order id \(ClOrdID\). Assigned by OMS. | string |
 | **ParentClientId**   _optional_ | Client order id \(ClOrdID\) of parent order in a case of mleg order. | string |
 | **ParentId**   _optional_ | Parent order id. Assigned by OMS. | integer \(int32\) |

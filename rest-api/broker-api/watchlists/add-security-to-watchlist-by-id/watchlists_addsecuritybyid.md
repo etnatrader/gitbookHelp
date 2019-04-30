@@ -25,7 +25,7 @@ Adds security to watchlist by security Id.
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Changed watchlist with securities | [WatchlistModel](../../definitions/#watchlistmodel) |
+| **200** | Changed watchlist with securities | [WatchlistModel]() |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **409** | Conflict | No Content |

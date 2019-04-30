@@ -23,7 +23,7 @@ Get user address
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | User address | [UserAddress](../../definitions/#useraddress) |
+| **200** | User address | [UserAddress]() |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **409** | Conflict occured while retrieving address | No Content |

@@ -23,7 +23,7 @@ Web API notification service subscription representation
 
 | Name | Schema |
 | :--- | :--- |
-| **Levels**   _optional_ | &lt; [LevelInfoMapModel](./#levelinfomapmodel) &gt; array |
+| **Levels**   _optional_ | &lt; [LevelInfoMapModel]() &gt; array |
 | **ResistancePrice**   _optional_ | number \(double\) |
 | **SupportPrice**   _optional_ | number \(double\) |
 
@@ -59,7 +59,7 @@ Web API notification service subscription representation
 | **AccountId**   _optional_ | integer \(int32\) |
 | **Date**   _optional_ | string \(date-time\) |
 | **Description**   _optional_ | string |
-| **Fee**   _optional_ | [FeeModel](./#feemodel) |
+| **Fee**   _optional_ | [FeeModel]() |
 | **Id**   _optional_ | integer \(int32\) |
 | **IsDayTrade**   _optional_ | boolean |
 | **LeavesQuantity**   _optional_ | number \(double\) |
@@ -80,7 +80,7 @@ Web API notification service subscription representation
 
 | Name | Schema |
 | :--- | :--- |
-| **m\_Item1**   _optional_ | [PhoneNumberModel](./#phonenumbermodel) |
+| **m\_Item1**   _optional_ | [PhoneNumberModel]() |
 | **m\_Item2**   _optional_ | integer \(int32\) |
 
 ### UserAccountModel
@@ -144,7 +144,7 @@ Web API notification service subscription representation
 | Name | Schema |
 | :--- | :--- |
 | **AccountAccessType**   _optional_ | enum \(Full, ReadOnly, ClosePositionsOnly\) |
-| **UserModel**   _optional_ | [UserInfoModel](./#userinfomodel) |
+| **UserModel**   _optional_ | [UserInfoModel]() |
 
 ### VerifyOrderModel
 
@@ -158,7 +158,7 @@ Web API notification service subscription representation
 | **IsSuccessful**   _optional_ | Result. | boolean |
 | **MarginChange**   _optional_ | Expected margin value changed. | number \(double\) |
 | **NetCost**   _optional_ | The net cost of the order. | number \(double\) |
-| **Quotes**   _optional_ | Order validation quotes. | &lt; [QuoteModel](./#quotemodel) &gt; array |
+| **Quotes**   _optional_ | Order validation quotes. | &lt; [QuoteModel]() &gt; array |
 
 ### WatchlistModel
 
@@ -170,7 +170,7 @@ Web API notification service subscription representation
 | **ModifyDate**   _optional_ | string \(date-time\) |
 | **Name**   _optional_ | string |
 | **ReadOnly**   _optional_ | boolean |
-| **SecurityList**   _optional_ | &lt; [SecurityModel](./#securitymodel) &gt; array |
+| **SecurityList**   _optional_ | &lt; [SecurityModel]() &gt; array |
 | **Source**   _optional_ | string |
 | **Type**   _optional_ | enum \(UserList, SystemList, Snapshot\) |
 
@@ -182,7 +182,7 @@ Web API notification service subscription representation
 | **Description**   _optional_ | string |
 | **Id**   _optional_ | integer \(int32\) |
 | **Name**   _optional_ | string |
-| **Parameters**   _optional_ | &lt; [WebActionParameterMapModel](./#webactionparametermapmodel) &gt; array |
+| **Parameters**   _optional_ | &lt; [WebActionParameterMapModel]() &gt; array |
 
 ### WebActionModifyModel
 

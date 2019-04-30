@@ -1,6 +1,6 @@
 # What is ETNA Trader?
 
-ETNA Trader is a cross-platform white-label web trading application for online broker-dealers looking for an all-in-one solution to operate a brokerage business online. 
+ETNA Trader is a cross-platform white-label web trading application for online broker-dealers looking for an all-in-one solution to operate a brokerage business online.
 
 ETNA Trader consists of several components: white label HTML5 frontend, native mobile application for iOS and Android, middle and back office and trading APIs.
 

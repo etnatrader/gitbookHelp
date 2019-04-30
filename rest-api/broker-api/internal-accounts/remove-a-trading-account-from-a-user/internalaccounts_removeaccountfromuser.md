@@ -24,7 +24,7 @@ Removes account with specified identifier from user with specified identifier
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | User models and account access types | &lt; [UserToAccountRelationModel](../../definitions/#usertoaccountrelationmodel) &gt; array |
+| **200** | User models and account access types | &lt; [UserToAccountRelationModel]() &gt; array |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |
