@@ -17,7 +17,7 @@ Provides account history items specified by query string
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**accountId**  <br>*required*|Account identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Query**|**endDate**  <br>*required*|End date in utc ticks|string (date-time)||
 |**Query**|**startDate**  <br>*required*|Start date in utc ticks|string (date-time)||
 |**Query**|**step**  <br>*required*|Account value items count per request|integer (int32)||
