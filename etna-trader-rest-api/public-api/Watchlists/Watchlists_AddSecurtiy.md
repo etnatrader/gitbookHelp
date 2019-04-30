@@ -17,7 +17,7 @@ Adds security to watchlist by security symbol and exchange.
 |**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
 |**Header**|**Et-App-Key**  <br>*required*|Application key|string||
 |**Path**|**userId**  <br>*required*|User identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1.0"`|
+|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
 |**Path**|**watchlistId**  <br>*required*|Watchlist identifier|integer (int32)||
 |**Body**|**body**  <br>*required*|Security symbol and exchange|[SecuritySignature](#securitysignature)||
 
