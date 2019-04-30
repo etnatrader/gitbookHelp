@@ -10,7 +10,7 @@ With ETNA Trader you can:
 
 * Trade stocks, options \(including multi-legs\), ETFs, Forex with cryptocurrencies coming soon.
 * Customize layout and create unlimited widgets and tabs making it "a trading browser within a web browser" 
-* Analyze markets with streaming market data \(LI and LII\) and charts including technical indicators and drawing tools
+* Analyze markets with streaming market data \(LI and LII\) and charts, including technical indicators and drawing tools
 * Option Chains with built-in probability calculator
 * Monitor orders, positions and account balances in real time
 * Use platform either in paper trading/simulated trading mode or in real-time trading.
