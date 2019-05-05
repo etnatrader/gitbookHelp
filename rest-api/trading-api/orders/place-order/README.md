@@ -259,7 +259,8 @@ The body of this request represents the information about the to-be-created orde
   "Price": 190,
   "Exchange": "XNAS",
   "ExtendedHours": "REGPOST",
-  "ExecutionInstructions" : {"Commission": "0.5"}
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging $1 cent for all 100 stocks 
 }
 ```
 
@@ -276,7 +277,8 @@ The body of this request represents the information about the to-be-created orde
   "Quantity": 445,
   "Exchange": "XNAS",
   "ExtendedHours": "PRE",
-  "ExecutionInstructions" : {"Commission": "0.5"}
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging $1 cent for all 100 stocks 
 }
 ```
 
@@ -294,7 +296,8 @@ The body of this request represents the information about the to-be-created orde
   "StopPrice" : 200,
   "Exchange": "XNAS",
   "ExtendedHours": "REG",
-  "ExecutionInstructions" : {"Commission": "0.5"}
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging $1 cent for all 100 stocks 
 }
 ```
 
@@ -313,7 +316,8 @@ The body of this request represents the information about the to-be-created orde
   "ExtendedHours": "REGPOST",
    "Price" : 201,
    "StopPrice" : 200,
-   "ExecutionInstructions" : {"Commission": "0.5"}
+   "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging $1 cent for all 100 stocks 
 }
 ```
 
