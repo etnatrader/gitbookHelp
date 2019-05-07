@@ -7,28 +7,28 @@ POST /token
 
 
 ##### Description
-Authentication method that provides token to access API.
+This API endpoint returns the authentication token that is used in all other API requests.
 
 
 ##### Parameters
 
 |Type|Name|Description|Schema|Default|
 |---|---|---|---|---|
-|**Header**|**Authorization**  <br>*optional*|Authorization token, required on every step except first|string|`""`|
-|**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Header**|**Password**  <br>*optional*|User password, required|string|`"testpassword"`|
-|**Header**|**PinCode**  <br>*optional*|User pin code, on demand|string|`""`|
-|**Header**|**Username**  <br>*optional*|User login, required|string|`"testusername"`|
-|**Header**|**VerificationCode**  <br>*optional*|User verification code, on demand|string|`""`|
+|**Header**|**Authorization**  <br>*optional*|This is the authorization token that must be provided in the header of all requests except this one.|string|`""`|
+|**Header**|**Et-App-Key**  <br>*required*|This is your app’s unique key that can be retrieved from the BO Companies widget in ETNA Trader.|string||
+|**Header**|**Password**  <br>*optional*|The password of the user on whose behalf the authentication is being performed.|string|`"testpassword"`|
+|**Header**|**PinCode**  <br>*optional*|This is the user’s pincode.|string|`""`|
+|**Header**|**Username**  <br>*optional*|This is the name of the user on whose behalf the authentication is being performed.|string|`"testusername"`|
+|**Header**|**VerificationCode**  <br>*optional*|This is the verification code sent by email or SMS (the second step of 2-FA).|string|`""`|
 
 
 ##### Responses
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**200**|Authentication complete and token is ready to use.|No Content|
-|**202**|Several authentication steps are passed, but server is expecting additional parameters. Use a token from response and provide correct additional data to complete authentication procedure.|No Content|
-|**401**|Authentication parameters determined as incorrect.|No Content|
+|**200**|The authentication is complete and the provided token can be used in other API requests.|No Content|
+|**202**|Several authentication steps have been taken, but the server is expecting additional parameters (like the verification code). Use the token from the response and provide the required additional parameters to complete the authentication procedure.|No Content|
+|**401**|The access level of the provided authorization token is not sufficient to perform this operation.|No Content|
 
 
 ##### Produces
