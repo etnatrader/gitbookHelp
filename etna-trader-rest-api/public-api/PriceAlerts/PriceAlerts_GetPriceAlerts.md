@@ -7,20 +7,20 @@ GET /v{version}/users/{userId}/pricealerts
 
 
 ##### Description
-Provides price alerts collection related to specified user
+This API endpoint enables you to retrieve all price alerts of a specific user.
 
 
 ##### Parameters
 
 |Type|Name|Description|Schema|Default|
 |---|---|---|---|---|
-|**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
-|**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Path**|**userId**  <br>*required*|User identifier|integer (int32)||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
-|**Query**|**isDesc**  <br>*required*|Sorting direction. Desc if true, otherwise is asc|boolean||
-|**Query**|**pageNumber**  <br>*required*|Page number|integer (int32)||
-|**Query**|**pageSize**  <br>*required*|Page size|integer (int32)||
+|**Header**|**Authorization**  <br>*required*|This is the authorization token that you retrieved from the first endpoint (/token).|string||
+|**Header**|**Et-App-Key**  <br>*required*|This is your app’s unique key that can be retrieved from the BO Companies widget in ETNA Trader.|string||
+|**Path**|**userId**  <br>*required*|This is the internal identifier of the user whose price alerts must be retrieved.|integer (int32)||
+|**Path**|**version**  <br>*required*|This is the version of the API. Unless you have multiple versions of ETNA Trader’s API deployed in your environment, leave it at 1.0.|string|`"1"`|
+|**Query**|**isDesc**  <br>*required*|This is a boolean field that indicates if the returned price alerts should be sorted in  descending (true) or ascending (false) order.|boolean||
+|**Query**|**pageNumber**  <br>*required*|This is the page number (all price alerts are split into pages).|integer (int32)||
+|**Query**|**pageSize**  <br>*required*|This is the number of price alerts that should be retrieved from the specified page.|integer (int32)||
 |**Query**|**sortBy**  <br>*required*|Sorting field|string||
 
 
@@ -28,10 +28,10 @@ Provides price alerts collection related to specified user
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**200**|Price alerts collection|[PagingResult[PriceAlertInfoModel]](#pagingresult-pricealertinfomodel)|
-|**401**|Authorization has been denied for this request.|No Content|
-|**403**|Application key is not defined or does not exist|No Content|
-|**422**|Validation error occurred while processing entity|No Content|
+|**200**|Successful request, JSON data containing the user’s price alerts is returned.|[PagingResult[PriceAlertInfoModel]](#pagingresult-pricealertinfomodel)|
+|**401**|The access level of the provided authorization token is not sufficient to perform this operation.|No Content|
+|**403**|The provided Et-App-Key is incorrect.|No Content|
+|**422**|A validation error occurred while processing the request.|No Content|
 |**500**|Internal server error|No Content|
 
 
