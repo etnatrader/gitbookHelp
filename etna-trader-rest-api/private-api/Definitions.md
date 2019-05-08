@@ -146,65 +146,6 @@ Allocation request result
 |**Type**  <br>*optional*  <br>*read-only*|enum (FrontOffice, Mobile, Custom)|
 
 
-<a name="batchmapmodel"></a>
-### BatchMapModel
-
-|Name|Schema|
-|---|---|
-|**Archived**  <br>*optional*|boolean|
-|**CreatedDate**  <br>*optional*|string (date-time)|
-|**Deleted**  <br>*optional*|boolean|
-|**Description**  <br>*optional*|string|
-|**Executed**  <br>*optional*|integer (int32)|
-|**ExecutionDate**  <br>*optional*|string (date-time)|
-|**Failed**  <br>*optional*|integer (int32)|
-|**Id**  <br>*optional*|integer (int32)|
-|**ModifiedDate**  <br>*optional*|string (date-time)|
-|**Name**  <br>*optional*|string|
-|**Status**  <br>*optional*|string|
-|**TotalCount**  <br>*optional*|integer (int32)|
-|**Type**  <br>*optional*|string|
-
-
-<a name="batchordermapmodel"></a>
-### BatchOrderMapModel
-
-|Name|Schema|
-|---|---|
-|**AccountType**  <br>*optional*|string|
-|**Action**  <br>*optional*|string|
-|**BatchId**  <br>*optional*|integer (int32)|
-|**Comment**  <br>*optional*|string|
-|**Id**  <br>*optional*|integer (int32)|
-|**OrderType**  <br>*optional*|string|
-|**Price**  <br>*optional*|number (double)|
-|**Quantity**  <br>*optional*|number (double)|
-|**Reason**  <br>*optional*|string|
-|**Status**  <br>*optional*|string|
-|**Symbol**  <br>*optional*|string|
-|**TargetAccount**  <br>*optional*|string|
-
-
-<a name="batchtradeallocationmapmodel"></a>
-### BatchTradeAllocationMapModel
-
-|Name|Schema|
-|---|---|
-|**AccountType**  <br>*optional*|string|
-|**Action**  <br>*optional*|string|
-|**BatchId**  <br>*optional*|integer (int32)|
-|**Comment**  <br>*optional*|string|
-|**Commission**  <br>*optional*|number (double)|
-|**Id**  <br>*optional*|integer (int32)|
-|**Price**  <br>*optional*|number (double)|
-|**Quantity**  <br>*optional*|number (double)|
-|**Reason**  <br>*optional*|string|
-|**SourceAccount**  <br>*optional*|string|
-|**Status**  <br>*optional*|string|
-|**Symbol**  <br>*optional*|string|
-|**TargetAccount**  <br>*optional*|string|
-
-
 <a name="chartcomparerequestmodel"></a>
 ### ChartCompareRequestModel
 
