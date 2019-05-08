@@ -79,7 +79,7 @@
     * [List User's Accounts](rest-api/trading-api/user-accounts/list-users-accounts/README.md)
       * [Endpoint Syntax](etna-trader-rest-api/public-api/UserAccounts/UserAccounts_GetUserAccounts.md)
   * [Orders](rest-api/trading-api/orders/README.md)
-    * [Verify an     Order Placement](rest-api/trading-api/orders/validate-order-placement/README.md)
+    * [Verify an Order Placement](rest-api/trading-api/orders/validate-order-placement/README.md)
       * [Endpoint Syntax](etna-trader-rest-api/public-api/Orders/Orders_PreviewCreateOrder.md)
     * [Place a New Order](rest-api/trading-api/orders/place-order/README.md)
       * [Endpoint Syntax](etna-trader-rest-api/public-api/Orders/Orders_PlaceOrder.md)
