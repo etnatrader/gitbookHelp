@@ -87,7 +87,7 @@
       * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_PreviewModifyOrder.md)
     * [Replace Order](rest-api/trading-api/orders/replace-order/README.md)
       * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_ReplaceOrder.md)
-    * [Cancel Order](rest-api/trading-api/orders/cancel-order/README.md)
+    * [Cancel an Order](rest-api/trading-api/orders/cancel-order/README.md)
       * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_CancelOrder.md)
     * [Get Order's Info](rest-api/trading-api/orders/get-orders-info/README.md)
       * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_GetOrder.md)
