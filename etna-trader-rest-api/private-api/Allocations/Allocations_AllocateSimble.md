@@ -7,28 +7,28 @@ PUT /v{version}/allocations/simple
 
 
 ##### Description
-Executes single trade allocation request
+This API endpoint enables you to create and send an allocation request.
 
 
 ##### Parameters
 
 |Type|Name|Description|Schema|Default|
 |---|---|---|---|---|
-|**Header**|**Authorization**  <br>*required*|Bearer type token string|string||
-|**Header**|**Et-App-Key**  <br>*required*|Application key|string||
-|**Path**|**version**  <br>*required*|The requested API version|string|`"1"`|
-|**Body**|**body**  <br>*required*|Allocation request model|[SimpleAllocationRequest](#simpleallocationrequest)||
+|**Header**|**Authorization**  <br>*required*|This is the authorization token that you retrieved from the first endpoint (/token).|string||
+|**Header**|**Et-App-Key**  <br>*required*|This is your app’s unique key that can be retrieved from the BO Companies widget in ETNA Trader.|string||
+|**Path**|**version**  <br>*required*|This is the version of the API. Unless you have multiple versions of ETNA Trader’s API deployed in your environment, leave it at 1.0.|string|`"1"`|
+|**Body**|**body**  <br>*required*|This is a JSON dictionary that contains information about the new allocation.|[SimpleAllocationRequest](#simpleallocationrequest)||
 
 
 ##### Responses
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**200**|Succeeded allocation request result|[AllocationResultInfo[SimpleAllocationRequest]](#allocationresultinfo-simpleallocationrequest)|
-|**401**|Authorization has been denied for this request.|No Content|
-|**403**|Application key is not defined or does not exist|No Content|
+|**200**|Successful request, JSON data is returned, containing allocation request details along with one extra parameter — IsSucceed — which indicates if the allocation has been successfully carried out.|[AllocationResultInfo[SimpleAllocationRequest]](#allocationresultinfo-simpleallocationrequest)|
+|**401**|The access level of the provided authorization token is not sufficient to perform this operation.|No Content|
+|**403**|The provided Et-App-Key is incorrect.|No Content|
 |**409**|Failed allocation request result|[AllocationResultInfo[SimpleAllocationRequest]](#allocationresultinfo-simpleallocationrequest)|
-|**422**|Validation error occurred while processing entity|No Content|
+|**422**|A validation error occurred while processing the request.|No Content|
 |**500**|Internal server error|No Content|
 
 
