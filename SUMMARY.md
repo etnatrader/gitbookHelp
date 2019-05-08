@@ -67,96 +67,97 @@
   * [Overview](rest-api/trading-api/overview.md)
   * [Authentication](rest-api/trading-api/authentication/README.md)
     * [Requesting Tokens](rest-api/trading-api/authentication/requesting-tokens/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Login/Get_token.md)
   * [Managing Users](rest-api/trading-api/managing-users/README.md)
     * [Get User's Info](rest-api/trading-api/managing-users/get-users-info/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Users/Users_GetUserInfo.md)
   * [User Accounts](rest-api/trading-api/user-accounts/README.md)
     * [Get Account's Balance Info](rest-api/trading-api/user-accounts/get-accounts-balance-info/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/UserAccounts/UserAccounts_GetAccountBalanceInfo.md)
     * [Get Account's History](rest-api/trading-api/user-accounts/get-accounts-history/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/UserAccounts/UserAccounts_GetAccountHistory.md)
     * [List User's Accounts](rest-api/trading-api/user-accounts/list-users-accounts/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/UserAccounts/UserAccounts_GetUserAccounts.md)
   * [Orders](rest-api/trading-api/orders/README.md)
     * [Verify Order Placement](rest-api/trading-api/orders/validate-order-placement/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_PreviewCreateOrder.md)
     * [Place Order](rest-api/trading-api/orders/place-order/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_PlaceOrder.md)
     * [Verify Order Replacement](rest-api/trading-api/orders/validate-order-replacement/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_PreviewModifyOrder.md)
     * [Replace Order](rest-api/trading-api/orders/replace-order/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_ReplaceOrder.md)
     * [Cancel Order](rest-api/trading-api/orders/cancel-order/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_CancelOrder.md)
     * [Get Order's Info](rest-api/trading-api/orders/get-orders-info/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_GetOrder.md)
     * [Get Filtered Orders](rest-api/trading-api/orders/get-filtered-orders/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Orders/Orders_GetOrders.md)
   * [Positions](rest-api/trading-api/positions/README.md)
     * [Get User's Positions](rest-api/trading-api/positions/get-users-positions/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Positions/Positions_GetPositions.md)
     * [Get User's Positions in a Security](rest-api/trading-api/positions/get-users-positions-in-security/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Positions/Positions_GetPositionBySymbol.md)
   * [Securities](rest-api/trading-api/securities/README.md)
     * [Get Equity Info by Internal ID](rest-api/trading-api/securities/get-securitys-info-by-internal-id/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Securities/Securities_GetEquityById.md)
     * [Get Equity Info by Ticker](rest-api/trading-api/securities/get-securitys-info-by-ticker/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Securities/Securities_GetEquityBySymbol.md)
     * [Get Equity Info by Mask](rest-api/trading-api/securities/get-securitys-info-by-mask/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Securities/Securities_GetEquitiesByMask.md)
     * [Get Filtered Equities](rest-api/trading-api/securities/get-filtered-equities/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Securities/Securities_GetEquities.md)
     * [Get Option Info by Internal ID](rest-api/trading-api/securities/get-option-info-by-internal-id/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Securities/Securities_GetOptionById.md)
     * [Get Option Info by Ticker](rest-api/trading-api/securities/get-option-info-by-ticker/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Securities/Securities_GetEquityBySymbol.md)
     * [Get Options Expiration Dates](rest-api/trading-api/securities/get-options-expiration-dates/README.md)
-    
+      * [Syntax](etna-trader-rest-api/public-api/Securities/Securities_GetOptionsExpirations.md)
     * [Get Filtered Options](rest-api/trading-api/securities/get-filtered-options/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Securities/Securities_GetOptions.md)
   * [Watchlists](rest-api/trading-api/watchlists/README.md)
     * [Add Security to Watchlist by ID](rest-api/trading-api/watchlists/add-security-to-watchlist-by-id/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Watchlists/Watchlists_AddSecurityById.md)
     * [Add Security to Watchlist by Ticker](rest-api/trading-api/watchlists/add-security-to-watchlist-by-ticker/README.md)
-     
+      * [Syntax](retna-trader-rest-api/public-api/Watchlists/Watchlists_AddSecurtiy.md)
     * [Create New Watchlist](rest-api/trading-api/watchlists/create-new-watchlist/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Watchlists/Watchlists_CreateWatchlist.md)
     * [Delete Watchlist](rest-api/trading-api/watchlists/delete-watchlist/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Watchlists/Watchlists_DeleteWatchlist.md)
     * [Get Specific Watchlist](rest-api/trading-api/watchlists/get-specific-watchlist/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Watchlists/Watchlists_GetWatchlist.md)
     * [Get User's Watchlists](rest-api/trading-api/watchlists/get-users-watchlist/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Watchlists/Watchlists_GetUserWatchlists.md)
     * [Remove Security From Watchlist by ID](rest-api/trading-api/watchlists/remove-security-from-watchlist-by-id/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Watchlists/Watchlists_RemoveSecurityById.md)
     * [Remove Security from Watchlist by Ticker](rest-api/trading-api/watchlists/remove-security-from-watchlist-by-ticker/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Watchlists/Watchlists_RemoveSecurity.md)
     * [Rename Watchlist](rest-api/trading-api/watchlists/rename-watchlist/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/Watchlists/Watchlists_EditWatchlistName.md)
   * [Price Alerts](rest-api/trading-api/price-alerts/README.md)
     * [Create Price Alert](rest-api/trading-api/price-alerts/create-price-alert/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/PriceAlerts/PriceAlerts_CreatePriceAlert.md)
     * [Delete Price Alert](rest-api/trading-api/price-alerts/delete-price-alert/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/PriceAlerts/PriceAlerts_DeletePriceAlert.md)
     * [Get Specific Alert](rest-api/trading-api/price-alerts/get-specific-alert/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/PriceAlerts/PriceAlerts_GetPriceAlert.md)
     * [Get User's Price Alerts](rest-api/trading-api/price-alerts/get-users-price-alerts/README.md)
-     
+      * [Syntax](etna-trader-rest-api/public-api/PriceAlerts/PriceAlerts_GetPriceAlerts.md)
     * [Modify Price Alert](rest-api/trading-api/price-alerts/modify-price-alert/README.md)
-      
+      * [Syntax](etna-trader-rest-api/public-api/PriceAlerts/PriceAlerts_ModifyPriceAlertTrigger.md)
   * [Historical Data](rest-api/trading-api/historical-data/README.md)
     * [Get Chart Data](rest-api/trading-api/historical-data/get-chart-data/README.md)
-      
+      * [Syntax](etna-trader-rest-api/public-api/HistoricalTradeData/HistoricalTradeData_GetChartCompareData.md)
     * [Get Candles and Indicators for a Security](rest-api/trading-api/historical-data/get-candles-and-indicators-for-charts/README.md)
-      
+      * [Syntax](etna-trader-rest-api/public-api/HistoricalTradeData/HistoricalTradeData_GetChartBasicData.md)
     * [Get Chart Data in the Excel Format](rest-api/trading-api/historical-data/get-chart-data-in-the-excel-format/README.md)
-      
+      * [Syntax](etna-trader-rest-api/public-api/HistoricalTradeData/HistoricalTradeData_ExportToExcel.md)
   * [User Feedback](rest-api/trading-api/feedback/README.md)
     * [Submit Feedback](rest-api/trading-api/feedback/submit-feedback/README.md)
-      
+      * [Syntax](etna-trader-rest-api/public-api/Feedbacks/Feedbacks_SubmitFeedback.md)
   * [Managing Transactions](rest-api/trading-api/managing-transactions/README.md)
     * [Get Transactions](rest-api/trading-api/managing-transactions/get-transactions/README.md)
+      * [Syntax](etna-trader-rest-api/public-api/Transactions/Transactions_GetActionsPage.md)
   * [Code Samples](rest-api/trading-api/code-samples/README.md)
     * [Basic Authentication](rest-api/trading-api/code-samples/basic-authentication.md)
     * [Two-Factor Autentication](rest-api/trading-api/code-samples/two-factor-autentication.md)
@@ -172,151 +173,153 @@
   * [Overview](rest-api/broker-api/untitled.md)
   * [Authentication](rest-api/broker-api/authentication/README.md)
     * [Requesting Tokens](rest-api/broker-api/authentication/requesting-tokens/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Login/Get_token.md)
   * [Positions](rest-api/broker-api/positions/README.md)
     * [Get User's Positions](rest-api/broker-api/positions/get-users-positions/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Positions/Positions_GetPositions.md)
     * [Get User's Positions in a Security](rest-api/broker-api/positions/get-users-positions-in-a-security/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Positions/Positions_GetPositionBySymbol.md)
   * [Price Alerts](rest-api/broker-api/price-alerts/README.md)
     * [Create Price Alert](rest-api/broker-api/price-alerts/create-price-alert/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/PriceAlerts/PriceAlerts_CreatePriceAlert.md)
     * [Delete Price Alert](rest-api/broker-api/price-alerts/delete-price-alert/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/PriceAlerts/PriceAlerts_DeletePriceAlert.md)
     * [Get Specific Alert](rest-api/broker-api/price-alerts/get-specific-alert/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/PriceAlerts/PriceAlerts_GetPriceAlert.md)
     * [Get User's Price Alerts](rest-api/broker-api/price-alerts/get-users-price-alerts/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/PriceAlerts/PriceAlerts_GetPriceAlerts.md)
     * [Modify Price Alert](rest-api/broker-api/price-alerts/modify-price-alert/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/PriceAlerts/PriceAlerts_ModifyPriceAlertTrigger.md)
   * [Managing Users](rest-api/broker-api/managing-users/README.md)
     * [Get User's Info](rest-api/broker-api/managing-users/get-users-info/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Users/Users_GetUserInfo.md)
   * [User Accounts](rest-api/broker-api/user-accounts/README.md)
     * [Get Account's Balance Info](rest-api/broker-api/user-accounts/get-accounts-balance-info/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/UserAccounts/UserAccounts_GetAccountBalanceInfo.md)
     * [Get Account's History](rest-api/broker-api/user-accounts/get-accounts-history/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/UserAccounts/UserAccounts_GetAccountHistory.md)
     * [List User's Accounts](rest-api/broker-api/user-accounts/list-users-accounts/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/UserAccounts/UserAccounts_GetUserAccounts.md)
   * [Orders](rest-api/broker-api/orders/README.md)
     * [Verify Order Placement](rest-api/broker-api/orders/validate-order-placement/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Orders/Orders_PreviewCreateOrder.md)
     * [Place Order](rest-api/broker-api/orders/place-order/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Orders/Orders_PlaceOrder.md)
     * [Verify Order Replacement](rest-api/broker-api/orders/validate-order-replacement/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Orders/Orders_PreviewModifyOrder.md)
     * [Replace Order](rest-api/broker-api/orders/replace-order/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Orders/Orders_ReplaceOrder.md)
     * [Cancel Order](rest-api/broker-api/orders/cancel-order/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Orders/Orders_CancelOrder.md)
     * [Get Order's Info](rest-api/broker-api/orders/get-orders-info/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Orders/Orders_GetOrder.md)
     * [Get Filtered Orders](rest-api/broker-api/orders/get-filtered-orders/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Orders/Orders_GetOrders.md)
   * [Historical Data](rest-api/broker-api/historical-data/README.md)
     * [Get Chart Data](rest-api/broker-api/historical-data/get-chart-data/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/HistoricalTradeData/HistoricalTradeData_GetChartCompareData.md)
     * [Get Candles and Indicators for Charts](rest-api/broker-api/historical-data/get-candles-and-indicators-for-charts/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/HistoricalTradeData/HistoricalTradeData_GetChartBasicData.md)
     * [Get Chart Data in the Excel Format](rest-api/broker-api/historical-data/get-chart-data-in-the-excel-format/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/HistoricalTradeData/HistoricalTradeData_ExportToExcel.md)
   * [User Addresses](rest-api/broker-api/user-addresses/README.md)
     * [Get User's Address](rest-api/broker-api/user-addresses/get-users-address/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Addresses/Addresses_GetAddress.md)
     * [Modify User's Address](rest-api/broker-api/user-addresses/modify-users-address/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Addresses/Addresses_AddAddress.md)
   * [Securities](rest-api/broker-api/securities/README.md)
     * [Get Equity Info by Internal ID](rest-api/broker-api/securities/get-securitys-info-by-internal-id/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Securities/Securities_GetEquityById.md)
     * [Get Equity Info by Ticker](rest-api/broker-api/securities/get-securitys-info-by-ticker/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Securities/Securities_GetEquityBySymbol.md)
     * [Get Equity Info by Mask](rest-api/broker-api/securities/get-securitys-info-by-mask/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Securities/Securities_GetEquitiesByMask.md)
     * [Get Filtered Equities](rest-api/broker-api/securities/get-filtered-equities/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Securities/Securities_GetEquities.md)
     * [Get Option Info by Internal ID](rest-api/broker-api/securities/get-option-info-by-internal-id/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Securities/Securities_GetOptionById.md)
     * [Get Option Info by Ticker](rest-api/broker-api/securities/get-option-info-by-ticker/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Securities/Securities_GetEquityBySymbol.md)
     * [Get Options Expiration Dates](rest-api/broker-api/securities/get-options-expiration-dates/README.md)
-  
+      * [Syntax](etna-trader-rest-api/private-api/Securities/Securities_GetOptionsExpirations.md)
     * [Get Filtered Options](rest-api/broker-api/securities/get-filtered-options/README.md)
+      * [Syntax](etna-trader-rest-api/private-api/Securities/Securities_GetOptions.md)
   * [Watchlists](rest-api/broker-api/watchlists/README.md)
     * [Add Security to Watchlist by ID](rest-api/broker-api/watchlists/add-security-to-watchlist-by-id/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Watchlists/Watchlists_AddSecurityById.md)
     * [Add Security to Watchlist by Ticker](rest-api/broker-api/watchlists/add-security-to-watchlist-by-ticker/README.md)
-      
+      * [Syntax](retna-trader-rest-api/private-api/Watchlists/Watchlists_AddSecurtiy.md)
     * [Create New Watchlist](rest-api/broker-api/watchlists/create-new-watchlist/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Watchlists/Watchlists_CreateWatchlist.md)
     * [Delete Watchlist](rest-api/broker-api/watchlists/delete-watchlist/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Watchlists/Watchlists_DeleteWatchlist.md)
     * [Get Specific Watchlist](rest-api/broker-api/watchlists/get-specific-watchlist/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Watchlists/Watchlists_GetWatchlist.md)
     * [Get User's Watchlists](rest-api/broker-api/watchlists/get-users-watchlist/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Watchlists/Watchlists_GetUserWatchlists.md)
     * [Remove Security From Watchlist by ID](rest-api/broker-api/watchlists/remove-security-from-watchlist-by-id/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Watchlists/Watchlists_RemoveSecurityById.md)
     * [Remove Security from Watchlist by Ticker](rest-api/broker-api/watchlists/remove-security-from-watchlist-by-ticker/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Watchlists/Watchlists_RemoveSecurity.md)
     * [Rename Watchlist](rest-api/broker-api/watchlists/rename-watchlist/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/Watchlists/Watchlists_EditWatchlistName.md)
   * [Allocations](rest-api/broker-api/allocations/README.md)
     * [Create Allocation Requests](rest-api/broker-api/allocations/create-allocation-requests/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Allocations/Allocations_AllocateSimble.md)
     * [Create Batch Allocation Requests](rest-api/broker-api/allocations/create-batch-allocation-requests/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Allocations/Allocations_AllocateSimpleBatch.md)
     * [Create Multi-Leg Allocation Requests](rest-api/broker-api/allocations/create-multi-leg-allocation-requests/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Allocations/Allocations_Allocate.md)
     * [Create Batch Multi-Leg Allocation Requests](rest-api/broker-api/allocations/create-batch-multi-leg-allocation-requests-rest-api-private-api-allocations-create-batch-multi-leg-a/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Allocations/Allocations_AllocateBatch.md)
   * [Managing Transactions](rest-api/broker-api/managing-transactions/README.md)
     * [Get Transactions](rest-api/broker-api/managing-transactions/get-transactions/README.md)
-    
+      * [Syntax](etna-trader-rest-api/private-api/Transactions/Transactions_GetActionsPage.md)
   * [Extended Feedback](rest-api/broker-api/internal-feedback/README.md)
     * [List Users' Feedback](rest-api/broker-api/internal-feedback/list-users-feedback/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalFeedbacks/InternalFeedbacks_GetActionsPage.md)
   * [Extended Positions](rest-api/broker-api/internal-positions/README.md)
     * [Add New Position](rest-api/broker-api/internal-positions/add-new-position/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalPositions/InternalPositions_AddPosition.md)
     * [Modify Existing Positions](rest-api/broker-api/internal-positions/modify-existing-positions/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalPositions/InternalPositions_UpdatePosition.md)
   * [Extended Securities](rest-api/broker-api/internal-securities/README.md)
     * [Get Security Info by Ticker](rest-api/broker-api/internal-securities/get-security-info-by-ticker/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalSecurities/InternalSecurities_GetSecurities.md)
     * [Get Security Info by ID](rest-api/broker-api/internal-securities/get-security-by-id/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalSecurities/InternalSecurities_GetSecurities.md)
     * [Modify Securities](rest-api/broker-api/internal-securities/modify-securities/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalSecurities/InternalSecurities_ModifySecurity.md)
     * [Add a New Security](rest-api/broker-api/internal-securities/add-a-new-security/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalSecurities/InternalSecurities_AddSecurity.md)
   * [Extended Users](rest-api/broker-api/internal-users/README.md)
     * [Get Users' Info](rest-api/broker-api/internal-users/get-users-info/README.md)
-      
+      * [Syntax](rest-api/broker-api/internal-users/get-users-info/internalusers_getuser.md)
     * [List All Users](rest-api/broker-api/internal-users/list-all-users/README.md)
-      
+      * [Syntax](rest-api/broker-api/internal-users/list-all-users/internalusers_getusers.md)
     * [Create a New User](rest-api/broker-api/internal-users/create-a-new-user/README.md)
-      
+      * [Syntax](rest-api/broker-api/internal-users/create-a-new-user/internalusers_createuser.md)
     * [Modify a User](rest-api/broker-api/internal-users/modify-a-user/README.md)
-      
+      * [Syntax](rest-api/broker-api/internal-users/modify-a-user/internalusers_modifyuser.md)
   * [Extended Accounts](rest-api/broker-api/internal-accounts/README.md)
     * [Get Trading Account Info by ID](rest-api/broker-api/internal-accounts/get-trading-account-info-by-id/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_GetAccountsById.md)
     * [List Account Users](rest-api/broker-api/internal-accounts/list-account-users/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_GetAccountUsers.md)
     * [List All Accounts](rest-api/broker-api/internal-accounts/list-all-accounts/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_GetAccounts.md)
     * [Create a New Trading Account](rest-api/broker-api/internal-accounts/create-a-new-trading-account/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_CreateAccount.md)
     * [Update a Trading Account](rest-api/broker-api/internal-accounts/update-a-trading-account/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_UpdateAccount.md)
     * [Deposit Funds into an Account](rest-api/broker-api/internal-accounts/deposit-funds-into-an-account/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_CreateDepositPayment.md)
     * [Withdraw Funds from an Account](rest-api/broker-api/internal-accounts/withdraw-funds-from-an-account/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_CreateWithdrawalPayment.md)
     * [Bind an Account to a User](rest-api/broker-api/internal-accounts/bind-an-account-to-a-user/README.md)
-      
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_AddAccountToUser.md)
     * [Remove a Trading Account from a User](rest-api/broker-api/internal-accounts/remove-a-trading-account-from-a-user/README.md)
+      * [Syntax](etna-trader-rest-api/private-api/InternalAccounts/InternalAccounts_RemoveAccountFromUser.md)
   * [Code Samples](rest-api/broker-api/code-samples/README.md)
     * [Basic Authentication](rest-api/broker-api/code-samples/basic-authentication.md)
     * [Two-Factor Authentication](rest-api/broker-api/code-samples/two-factor-authentication.md)
