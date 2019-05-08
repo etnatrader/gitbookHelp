@@ -64,7 +64,7 @@
 
 * [Introduction](rest-api/introduction.md)
 * [Trading API](rest-api/trading-api/README.md)
-  * [API Overview](rest-api/trading-api/overview.md)
+  * [Overview](rest-api/trading-api/overview.md)
   * [Authentication](rest-api/trading-api/authentication/README.md)
     * [Requesting Tokens](rest-api/trading-api/authentication/requesting-tokens/README.md)
       * [Syntax](etna-trader-rest-api/public-api/Login/Get_token.md)
