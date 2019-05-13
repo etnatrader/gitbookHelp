@@ -4,9 +4,9 @@ description: Get a specific watchlist of a user
 
 # Get Specific Watchlist
 
-### Overview
+## Overview
 
-This GET endpoint enables you to retrieve information about a specific watchlist of a user whose internal ID is provided in the request's path. The watchlist can be retrieved either with only information about the watchlists or including the list of securities in every watchlist. 
+This GET endpoint enables you to retrieve information about a specific watchlist of a user whose internal ID is provided in the request's path. The watchlist can be retrieved either with only information about the watchlists or including the list of securities in every watchlist.
 
 There are six required parameters that must be provided in the request:
 
@@ -23,7 +23,7 @@ Here's the final template for this API request:
 apiURL/v1.0/users/{userID}/watchlists/{watchlistID}?includeSecurities=true
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file that contains information about the enquired watchlist.
 
@@ -295,7 +295,7 @@ If the _**includeSecurities**_ query parameter is set to true, the retrieved wat
 }
 ```
 
-#### Watchlist Parameters
+### Watchlist Parameters
 
 | Parameter | Description |
 | :--- | :--- |
@@ -307,11 +307,11 @@ If the _**includeSecurities**_ query parameter is set to true, the retrieved wat
 | ReadOnly | This field indicates if the watchlist is modifiable. |
 | SecurityList | This is a collection of securities in the watchlist. |
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve a specific watchlist. 
+Here are some of the common mistakes that developers make when attempting to retrieve a specific watchlist.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -321,7 +321,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameter
+### Failing to Specify the Query Parameter
 
 It's crucial to understand that the _**includeSecurities**_ parameter must be indicated in the request; otherwise you'll receive the 404 status code and the following message:
 

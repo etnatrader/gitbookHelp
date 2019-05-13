@@ -4,7 +4,7 @@ description: Remove an existing price alert
 
 # Delete Price Alert
 
-### Overview
+## Overview
 
 This DELETE endpoint enables you to remove a particular price alert of the user whose ID is provided in the request. Price alerts are essentially notifications that are sent to the user when the alert's conditions are satisfied by the market. For example, a user may have a price alert that will notify them when the price of the Apple stock exceeds $200.
 
@@ -22,15 +22,15 @@ Here's the final template for this API request:
 DELETE apiURL/v1.0/users/{userID}/pricealerts/{alertID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive an empty message and the 204 status code in case the alert was successfully deleted.
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to remove a particular price alert.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

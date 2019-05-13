@@ -4,7 +4,7 @@ description: Get a user's information by their ETNA Trader identifier
 
 # Get User's Info
 
-### Overview
+## Overview
 
 This endpoint enables you to request a user's information by supplying their unique ETNA Trader identifier in the header. In response, you'll receive a JSON file with the user's information.
 
@@ -21,7 +21,7 @@ The user information request must be sent to the following URL:
 apiURL/v1.0/users/644(userID)/info
 ```
 
-### Response
+## Response
 
 In response, you'll receive a JSON file with the information about this user:
 
@@ -53,11 +53,11 @@ where:
 | Salutation | This is a special salutation used to address this user in emails. |
 | Suffix | This is the suffix used when addressing the user \(Jr, Sr, I, II, III, etc.\) |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting a user's information:
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -67,7 +67,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the Regular User ID Instead of the Internal One
+### Specifying the Regular User ID Instead of the Internal One
 
 Another common mistake when making this request is specifying the regular user ID instead of the internal ETNA Trader ID. Doing so will result in the 400 status code and the following error message:
 

@@ -4,7 +4,7 @@ description: Modify information about a particular security
 
 # Modify Securities
 
-### Overview
+## Overview
 
 This PUT endpoint enables you to modify an existing security's information by sending a JSON file with the updated information. Whereas the trader API only permits you to retrieve information about existing securities, the private API also permits security modification. It's critical to be cautious with this procedure because providing incorrect information might lead to certain conflicts like the absence of quotes for a particular security.
 
@@ -19,7 +19,7 @@ There are four required parameters that must be provided in the request:
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **modifyModel** \(body\). This is a JSON file with the security's parameters that must be updated.
 
-#### Request Body Sample
+### Request Body Sample
 
 Following is a sample of a JSON file that contains information about the updated security.
 
@@ -98,7 +98,7 @@ where:
 | Parameter | Description |
 | :--- | :--- |
 | Id | This is the modified security's internal identifier in ETNA Trader. You can retrieve this identifier via this [API request](../get-security-info-by-ticker/). |
-| Symbol | This is the ticker symbol of the modified security.  |
+| Symbol | This is the ticker symbol of the modified security. |
 | Suffix | This is an internal field in ETNA Trader and it shouldn't be used by third-party developers. |
 | Description | Usually this is the full name of the underlying company. |
 | Exchange | This is the exchange on which the security is listed. |
@@ -129,7 +129,7 @@ where:
 | Name | This is the name of the security \(usually it's identical to the Symbol field\). |
 | ExpirationName | This is the expiration name of the option. If the value is set to Jan 01 0001, it means that this security is not an option. |
 | Isin | This abbreviation stands for International Securities Identification Number and it serves as a security's unique identifier. |
-| Sedol | This abbreviation stands for Stock Exchange Daily Official List and it's primarily used by the London Stock Exchange and various other smaller stock exchanges.in the United Kingdom.  |
+| Sedol | This abbreviation stands for Stock Exchange Daily Official List and it's primarily used by the London Stock Exchange and various other smaller stock exchanges.in the United Kingdom. |
 | Cusip | This abbreviation stands for Committee on Uniform Security Identification Procedures and it serves as an alternative identifier for stocks and bonds circulating in the United States and Canada. |
 | ContractSize | This is the minimum number of securities that can be purchased in one trade. |
 
@@ -139,7 +139,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/internalsecurities
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file that contains information about the recently updated security:
 
@@ -174,15 +174,15 @@ In response to this API request, you'll receive a JSON file that contains inform
 }
 ```
 
-As you can see, in this sample request  we've increased the price precision from one to five. If we navigate to ETNA Trader,  we'll notice that the number of decimal places in the security's price has increased  to five.
+As you can see, in this sample request we've increased the price precision from one to five. If we navigate to ETNA Trader, we'll notice that the number of decimal places in the security's price has increased to five.
 
 ![](../../../../.gitbook/assets/screenshot-2019-03-04-at-15.24.12.png)
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to modify an existing security.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for modifying existing securities, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -194,7 +194,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -204,7 +204,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Provide All Required Parameters
+### Failing to Provide All Required Parameters
 
 Another common mistake when making this API request is failing to provide all required parameters in the request's body. In the first table of this page we have outlined all required parameters for this request, so ensure that you provide all of them; otherwise you'll receive the 500 status code and the following error message:
 
@@ -216,6 +216,4 @@ Another common mistake when making this API request is failing to provide all re
 ```
 
 The following article covers the syntax for this API request in detail.
-
-
 

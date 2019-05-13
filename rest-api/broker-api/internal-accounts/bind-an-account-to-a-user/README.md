@@ -4,7 +4,7 @@ description: Bind a new trading account to an existing user
 
 # Bind an Account to a User
 
-### Overview
+## Overview
 
 This PUT endpoint enables you to bind a new or an existing trading account to an existing user. If you don't have any active trading accounts, go ahead and [create a new one](../create-a-new-trading-account/). Once the account is created and bound to an existing user, you can verify that this user is indeed using this account by leveraging [this API endpoint](../../user-accounts/list-users-accounts/).
 
@@ -27,7 +27,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/accounts/{accountID}/users/{userID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file that contains an array of users who have access to this trading account along with the account access level specified in the **accessType** parameter in the request query.
 
@@ -50,11 +50,11 @@ In response to this API request, you'll receive a JSON file that contains an arr
 ]
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to bind existing trading accounts to existing users.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for binding trading accounts to users, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -66,7 +66,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

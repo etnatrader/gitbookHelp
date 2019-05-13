@@ -4,7 +4,7 @@ description: Create a new allocation request
 
 # Create Allocation Requests
 
-### Overview
+## Overview
 
 This PUT endpoint enables you to create and send an allocation request. Allocation requests are used to purchase securities in bulk for multiple users to reduce the exchange commission applied to the order \(the higher the volume — the lower the commission\). Usually, there's a separate trading account on which securities are purchased. Afterward, the purchased securities are transferred to users' trading accounts proportionally to the amount of funds they have contributed.
 
@@ -12,7 +12,7 @@ For example, if one user has contributed 20% of the funds, another user — 30%,
 
 From a technical standpoint, transference of securities from one account to another during allocation is executed like a regular sale — the source account is selling securities to the target account. You specify the price at which the securities must be transferred, indicate the applicable commission, and at the end of the trading session this transaction is registered with the clearing firm.
 
-Please bear in mind that there are certain regulations that apply to allocations like prohibition of selling securities to users  at a premium. Therefore, please ensure that your allocations comply with the regulator's requirements.
+Please bear in mind that there are certain regulations that apply to allocations like prohibition of selling securities to users at a premium. Therefore, please ensure that your allocations comply with the regulator's requirements.
 
 There are four required parameters that must be provided in the request:
 
@@ -21,7 +21,7 @@ There are four required parameters that must be provided in the request:
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **requestInfo** \(body\). This is a JSON dictionary that contains information about the new allocation.
 
-#### Allocation Request Sample
+### Allocation Request Sample
 
 Each allocation request must be provided in the JSON format in the following way:
 
@@ -52,7 +52,7 @@ where:
 | Commission | This is the commission that will be charged on the user's trading account for this allocation. You may set this value to 0 if you charge your users monthly for allocations. |
 | Action | This is the side of the trade. Possible values: **Buy**, **Sell**. If the value is set to Sell, the securities will be transferred from the users' trading accounts to the joint trading account from which they will be sold on the market. |
 | AccountType | This is the type of the account. Possible values: **Cash**, **Margin**, **DayTrader**. |
-| Comment | This is the comment for this allocation.  |
+| Comment | This is the comment for this allocation. |
 | Instructions | These are ancillary instructions for this allocation. You can leave it empty. |
 
 Here's the final template for this API request:
@@ -61,7 +61,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/allocations/simple
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the allocation request details along with one extra parameter — **IsSucceed** — which indicates if the allocation has been successfully carried out.
 
@@ -83,11 +83,11 @@ In response to this API request, you'll receive a JSON file with the allocation 
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to create allocation requests.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -97,7 +97,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying User Accounts instead of Trading Accounts
+### Specifying User Accounts instead of Trading Accounts
 
 Another common mistake is either specifying user accounts instead of trading accounts when creating an allocation request. Doing so will lead to the 409 status code and the following error message:
 

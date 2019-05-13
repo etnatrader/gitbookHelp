@@ -4,9 +4,9 @@ description: List all existing positions of a user
 
 # Get User's Positions
 
-### Overview
+## Overview
 
-This GET endpoint enables you to list all existing positions of the user whose authorization token was used in the request's path. 
+This GET endpoint enables you to list all existing positions of the user whose authorization token was used in the request's path.
 
 There are four required parameters that must be provided in the request:
 
@@ -34,7 +34,6 @@ There's also one optional parameter worth examining:
           <li>CreateDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
           <li>CreateDate between Range</li>
         </ul>
-        <p></p>
       </td>
       <td style="text-align:left">This query enables you to retrieve positions that were created in the
         time period specified in the Range parameter or exactly at the time specified
@@ -49,7 +48,6 @@ There's also one optional parameter worth examining:
     </tr>
     <tr>
       <td style="text-align:left">
-        <p></p>
         <ul>
           <li>ModifyDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
           <li>ModifyDate between Range</li>
@@ -59,7 +57,6 @@ There's also one optional parameter worth examining:
         time period specified in the Range parameter or exactly at the time specified
         in the Date parameter.</td>
       <td style="text-align:left">
-        <p></p>
         <ul>
           <li>ModifyDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
           <li>ModifyDate &gt;= #2019-03-13T18:31:42#</li>
@@ -69,7 +66,6 @@ There's also one optional parameter worth examining:
     </tr>
     <tr>
       <td style="text-align:left">
-        <p></p>
         <ul>
           <li>Quantity (&gt;, &gt;=, &lt;, &lt;=) Number</li>
           <li>Quantity between Range</li>
@@ -119,7 +115,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/accounts/{accountID}/positions?pageNumber=0&pageSize=10&sortField=Id&desc=true&filter=CreateDate%20between%20%232019-03-13T18%3A31%3A42%23%20and%20%232019-03-17T18%3A31%3A42%23
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with all of the user's existing positions. Following is an example of such response:
 
@@ -161,7 +157,7 @@ where:
 | SecurityId | This is the internal ID of the underlying security in the position |
 | Symbol | This is the ticker symbol |
 | Name | In most cases this field is identical to Symbol |
-| CompanyName | This is the full name of the listed company  |
+| CompanyName | This is the full name of the listed company |
 | SecurityCurrency | This is the currency in which the security is denominated |
 | SecurityType | This is the type of the underlying security.  The range of possible values is listed in the following table. |
 | ContractSize | This is the minimum contract size for this financial instrument. |
@@ -179,7 +175,7 @@ where:
 | Excess Changes | This indicates how much this position affects your account's excess. |
 | DayQuantity | This is the gross number of shares of this security that have been traded during the current trading session. |
 
-#### Security Type
+### Security Type
 
 ```text
 BankersAcceptance                     = 0,
@@ -225,11 +221,11 @@ CoveredWarrant                        = 39,
 Unit                                  = 40
 ```
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to list the existing positions. 
+Here are some of the common mistakes that developers make when attempting to list the existing positions.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -239,7 +235,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the User ID Instead of the Trading Account ID
+### Specifying the User ID Instead of the Trading Account ID
 
 Another common mistake when making this request is specifying the user ID instead of the user's trading account ID. Doing so will result in the 500 status code and the following error message:
 
@@ -250,7 +246,7 @@ Another common mistake when making this request is specifying the user ID instea
 }
 ```
 
-#### Specifying a Trading Account of a Different User
+### Specifying a Trading Account of a Different User
 
 It's critical to understand that when you use the authorization token of a particular user in this request's header, only this user's trading accounts can be used for listing current positions. Placing a new order on a trading account of a different user will lead to the 401 error.
 

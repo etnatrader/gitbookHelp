@@ -4,9 +4,9 @@ description: Fetch trading data for a set of securities
 
 # Get Chart Data
 
-### Overview
+## Overview
 
-This PUT endpoint enables you to retrieve and compare historical trading data for a set of securities. This data includes price ranges, candles, and various other non-market data. 
+This PUT endpoint enables you to retrieve and compare historical trading data for a set of securities. This data includes price ranges, candles, and various other non-market data.
 
 There are four required parameters that must be provided in the request:
 
@@ -15,24 +15,24 @@ There are four required parameters that must be provided in the request:
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **model** \(body\). This is a JSON dictionary that contains information about the enquired securities.
 
-#### Enquired Securities Syntax
+### Enquired Securities Syntax
 
 Here's an example of the request body with the information about the enquired securities.
 
 ```javascript
 {"Securities":
-	[{"Symbol":"MSFT","Exchange":"XNAS","Currency":"USD","Id":6},
-	{"Symbol":"AAPL","Exchange":"XNAS","Currency":"USD","Id":4}],
-	
-	"SecuritiesHistorySettings":
-	{
-		"StartDate":1548046800,
-		"EndDate":1550755974,
-		"CandlesCount":10,
-		"Period":"1h",
-		"Interval":1,
-		"IncludeNonMarketData":false
-	}
+    [{"Symbol":"MSFT","Exchange":"XNAS","Currency":"USD","Id":6},
+    {"Symbol":"AAPL","Exchange":"XNAS","Currency":"USD","Id":4}],
+
+    "SecuritiesHistorySettings":
+    {
+        "StartDate":1548046800,
+        "EndDate":1550755974,
+        "CandlesCount":10,
+        "Period":"1h",
+        "Interval":1,
+        "IncludeNonMarketData":false
+    }
 }
 ```
 
@@ -47,7 +47,7 @@ where:
 | StartDate | This is the beginning of the period for which the data will be retrieved. |
 | EndDate | This is the end of the period for which the data will be retrieved. |
 | CandlesCount | This is the number of candles that will be retrieved for the specified time period. |
-| Interval | This is the trading data interval for the specified time period.  |
+| Interval | This is the trading data interval for the specified time period. |
 
 {% hint style="warning" %}
 All parameters must be provided in the body JSON; otherwise the chart data will not be retrieved.
@@ -59,7 +59,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/history/compare
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive the chart data for the list of specified securities. Notice that trading data for Microsoft comes first, and after it comes the second array with the trading data for the Apple stock.
 
@@ -306,11 +306,11 @@ where:
 | High | This is the highest price point for the security during the specified time period. |
 | Low | This is the lowest price point for the security during the specified time period. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve trading data for a set of securities.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -320,9 +320,9 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Incorrectly Specifying the Request Body 
+### Incorrectly Specifying the Request Body
 
-Another common mistake when attempting to retrieve the chart data for a set of securities is incorrectly structuring the request body. It's critical that you follow the template provided above and specify all of the required parameters. Otherwise you'll receive the 500 status code and the following error message: 
+Another common mistake when attempting to retrieve the chart data for a set of securities is incorrectly structuring the request body. It's critical that you follow the template provided above and specify all of the required parameters. Otherwise you'll receive the 500 status code and the following error message:
 
 ```javascript
 {

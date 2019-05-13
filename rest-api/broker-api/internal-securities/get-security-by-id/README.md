@@ -4,9 +4,9 @@ description: Retrieve security's information by providing its internal identifie
 
 # Get Security Info by ID
 
-### Overview
+## Overview
 
-This GET endpoint enables you to retrieve detailed information about a particular security by providing its internal identifier in ETNA Trader. Unlike the [regular security information method](../../securities/get-securitys-info-by-internal-id/), this method provides a more comprehensive set of information about a particular security. 
+This GET endpoint enables you to retrieve detailed information about a particular security by providing its internal identifier in ETNA Trader. Unlike the [regular security information method](../../securities/get-securitys-info-by-internal-id/), this method provides a more comprehensive set of information about a particular security.
 
 {% hint style="warning" %}
 In order to retrieve information about a particular security, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
@@ -25,7 +25,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/internalsecurities/{securityID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with detailed information about the enquired security.
 
@@ -98,11 +98,11 @@ where:
 | Name | This is the name of the security \(usually it's identical to the Symbol field\). |
 | ExpirationName | This is the expiration name of the option. If the value is set to Jan 01 0001, it means that this security is not an option. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve information about a particular security.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about various securities, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -114,7 +114,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -124,7 +124,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying  the Security's Ticker Symbol Instead of its Internal ID
+### Specifying  the Security's Ticker Symbol Instead of its Internal ID
 
 Another common mistake when making this API request is specifying the ticker symbol of the enquired security instead of its internal ID — for this purpose, there's a [separate API request](../get-security-info-by-ticker/). If you specify the security's ticker symbol in this request, you'll receive the 400 status code and the following error message:
 
@@ -135,6 +135,4 @@ Another common mistake when making this API request is specifying the ticker sym
 ```
 
 The following article covers the syntax for this API request in detail.
-
-
 

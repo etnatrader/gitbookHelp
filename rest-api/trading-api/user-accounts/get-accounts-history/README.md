@@ -4,9 +4,9 @@ description: Get transaction history for a particular trading account
 
 # Get Account's History
 
-### Overview
+## Overview
 
-This endpoint enables you to retrieve the historical value of a particular trading account. 
+This endpoint enables you to retrieve the historical value of a particular trading account.
 
 There are seven required parameters that must be provided in the request:
 
@@ -28,7 +28,7 @@ This API request must be sent to the following URL:
 apiURL/v1.0/accounts/accountNumber/history?startDate=2019-01-01T14:20:10.837Z&endDate=2019-02-08T14:20:10.837Z&step=5
 ```
 
-### Response
+## Response
 
 In response to this request, you'll receive a JSON file with the list of account valuation throughout the specified period.
 
@@ -100,11 +100,11 @@ where:
 | Date | The precise date on the valuation |
 | Value | The value of the account for the date |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting the historical value of a particular trading account:
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -114,7 +114,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Incorrect or Missing Query Parameters
+### Incorrect or Missing Query Parameters
 
 If the query parameters are missing or incorrectly specified , the following error message will be returned:
 

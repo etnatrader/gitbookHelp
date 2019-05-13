@@ -4,7 +4,7 @@ description: Cancel an existing outstanding order
 
 # Cancel Order
 
-### Overview
+## Overview
 
 This DELETE endpoint enables you to cancel an outstanding order of the user whose authorization token is provided in the header request. If the user has buy, sell, short-sell, or a buy-to-cover orders pending, you can cancel each one of them by sending this API request.
 
@@ -22,15 +22,15 @@ This API request must be sent to the following URL:
 apiURL/v1.0/accounts/6303/orders/73552
 ```
 
-### Response
+## Response
 
-In response to this API request — if the order was successfully deleted — you'll receive no JSON file. The status code of the request will be 204 \(successful order cancellation\). 
+In response to this API request — if the order was successfully deleted — you'll receive no JSON file. The status code of the request will be 204 \(successful order cancellation\).
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when trying to cancel an outstanding order. 
+Here are some of the common mistakes that developers make when trying to cancel an outstanding order.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -40,7 +40,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the ID of a Completed Order
+### Specifying the ID of a Completed Order
 
 Another common mistake when making this request is specifying the order ID of an already filled order. In this case the cancellation will be rejected because only outstanding orders can be cancelled.
 

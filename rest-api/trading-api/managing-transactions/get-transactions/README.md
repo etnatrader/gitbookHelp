@@ -4,7 +4,7 @@ description: List transactions of a particular user
 
 # Get Transactions
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve a list of transactions that the have been made on a particular trading account. The number of retrieved transactions can be specified in the request header.
 
@@ -23,7 +23,7 @@ There's also one optional parameter worth examining:
 
 * filter \(request query\). This is an SQL query used to retrieve only those transactions that satisfy the conditions of the query. 
 
-#### Filter Syntax
+### Filter Syntax
 
 The syntax for filter queries is rather simple: each parameter of a transaction can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
 
@@ -41,6 +41,8 @@ Strings must be highlighted with quotation marks: `'USD'`.
 Dates must be highlighted with the pound sign: `#2019-08-09T18:31:42#`.
 
 The following table lists a set of sample queries:
+
+
 
 <table>
   <thead>
@@ -101,7 +103,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/accounts/6303/transactions/?pageNumber=0&pageSize=10&sortBy=Quantity&isDesc=true
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the list of transactions that have been made on the specified trading account.
 
@@ -192,11 +194,11 @@ where:
 | PreviousPageLink | This is the previous page with older transactions. |
 | TotalCount | This is the total number of transactions that have been made on this trading account. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve the list of transactions made on a particular trading account.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -206,7 +208,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameters
+### Failing to Specify the Query Parameters
 
 It's crucial to understand that the _**pageSize, pageNumber, isDesc, and sortBy**_ parameters must be provided in the request; otherwise you'll receive the 404 status code and the following message:
 

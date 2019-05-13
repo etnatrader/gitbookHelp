@@ -4,7 +4,7 @@ description: Verify an order modification before committing changes
 
 # Verify Order Replacement
 
-### Overview
+## Overview
 
 This PUT endpoint enables you to verify an order replacement before using it to replace an existing order in ETNA Trader. This might be useful for ensuring that the user has properly constructed an order and prevent any issues related with defective orders.
 
@@ -23,13 +23,13 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/accounts/{accountID}/preview/orders/{existingOrderID}
 ```
 
-### Request Body
+## Request Body
 
 The body of this request represents the information that must verified before being replaced in an existing order. It must be sent in the JSON format with mandatory parameters about the order.
 
 The first four parameters — **ID**, **Quantity**, **Price**, **ExecutionInstructions**, and **Execution Instructions** — are mandatory, while the remaining parameters should only be provided if necessary. Apart from these four parameters, the rest of the JSON should be constructed identically to the [order placement JSON](../place-order/).
 
-#### Order Modification Verification Sample
+### Order Modification Verification Sample
 
 ```javascript
 {
@@ -40,7 +40,7 @@ The first four parameters — **ID**, **Quantity**, **Price**, **ExecutionInstru
 }
 ```
 
-### Response
+## Response
 
 In response to this request, you'll receive a JSON file confirming \(or rejecting\) that the order replacement has been properly constructed.
 
@@ -78,11 +78,11 @@ where:
 | Quotes | This is the last batch of quotes for this security. |
 | MarginChange | This is the amount by which the trading account margin requirements will be affected once this order is filled. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to verify an order replacement.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for verifying order replacements, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -94,7 +94,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -104,7 +104,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Providing an Incorrect Set of Parameters 
+### Providing an Incorrect Set of Parameters
 
 Another common mistake made when sending this API request is failing to provide all mandatory parameters. Doing so will result in the 500 status code and the following error message:
 

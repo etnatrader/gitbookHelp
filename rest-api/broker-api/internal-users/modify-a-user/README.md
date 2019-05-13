@@ -4,9 +4,9 @@ description: Modify an existing user in ETNA Trader
 
 # Modify a User
 
-### Overview
+## Overview
 
-This PUT endpoint enables you to modify an existing user in ETNA Trader. Updated information about the user is provided in the request body in the JSON format. 
+This PUT endpoint enables you to modify an existing user in ETNA Trader. Updated information about the user is provided in the request body in the JSON format.
 
 {% hint style="warning" %}
 In order to modify an existing user, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
@@ -27,7 +27,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/users/{userID}
 ```
 
-#### Request Body Sample
+### Request Body Sample
 
 The body of the request represents a JSON file with mandatory parameters required for user modification.
 
@@ -64,7 +64,7 @@ where:
 | ExpirationDate | This is the date on which the user's account will be disabled. |
 | PhoneNumber / EntitlementsPhoneNumber | This the user's phone number. |
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file that contains information you specified in the request body along with the modified user's internal identifier in ETNA Trader:
 
@@ -88,11 +88,11 @@ In response to this API request, you'll receive a JSON file that contains inform
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to modify an existing user.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for modifying users, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -104,7 +104,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -114,7 +114,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Provide All Required Parameters
+### Failing to Provide All Required Parameters
 
 Another common mistake when making this API request is failing to provide all required parameters in the request's body. In the request body sample above we have highlighted all required parameters for this request, so ensure that you provide all of them; otherwise you'll receive the 500 status code and the following error message:
 

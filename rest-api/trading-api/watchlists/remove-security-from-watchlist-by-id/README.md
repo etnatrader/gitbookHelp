@@ -6,9 +6,9 @@ description: >-
 
 # Remove Security From Watchlist by ID
 
-### Overview
+## Overview
 
-This DELETE endpoint enables you to remove a particular security from a particular watchlist by providing the security's ID in the request's path. 
+This DELETE endpoint enables you to remove a particular security from a particular watchlist by providing the security's ID in the request's path.
 
 There are six required parameters that must be provided in the request:
 
@@ -25,7 +25,7 @@ The final template for this request is as follows:
 DELETE apiURL/v1.0/users/{userID}/watchlists/{watchlistID}/securities/{securityID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive the updated watchlist with the specified security removed. In this example we've removed the Apple stock from a tech-oriented watchlist.
 
@@ -106,7 +106,7 @@ In response to this API request, you'll receive the updated watchlist with the s
         },
 ```
 
-#### Watchlist Parameters
+### Watchlist Parameters
 
 | Parameter | Description |
 | :--- | :--- |
@@ -118,11 +118,11 @@ In response to this API request, you'll receive the updated watchlist with the s
 | ReadOnly | This field indicates if the watchlist is modifiable. |
 | SecurityList | This is a collection of securities in the watchlist. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to remove a particular security from a watchlist.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -132,7 +132,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying  the Security's Ticker Symbol Instead of its Internal ID
+### Specifying  the Security's Ticker Symbol Instead of its Internal ID
 
 Another common mistake when making this API request is specifying the ticker symbol of the to-be-added security instead of its internal ID — for this purpose, there's a [separate API request](../remove-security-from-watchlist-by-ticker/). If you specify the security's ticker symbol in this request, you'll receive the 400 status code and the following error message:
 

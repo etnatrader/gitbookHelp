@@ -4,7 +4,7 @@ description: List all users who use a particular trading account.
 
 # List Account Users
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve information about all users who user a particular trading account. This account's ID is provided in the request's path and, in response, ETNA Trader will return an array of users who use this trading account.
 
@@ -25,7 +25,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/accounts/{accountID}/users
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file that contains the list of users who use the trading account specified in the request's path:
 
@@ -63,11 +63,11 @@ where:
 | Suffix | This is the suffix used when addressing the user \(Jr, Sr, I, II, III, etc.\). |
 | AccountAccessType | This is the account access type which indicates the user's access level to this trading account. Possible values: Full, ReadOnly, ClosePositionsOnly. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve the list of users who use a particular trading account.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for a trading account's users, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -79,7 +79,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

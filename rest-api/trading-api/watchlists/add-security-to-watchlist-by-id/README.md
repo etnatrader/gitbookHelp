@@ -6,9 +6,9 @@ description: >-
 
 # Add Security to Watchlist by ID
 
-### Overview
+## Overview
 
-This PUT endpoint enables you to add a specific security to a specific watchlist of the user whose id is provided in the request's path. 
+This PUT endpoint enables you to add a specific security to a specific watchlist of the user whose id is provided in the request's path.
 
 There are six required parameters that must be provided in the request:
 
@@ -25,7 +25,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/users/{userID}/watchlists/{watchlistID}/securities/{securityId}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the updated watchlist. In this sample request we added the Ford stock to the watchlist:
 
@@ -126,16 +126,16 @@ In response to this API request, you'll receive a JSON file with the updated wat
             "TickSize": 0.01,
             "MarginRate": 0
         },
-        
+
     ]
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to add a particular security to a specific watchlist.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -145,7 +145,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying  the Security's Ticker Symbol Instead of its Internal ID
+### Specifying  the Security's Ticker Symbol Instead of its Internal ID
 
 Another common mistake when making this API request is specifying the ticker symbol of the added security instead of its internal ID — for this purpose, there's a [separate API request](../../../broker-api/watchlists/add-security-to-watchlist-by-id/). If you specify the security's ticker symbol in this request, you'll receive the 400 status code and the following error message:
 

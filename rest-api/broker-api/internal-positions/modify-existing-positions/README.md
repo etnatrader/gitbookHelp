@@ -4,9 +4,9 @@ description: Updated an existing position
 
 # Modify Existing Positions
 
-### Overview
+## Overview
 
-This PUT endpoint enables you to modify an existing position on a user's trading account, bypassing the regular order modification mechanism.  Every once in a while some breakdown takes place on the exchange or in ETNA Trader, forcing you to use our Back Office to manually modify an existing position on the user's trading account. This procedure must be carried out with caution so as to prevent any conflicts.
+This PUT endpoint enables you to modify an existing position on a user's trading account, bypassing the regular order modification mechanism. Every once in a while some breakdown takes place on the exchange or in ETNA Trader, forcing you to use our Back Office to manually modify an existing position on the user's trading account. This procedure must be carried out with caution so as to prevent any conflicts.
 
 {% hint style="warning" %}
 In order to modify an existing position, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
@@ -20,9 +20,9 @@ There are five required parameters that must be provided in the request:
 4. **recalculate** \(query\). This is a boolean field that indicates if the account's cash should be recalculated after modifying the position.
 5. **position** \(body\). This is a JSON file that contains information about the modified position. 
 
-#### New Position Syntax
+### New Position Syntax
 
-Following is a sample of the request body that must be sent in order to modify an existing position . The first four parameters — **AccountId**, **SecurityId**, **Id**, and **Quantity** — are mandatory while the rest can be configured depending on the circumstances. Because you intend to modify an existing position, you must  provide the **Id** parameter which represents the identifier of the modified position.
+Following is a sample of the request body that must be sent in order to modify an existing position . The first four parameters — **AccountId**, **SecurityId**, **Id**, and **Quantity** — are mandatory while the rest can be configured depending on the circumstances. Because you intend to modify an existing position, you must provide the **Id** parameter which represents the identifier of the modified position.
 
 ```javascript
 {
@@ -57,7 +57,7 @@ where:
 | Parameter | Description |
 | :--- | :--- |
 | AccountId | This is the internal identifier of the trading account. |
-| SecurityId | This is the internal identifier of the underlying security in ETNA Trader. You can get this ID using [this API method](../../securities/get-securitys-info-by-its-ticket-symbol/). |
+| SecurityId | This is the internal identifier of the underlying security in ETNA Trader. You can get this ID using [this API method](https://github.com/etnatrader/gitbookHelp/tree/6c42ded62b3c38323fe9c79d5284ef0387d6f690/rest-api/broker-api/securities/get-securitys-info-by-its-ticket-symbol/README.md). |
 | Quantity | This is the number of securities in the new position. |
 | CostBasis | This is the weighted average execution price of the order. |
 | Id | This is the internal identifier of an existing position to which you intend to add securities. |
@@ -66,7 +66,7 @@ where:
 | ModifyDate | This is the date on which the position was modified. |
 | RealizedProfitLoss | Realized profit or loss. |
 | AverageOpenPrice | The average opening price of the position. |
-| AverageClosePrice | The average closing price of the position.  |
+| AverageClosePrice | The average closing price of the position. |
 | StopLossPrice | This is the price at which the position should be terminated if the market value reaches the price. |
 | TakeProfitPrice | This is the price at which the profit of the position should be realized if the market value reaches the price. |
 | DailyCloseProfitLoss | This is the unrealized profit or loss of the position measured against the last closing price. |
@@ -83,10 +83,10 @@ where:
 Here's the final template for this API request:
 
 ```text
-PUT apiURL/v1.0/positions  
+PUT apiURL/v1.0/positions
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the information about the updated position.
 
@@ -118,11 +118,11 @@ In response to this API request, you'll receive a JSON file with the information
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to modify an existing position, bypassing the regular order replacement mechanism.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for modifying existing positions, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -134,7 +134,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -144,7 +144,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameters
+### Failing to Specify the Query Parameters
 
 It's crucial to understand that the _**pageSize, pageNumber, isDesc, and sortBy**_ parameters must be provided in the request; otherwise you'll receive the 404 status code and the following message:
 

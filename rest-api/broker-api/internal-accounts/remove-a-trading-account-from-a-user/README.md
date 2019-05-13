@@ -4,7 +4,7 @@ description: Unbind an existing trading account from an existing user
 
 # Remove a Trading Account from a User
 
-### Overview
+## Overview
 
 This DELETE endpoint enables you to unbind a particular trading account from an existing user. Once the account is unbound from an existing user, you can verify that this user no longer has access to this account by leveraging [this API endpoint](../../user-accounts/list-users-accounts/).
 
@@ -26,7 +26,7 @@ Here's the final template for this API request:
 DELETE apiURL/v1.0/accounts/{accountID}/users/{userID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with an array of users who have access to this trading account \(after it was unbound from the user specified in the **userID** parameter\). The user specified in the userID parameter must not be in the array, as they have just been removed.
 
@@ -63,11 +63,11 @@ In response to this API request, you'll receive a JSON file with an array of use
 ]
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to unbind existing trading accounts from existing users.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for unbinding trading accounts from existing users, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -79,7 +79,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

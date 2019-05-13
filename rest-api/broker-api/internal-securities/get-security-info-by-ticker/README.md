@@ -4,9 +4,9 @@ description: Retrieve security's information by providing the company's ticker s
 
 # Get Security Info by Ticker
 
-### Overview
+## Overview
 
-This GET endpoint enables you to retrieve detailed information about a collection of securities with a common keyword in their ticker symbol. Unlike the [regular security information method](../../securities/get-securitys-info-by-mask/), this method provides a more comprehensive set of information about a particular security. 
+This GET endpoint enables you to retrieve detailed information about a collection of securities with a common keyword in their ticker symbol. Unlike the [regular security information method](../../securities/get-securitys-info-by-mask/), this method provides a more comprehensive set of information about a particular security.
 
 {% hint style="warning" %}
 In order to retrieve information about a particular security, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
@@ -27,9 +27,9 @@ Here's the final template for this API request:
 GET apiURL/v1.0/internalsecurities
 ```
 
-### Response
+## Response
 
-In response to this API request, you'll receive a JSON file with detailed information about the  securities that contain the keyword in their ticker symbol.
+In response to this API request, you'll receive a JSON file with detailed information about the securities that contain the keyword in their ticker symbol.
 
 ```javascript
 {
@@ -238,11 +238,11 @@ where:
 | PreviousPageLink | This is the previous page with the requested securities. |
 | TotalCount | This is the total number of securities with the specified keyword in their ticker symbol. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve information about securities with a specific keyword in their tucker symbol.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about securities, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -254,7 +254,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -264,7 +264,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying  the Security's Internal ID Instead of its Ticker Symbol
+### Specifying  the Security's Internal ID Instead of its Ticker Symbol
 
 Another common mistake when making this API request is specifying the internal ID of the enquired security instead of its ticker symbol — for this purpose, there's a [separate API request](../get-security-by-id/). If you specify the security's ticker symbol in this request, you'll receive the 400 status code and the following error message:
 
@@ -275,6 +275,4 @@ Another common mistake when making this API request is specifying the internal I
 ```
 
 The following article covers the syntax for this API request in detail.
-
-
 

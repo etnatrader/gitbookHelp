@@ -8,28 +8,28 @@ PUT /v{version}/users/{userId}/watchlists/{watchlistId}/securities/{securityId}
 
 ### Description
 
-Adds security to watchlist by security Id.
+This API endpoint enables you add a security to a custom watchlist by providing the security’s internal identifier in the request header.
 
 ### Parameters
 
 | Type | Name | Description | Schema | Default |
 | :--- | :--- | :--- | :--- | :--- |
-| **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
-| **Header** | **Et-App-Key**   _required_ | Application key | string |  |
-| **Path** | **securityId**   _required_ | Security identifier | integer \(int32\) |  |
-| **Path** | **userId**   _required_ | User identifier | integer \(int32\) |  |
-| **Path** | **version**   _required_ | The requested API version | string | `"1"` |
-| **Path** | **watchlistId**   _required_ | Watchlist identifier | integer \(int32\) |  |
+| **Header** | **Authorization**   _required_ | This is the authorization token that you retrieved from the first endpoint \(/token\). | string |  |
+| **Header** | **Et-App-Key**   _required_ | This is your app’s unique key that can be retrieved from the BO Companies widget in ETNA Trader. | string |  |
+| **Path** | **securityId**   _required_ | This is the internal identifier of the security that needs to be added to the specified watchlist. | integer \(int32\) |  |
+| **Path** | **userId**   _required_ | This is the internal identifier of the user whose watchlist needs to be modified. | integer \(int32\) |  |
+| **Path** | **version**   _required_ | This is the version of the API. Unless you have multiple versions of ETNA Trader’s API deployed in your environment, leave it at 1.0. | string | `"1"` |
+| **Path** | **watchlistId**   _required_ | This is the internal identifier of the watchlist that needs to be appended by a new security. | integer \(int32\) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Changed watchlist with securities | [WatchlistModel](../../definitions/#watchlistmodel) |
-| **401** | Authorization has been denied for this request. | No Content |
-| **403** | Application key is not defined or does not exist | No Content |
-| **409** | Conflict | No Content |
-| **422** | Validation error occurred while processing entity | No Content |
+| **200** | Successful request, JSON data containing the modified watchlist is returned. | [WatchlistModel](watchlists_addsecuritybyid.md#watchlistmodel) |
+| **401** | The access level of the provided authorization token is not sufficient to perform this operation. | No Content |
+| **403** | The provided Et-App-Key is incorrect. | No Content |
+| **409** | The watchlist couldn’t be modified due to some conflict \(perhaps the watchlist is read-only | No Content |
+| **422** | A validation error occurred while processing the request. | No Content |
 | **500** | Internal server error | No Content |
 
 ### Produces

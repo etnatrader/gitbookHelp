@@ -4,7 +4,7 @@ description: Withdraw funds from an existing trading account
 
 # Withdraw Funds from an Account
 
-### Overview
+## Overview
 
 This POST endpoint enables you to withdraw funds from an existing a trading account. These funds are withdrawn from the Cash parameter and by extension affect the stock and options buying power.
 
@@ -26,7 +26,7 @@ Here's the final template for this API request:
 POST apiURL/v1.0/accounts/{accountID}/withdrawal
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file confirming that the funds have been successfully withdrawn:
 
@@ -46,11 +46,11 @@ where:
 | CreateDate | The date on which the funds were withdrawn. |
 | Description | Any additional information that might be relevant to the operation. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to withdraw funds from an existing trading account.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for withdrawing funds from trading accounts, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -62,7 +62,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

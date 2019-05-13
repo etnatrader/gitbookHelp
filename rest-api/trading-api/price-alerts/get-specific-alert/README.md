@@ -4,7 +4,7 @@ description: Fetch information about a specific price alert
 
 # Get Specific Alert
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve information about a particular price alert of the user whose ID is provided in the request. Price alerts are essentially notifications that are sent to the user when the alert's conditions are satisfied by the market. For example, a user may have a price alert that will notify them when the price of the Apple stock exceeds $200.
 
@@ -22,7 +22,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/users/{userID}/pricealerts/{alertID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the detailed information about the price alert.
 
@@ -52,11 +52,11 @@ where:
 | Argument | This is the price point at which the price alert will be triggered and the user will be notified. |
 | ExpirationDate | This is the expiration date of the price alert \(in ticks\). |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve information about a particular price alert.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

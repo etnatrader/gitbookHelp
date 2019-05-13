@@ -4,7 +4,7 @@ description: Get balance information of a particular trading account
 
 # Get Account's Balance Info
 
-### Overview
+## Overview
 
 This endpoint enables you to retrieve balance information of a particular trading account.
 
@@ -25,7 +25,7 @@ The request ought to be sent to the following URL:
 apiURL/v1.0/accounts/{tradingAccountNumber}/info
 ```
 
-### Response
+## Response
 
 In response to this request, you'll receive a JSON file with all of the pertinent information about the trading account:
 
@@ -180,11 +180,11 @@ where:
       <td style="text-align:left">This is the market value of all open long and short positions.</td>
     </tr>
   </tbody>
-</table>### Common Mistakes
+</table>#### Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting the balance information of a particular trading account:
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -194,7 +194,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Attempting to Use @me to Get the User's Account Balance Information
+### Attempting to Use @me to Get the User's Account Balance Information
 
 Even if the user has one trading account, it's not possible to get the balance information of this single account using the @me directive. Attempting to do that will lead to the 400 status code and the following error:
 

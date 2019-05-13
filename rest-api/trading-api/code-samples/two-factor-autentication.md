@@ -72,9 +72,29 @@ Similar to the regular authentication, in this example we perform the initial au
 {% endtab %}
 {% endtabs %}
 
-#### CURL \(Two-Factor Authentication\)
+### CURL
+
+The following are sample CURLs for performing two-factor authentication:
+
+#### First Request
 
 ```text
-curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/json' --header 'Username: yourUsername' --header 'Password: yourPassword' --header 'Authorization: Bearer yourToken' --header 'Et-App-Key: yourEttAppKey' --header 'Content-Length: 0' 'https://pub-api-et-demo-prod.etnasoft.us/api/token'
+curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
+	-H "Username: yourUsername" \
+	-H "Password: yourPassword" \
+	-H "Et-App-Key: yourEttAppKey" \
+	-H "Content-Length: 0" 
+```
+
+#### Second Request
+
+```text
+curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
+	-H "Username: yourUsername" \
+	-H "Password: yourPassword" \
+	-H "Authorization: Bearer {tokenFromTheFirstRequest}" \
+	-H "VerificationCode: {codeFromEmailOrSMS}" \
+	-H "Et-App-Key: yourEttAppKey" \
+	-H "Content-Length: 0"
 ```
 

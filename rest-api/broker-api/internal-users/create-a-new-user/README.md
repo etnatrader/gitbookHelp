@@ -4,9 +4,9 @@ description: Create a new user in ETNA Trader
 
 # Create a New User
 
-### Overview
+## Overview
 
-This POST endpoint enables you to create a new user in ETNA Trader. Information about the new user is provided in the request body as a JSON, and the new user is then automatically added to your company. 
+This POST endpoint enables you to create a new user in ETNA Trader. Information about the new user is provided in the request body as a JSON, and the new user is then automatically added to your company.
 
 There are five required parameters that must be provided in the request:
 
@@ -22,11 +22,11 @@ Here's the final template for this API request:
 POST apiURL/v1.0/users
 ```
 
-#### Request Body Sample
+### Request Body Sample
 
 The body of the request represents a JSON file with mandatory parameters required for user creation.
 
-#### Smallest User Creation Sample
+### Smallest User Creation Sample
 
 ```javascript
 {
@@ -37,7 +37,7 @@ The body of the request represents a JSON file with mandatory parameters require
 }
 ```
 
-#### Comprehensive User Creation Sample
+### Comprehensive User Creation Sample
 
 ```javascript
 {
@@ -72,7 +72,7 @@ where:
 | ExpirationDate | This is the date on which the user's account will be disabled. |
 | PhoneNumber / EntitlementsPhoneNumber | This the user's phone number. |
 
-#### TimeZoneInfoID Values Range
+### TimeZoneInfoID Values Range
 
 ```text
 Dateline Standard Time
@@ -270,7 +270,7 @@ Kamchatka Standard Time
 Tonga Standard Time
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file that contains information you specified in the request body along with the new user's internal identifier in ETNA Trader:
 
@@ -294,11 +294,11 @@ In response to this API request, you'll receive a JSON file that contains inform
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to create a new user.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -308,7 +308,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Provide All Required Parameters
+### Failing to Provide All Required Parameters
 
 Another common mistake when making this API request is failing to provide all required parameters in the request's body. In the request body sample above we have highlighted all required parameters for this request, so ensure that you provide all of them; otherwise you'll receive the 500 status code and the following error message:
 

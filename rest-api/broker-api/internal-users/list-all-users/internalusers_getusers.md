@@ -27,7 +27,7 @@ Provides sorted users collection
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Users collection | [PagingResult\[IList\[UserModel\]\]]() |
+| **200** | Users collection | [PagingResult\[IList\[UserModel\]\]](internalusers_getusers.md) |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |
 | **422** | Validation error occurred while processing entity | No Content |

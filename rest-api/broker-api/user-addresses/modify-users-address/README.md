@@ -4,7 +4,7 @@ description: Modify the address of a particular user
 
 # Modify User's Address
 
-### Overview
+## Overview
 
 This GET endpoint enables you to modify the address of the user whose ID is provided in the request's path.
 
@@ -22,7 +22,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/users/{userID}/addresses
 ```
 
-#### Request Body Sample
+### Request Body Sample
 
 ```javascript
 {
@@ -46,11 +46,11 @@ where:
 | PostalCode | This is the user's new postal code. |
 | CountryId | This is the internal identifier of the new country in which the user is residing. |
 
-### Country and State Identifiers
+## Country and State Identifiers
 
 The **State** and **CountryId** identifiers represent internal identifiers of different countries and US states in the integer format. Each country and US state has a corresponding identifier that you can look up in the following tables.
 
-####  US States and Their Corresponding IDs
+### US States and Their Corresponding IDs
 
 ```text
         Unknown = 0,
@@ -108,7 +108,7 @@ The **State** and **CountryId** identifiers represent internal identifiers of di
         PR = 52,
 ```
 
-#### Countries and their Corresponding IDs
+### Countries and their Corresponding IDs
 
 VALUES \(CountryId, Country name\):
 
@@ -396,7 +396,7 @@ INSERT INTO #TEMP_Country (Id, Name, Code, SelfDefinedCode) VALUES(282,'SaintBar
 INSERT INTO #TEMP_Country (Id, Name, Code, SelfDefinedCode) VALUES(283,'SintMaarten','MF',0)
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with with the updated user's address.
 
@@ -418,11 +418,11 @@ where:
 | State | This is the state in which the user is residing \(if applicable\). |
 | CountryId | This is the user's country's internal identifier in ETNA Trader. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to modify a user's address.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

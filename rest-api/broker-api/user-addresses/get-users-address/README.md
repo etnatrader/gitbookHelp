@@ -4,7 +4,7 @@ description: Fetch the address of a particular user
 
 # Get User's Address
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve the address of the user whose ID is provided in the request's path.
 
@@ -21,7 +21,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/users/{userID}/addresses
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with with the user's address.
 
@@ -43,11 +43,11 @@ where:
 | State | This is the state in which the user is residing \(if applicable\). |
 | CountryId | This is the user's country's internal identifier in ETNA Trader. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve a user's address.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

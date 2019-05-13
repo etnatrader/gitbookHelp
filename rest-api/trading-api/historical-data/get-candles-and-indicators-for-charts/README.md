@@ -4,9 +4,9 @@ description: Fetch candles and indicators for a particular security
 
 # Get Candles and Indicators for a Security
 
-### Overview
+## Overview
 
-This PUT endpoint enables you to retrieve candles and indicators for a particular security. This data includes price ranges, candles, and various other non-market data. 
+This PUT endpoint enables you to retrieve candles and indicators for a particular security. This data includes price ranges, candles, and various other non-market data.
 
 There are four required parameters that must be provided in the request:
 
@@ -15,51 +15,51 @@ There are four required parameters that must be provided in the request:
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **model** \(body\). This is a JSON dictionary that contains information about the enquired security.
 
-#### Enquired Security Syntax
+### Enquired Security Syntax
 
 Here's an example of the request body with the information about the enquired security.
 
 ```javascript
 {"Security":
-	{"Symbol":"AAPL",
-	"Exchange":"XNAS",
-	"Currency":"USD"},
-	
+    {"Symbol":"AAPL",
+    "Exchange":"XNAS",
+    "Currency":"USD"},
+
 "SecurityHistorySettings":
-	{"StartDate":1542776400,
-	"EndDate":1550764844,
-	"CandlesCount":-1,
-	"Period":"4h",
-	"Interval":-7,
-	"IncludeNonMarketData":false},
+    {"StartDate":1542776400,
+    "EndDate":1550764844,
+    "CandlesCount":-1,
+    "Period":"4h",
+    "Interval":-7,
+    "IncludeNonMarketData":false},
 
 "IndicatorsHistorySettings":[
-	{"Signature":"MACD|4h|false|12|26|9",
-	"Interval":-7,
-	"StartDate":1542776400,
-	"EndDate":1550764844,
-	"CandlesCount":-1,
-	"Offset":0,
-	"Indicator":{
-		"id":4,
-		"indicatorId":1,
-		"type":"movingAverageConvergenceDivergenceIndicator",
-		"position":"lower",
-		"external":true,
-		"settings":{
-			"id":4,
-			"type":"movingAverageConvergenceDivergenceIndicator",
-			"shortThickness":2,
-			"longThickness":2,
-			"shortBrush":"32c814",
-			"longBrush":"dc1414",
-			"signalBrush":"ff9900",
-			"shortPeriod":12,
-			"longPeriod":26,
-			"signalPeriod":9,
-			"showLastValue":true,
-			"showCurrentPoint":true,
-			"showLevelBands":false}}}]
+    {"Signature":"MACD|4h|false|12|26|9",
+    "Interval":-7,
+    "StartDate":1542776400,
+    "EndDate":1550764844,
+    "CandlesCount":-1,
+    "Offset":0,
+    "Indicator":{
+        "id":4,
+        "indicatorId":1,
+        "type":"movingAverageConvergenceDivergenceIndicator",
+        "position":"lower",
+        "external":true,
+        "settings":{
+            "id":4,
+            "type":"movingAverageConvergenceDivergenceIndicator",
+            "shortThickness":2,
+            "longThickness":2,
+            "shortBrush":"32c814",
+            "longBrush":"dc1414",
+            "signalBrush":"ff9900",
+            "shortPeriod":12,
+            "longPeriod":26,
+            "signalPeriod":9,
+            "showLastValue":true,
+            "showCurrentPoint":true,
+            "showLevelBands":false}}}]
 }
 ```
 
@@ -74,7 +74,7 @@ where:
 | StartDate | This is the beginning of the period for which the data will be retrieved. |
 | EndDate | This is the end of the period for which the data will be retrieved. |
 | CandlesCount | This is the number of candles that will be retrieved for the specified time period. |
-| Interval | This is the trading data interval for the specified time period.  |
+| Interval | This is the trading data interval for the specified time period. |
 
 {% hint style="warning" %}
 All parameters must be provided in the body JSON; otherwise the chart data will not be retrieved.
@@ -86,7 +86,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/history/symbols
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive the chart data for the specified security. Some of the response data was omitted so as to preserve space.
 
@@ -240,11 +240,11 @@ where:
 | High | This is the highest price point for the security during the specified time period. |
 | Low | This is the lowest price point for the security during the specified time period. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve trading data for a particular security.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -254,9 +254,9 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Incorrectly Specifying the Request Body 
+### Incorrectly Specifying the Request Body
 
-Another common mistake when attempting to retrieve the chart data for a particular security is incorrectly structuring the request body. It's critical that you follow the template provided above and specify all of the required parameters. Otherwise you'll receive the 500 status code and the following error message: 
+Another common mistake when attempting to retrieve the chart data for a particular security is incorrectly structuring the request body. It's critical that you follow the template provided above and specify all of the required parameters. Otherwise you'll receive the 500 status code and the following error message:
 
 ```javascript
 {

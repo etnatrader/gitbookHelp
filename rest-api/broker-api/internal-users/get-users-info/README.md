@@ -4,7 +4,7 @@ description: Retrieve information about a particular user
 
 # Get Users' Info
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve information about a particular user by providing their internal identifier in ETNA Trader in the request path.
 
@@ -25,7 +25,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/users/{userID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with detailed information about the user.
 
@@ -65,11 +65,11 @@ where:
 | TimeZoneInfoId | This field indicates the time zone in which the user lives. |
 | EntitlementsPhoneNumber | This the user's phone number. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve information about a particular user.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving users' information, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -81,7 +81,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -91,7 +91,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the User's Login Instead of the Internal ID
+### Specifying the User's Login Instead of the Internal ID
 
 Another common mistake developers make when making this API request is specifying the login of the user instead of their internal ID. Doing so will lead to the 400 status code, and you will receive the following error message:
 

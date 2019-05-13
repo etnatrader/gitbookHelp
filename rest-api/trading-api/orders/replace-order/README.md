@@ -4,7 +4,7 @@ description: Modify an existing order (cancel and replace)
 
 # Replace Order
 
-### Overview
+## Overview
 
 This PUT endpoint enables you to replace an existing order in ETNA Trader. The order is sent in the JSON format to our service which in turn replaced the fields in the existing order.
 
@@ -22,13 +22,13 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/accounts/{accountID}/orders/{existingOrderID}
 ```
 
-### Request Body
+## Request Body
 
 The body of this request represents the information that must be replaced in an existing order. It must be sent in the JSON format with mandatory parameters about the order and also those parameters that need to be modified.
 
 The first four parameters — **ID**, **Quantity**, **Price**, **ExecutionInstructions**, **Legs** — are mandatory, while the remaining parameters should only be provided in case they need to be modified. Apart from these four parameters, the rest of the JSON should be constructed identically to the [order placement JSON](../place-order/).
 
-#### Order Modification Sample
+### Order Modification Sample
 
 ```javascript
 {
@@ -39,7 +39,7 @@ The first four parameters — **ID**, **Quantity**, **Price**, **ExecutionInstru
 }
 ```
 
-### Response
+## Response
 
 In response to this request, you'll receive a JSON file with the updated information about the modified order:
 
@@ -103,11 +103,11 @@ In response to this request, you'll receive a JSON file with the updated informa
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to modify an existing order. 
+Here are some of the common mistakes that developers make when attempting to modify an existing order.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -117,7 +117,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the User ID Instead of the Trading Account ID
+### Specifying the User ID Instead of the Trading Account ID
 
 Another common mistake when making this request is specifying the user ID instead of the user's trading account ID. Doing so will result in the 500 status code and the following error message:
 
@@ -128,7 +128,7 @@ Another common mistake when making this request is specifying the user ID instea
 }
 ```
 
-#### Specifying a Trading Account of a Different User
+### Specifying a Trading Account of a Different User
 
 It's critical to understand that when you use the authorization token of a particular user in this request's header, only this user's trading accounts can be used for modifying existing orders. Modifying an existing order on a trading account of a different user will lead to the 401 error.
 

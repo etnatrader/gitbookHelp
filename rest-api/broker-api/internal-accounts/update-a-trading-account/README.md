@@ -4,7 +4,7 @@ description: Update an existing trading account
 
 # Update a Trading Account
 
-### Overview
+## Overview
 
 This PUT endpoint enables you to update an existing trading account. To avoid having conflicts with the clearing firm, please refrain from modifying critical parameters like _ClearingAccount_.
 
@@ -20,7 +20,7 @@ There are five required parameters that must be provided in the request:
 4. **accountId** \(path\). This is the internal identifier of the trading account that needs to be modified.
 5. **accountModel** \(body\). This is a JSON file with the updated information about the modified trading account.
 
-#### Request Body Sample
+### Request Body Sample
 
 Following is a sample JSON file that contains information about the modified account:
 
@@ -71,7 +71,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/accounts
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with information about the updated trading account, confirming that the fields have been modified.
 
@@ -117,11 +117,11 @@ In response to this API request, you'll receive a JSON file with information abo
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to modify existing trading accounts.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for modifying existing trading accounts, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -133,7 +133,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

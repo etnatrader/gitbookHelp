@@ -4,9 +4,9 @@ description: Rename an existing watchlist
 
 # Rename Watchlist
 
-### Overview
+## Overview
 
-This PUT endpoint enables you to rename a specific watchlist of the user whose id is provided in the request's path. 
+This PUT endpoint enables you to rename a specific watchlist of the user whose id is provided in the request's path.
 
 There are six required parameters that must be provided in the request:
 
@@ -23,7 +23,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/users/@me/watchlists/17973/name?name=New Name
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with a dictionary that contains two fields: the modified watchlist's ID and its new name.
 
@@ -34,11 +34,11 @@ In response to this API request, you'll receive a JSON file with a dictionary th
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to rename a specific watchlist.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -48,7 +48,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameters
+### Failing to Specify the Query Parameters
 
 It's crucial to understand that the _**name**_ parameter must be provided in the request; otherwise you'll receive the 404 status code and the following message:
 

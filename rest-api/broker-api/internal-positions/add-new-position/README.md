@@ -4,7 +4,7 @@ description: Manually add a new position on a trading account
 
 # Add New Position
 
-### Overview
+## Overview
 
 This POST endpoint enables you to create positions in securities, bypassing the regular order creation mechanism. Every once in a while some breakdown takes place on the exchange or in ETNA Trader, forcing you to use our Back Office to manually add the required position to the user's trading account. This procedure must be carried out with caution so as to prevent any conflicts.
 
@@ -20,7 +20,7 @@ There are five required parameters that must be provided in the request:
 4. **recalculate** \(query\). This is a boolean field that indicates if the account's cash should be recalculated after adding the new position.
 5. **position** \(body\). This is a JSON file that contains information about the new position. 
 
-#### New Position Syntax
+### New Position Syntax
 
 Following is a sample of a new position that can be added to a user's trading account. The first three parameters — **AccountId**, **SecurityId**, and **Quantity** — are mandatory while the rest can be configured depending on the circumstances.
 
@@ -56,7 +56,7 @@ where:
 | Parameter | Description |
 | :--- | :--- |
 | AccountId | This is the internal identifier of the trading account. |
-| SecurityId | This is the internal identifier of the underlying security in ETNA Trader. You can get this ID using [this API method](../../securities/get-securitys-info-by-its-ticket-symbol/). |
+| SecurityId | This is the internal identifier of the underlying security in ETNA Trader. You can get this ID using [this API method](https://github.com/etnatrader/gitbookHelp/tree/6c42ded62b3c38323fe9c79d5284ef0387d6f690/rest-api/broker-api/securities/get-securitys-info-by-its-ticket-symbol/README.md). |
 | Quantity | This is the number of securities in the new position. |
 | CostBasis | This is the weighted average execution price of the order. |
 | Id | This is the internal identifier of an existing position to which you intend to add securities. |
@@ -65,7 +65,7 @@ where:
 | ModifyDate | This is the date on which the position was modified. |
 | RealizedProfitLoss | Realized profit or loss. |
 | AverageOpenPrice | The average opening price of the position. |
-| AverageClosePrice | The average closing price of the position.  |
+| AverageClosePrice | The average closing price of the position. |
 | StopLossPrice | This is the price at which the position should be terminated if the market value reaches the price. |
 | TakeProfitPrice | This is the price at which the profit of the position should be realized if the market value reaches the price. |
 | DailyCloseProfitLoss | This is the unrealized profit or loss of the position measured against the last closing price. |
@@ -85,7 +85,7 @@ Here's the final template for this API request:
 POST apiURL/v1.0/positions
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the same request information that you sent earlier.
 
@@ -117,11 +117,11 @@ In response to this API request, you'll receive a JSON file with the same reques
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to create a new position, bypassing the regular order placement mechanism.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for manually adding new positions, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -133,7 +133,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -143,7 +143,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameters
+### Failing to Specify the Query Parameters
 
 It's crucial to understand that the _**pageSize, pageNumber, isDesc, and sortBy**_ parameters must be provided in the request; otherwise you'll receive the 404 status code and the following message:
 

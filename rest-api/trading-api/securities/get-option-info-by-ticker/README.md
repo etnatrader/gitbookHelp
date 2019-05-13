@@ -4,9 +4,9 @@ description: Fetch information about a particular option by providing its ticker
 
 # Get Option Info by Ticker
 
-### Overview
+## Overview
 
-This GET endpoint enables you to retrieve information about a particular option by providing the option's ticker symbol in the request's header. Whereas the first three methods in the _Securities_ section deal with equities' information, this endpoint provides information exclusively about options. 
+This GET endpoint enables you to retrieve information about a particular option by providing the option's ticker symbol in the request's header. Whereas the first three methods in the _Securities_ section deal with equities' information, this endpoint provides information exclusively about options.
 
 There are four required parameters that must be provided in the request:
 
@@ -21,7 +21,7 @@ Here's the final template for this API request:
 apiURL/v1.0/options/VSSQ1 260117P00008000
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with comprehensive information about the enquired option:
 
@@ -72,18 +72,18 @@ where:
 | AllowMargin | This field indicates if the security is allowed to be traded on margin. |
 | AllowShort | This field indicates if the security can be sold short. |
 | OptionType | This is the type of option. Possible values: call, put. |
-| ExpirationType | This is the expiration type of the option. Possible values: Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard.  |
+| ExpirationType | This is the expiration type of the option. Possible values: Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard. |
 | ExpirationDate | This is the expiration date of the option. |
 | StrikePrice | This is the price at which the holder of the option can buy or sell the underlying asset. |
 | SeriesId | This is the internal ID of the option series in ETNA Trader. |
 | UnderlyingAssetSymbol | This is the ticker symbol of the underlying asset. |
 | ContractSize | This is the deliverable quantity of the option's underlying asset. |
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve an option's information by their ticker symbol. 
+Here are some of the common mistakes that developers make when attempting to retrieve an option's information by their ticker symbol.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -93,7 +93,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the Underlying Security's Ticker instead of the Option's Ticker Symbol
+### Specifying the Underlying Security's Ticker instead of the Option's Ticker Symbol
 
 Another common mistake in retrieving information about a particular option is specifying the underlying security's ticker symbol instead of the enquired option's ticker symbol. Doing so will lead to the 409 status code.
 

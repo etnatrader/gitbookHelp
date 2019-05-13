@@ -4,15 +4,15 @@ description: >-
   be searched for in all equity databases
 ---
 
-# Get Equity's Info by Mask
+# Get Equity Info by Mask
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve a list of securities with a certain pattern by specifying a keyword which will be queried in all equities' symbol, exchange, and description fields. All equities that feature the queried word \(mask\) in their ticker symbol or description will be returned in the JSON file as a response to the request.
 
 There are five required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
+1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
 
    **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
 
@@ -25,7 +25,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/equities/lookup?mask=Apple&count=5
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with all equities who feature the queried word in the symbol, exchange, or description fields.
 
@@ -88,11 +88,11 @@ where:
 | AllowMargin | This field indicates if the security is allowed to be traded on margin. |
 | AllowShort | This field indicates if the security can be sold short. |
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve equities with a certain keyword in their symbol, exchange, or description fields. 
+Here are some of the common mistakes that developers make when attempting to retrieve equities with a certain keyword in their symbol, exchange, or description fields.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

@@ -4,9 +4,9 @@ description: Fetch expiration dates of options with a particular underlying secu
 
 # Get Options Expiration Dates
 
-### Overview
+## Overview
 
-This endpoint enables you to retrieve the expiration dates of all options in which the underlying security is provided in the request's query. 
+This endpoint enables you to retrieve the expiration dates of all options in which the underlying security is provided in the request's query.
 
 There are four required parameters that must be provided in the request's header and query:
 
@@ -21,7 +21,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/options/expirations?underlying=AAPL
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a list of expiration dates for options in which the underlying security was specified in the request query.
 
@@ -59,15 +59,15 @@ where:
 | Parameter | Description |
 | :--- | :--- |
 | SeriesId | This is the internal identifier of the option series to which this option belongs. |
-| SeriesType | This is the type of option series. Possible values: Standard, NonStandard, Binary, Flex, Undefined.  |
+| SeriesType | This is the type of option series. Possible values: Standard, NonStandard, Binary, Flex, Undefined. |
 | ExpirationDate | This is the expiration date of the option. |
-| ExpirationType | This is the expiration type of the option. Possible values: Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard.  |
+| ExpirationType | This is the expiration type of the option. Possible values: Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard. |
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve expiration data of options with a particular underlying security. 
+Here are some of the common mistakes that developers make when attempting to retrieve expiration data of options with a particular underlying security.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -77,7 +77,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameters
+### Failing to Specify the Query Parameters
 
 It's crucial to understand that the _**underlying**_ query parameter must be indicated in the request; otherwise you'll receive the 404 status code and the following message:
 

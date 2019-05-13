@@ -4,7 +4,7 @@ description: Get information about a particular trading account
 
 # Get Trading Account Info by ID
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve information about a particular trading account by providing its internal identifier in ETNA Trader in the request path. This internal identifier can be retrieved with [this method](../list-all-accounts/) that lists all trading accounts in your company. You can also view the trading accounts of a users in ETNA Trader's header:
 
@@ -27,7 +27,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/accounts/{accountID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with detailed information about the trading account:
 
@@ -72,58 +72,51 @@ In response to this API request, you'll receive a JSON file with detailed inform
 
 where:
 
+| Parameter | Description |
+| :--- | :--- |
+
+
+| Id | This is the internal identifier of the trading account that was provided in the request path. |
+| :--- | :--- |
+
+
+| SubscriptionPlanId | This is an internal field in ETNA Trader and it shouldn't be used by third-party developers. |
+| :--- | :--- |
+
+
+| ClearingAccount | This is the id of this account at the clearing firm. |
+| :--- | :--- |
+
+
+| CreatedDate | This is the date on which the trading account was created. |
+| :--- | :--- |
+
+
+| ModifiedDate | This is the date on which the trading account was last modified. |
+| :--- | :--- |
+
+
+| Enabled | This field indicates if the trading account is enabled. |
+| :--- | :--- |
+
+
+| IsChanged | This is an internal field in ETNA Trader and it shouldn't be used by third-party developers. |
+| :--- | :--- |
+
+
+| Cash | This is the amount of funds on the trading account that the user can expend on new positions. |
+| :--- | :--- |
+
+
+| Currency | This is the currency of the trading account. At the moment only US dollars are supported. |
+| :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Id</td>
-      <td style="text-align:left">This is the internal identifier of the trading account that was provided
-        in the request path.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SubscriptionPlanId</td>
-      <td style="text-align:left">This is an internal field in ETNA Trader and it shouldn&apos;t be used
-        by third-party developers.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ClearingAccount</td>
-      <td style="text-align:left">This is the id of this account at the clearing firm.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CreatedDate</td>
-      <td style="text-align:left">This is the date on which the trading account was created.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ModifiedDate</td>
-      <td style="text-align:left">This is the date on which the trading account was last modified.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Enabled</td>
-      <td style="text-align:left">This field indicates if the trading account is enabled.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">IsChanged</td>
-      <td style="text-align:left">This is an internal field in ETNA Trader and it shouldn&apos;t be used
-        by third-party developers.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Cash</td>
-      <td style="text-align:left">This is the amount of funds on the trading account that the user can expend
-        on new positions.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Currency</td>
-      <td style="text-align:left">This is the currency of the trading account. At the moment only US dollars
-        are supported.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Status</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Status</th>
+      <th style="text-align:left">
         <p>This is the status of the trading account. Possible values:</p>
         <ul>
           <li>New &#x2014; the trading account has been created;</li>
@@ -134,41 +127,39 @@ where:
           <li>Rejected &#x2014; the trading account has been rejected by the clearing
             firm.</li>
         </ul>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table>| MarginInterestRate | This is the interest rate applied to the funds borrowed to finance margin positions. |
+| :--- | :--- |
+
+
+| CashInterestRate | This is an obsolete field and it shouldn't be used by third-party developers. |
+| :--- | :--- |
+
+
+| CloseEquity | This is the trading account's equity before the start of a new trading session \(calculated based on the closing price of the previous trading session\). |
+| :--- | :--- |
+
+
+| OpenExcess | This field indicates the account's excess funds calculated at the opening of the trading session. |
+| :--- | :--- |
+
+
+| OptionLevel | This field indicates which operations with options are permitted on this account. |
+| :--- | :--- |
+
+
+| MarginType | This is the account type. Read more about it [here](../../../../administrator-guide/administrators-widgets/managing-users/#trading-accounts). |
+| :--- | :--- |
+
+
+<table>
+  <thead>
     <tr>
-      <td style="text-align:left">MarginInterestRate</td>
-      <td style="text-align:left">This is the interest rate applied to the funds borrowed to finance margin
-        positions.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CashInterestRate</td>
-      <td style="text-align:left">This is an obsolete field and it shouldn&apos;t be used by third-party
-        developers.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CloseEquity</td>
-      <td style="text-align:left">This is the trading account&apos;s equity before the start of a new trading
-        session (calculated based on the closing price of the previous trading
-        session).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">OpenExcess</td>
-      <td style="text-align:left">This field indicates the account&apos;s excess funds calculated at the
-        opening of the trading session.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">OptionLevel</td>
-      <td style="text-align:left">This field indicates which operations with options are permitted on this
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MarginType</td>
-      <td style="text-align:left">This is the account type. Read more about it <a href="../../../../administrator-guide/administrators-widgets/managing-users/#trading-accounts">here</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Permissions</td>
-      <td style="text-align:left">
+      <th style="text-align:left">Permissions</th>
+      <th style="text-align:left">
         <p>This field lists the operations permitted on this trading account. Possible
           values:</p>
         <ul>
@@ -180,21 +171,23 @@ where:
           <li>AllowMargin &#x2014; trading on margin is permitted;</li>
           <li>AllowOpen &#x2014; opening positions on this account is permitted.</li>
         </ul>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table>| BaseCash | This is the trading account's excessive funds that are used for calculating DayTradingBuyingPower. |
+| :--- | :--- |
+
+
+| Sweep | This is an internal field and it shouldn't be used by third-party developers. |
+| :--- | :--- |
+
+
+<table>
+  <thead>
     <tr>
-      <td style="text-align:left">BaseCash</td>
-      <td style="text-align:left">This is the trading account&apos;s excessive funds that are used for calculating
-        DayTradingBuyingPower.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Sweep</td>
-      <td style="text-align:left">This is an internal field and it shouldn&apos;t be used by third-party
-        developers.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">OwnerType</td>
-      <td style="text-align:left">
+      <th style="text-align:left">OwnerType</th>
+      <th style="text-align:left">
         <p>This is the type of the trading account&apos;s owner. Possible values:</p>
         <ul>
           <li>IndividualCustomer = 0</li>
@@ -206,79 +199,69 @@ where:
           <li>Unknown = 6,</li>
           <li>ErrorAccount = 7</li>
         </ul>
-      </td>
+      </th>
     </tr>
-    <tr>
-      <td style="text-align:left">DayTradingBuyingPower</td>
-      <td style="text-align:left">This is the amount of funds that can be employed to make trades on day
-        trading accounts. Usually the value of this field is equal to <em>BaseCash</em> multiplied
-        by four.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">DayTrades</td>
-      <td style="text-align:left">This is the number of active day trades on the account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SmaBalance</td>
-      <td style="text-align:left">This is the amount of funds in a special memorandum account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">HouseCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a house call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MaintenanceCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a maintenance call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">EquityCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a minimum equity call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">InitialCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent an initial call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">DayTradeCall</td>
-      <td style="text-align:left">This field indicates the amount of funds that need to be deposited into
-        the account in order to prevent a day trade call.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TradeDayBalance</td>
-      <td style="text-align:left">This is the amount of funds that the trading account owes to the broker.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MoneyMarket</td>
-      <td style="text-align:left">These are the money market funds on the trading account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Cip</td>
-      <td style="text-align:left">This is the Carriage and Insurance Paid To (CIP).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">IsAverageAccount</td>
-      <td style="text-align:left">This field indicates if this trading account is used to allocate shares
-        to other trading accounts.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MarginEquity</td>
-      <td style="text-align:left">This is the portion of the account&apos;s equity that was purchased on
-        margin.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExcessEquity</td>
-      <td style="text-align:left">This is the withdrawable portion of the equity.</td>
-    </tr>
-  </tbody>
-</table>### Common Mistakes
+  </thead>
+  <tbody></tbody>
+</table>| DayTradingBuyingPower | This is the amount of funds that can be employed to make trades on day trading accounts. Usually the value of this field is equal to _BaseCash_ multiplied by four. |
+| :--- | :--- |
+
+
+| DayTrades | This is the number of active day trades on the account. |
+| :--- | :--- |
+
+
+| SmaBalance | This is the amount of funds in a special memorandum account. |
+| :--- | :--- |
+
+
+| HouseCall | This field indicates the amount of funds that need to be deposited into the account in order to prevent a house call. |
+| :--- | :--- |
+
+
+| MaintenanceCall | This field indicates the amount of funds that need to be deposited into the account in order to prevent a maintenance call. |
+| :--- | :--- |
+
+
+| EquityCall | This field indicates the amount of funds that need to be deposited into the account in order to prevent a minimum equity call. |
+| :--- | :--- |
+
+
+| InitialCall | This field indicates the amount of funds that need to be deposited into the account in order to prevent an initial call. |
+| :--- | :--- |
+
+
+| DayTradeCall | This field indicates the amount of funds that need to be deposited into the account in order to prevent a day trade call. |
+| :--- | :--- |
+
+
+| TradeDayBalance | This is the amount of funds that the trading account owes to the broker. |
+| :--- | :--- |
+
+
+| MoneyMarket | These are the money market funds on the trading account. |
+| :--- | :--- |
+
+
+| Cip | This is the Carriage and Insurance Paid To \(CIP\). |
+| :--- | :--- |
+
+
+| IsAverageAccount | This field indicates if this trading account is used to allocate shares to other trading accounts. |
+| :--- | :--- |
+
+
+| MarginEquity | This is the portion of the account's equity that was purchased on margin. |
+| :--- | :--- |
+
+
+| ExcessEquity | This is the withdrawable portion of the equity. |
+| :--- | :--- |
+
 
 Here are some of the common mistakes that developers make when attempting to retrieve information about a trading account.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving information about a trading account, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -290,7 +273,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

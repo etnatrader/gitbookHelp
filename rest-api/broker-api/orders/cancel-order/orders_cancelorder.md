@@ -8,28 +8,28 @@ DELETE /v{version}/accounts/{accountId}/orders/{orderId}
 
 ### Description
 
-Cancel order
+This API endpoint enables you to cancel an existing order.
 
 ### Parameters
 
 | Type | Name | Description | Schema | Default |
 | :--- | :--- | :--- | :--- | :--- |
-| **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
-| **Header** | **Et-App-Key**   _required_ | Application key | string |  |
-| **Path** | **accountId**   _required_ | Account identifier | integer \(int32\) |  |
-| **Path** | **orderId**   _required_ | Order internal identifier | integer \(int32\) |  |
-| **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
+| **Header** | **Authorization**   _required_ | This is the authorization token that you retrieved from the first endpoint \(/token\). | string |  |
+| **Header** | **Et-App-Key**   _required_ | This is your app’s unique key that can be retrieved from the BO Companies widget in ETNA Trader. | string |  |
+| **Path** | **accountId**   _required_ | This is the unique identifier of the trading account whose order needs to be cancelled. | integer \(int32\) |  |
+| **Path** | **orderId**   _required_ | This is the ID of the order that needs to be cancelled. | integer \(int32\) |  |
+| **Path** | **version**   _required_ | This is the version of the API. Unless you have multiple versions of ETNA Trader’s API deployed in your environment, leave it at 1.0. | string | `"1"` |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
 | **200** | OK | object |
-| **204** | Order successfully canceled | No Content |
-| **401** | Authorization has been denied for this request. | No Content |
-| **403** | Application key is not defined or does not exist | No Content |
-| **409** | Conflict | No Content |
-| **422** | Validation error occurred while processing entity | No Content |
+| **204** | The order was successfully cancelled | No Content |
+| **401** | The access level of the provided authorization token is not sufficient to perform this operation. | No Content |
+| **403** | The provided Et-App-Key is incorrect. | No Content |
+| **409** | A conflict has occurred when attempting to cancel the order. | No Content |
+| **422** | A validation error occurred while processing the request. | No Content |
 | **500** | Internal server error | No Content |
 
 ### Produces

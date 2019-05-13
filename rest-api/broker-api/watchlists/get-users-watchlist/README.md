@@ -4,7 +4,7 @@ description: List a user's watchlists
 
 # Get User's Watchlists
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve the list of watchlists of a user whose ID is provided in the request's path. The watchlists can be retrieved either with only information about the watchlists or including the list of securities in every watchlist.
 
@@ -22,9 +22,9 @@ Here's the final template for this API request:
 apiURL/v1.0/users/{userID}/watchlists?includeSecurities=true
 ```
 
-### Response
+## Response
 
-In response to this API request, you'll receive a JSON file that lists the user's watchlists: 
+In response to this API request, you'll receive a JSON file that lists the user's watchlists:
 
 ```javascript
 [
@@ -117,7 +117,7 @@ If the _**includeSecurities**_ query parameter is set to true, the retrieved wat
 ]
 ```
 
-#### Watchlist Parameters
+### Watchlist Parameters
 
 | Parameter | Description |
 | :--- | :--- |
@@ -129,11 +129,11 @@ If the _**includeSecurities**_ query parameter is set to true, the retrieved wat
 | ReadOnly | This field indicates if the watchlist is modifiable. |
 | SecurityList | This is a collection of securities in the watchlist. |
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve a user's watchlists. 
+Here are some of the common mistakes that developers make when attempting to retrieve a user's watchlists.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -143,7 +143,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameter
+### Failing to Specify the Query Parameter
 
 It's crucial to understand that the _**includeSecurities**_ parameter must be indicated in the request; otherwise you'll receive the 404 status code and the following message:
 

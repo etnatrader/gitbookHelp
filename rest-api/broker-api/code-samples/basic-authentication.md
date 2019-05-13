@@ -64,9 +64,15 @@ You can then extract the returned token and assign it to the `token` property.
 {% endtab %}
 {% endtabs %}
 
-#### CURL
+### CURL
+
+The following is a sample CURL for performing single-factor authentication:
 
 ```text
-curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/json' --header 'Username: yourEmail' --header 'Password: yourPassword' --header 'Et-App-Key: yourAppKey' --header 'Content-Length: 0' 'https://priv-api-et-demo-prod.etnasoft.us/api/token'
+curl -X POST "https://priv-api-et-demo-prod.etnasoft.us/api/token" \
+	-H "Username: yourUsername" \
+	-H "Password: yourPassword" \
+	-H "Et-App-Key: yourEttAppKey" \
+	-H "Content-Length: 0" 
 ```
 

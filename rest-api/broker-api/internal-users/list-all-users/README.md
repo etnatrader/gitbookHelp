@@ -4,7 +4,7 @@ description: List all users within a company
 
 # List All Users
 
-### Overview
+## Overview
 
 This GET endpoint enables you to list all users within your company, sorted by a particular field. The list of all users is split into multiple pages, each of which can be retrieved in a single request.
 
@@ -26,7 +26,7 @@ There's also one optional parameter worth examining:
 
 * filter \(request query\). This is an SQL query used to retrieve only those users that satisfy the conditions of the query. 
 
-#### Filter Syntax
+### Filter Syntax
 
 The syntax for filter queries is rather simple: each parameter of a user can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
 
@@ -103,7 +103,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/users
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the users from the page specified in the request query:
 
@@ -249,11 +249,11 @@ where:
 | PreviousPageLink | This is the link of the previous page of users. |
 | TotalCount | This is the total number of users in the company. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to list users.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for retrieving users, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -265,7 +265,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

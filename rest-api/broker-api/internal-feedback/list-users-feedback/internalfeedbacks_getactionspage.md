@@ -16,7 +16,7 @@ Provides feedbacks paged result
 | :--- | :--- | :--- | :--- | :--- |
 | **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
 | **Header** | **Et-App-Key**   _required_ | Application key | string |  |
-| **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
+| **Path** | **version**   _required_ | The requested API version | string | `"1"` |
 | **Query** | **filter**   _optional_ | Filter query | string \(String\) |  |
 | **Query** | **isDesc**   _required_ | Sorting direction. Desc if true, otherwise is asc | boolean |  |
 | **Query** | **pageNumber**   _required_ | Page number | integer \(int32\) |  |
@@ -27,7 +27,7 @@ Provides feedbacks paged result
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Feedbacks paging result | [PagingResult\[FeedbackModel\]]() |
+| **200** | Feedbacks paging result | [PagingResult\[FeedbackModel\]](internalfeedbacks_getactionspage.md#pagingresult-feedbackmodel) |
 | **400** | Filter query is invalid or contains unsupported operations | No Content |
 | **401** | Authorization has been denied for this request. | No Content |
 | **403** | Application key is not defined or does not exist | No Content |

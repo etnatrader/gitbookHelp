@@ -4,7 +4,7 @@ description: Create a new price alert
 
 # Create Price Alert
 
-### Overview
+## Overview
 
 This POST endpoint enables you to create a new price alert for the user whose ID is provided in the request's body. Price alerts are essentially notifications that are sent to the user when the alert's conditions are satisfied by the market. For example, a user may have a price alert that will notify them when the price of the Apple stock exceeds $200.
 
@@ -16,7 +16,7 @@ There are five required parameters that must be provided in the request:
 4. **userID** \(path\). This is the ID of the user to whose account a new price alert should be added.
 5. **model** \(body\). This is a JSON dictionary that contains information about the new price alert.
 
-#### Body Syntax
+### Body Syntax
 
 Here's an example of the request body with the information about the new price alert:
 
@@ -41,7 +41,7 @@ Here's the final template for this API request:
 POST apiURL/v1.0/users/{userID}/pricealerts
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with a more detailed information about the newly created price alert.
 
@@ -71,11 +71,11 @@ where:
 | Argument | This is the price point at which the price alert will be triggered and the user will be notified. |
 | ExpirationDate | This is the expiration date of the price alert \(in ticks\). |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to create a new price alert.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

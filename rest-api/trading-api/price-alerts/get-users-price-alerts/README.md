@@ -4,7 +4,7 @@ description: List all price alerts of a particular user
 
 # Get User's Price Alerts
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve the list of a user's price alerts. Price alerts are essentially notifications that are sent to the user when the alert's conditions are satisfied by the market. For example, a user may have a price alert that will notify them when the price of the Apple stock exceeds $200.
 
@@ -25,7 +25,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/users/@me/pricealerts?pageSize=10&pageNumber=0&sortBy=State&isDesc=true
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the list of the user's price alerts.
 
@@ -82,11 +82,11 @@ where:
 | Argument | This is the price point at which the price alert will be triggered and the user will be notified. |
 | ExpirationDate | This is the expiration date of the price alert \(in ticks\). |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to retrieve the list of a user's price alerts.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -96,7 +96,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameters
+### Failing to Specify the Query Parameters
 
 It's crucial to understand that the _**pageSize, pageNumber, isDesc, and sortBy**_ parameters must be provided in the request; otherwise you'll receive the 404 status code and the following message:
 

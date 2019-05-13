@@ -4,9 +4,9 @@ description: Create a new watchlist for a particular user
 
 # Create New Watchlist
 
-### Overview
+## Overview
 
-This POST endpoint enables you to create a new watchlist for a user whose internal ID is provided in the request's path. The newly created watchlist can initially have either no securities or it could have a list of initial securities provided as an array. 
+This POST endpoint enables you to create a new watchlist for a user whose internal ID is provided in the request's path. The newly created watchlist can initially have either no securities or it could have a list of initial securities provided as an array.
 
 There are six required parameters that must be provided in the request:
 
@@ -17,11 +17,11 @@ There are six required parameters that must be provided in the request:
 5. **resultIncludeSecurities** \(query\). This field indicates if the retrieved watchlist should include its corresponding stocks.
 6. **watchlist** \(body\). This is the new watchlist.
 
-#### New Watchlist Template
+### New Watchlist Template
 
 All new watchlists must be of the _**application/json**_ content type. The syntax for new watchlists is as follows:
 
-#### Empty Watchlist Sample
+### Empty Watchlist Sample
 
 {% code-tabs %}
 {% code-tabs-item title="New Watchlist Template" %}
@@ -33,7 +33,7 @@ All new watchlists must be of the _**application/json**_ content type. The synta
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### A Comprehensive Watchlist Sample
+### A Comprehensive Watchlist Sample
 
 ```javascript
 {
@@ -50,7 +50,7 @@ Here's the final template for this API request:
 POST apiURL/v1.0/users/{userID}/watchlists/?resultIncludeSecurities=true
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the information about the newly created watchlist. If the _**resultIncludeSecurities**_ is set to true, the response will contain the securities in this watchlist.
 
@@ -123,11 +123,11 @@ where:
 | ReadOnly | This field indicates if the watchlist is modifiable. |
 | SecurityList | This is a collection of securities in the watchlist. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to create a new watchlist.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -137,7 +137,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Sending Improperly Constructed Watchlist
+### Sending Improperly Constructed Watchlist
 
 It's critical that you precisely follow the watchlist template at the beginning of this page and properly prepare the JSON with the new watchlist. Improperly specifying certain fields will lead to the 409 status code:
 

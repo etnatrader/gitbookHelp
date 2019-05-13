@@ -8,27 +8,27 @@ PUT /v{version}/accounts/{accountId}/preview/orders/{orderId}
 
 ### Description
 
-Preview order replace results without sending it to the market
+This API endpoint enables you to validate updated information about an order that needs to be modified.
 
 ### Parameters
 
 | Type | Name | Description | Schema | Default |
 | :--- | :--- | :--- | :--- | :--- |
-| **Header** | **Authorization**   _required_ | Bearer type token string | string |  |
-| **Header** | **Et-App-Key**   _required_ | Application key | string |  |
-| **Path** | **accountId**   _required_ | Account identifier | integer \(int32\) |  |
-| **Path** | **orderId**   _required_ | Order internal identifier | integer \(int32\) |  |
-| **Path** | **version**   _required_ | The requested API version | string | `"1.0"` |
-| **Body** | **body**   _required_ | Order modify params | [ModifyOrderResource](../../definitions/#modifyorderresource) |  |
+| **Header** | **Authorization**   _required_ | This is the authorization token that you retrieved from the first endpoint \(/token\). | string |  |
+| **Header** | **Et-App-Key**   _required_ | This is your app’s unique key that can be retrieved from the BO Companies widget in ETNA Trader. | string |  |
+| **Path** | **accountId**   _required_ | This is the unique identifier of the trading account on which a new order is to be modified. | integer \(int32\) |  |
+| **Path** | **orderId**   _required_ | This is the ID of the order that needs to be modified. | integer \(int32\) |  |
+| **Path** | **version**   _required_ | This is the version of the API. Unless you have multiple versions of ETNA Trader’s API deployed in your environment, leave it at 1.0. | string | `"1"` |
+| **Body** | **body**   _required_ | This is JSON data that contains updated information about the order. | [ModifyOrderResource](orders_previewmodifyorder.md#modifyorderresource) |  |
 
 ### Responses
 
 | HTTP Code | Description | Schema |
 | :--- | :--- | :--- |
-| **200** | Replacing order preview result | [VerifyOrderModel](../../definitions/#verifyordermodel) |
-| **401** | Authorization has been denied for this request. | No Content |
-| **403** | Application key is not defined or does not exist | No Content |
-| **422** | Validation error occurred while processing entity | No Content |
+| **200** | JSON data with the updated order information is returned, indicating if the order modification JSON is properly constructed \(examine the isSuccessful parameter in the JSON file\). | [VerifyOrderModel](orders_previewmodifyorder.md#verifyordermodel) |
+| **401** | The access level of the provided authorization token is not sufficient to perform this operation. | No Content |
+| **403** | The provided Et-App-Key is incorrect. | No Content |
+| **422** | A validation error occurred while processing the request. | No Content |
 | **500** | Internal server error | No Content |
 
 ### Consumes

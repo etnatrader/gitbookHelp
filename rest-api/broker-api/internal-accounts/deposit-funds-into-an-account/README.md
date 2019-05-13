@@ -4,7 +4,7 @@ description: Deposit funds into an existing trading account
 
 # Deposit Funds into an Account
 
-### Overview
+## Overview
 
 This POST endpoint enables you to deposit funds into a trading account. These funds are added to the Cash parameter and by extension affect the stock and options buying power.
 
@@ -26,7 +26,7 @@ Here's the final template for this API request:
 POST apiURL/v1.0/accounts/{accountID}/deposit
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file confirming that the funds have been successfully deposited:
 
@@ -46,11 +46,11 @@ where:
 | CreateDate | The date on which the funds were deposited. |
 | Description | Any additional information that might be relevant to the operation. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to deposit funds into an existing trading account.
 
-#### Requesting as a Non-Administrator
+### Requesting as a Non-Administrator
 
 One of the most common mistakes that developers make when making this API request is to use the authorization token of a non-administrator. It's critical to understand that in order to be eligible for depositing funds into trading accounts, the requester must be an administrator. Otherwise you'll receive the 401 status code with the following message:
 
@@ -62,7 +62,7 @@ One of the most common mistakes that developers make when making this API reques
 
 So be sure to use the authorization token generated with an administrator's credentials.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

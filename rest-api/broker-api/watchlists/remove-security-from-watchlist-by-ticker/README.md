@@ -4,9 +4,9 @@ description: Remove a security from a watchlist by specifying the security's tic
 
 # Remove Security from Watchlist by Ticker
 
-### Overview
+## Overview
 
-This DELETE endpoint enables you to remove a specific security \(by its ticker symbol\) from a specific watchlist of the user whose id is provided in the request's path. 
+This DELETE endpoint enables you to remove a specific security \(by its ticker symbol\) from a specific watchlist of the user whose id is provided in the request's path.
 
 There are six required parameters that must be provided in the request:
 
@@ -17,7 +17,7 @@ There are six required parameters that must be provided in the request:
 5. **watchlistID** \(path\). This is the internal identifier of the watchlist from which a security must be removed. You can retrieve the list of a user's watchlists with [this method](../get-users-watchlist/).
 6. **symbolToExchange** \(body\). This is a dictionary that contains the ticker symbol of the security that must be removed from the specified watchlist. 
 
-#### Request Body Syntax
+### Request Body Syntax
 
 To remove a security from a watchlist by its ticker symbol, specify the following parameter in the request body:
 
@@ -33,7 +33,7 @@ Here's the final template for this API request:
 DELETE apiURL/v1.0/users/{userID}/watchlists/{watchlistID}/securities/{securityId}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the updated watchlist. In this sample request we removed the Google stock from the watchlist 17973.
 
@@ -115,11 +115,11 @@ In response to this API request, you'll receive a JSON file with the updated wat
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to remove a particular security by its ticker symbol from a specific watchlist.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -129,7 +129,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying  the Security's Internal ID Instead of its Ticker Symbol
+### Specifying  the Security's Internal ID Instead of its Ticker Symbol
 
 Another common mistake when making this API request is specifying the internal ID of the added security instead of its ticker symbol — for this purpose, there's a [separate API request](../../../trading-api/watchlists/remove-security-from-watchlist-by-id/). If you specify the security's internal ID in this request, you'll receive the 409 status code.
 

@@ -4,7 +4,7 @@ description: Get comprehensive information about an order
 
 # Get Order's Info
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve information about an outstanding order of the user whose authorization token is provided in the header request. If the user has buy, sell, short-sell, or buy-to-cover orders pending, you can request information on one of those orders by sending this API request.
 
@@ -22,7 +22,7 @@ This API request must be sent to the following URL:
 apiURL/v1.0/accounts/6303/orders/73552
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with comprehensive information about the order:
 
@@ -77,11 +77,11 @@ In response to this API request, you'll receive a JSON file with comprehensive i
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when trying to retrieve information about an outstanding order. 
+Here are some of the common mistakes that developers make when trying to retrieve information about an outstanding order.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -91,7 +91,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying a Trading Account of a Different User
+### Specifying a Trading Account of a Different User
 
 It's critical to understand that when you use the authorization token of a particular user in this request's header, only this user's orders can be examined. Retrieving information about orders of a different user will lead to the 401 error.
 

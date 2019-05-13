@@ -4,9 +4,9 @@ description: Retrieve all positions of a user in a particular security
 
 # Get User's Positions in a Security
 
-### Overview
+## Overview
 
-This GET endpoint enables you to list all positions in a particular security of the user whose authorization token was used in the request's body. 
+This GET endpoint enables you to list all positions in a particular security of the user whose authorization token was used in the request's body.
 
 There are five required parameters that must be provided in the request:
 
@@ -22,7 +22,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/accounts/{accountID}/positions/AAPL
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with all of the user's positions in the security. Following is an example of such response:
 
@@ -64,7 +64,7 @@ where:
 | SecurityId | This is the internal ID of the underlying security in the position |
 | Symbol | This is the ticker symbol |
 | Name | In most cases this field is identical to Symbol |
-| CompanyName | This is the full name of the listed company  |
+| CompanyName | This is the full name of the listed company |
 | SecurityCurrency | This is the currency in which the security is denominated |
 | SecurityType | This is the type of the underlying security.  The range of possible values is listed in the following table. |
 | ContractSize | This is the minimum contract size for this financial instrument. |
@@ -82,7 +82,7 @@ where:
 | Excess Changes | This indicates how much this position affects your account's excess. |
 | DayQuantity | This is the gross number of shares of this security that have been traded during the current trading session. |
 
-#### Security Type
+### Security Type
 
 ```text
 BankersAcceptance                     = 0,
@@ -128,11 +128,11 @@ CoveredWarrant                        = 39,
 Unit                                  = 40
 ```
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to list a user's positions in a particular security. 
+Here are some of the common mistakes that developers make when attempting to list a user's positions in a particular security.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -142,7 +142,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the User ID Instead of the Trading Account ID
+### Specifying the User ID Instead of the Trading Account ID
 
 Another common mistake when making this request is specifying the user ID instead of the user's trading account ID. Doing so will result in the 500 status code and the following error message:
 
@@ -153,7 +153,7 @@ Another common mistake when making this request is specifying the user ID instea
 }
 ```
 
-#### Specifying the Internal ID of the Security instead of the Ticker
+### Specifying the Internal ID of the Security instead of the Ticker
 
 Bear in mind that this request requires the ticker symbol of the security \(as displayed on the exchange\) and not the internal ID in ETNA Trader. Specifying the internal ID will lead to the 500 status code and the following error message:
 

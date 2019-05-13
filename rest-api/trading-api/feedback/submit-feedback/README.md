@@ -4,7 +4,7 @@ description: Submit feedback from a particular user
 
 # Submit Feedback
 
-### Overview
+## Overview
 
 This POST endpoint enables you to submit user feedback into ETNA Trader's support ticket management system. In addition to a regular text message that users usually provide, our service can also receive attachments, each sized no more than 10 megabytes.
 
@@ -54,7 +54,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/feedbacks
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with the detailed information about the new user feedback \(usually it's identical to the request body\):
 
@@ -74,11 +74,11 @@ In response to this API request, you'll receive a JSON file with the detailed in
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to submit new user feedback.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -88,9 +88,9 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Incorrectly Specifying the Request Body 
+### Incorrectly Specifying the Request Body
 
-Another common mistake when attempting to submit new user feedback for a particular security is incorrectly structuring the request body. It's critical that you follow the template provided above and specify all of the required parameters. Especially ensure that the attachments are provided in the Base64 format. Otherwise you'll receive the 500 status code and the following error message: 
+Another common mistake when attempting to submit new user feedback for a particular security is incorrectly structuring the request body. It's critical that you follow the template provided above and specify all of the required parameters. Especially ensure that the attachments are provided in the Base64 format. Otherwise you'll receive the 500 status code and the following error message:
 
 ```javascript
 {
@@ -100,6 +100,4 @@ Another common mistake when attempting to submit new user feedback for a particu
 ```
 
 The following article covers the syntax for this API request in detail.
-
-
 

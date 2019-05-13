@@ -4,7 +4,7 @@ description: Fetch information about a particular equity by providing its intern
 
 # Get Equity Info by Internal ID
 
-### Overview
+## Overview
 
 This GET endpoint enables you to retrieve information about a particular security by specifying its internal ID in the request's path. This information is not retrieved directly from the exchange; rather, it's the information about the security that is specific to ETNA Trader.
 
@@ -21,7 +21,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/equities/4 //Apple Inc.
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive a JSON file with all the information about the enquired security:
 
@@ -65,11 +65,11 @@ where:
 | AllowMargin | This field indicates if the security is allowed to be traded on margin. |
 | AllowShort | This field indicates if the security can be sold short. |
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to retrieve information about a particular security by its ticker. 
+Here are some of the common mistakes that developers make when attempting to retrieve information about a particular security by its ticker.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

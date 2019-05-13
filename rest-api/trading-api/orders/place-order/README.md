@@ -4,9 +4,9 @@ description: Place a new order
 
 # Place Order
 
-### Overview
+## Overview
 
-This POST endpoint enables you to place a new order in ETNA Trader. The order is sent in the JSON format to our service which turns it into a new outstanding order that should eventually be fulfilled \(or suspended depending on the type of order and the [order review mechanisms](../../../../administrator-guide/administrators-widgets/bo-order-review/) applicable to this user\). 
+This POST endpoint enables you to place a new order in ETNA Trader. The order is sent in the JSON format to our service which turns it into a new outstanding order that should eventually be fulfilled \(or suspended depending on the type of order and the [order review mechanisms](../../../../administrator-guide/administrators-widgets/bo-order-review/) applicable to this user\).
 
 There are five required parameters that must be provided in the request:
 
@@ -22,7 +22,7 @@ Here's the final template for this API request:
 POST apiURL/v1.0/accounts/{accountID}/orders
 ```
 
-### Request Body
+## Request Body
 
 The body of this request represents the information about the to-be-created order. It must be sent in the JSON format with the parameters described in the following table:
 
@@ -53,7 +53,7 @@ The body of this request represents the information about the to-be-created orde
     </tr>
     <tr>
       <td style="text-align:left">Side</td>
-      <td style="text-align:left">This is the side of the trade. The range of possible values includes: <b>Buy</b>, <b>Sell</b>, <b>Sell</b>  <b>Short</b>, <b>Buy to Cover</b>.</td>
+      <td style="text-align:left">This is the side of the trade. The range of possible values includes: <b>Buy</b>, <b>Sell</b>, <b>SellShort</b>, <b>Buy to Cover</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left">ExecInst</td>
@@ -132,9 +132,7 @@ The body of this request represents the information about the to-be-created orde
       <td style="text-align:left">These are the legs of a multi-leg order.</td>
     </tr>
   </tbody>
-</table>#### Smallest Market Order Sample
-
-```javascript
+</table>```javascript
 {
   "Symbol": "AAPL", //Buying 100 shares of the Apple stock
   "Type": "Market",
@@ -143,7 +141,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Smallest Limit Order Sample
+### Smallest Limit Order Sample
 
 ```javascript
 {
@@ -155,7 +153,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Smallest Stop Order Sample
+### Smallest Stop Order Sample
 
 ```javascript
 {
@@ -167,7 +165,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Smallest Stop-Limit Order Sample
+### Smallest Stop-Limit Order Sample
 
 ```javascript
 {
@@ -180,7 +178,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Smallest Limit Order Sample \(Options\)
+### Smallest Limit Order Sample \(Options\)
 
 ```javascript
 {
@@ -195,7 +193,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Complex Order Sample \(Options\)
+### Complex Order Sample \(Options\)
 
 ```javascript
 {
@@ -208,44 +206,44 @@ The body of this request represents the information about the to-be-created orde
   "TimeInforce": "Day",
   "Quantity": 1,
   "Legs": [{ //simultaneously buying the Apple stock
-			"Symbol": "AAPL", 
-			"Type": "Market",
-			"Side": "Buy",
-			"Quantity": 100
-		}
-	]
+            "Symbol": "AAPL", 
+            "Type": "Market",
+            "Side": "Buy",
+            "Quantity": 100
+        }
+    ]
 }
 ```
 
-#### Multi-Leg Order Sample \(Option + Option\)
+### Multi-Leg Order Sample \(Option + Option\)
 
 ```javascript
 {
-	"Symbol": "",
-	"Legs": [{
-			"Symbol": "AAPL  190503C00165000",
-			"ExpireDate": "2019-03-30T17:00:00.824Z",
-			"Type": "Market",
-			"Side": "Buy",
-			"ExecInst": "DoNotIncrease",
-			"TimeInforce": "Day",
-			"Quantity": 1
-		},
-		{
-			"Symbol": "AAPL  190503C00165000",
-			"ExpireDate": "2019-03-24T17:32:28.824Z",
-			"Type": "Limit",
-			"Side": "Buy",
-			"Price": 200,
-			"ExecInst": "DoNotIncrease",
-			"TimeInforce": "Day",
-			"Quantity": 1
-		}
-	]
+    "Symbol": "",
+    "Legs": [{
+            "Symbol": "AAPL  190503C00165000",
+            "ExpireDate": "2019-03-30T17:00:00.824Z",
+            "Type": "Market",
+            "Side": "Buy",
+            "ExecInst": "DoNotIncrease",
+            "TimeInforce": "Day",
+            "Quantity": 1
+        },
+        {
+            "Symbol": "AAPL  190503C00165000",
+            "ExpireDate": "2019-03-24T17:32:28.824Z",
+            "Type": "Limit",
+            "Side": "Buy",
+            "Price": 200,
+            "ExecInst": "DoNotIncrease",
+            "TimeInforce": "Day",
+            "Quantity": 1
+        }
+    ]
 }
 ```
 
-#### Comprehensive Limit Order Sample
+### Comprehensive Limit Order Sample
 
 ```javascript
 {
@@ -264,7 +262,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Comprehensive Market Order Sample
+### Comprehensive Market Order Sample
 
 ```javascript
 {
@@ -282,7 +280,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Comprehensive Stop Order Sample
+### Comprehensive Stop Order Sample
 
 ```javascript
 {
@@ -301,7 +299,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Comprehensive Stop Limit Order Sample
+### Comprehensive Stop Limit Order Sample
 
 ```javascript
 {
@@ -321,7 +319,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Comprehensive Trailing Stop Order Type
+### Comprehensive Trailing Stop Order Type
 
 ```javascript
 {
@@ -339,7 +337,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### Comprehensive Trailing Stop Limit Order Type
+### Comprehensive Trailing Stop Limit Order Type
 
 ```javascript
 {
@@ -359,29 +357,29 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-#### One-Triggers-the-Other Order Type
+### One-Triggers-the-Other Order Type
 
 One-Triggers-the-Other is a type of conditional order in which execution of one order automatically triggers the other one. Each of the two orders has to be provided as a separate leg:
 
 ```javascript
 {
-	"Type": "OneTriggerOther", //the type of the order
+    "Type": "OneTriggerOther", //the type of the order
         "Symbol": "", //this parameter must be empty
-		"Legs": [{ //the array of two legs
-			"Symbol": "AAPL", //the first leg
-			"Type": "Limit",
-			"Price": 150,
-			"Side": "Buy",
-			"Quantity": 100
-		},
-		{
-			"Symbol": "TSLA", //the second leg
-			"Type": "Limit",
-			"Price": 100,
-			"Side": "Buy",
-			"Quantity": 100
-		}
-	]
+        "Legs": [{ //the array of two legs
+            "Symbol": "AAPL", //the first leg
+            "Type": "Limit",
+            "Price": 150,
+            "Side": "Buy",
+            "Quantity": 100
+        },
+        {
+            "Symbol": "TSLA", //the second leg
+            "Type": "Limit",
+            "Price": 100,
+            "Side": "Buy",
+            "Quantity": 100
+        }
+    ]
 }
 ```
 
@@ -391,29 +389,29 @@ In this case, if the limit order to purchase the Apple stock gets executed, the 
 In One-Triggers-the-Other orders, the first leg cannot be a market order.
 {% endhint %}
 
-#### One-Cancels-the-Other Order Type
+### One-Cancels-the-Other Order Type
 
 One-Cancels-the-Other is a type of conditional order in which execution of one order automatically cancels the other one. Each of the two orders has to be provided as a separate leg:
 
 ```javascript
 {
-	"Type": "OneCancelOther", //the type of the order
+    "Type": "OneCancelOther", //the type of the order
         "Symbol": "", //this parameter must be empty
-		"Legs": [{ //the array of two legs
-			"Symbol": "AAPL", //the first leg
-			"Type": "Limit",
-			"Price": 150,
-			"Side": "Buy",
-			"Quantity": 100
-		},
-		{
-			"Symbol": "TSLA", //the second leg
-			"Type": "Limit",
-			"Price": 100,
-			"Side": "Buy",
-			"Quantity": 100
-		}
-	]
+        "Legs": [{ //the array of two legs
+            "Symbol": "AAPL", //the first leg
+            "Type": "Limit",
+            "Price": 150,
+            "Side": "Buy",
+            "Quantity": 100
+        },
+        {
+            "Symbol": "TSLA", //the second leg
+            "Type": "Limit",
+            "Price": 100,
+            "Side": "Buy",
+            "Quantity": 100
+        }
+    ]
 }
 ```
 
@@ -423,7 +421,7 @@ In this case, if the limit order to purchase the Apple stock gets executed, the 
 In One-Cancels-the-Other orders, both legs cannot be market orders.
 {% endhint %}
 
-### Response
+## Response
 
 In response to this request, you'll receive a JSON file with comprehensive information about the newly created order:
 
@@ -480,11 +478,11 @@ In response to this request, you'll receive a JSON file with comprehensive infor
 Please note that you may receive the 200 status code even if the order was improperly configured. For example, if you attempt to create a limit order and specify the stop price instead of the limit price, the order will be registered in the system but will eventually be rejected. Please monitor the order's status \(it's _PendingNew_ by default\) to determine if the order has been rejected or placed.
 {% endhint %}
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to place a new order. 
+Here are some of the common mistakes that developers make when attempting to place a new order.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -494,7 +492,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the User ID Instead of the Trading Account ID
+### Specifying the User ID Instead of the Trading Account ID
 
 Another common mistake when making this request is specifying the user ID instead of the user's trading account ID. Doing so will result in the 500 status code and the following error message:
 
@@ -505,7 +503,7 @@ Another common mistake when making this request is specifying the user ID instea
 }
 ```
 
-#### Specifying a Trading Account of a Different User
+### Specifying a Trading Account of a Different User
 
 It's critical to understand that when you use the authorization token of a particular user in this request's header, only this user's trading accounts can be used for placing new orders. Placing a new order on a trading account of a different user will lead to the 401 error.
 
@@ -517,7 +515,7 @@ It's critical to understand that when you use the authorization token of a parti
 
 In the following article we provide in-depth coverage of the syntax for this API request.
 
-#### Placing Orders Whose Value Exceeds the Account's Buying Power
+### Placing Orders Whose Value Exceeds the Account's Buying Power
 
 When attempting to place an order whose value exceeds the trading account's buying power, you'll receive a JSON file with the `ErrorDescription` parameter equaling `DayTradingBuyingPowerExceeded`.
 
@@ -545,7 +543,7 @@ When attempting to place an order whose value exceeds the trading account's buyi
 }
 ```
 
-#### Failing to Specify the Limit Price for Limit Orders
+### Failing to Specify the Limit Price for Limit Orders
 
 An attempt to place a limit order without specifying its price will result in an error; in response you'll receive a JSON file with the `ErrorDescription` parameter equaling `QuotePriceIsInvalid`.
 
@@ -561,7 +559,7 @@ An attempt to place a limit order without specifying its price will result in an
 }
 ```
 
-#### Failing to Specify the Stop Price for Stop-Loss Orders
+### Failing to Specify the Stop Price for Stop-Loss Orders
 
 An attempt to place a stop-loss order without specifying its price will result in an error; in response you'll receive a JSON file with the `ErrorDescription` parameter equaling `QuotePriceIsInvalid`.
 
@@ -577,7 +575,7 @@ An attempt to place a stop-loss order without specifying its price will result i
 }
 ```
 
-### Sample Code
+## Sample Code
 
 Feel free to examine our [Code Samples](../../code-samples/placing-new-orders.md#placing-new-orders-and-checking-their-status) article that demonstrates how to place a new order with the help of a Python script.
 

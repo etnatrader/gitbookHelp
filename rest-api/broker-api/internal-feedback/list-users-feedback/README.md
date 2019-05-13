@@ -4,7 +4,7 @@ description: List a fraction of all user feedback
 
 # List Users' Feedback
 
-### Overview
+## Overview
 
 This GET endpoint enables you to list user feedback across the entire company. This feedback is split into numerous pages, and you can retrieve each page with a separate API call. Unlike the regular user feedback listing functionality that fetches feedback for a particular user, this method retrieves the entirety of feedback provided by all users.
 
@@ -22,7 +22,7 @@ There's also one optional parameter worth examining:
 
 * filter \(request query\). This is an SQL query used to retrieve only those feedbacks that satisfy the conditions of the query. 
 
-#### Filter Syntax
+### Filter Syntax
 
 The syntax for filter queries is rather simple: each parameter of a feedback can serve as a filter. The conditions that a parameter needs to satisfy can be expressed in the following ways:
 
@@ -172,7 +172,7 @@ Here's the final template for this API request:
 GET apiURL/v1.0/feedbacks
 ```
 
-### Response
+## Response
 
 ```javascript
 {
@@ -319,11 +319,11 @@ where:
 | PreviousPageLink | This is the previous page of the user feedback. |
 | TotalCount | This is the total number of user feedbacks. |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to list all users' feedback.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -333,7 +333,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Failing to Specify the Query Parameters
+### Failing to Specify the Query Parameters
 
 It's crucial to understand that the _**pageSize, pageNumber, isDesc, and sortBy**_ parameters must be provided in the request; otherwise you'll receive the 404 status code and the following message:
 

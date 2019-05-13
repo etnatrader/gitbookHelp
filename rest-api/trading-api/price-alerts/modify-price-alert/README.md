@@ -4,7 +4,7 @@ description: Modify an existing price alert
 
 # Modify Price Alert
 
-### Overview
+## Overview
 
 This PUT endpoint enables you to modify a particular price alert of the user whose ID is provided in the request. Price alerts are essentially notifications that are sent to the user when the alert's conditions are satisfied by the market. For example, a user may have a price alert that will notify them when the price of the Apple stock exceeds $200.
 
@@ -16,7 +16,7 @@ There are five required parameters that must be provided in the request:
 4. **userID** \(path\). This is the ID of the user whose particular price alert must be modified.
 5. **model** \(body\). This is a JSON dictionary that contains information about the modified price alert.
 
-#### Alert Modification Syntax
+### Alert Modification Syntax
 
 Here's an example of the request body with the information about the modified price alert:
 
@@ -41,7 +41,7 @@ Here's the final template for this API request:
 PUT apiURL/v1.0/users/{userID}/pricealerts/{alertID}
 ```
 
-### Response
+## Response
 
 In response to this API request, you'll receive the 200 status code and a JSON file with a detailed information about the modified price alert:
 
@@ -58,11 +58,11 @@ In response to this API request, you'll receive the 200 status code and a JSON f
 }
 ```
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to modify a particular price alert.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 

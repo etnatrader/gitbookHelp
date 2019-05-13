@@ -13,12 +13,13 @@ ETNA Trader receives another major update that brings a set of significant featu
 The biggest improvement of release 1.2.47 is the update of our Web API. First, we've made a few changes to the existing methods for retrieving security information, account information, and placing new orders. Second, we've added a new method for retrieving chart data in the Microsoft Excel format.
 
 {% hint style="danger" %}
+
 If your solution is integrated with our web API, please note that the following endpoints are no longer supported:
 
 * Get Securities By Mask \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities) [/v{version}/securities](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurities)\):
-  * Replaced by [Get Equity Info By Mask](../../rest-api/broker-api/securities/get-securitys-info-by-mask/) and [Get Option Info By Ticker](../../rest-api/broker-api/securities/get-options-info-by-ticker/).
+  * Replaced by [Get Equity Info By Mask](../../rest-api/broker-api/securities/get-securitys-info-by-mask/) and [Get Option Info By Ticker](https://github.com/etnatrader/gitbookHelp/tree/6c42ded62b3c38323fe9c79d5284ef0387d6f690/rest-api/broker-api/securities/get-options-info-by-ticker/README.md).
 * Get Securities by ID \([GET](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurityById) [/v{version}/securities/{securityId}](https://pub-api-et-demo-prod.etnasoft.us/api/reference/index#!/Securities/Securities_GetSecurityById)\).
-  * Replaced by [Get Equity's Info by ID](../../rest-api/broker-api/securities/get-securitys-info-by-internal-id/) and [Get Option Info by ID](../../rest-api/broker-api/securities/get-options-info-by-id/).
+  * Replaced by [Get Equity's Info by ID](../../rest-api/broker-api/securities/get-securitys-info-by-internal-id/) and [Get Option Info by ID](https://github.com/etnatrader/gitbookHelp/tree/6c42ded62b3c38323fe9c79d5284ef0387d6f690/rest-api/broker-api/securities/get-options-info-by-id/README.md).
 
 And the following endpoints have been modified:
 
@@ -28,7 +29,6 @@ And the following endpoints have been modified:
 * Replace Order \([PUT](https://priv-api-etnatrader-dev.etnasoft.us/api/reference/index#!/Orders/Orders_ReplaceOrder) [/v{version}/accounts/{accountId}/orders/{orderId}](https://priv-api-etnatrader-dev.etnasoft.us/api/reference/index#!/Orders/Orders_ReplaceOrder)\).
   1. The **SecurityID** parameter has been replaced with **Symbol** \(ticker\);
   2. The **dryRun** parameter is no longer available — there's a [separate endpoint](../../rest-api/broker-api/orders/validate-order-replacement/) for order    replacement validation.
-{% endhint %}
 
 #### Retrieving Users' Positions
 
@@ -38,23 +38,19 @@ Starting from version 1.2.47, users' current positions in a particular security 
 
 #### Retrieving Security Information
 
-Starting from version 1.2.47,  retrieving information about securities has been split into two sets of methods — one for equities and the other for options:
+Starting from version 1.2.47, retrieving information about securities has been split into two sets of methods — one for equities and the other for options:
 
-{% tabs %}
-{% tab title="Equities" %}
+
+
 {% page-ref page="../../rest-api/trading-api/securities/get-securitys-info-by-internal-id/" %}
 
 {% page-ref page="../../rest-api/trading-api/securities/get-securitys-info-by-ticker/" %}
 
 {% page-ref page="../../rest-api/trading-api/securities/get-securitys-info-by-mask/" %}
-{% endtab %}
 
-{% tab title="Options" %}
 {% page-ref page="../../rest-api/trading-api/securities/get-option-info-by-internal-id/" %}
 
 {% page-ref page="../../rest-api/trading-api/securities/get-option-info-by-ticker/" %}
-{% endtab %}
-{% endtabs %}
 
 We've also added two new methods for listing all existing equities and options:
 
@@ -100,7 +96,7 @@ In release 1.2.47 we've also changed the way the mark price is calculated for st
 * the current **ask** price if Last &gt;= Ask ;
 * the current **bid** price if Last =&lt; Bid.
 
-During the pre-market, post-market, and non-trading hours, the mark price is equal to the last closing price. 
+During the pre-market, post-market, and non-trading hours, the mark price is equal to the last closing price.
 
 ### Support for Thomson Reuters Beta Fix Protocol
 

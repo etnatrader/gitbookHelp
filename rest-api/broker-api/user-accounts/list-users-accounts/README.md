@@ -4,7 +4,7 @@ description: List all trading accounts of a particular user
 
 # List User's Accounts
 
-### Overview
+## Overview
 
 This endpoint enables you to list all trading accounts associated with the user whose authorization token was provided in the request header. Note that trading accounts are distinct from the regular user accounts.
 
@@ -25,7 +25,7 @@ apiURL/v1.0/users/644(userID)/accounts
 To list the trading accounts of the user whose authorization token you provide in the request header, replace the internal user ID with **@me**
 {% endhint %}
 
-### Response
+## Response
 
 As a response, you'll receive a JSON file with the trading accounts of this user:
 
@@ -46,15 +46,15 @@ where:
 | Parameter | Description |
 | :--- | :--- |
 | Id | This is the user ID that you provided in the header |
-| ClearingAccount | This is the internal number of the trading account  |
+| ClearingAccount | This is the internal number of the trading account |
 | AccessType | This is the access type of the account. Read more about it [here](../../../../administrator-guide/administrators-widgets/managing-users/#trading-accounts). |
 | MarginType | This is the account type. Read more about it [here](../../../../administrator-guide/administrators-widgets/managing-users/#trading-accounts). |
 
-### Common Mistakes
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting the list of trading accounts of a particular user:
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -64,7 +64,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-#### Specifying the Regular User ID Instead of the Internal One
+### Specifying the Regular User ID Instead of the Internal One
 
 Another common mistake when making this request is specifying the regular user ID instead of the internal ETNA Trader ID. Doing so will result in the 400 status code and the following error message:
 

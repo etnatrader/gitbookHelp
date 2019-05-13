@@ -4,7 +4,7 @@ description: Delete an existing watchlist
 
 # Delete Watchlist
 
-### Overview
+## Overview
 
 This DELETE endpoint enables you to delete a specific watchlist of the user whose id is provided in the request's path.
 
@@ -22,15 +22,15 @@ Here's the final template for this API request:
 DELETE apiURL/v1.0/users/{userID}/watchlists/{watchlistID}
 ```
 
-### Response
+## Response
 
 This API request does not return any messages from the server. In case of successful deletion, the status code of the request should be 204.
 
-### Common Mistakes
+## Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to delete a specific watchlist. 
+Here are some of the common mistakes that developers make when attempting to delete a specific watchlist.
 
-#### Failing to Specify the Et-App-Key Parameter
+### Failing to Specify the Et-App-Key Parameter
 
 If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
 
@@ -41,6 +41,4 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 ```
 
 The following article covers the syntax for this API request in detail.
-
-### 
 
