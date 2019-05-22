@@ -30,37 +30,16 @@ Here's an example of the request body with the information about the enquired se
 "SecurityHistorySettings":
     {"StartDate":1542776400,
     "EndDate":1550764844,
-    "CandlesCount":-1,
+    "CandlesCount":-1, //set to -1 if candles are unnecessary
     "Period":"4h",
-    "Interval":-7,},
+    "Interval":"1Y"}, //instead of the start and the end date 
 
 "IndicatorsHistorySettings":[
-    {"Signature":"MACD|4h|false|12|26|9",
-    "Interval":-7,
+{   "Signature":"MACD|4h|false|12|26|9",
     "StartDate":1542776400,
     "EndDate":1550764844,
-    "CandlesCount":-1,
-    "Offset":0,
-    "Indicator":{
-        "id":4,
-        "indicatorId":1,
-        "type":"movingAverageConvergenceDivergenceIndicator",
-        "position":"lower",
-        "external":true,
-        "settings":{
-            "id":4,
-            "type":"movingAverageConvergenceDivergenceIndicator",
-            "shortThickness":2,
-            "longThickness":2,
-            "shortBrush":"32c814",
-            "longBrush":"dc1414",
-            "signalBrush":"ff9900",
-            "shortPeriod":12,
-            "longPeriod":26,
-            "signalPeriod":9,
-            "showLastValue":true,
-            "showCurrentPoint":true,
-            "showLevelBands":false}}}]
+    "Period" : "4h",
+    "Offset":5
 }
 ```
 
@@ -154,6 +133,16 @@ where:
           <li>&quot;ALL&quot;.</li>
         </ol>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Offset</td>
+      <td style="text-align:left">This is the number of data points by which the technical indicator will
+        be offset.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">IndicatorsHistorySettings</td>
+      <td style="text-align:left">This is a string that contains information about the required technical
+        indicator.</td>
     </tr>
   </tbody>
 </table>{% hint style="warning" %}
