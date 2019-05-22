@@ -175,24 +175,7 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
  "EndDate":1550764844,
  "CandlesCount":-1,
  "Offset":0,
- "Indicator":{
- "id":4,
- "indicatorId":1,
- "type":"movingAverageConvergenceDivergenceIndicator", "position":"lower",
- "external":true,
- "settings":{
- "id":4,
- "type":"movingAverageConvergenceDivergenceIndicator", "shortThickness":2,
- "longThickness":2,
- "shortBrush":"32c814",
- "longBrush":"dc1414",
- "signalBrush":"ff9900",
- "shortPeriod":12,
- "longPeriod":26,
- "signalPeriod":9,
- "showLastValue":true,
- "showCurrentPoint":true,
- "showLevelBands":false}}}]
+ }]
  }' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/history/symbols'
  
 ```
