@@ -58,8 +58,9 @@
 * [Glossary](administrator-guide/glossary/README.md)
   * [Trading Accounts](administrator-guide/glossary/trading-accounts.md)
   * [Orders](administrator-guide/glossary/orders.md)
-  * [Understanding the Mark Price](administrator-guide/glossary/understanding-the-mark-price.md)
+  * [Mark Price](administrator-guide/glossary/understanding-the-mark-price.md)
   * [Transactions](administrator-guide/glossary/transactions.md)
+  * [Positions](administrator-guide/glossary/positions.md)
 
 ## REST API
 

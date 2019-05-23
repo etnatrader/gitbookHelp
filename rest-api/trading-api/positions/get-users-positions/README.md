@@ -83,7 +83,11 @@ There's also one optional parameter worth examining:
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">SecurityId = Number</td>
+      <td style="text-align:left">
+        <ul>
+          <li>SecurityId = Number</li>
+        </ul>
+      </td>
       <td style="text-align:left">This query enables you to retrieve positions whose securityId parameter
         is equal to the Id provided in the query.</td>
       <td style="text-align:left">
@@ -93,7 +97,11 @@ There's also one optional parameter worth examining:
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Symbol = String</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Symbol = String</li>
+        </ul>
+      </td>
       <td style="text-align:left">This query enables you to retrieve positions whose underlying security&apos;s
         ticker symbol is equal to the string provided in the query.</td>
       <td style="text-align:left">
@@ -166,7 +174,7 @@ where:
 | CreateDate | This is the date on which the order was created |
 | ModifyDate | This is the date on which the order was last modified |
 | Quantity | This is the number of shares in the order |
-| RealizedProfitLostt | This is the realized profit or loss of this position |
+| RealizedProfitLoss | This is the realized profit or loss of this position |
 | AverageOpenPrice | The average opening price of all positions. This variable is calculated for positions of the same type — either Long or Short \(you can't simultaneously open a long and a short position on the same instrument\) |
 | AverageClosePrice | The average closing price of all positions. This variable is calculated for positions of the same type — either Long or Short \(you can't simultaneously open a long and a short position on the same instrument\) |
 | StopLossPrice | This the price at which the position should be terminated \(if this price point is reached\) |

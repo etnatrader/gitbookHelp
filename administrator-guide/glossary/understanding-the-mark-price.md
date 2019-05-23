@@ -2,7 +2,7 @@
 description: Learn how the mark price is calculated in ETNA Trader
 ---
 
-# Understanding the Mark Price
+# Mark Price
 
 ### Introduction
 

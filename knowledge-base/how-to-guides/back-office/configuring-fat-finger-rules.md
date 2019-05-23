@@ -22,7 +22,7 @@ Now let's delve deeper into the configuration of fat finger rules in ETNA Trader
 
 Fat finger rules in ETNA Trader can be configured in the Back Office. Navigate to the **Risks** tab, and then click **Fat Finger**.
 
-![](../../../.gitbook/assets/screenshot-2019-04-11-at-18.26.37.png)
+![](../../../.gitbook/assets/fatfingers1.png)
 
 On this page you can configure three types of fat finger rules:
 
@@ -67,9 +67,9 @@ For multi-leg orders, the value of the order is calculated as follows:
 
 The last type of fat finger rules is **Trade Band**, and it allows you to determine the upper and bottom limits for the price difference between the mark price and the limit price. 
 
-For example, if the bottom limit is set to 10%, traders will be unable to set limit prices lower than 10% below the current mark price. Similarly, if the upper limit is set to 20%, the limit price for sell orders will be restricted by market value + 20%.
+For example, if the bottom limit is set to 10%, traders will be unable to set limit prices lower than 10% below the current mark price. Similarly, if the upper limit is set to 20%, the limit price for sell orders will be restricted by market value +20%.
 
-![](../../../.gitbook/assets/screenshot-2019-04-12-at-16.44.25.png)
+![](../../../.gitbook/assets/fatfingers2.png)
 
 {% hint style="info" %}
 Trade bands are applied to all types of orders.
@@ -77,18 +77,18 @@ Trade bands are applied to all types of orders.
 
 The rightmost text field is the **price border** against which the trade bands are calculated. If the mark price exceeds the price border, the limits located at the top are applied; conversely, if the mark price is lower than the price border, the limits at the bottom are applied.
 
-![](../../../.gitbook/assets/screenshot-2019-04-12-at-16.44.25-copy.png)
+![](../../../.gitbook/assets/fatfingers3.png)
 
 For example, suppose you've configured the following price deviation limits:
 
-| Comparison Mode | Bottom Limit | Upper Limit |
+| Comparison Condition | Bottom Limit | Upper Limit |
 | :--- | :--- | :--- |
-| Mark price &gt; Price border | 10% | 20% |
-| Price border &gt; Mark price | 200% | 300% |
+| Mark price &gt;= Price border | 10% | 20% |
+| Price border &gt; Mark price | 15% | 30% |
 
-The price border in this example will be set to $200.
+The price border in this example will be set to $5.
 
-Now suppose that a trader wants to place a limit order for purchasing 100 shares of the Apple stock with the price limit set to $160. The current price of Apple is $198, meaning that the bottom limit is 10% and the upper limit is 20%. The difference between $160 and $198 is greater than 10% and therefore the order will be invalid:
+Now suppose that a trader wants to place a limit order for purchasing 100 shares of the X stock with the price limit set to $4. The current price of the stock is $4.8, meaning that the bottom limit is 10% and the upper limit is 20% \(Market Price &lt; Price Border\). The difference between $4 and $4.8 is greater than 10% and therefore the order will be invalid:
 
 * Web terminal:
 
