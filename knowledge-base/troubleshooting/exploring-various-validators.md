@@ -1,4 +1,8 @@
-# Exploring Various Validators
+---
+description: Learn about different order validators that prevent common problems
+---
+
+# Exploring Order Validators
 
 ### Introduction
 
@@ -271,6 +275,16 @@ The objective of the `UnsettledFundsUsageValidator` is to reject orders if the a
 | Parameter | Description |
 | :--- | :--- |
 | Too much unsettled cash will be released with this order | Triggered if the available cash \(excluding the unsettled cash\) is insufficient cover the position cost. |
+
+### Penny Pilot Validator
+
+The objective of the `PennyPilotValidator` is to reject single-leg, OTO, and OCO orders in which the stop and/or limit price isn't divisible by a an increment defined for a certain price.
+
+This validator divides securities into three groups:
+
+1. **Pilot list**. Options on these CBOE-defined instruments must have a 1-cent price increment if the price is lower than $3. If the price is equal to or greater than $3, the price increment must be 5 cents.
+2. **Pilot exceptions list**. Options on these instruments must have a 1-cent price increment for all prices.
+3. **Other instruments**. Options on these instruments must have a 5-cent price increment if the price is lower than $3. If the price is equal to or greater than $3, the price increment must be 10 cents.
 
 ## Validator Priorities
 

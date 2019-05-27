@@ -354,7 +354,7 @@
 * [Getting Started](knowledge-base/getting-started.md)
 * [Troubleshooting](knowledge-base/troubleshooting/README.md)
   * [Inability to Place a New Order](knowledge-base/troubleshooting/faulty-orders.md)
-  * [Exploring Various Validators](knowledge-base/troubleshooting/exploring-various-validators.md)
+  * [Exploring Order Validators](knowledge-base/troubleshooting/exploring-various-validators.md)
 * [How-To Guides](knowledge-base/how-to-guides/README.md)
   * [Back Office](knowledge-base/how-to-guides/back-office/README.md)
     * [Configuring Commissions](knowledge-base/how-to-guides/back-office/configuring-commissions-and-margin-rates.md)
