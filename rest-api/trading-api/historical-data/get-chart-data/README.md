@@ -184,76 +184,34 @@ In response to this API request, you'll receive the chart data for the list of s
 
 ```javascript
 [
-    [ //Microsoft data starts
-        {
-            "IsMarket": false,
-            "Volume": 1370999,
-            "OpenInterest": 0,
-            "Time": 1550599200,
-            "DateTime": "2019-02-19T18:00:00Z",
-            "Open": 108.3,
-            "High": 108.3,
-            "Low": 108.3,
-            "Close": 0
-        },
-        {
-            "IsMarket": false,
-            "Volume": 3517858,
-            "OpenInterest": 0,
-            "Time": 1550606400,
-            "DateTime": "2019-02-19T20:00:00Z",
-            "Open": 108.24,
-            "High": 108.24,
-            "Low": 108.24,
-            "Close": -0.0554
-        },
-        {
-            "IsMarket": false,
-            "Volume": 3354880,
-            "OpenInterest": 0,
-            "Time": 1550692800,
-            "DateTime": "2019-02-20T20:00:00Z",
-            "Open": 107.2,
-            "High": 107.2,
-            "Low": 107.2,
-            "Close": -1.0157
-        }
-    ], //Microsoft data ends
-    [ //Apple data starts
-        {
-            "IsMarket": false,
-            "Volume": 1123672,
-            "OpenInterest": 0,
-            "Time": 1550599200,
-            "DateTime": "2019-02-19T18:00:00Z",
-            "Open": 170.62,
-            "High": 170.62,
-            "Low": 170.62,
-            "Close": 0
-        },
-        {
-            "IsMarket": false,
-            "Volume": 3445526,
-            "OpenInterest": 0,
-            "Time": 1550671200,
-            "DateTime": "2019-02-20T14:00:00Z",
-            "Open": 172.08,
-            "High": 172.08,
-            "Low": 172.08,
-            "Close": 0.8557
-        },
-        {
-            "IsMarket": false,
-            "Volume": 6690456,
-            "OpenInterest": 0,
-            "Time": 1550674800,
-            "DateTime": "2019-02-20T15:00:00Z",
-            "Open": 172.72,
-            "High": 172.72,
-            "Low": 172.72,
-            "Close": 1.23081
-        }
-    ] //Apple data ends
+  [ //Microsoft data starts
+    {
+      "Volume": 43020193,
+      "Time": 1548028800,
+      "Difference": 0,
+      "Price": 107.04
+    },
+    {
+      "Volume": 33774774,
+      "Time": 1550448000,
+      "Difference": 3.66685,
+      "Price": 110.965
+    }
+  ], //Microsoft data ends
+  [ //Apple data starts
+    {
+      "Volume": 97088738,
+      "Time": 1548028800,
+      "Difference": 0,
+      "Price": 157.71
+    },
+    {
+      "Volume": 56357006,
+      "Time": 1550448000,
+      "Difference": 9.58722,
+      "Price": 172.83
+    }
+  ] //Apple Data ends
 ]
 ```
 
@@ -261,15 +219,10 @@ where:
 
 | Parameter | Description |
 | :--- | :--- |
-| IsMarket | This field indicates if the candle is positioned during the regular trading hours. If so, the value will be set to true; if not, the value will be set to false. |
-| Volume | This is the trading volume for the specified period. |
-| OpenInterest | This is the total number of outstanding derivative contracts that have not been settled yet \(only applicable for derivatives\). |
-| Time | This is the date and time \(in ticks\) at which this particular candle was registered. |
-| DateTime | This is the date and time \(in UTC time\) at which this particular candle was registered. |
-| Open | This is the opening price of the security. |
-| Close | This is the closing price of the security. |
-| High | This is the highest price point for the security during the specified time period. |
-| Low | This is the lowest price point for the security during the specified time period. |
+| Volume | This is the trading volume at the time specified in `Time`. |
+| Time | This is the date and time \(in UNIX timestamps\) at which this chart data point was registered. |
+| Difference | This is the difference between the price at the `StartDate` and `Price`. |
+| Price | The price registered at `Time`. |
 
 ### Common Mistakes
 
