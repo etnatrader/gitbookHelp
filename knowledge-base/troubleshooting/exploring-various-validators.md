@@ -8,9 +8,17 @@ description: Learn about different order validators that prevent common problems
 
 In ETNA Trader, each transaction has to be validated by different validators to prevent unexpected incidents like purchasing a billion shares or placing an order from a trading account of a different user.  Every type of operations like placement of a new order and depositing new funds has its own spectre of validators that ensure that the operation is carried out properly without unintended consequences.
 
-There are two types of validators: **core** validators and **custom** validators. Core validators are configured in a special configuration file \(.config\) that is set up by our [support team](mailto:support@etnasoft.com). Conversely, custom validators can be configured by the broker in ETNA Trader's Back Office located at admin.yourTraderDomain.com.
+There are two types of validators: **core** validators and **custom** validators. Core validators are configured in a special configuration file \(.config\) that is set up by our [support team](mailto:support@etnasoft.com). Conversely, custom validators can be configured by the broker in ETNA Trader's Back Office located at admin.yourTradingPlatformDomain.com.
 
-Every validator has its own priority which influences the order in which the validators are triggered. The validator with the highest priority is triggered first and the one with the lowest priority is triggered last.
+Every validator has its own priority which influences the order in which the validators are triggered. The validator with the highest priority is triggered first and the one with the lowest priority is triggered last. If an order fails even one validator, it will be rejected by the system, and the trader will see the following error message:
+
+* Web terminal:
+
+![](../../.gitbook/assets/screenshot-2019-04-18-at-20.46.54.png)
+
+* Mobile app:
+
+![](../../.gitbook/assets/img_0065_iphonexspacegrey_portrait.png)
 
 This article examines in detail the entire range of validators in ETNA Trader and demonstrates what happens if a validator flags an operation and determines it to be invalid.
 
@@ -28,6 +36,7 @@ The objective of multi-leg order validators is to validate legs of multi-leg ord
 | IncorrectTimeInForce | Triggered if the specified time-in-force parameter is not supported. |
 | LimitPriceUndefined | Triggered if the limit price in a limit-order leg is not specified. |
 | StopPriceUndefined | Triggered if the stop price in a stop-order leg is not specified. |
+| FuturesDeniedForMlegOrders | Triggered if a multi-leg option strategy cannot have a leg with a futures contract as the underlying security. |
 
 ### Security Type Validators
 
@@ -47,10 +56,22 @@ The objective of account ownership validators is to ensure that the account and 
 | AccountDisabled | Triggered if the trading account is disabled. |
 | AccountIsNotApproved | Triggered if the trading account hasn't yet been approved by the clearing firm. |
 | AccountDoesNotBelongToUser | Triggered if the used trading account does not belong to the user. |
+| AssetTradingNotConfiguredForAccount | Triggered if the trading account is not permitted to trade the type of security in the order. |
+
+### Contingent Order Condition
+
+The objective of the `ContingentOrderExecution` validator is to reject orders in which the placement condition is invalid.
 
 ### Fat Finger Validators
 
 The objective of fat-finger validators is to prevent traders from accidentally placing orders with extremely quantities, trade values, high price deviations, etc. For example, if a trader miscalculates the position price and attempts to purchase a billion dollars worth of securities, fat-finger validators will invalidate the transaction and prevent the catastrophe. Feel free to read our [dedicated article on fat-finger validators](../how-to-guides/back-office/configuring-fat-finger-rules.md).
+
+| Validator | Description |
+| :--- | :--- |
+| FatFingersOptionsSizeExceedsMaximum | Triggered if the number of contracts in the orders exceeds the maximum number of contracts allowed.  |
+| FatFingersStockSizeExceedsMaximum | Triggered if the number of securities in the order exceeds the maximum number of shares allowed. |
+| FatFingersTradeBands | Triggered if the difference between order's price and the mark price is higher than allowed. Learn more [here](../how-to-guides/back-office/configuring-fat-finger-rules.md). |
+| FatFingersValueExceedsMaximum | Triggered if the order value exceeds the maximum amount permitted. |
 
 ### Permission Validators
 
@@ -61,6 +82,8 @@ The objective of permission validators is to ensure that the traded security is 
 | TradingDeniedForAccount | Triggered if the trading account is forbidden from trading. |
 | TradingDeniedForSecurity | Triggered if the target security is not tradable. |
 | ShortTradingDeniedForSecurity | Triggered if the target security is not available for short-selling. |
+| ShortStockTradingDeniedForAccount | Triggered if the account is forbidden from opening short positions in stocks. |
+| SpreadTradingDeniedForAccount | Triggered if the trading account is forbidden from spread trading. |
 | AccountMarginRuleViolation | Triggered if the trading account does not meet the margin rules. |
 
 ### Wash Trade Validator
@@ -79,6 +102,10 @@ The objective of the stop-price validator is to ensure that the stop price of st
 | :--- | :--- |
 | BuyStopOrderStopPriceLessAsk | Triggered if the stop price of a Buy/Buy-to-Cover/Buy-to-Open order is lower than the current ask price. |
 | SellStopOrderStopPriceGreaterBid | Triggered if the stop price of a Buy/Buy-to-Cover/Buy-to-Open order is greater than the current bid price. |
+
+### Short Price Below 5 Validator
+
+The objective of the `SellShortOrderLastPriceBelow5` is to reject sell-short order in which the price of the underlying security is lower than $5.
 
 ### Cross-Zero Position Validator
 
@@ -153,9 +180,26 @@ Positions for non-standard options can be opened in ETNA Trader's Back Office.
 | :--- | :--- |
 | NonStandartOptionsValidator | Triggered if an attempt to trade non-standard options is made. |
 
+### Option Trading Denied Validator
+
+The objective of the option trading denied validators is to reject orders if the trading account is forbidden from option trading.
+
+| Validator | Description |
+| :--- | :--- |
+| LongOptionTradingDeniedForAccount | Triggered if the trading account is forbidden from opening long positions in options. |
+| ShortOptionTradingDeniedForAccount | Triggered if the trading account is forbidden from opening short positions in options. |
+
+### Quote Price Validator
+
+The objective of the `QuotePriceIsInvalid` validator is to reject orders if quotes for the order's underlying security are unavailable.
+
+| Validator | Description |
+| :--- | :--- |
+| SnapQuoteIsInvalid | Failed to fetch snap quotes. |
+
 ### OTC Trading Validators
 
-The objective of the OTC Trading Validators is to reject orders with Over0the-Counter securities. Traders cannot trade OTCBB and Pink securities.
+The objective of the OTC Trading Validators is to reject orders with Over-the-Counter securities. Traders cannot trade OTCBB and Pink securities.
 
 | Validator | Description |
 | :--- | :--- |
@@ -188,7 +232,11 @@ The objective of the `EventStateValidator` is to ensure that some  global event 
 
 ### Expiration Date Validator
 
-The objective of the `ExpirationDateValidator` is to ensure that in orders with duration set to GTD \(Good-Till-Date\), the `ExpirationDate` is later than the current date.
+The objective of the `ExpirationDateValidator` is to ensure that in orders with duration set to GTD \(Good-Till-Date\), the ExpirationDate is later than the current date.
+
+| Validator | Description |
+| :--- | :--- |
+| InvalidOrderExpiration | Expiration date must be later than the current date. |
 
 ### Extended Hours Validator
 
@@ -222,16 +270,22 @@ The objective of the `OptionSettlementValidator` is to reject an order if:
 
 The objective of the `OrderPriceValidator` is to reject orders with improperly specified stop/limit prices.
 
-### OTO/OCO Validator 
+| Validator | Description |
+| :--- | :--- |
+| OrderPriceIsInvalid | Triggered if the specified price is invalid |
+
+### OTO/OCO Validator
 
 The objective of the `OtoOcoValidator` is to ensure that OTO and OCO orders are properly configured.
 
 | Validator | Description |
 | :--- | :--- |
-| OTO/OCO market orders are not allowed | Triggered if the legs of an OTO/OCO order are market orders. |
+| OTO/OCO market orders are not allowed | Triggered if the first leg of an OTO/OCO order is a market order. |
 | OTO/OCO trailing orders are not allowed | Triggered if the legs of an OTO/OCO order are trailing stop or trailing stop-limit orders. |
 | OCO expiration type must be same | Triggered if the legs of an OTO/OCO order are option orders with different expiration types. |
 | OCO price difference should be at least {value}$. | Triggered if the price difference between the legs of an OTO/OCO order is less than 0.1 for options or 0.2 for other security types. |
+| OtoOcoForex\_NonForexAreNotAllowed | Triggered if in an OTO/OCO order there's a combination of Forex and non-Forex securities.  |
+| OtoOcoMarketNotAllowed | Triggered if a trader attempts to place an OCO order containing market orders. |
 
 ### Partially Filled Order Validator
 

@@ -28,7 +28,7 @@ This API endpoint enables you to modify an existing price alert.
 | **200** | Successful request, JSON data containing the updated price alert is returned. | [PriceAlertInfoModel](pricealerts_modifypricealerttrigger.md#pricealertinfomodel) |
 | **401** | The access level of the provided authorization token is not sufficient to perform this operation. | No Content |
 | **403** | The provided Et-App-Key is incorrect. | No Content |
-| **409** | Conflict | No Content |
+| **409** | The body of the request is lacking one of the required parameters | No Content |
 | **422** | A validation error occurred while processing the request. | No Content |
 | **500** | Internal server error | No Content |
 

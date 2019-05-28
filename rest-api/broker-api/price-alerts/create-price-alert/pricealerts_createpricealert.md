@@ -27,6 +27,7 @@ This API endpoint enables you to create a new price alert.
 | **200** | Successful request, the price alert has been successfully created. | [PriceAlertInfoModel](pricealerts_createpricealert.md#pricealertinfomodel) |
 | **401** | The access level of the provided authorization token is not sufficient to perform this operation. | No Content |
 | **403** | The provided Et-App-Key is incorrect. | No Content |
+| **409** | The body of the request is lacking one of the required parameters | No Content |
 | **422** | A validation error occurred while processing the request. | No Content |
 | **500** | Internal server error | No Content |
 
