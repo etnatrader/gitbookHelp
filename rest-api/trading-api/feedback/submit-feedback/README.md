@@ -6,7 +6,7 @@ description: Submit feedback from a particular user
 
 ## Overview
 
-This POST endpoint enables you to submit user feedback into ETNA Trader's support ticket management system. In addition to a regular text message that users usually provide, our service can also receive attachments, each sized no more than 10 megabytes.
+This POST endpoint enables you to submit user feedback into ETNA Trader's support ticket management system. In addition to a regular text message that users usually provide, our service can also receive five attachments with a cumulative size lower than or equal to 50 megabytes.
 
 There are four required parameters that must be provided in the request:
 
