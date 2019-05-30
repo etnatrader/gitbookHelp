@@ -151,7 +151,7 @@ where:
 | :--- | :--- |
 
 
-| MarginType | This is the account type. Read more about it [here](../../../../administrator-guide/administrators-widgets/managing-users/#trading-accounts). |
+| MarginType | This is the account type. Read more about it [here](). |
 | :--- | :--- |
 
 

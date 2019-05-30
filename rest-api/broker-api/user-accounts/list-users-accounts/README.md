@@ -47,8 +47,8 @@ where:
 | :--- | :--- |
 | Id | This is the user ID that you provided in the header |
 | ClearingAccount | This is the internal number of the trading account |
-| AccessType | This is the access type of the account. Read more about it [here](../../../../administrator-guide/administrators-widgets/managing-users/#trading-accounts). |
-| MarginType | This is the account type. Read more about it [here](../../../../administrator-guide/administrators-widgets/managing-users/#trading-accounts). |
+| AccessType | This is the access type of the account. Read more about it [here](). |
+| MarginType | This is the account type. Read more about it [here](). |
 
 ## Common Mistakes
 
