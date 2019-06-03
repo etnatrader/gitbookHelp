@@ -135,7 +135,7 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 
 ### Specifying  the Security's Internal ID Instead of its Ticker Symbol
 
-Another common mistake when making this API request is specifying the internal ID of the added security instead of its ticker symbol — for this purpose, there's a [separate API request](../../../broker-api/watchlists/add-security-to-watchlist-by-id/). If you specify the security's internal ID in this request, you'll receive the 409 status code.
+Another common mistake when making this API request is specifying the internal ID of the added security instead of its ticker symbol — for this purpose, there's a [separate API request](). If you specify the security's internal ID in this request, you'll receive the 409 status code.
 
 The following article covers the syntax for this API request in detail.
 
