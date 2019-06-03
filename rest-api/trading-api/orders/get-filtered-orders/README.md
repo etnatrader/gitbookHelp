@@ -206,55 +206,42 @@ where:
 
 
 | Id | This is the internal ID of the order. |
-| :--- | :--- |
 
 
 | SecurityId | This is the internal ID of the underlying security of the order. |
-| :--- | :--- |
 
 
 | Quantity | This is the number of shares in the order. |
-| :--- | :--- |
 
 
 | StopPrice | This is the stop price of the order \(if there's no stop price — the value of this parameter will be 0\). |
-| :--- | :--- |
 
 
 | ClientId | This is the order ID on the client's side. |
-| :--- | :--- |
 
 
 | ExecutedQuantity | This is the number of shares that have been purchased or sold. |
-| :--- | :--- |
 
 
 | LastPrice | This is the price of the last executed order for the underlying security. |
-| :--- | :--- |
 
 
 | LastQuantity | This is the number of shares that were traded in the last transaction. |
-| :--- | :--- |
 
 
 | LeavesQuantity | This is the number of shares in the order that are yet to be purchased. |
-| :--- | :--- |
 
 
 | AveragePrice | This is the average price at which the order was executed. |
-| :--- | :--- |
 
 
 | Side | This is the type of order \(could be "Buy", "Sell", "SellShort", or "BuyToCover"\). |
-| :--- | :--- |
 
 
 | Date | This is the date on which the order was placed by the user. |
-| :--- | :--- |
 
 
 | TransactionDate | This is the date on which the transaction took place. |
-| :--- | :--- |
 
 
 <table>
