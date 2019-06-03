@@ -203,47 +203,19 @@ where:
 
 | Parameter | Description |
 | :--- | :--- |
-
-
 | Id | This is the internal ID of the order. |
-
-
 | SecurityId | This is the internal ID of the underlying security of the order. |
-
-
 | Quantity | This is the number of shares in the order. |
-
-
 | StopPrice | This is the stop price of the order \(if there's no stop price — the value of this parameter will be 0\). |
-
-
 | ClientId | This is the order ID on the client's side. |
-
-
 | ExecutedQuantity | This is the number of shares that have been purchased or sold. |
-
-
 | LastPrice | This is the price of the last executed order for the underlying security. |
-
-
 | LastQuantity | This is the number of shares that were traded in the last transaction. |
-
-
 | LeavesQuantity | This is the number of shares in the order that are yet to be purchased. |
-
-
 | AveragePrice | This is the average price at which the order was executed. |
-
-
 | Side | This is the type of order \(could be "Buy", "Sell", "SellShort", or "BuyToCover"\). |
-
-
 | Date | This is the date on which the order was placed by the user. |
-
-
 | TransactionDate | This is the date on which the transaction took place. |
-
-
 <table>
   <thead>
     <tr>
@@ -270,22 +242,11 @@ where:
     </tr>
   </thead>
   <tbody></tbody>
-</table>| ExecutionStatus | This is the execution status of the order. It's usually identical to Status with the exception of emergency situations. For example, if an order modification request was rejected by the exchange because the order has already been filled, the status will be **Filled** and the execution status will be **Rejected**. |
-| :--- | :--- |
-
-
+</table>
+| ExecutionStatus | This is the execution status of the order. It's usually identical to Status with the exception of emergency situations. For example, if an order modification request was rejected by the exchange because the order has already been filled, the status will be **Filled** and the execution status will be **Rejected**. |
 | Type | This is the type of the order. The range of possible values includes: **Market**, **Limit**, **Stop**, **Stop Limit**. |
-| :--- | :--- |
-
-
 | RequestStatus | This is the status of the order modification request. |
-| :--- | :--- |
-
-
 | Target | This is the target operation of the order. Possible values: **new**, **cancel**, **modify**. |
-| :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
@@ -315,103 +276,30 @@ where:
   </thead>
   <tbody></tbody>
 </table>| ExecInst | Indicates if the order should be filled either entirely in one transaction or not at all. Possible values: **'DoNotIncrease'**, **'DoNotReduce'**, **'AllOrNone'**. |
-| :--- | :--- |
-
-
 | ExpireDate | This is the expiration of the order. If the order isn't executed until the specified date, it'll automatically be cancelled. |
-| :--- | :--- |
-
-
 | CounterPartyOrderId | This is the order of the order counterparty on the execution venue \(set by the executor\). |
-| :--- | :--- |
-
-
 | AccountId | This is the identifier of the trading account. |
-| :--- | :--- |
-
-
 | UserId | This is the ID of the user on whose trading account the order was executed. |
-| :--- | :--- |
-
-
 | RequestId | This is the identifier of the request modification. |
-| :--- | :--- |
-
-
 | StateId | The is the identifier of the order's state in ETNA Trader. |
-| :--- | :--- |
-
-
 | ParentId | This is the ID of the parent security in a multi-leg order. |
-| :--- | :--- |
-
-
 | Legs | These are the legs of a multi-leg order. |
-| :--- | :--- |
-
-
 | Exchange | This is the exchange on which the order should be executed. |
-| :--- | :--- |
-
-
 | ExecutionVenue | This is the execution venue of the order \(the list of options may vary depending on which exchanges are available to your company\). |
-| :--- | :--- |
-
-
 | TrailingStopAmountType | This is the type of the trailing stop \(**Absolute** or **Persentage**\). |
-| :--- | :--- |
-
-
 | TrailingStopAmount | This is the trailing amount of the trailing stop \(in percentage terms or in the currency units\). |
-| :--- | :--- |
-
-
 | TrailingLimitAmountType | This is the type of the trailing limit \(**Absolute** or **Persentage**\). |
-| :--- | :--- |
-
-
 | TrailingLimitAmount | This is the trailing amount \(in percentage terms or in the currency units\). |
-| :--- | :--- |
-
-
 | CreateDate | This is the date on which the order was created. |
-| :--- | :--- |
-
-
 | InitialType | This is the initial type of the order. |
-| :--- | :--- |
-
-
 | IsExternal | This field indicates if the order was placed externally. For example, a user can place an order manually by calling their broker without using ETNA Trader. |
-| :--- | :--- |
-
-
 | ExecBrocker | This is the final executor of the order. |
-| :--- | :--- |
-
-
 | ExecutionInstructions | These are instructions specified as part of the order. |
-| :--- | :--- |
-
-
 | TransType | This is the type of the execution transaction. Possible values: **New**, **Correct**, **Cancel**, **Status**. |
-| :--- | :--- |
-
-
 | ExecId | This is the identifier of the execution on the execution venue. |
-| :--- | :--- |
-
-
 | ValidationsToBypass | Indicates the validation rules that must be skipped. |
-| :--- | :--- |
-
-
 | ParentRequestId | This is an internal ETNA Trader field that should not be used. |
-| :--- | :--- |
-
-
 | SettlementDate | This is the date on which the order was settled. |
-| :--- | :--- |
 
 
 Here are some of the common mistakes that developers make when requesting the list of all outstanding and executed orders.
