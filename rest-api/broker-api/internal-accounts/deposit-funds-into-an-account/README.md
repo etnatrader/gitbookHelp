@@ -9,13 +9,13 @@ description: Deposit funds into an existing trading account
 This POST endpoint enables you to deposit funds into a trading account. These funds are added to the Cash parameter and by extension affect the stock and options buying power.
 
 {% hint style="warning" %}
-In order to deposit funds into an existing trading account, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to deposit funds into an existing trading account, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **accountId** \(path\). This is the internal identifier of the trading account into which the funds must be deposited.
 5. **depositValue** \(query\). This is the amount of funds that need to be deposited into the trading account.

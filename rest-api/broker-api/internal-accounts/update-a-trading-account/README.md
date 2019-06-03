@@ -9,13 +9,13 @@ description: Update an existing trading account
 This PUT endpoint enables you to update an existing trading account. To avoid having conflicts with the clearing firm, please refrain from modifying critical parameters like _ClearingAccount_.
 
 {% hint style="warning" %}
-In order to modify an existing trading account, you must use an [authorization token](../../authentication/) of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
+In order to modify an existing trading account, you must use an [authorization token]() of an administrator. Using authorization tokens of regular users will lead to the 401 status code.
 {% endhint %}
 
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request]().
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **accountId** \(path\). This is the internal identifier of the trading account that needs to be modified.
 5. **accountModel** \(body\). This is a JSON file with the updated information about the modified trading account.

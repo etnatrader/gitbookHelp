@@ -41,14 +41,21 @@ As a response, you'll receive a JSON file with the trading accounts of this user
 ]
 ```
 
+
+
+| 0 | Full. All operations are allowed |
+| :--- | :--- |
+| 1 | Read Only. The user can only examine the existing orders and positions \(without having the ability to place new orders\). |
+| 2 | Close Positions Only. The user can only close the positions without the ability to open new ones. |
+
 where:
 
 | Parameter | Description |
 | :--- | :--- |
 | Id | This is the user ID that you provided in the header |
 | ClearingAccount | This is the internal number of the trading account |
-| AccessType | This is the access type of the account. Read more about it [here](). |
-| MarginType | This is the account type. Read more about it [here](). |
+| AccessType | This is the access type of the account. Possible values: 0 \(Full\), 1 \(Read Only\), \(Close Positions Only\).  |
+| MarginType | This is the account type. Possible values: Full, Margin, DayTrader. |
 
 ## Common Mistakes
 
