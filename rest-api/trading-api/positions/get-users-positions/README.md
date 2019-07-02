@@ -151,7 +151,8 @@ In response to this API request, you'll receive a JSON file with all of the user
         "TakeProfitPrice": 0,
         "DailyCloseProfitLoss": 0,
         "ExcessChanges": 0,
-        "DayQuantity": 0
+        "DayQuantity": 0,
+        "MarketValueEOD": 645.19
     }
 ]
 ```
@@ -182,6 +183,7 @@ where:
 | DailyCloseProfitLoss | This is the gross profit or loss of all trades of this security made during the current trading session. |
 | Excess Changes | This indicates how much this position affects your account's excess. |
 | DayQuantity | This is the gross number of shares of this security that have been traded during the current trading session. |
+| MarketValueEOD | This is the market value of the position registered at the end of the previous trading session. |
 
 ### Security Type
 
