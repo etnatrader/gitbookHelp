@@ -6,7 +6,7 @@ When you first begin working with ETNA Trader, you’ll want to know some basics
 
 ### About the User Guide
 
-This User Guide sets forth the procedures and descriptions of how to use ETNA Trader Platform, starting from the registration process to the sophisticated trading activities. 
+This User Guide sets forth the procedures and descriptions of how to use ETNA Trader, starting from the sign-up process all the way to sophisticated trading activities. 
 
 This document:
 
@@ -14,6 +14,18 @@ This document:
 2. Explain the purpose and the functionality of every widget and tool.
 3. Defines and explain the procedures for trade placements and verification. 
 4. Showcase the ways to personalize and customize the platform to meet your specific needs and preferences. 
+
+The User Guide is available separately for all supported platforms:
+
+* Web Terminal:
+
+{% page-ref page="web-terminal/" %}
+
+* ETNA Trader for iOS \(including the extension for the Apple Watch\):
+
+{% page-ref page="etna-trader-for-ios/" %}
+
+* ETNA Trader for Android:
 
 {% hint style="info" %}
 Information provided in this user guide regarding the software or functionality of the Trading Platform, including descriptions and illustrations \(i.e. screenshots\), are subject to any updates and changes by ETNA.
