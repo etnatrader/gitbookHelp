@@ -167,13 +167,12 @@ where:
     </tr>
     <tr>
       <td style="text-align:left">openPL</td>
-      <td style="text-align:left">This is the amount of unrealized profit or loss at the opening of the
-        current trading session.</td>
+      <td style="text-align:left">This is the amount of unrealized profit or loss for all positions.</td>
     </tr>
     <tr>
       <td style="text-align:left">closePL</td>
-      <td style="text-align:left">This is the amount of unrealized profit or loss at the closing of the
-        current trading session.</td>
+      <td style="text-align:left">This is the amount of realized profit or loss during the current trading
+        session.</td>
     </tr>
     <tr>
       <td style="text-align:left">marketValue</td>

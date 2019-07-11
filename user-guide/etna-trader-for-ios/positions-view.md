@@ -1,3 +1,7 @@
+---
+description: Track open positions
+---
+
 # Positions View
 
 ### Introduction

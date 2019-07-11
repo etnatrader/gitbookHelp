@@ -1,3 +1,7 @@
+---
+description: Learn about the design of ETNA Trader for iOS
+---
+
 # App Layout
 
 ### Introduction

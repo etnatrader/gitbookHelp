@@ -1,6 +1,10 @@
+---
+description: 'Change global settings, inspect the account balances'
+---
+
 # Account View
 
-###  Introduction
+### Introduction
 
 The last tab of ETNA Trader for iOS — **Account** — is responsible for displaying comprehensive information about the current trading account as well as enabling you to change the app's settings. Here you can quickly glance at the current market value of the account, track the profit and loss figures, take a closer look at your current buying power, configure notifications, etc.
 

@@ -1,3 +1,7 @@
+---
+description: Manage price alerts
+---
+
 # Price Alerts View
 
 ### Introduction

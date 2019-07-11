@@ -1,3 +1,7 @@
+---
+description: 'Manage watchlists, view quotes, place trades'
+---
+
 # Watchlist & Quotes View
 
 ### Watchlist
