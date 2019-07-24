@@ -21,7 +21,7 @@ There are two types of options: calls and puts. Furthermore, there are four type
 
 ![](../../../.gitbook/assets/screenshot-2019-04-24-at-18.45.50.png)
 
-### Strike Price and Intrinsic value
+### Intrinsic value and Time
 
 One of the columns of the _Option Chain_ widget is entitled **Mark** and it contains the current mark price of the underlying security. Please note that this column is available only for Call and Put options.
 
