@@ -23,9 +23,9 @@ There are two types of options: calls and puts. Furthermore, there are four type
 
 ### Intrinsic value and Time
 
-One of the columns of the _Option Chain_ widget is entitled **Mark** and it contains the current mark price of the underlying security. Please note that this column is available only for Call and Put options.
+One of the columns of the _Option Chain_ widget is entitled **Mark** and it contains the current mark price of the option. Please note that this column is available only for Call and Put options.
 
- As you hover over the column with the mark price, the following pop-up will be prompted:
+ As you hover over the column with the option's strike price, the following pop-up will be prompted:
 
 ![](../../../.gitbook/assets/options.png)
 
