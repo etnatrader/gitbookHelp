@@ -89,6 +89,17 @@ where:
       </td>
     </tr>
     <tr>
+      <td style="text-align:left">changeAbsolute</td>
+      <td style="text-align:left">This is the difference between the account&apos;s value and the account&apos;s
+        equity at the closing of the previous trading session. The account&apos;s
+        value is the sum of the available Cash and the aggregate market value of
+        all long and short positions.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">changePercent</td>
+      <td style="text-align:left">Identical to <code>changeAbsolute</code> but expressed in percentage terms.</td>
+    </tr>
+    <tr>
       <td style="text-align:left">equityTotal</td>
       <td style="text-align:left">This is the gross valuation of all equity on the trading account.</td>
     </tr>
