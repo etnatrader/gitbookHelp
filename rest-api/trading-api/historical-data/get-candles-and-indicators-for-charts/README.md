@@ -32,7 +32,7 @@ Here's an example of the request body with the information about the enquired se
     "EndDate":1550764844,
     "CandlesCount":-1, //set to -1 if candles are unnecessary
     "Period":"4h",
-    "Interval":"1Y"}, //instead of the start and the end date 
+    "Interval":-7}, //instead of the start and the end date 
 
 "IndicatorsHistorySettings":[
 {   "Signature":"MACD|4h|false|12|26|9",
@@ -121,16 +121,20 @@ where:
         <p>This is the required time period for the specified time period. Possible
           values:</p>
         <ol>
-          <li>&quot;TDY&quot;;</li>
-          <li>&quot;1D&quot;;</li>
-          <li>&quot;1W&quot;;</li>
-          <li>&quot;1M&quot;;</li>
-          <li>&quot;3M&quot;;</li>
-          <li>&quot;6M&quot;;</li>
-          <li>&quot;YTD&quot;;</li>
-          <li>&quot;1Y&quot;;</li>
-          <li>&quot;3Y&quot;;</li>
-          <li>&quot;ALL&quot;.</li>
+          <li>Candles = 0,</li>
+          <li>All = -1,</li>
+          <li>YearToDate = -2,</li>
+          <li>Custom = -3,</li>
+          <li>Day1 = -4,</li>
+          <li>Week1 = -5,</li>
+          <li>Month1 = -6,</li>
+          <li>Month3 = -7,</li>
+          <li>Month6 = -8,</li>
+          <li>Year1 = -9,</li>
+          <li>Year3 = -10,</li>
+          <li>CustomCandles = -11,</li>
+          <li>Day3 = -12,</li>
+          <li>Today = -13</li>
         </ol>
       </td>
     </tr>
