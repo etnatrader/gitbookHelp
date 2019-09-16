@@ -2,6 +2,8 @@
 
 ### Exploring the Option Chain Widget
 
+ETNA Trader features powerful option trading functionality that enables traders to buy and sell call and put options as well as enter into complex strategies.
+
 ![](../../../.gitbook/assets/screenshot-2019-04-24-at-18.39.43.png)
 
 ### Greeks
