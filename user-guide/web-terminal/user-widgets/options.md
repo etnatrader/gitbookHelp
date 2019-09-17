@@ -96,7 +96,7 @@ The last five rows display the probability of the underlying security's price **
 
 Above the probability calculator there is a profit and loss calculator that enables traders to view the projected profit or loss of selected options depending on the price of the underlying security at expiration date.
 
-For example, suppose you select a call option on AAPL with a strike price of $225. The current ask price of the option is $0.78. Since the standard number of securities in an option contract is 100, the final price of the option will be $78.
+For example, suppose you select a call option on AAPL with a strike price of $225. The current ask price of the option is $0.78. Since this is a standard option with 100 securities, the final price of the option will be $78.
 
 Now let's imagine that at expiration date, the market price of AAPL is equal to the strike price \($225\). Because the option expired, the trader has the right to purchase AAPL at $225 and then instantly sell it at the same price on the market. Obviously this transaction makes no financial sense and the trader can simply choose not to buy the stock at all. But the trader also spent $78 on buying the option — and at expiration date this sum becomes the trader's incurred loss.
 
