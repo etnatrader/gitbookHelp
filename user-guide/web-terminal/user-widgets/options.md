@@ -1,10 +1,21 @@
 # Options
 
-### Exploring the Option Chain Widget
+### Trading Options in ETNA Trader
 
-ETNA Trader features powerful option trading functionality that enables traders to buy and sell call and put options as well as enter into complex strategies.
+Option is a contract in which a party that owns the option has the right \(but not obligation\) to purchase \(Call\) or sell \(Put\) a specific asset at a pre-defined \(strike\) price within a specific time frame. The counter party in this transaction is the writer of the option that in exchange for a premium agreed to purchase or sell the asset. Both the writer and the owner of the option make opposite bets on the price of the underlying asset: if its market price is better than the strike price, the owner of the option realizes a profit; if the strike price is better, the writer of the options realizes a profit.
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-18.39.43.png)
+ETNA Trader features powerful option trading functionality that enables traders to buy and sell call and put options as well as enter into complex strategies. By default, all widgets related to options trading are available on the **Options** tab of ETNA Trader's Web Terminal.
+
+![](../../../.gitbook/assets/screenshot-2019-09-17-at-17.07.33.png)
+
+There are two widgets that deal with options: 
+
+1. **Option Ticket**. This widget enables traders to purchase options and enter into complex strategies.
+2. **Option Chain**. This widget enables traders to conveniently explore various options with different expiration dates, determine the probability of the underlying asset reaching a specific 
+
+### Option Ticket
+
+
 
 ### Greeks
 
@@ -85,11 +96,11 @@ The last five rows display the probability of the underlying security's price **
 
 Above the probability calculator there is a profit and loss calculator that enables traders to view the projected profit or loss of selected options depending on the price of the underlying security at expiration date.
 
-For example, suppose you select a call option on the Apple Stock with a strike price of $225. The current ask price if $0.78. Since the minimum number of securities in an option contract is 100, the final price of the option will be $78.
+For example, suppose you select a call option on AAPL with a strike price of $225. The current ask price of the option is $0.78. Since the standard number of securities in an option contract is 100, the final price of the option will be $78.
 
-Now let's imagine that at expiration date, the market price of the Apple stock is equal to the strike price \($225\). In this case the trader incurs no losses when buying the stock at $225 \(which they can instantly sell at the same price on the market\); however, those $78 spent on buying the option will become your only loss.
+Now let's imagine that at expiration date, the market price of AAPL is equal to the strike price \($225\). Because the option expired, the trader has the right to purchase AAPL at $225 and then instantly sell it at the same price on the market. Obviously this transaction makes no financial sense and the trader can simply choose not to buy the stock at all. But the trader also spent $78 on buying the option — and at expiration date this sum becomes the trader's incurred loss.
 
-Let's consider a different scenario. If the market price of the Apple stock at expiration date is $225.78, the trader will lose $78 on the option itself; however, they can compensate the loss by buying 100 shares of AAPL from the option's writer at $225 and selling them at the market price of $225.78, pocketing the difference of $22'578 - $22'500 = $78.
+Let's consider a different scenario. If the market price of AAPL at expiration date is $225.78, the trader will lose $78 on the option itself; however, they can compensate the loss by buying 100 shares of AAPL from the option's writer at $225 and selling them at the market price of $225.78, pocketing the difference of $22'578 - $22'500 = $78.
 
 The projected profit and loss can be inspected in the Profit/Loss calculator on the right of the Option Chain widget.
 
