@@ -13,10 +13,6 @@ There are two widgets that deal with options:
 1. **Option Ticket**. This widget enables traders to purchase options and enter into complex strategies.
 2. **Option Chain**. This widget enables traders to conveniently explore various options with different expiration dates, determine the probability of the underlying asset reaching a specific 
 
-### Option Ticket
-
-
-
 ### Greeks
 
 Various sophisticated hedging strategies are used to neutralize or decrease the effects of risk when taking a position in an option.
