@@ -8,33 +8,36 @@ ETNA Trader features powerful option trading functionality that enables traders 
 
 ![](../../../.gitbook/assets/screenshot-2019-09-17-at-17.07.33.png)
 
-There are two widgets that deal with options: 
+There are two widgets that facilitate trading with options:
 
 1. **Option Ticket**. This widget enables traders to purchase options and enter into complex strategies.
-2. **Option Chain**. This widget enables traders to conveniently explore various options with different expiration dates, determine the probability of the underlying asset reaching a specific 
+2. **Option Chain**. This widget enables traders to conveniently explore various options with different expiration dates, determine the probability of the underlying asset reaching a specific price, inspection of options' greeks as well as the profit/loss calculator.
 
-### Greeks
+### Option Chain Widget
 
-Various sophisticated hedging strategies are used to neutralize or decrease the effects of risk when taking a position in an option.
+Let's delve deeper into the Option Chain widget and examine its various aspects. The uppermost segment of the Option Chain widget contains the text field for the underlying security's ticker symbol as well as several drop-down menus for filtering options:
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-18.42.50.png)
+* **Strike Range**. Use this drop-down menu to determine the number of options that must be displayed. For example, if you select 4, Option Chain will find an option with the strike price that is closest to the current price of the underlying security and then display two options with the strike price above and two options with the strike price below the found option's strike price.
+* **Expiration Type**. Use this drop-down menu to find options with a specific expiration type.
+* **Expiration Date**. Use this drop-down menu to select options with a specific expiration date. 
 
-### Calls and Puts
+![](../../../.gitbook/assets/screenshot-2019-10-01-at-15.43.06.png)
 
-There are two types of options: calls and puts. Furthermore, there are four types of participants in options markets depending on the position they take: 
+Moving downward, there's a table split into two segments: one for Call \(left\) and the other for Put \(right\) options. The middle column represents the strike price of the options. There are also columns containing the bid, ask, last price of the option, and the current open interest.
 
-1. Buyers of calls;
-2. Sellers of calls; 
-3. Buyers of puts; 
-4. Sellers of puts.
+![](../../../.gitbook/assets/screenshot-2019-10-01-at-18.02.54.png)
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-18.45.50.png)
+#### Greeks
+
+To the left of Call options and to the right of Put options there's a small blue sigma button that prompts options' greeks. Greeks measure different factors that affect the price of an option.
+
+![](../../../.gitbook/assets/screenshot-2019-10-01-at-19.03.23.png)
 
 ### Intrinsic value and Time
 
 One of the columns of the _Option Chain_ widget is entitled **Mark** and it contains the current mark price of the option. Please note that this column is available only for Call and Put options.
 
- As you hover over the column with the option's strike price, the following pop-up will be prompted:
+As you hover over the column with the option's strike price, the following pop-up will be prompted:
 
 ![](../../../.gitbook/assets/options.png)
 
@@ -42,15 +45,25 @@ The pop-up contains two parameters:
 
 1. **Intrinsic**
 
-\*\*\*\*$$Intrinsic = StockMark - Strike$$ ****
+* For in-the-money Call options:
 
-The `Intrinsic` parameter is calculated as the difference between the underlying security's mark price and the option's strike price.
+\*\*\*\*$$Intrinsic = |StockMark - Strike|$$\*\*\*\*
+
+*  For in-the-money Put Options**:**
+
+$$Intrinsic = |Strike - StockMark|$$
+
+* For out-of-the-money options:
+
+$$Intrinsic = 0$$
+
+The `Intrinsic` parameter is calculated as the difference between the underlying security's mark price and the option's strike price. For out-of-the-money options, `Intrinsic` is equal to 0.
 
    ****2. **Time**
 
 \*\*\*\*$$Time = Option Mark - Intrinsic$$ ****
 
-The `Time` parameter is calculated as the difference between the option's mark price and the **Intrinsic** parameter.
+The `Time` parameter is calculated as the difference between the option's mark price and the **Intrinsic** parameter \(or vice versa\).
 
 ### Probability Calculator
 
@@ -86,7 +99,7 @@ The last five rows display the probability of the underlying security's price **
 2. The upper bound of the target price range;
 3. Both the lower and the upper bounds of the target price range;
 4. Either the lower or the upper bound of the target price range;
-5. Neither the lower or the upper bound of the target price range.
+5. Neither the lower nor the upper bound of the target price range.
 
 ### Profit/Loss Calculator
 
@@ -98,17 +111,21 @@ Now let's imagine that at expiration date, the market price of AAPL is equal to 
 
 Let's consider a different scenario. If the market price of AAPL at expiration date is $225.78, the trader will lose $78 on the option itself; however, they can compensate the loss by buying 100 shares of AAPL from the option's writer at $225 and selling them at the market price of $225.78, pocketing the difference of $22'578 - $22'500 = $78.
 
+By the same logic, if the market price of AAPL at expiration date is higher than the sum of the strike price and the option's cost basis, the difference will be the trader's profit.
+
 The projected profit and loss can be inspected in the Profit/Loss calculator on the right of the Option Chain widget.
 
 ![](../../../.gitbook/assets/screenshot-2019-09-16-at-15.28.28.png)
-
-By the same logic, if the market price of AAPL at expiration date is higher than the sum of the strike price and the option's cost basis, the difference will be the trader's profit.
 
 #### Profit/Loss Chart
 
 Taking a closer look at the Profit/Loss chart, the y-axis represents the projected profit or loss when using the selected option strategy while the x-axis represents the price of the underlying security.
 
-![](../../../.gitbook/assets/screenshot-2019-09-16-at-16.14.08.png)
+The yellow line represents the projected profit or loss over a variety of prices: the orange triangle marks the price point of the underlying security at which this option will generate the maximum loss; the yellow square marks the breakeven price of the underlying security. 
+
+The blue line represents the value of the option depending on the price of the underlying security \(yellow line\).
+
+![](../../../.gitbook/assets/screenshot-2019-10-02-at-18.38.53.png)
 
 #### Choosing Strategies
 
@@ -121,4 +138,32 @@ To **buy** a Call or Put option, select the following checkbox until the green l
 {% hint style="info" %}
 Notice how the chart on the right dynamically adjusts as you select different options.
 {% endhint %}
+
+### Option Ticket
+
+The second widget that enables option trading is _Option Ticket_. This widget enables traders to purchase or sell options, trade the underlying security, enter into complex strategies, and configure different aspects of the order like its type, duration, etc.
+
+![](../../../.gitbook/assets/screenshot-2019-10-02-at-20.40.01.png)
+
+At the top there's a text field where the trader must specify the ticker symbol of the underlying security. Moving downward there's a leg-configuration table where they can trade the underlying security or different options:
+
+![](../../../.gitbook/assets/screenshot-2019-10-02-at-20.44.40.png)
+
+In the top-right corner there's a drop-down menu that provides a list of option trading strategies to choose from.
+
+![](../../../.gitbook/assets/screenshot-2019-10-02-at-20.54.44.png)
+
+For example, if the trader selects the popular covered call strategy, Option Ticket will automatically add a long position in the underlying security and a sell-to-open position in a call option. Alternatively, traders can add the legs of a trade themselves, selecting the required expiration date, target strike price, option type \(Call or Put\), etc.
+
+At the bottom traders can determine the required order type, duration of the order, and they can even configure a complex _One-Triggers-the-Other_ or _One-Cancels-the-Other_ order. 
+
+![](../../../.gitbook/assets/screenshot-2019-10-02-at-21.04.10.png)
+
+Once the order is entirely configured, the trader should click **Verify**. This will prompt the order verification window that enables the trader to examine the order and all of its parameters once again before sending it to the execution venue. If everything is correct, the trader should click **Trade**, and the order will be placed.
+
+![](../../../.gitbook/assets/screenshot-2019-10-02-at-21.05.20.png)
+
+Once the order is filled, it can be inspected from the **Orders** widget and the resultant position will be displayed on the **Positions** widget:
+
+![](../../../.gitbook/assets/screenshot-2019-10-02-at-21.08.06.png)
 
