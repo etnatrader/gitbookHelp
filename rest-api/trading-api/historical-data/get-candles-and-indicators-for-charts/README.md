@@ -22,24 +22,26 @@ There are four required parameters that must be provided in the request:
 Here's an example of the request body with the information about the enquired security.
 
 ```javascript
-{"Security":
-    {"Symbol":"AAPL",
-    "Exchange":"XNAS",
-    "Currency":"USD"},
-
-"SecurityHistorySettings":
-    {"StartDate":1542776400,
-    "EndDate":1550764844,
+{
+"Security": {
+  "Symbol": "VMSFT",
+  "Exchange": "VIRTEX",
+  "Currency": "USD"
+},
+"SecurityHistorySettings": {
+    "StartDate":1569902400,
+    "EndDate":1570544852,
     "CandlesCount":-1, //set to -1 if candles are unnecessary
-    "Period":"4h",
-    "Interval":-7}, //instead of the start and the end date 
-
-"IndicatorsHistorySettings":[
-{   "Signature":"MACD|4h|false|12|26|9",
+    "Period":"5m",
+    "Interval":-5,
+    "IncludeNonMarketData":false},
+"IndicatorsHistorySettings": [{
+    "Signature":"MACD|4h|false|12|26|9",
     "StartDate":1542776400,
     "EndDate":1550764844,
     "Period" : "4h",
     "Offset":5
+}]
 }
 ```
 
