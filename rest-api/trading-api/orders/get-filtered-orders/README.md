@@ -15,11 +15,15 @@ There are six required parameters that must be provided in the request:
 3. **Trading Account ID** \(path\). This is the numeric ID of the trading account whose orders must be retrieved. 
 4. **API version** \(path\). Unless necessary, leave it at "1.0".
 5. **pageNumber** \(query\). Because there can be dozens of outstanding orders, we split them into pages which you can individually retrieve by specifying this parameter.
-6. **pageSize** \(query\). This parameter indicates the number of orders from a particular page that must be returned in the response.
+6. **pageSize** \(query\). This parameter indicates the number of orders from a particular page that must be returned in the response. The maximum value for this parameter is 100.
 
 There's also one optional parameter worth examining:
 
 * filter \(query\). This is an SQL query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+
+{% hint style="warning" %}
+Sample queries below must be converted depending on the used encoding. For example, the `#` sign must be converted to `%23` and so on.
+{% endhint %}
 
 <table>
   <thead>
