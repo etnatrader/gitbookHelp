@@ -19,7 +19,7 @@ Once you've tapped Trade, you will be prompted with the order configuration view
 3. **Type**. This is the type of the order. The range of possible values includes: **Market**, **Limit**, **Stop**, **Stop Limit, TrailingStop, TrailingStopLimit.**
 4. **Price**. This is the order's target price. It will vary based on the order type: for limit order this is the limit price, for stop orders this is the stop price, etc.
 5. **Duration**. This is the target duration of the order. The range of possible values is as follows: **Day** \(cancelled at the end of the trading session if not executed\), **GTC** \(Good-till-Canceled — the order persists indefinitely until it is executed or manually cancelled\).
-6. **Session**. This is the target trading session. The range of possible values if as follows: Pre-market, After-market, Market hours + after-market hours, Market hours + pre-market hours, Market hours + after-market hours,  Market hours, All Sessions.
+6. **Session**. This is the target trading session. The range of possible values is as follows: Pre-market, After-market, Market hours + after-market hours, Market hours + pre-market hours, Market hours + after-market hours,  Market hours, All Sessions.
 7. **Exchange**. This is the stock exchange where this order should preferably be placed.
 8. **All or None**. This option indicates if the order should be filled either entirely in one transaction or not at all.
 

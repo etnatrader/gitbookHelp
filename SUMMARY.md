@@ -24,10 +24,12 @@
   * [Watchlist & Quotes View](user-guide/etna-trader-for-ios/quotes-view/README.md)
     * [Trade View](user-guide/etna-trader-for-ios/quotes-view/trade-view/README.md)
       * [Stock Trading](user-guide/etna-trader-for-ios/quotes-view/trade-view/stock-trading.md)
+      * [Options Trading](user-guide/etna-trader-for-ios/quotes-view/trade-view/options-trading.md)
   * [Positions View](user-guide/etna-trader-for-ios/positions-view.md)
   * [Orders View](user-guide/etna-trader-for-ios/orders-view.md)
   * [Price Alerts View](user-guide/etna-trader-for-ios/price-alerts-view.md)
   * [Account View](user-guide/etna-trader-for-ios/account-view.md)
+  * [Apple Watch Extension](user-guide/etna-trader-for-ios/apple-watch-extension.md)
 
 ## REST API
 
