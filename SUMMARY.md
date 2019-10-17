@@ -10,6 +10,7 @@
   * [Platform Layout](user-guide/web-terminal/platform-layout.md)
   * [User Widgets](user-guide/web-terminal/user-widgets/README.md)
     * [Account Information](user-guide/web-terminal/user-widgets/account-information.md)
+    * [Account Onboarding](user-guide/web-terminal/user-widgets/account-onboarding.md)
     * [Chart](user-guide/web-terminal/user-widgets/chart.md)
     * [News](user-guide/web-terminal/user-widgets/news.md)
     * [Trade Ticket](user-guide/web-terminal/user-widgets/trade-ticket.md)
