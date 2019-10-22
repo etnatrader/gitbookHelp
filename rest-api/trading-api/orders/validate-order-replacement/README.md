@@ -47,22 +47,23 @@ In response to this request, you'll receive a JSON file confirming \(or rejectin
 ```javascript
 {
   "IsSuccessful": true,
-  "Commission": 3.75,
+  "Commission": 1e-8,
   "Commissions": {
-    "PerTradeCommission": 3.75
+    "Per Contract Commission": 1e-8
   },
-  "Cost": 169000,
-  "NetCost": 168996.25,
+  "Cost": 724.23,
+  "NetCost": 724.23000001,
+  "TotalCost": 1e-8,
   "Quotes": [
     {
-      "Ask": 184,
-      "Bid": 175.76,
-      "Last": 175.875,
-      "Volume": 1,
+      "Ask": 241.41,
+      "Bid": 241.39,
+      "Last": 241.3957,
+      "Volume": 3500,
       "OpenInterest": 0
     }
   ],
-  "MarginChange": 16900
+  "MarginChange": 0
 }
 ```
 
@@ -75,6 +76,7 @@ where:
 | Commissions | This is an array that breaks down the applicable commissions. |
 | Cost | This is the total cost of the order \(including commission\). |
 | NetCost | This is the cost of the order less commission. |
+| TotalCost | This is the gross commission applied to the order \(including all other commissions\). |
 | Quotes | This is the last batch of quotes for this security. |
 | MarginChange | This is the amount by which the trading account margin requirements will be affected once this order is filled. |
 

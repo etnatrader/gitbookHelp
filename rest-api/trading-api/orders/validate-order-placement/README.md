@@ -462,22 +462,24 @@ In response to this request, you'll receive a JSON file confirming \(or rejectin
 ```javascript
 {
   "IsSuccessful": true,
-  "Commission": 3.75,
+  "Commission": 1.00000002,
   "Commissions": {
-    "Per Trade Commission": 3.75
+    "Per Trade Commission": 1,
+    "Per Contract Commission": 2e-8
   },
-  "Cost": 169000,
-  "NetCost": 168996.25,
+  "Cost": 482.4,
+  "NetCost": 483.40000002,
+  "TotalCost": 1.00000002, //New parameter
   "Quotes": [
     {
-      "Ask": 184,
-      "Bid": 175.76,
-      "Last": 175.875,
-      "Volume": 1,
+      "Ask": 241.2,
+      "Bid": 241.19,
+      "Last": 241.195,
+      "Volume": 100,
       "OpenInterest": 0
     }
   ],
-  "MarginChange": 16900
+  "MarginChange": 0
 }
 ```
 
@@ -490,6 +492,7 @@ where:
 | Commissions | This is an array that breaks down the applicable commissions. |
 | Cost | This is the total cost of the order \(including commission\). |
 | NetCost | This is the cost of the order less commission. |
+| TotalCost | The gross commission applied to the order \(includes all other commissions\). |
 | Quotes | This is the last batch of quotes for this security. |
 | MarginChange | This is the amount by which the trading account margin requirements will be affected once this order is filled. |
 | ErrorDescription | This is the description of the error in case the provided order was improperly constructed. |
