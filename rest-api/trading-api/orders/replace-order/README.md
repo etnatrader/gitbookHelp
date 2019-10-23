@@ -18,8 +18,16 @@ There are five required parameters that must be provided in the request:
 
 Here's the final template for this API request:
 
+* For orders that will only be verified by the API but not the execution venue \(quick\):
+
 ```text
 PUT apiURL/v1.0/accounts/{accountID}/orders/{existingOrderID}
+```
+
+* For orders that will be verified by the API and the execution venue too \(slow\):
+
+```text
+PUT apiURL/v1.0/accounts/{accountID}/syncorders/{existingOrderID}
 ```
 
 ## Request Body

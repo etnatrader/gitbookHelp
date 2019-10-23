@@ -90,8 +90,16 @@ Note that you can combine different queries to create more complex requests:
 
 Here's the final template for this API request:
 
+* For orders that will only be verified by the API but not the execution venue \(quick\):
+
 ```text
 apiURL/v1.0/accounts/{accountNumber}/orders?pageNumber=0&pageSize=2
+```
+
+* For orders that will be verified by the API and the execution venue too \(slow\):
+
+```text
+apiURL/v1.0/accounts/{accountNumber}/syncorders?pageNumber=0&pageSize=2
 ```
 
 ## Response

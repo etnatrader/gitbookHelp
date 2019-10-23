@@ -20,8 +20,16 @@ There are five required parameters that must be provided in the request header:
 
 This API request must be sent to the following URL:
 
+* For orders that will only be verified by the API but not the execution venue \(quick\):
+
 ```javascript
 apiURL/v1.0/accounts/6303/orders/73552
+```
+
+* For orders that will be verified by the API and the execution venue too \(slow\):
+
+```javascript
+apiURL/v1.0/accounts/6303/syncorders/73552
 ```
 
 ### Response
