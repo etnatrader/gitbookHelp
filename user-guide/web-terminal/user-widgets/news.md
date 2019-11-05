@@ -1,3 +1,7 @@
+---
+description: Track the latest news on your favorite securities
+---
+
 # News
 
 ### Exploring the News Widget

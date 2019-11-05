@@ -35,6 +35,10 @@
   * [Price Alerts View](user-guide/etna-trader-for-ios/price-alerts-view.md)
   * [Account View](user-guide/etna-trader-for-ios/account-view.md)
   * [Apple Watch Extension](user-guide/etna-trader-for-ios/apple-watch-extension.md)
+* [Knowledge Base](user-guide/knowledge-base/README.md)
+  * [Troubleshooting](user-guide/knowledge-base/troubleshooting.md)
+  * [How-To Guides](user-guide/knowledge-base/how-to-guides/README.md)
+    * [How to Enable Two-Factor Authentication](user-guide/knowledge-base/how-to-guides/how-to-enable-two-factor-authentication.md)
 
 ## REST API
 
@@ -136,6 +140,7 @@
   * [Managing Transactions](rest-api/trading-api/managing-transactions/README.md)
     * [Get Transactions](rest-api/trading-api/managing-transactions/get-transactions/README.md)
       * [Syntax](rest-api/trading-api/managing-transactions/get-transactions/transactions_getactionspage.md)
+  * [Streaming Data](rest-api/trading-api/streaming-data.md)
   * [Code Samples](rest-api/trading-api/code-samples/README.md)
     * [Basic Authentication](rest-api/trading-api/code-samples/basic-authentication.md)
     * [Two-Factor Autentication](rest-api/trading-api/code-samples/two-factor-autentication.md)

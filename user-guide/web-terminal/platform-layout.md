@@ -1,24 +1,26 @@
+---
+description: Get to know the layout of ETNA Trader's web terminal
+---
+
 # Platform Layout
 
 ### Getting Started with the UI
 
-ETNA Trader is loaded with icons and symbols that — once clicked — give you the chance to customize and personalize the interface of the platform as if it's created to meet your specific needs and preferences. So, before we dive into the platform, we would like to give you a quick rundown of each icon, what they are and why they exist. Check this partial cheat sheet.
+ETNA Trader features multitudes of icons and symbols that — once clicked — give you the chance to customize and personalize the interface of the platform as if it's created to meet your specific needs and preferences. Therefore, before we dive into the platform, we would like to give you a quick rundown of each icon, what they are and why they exist. Feel free to take a look at this partial cheat sheet that describes the purpose of each of these icons.
 
 ![](../../.gitbook/assets/screenshot-2019-04-24-at-14.35.34.png)
 
 ### Dashboard
 
-ETNA Trader has an easy-to-navigate dashboard. Users can group Watchlist with News feed and chart. Connecting the three widgets together allows users to check the latest news and chart of the security automatically once the symbol is typed.
+ETNA Trader has an easy-to-navigate dashboard. Users can group different widgets by color; for example, the **Watchlist** widget can be linked with the **News**, and the **Chart** widget. Connecting the three widgets together allows users to check the latest news and the chart of the selected security automatically once the symbol is typed.
 
 ![](../../.gitbook/assets/screenshot-2019-04-24-at-14.36.33.png)
 
 ### Account Page
 
-Account page contains the name and account number\(s\) of the user. In the account information, you will see that you have access to 1M in virtual currency to test your trading skills with, as you see in the graphic below. There are different types of other widget tabs such Trade, Market watch, analyze and more. 
+The **Account** tab contains the name and account number\(s\) of the user. In the account information, you will see that you have access to $1 million in virtual currency to test your trading skills with — as you see in the graphic below. There are different types of other tabs like **Trade**, **Market** **watch**, **Analyze**, and more. It's also possible to delete tabs you don't currently need to use for your trades.
 
-You can also delete tabs of widgets you don't currently need to use for your trades. 
-
-You can add more tabs by clicking the plus \(+\) symbol, rename it and reorganize the order of your tabs by dragging them either forward or backward.
+You can add more tabs by clicking on the plus \(+\) symbol, rename them, and also reorganize the tab order by dragging them either forward or backward.
 
 By clicking on The Header Panel tab you can either pin or unpin the Marquee Settings bar and the Widget bar.
 
@@ -26,7 +28,7 @@ By clicking on The Header Panel tab you can either pin or unpin the Marquee Sett
 
 ### User Settings
 
-User settings enable you to customize your layout, update the time zone, personal information, trading options as well as add your own picture. User settings contains four parts: Account, Trading, Layout Settings, and Personalization.
+User settings enable you to customize your layout, update the time zone, personal information, trading options as well as add your own picture. User settings are split into four tabs: Account, Trading Accounts, Trading, Security, Layout Settings, and Personalization.
 
 #### Account Tab
 
@@ -45,7 +47,7 @@ User settings enable you to customize your layout, update the time zone, persona
 ETNA Trader's Marquee streams security information in the most flexible real-time quote displays. With ETNA Trader's Marquee, you can combine real-time data of securities in a variety of customizable displays. The content of Marquee can be customized in three different models:
 
 1. **Positions**. Marquee that shows updated quotes of all the symbols you traded and opened positions in.
-2. **Watchlist**. Marquee that shows updated quotes of the three different types of securities: Stocks, Forex or Indices.
+2. **Watchlist**. Marquee that shows updated quotes of the three different types of securities: Stocks, Forex, or Indices.
 3. **Custom**. Customize marquee that shows updated quotes of your specifically preferred symbols.
 
 ![](../../.gitbook/assets/screenshot-2019-04-24-at-15.23.23.png)
@@ -60,7 +62,7 @@ ETNA Trader's interface is designed to make it easy for users to find features, 
 
 ### Group Settings
 
-ETNA Trader allows you to group your watchlist with other widgets, such as news, charts, stock info and more. When all widgets are grouped together by the same tag color, that would make your terminal more efficient and practical for trading. You can just click on the ticker symbol of the company in your watchlist to view real-time chart, news, stock info and more about the company, all with one tap.
+ETNA Trader allows you to group your watchlists with other widgets like **News**, **Chart**, **Security Info** and more. When all widgets are grouped together by the same tag color, that would make your terminal more efficient and practical for trading. You can just click on the ticker symbol of the company in your watchlist to view real-time chart, news, stock info and more about the selected company, all with one tap.
 
 ![](../../.gitbook/assets/screenshot-2019-04-24-at-15.32.11.png)
 

@@ -1,10 +1,18 @@
+---
+description: Explore the market depth of a specific security
+---
+
 # Market Depth
 
-ETNA Trader's **Market Depth** widget provides following functionality:
+### Exploring the Market Depth Widget
 
-* Shows equity order book;
-* Shows quote for selected symbol;
-* Shows details about stream of orders for selected symbol.
+ETNA Trader's **Market Depth** widget enables traders to inspect the current market depth of a specific security. Specifically, it displays the following information:
+
+* Equity order book;
+* Quote for selected symbol;
+* Details about the order stream for the specified selected symbol.
 
 ![](../../../.gitbook/assets/screenshot-2019-04-24-at-18.38.21.png)
+
+Optionally, you can link this widget by color with other widgets. For example, if you link **Market Depth** with **Chart** — whenever you inspect the market depth for a specific security, its chart will automatically be loaded up. The opposite is also true: when loading up a chart for a specific security, its market depth will consequently be displayed.
 

@@ -1,12 +1,12 @@
 ---
-description: View security price charts
+description: View security price charts and place trades
 ---
 
 # Chart
 
 ### Exploring the Chart Widget
 
-In order to view the market from nearly every conceivable angle, ETNA Trader offers different chart types that stream up-to-date data. From candlesticks to bar, every chart type updates data automatically as it unfolds. 
+In order to view the market from nearly every conceivable angle, ETNA Trader offers different chart types that stream up-to-date data. From candlesticks to bar, every chart type updates data automatically as it unfolds.
 
 You can also choose to show a chart in four different modes:
 
@@ -42,8 +42,4 @@ In ETNA Trader, the Chart widgets provides a quick shortcut to place a new order
 ![](../../../.gitbook/assets/screenshot-2019-04-24-at-16.50.53.png)
 
 On this widget you can specify the required type of the order, the limit price, and then click Buy/Sell/Sell Short/Buy To Cover.
-
-
-
-
 

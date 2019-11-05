@@ -167,3 +167,7 @@ Once the order is filled, it can be inspected from the **Orders** widget and the
 
 ![](../../../.gitbook/assets/screenshot-2019-10-02-at-21.08.06.png)
 
+#### Options Trading in ETNA Trader for iOS:
+
+{% page-ref page="../../etna-trader-for-ios/quotes-view/trade-view/options-trading.md" %}
+
