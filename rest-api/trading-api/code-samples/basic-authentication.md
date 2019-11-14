@@ -6,8 +6,7 @@
 
 {% tabs %}
 {% tab title="Python" %}
-{% code-tabs %}
-{% code-tabs-item title="Initial Authentication" %}
+{% code title="Initial Authentication" %}
 ```python
 import requests
 
@@ -40,8 +39,7 @@ class EtnaAPIRequest:
 sampleRequest = EtnaAPIRequest()
 sampleRequest.initialAuth()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 In this example, there's a class called `EtnaAPIRequest` that has five properties:
 

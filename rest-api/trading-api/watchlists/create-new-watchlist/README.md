@@ -23,15 +23,13 @@ All new watchlists must be of the _**application/json**_ content type. The synta
 
 ### Empty Watchlist Sample
 
-{% code-tabs %}
-{% code-tabs-item title="New Watchlist Template" %}
+{% code title="New Watchlist Template" %}
 ```javascript
 {
     "Name": "Nifty Fifty" 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### A Comprehensive Watchlist Sample
 

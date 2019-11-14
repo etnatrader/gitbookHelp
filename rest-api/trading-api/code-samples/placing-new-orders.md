@@ -6,8 +6,7 @@
 
 {% tabs %}
 {% tab title="Python" %}
-{% code-tabs %}
-{% code-tabs-item title="Placing New Orders" %}
+{% code title="Placing New Orders" %}
 ```python
 import requests
 
@@ -81,8 +80,7 @@ orderID = sampleRequest.placeOrder(order, 6303)
 responseMessage = sampleRequest.getOrderStatus(6303, orderID)
 print(responseMessage)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 In this example we perform authentication, place a new order, and then check the new order's status to see if it's active, under review, rejected, etc.
 
