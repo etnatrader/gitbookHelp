@@ -60,6 +60,8 @@
       * [Syntax](rest-api/trading-api/user-accounts/get-accounts-history/useraccounts_getaccounthistory.md)
     * [List User's Accounts](rest-api/trading-api/user-accounts/list-users-accounts/README.md)
       * [Syntax](rest-api/trading-api/user-accounts/list-users-accounts/useraccounts_getuseraccounts.md)
+  * [Trading Accounts](rest-api/trading-api/trading-accounts/README.md)
+    * [Open a New Trading Account](rest-api/trading-api/trading-accounts/open-a-new-trading-account.md)
   * [Orders](rest-api/trading-api/orders/README.md)
     * [Verify Order Placement](rest-api/trading-api/orders/validate-order-placement/README.md)
       * [Syntax](rest-api/trading-api/orders/validate-order-placement/orders_previewcreateorder.md)
