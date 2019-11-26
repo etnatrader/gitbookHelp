@@ -31,41 +31,33 @@ In response to this API request, you'll receive a JSON file with the list of the
 
 ```javascript
 {
-    "Result": [
-        {
-            "Id": 735,
-            "State": "Expired",
-            "CreatedDate": 1548163610,
-            "Operator": "GTEQ",
-            "SecurityId": 4,
-            "Field": "Ask",
-            "Argument": 155.8,
-            "ExpirationDate": 1548250001
-        },
-        {
-            "Id": 871,
-            "State": "New",
-            "CreatedDate": 1550588008,
-            "Operator": "GTEQ",
-            "SecurityId": 2829,
-            "Field": "Bid",
-            "Argument": 170,
-            "ExpirationDate": 1550674384
-        },
-        {
-            "Id": 872,
-            "State": "New",
-            "CreatedDate": 1550591120,
-            "Operator": "LTEQ",
-            "SecurityId": 685714,
-            "Field": "Last",
-            "Argument": 250,
-            "ExpirationDate": 1550677486
-        }
-    ],
-    "NextPageLink": "",
-    "PreviousPageLink": "",
-    "TotalCount": 3
+  "Result": [
+    {
+      "Id": 1712,
+      "State": "New",
+      "CreatedDate": 1574788269,
+      "Operator": "LTEQ",
+      "SecurityId": 685714,
+      "Symbol": "TSLA",
+      "Field": "Last",
+      "Argument": 315,
+      "ExpirationDate": 1576775453
+    },
+    {
+      "Id": 1713,
+      "State": "New",
+      "CreatedDate": 1574788285,
+      "Operator": "LTEQ",
+      "SecurityId": 4,
+      "Symbol": "AAPL",
+      "Field": "Last",
+      "Argument": 250,
+      "ExpirationDate": 1577293871
+    }
+  ],
+  "NextPageLink": "",
+  "PreviousPageLink": "",
+  "TotalCount": 2
 }
 ```
 
@@ -78,6 +70,7 @@ where:
 | CreatedDate | This is the date on which the price alert was created \(in ticks\). |
 | Operator | This is the condition of the price alert. Possible values: GTEQ \(greater or equal to\), LTEQ \(less than or equal to\). |
 | SecurityId | This is the ID of the security for which the price alert is configured. |
+| Symbol | This is the ticker symbol of the security for which the price alert is configured. |
 | Field | This is the referent price for the price alert. Possible values: Ask, Bid, Last. |
 | Argument | This is the price point at which the price alert will be triggered and the user will be notified. |
 | ExpirationDate | This is the expiration date of the price alert \(in ticks\). |
