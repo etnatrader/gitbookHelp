@@ -265,6 +265,7 @@ The body of this request represents the information about the to-be-created orde
   "Price": 190,
   "Exchange": "XNAS",
   "ExtendedHours": "REGPOST",
+  "Comment": "Expecting a remarkable Q4 report"
 }
 ```
 
@@ -449,6 +450,7 @@ In response to this request, you'll receive a JSON file with comprehensive infor
     "Target": "New",
     "TimeInForce": "Day",
     "ExecInst": 0,
+    "Comment": "Expecting a remarkable Q4 report",
     "ExpireDate": "2019-02-25T21:00:00Z",
     "AccountId": 6303,
     "UserId": 7125,
