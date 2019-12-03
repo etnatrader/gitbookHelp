@@ -470,21 +470,24 @@ In response to this request, you'll receive a JSON file confirming \(or rejectin
 ```javascript
 {
   "IsSuccessful": true,
-  "Commission": 1.00000002,
+  "Commission": 1.00000001,
   "Commissions": {
     "Per Trade Commission": 1,
-    "Per Contract Commission": 2e-8
+    "Per Contract Commission": 1e-8
   },
-  "Cost": 482.4,
-  "NetCost": 483.40000002,
-  "TotalCost": 1.00000002, //New parameter
+  "Cost": 238,
+  "NetCost": 239.00000001,
+  "TotalCost": 1.00000001,
   "Quotes": [
     {
-      "Ask": 241.2,
-      "Bid": 241.19,
-      "Last": 241.195,
-      "Volume": 100,
-      "OpenInterest": 0
+      "Ask": 266.7,
+      "Bid": 266.61,
+      "Last": 266.5,
+      "Volume": 50,
+      "OpenInterest": 0,
+      "Symbol": "AAPL",
+      "SecurityId": 4,
+      "Timestamp": "2019-11-28T01:00:00Z"
     }
   ],
   "MarginChange": 0
@@ -501,7 +504,7 @@ where:
 | Cost | This is the total cost of the order \(including commission\). |
 | NetCost | This is the cost of the order less commission. |
 | TotalCost | The gross commission applied to the order \(includes all other commissions\). |
-| Quotes | This is the last batch of quotes for this security. |
+| Quotes | This is the last batch of quotes for this security \(includes the security's ticker symbol, its internal identifier in ETNA Trader, and the quote's timestamp\). |
 | MarginChange | This is the amount by which the trading account margin requirements will be affected once this order is filled. |
 | ErrorDescription | This is the description of the error in case the provided order was improperly constructed. |
 | ErrorDescriptionArgs | This is an array with error description arguments. |

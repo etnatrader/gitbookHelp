@@ -43,7 +43,10 @@ The first four parameters — **ID**, **Quantity**, **Price**, **ExecutionInstru
 {
   "Id": 76320,
   "Quantity": 100,
-  "Price": 169,
+  "Price": 240,
+  "Comment": "Updating the limit price and target trading session",
+  "TimeInforce": "GoodTillCancel",
+  "ExtendedHours": "PREREG",
   "ExecutionInstructions" : {"Commission": "0.5"}
 }
 ```
@@ -55,20 +58,24 @@ In response to this request, you'll receive a JSON file confirming \(or rejectin
 ```javascript
 {
   "IsSuccessful": true,
-  "Commission": 1e-8,
+  "Commission": 1.00000002,
   "Commissions": {
-    "Per Contract Commission": 1e-8
+    "Per Trade Commission": 1,
+    "Per Contract Commission": 2e-8
   },
-  "Cost": 724.23,
-  "NetCost": 724.23000001,
-  "TotalCost": 1e-8,
+  "Cost": 482,
+  "NetCost": 483.00000002,
+  "TotalCost": 1.00000002,
   "Quotes": [
     {
-      "Ask": 241.41,
-      "Bid": 241.39,
-      "Last": 241.3957,
-      "Volume": 3500,
-      "OpenInterest": 0
+      "Ask": 266.7,
+      "Bid": 266.61,
+      "Last": 266.5,
+      "Volume": 50,
+      "OpenInterest": 0,
+      "Symbol": "AAPL",
+      "SecurityId": 4,
+      "Timestamp": "2019-11-28T01:00:00Z"
     }
   ],
   "MarginChange": 0
@@ -85,7 +92,7 @@ where:
 | Cost | This is the total cost of the order \(including commission\). |
 | NetCost | This is the cost of the order less commission. |
 | TotalCost | This is the gross commission applied to the order \(including all other commissions\). |
-| Quotes | This is the last batch of quotes for this security. |
+| Quotes | This is the last batch of quotes for this security \(includes the security's ticker symbol, its internal identifier in ETNA Trader, and the quote's timestamp\). |
 | MarginChange | This is the amount by which the trading account margin requirements will be affected once this order is filled. |
 
 ## Common Mistakes
