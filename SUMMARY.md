@@ -38,7 +38,11 @@
 * [Knowledge Base](user-guide/knowledge-base/README.md)
   * [Troubleshooting](user-guide/knowledge-base/troubleshooting.md)
   * [How-To Guides](user-guide/knowledge-base/how-to-guides/README.md)
-    * [How to Enable Two-Factor Authentication](user-guide/knowledge-base/how-to-guides/how-to-enable-two-factor-authentication.md)
+    * [Trading Accounts](user-guide/knowledge-base/how-to-guides/trading-accounts/README.md)
+      * [How to Create a New Trading Account](user-guide/knowledge-base/how-to-guides/trading-accounts/how-to-create-a-new-trading-account.md)
+      * [Charts](user-guide/knowledge-base/how-to-guides/trading-accounts/charts.md)
+    * [Security](user-guide/knowledge-base/how-to-guides/security/README.md)
+      * [How to Enable Two-Factor Authentication](user-guide/knowledge-base/how-to-guides/security/how-to-enable-two-factor-authentication.md)
 
 ## REST API
 
