@@ -226,29 +226,43 @@ The body of this request represents the information of the new order that must b
 
 ### Multi-Leg Order Verification Sample \(Option + Option\)
 
+All legs of a multi-leg order should contain only three parameters: 
+
+1. Ticker symbol
+2. Quantity
+3. Side
+
+All other parameters like the order's type and limit price must be specified outside the legs as the root parameters applicable to all legs.
+
+{% hint style="warning" %}
+The type of a multi-leg order must be either **market** or **limit**.
+{% endhint %}
+
 ```javascript
 {
-    "Symbol": "",
-    "Legs": [{
-            "Symbol": "AAPL  190503C00165000",
-            "ExpireDate": "2019-03-30T17:00:00.824Z",
-            "Type": "Market",
-            "Side": "Buy",
-            "ExecInst": "DoNotIncrease",
-            "TimeInforce": "Day",
-            "Quantity": 1
-        },
-        {
-            "Symbol": "AAPL  190503C00165000",
-            "ExpireDate": "2019-03-24T17:32:28.824Z",
-            "Type": "Limit",
-            "Side": "Buy",
-            "Price": 200,
-            "ExecInst": "DoNotIncrease",
-            "TimeInforce": "Day",
-            "Quantity": 1
-        }
-    ]
+  "Legs": [
+    {
+      
+      "Quantity": 2,
+      "Side": "SellShort",
+      "Symbol": "AAPL  200214C00327500",
+      
+    },
+    {
+      
+      "Quantity": 2,
+      "Side": "Buy",
+      "Symbol": "AAPL  200214C00380000",
+      
+    }
+  ],
+  "ExecInst": "AllOrNone",
+  "ExpireDate": "2020-11-04T08:44:17.738365+00:00",
+  "Price": 0.5,
+  "Quantity": 2,
+  "Symbol": "",
+  "TimeInForce": "Day",
+  "Type": "Limit"
 }
 ```
 

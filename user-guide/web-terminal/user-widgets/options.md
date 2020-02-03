@@ -159,6 +159,14 @@ At the bottom traders can determine the required order type, duration of the ord
 
 ![](../../../.gitbook/assets/screenshot-2019-10-02-at-21.04.10.png)
 
+#### Debit and Credit for Limit Orders
+
+If you attempt to enter into a strategy where you simultaneously buy and sell a security, you can also specify a limit price for the entire order. This limit price will indicate the amount of money that you will either receive \(Credit\) from the order or spend on the order \(Debit\). For example, if you sell an option for $100 and simultaneously buy a stock for $80, you will **receive $20** \(Credit\). Conversely, if you sell an option for $70 and buy a stock for $120, you will be **charged $50** \(Debit\). The debit and credit can be limited to ensure that the order will be executed only when either the debit or the credit is equal to a specific amount.
+
+![](../../../.gitbook/assets/screenshot-2020-01-22-at-18.11.01.png)
+
+![](../../../.gitbook/assets/screenshot-2020-01-22-at-18.10.56.png)
+
 Once the order is entirely configured, the trader should click **Verify**. This will prompt the order verification window that enables the trader to examine the order and all of its parameters once again before sending it to the execution venue. If everything is correct, the trader should click **Trade**, and the order will be placed.
 
 ![](../../../.gitbook/assets/screenshot-2019-10-02-at-21.05.20.png)
