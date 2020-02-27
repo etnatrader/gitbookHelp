@@ -18,5 +18,25 @@ You can add and remove the components that you want to keep track of in the plat
 
 ![](../../../.gitbook/assets/screenshot-2019-04-24-at-17.22.56.png)
 
+### Importing Watchlists From CSV Files
 
+In addition to manually creating new watchlists, ETNA Trader also enables traders to import watchlists from CSV Files. This can be done by clicking **Load from file**.
+
+![](../../../.gitbook/assets/screenshot-2020-02-27-at-15.03.33.png)
+
+This will bring up the watchlist import window where you must:
+
+1. Specify the name of the target watchlist.
+2. Select a local CSV file containing the list of ticker symbols of companies that you would like to add to the new watchlist.
+3. Specify the name or number of the column in the CSV file that contains the ticker symbols. For instance, here's a sample CSV File containing four ticker symbols:
+
+   ![](../../../.gitbook/assets/screenshot-2020-02-27-at-15.06.10.png)
+
+Click **Load**.
+
+![](../../../.gitbook/assets/screenshot-2020-02-27-at-15.06.16.png)
+
+Shortly after, the new watchlist will be added to your **Watchlist** widget:
+
+![](../../../.gitbook/assets/screenshot-2020-02-27-at-15.10.49.png)
 
