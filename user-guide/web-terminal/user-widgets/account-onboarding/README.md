@@ -10,9 +10,13 @@ ETNA Trader offers native trading account onboarding for all traders. After a tr
 
 ### Opening a New Trading Account
 
-Once a trader has signed up for ETNA Trader, they will be immediately re-directed to the web terminal without having an active trading account \(which will be indicated in the header\). To create a new account, they should click **Add Account**.
+Once a trader has signed up for ETNA Trader, they will be immediately re-directed to the web terminal without having an active trading account \(which will be indicated in the header\). To create a new account, they should click **Add Account**. If they already have an account, they should expand the list of accounts and click **Edit**.
 
-![](../../../../.gitbook/assets/screenshot-2019-10-16-at-18.31.11.png)
+![](../../../../.gitbook/assets/screenshot-2020-03-04-at-15.43.21.png)
+
+Afterward, click **Add Account**.
+
+![](../../../../.gitbook/assets/screenshot-2020-03-04-at-15.46.16.png)
 
 Shortly after the trader will be re-directed to the account opening form that contains fields required by the broker's clearing firm. The trader should fill out this form entirely, specifying his/her preferred account type, investment experience, expected return, liquid net worth, affiliation with corporate entities, holding of a public office, etc.
 
@@ -24,8 +28,6 @@ Once the form is filled out, it will take some time for it to be processed and t
 
 Once the trading account has been opened, the trader can sign in to the web terminal and use the newly created account to start trading.
 
-![](../../../../.gitbook/assets/screenshot-2019-10-17-at-17.35.32.png)
-
 ### Account Opening Request Workflow
 
 The following diagram demonstrates the workflow of opening a new account:
@@ -34,11 +36,11 @@ The following diagram demonstrates the workflow of opening a new account:
 
 ### Trading Account Management
 
-If a trader needs to open another account or manage their current accounts, they can click on the little gear icon the header of the web terminal. This will bring up the user management window where the trader can add a new account by clicking **Add Account**. In order to modify an existing account, the trader should click on the Edit **icon**.
+If a trader needs to open another account or manage their current accounts, they can click on the little gear icon the header of the web terminal. This will bring up the user management window where the trader can add a new account by clicking **Add Account**. In order to modify an existing account, the trader should click on the **Replace** icon.
 
-![](../../../../.gitbook/assets/screenshot-2019-10-17-at-19.11.01.png)
+![](../../../../.gitbook/assets/screenshot-2020-03-04-at-15.58.04.png)
 
-If the trader has not completed an account opening request, they will be prompted to continue filling out the form whenever they sign in:
+If the trader has not completed an account opening request, they will be prompted to continue filling out the form whenever they sign in. In this case they may either continue filling out the form, discard it, or postpone filling it out.
 
-![](../../../../.gitbook/assets/screenshot-2019-10-17-at-19.17.17.png)
+![](../../../../.gitbook/assets/screenshot-2020-03-04-at-16.48.32.png)
 

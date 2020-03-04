@@ -20,7 +20,7 @@ To withdraw funds using checks, select **Check Request** on the Funds Transfer t
 * Overnight to Broker;
 * Print at firm.
 
-![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-19.37.59%20%281%29.png)
+![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-17.04.07.png)
 
 Once you're done, click **Submit**, and the check will shortly be sent.
 

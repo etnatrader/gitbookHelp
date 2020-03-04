@@ -12,7 +12,7 @@ ACH transfers facilitate deposits and withdrawal of funds to/from your trading a
 
 To create a new ACH Relationships, navigate to the **Funds Account Transfer** widget and open the **ACH Relationship** sub-tab. Click **Link a Bank Account**.
 
-![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-16.05.04.png)
+![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-16.49.39%20%281%29.png)
 
 This will bring up the ACH relationship establishment page. Click **Agree**.
 
@@ -36,27 +36,25 @@ Next, select the required account from which funds will be withdrawn and into wh
 
 In a short while the ACH relationship will be established and you will be able to see it on the **ACH Relationship** sub-tab. The linking process is complete and now you can proceed to transfer funds from your banking account into your brokerage account.
 
-![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-16.21.53.png)
-
 ### Managing ACH Relationships
 
 To remove an existing ACH relationship, click on the cross icon in the **Actions** column.
 
-![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-17.34.00.png)
+![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-16.51.44.png)
 
 In the appeared pop-up window, specify the reason for removing the ACH relationship and then click **Save**.
 
-![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-17.37.06.png)
+![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-16.53.27.png)
 
-ACH relationships can be renamed at any time by clicking on the modification button in the **Actions** column.
+ACH relationships can be renamed at any time by clicking on the **Edit** icon in the **Actions** column.
 
-![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-17.33.41.png)
+![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-17.01.42.png)
 
 ### Depositing and Withdrawing Funds
 
 To deposit or withdraw funds, go back to the **Funds Transfer** tab. At the top, select the **ACH Transfer** radio button. Next, select the preferred transaction type: **ACH Deposit** or **ACH Withdraw**. Specify the required amount of funds to be transferred \(in USD\), select the newly added banking account, and finally click **Submit**.
 
-![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-17.24.12.png)
+![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-17.02.50.png)
 
 ### Monitoring ACH Transfers
 
