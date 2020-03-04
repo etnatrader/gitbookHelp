@@ -101,6 +101,7 @@
       * [Syntax](rest-api/trading-api/securities/get-option-info-by-ticker/securities_getequitybysymbol.md)
     * [Get Options Expiration Dates](rest-api/trading-api/securities/get-options-expiration-dates/README.md)
       * [Syntax](rest-api/trading-api/securities/get-options-expiration-dates/securities_getoptionsexpirations.md)
+    * [Get an Option Chain](rest-api/trading-api/securities/get-an-option-chain.md)
     * [Get Filtered Options](rest-api/trading-api/securities/get-filtered-options/README.md)
       * [Syntax](rest-api/trading-api/securities/get-filtered-options/securities_getoptions.md)
   * [Watchlists](rest-api/trading-api/watchlists/README.md)
