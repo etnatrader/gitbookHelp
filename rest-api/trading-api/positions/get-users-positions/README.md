@@ -8,12 +8,16 @@ description: List all existing positions of a user
 
 This GET endpoint enables you to list all existing positions of the user whose authorization token was used in the request's path.
 
-There are four required parameters that must be provided in the request:
+There are eight required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
-3. **Trading Account ID** \(path\). This is the numeric ID of the trading account whose positions must be listed. 
-4. **API version** \(path\). Unless necessary, leave it at "1.0".
+3. **API version** \(path\). Unless necessary, leave it at "1.0".
+4. **accountId** \(path\). This is the numeric ID of the trading account whose positions must be listed.
+5. **pageNumber** \(query\). This is the number of the page \(all positions are split in pages\).
+6. **pageSize** \(query\). This is the preferable size of the page \(maximum value is 99\).
+7. **sortField** \(query\). This is the a position parameter by which all returned positions must be sorted.
+8. **desc** \(query\). This boolean parameter indicates if the returned positions should be sorted in ascending \(false\) or descending \(true\) order.
 
 There's also one optional parameter worth examining:
 
@@ -120,12 +124,8 @@ Note that you can combine different queries to create more complex requests:
 Here's the final template for this API request:
 
 ```text
-GET apiURL/v1.0/accounts/{accountID}/positions?pageNumber=0&pageSize=10&sortField=Id&desc=true&filter=CreateDate%20between%20%232019-03-13T18%3A31%3A42%23%20and%20%232019-03-17T18%3A31%3A42%23
+GET apiURL/v1.0/accounts/{accountId}/positions?pageNumber=0&pageSize=10&sortField=Id&desc=true
 ```
-
-## Response
-
-In response to this API request, you'll receive a JSON file with all of the user's existing positions. Following is an example of such response:
 
 ```javascript
 [
