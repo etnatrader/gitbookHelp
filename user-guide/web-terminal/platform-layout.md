@@ -4,15 +4,17 @@ description: Get to know the layout of ETNA Trader's web terminal
 
 # Platform Layout
 
-### Getting Started with the UI
+### How to set up a layout?
 
-ETNA Trader features multitudes of icons and symbols that — once clicked — give you the chance to customize and personalize the interface of the platform as if it's created to meet your specific needs and preferences. Therefore, before we dive into the platform, we would like to give you a quick rundown of each icon, what they are and why they exist. Feel free to take a look at this partial cheat sheet that describes the purpose of each of these icons.
+ETNA Trader features  a customizable widget-based user interface. Personalize trading dashboards to meet you trading style. Here is a quick rundown of icons and settings used in the platform with their meanings and purpose. 
 
 ![](../../.gitbook/assets/screenshot-2019-04-24-at-14.35.34.png)
 
-### Dashboard
+### Trading Dashboard
 
-ETNA Trader has an easy-to-navigate dashboard. Users can group different widgets by color; for example, the **Watchlist** widget can be linked with the **News**, and the **Chart** widget. Connecting the three widgets together allows users to check the latest news and the chart of the selected security automatically once the symbol is typed.
+Web Trader Platform features rich functionality, yet easy-to-navigate user interface. Users can group  widgets by color; for example, the **Watchlist** widget can be linked with the **News**, and the **Chart** widget. Connecting the three widgets together allows users to check the latest news and the chart of the selected security automatically once the symbol is typed.
+
+
 
 ![](../../.gitbook/assets/screenshot-2019-04-24-at-14.36.33.png)
 

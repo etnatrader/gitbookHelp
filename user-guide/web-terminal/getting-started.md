@@ -1,34 +1,51 @@
 ---
-description: Sign up for ETNA Trader
+description: Opening an account in ETNA Trader
 ---
 
 # Getting Started
 
-### Introduction
+### Registration Form
 
-The first step in getting started with ETNA Trader is to sign up for the platform. Our demo environment offers full-fledged paper trading functionality that entirely replicates real trading, except that no real funds are being risked. If you have already created a demo account, you can just log in to the platform by entering your username and password.
+The first step in getting started with ETNA Trader is to open a new account. In order to do a use fills out a quick online form \(see picture below\). 
 
 ![Sign-up window](../../.gitbook/assets/screenshot-2019-06-05-at-20.13.30.png)
 
 {% hint style="warning" %}
-Parameters marked by a red asterisk are mandatory and without them registration will not be completed.
+Parameters marked by a red asterisk are mandatory. Registration form will not be completed without them.
 {% endhint %}
 
-### **Contacting ETNA's Support Team**
+The [demo environment](http://demo.etnatrader.com/User/LogOn?ReturnUrl=%2f) offers simulated trading functionality that entirely replicates real trading, except that no real funds are being risked. If you already created a demo account, just log into the platform by entering your username and password.
 
-If you have queries about the signup or you would like to send your feedback about the platform, you can do so by simply clicking on contact support located in the top-right corner. You can also use this feature anytime while using the platform in case you have a question about the platform. ETNA Trader Contact Support allows you to give us your feedback wordily and visually, through attaching up to 5 files to support your message and make sure that the end user and ETNA's team are at the same page and visually seeing the same point.
+### **Contact Support**
+
+If you have any questions or feedback about the platform, please click  "contact support" link located in the top right corner. 
+
+When using "Contact Support"  form please describe your question in as many details as possible and/or attach up to 5 files to illustrate your question.  
 
 ![](../../.gitbook/assets/screenshot-2019-06-05-at-20.37.29.png)
 
-**Language**: ETNA Trader provides users with multilingual support. You can change languages of your ETNA Trader terminal and the changes will take effect right away, without the need to reload the page. ETNA Trader showcases five languages in the demo environment, but we can always integrate more languages into the platform at the request of the users.
+### **Language Settings**
+
+ETNA Trader provides users with multilingual support. Pick a language of your preference and changes will take effect right away, without the need to refresh the page. 
+
+Currently there are five languages available in the platform:
+
+1. English
+2. Japanese
+3. Chinese Manadarin
+4. Chinese Cantonese
+5. Spanish \(mobile only\)
+6. Russian
+
+It is possible to add additional languages. If you are interested in adding a new language, please [contact support](https://www.etnasoft.com/contact-support/).
 
 ![](../../.gitbook/assets/screenshot-2019-06-05-at-21.05.36.png)
 
-### Finishing Up
+### Registration Confirmation
 
-Once you complete and submit all the information in the account registration window, a message will pop up confirming the successful completion of your registration along with a brief note of the demo's feature set. 
+Once you complete and submit your online registration form, you will receive an email message confirming the successful completion of your registration. This note will also contain links to Tech Support and other useful information. Please save this message as you may want to use this information later. 
 
 ![](../../.gitbook/assets/screenshot-2019-04-24-at-14.33.17.png)
 
-Click on **Click here to start using ETNA Trader** and you will be re-directed straight to the trading terminal.
+Press  "**Click here to start using ETNA Trader** " and you will be re-directed to the web trader dashboard.
 

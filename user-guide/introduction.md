@@ -2,22 +2,27 @@
 
 ### Overview
 
-When you first begin working with ETNA Trader, you’ll want to know some basics: How do I register? How do I change my password? What am I looking at? Where are the widgets and how to use them? How to place orders? How do I get help? All those basics are covered in this guide to help you familiarize yourself with ETNA Trader platform in an effective and faster way.
+This sections covers basics of working with ETNA Trader Web Trading Platform:
 
-### About the User Guide
+1. How to register?
+2. How to change a password?
+3. Where are the widgets menu and how to use them? 
+4. How to place an order? 
+5. How to set up a price alert?
+6. How do I get help? 
 
-This User Guide sets forth the procedures and descriptions of how to use ETNA Trader, starting from the sign-up process all the way to sophisticated trading activities. 
+This User Guide sets forth the procedures and descriptions of how to use ETNA Trader, starting from the sign up process all the way to complex trading activities. 
 
 This document:
 
-1. Describes each component and window in the Trading Platform.
-2. Explain the purpose and the functionality of every widget and tool.
-3. Defines and explain the procedures for trade placements and verification. 
-4. Showcase the ways to personalize and customize the platform to meet your specific needs and preferences. 
+1. Describes components and windows of the trading system.
+2. Explains the purpose and the functionality of widgets and tools.
+3. Defines and explains the procedures for trade placement and verification. 
+4. Showcases ways to personalize and customize the platform.
 
-The User Guide is available separately for all supported platforms:
+Separate sections are designated for all components of the platform:
 
-* Web Terminal:
+* Web Trader:
 
 {% page-ref page="web-terminal/" %}
 
@@ -28,7 +33,7 @@ The User Guide is available separately for all supported platforms:
 * ETNA Trader for Android:
 
 {% hint style="info" %}
-Information provided in this user guide regarding the software or functionality of the Trading Platform, including descriptions and illustrations \(i.e. screenshots\), are subject to any updates and changes by ETNA.
+Information provided in this user guide regarding the software or functionality of the Trading Platform, including descriptions and illustrations \(i.e. screenshots\), are subject to change by ETNA.
 {% endhint %}
 
 ### 

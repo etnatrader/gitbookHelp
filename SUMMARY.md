@@ -5,7 +5,7 @@
 ## User guide
 
 * [Introduction](user-guide/introduction.md)
-* [Web Terminal](user-guide/web-terminal/README.md)
+* [Web Trader](user-guide/web-terminal/README.md)
   * [Getting Started](user-guide/web-terminal/getting-started.md)
   * [Platform Layout](user-guide/web-terminal/platform-layout.md)
   * [User Widgets](user-guide/web-terminal/user-widgets/README.md)
