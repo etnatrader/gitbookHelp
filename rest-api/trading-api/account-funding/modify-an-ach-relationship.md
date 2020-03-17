@@ -17,7 +17,7 @@ There are six required parameters that must be provided in the request:
 5. **id** \(path\). This is the ID of the ACH relationship in ETNA Trader.
 6. **model** \(body\). This is a JSON dictionary that contains updated information about the ACH relationship.
 
-### Request Body
+#### Request Body
 
 The body of this request represents the updated name of ACH relationship.
 

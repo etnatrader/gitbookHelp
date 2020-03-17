@@ -21,7 +21,5 @@ Try our free online demo: [https://www.etnasoft.com/etna-trading-simulator/](htt
 
 Or, have a look at our video guide:
 
-{% embed url="https://www.youtube.com/watch?v=-Jz9aQqoYxg&feature=youtu.be" caption="" %}
-
-
+{% embed url="https://www.youtube.com/watch?v=yS12523JVN8" %}
 

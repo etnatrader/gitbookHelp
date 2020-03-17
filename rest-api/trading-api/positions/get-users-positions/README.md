@@ -16,7 +16,7 @@ There are eight required parameters that must be provided in the request:
 4. **accountId** \(path\). This is the numeric ID of the trading account whose positions must be listed.
 5. **pageNumber** \(query\). This is the number of the page \(all positions are split in pages\).
 6. **pageSize** \(query\). This is the preferable size of the page \(maximum value is 99\).
-7. **sortField** \(query\). This is the a position parameter by which all returned positions must be sorted.
+7. **sortField** \(query\). This is a position parameter by which all returned positions must be sorted.
 8. **desc** \(query\). This boolean parameter indicates if the returned positions should be sorted in ascending \(false\) or descending \(true\) order.
 
 There's also one optional parameter worth examining:
