@@ -1,8 +1,10 @@
 ---
-description: Deposit and withdraw funds to/from a specific trading account
+description: >-
+  Deposit and withdraw funds to/from a specific trading account via ACH
+  relationships
 ---
 
-# Deposit / Withdraw Funds
+# Deposit / Withdraw Funds via ACH
 
 ### Overview
 
