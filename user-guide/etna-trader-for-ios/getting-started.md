@@ -27,7 +27,7 @@ ETNA Trader for iOS is available on the [App Store](https://itunes.apple.com/us/
 
 ### Signing Up
 
-After you've downloaded the app, launch the app and tap on **Sign up**. if you've already signed up on the web terminal, you can use those credentials to log into the mobile app. 
+After you've downloaded the app, launch the app and tap on **Sign up**. if you've already signed up in ETNA Trader Web, you can use those credentials to log into the mobile app. 
 
 ![](../../.gitbook/assets/img_0007_iphonexspacegrey_portrait.png)
 
