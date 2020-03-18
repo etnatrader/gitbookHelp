@@ -12,7 +12,7 @@ For traders' convenience, ETNA Trader can send confirmation codes either by SMS 
 
 ### Enabling 2-FA in ETNA Trader
 
-To enable two-factor authentication, open ETNA Trader's web terminal, log in, and then click on the little gear icon in the top-right corner.
+To enable two-factor authentication, open ETNA Trader Web, log in, and then click on the little gear icon in the top-right corner.
 
 ![](../../../../.gitbook/assets/screenshot-2019-11-05-at-18.02.07.png)
 
@@ -46,5 +46,5 @@ Or by email:
 
 ![](../../../../.gitbook/assets/screenshot-2019-11-05-at-18.58.31.png)
 
-Once the authentication code is entered — if it's correct — you will successfully be re-directed to ETNA Trader's web terminal.
+Once the authentication code is entered — if it's correct — you will successfully be re-directed to ETNA Trader Web.
 

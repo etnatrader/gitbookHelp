@@ -14,7 +14,7 @@ ETNA Trader enables traders to own several trading accounts.
 
 ### Creating a New Trading Account
 
-To create a new trading account, navigate to ETNA Trader's web terminal. In the header, expand the drop-down menu containing the list of your trading accounts and click **Edit**.
+To create a new trading account, navigate to ETNA Trader Web. In the header, expand the drop-down menu containing the list of your trading accounts and click **Edit**.
 
 ![](../../../../.gitbook/assets/screenshot-2020-01-17-at-17.08.41.png)
 
@@ -34,7 +34,7 @@ Now you can proceed to use the new trading account to open new positions, deposi
 
 ### Switching the Account in Mobile Apps
 
-After switching trading accounts in the web terminal, perform the same operation in the mobile app. Go the **Account** tab and then tap on the number of the current trading account.
+After switching trading accounts in ETNA Trader Web, perform the same operation in the mobile app. Go the **Account** tab and then tap on the number of the current trading account.
 
 ![](../../../../.gitbook/assets/img_0385_iphonexspacegrey_portrait.png)
 
