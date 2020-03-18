@@ -6,7 +6,7 @@ description: Download the app from the App Store and sign up
 
 ### Introduction
 
-ETNA Trader for iOS serves as an extension of the web terminal and provides functionality similar to the web terminal, including:
+ETNA Trader for iOS serves as an extension of ETNA Trader Web and provides similar functionality, including:
 
 1. Placing orders;
 2. Examining the profit and loss figures for open positions;
