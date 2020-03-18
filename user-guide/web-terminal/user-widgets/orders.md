@@ -46,7 +46,7 @@ Users can set the type of order they want to place from Trade Ticket, Option Tic
 
 ### Placing Algo Orders
 
-ETNA Trader provides traders with a set of algorithmic order types like the trailing stop, trailing stop-limit, one-cancels-the-other, one-triggers-the-other, etc. Orders of these types can be configured and placed from the web terminal, mobile apps, and the [web API](../../../rest-api/trading-api/).
+ETNA Trader provides traders with a set of algorithmic order types like the trailing stop, trailing stop-limit, one-cancels-the-other, one-triggers-the-other, etc. Orders of these types can be configured and placed from ETNA Trader Web, mobile apps, and the [web API](../../../rest-api/trading-api/).
 
 Let's review each of these order types and demonstrate how they can be placed.
 
