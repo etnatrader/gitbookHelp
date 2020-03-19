@@ -39,7 +39,7 @@ The charting menu bar shows different options that can be expanded and used to s
 
 In ETNA Trader, the Chart widgets provides a quick shortcut to place a new order. When viewing a chart for the desired security, simply double-click on a particular candle and the order placement window will pop up.
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-16.50.53.png)
+![](../../../.gitbook/assets/screenshot-2020-03-19-at-16.53.11.png)
 
 On this widget you can specify the required type of the order, the limit price, and then click Buy/Sell/Sell Short/Buy To Cover.
 

@@ -8,15 +8,78 @@ description: Get to know the layout of ETNA Trader's web terminal
 
 ETNA Trader features  a customizable widget-based user interface. Personalize trading dashboards to meet you trading style. Here is a quick rundown of icons and settings used in the platform with their meanings and purpose. 
 
-![](../../.gitbook/assets/screenshot-2019-04-24-at-14.35.34.png)
-
-### Trading Dashboard
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">Icon</th>
+      <th style="text-align:center">Name</th>
+      <th style="text-align:center">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">
+        <img src="../../.gitbook/assets/screenshot-2020-03-19-at-16.12.34.png"
+        alt/>
+      </td>
+      <td style="text-align:center">Marquee Settings</td>
+      <td style="text-align:center">Configure marquee settings for different data sets.</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <img src="../../.gitbook/assets/screenshot-2020-03-19-at-16.16.37.png"
+        alt/>
+      </td>
+      <td style="text-align:center">Settings</td>
+      <td style="text-align:center">Configure global settings, changes the language, lock the layout, contact
+        the support team.</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <img src="../../.gitbook/assets/screenshot-2020-03-19-at-16.20.33.png"
+        alt/>
+      </td>
+      <td style="text-align:center">Widget Settings</td>
+      <td style="text-align:center">Enables you to edit and customize the widget, including isolating widgets
+        in separate windows and maximizing the size of widgets.</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <img src="../../.gitbook/assets/screenshot-2020-03-19-at-16.24.10.png"
+        alt/>
+      </td>
+      <td style="text-align:center">Add a Tab</td>
+      <td style="text-align:center">Enables you to add an extra tab to the layout.</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <p></p>
+        <p>
+          <img src="../../.gitbook/assets/screenshot-2020-03-19-at-16.37.31.png"
+          alt/>
+        </p>
+      </td>
+      <td style="text-align:center">Group</td>
+      <td style="text-align:center">Enables you to group widgets by color and thereby synchronize data among
+        them.</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <p></p>
+        <p>
+          <img src="../../.gitbook/assets/screenshot-2020-03-19-at-16.38.55.png"
+          alt/>
+        </p>
+      </td>
+      <td style="text-align:center">Widget Modification</td>
+      <td style="text-align:center">Rename or remove the target watchlist or add a new one.</td>
+    </tr>
+  </tbody>
+</table>### Trading Dashboard
 
 Web Trader Platform features rich functionality, yet easy-to-navigate user interface. Users can group  widgets by color; for example, the **Watchlist** widget can be linked with the **News**, and the **Chart** widget. Connecting the three widgets together allows users to check the latest news and the chart of the selected security automatically once the symbol is typed.
 
-
-
-![](../../.gitbook/assets/screenshot-2019-04-24-at-14.36.33.png)
+![](../../.gitbook/assets/screenshot-2020-03-19-at-16.42.42.png)
 
 ### Account Page
 

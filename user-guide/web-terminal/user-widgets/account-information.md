@@ -8,7 +8,7 @@ description: Learn more about trading accounts
 
 ETNA Trader's account information is designed to display the user's real-time information on all trading activities, account value, buying power as well as a set of other parameters. It also displays various information about the total profit or loss on the account. To view this information, add the **Account Info** widget to your dashboard.
 
-![](../../../.gitbook/assets/screenshot-2019-11-25-at-15.23.37.png)
+![](../../../.gitbook/assets/screenshot-2020-03-19-at-16.48.06.png)
 
 ### Account Value Chart
 
