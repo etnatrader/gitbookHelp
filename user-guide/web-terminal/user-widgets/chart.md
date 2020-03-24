@@ -17,23 +17,23 @@ You can also choose to show a chart in four different modes:
 
 The drawing tools menu allows the user to select from a number of different drawing tools. Drawing tools overlap the price data and can be used to mark-up the charting area. Drawing tools include Fibonacci, trend lines, support or resistance \(price range\) and text notes.
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-16.13.19.png)
+![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.18.36.png)
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-16.14.02.png)
+![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.18.43.png)
 
 ### Chart Geometric Panels
 
 Users have the option to hide and unhide both chart and geometries panels as it shows in the following posts:
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-16.19.31.png)
+![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.12.50.png)
 
 ### Chart Customization
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-16.24.27.png)
+![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.07.34.png)
 
 The charting menu bar shows different options that can be expanded and used to select the time frame, chart type, technical indicators, apply comparisons to other securities, and draw different trend lines and shapes. The chart also provides access to many other features and settings, including being able to trade from the charts, change the style/ appearance of chart and the time frame as well as add technical analysis tools.
 
-![](../../../.gitbook/assets/screenshot-2019-04-24-at-16.25.24.png)
+![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.21.32.png)
 
 ### Trade Shortcut in Charts
 
