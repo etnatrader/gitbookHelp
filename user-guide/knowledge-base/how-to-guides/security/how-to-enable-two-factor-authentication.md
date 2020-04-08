@@ -12,23 +12,23 @@ For traders' convenience, ETNA Trader can send confirmation codes either by SMS 
 
 ### Enabling 2-FA in ETNA Trader
 
-To enable two-factor authentication, open ETNA Trader Web, log in, and then click on the little gear icon in the top-right corner.
+To enable two-factor authentication, open ETNA Trader Web, log in, click on the little gear icon in the top-right corner, and then click **Settings**.
 
-![](../../../../.gitbook/assets/screenshot-2019-11-05-at-18.02.07.png)
+![](../../../../.gitbook/assets/screenshot-2020-04-08-at-20.09.51.png)
 
 Navigate to the **Security** tab and select the required verification code delivery method: **Email** or **SMS**.
 
-![](../../../../.gitbook/assets/screenshot-2019-11-05-at-18.10.27.png)
+![](../../../../.gitbook/assets/screenshot-2020-04-08-at-20.11.24.png)
 
 If you select **Email**, the verification code will be sent to the email address specified during sign-up. 
 
 Alternatively, if you select **SMS**, the verification code will be sent to your phone number. In this case you'll also have to specify the number of the **Profile** tab:
 
-![](../../../../.gitbook/assets/screenshot-2019-11-05-at-18.26.51.png)
+![](../../../../.gitbook/assets/screenshot-2020-04-08-at-20.12.54.png)
 
 And to verify that you are in fact the owner of this number, a verification code will be sent to your number. Enter the code and this phone number will successfully be bound to your account.
 
-![](../../../../.gitbook/assets/screenshot-2019-11-05-at-18.34.53.png)
+![](../../../../.gitbook/assets/screenshot-2020-04-08-at-20.14.16.png)
 
 Once you're done configuring 2-FA, click **OK**, and from now whenever you attempt to log into ETNA Trader, you will have to specify the verification code sent to you by the selected delivery method.
 
@@ -36,7 +36,7 @@ Once you're done configuring 2-FA, click **OK**, and from now whenever you attem
 
 With 2-FA enabled, logging into ETNA Trader will require you to specify the verification code in addition to the password.
 
-![](../../../../.gitbook/assets/screenshot-2019-11-05-at-18.48.31.png)
+![](../../../../.gitbook/assets/screenshot-2020-04-08-at-20.19.14.png)
 
 Depending on your preferred delivery method, the code will be sent either by SMS:
 
