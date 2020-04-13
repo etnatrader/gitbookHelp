@@ -100,6 +100,7 @@
       * [Syntax](rest-api/trading-api/positions/get-users-positions/positions_getpositions.md)
     * [Get User's Positions in a Security](rest-api/trading-api/positions/get-users-positions-in-security/README.md)
       * [Syntax](rest-api/trading-api/positions/get-users-positions-in-security/positions_getpositionbysymbol.md)
+    * [Get Market Value of all Security Types](rest-api/trading-api/positions/get-market-value-of-all-security-types.md)
   * [Securities](rest-api/trading-api/securities/README.md)
     * [Get Equity Info by Internal ID](rest-api/trading-api/securities/get-securitys-info-by-internal-id/README.md)
       * [Syntax](rest-api/trading-api/securities/get-securitys-info-by-internal-id/securities_getequitybyid.md)
