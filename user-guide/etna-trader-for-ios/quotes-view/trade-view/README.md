@@ -26,3 +26,5 @@ You will be re-directed to the Quote view from the first screenshot where you ca
 
 * Options trading:
 
+{% page-ref page="options-trading.md" %}
+
