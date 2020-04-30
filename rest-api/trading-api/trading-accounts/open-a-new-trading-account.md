@@ -16,43 +16,13 @@ There are five required parameters that must be provided in the request:
 
 The body of this request represents the information about the to-be-created account opening request. It must be sent in the JSON format with the parameters described in the following table:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">FormDataReference</td>
-      <td style="text-align:left">
-        <p>This is a JSON containing two parameters:</p>
-        <ol>
-          <li><b>marginType</b>. Type of the trading account (DayTrader, Cash, Margin).</li>
-          <li><b>cash</b>. The initial cash position (in USD).</li>
-        </ol>
-        <p>This JSON must be provided in the <b>escaped format</b>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Comment</td>
-      <td style="text-align:left">This is an accompanying comment.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">FormType</td>
-      <td style="text-align:left">For paper trading, the parameter must be equal to <b>Direct</b>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">AccountProvider</td>
-      <td style="text-align:left">This is the clearing firm responsible for handling account requests. For
-        paper trading, specify <b>PaperTrading</b>.</td>
-    </tr>
-  </tbody>
-</table>```javascript
+| Parameter | Description |
+| :--- | :--- |
+| FormType | For paper trading, the parameter must be equal to **Direct**. |
+| AccountProvider | This is the clearing firm responsible for handling account requests. For paper trading, specify **PaperTrading**. |
+
+```javascript
 {
-  "FormDataReference": "{\"marginType\":\"DayTrader\",\"cash\":100000}",
-  "Comment": "Creating a new request",
   "FormType": "Direct",
   "AccountProvider": "PaperTrading"
 }
