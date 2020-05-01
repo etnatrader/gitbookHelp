@@ -4,5 +4,5 @@ description: >-
   history
 ---
 
-# User Accounts
+# Trading Accounts
 
