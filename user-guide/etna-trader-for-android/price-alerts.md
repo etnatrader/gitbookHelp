@@ -6,7 +6,7 @@ description: Learn how to manage price alerts in ETNA Trader for Android
 
 ### Price Alerts Tab
 
-The price alerts tab if responsible for management of price alerts in your trading accounts. Here you can view this list of your existing price alerts and also create new ones. The existing price alerts can also be sorted by their status by tapping on different segments of the picker view: **All**, **Active**, **Triggered**, and **Other**.
+The price alerts tab if responsible for management of price alerts in your trading accounts. Here you can view this list of your existing price alerts and also create new ones. The existing price alerts can also be sorted by their status by tapping on different segments of the picker view: **All**, **Active**, **Triggered**, and **Other**. 
 
 ![](../../.gitbook/assets/screenshot_2020-04-28-21-57-29-269_com.etnasoft.etnamobile.android.jpg)
 
