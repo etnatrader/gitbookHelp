@@ -47,6 +47,7 @@
   * [App Layout](user-guide/etna-trader-for-android/app-layout.md)
   * [Watchlist & Quote View](user-guide/etna-trader-for-android/watchlist-and-quote-view/README.md)
     * [Trade View](user-guide/etna-trader-for-android/watchlist-and-quote-view/trade-view.md)
+  * [Price Alerts](user-guide/etna-trader-for-android/price-alerts.md)
 * [Knowledge Base](user-guide/knowledge-base/README.md)
   * [Troubleshooting](user-guide/knowledge-base/troubleshooting.md)
   * [How-To Guides](user-guide/knowledge-base/how-to-guides/README.md)

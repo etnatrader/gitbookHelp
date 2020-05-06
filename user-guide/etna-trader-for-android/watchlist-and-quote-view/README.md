@@ -1,6 +1,6 @@
 # Watchlist & Quote View
 
-### Watchlist
+### Quotes Tab
 
 The first tab of ETNA Trader for Android represents the **Quotes** view which displays the current quotes for securities of a specific watchlist. The quotes are displayed in blocks — two per row — along with mini charts and the ticker symbol of the security.
 
