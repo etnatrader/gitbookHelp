@@ -105,6 +105,8 @@ User settings enable you to customize your layout, update the time zone, persona
 
 ![](../../.gitbook/assets/layout-settings.png)
 
+The penultimate checkbox is called **Turn safe mode on** and it enables you to prevent the loading of custom-made widgets. This might be useful to prevent issues causes by faulty widgets that negatively affect the functionality of performance of the entire web terminal.
+
 ### Marquee Settings
 
 ETNA Trader's Marquee streams security information in the most flexible real-time quote displays. With ETNA Trader's Marquee, you can combine real-time data of securities in a variety of customizable displays. The content of Marquee can be customized in three different models:

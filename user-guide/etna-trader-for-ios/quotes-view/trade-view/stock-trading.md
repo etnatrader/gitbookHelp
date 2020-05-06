@@ -31,7 +31,7 @@ Once the order is fully configured, tap **Verify Order**. The order will be sent
 
 Conversely, If the order was deemed to be invalid by some order validator, you will see an error message in the **Status** text box.
 
-![](../../../../.gitbook/assets/assets_-lg87vekkhvglbrecnrm_-lg8mbk_qfyofjupdere_-lg8mdeseo619dq-qx9m_img_0065_iphonexspacegrey_port.png)
+![](../../../../.gitbook/assets/assets_-lg87vekkhvglbrecnrm_-lg8mbk_qfyofjupdere_-lg8mdeseo619dq-qx9m_img_0065_iphonexspacegrey_portrait.png)
 
 After the order has been successfully placed, you can observe the status of the order from the [Order view](../../orders-view.md).
 
