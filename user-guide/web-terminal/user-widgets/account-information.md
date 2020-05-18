@@ -93,9 +93,9 @@ Unrealized PL is **Open Profit/Loss** and it represents the amount of unrealized
 
 Realized P/L Today is **Realized Profit/Loss Today** and it represents the amount of realized profit or loss during the current trading session.
 
-### Market Value
+### Market Value \(or Net Liquidation Value\)
 
-Market Value is the market value of all positions in all asset classes and is equal to the sum of four other trading account parameters:
+Market Value is the market value of all positions in all asset classes and is equal to the sum of four other parameters:
 
 1. stockLongMarketValue — the aggregate market value of all long positions in stocks.
 2. stockShortMarketValue — the aggregate market value of all short positions in stocks.
