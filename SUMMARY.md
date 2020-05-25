@@ -70,6 +70,8 @@
   * [Managing Users](rest-api/trading-api/managing-users/README.md)
     * [Get User's Info](rest-api/trading-api/managing-users/get-users-info/README.md)
       * [Syntax](rest-api/trading-api/managing-users/get-users-info/users_getuserinfo.md)
+    * [Get User's Settings](rest-api/trading-api/managing-users/get-users-settings.md)
+    * [Modify User's Settings](rest-api/trading-api/managing-users/modify-users-settings.md)
   * [Trading Accounts](rest-api/trading-api/user-accounts/README.md)
     * [Get Account's Balance Info](rest-api/trading-api/user-accounts/get-accounts-balance-info/README.md)
       * [Syntax](rest-api/trading-api/user-accounts/get-accounts-balance-info/useraccounts_getaccountbalanceinfo.md)
