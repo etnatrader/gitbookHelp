@@ -75,7 +75,7 @@ where:
 | PriceStepIncrementMultiplier | The step by which the limit or stop price must be increased when placing an order. Applicable only if the UI features up and down arrows via which the price can either be increased or decreased. |
 | SkipVerifyOrder | Indicates whether the order verification view should be displayed when placing an order. Possible values: `Show`, `DoNotShow`, `ShowIfAnError`. |
 | SkipVerifyCancelOrder | Indicates whether the order verification view should be displayed when cancelling an order. Possible values: `Show`, `DoNotShow`, `ShowIfAnError`. |
-| SkipVerifyClosingPosition | Indicates whether the order verification view should be displayed when closing an existing position. Possible values: Show, DoNotShow, ShowIfAnError. |
+| SkipVerifyClosingPosition | Indicates whether the order verification view should be displayed when closing an existing position. Possible values: `Show`, `DoNotShow`, `ShowIfAnError`. |
 | SkipVerifyOrderReplace | Indicates whether the order verification view should be displayed when replacing an order. Possible values: `Show`, `DoNotShow`, `ShowIfAnError`. |
 | SkipPlaceOrderStatus | Indicates whether the order status view should be displayed after an order has been placed. Possible values: `Show`, `DoNotShow`, `ShowIfAnError`. |
 | SkipCancelOrderStatus | Indicates whether the order status view should be displayed after an order has been cancelled. Possible values: `Show`, `DoNotShow`, `ShowIfAnError`. |
