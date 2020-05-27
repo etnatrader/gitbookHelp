@@ -26,7 +26,7 @@ After the new settings have been applied, the quotes will no longer change their
 
 ### Tip 2: Reduce the Number Of Widgets
 
-Another way of improving performance of ETNA Trader is to reduce the number of widgets displayed on each tab. Naturally each addition widgets consumes additional system resources, which might explain why the platform is underperforming. Try limiting the selection of displayed widgets to one or two per tab and your issues could consequently be resolved.
+Another way of improving performance of ETNA Trader is to reduce the number of widgets displayed on each tab. Naturally each additional widget consumes additional system resources, which might explain why the platform is underperforming. Try limiting the selection of displayed widgets to one or two per tab and your issues could consequently be resolved.
 
 ### Tip 3: Try Using a Different Browser
 
