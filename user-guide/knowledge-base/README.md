@@ -12,7 +12,7 @@ The knowledge base consists of two sections:
 
 * **Troubleshooting**. This section walks you through the most commonly experienced issues and bugs.
 
-{% page-ref page="troubleshooting.md" %}
+{% page-ref page="troubleshooting/" %}
 
 * **How-to Guides**. This section explains how to perform basic procedures like enabling two-factor authentication, configuring notifications, linking widgets together, etc.
 
