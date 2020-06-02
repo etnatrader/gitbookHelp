@@ -190,7 +190,9 @@ where:
       <td style="text-align:left">This is the market value of all open long and short positions.</td>
     </tr>
   </tbody>
-</table>#### Common Mistakes
+</table>
+
+#### Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting the balance information of a particular trading account:
 

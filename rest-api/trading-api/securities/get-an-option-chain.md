@@ -82,7 +82,9 @@ There's also one optional parameter worth examining:
       </td>
     </tr>
   </tbody>
-</table>Here's the final template for this API request:
+</table>
+
+Here's the final template for this API request:
 
 ```text
 GET apiURL/v1.0/options/optionChain/AAPL?filter=Range%20%3D%201%20

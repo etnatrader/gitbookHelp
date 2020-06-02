@@ -140,7 +140,9 @@ The body of this request represents the information of the new order that must b
       <td style="text-align:left">These are the legs of a multi-leg order.</td>
     </tr>
   </tbody>
-</table>### Smallest Market Order Verification Sample
+</table>
+
+### Smallest Market Order Verification Sample
 
 ```javascript
 {

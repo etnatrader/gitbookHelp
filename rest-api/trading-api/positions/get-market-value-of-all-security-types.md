@@ -76,7 +76,9 @@ where:
         account.</td>
     </tr>
   </tbody>
-</table>#### Relationship Between Security Types and Groups
+</table>
+
+#### Relationship Between Security Types and Groups
 
 The following table lists security types that populate each security group:
 
@@ -186,7 +188,9 @@ The following table lists security types that populate each security group:
       </td>
     </tr>
   </tbody>
-</table>### Common Mistakes
+</table>
+
+### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to fetch the collective market value of different security groups in a specific trading account.‌
 

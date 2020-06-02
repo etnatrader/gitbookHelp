@@ -91,7 +91,9 @@ The following table lists a set of sample queries:
       </td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 Note that you can combine different queries to create more complex requests:
 
 * SecurityId = 4 and Quantity between 0 and 1000

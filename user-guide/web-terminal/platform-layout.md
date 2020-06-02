@@ -75,7 +75,9 @@ ETNA Trader features  a customizable widget-based user interface. Personalize tr
       <td style="text-align:center">Rename or remove the target watchlist or add a new one.</td>
     </tr>
   </tbody>
-</table>### Trading Dashboard
+</table>
+
+### Trading Dashboard
 
 Web Trader Platform features rich functionality, yet easy-to-navigate user interface. Users can group  widgets by color; for example, the **Watchlist** widget can be linked with the **News**, and the **Chart** widget. Connecting the three widgets together allows users to check the latest news and the chart of the selected security automatically once the symbol is typed.
 

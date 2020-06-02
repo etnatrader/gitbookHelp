@@ -140,7 +140,9 @@ The body of this request represents the information about the to-be-created orde
       <td style="text-align:left">These are the legs of a multi-leg order.</td>
     </tr>
   </tbody>
-</table>```javascript
+</table>
+
+```javascript
 {
   "Symbol": "AAPL", //Buying 100 shares of the Apple stock
   "Type": "Market",

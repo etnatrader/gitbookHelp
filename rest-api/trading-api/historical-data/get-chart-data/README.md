@@ -157,7 +157,9 @@ where:
       </td>
     </tr>
   </tbody>
-</table>{% hint style="warning" %}
+</table>
+
+{% hint style="warning" %}
 All parameters must be provided in the body JSON; otherwise the chart data will not be retrieved.
 {% endhint %}
 

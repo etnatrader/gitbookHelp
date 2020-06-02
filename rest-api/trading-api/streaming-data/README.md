@@ -66,7 +66,9 @@ Example: [**ws://etnatrader.etnasoft.us:9999**](ws://etnatrader.etnasoft.us:9999
       <td style="text-align:left">Session identifier for the target streamer.</td>
     </tr>
   </tbody>
-</table>### Response <a id="WebSocketsAPI-Response"></a>
+</table>
+
+### Response <a id="WebSocketsAPI-Response"></a>
 
 | Param | Value | Description |
 | :--- | :--- | :--- |

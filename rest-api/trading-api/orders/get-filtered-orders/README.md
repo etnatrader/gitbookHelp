@@ -82,7 +82,9 @@ Sample queries below must be converted depending on the used encoding. For examp
       </td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 Note that you can combine different queries to create more complex requests:
 
 * SecurityId = 4 and Status in \(0,1,2,3,4,5,6,7,8,9,20\)
@@ -322,7 +324,9 @@ where:
       </td>
     </tr>
   </tbody>
-</table>## Common Mistakes
+</table>
+
+## Common Mistakes
 
 Here are some of the common mistakes that developers make when requesting the list of all outstanding and executed orders.
 
