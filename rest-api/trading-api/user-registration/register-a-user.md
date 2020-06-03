@@ -37,6 +37,12 @@ The body of the request represents a JSON dictionary with required parameters.
 }
 ```
 
+The request ought to be sent to the following URL:
+
+```text
+POST apiURL/v1.0/registration/
+```
+
 ### Response
 
 In response to this request, if the user was successfully added, you will receive a JSON dictionary containing information about the new user:

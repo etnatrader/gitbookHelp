@@ -17,7 +17,7 @@ There are three required parameters that must be provided in the request:
 The request ought to be sent to the following URL:
 
 ```text
-apiURL/v1.0/registration/schema
+GET apiURL/v1.0/registration/schema
 ```
 
 ### Response
