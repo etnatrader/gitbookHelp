@@ -21,11 +21,69 @@ The drawing tools menu allows the user to select from a number of different draw
 
 ![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.18.43.png)
 
-### Chart Geometric Panels
+### Technical Analysis
 
-Users have the option to hide and unhide both chart and geometries panels as it shows in the following posts:
+Users have the option to hide and unhide both the chart and the shape panels that provide tools for comprehensive technical analysis.
 
 ![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.12.50.png)
+
+{% hint style="info" %}
+Once you select a geometric tool, you automatically enter into the editing mode; to exit it, click on the cursor icon in the top-left corner.
+{% endhint %}
+
+#### Rectangle
+
+The first geometric tool is called **Rectangle** and, as the name implies, its purpose is to draw rectangular shapes on the chart. You can click-and-drag the mouse over the chart and simultaneously a rectangle shape will be drawn. An unlimited number of rectangle shapes can be drawn on the same chart.
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-21.56.02.png)
+
+#### Ellipse
+
+The second geometric tool available in the **Chart** widget is called **Ellipse** and its purpose is to draw elliptical shapes on the chart. The shape of the ellipse is stretched vertically or horizontally depending on the movement of the mouse during drawing. 
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-22.02.52.png)
+
+#### Horizontal Line
+
+The **Horizontal Line** is one of the most commonly used tools in technical analysis and it essentially enables you to draw key resistance levels on the chart. Simply click anywhere on the Y axis of the chart and a horizontal line will immediately be drawn.
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-22.28.32.png)
+
+#### Vertical Line
+
+Similar to the horizontal line, a vertical line enables you to draw vertical lines to delineate the most critical parts of the chart.
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-22.33.15%20%281%29.png)
+
+#### Trend Line
+
+Trend line is another commonly used tool in technical analysis and its purpose is to identify channels in which the price of the security is moving. To draw a trend line, find a starting point, and then click-and-drag the mouse to the end point.
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-22.35.46.png)
+
+#### Ray
+
+Ray is similar to trend line in that it enables you to draw any line on the chart; however, it only requires you to specify the starting point. Once you click anywhere on the chart — that becomes the starting point and as you hover the mouse in any direction — a "ray" will be drawn all the way to the chart's border.
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-22.47.14.png)
+
+#### Text
+
+**Text** enables you to add a small text box anywhere on the chart. Simply click anywhere on the chart to create a new text box. To change the text, right-click on the text box and click **Settings**. In the pop-up window you can specify the text, change the font, the font size, and the font color.
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-23.06.16.png)
+
+#### Price Range
+
+**Price Range** enables you to draw a nice-looking gap between to price points with a dollar and a percentage increase/decrease in the middle. Simply click on the starting point and then drag the mouse to the end point, and the price range will be created.
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-23.20.09.png)
+
+#### Clear All
+
+Finally, there's a clear all button that allows you to remove all shapes, lines, texts, and price ranges from the chart.
+
+![](../../../.gitbook/assets/screenshot-2020-06-09-at-23.24.29.png)
 
 ### Chart Customization
 
