@@ -17,9 +17,11 @@ There are six required parameters that must be provided in the request:
 5. **pageNumber** \(query\). Because there can be dozens of outstanding orders, we split them into pages which you can individually retrieve by specifying this parameter.
 6. **pageSize** \(query\). This parameter indicates the number of orders from a particular page that must be returned in the response. The maximum value for this parameter is 100.
 
-There's also one optional parameter worth examining:
+There's also three optional parameters worth examining:
 
-* filter \(query\). This is an SQL query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+* **filter** \(query\). This is an SQL query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+* **desc** \(query\). This parameter indicated if the orders should be sorted in ascending or descending order.
+* **filter** \(query\). This is an SQL query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
 
 {% hint style="warning" %}
 Sample queries below must be converted depending on the used encoding. For example, the `#` sign must be converted to `%23` and so on.
@@ -95,13 +97,13 @@ Here's the final template for this API request:
 * For orders that will only be verified by the API but not the execution venue \(quick\):
 
 ```text
-apiURL/v1.0/accounts/{accountNumber}/orders?pageNumber=0&pageSize=2
+apiURL/v1.0/accounts/{accountNumber}/orders?pageNumber=0&pageSize=2&sortField=Id&desc=true
 ```
 
 * For orders that will be verified by the API and the execution venue too \(slow\):
 
 ```text
-apiURL/v1.0/accounts/{accountNumber}/syncorders?pageNumber=0&pageSize=2
+apiURL/v1.0/accounts/{accountNumber}/syncorders?pageNumber=0&pageSize=2&sortField=Id&desc=true
 ```
 
 ## Response
