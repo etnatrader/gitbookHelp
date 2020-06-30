@@ -29,7 +29,7 @@ The body of the request represents a JSON object containing the old, the new, an
 ```
 
 {% hint style="warning" %}
-A user's password can only be updated by the user themselves. Even an administrator of the platform is not authorized to update traders' password.
+A user's password can only be updated by the user themselves. Even an administrator of the platform is not authorized to update traders' passwords.
 {% endhint %}
 
 The following is the final template for this request:
