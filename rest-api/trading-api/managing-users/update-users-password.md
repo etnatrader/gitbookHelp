@@ -44,7 +44,7 @@ In response to this request, if the user's password was successfully updated, yo
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to update a user's trading settings:
+Here are some of the common mistakes that developers make when attempting to update a user's password:
 
 #### Failing to Specify the Et-App-Key Parameter
 
