@@ -10,19 +10,19 @@ By using the Trade Ticket widget, you can place three types of trades: Simple, O
 
 This is the regular trade in which securities are purchased, sold, sold short, or bought to cover.
 
-![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.30.47.png)
+![](../../../../.gitbook/assets/screenshot-2020-03-20-at-19.30.47.png)
 
 #### OTO \(One Triggers the Other\)
 
 A one triggers the other orders involves two orders—a primary order and a secondary order. The primary order may be a live order at the marketplace. The secondary order, held in a separate order file, will be triggered automatically once the primary order gets executed.
 
-![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.34.11.png)
+![](../../../../.gitbook/assets/screenshot-2020-03-20-at-19.34.11.png)
 
 #### OCO \(One Cancels the Other\)
 
 A one-cancels-the-other order \(OCO\) combines a stop order with a limit order on an automated trading platform. When either the stop or limit level is reached and the order executed, the other order will be automatically canceled.
 
-![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.34.39.png)
+![](../../../../.gitbook/assets/screenshot-2020-03-20-at-19.34.39.png)
 
 
 
