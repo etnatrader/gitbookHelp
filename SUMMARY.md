@@ -5,7 +5,7 @@
 ## User guide
 
 * [Introduction](user-guide/introduction.md)
-* [Web Trader](user-guide/web-terminal/README.md)
+* [ETNA Trader Web](user-guide/web-terminal/README.md)
   * [Getting Started](user-guide/web-terminal/getting-started.md)
   * [Platform Layout](user-guide/web-terminal/platform-layout.md)
   * [User Widgets](user-guide/web-terminal/user-widgets/README.md)
@@ -24,7 +24,8 @@
     * [Positions](user-guide/web-terminal/user-widgets/positions.md)
     * [Market Depth](user-guide/web-terminal/user-widgets/market-depth.md)
     * [Options](user-guide/web-terminal/user-widgets/options.md)
-* [Digital Advisor](user-guide/digital-advisor/README.md)
+    * [Hotkeys](user-guide/web-terminal/user-widgets/hotkeys.md)
+* [ETNA Digital Advisor](user-guide/digital-advisor/README.md)
   * [Getting Started](user-guide/digital-advisor/getting-started.md)
   * [Selecting an Investment Model](user-guide/digital-advisor/selecting-an-investment-model.md)
   * [Portfolio Tab](user-guide/digital-advisor/portfolio-tab.md)
