@@ -8,6 +8,10 @@ description: Retrieve settings for ETNA Trader for iOS and Android
 
 This GET endpoint enables you to retrieve the mobile settings for ETNA Trader for iOS and Android. These settings can and should be used to determine how the mobile apps function and whether or not they should function in the first place \(perhaps the mobile app's version is obsolete and must be updated before working\).
 
+{% hint style="info" %}
+The selection of available settings can always be extended or contracted. If you would like to add extra settings that can be leveraged in your mobile app, contact our [support team](mailto:support@etnatrader.com) and they will add them for you.
+{% endhint %}
+
 There are two required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
@@ -56,8 +60,6 @@ where:
 | accountOpeningHTML | The HTML that is prompted whenever a trader attempts to open a new trading account. |
 | compatibleAndroidVersionCode | The minimum supported version of the Android app. |
 | compatibleIOSVersion | The minimum supported version of the iOS app. |
-| defaultLoginMode | The default login mode. |
-| enableTouchID | Indicates if biometric authentication is available in the app. |
 
 ### Common Mistakes
 
