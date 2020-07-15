@@ -1,12 +1,14 @@
 ---
-description: Retrieve default settings of a specific user
+description: Retrieve default trading settings of a specific user
 ---
 
-# Get User's Settings
+# Get User's Trading Settings
 
 ## Overview
 
-This GET endpoint enables you to request a user's default settings by providing their unique identifier in the header. In response, you'll receive a JSON file with the user's information.
+This GET endpoint enables you to request a user's default trading
+
+ settings by providing their unique identifier in the header. In response, you'll receive a JSON file with the user's information.
 
 There are four required parameters that must be provided in the request:
 
