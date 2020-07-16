@@ -105,3 +105,7 @@ Each streamer is accessible through its own separate port in your environment. Q
 
 While the current implementation of data streaming includes only several data types that can be retrieved in real-time, ETNA Trader also provides custom configurations of streamers that build on top of the existing functionality. For example, if you would like to stream positions across several trading accounts or account information across the whole environment, you will need a separate configuration of the streamer. To learn more about the degree to which the default functionality can be extended, contact our [support team](mailto:support@etnatrader.com).
 
+### Streamer Performance
+
+ETNA Trader's streaming API is built to sustain a high load of user subscriptions. Data throughput will vary depending on the type of data to which the user subscribes \(quote streaming being the most resource intensive\). Traders may have large watchlists with dozens of different securities and each security must be displayed along with a real-time quote for the best user experience. That raises the question of how many simultaneous quotes the streamer can process. Most of the time the streamer can meet the requirements of the heftiest watchlists; however, our internal tests have indicated that the performance of a streamer may somewhat deteriorate after subscribing to more than 100 quotes.
+
