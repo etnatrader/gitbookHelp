@@ -18,10 +18,46 @@ There are five required parameters that must be provided in the request:
 4. **mask** \(query\). This is the target keyword that will be searched for in all equities' symbol, exchange, and description fields. 
 5. **count** \(query\). This is the maximum number of equities that must be retrieved.
 
+There's also one noteworthy optional parameter:
+
+* filter \(query\). This is a query used to retrieve only those equities that satisfy the conditions of the query. The following table outlines the parameter's syntax:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Syntax</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Type=String</td>
+      <td style="text-align:left">This query enables you to retrieve equities of a particular type</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>Type=&apos;MutualFund&apos;</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Type in (string1, string2, ...)</td>
+      <td style="text-align:left">This query enables you to retrieve equities of multiple types</td>
+      <td
+      style="text-align:left">
+        <ul>
+          <li>Type in (&apos;MutualFund&apos;, &apos;CommonStock&apos;)</li>
+        </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
 Here's the final template for this API request:
 
 ```text
-GET apiURL/v1.0/equities/lookup?mask=Apple&count=5
+GET apiURL/v1.0/equities/lookup?mask=Apple&count=5&filter=Type%3D'MutualFund'
 ```
 
 ## Response
