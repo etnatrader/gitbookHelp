@@ -72,7 +72,6 @@ In response to this request, you will receive various quote-related parameters f
 * "TotalDailyVolume":"0",
 * "AskSize":"36",
 * "BidSize":"23",
-* "UnixTimeStamp":"0",
 * "TradeCondition":"18",
 * "Beta":"0",
 * "Sector":"",
