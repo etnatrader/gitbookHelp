@@ -24,5 +24,17 @@ A one-cancels-the-other order \(OCO\) combines a stop order with a limit order o
 
 ![](../../../../.gitbook/assets/screenshot-2020-03-20-at-19.34.39.png)
 
+### Price Types and Order States
 
+Whenever a new order is placed, be it a limit or a stop order, it is important to consider which price will trigger the execution of the order and at which price it'll eventually be executed. The following table outlines which price types will serve as references for triggering and execution of various order types:
+
+| Event | Buy order | Sell orders |
+| :---: | :---: | :---: |
+| Triggering of **Limit** orders | **Ask** | **Bid** |
+| Triggering of **Stop** orders | **Last** | **Last** |
+| Order Execution | **Ask** \(if there's no Ask price, the order will be filled at the Last price\) | **Bid** \(if there's no Bid price, the order will be filled at the Last price\) |
+
+{% hint style="info" %}
+If you use the [Chart](../chart.md) widget for order placement, bear in mind that charts are built using the **last** price.
+{% endhint %}
 
