@@ -38,6 +38,30 @@ The body of the request represents a JSON dictionary with required parameters.
 }
 ```
 
+#### Country Syntax
+
+If it's necessary to specify the country, use the value from the **second** column of the following table \(UnitedStates, Canada, etc.\):
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.56.21.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.56.28.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.56.38.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.56.44.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.56.49.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.56.55.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.57.02.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.57.07.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.57.14.png)
+
+![](../../../.gitbook/assets/screenshot-2020-08-18-at-15.57.18.png)
+
 The request ought to be sent to the following URL:
 
 ```text
