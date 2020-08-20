@@ -16,7 +16,7 @@ There are five required parameters that must be provided in the request:
 4. **accountId** \(path\). This is the [internal identifier](../user-accounts/list-users-accounts/) of the trading account in ETNA Trader whose ACH relationships must be listed.
 5. **pageNumber** \(query\). This is the number of the page \(all ACH relationships are split in pages\).
 6. **pageSize** \(query\). This is the preferable size of the page \(maximum value is 99\).
-7. **sortField** \(query\). This is a parameter by which all returned ACH relationships must be sorted.
+7. **sortBy** \(query\). This is a parameter by which all returned ACH relationships must be sorted.
 8. **desc** \(query\). This boolean parameter indicates if the returned ACH relationships should be sorted in ascending \(false\) or descending \(true\) order.
 
 Here's the final template for this API request:
