@@ -34,7 +34,17 @@ Whenever a new order is placed, be it a limit or a stop order, it is important t
 | Triggering of **Stop** orders | **Last** | **Last** |
 | Order Execution | **Ask** \(if there's no Ask price, the order will be filled at the Last price\) | **Bid** \(if there's no Bid price, the order will be filled at the Last price\) |
 
+#### Chart Price Technicalities
+
+For traders that use the Chart widget in our demo environment, there are a few technicalities to consider in regard to triggering and fulfilment of orders. Sometimes you may be confused as to why the demo environment executed the order at a price you didn't expect — perhaps you configured a stop order to be executed at $10, but it ended up executing at a different price. The reason being that ETNA Trader's emulator has its own algorithms for fulfilment of such orders. If you place a stop or a limit order, it may be executed at the **Last** price in case the Ask or Bid prices are unavailable.
+
+For example, suppose you place a buy stop order with a stop price of $14.7. On the chart, let's say this price is reached at a candle where the ask price satisfies the order's price. Now if the **Ask** price is available, the order will simply be executed at the current **Ask** price; however, if it's not available, the order will be executed at the **Last** price which is equal to the **Close** price for all past candles. In our case it's going to be $14.6. This is expected behavior in our demo environment and it may account for the strange execution price you may see in some of your positions.
+
+![](../../../../.gitbook/assets/screenshot-2020-08-20-at-15.43.01.png)
+
 {% hint style="info" %}
-If you use the [Chart](../chart.md) widget for order placement, bear in mind that charts are built using the **last** price.
+This behavior happens only in ETNA Trader's demo emulation environment. Once you proceed to use a live trading environment, all of your orders will be properly executed at the execution venue.
 {% endhint %}
+
+ 
 
