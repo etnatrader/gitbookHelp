@@ -20,7 +20,8 @@ There are six required parameters that must be provided in the request:
 There's also three optional parameters worth examining:
 
 * **filter** \(query\). This is a query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
-* **desc** \(query\). This parameter indicated if the orders should be sorted in ascending or descending order.
+* **sortField** \(query\).This is a parameter by which the returned orders must be sorted. For example, if you set this parameter to `Quantity`, all returned orders will be sorted by the number of purchased lots.
+* **desc** \(query\). This parameter indicated if the returned orders should be sorted in ascending or descending order.
 
 {% hint style="warning" %}
 Sample queries below must be converted depending on the used encoding. For example, the `#` sign must be converted to `%23` and so on.
