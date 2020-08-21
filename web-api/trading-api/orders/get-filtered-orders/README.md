@@ -19,9 +19,8 @@ There are six required parameters that must be provided in the request:
 
 There's also three optional parameters worth examining:
 
-* **filter** \(query\). This is an SQL query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+* **filter** \(query\). This is a query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
 * **desc** \(query\). This parameter indicated if the orders should be sorted in ascending or descending order.
-* **filter** \(query\). This is an SQL query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
 
 {% hint style="warning" %}
 Sample queries below must be converted depending on the used encoding. For example, the `#` sign must be converted to `%23` and so on.
