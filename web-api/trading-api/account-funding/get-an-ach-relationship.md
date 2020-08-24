@@ -43,18 +43,68 @@ In response to this API request, you will receive a JSON dictionary containing d
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| Id | This is the internal identifier of the ACH relationship in ETNA Trader. |
-| AccountId | This is an ETNA Trader's trading account to which the ACH relationship. |
-| RoutingNumber | This is the routing number of the bank who opened the banking account. You can view sample routing number on [this page](https://bankorganizer.com/list-of-routing-numbers/#bank-of-america). |
-| AccountNumber | This is the number of the banking account in the target bank. For example: **987654321222**. |
-| AccountOwnerName | This is the name of the banking account owner. For example: **Robert**. |
-| Name | This is the name of the target bank. For example: **Citi Bank**. |
-| Status | This is the status of the ACH relationship. |
-| CreatedAt | This is the precise time and date at which the ACH relationship was created. |
-| ApprovalMethod | This is the approval method. The value of this parameter can be either **Instant** \(Plaid\) or **Manual** \(Micro deposits\). |
-| Default | This boolean value indicates if this ACH relationship is a default one for this trading account. |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Id</td>
+      <td style="text-align:left">This is the internal identifier of the ACH relationship in ETNA Trader.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AccountId</td>
+      <td style="text-align:left">This is an ETNA Trader&apos;s trading account to which the ACH relationship.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">RoutingNumber</td>
+      <td style="text-align:left">This is the routing number of the bank who opened the banking account.
+        You can view sample routing number on <a href="https://bankorganizer.com/list-of-routing-numbers/#bank-of-america">this page</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AccountNumber</td>
+      <td style="text-align:left">This is the number of the banking account in the target bank. For example: <b>987654321222</b>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AccountOwnerName</td>
+      <td style="text-align:left">This is the name of the banking account owner. For example: <b>Robert</b>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Name</td>
+      <td style="text-align:left">This is the name of the target bank. For example: <b>Citi Bank</b>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Status</td>
+      <td style="text-align:left">
+        <p>This is the status of the ACH relationship.</p>
+        <p>Possible values:</p>
+        <ul>
+          <li>Pending = 0,</li>
+          <li>Approved = 1</li>
+          <li>Canceled = 2</li>
+          <li>Error = 3</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">CreatedAt</td>
+      <td style="text-align:left">This is the precise time and date at which the ACH relationship was created.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ApprovalMethod</td>
+      <td style="text-align:left">This is the approval method. The value of this parameter can be either <b>Instant </b>(Plaid)
+        or <b>Manual</b> (Micro deposits).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Default</td>
+      <td style="text-align:left">This boolean value indicates if this ACH relationship is a default one
+        for this trading account.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Common Mistakes
 
