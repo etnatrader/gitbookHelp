@@ -6,7 +6,7 @@ description: List all trading accounts of a particular user
 
 ## Overview
 
-This endpoint enables you to list all trading accounts associated with the user whose authorization token was provided in the request header. Note that trading accounts are distinct from the regular user accounts.
+This GET endpoint enables you to list all trading accounts associated with the user whose authorization token was provided in the request header. Note that trading accounts are distinct from the regular user accounts.
 
 There are four required parameters that must be provided in the request:
 
@@ -18,7 +18,7 @@ There are four required parameters that must be provided in the request:
 The user information request must be sent to the following URL:
 
 ```text
-apiURL/v1.0/users/644(userID)/accounts
+GET apiURL/v1.0/users/644(userID)/accounts
 ```
 
 {% hint style="info" %}
