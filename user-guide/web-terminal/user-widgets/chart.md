@@ -21,6 +21,18 @@ The drawing tools menu allows the user to select from a number of different draw
 
 ![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.18.43.png)
 
+### Chart Time Frames and Periods
+
+Time frames and periods are crucial to proper examination of price charts. In the **Chart** widget, users have the ability to select a specific time frame and then view it over a specified time period. For this purpose the platform contains two drop-down menus: 
+
+1. **Time frame**. This drop-down menu enables you to specify the required time frame. For example, if you select `4 hours`, the Chart widget will display a chart drawn using quotes registered every four hours. Similarly, if you select `1 year`, the chart will be drawn using quotes registered annually \(eg. 2000-2020\).
+
+![](../../../.gitbook/assets/screenshot-2020-08-25-at-18.46.33.png)
+
+  2. **Time period**. This drop-down menu enables you to specify the period over which the chart will be drawn. For example, if you set the time frame to `4 hours` and the time period to `6 months`, the Chart widget will display a chart drawn with quotes registered every four hours over the last six months. It's also possible to select a precise number of chart candles to be displayed \(500 bars, 2000 bars, etc.\)
+
+![](../../../.gitbook/assets/screenshot-2020-08-25-at-18.46.56.png)
+
 ### Technical Analysis
 
 Users have the option to hide and unhide both the chart and the shape panels that provide tools for comprehensive technical analysis.
