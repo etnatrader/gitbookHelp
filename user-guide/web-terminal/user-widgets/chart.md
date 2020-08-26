@@ -109,6 +109,14 @@ In the appeared pop-up window there will be a selection of parameters available 
 
 Once you have fine-tuned all of the settings, click **OK**, and they will immediately be applied.
 
+#### Period
+
+Period is a parameter available for almost all technical indicators. It essentially signifies the number of candles using which the indicator is calculated. For instance, if you set this parameter to `10`, each data point that comprises the indicator's chart will be calculated using the previous `10` candles of the price chart. For example, suppose you have a two-hour chart for a specific trading session where you have `7` candles in total. Calculating an indicator with a period of `10` will involve calculating `7` data points for the indicator chart \(one for each corresponding data point of the price chart\). And each of those `7` data points of the indicator chart will be calculated using the `10` previous candles of the corresponding data point of the price chart. In other words, for every data point of the price chart i\[10\], the corresponding data point of the indicator chart will be calculated using the i\[0\]...i\[9\] candles. If the last `10` candles  are unavailable, ETNA Trader will utilize candles from the previous trading session. For example, for the first candle of the day, the indicator will be calculated using the last `10` candles of the previous trading session. 
+
+{% hint style="info" %}
+This logic may somewhat vary depending on the indicator in question.
+{% endhint %}
+
 ### Chart Customization
 
 ![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.07.34.png)
