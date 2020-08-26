@@ -97,6 +97,18 @@ Finally, there's a clear all button that allows you to remove all shapes, lines,
 
 ![](../../../.gitbook/assets/screenshot-2020-06-09-at-23.24.29.png)
 
+### Indicator Preferences
+
+Every technical indicator has a set of preferences associated with it. Almost all indicators have common preferences like period \(number of bars for which the indicator is calculated\) while select indicators also have their own unique preferences \(e.g. VWAP\). The preferences of every indicator displayed on the Chart can be configured by clicking on the little gear icon as depicted in the following screenshot:
+
+![](../../../.gitbook/assets/screenshot-2020-08-26-at-19.45.32.png)
+
+In the appeared pop-up window there will be a selection of parameters available for this particular indicator:
+
+![](../../../.gitbook/assets/screenshot-2020-08-26-at-19.48.29.png)
+
+Once you have fine-tuned all of the settings, click **OK**, and they will immediately be applied.
+
 ### Chart Customization
 
 ![](../../../.gitbook/assets/screenshot-2020-03-20-at-19.07.34.png)
