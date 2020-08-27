@@ -8,6 +8,10 @@ description: Bind an ACH relationship to a trading account
 
 After a trader has created a new [trading account](../trading-accounts/open-a-new-trading-account.md), they should proceed to deposit funds into it. ETNA Trader provides native functionality for managing deposits and withdrawals by means of ACH relationships. Essentially, a trader must establish an ACH relationship with their banking account and, once it's done, use it to deposit and withdraw funds to/from their banking account through ETNA Trader's web terminal and iOS apps.
 
+{% hint style="info" %}
+Creation of ACH relationships is available only for real trading accounts. If you attempt to create an ACH relationship for a paper trading account, the request will fall through.
+{% endhint %}
+
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
