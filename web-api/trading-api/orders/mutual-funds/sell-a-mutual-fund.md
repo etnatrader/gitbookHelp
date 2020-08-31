@@ -1,12 +1,8 @@
----
-description: Place a buy order for a mutual fund
----
-
-# Buy a Mutual Fund
+# Sell a Mutual Fund
 
 ### Overview
 
-This POST endpoint enables you to place an order to purchase a mutual fund. Unlike a regular order dealing with stocks and bonds, orders involving mutual funds necessitate specification of associated parameters like reinvestment of dividends, reinvestment of long- or short-term gains, etc. And all of these parameters can be passed in the payload of this request to enable traders to properly place mutual fund orders.
+This POST endpoint enables you to place an order to sell a mutual fund.
 
 There are five required parameters that must be provided in the request:
 
@@ -14,7 +10,7 @@ There are five required parameters that must be provided in the request:
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
 3. **Trading Account ID** \(path\). This is the internal ID of the trading account on whose behalf a new order must be placed. 
 4. **API version** \(path\). Unless necessary, leave it at "1.0".
-5. **body** \(body of the request\). This is a JSON file that contains the order's characteristics. 
+5. **body** \(body of the request\). This is a JSON object that contains the order's parameter. 
 
 #### Body Syntax
 
@@ -50,41 +46,23 @@ The body of this request represents the information about the to-be-placed order
         </ul>
       </td>
     </tr>
-    <tr>
-      <td style="text-align:left">ReinvestDividends</td>
-      <td style="text-align:left">Indicates if the mutual fund&apos;s managers should reinvest dividends
-        received from its holdings.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ReinvestShortTermGains</td>
-      <td style="text-align:left">Indicates if the mutual fund&apos;s managers should reinvest the realized
-        short-term capital gains.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ReinvestLongTermGains</td>
-      <td style="text-align:left">Indicates if the mutual fund&apos;s managers should reinvest the realized
-        short-term capital gains.</td>
-    </tr>
   </tbody>
 </table>
 
-The following is a sample JSON that can be used to place a buy order for a mutual fund:
+The following is a sample JSON that can be used to place a sell order for a mutual fund:
 
 ```javascript
 {
   "Symbol":"PHDAX",
   "Quantity":700,
   "QuantityQualifier":"EvenDollar",
-  "ReinvestDividends":true,
-  "ReinvestShortTermGains":true,
-  "ReinvestLongTermGains":true
 }
 ```
 
 Here's the final template for this API request:
 
 ```text
-POST apiURL/v1.0/accounts/{Trading Account ID}/orders/mutual-funds/buy
+POST apiURL/v1.0/accounts/{Trading Account ID}/orders/mutual-funds/sell
 ```
 
 ### Response
@@ -103,7 +81,7 @@ In response to this API request, you will receive a JSON object containing the c
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to place an order to buy a mutual fund.
+Here are some of the common mistakes that developers make when attempting to place an order to sell a mutual fund.
 
 #### Failing to Specify the Et-App-Key Parameter
 

@@ -1,12 +1,12 @@
 ---
-description: Place a buy order for a mutual fund
+description: Verify placing a buy order for a mutual fund before placing it on the exchange
 ---
 
-# Buy a Mutual Fund
+# Verify a Buy Order
 
 ### Overview
 
-This POST endpoint enables you to place an order to purchase a mutual fund. Unlike a regular order dealing with stocks and bonds, orders involving mutual funds necessitate specification of associated parameters like reinvestment of dividends, reinvestment of long- or short-term gains, etc. And all of these parameters can be passed in the payload of this request to enable traders to properly place mutual fund orders.
+This POST endpoint enables you to verify a buy order before placing it in ETNA Trader. This might be useful for ensuring that the user has properly constructed an order and prevent any issues related with defective orders.
 
 There are five required parameters that must be provided in the request:
 
@@ -18,7 +18,7 @@ There are five required parameters that must be provided in the request:
 
 #### Body Syntax
 
-The body of this request represents the information about the to-be-placed order. It must be sent in the JSON format with the parameters described in the following table:
+The body of this request represents the information about the verified order. It must be sent in the JSON format with the parameters described in the following table:
 
 <table>
   <thead>
@@ -34,7 +34,7 @@ The body of this request represents the information about the to-be-placed order
     </tr>
     <tr>
       <td style="text-align:left">Quantity</td>
-      <td style="text-align:left">The number of mutual fund shares to be purchased.</td>
+      <td style="text-align:left">The number of mutual fund shares to be purchases.</td>
     </tr>
     <tr>
       <td style="text-align:left">QuantityQualifier</td>
@@ -68,7 +68,7 @@ The body of this request represents the information about the to-be-placed order
   </tbody>
 </table>
 
-The following is a sample JSON that can be used to place a buy order for a mutual fund:
+The following is a sample JSON that can be used to verify a buy order for a mutual fund:
 
 ```javascript
 {
@@ -84,26 +84,25 @@ The following is a sample JSON that can be used to place a buy order for a mutua
 Here's the final template for this API request:
 
 ```text
-POST apiURL/v1.0/accounts/{Trading Account ID}/orders/mutual-funds/buy
+POST apiURL/v1.0/accounts/{Trading Account ID}/preview/orders/mutual-funds/buy
 ```
 
 ### Response
 
-In response to this API request, you will receive a JSON object containing the current information about the order:
+In response to this API request, you will receive a JSON object either confirming that the order is valid or rejecting it with an accompanying message \(look at the `IsSuccessful` parameter\):
 
 ```javascript
-{
-  "Id": 336989,
-  "Status": "PendingNew",
-  "ExecutionStatus": "PendingNew",
-  "ExecutedQuantity": 0,
-  "Quantity": 700
+{ 
+"IsSuccessful": false, 
+"ErrorDescription": "AccountIsNotApproved", 
+"ErrorDescriptionText": "Account is not approved for trading. Please contact our support team.", 
+"ErrorDescriptionArgs": [] 
 }
 ```
 
 ### Common Mistakes
 
-Here are some of the common mistakes that developers make when attempting to place an order to buy a mutual fund.
+Here are some of the common mistakes that developers make when attempting to verify an order to buy a mutual fund.
 
 #### Failing to Specify the Et-App-Key Parameter
 
