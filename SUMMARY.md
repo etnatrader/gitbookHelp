@@ -122,6 +122,8 @@
       * [Syntax](web-api/trading-api/orders/get-orders-info/orders_getorder.md)
     * [Get Filtered Orders](web-api/trading-api/orders/get-filtered-orders/README.md)
       * [Syntax](web-api/trading-api/orders/get-filtered-orders/orders_getorders.md)
+    * [Mutual Funds](web-api/trading-api/orders/mutual-funds/README.md)
+      * [Buy a Mutual Fund](web-api/trading-api/orders/mutual-funds/buy-a-mutual-fund.md)
   * [Positions](web-api/trading-api/positions/README.md)
     * [Get User's Positions](web-api/trading-api/positions/get-users-positions/README.md)
       * [Syntax](web-api/trading-api/positions/get-users-positions/positions_getpositions.md)
