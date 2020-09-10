@@ -73,6 +73,8 @@ where:
 | MarginRate | This is the fraction of funds that the user must contribute if they're using margin debt. |
 | Commission | This is the commission that was applied to this order. |
 
+Please bear in mind that if you manually increase the initial margin rate in your environment, the day trading buying power might end up being higher than the actual amount of funds that traders will be able to expend to open a new position. The initial margin rate will always take precedence over the day trading buying power.
+
 {% hint style="info" %}
 Please note that the cost of the margin debt provided by the broker is not taken into account when calculating Day Trading Buying Power.
 {% endhint %}
