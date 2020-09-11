@@ -98,6 +98,7 @@
     * [Open a New Trading Account](web-api/trading-api/trading-accounts/open-a-new-trading-account.md)
   * [Account Funding](web-api/trading-api/account-funding/README.md)
     * [Create an ACH Relationship](web-api/trading-api/account-funding/create-an-ach-relationship.md)
+    * [Create an ACH Relationship via Plaid](web-api/trading-api/account-funding/create-an-ach-relationship-via-plaid.md)
     * [Get an ACH Relationship](web-api/trading-api/account-funding/get-an-ach-relationship.md)
     * [Get All ACH Relationships](web-api/trading-api/account-funding/get-all-ach-relationships.md)
     * [Get the Default ACH Relationship](web-api/trading-api/account-funding/get-the-default-ach-relationship.md)

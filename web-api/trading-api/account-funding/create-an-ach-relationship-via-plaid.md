@@ -1,12 +1,12 @@
 ---
-description: Create and bind an ACH relationship to a trading account
+description: Create an ACH relationship and bind it to a trading account via Plaid
 ---
 
-# Create an ACH Relationship
+# Create an ACH Relationship via Plaid
 
 ### Overview
 
-After a trader has created a new [trading account](../trading-accounts/open-a-new-trading-account.md), they should proceed to deposit funds into it. ETNA Trader provides native functionality for managing deposits and withdrawals by means of ACH relationships. Essentially, a trader must establish an ACH relationship with their banking account and, once it's done, use it to deposit and withdraw funds to/from their banking account through ETNA Trader's web terminal and iOS apps.
+This POST endpoint enables you to create an ACH relationship via Plaid. Unlike the regular endpoint for [creating ACH relationships](create-an-ach-relationship.md), this endpoint accepts parameters provided by Plaid after the user went through the Plaid's UI. 
 
 After an ACH relationship is created, it'll take some time for the clearing firm to approve it. For Velox, If the data provided via this API request matches their data \(name, etc.\), the relationships will be established immediately. However, if there is a mismatch in the name, It will need to be review by the Correspondent via the Velox Portal. From the Velox portal the Correspondent can reject the request or approve it, depending on the mismatch. A bank statement my be required for validation.
 
@@ -30,26 +30,24 @@ The body of this request represents the information about the to-be-created ACH 
 
 | Parameter | Description |
 | :--- | :--- |
-| RoutingNumber | This is the routing number of the bank who opened the banking account. You can view sample routing number on [this page](https://bankorganizer.com/list-of-routing-numbers/#bank-of-america). |
-| AccountNumber | This is the number of the banking account in the target bank. For example: **987654321222**. The number of digits must not be lower than ten. |
-| AccountOwnerName | This is the name of the banking account owner. For example: **Robert**. |
-| Name | This is the name of the target bank. For example: **Citi Bank**. |
-| ApprovalMethod | This is the approval method. The value of this parameter can be either **Instant** \(Plaid\) or **Manual** \(Micro deposits\). |
+| Accounts | This is the account number provided by Plaid. |
+| BankName | This is the name of the target bank provided by Plaid. For example: **Citi Bank**. |
+| PublicToken | This is a token provided by Plaid. |
 
 ```javascript
 {
-  "RoutingNumber": "051000017",
-  "AccountNumber": "987654321222",
-  "AccountOwnerName": "Eugeny",
-  "Name": "Citi Bank",
-  "ApprovalMethod": "Instant"
+  "Accounts": [
+    "aGdSP4Lj71QRqIenrpvs"
+  ],
+  "BankName": "Bank of America",
+  "PublicToken": "public-sandbox-someToken"
 }
 ```
 
 Here's the final template for this API request:
 
 ```text
-POST apiURL/v1.0/accounts/{accountId}/ach-relationships
+POST apiURL/v1.0/accounts/{accountId}/ach-relationships/plaid
 ```
 
 ### Response
