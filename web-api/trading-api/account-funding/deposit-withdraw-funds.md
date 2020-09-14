@@ -10,6 +10,10 @@ description: >-
 
 This POST endpoint enables you to deposit or withdraw funds to/from an ACH-based banking account. 
 
+{% hint style="info" %}
+Deposits and withdrawals performed through ACH relationships will be reflected in trading account balances before the start of the following trading session \(after ETNA Trader receives SOD files\).
+{% endhint %}
+
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
