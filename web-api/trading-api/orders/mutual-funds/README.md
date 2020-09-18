@@ -10,7 +10,7 @@ Furthermore, mutual funds have their own technicalities like the time of order e
 
 During the night, from 12 AM to 9:30 AM Eastern Time, ETNA Trader collects the ticker symbols and quotes for all available mutual funds. 
 
-Traders' mutual fund orders are accepted from 9:30 AM to 4 PM Eastern Time. 
+Traders' mutual fund orders are accepted from 9:30 AM to 3:25 PM Eastern Time. 
 
 The status of all mutual fund orders are updated at 4 PM Eastern Time.
 
