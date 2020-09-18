@@ -1,3 +1,7 @@
+---
+description: Trader mutual funds via ETNA Trader Web and Mobile
+---
+
 # Mutual Funds Trade Ticket
 
 ### Introduction
@@ -60,7 +64,11 @@ Mutual funds trading can also be performed on the go using our mobile apps that 
 
 ![](../../../../.gitbook/assets/file_001-3-_iphonexspacegrey_portrait.png)
 
+### Mutual Funds Trading Schedule
 
+During the night, from 12 AM to 9:30 AM Eastern Time, ETNA Trader collects the ticker symbols and quotes for all available mutual funds. 
 
+Traders' mutual fund orders are accepted from 9:30 AM to 3:25 PM Eastern Time. 
 
+ The status of all mutual fund orders are updated at 4 PM Eastern Time.
 
