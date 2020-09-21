@@ -68,7 +68,7 @@ Mutual funds trading can also be performed on the go using our mobile apps that 
 
 During the night, from 12 AM to 9:30 AM Eastern Time, ETNA Trader collects the ticker symbols and quotes for all available mutual funds. 
 
-Mutual fund orders are accepted from 9:30 AM ET until the cut-off time \(defined by the broker during deployment\). 
+Mutual fund orders are accepted from 9:30 AM ET until the cut-off time \(defined by the broker\). 
 
 The status of all mutual fund orders are updated at 4 PM Eastern Time.
 
