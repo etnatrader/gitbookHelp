@@ -70,5 +70,5 @@ During the night, from 12 AM to 9:30 AM Eastern Time, ETNA Trader collects the t
 
 Mutual fund orders are accepted from 9:30 AM ET until the cut-off time \(defined by the broker\). 
 
-The status of all mutual fund orders are updated at 4 PM Eastern Time.
+Prior to the start of the following trading session, positions in mutual funds will either appear or disappear depending on the order's type and status.
 
