@@ -14,7 +14,7 @@ There are six required parameters that must be provided in the request:
 2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **Trading Account ID** \(path\). This is the numeric ID of the trading account on which an existing order must be modified.
-5. **existingOrderID** \(path\). This is the internal ID of the verified order.
+5. **existingOrderID** \(path\). This is the internal ID of the replaced order.
 6. **body** \(body of the request\). This is a JSON file that contains the parameters that must be modified in an existing order. 
 
 Here's the final template for this API request:
