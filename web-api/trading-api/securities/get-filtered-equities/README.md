@@ -198,6 +198,26 @@ Here's the final template for this API request:
 GET apiURL/v1.0/equities?pageNumber=0&pageSize=2&sortField=Type&desc=true&filter=Exchange%3D'NSD'
 ```
 
+#### Sample CURLs
+
+* Fetch FANG stocks:
+
+```text
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer yourAuthenticationToken' --header 'Et-App-Key: yourEtAppKey' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/equities?pageNumber=0&pageSize=10&sortField=Id&desc=true&filter=Symbol%20in%20('AMZN'%2C%20'GOOG'%2C%20'FB'%2C%20'NFLX')'
+```
+
+* Fetch securities disabled from trading:
+
+```text
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer yourAuthenticationToken' --header 'Et-App-Key: yourEtAppKey' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/equities?pageNumber=0&pageSize=10&sortField=Id&desc=true&filter=AllowTrade%20%3D%20false'
+```
+
+* Fetch securities traded on NASDAQ:
+
+```text
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer yourAuthenticationToken' --header 'Et-App-Key: yourEtAppkey' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/equities?pageNumber=0&pageSize=10&sortField=Id&desc=true&filter=Exchange%20%3D%20'XNAS''
+```
+
 ## Response
 
 In response to this API request, you'll receive the following JSON that lists the equities sorted by the specified parameter.
