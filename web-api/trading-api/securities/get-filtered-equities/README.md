@@ -195,7 +195,7 @@ Note that you can combine different queries to create more complex requests:
 Here's the final template for this API request:
 
 ```text
-GET apiURL/v1.0/equities?pageNumber=0&pageSize=2&sortField=Type&desc=true
+GET apiURL/v1.0/equities?pageNumber=0&pageSize=2&sortField=Type&desc=true&filter=Exchange%3D'NSD'
 ```
 
 ## Response
