@@ -16,6 +16,10 @@ description: Subscribe to changes in traders' account balances
 
 **Example:** `{"Cmd":"Subscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"AccountBalance","HttpClientType":"WebSocket"}`
 
+{% hint style="info" %}
+If you need to stream account balances for multiple trading accounts, simply send multiple subscription commands and ETNA Trader will start outputting individual messages for each trading account.
+{% endhint %}
+
 ### Unsubscription Parameters <a id="Positions-Unsubscribe"></a>
 
 | Parameter | Value |
