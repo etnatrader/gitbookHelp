@@ -24,9 +24,7 @@ Here's an example of the request body with the information about the enquired se
 ```javascript
 {
 "Security": {
-  "Symbol": "VMSFT",
-  "Exchange": "VIRTEX",
-  "Currency": "USD"
+  "Symbol": "VMSFT"
 },
 "SecurityHistorySettings": {
     "StartDate":1569902400,
@@ -148,7 +146,8 @@ where:
     <tr>
       <td style="text-align:left">IndicatorsHistorySettings</td>
       <td style="text-align:left">This is a string that contains information about the required technical
-        indicator.</td>
+        indicator. If the technical indicator is not necessary, set this parameter
+        to <code>[]</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -166,24 +165,21 @@ PUT apiURL/v1.0/history/symbols
 ### Sample CURL
 
 ```text
-curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer Token' --header 'Et-App-Key: yourKey' -d '{"Security": {"Symbol":"AAPL",
- "Exchange":"XNAS",
- "Currency":"USD"},
- "SecurityHistorySettings":
- {"StartDate":1542776400,
- "EndDate":1550764844,
- "CandlesCount":-1,
- "Period":"4h",
- "Interval":-7,
- "IncludeNonMarketData":false},
- "IndicatorsHistorySettings":[
- {"Signature":"MACD|4h|false|12|26|9",
- "Interval":-7,
- "StartDate":1542776400,
- "EndDate":1550764844,
- "CandlesCount":-1,
- "Offset":0,
- }]
+curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer Token' --header 'Et-App-Key: yourKey' -d 
+'{"Security":  
+ 		{ 
+ 			"Symbol":"AAPL",
+ 		}, 
+  	   "SecurityHistorySettings": 
+ 	 	{ 
+ 	 		"StartDate":1542776400, 
+ 	 		"EndDate":1550764844,
+ 	 		"CandlesCount":-1, 
+ 	 		"Period":"4h", 
+ 		 	"Interval":-7, 
+ 			"IncludeNonMarketData":false 
+ 		}, 
+  	   "IndicatorsHistorySettings":[] 
  }' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/history/symbols'
  
 ```
