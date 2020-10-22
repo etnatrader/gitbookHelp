@@ -43,9 +43,14 @@ Sample queries below must be converted depending on the used encoding. For examp
           <li>CreateDate between Range</li>
         </ul>
       </td>
-      <td style="text-align:left">This query enables you to retrieve orders that were created in the time
-        period specified in the Range parameter or exactly at the time specified
-        in the Date parameter.</td>
+      <td style="text-align:left">
+        <p>This query enables you to retrieve orders that were created in the time
+          period specified in the Range parameter or exactly at the time specified
+          in the Date parameter.</p>
+        <p></p>
+        <p><b>(This filter will be supported starting from version 2.70)</b>
+        </p>
+      </td>
       <td style="text-align:left">
         <ul>
           <li>CreateDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
