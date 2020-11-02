@@ -307,6 +307,14 @@ where:
       </td>
     </tr>
     <tr>
+      <td style="text-align:left">ExecutionStatus</td>
+      <td style="text-align:left">The status of the current operation with the order. The value is usually
+        identical to <code>Status</code> except for cases in which the order&apos;s
+        status was manually modified. For brokers developing their own UI, it&apos;s
+        preferable to use the <code>Status</code> parameter to display the current
+        status of the order.</td>
+    </tr>
+    <tr>
       <td style="text-align:left">TimeInForce</td>
       <td style="text-align:left">
         <p>Indicates the time frame in which the order will be active. Possible Values:</p>
