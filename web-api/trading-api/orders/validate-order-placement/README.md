@@ -75,8 +75,8 @@ The body of this request represents the information of the new order that must b
         <ol>
           <li><b>Day</b>. The order automatically expires at the end of the regular
             trading session if it weren&apos;t executed.</li>
-          <li><b>GTC </b>(Good-till-Canceled). The order persists indefinitely until
-            it is executed or manually cancelled.</li>
+          <li><b>GoodTillCancel </b>(Good-till-Canceled). The order persists indefinitely
+            until it is executed or manually cancelled.</li>
           <li><b>AtTheOpening</b>. The order should be filled at the opening of the
             marketplace or cancelled.</li>
           <li><b>ImmediateOrCancel</b>. The order should be completely or partially
@@ -277,7 +277,7 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Type": "Limit",
   "Side": "Buy",
   "ExecInst": "AllOrNone",
-  "TimeInforce": "GTC",
+  "TimeInforce": "GoodTillCancel",
   "Quantity": 100,
   "Price": 190,
   "Exchange": "XNAS",
@@ -296,7 +296,7 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Type": "Market",
   "Side": "Buy",
   "ExecInst": "AllOrNone",
-  "TimeInforce": "GTC",
+  "TimeInforce": "GoodTillCancel",
   "Quantity": 445,
   "Exchange": "XNAS",
   "ExtendedHours": "PRE",
@@ -314,7 +314,7 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Type": "Stop",
   "Side": "Buy",
   "ExecInst": "AllOrNone",
-  "TimeInforce": "GTC",
+  "TimeInforce": "GoodTillCancel",
   "Quantity": 100,
   "StopPrice" : 200,
   "Exchange": "XNAS",
@@ -333,7 +333,7 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Type": "StopLimit",
   "Side": "Buy",
   "ExecInst": "AllOrNone",
-  "TimeInforce": "GTC",
+  "TimeInforce": "GoodTillCancel",
   "Quantity": 105,
   "Exchange": "XNAS",
   "ExtendedHours": "REGPOST",
@@ -353,7 +353,7 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Type": "TrailingStop",
   "Side": "Buy",
   "ExecInst": "AllOrNone",
-  "TimeInforce": "GTC",
+  "TimeInforce": "GoodTillCancel",
   "Quantity": 105,
   "Exchange": "XNAS",
   "ExtendedHours": "REGPOST",
@@ -371,7 +371,7 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Type": "TrailingStopLimit",
   "Side": "Buy",
   "ExecInst": "AllOrNone",
-  "TimeInforce": "GTC",
+  "TimeInforce": "GoodTillCancel",
   "Quantity": 1,
   "Exchange": "XNAS",
   "TrailingLimitAmountType" : "Absolute", //Limit offset
