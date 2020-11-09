@@ -123,7 +123,7 @@ where:
       <td style="text-align:left">TransferDate</td>
       <td style="text-align:left">The date on which the transfer was finalized at the clearing firm. The
         funds will be available in the trading account the following trading session
-        when ETNA Trader receives the Start-of-Day files from the clearing firm.</td>
+        when ETNA Trader receives Start-of-Day files from the clearing firm.</td>
       <td
       style="text-align:left">String</td>
     </tr>
