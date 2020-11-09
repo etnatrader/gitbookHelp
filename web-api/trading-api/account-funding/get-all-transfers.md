@@ -64,6 +64,77 @@ In response to this API request, you will receive an array of JSON dictionaries 
 }
 ```
 
+where:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Id</td>
+      <td style="text-align:left">Internal ID of the transfer.</td>
+      <td style="text-align:left">String</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">AccountId</td>
+      <td style="text-align:left">Internal ID of the trading account on whose behalf the transfer was performed.</td>
+      <td
+      style="text-align:left">Integer</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Mechanism</td>
+      <td style="text-align:left">
+        <p>The transfer mechanism.
+          <br />Possible values:</p>
+        <ul>
+          <li>ACH,</li>
+          <li>Check,</li>
+          <li>Wire.</li>
+        </ul>
+      </td>
+      <td style="text-align:left">String</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">IsDeposit</td>
+      <td style="text-align:left">Indicates if this transfer is a deposit.</td>
+      <td style="text-align:left">Boolean</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Status</td>
+      <td style="text-align:left">The status of the transfer.</td>
+      <td style="text-align:left">String</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Comment</td>
+      <td style="text-align:left">An accompanying comment.</td>
+      <td style="text-align:left">String</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Amount</td>
+      <td style="text-align:left">The amount transferred in USD.</td>
+      <td style="text-align:left">Double</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">TransferDate</td>
+      <td style="text-align:left">The date on which the transfer was finalized at the clearing firm. The
+        funds will be available in the trading account the following trading session
+        when ETNA Trader receives the Start-of-Day files from the clearing firm.</td>
+      <td
+      style="text-align:left">String</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">CreatedAt</td>
+      <td style="text-align:left">The date on which the transfer was initiated.</td>
+      <td style="text-align:left">String</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Common Mistakes
 
 Here are some of the common mistakes that developers make when attempting to send a request to list all transfers.
