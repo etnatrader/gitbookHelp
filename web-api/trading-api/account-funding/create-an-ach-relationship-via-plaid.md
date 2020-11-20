@@ -1,19 +1,19 @@
 ---
-description: Create an ACH relationship and bind it to a trading account via Plaid
+description: Establish an ACH relationship and bind it to a trading account via Plaid
 ---
 
-# Create an ACH Relationship via Plaid
+# Establish an ACH Relationship via Plaid
 
 ### Overview
 
-This POST endpoint enables you to create an ACH relationship via Plaid. Unlike the regular endpoint for [creating ACH relationships](create-an-ach-relationship.md), this endpoint accepts parameters provided by Plaid after the user went through the Plaid's UI. 
+This POST endpoint enables you to establish an ACH relationship via Plaid. Unlike the regular endpoint for [establishing ACH relationships](create-an-ach-relationship.md), this endpoint accepts parameters provided by Plaid after the user went through the Plaid's UI. 
 
-After an ACH relationship is created, it'll take some time for the clearing firm to approve it. For Velox, If the data provided via this API request matches their data \(name, etc.\), the relationships will be established immediately. However, if there is a mismatch in the name, It will need to be review by the Correspondent via the Velox Portal. From the Velox portal the Correspondent can reject the request or approve it, depending on the mismatch. A bank statement my be required for validation.
+After an ACH relationship is established, it'll take some time for the clearing firm to approve it. For Velox, If the data provided via this API request matches their data \(name, etc.\), the relationships will be established immediately. However, if there is a mismatch in the name, It will need to be review by the Correspondent via the Velox Portal. From the Velox portal the Correspondent can reject the request or approve it, depending on the mismatch. A bank statement my be required for validation.
 
-Note that some clearing firms put limitations on the number of ACH relationships that can be created for one trading account. For Velox, you can create up to **two** ACH relationships per trading account.
+Note that some clearing firms put limitations on the number of ACH relationships that can be established for one trading account. For Velox, you can establish up to **two** ACH relationships per trading account.
 
 {% hint style="info" %}
-Creation of ACH relationships is available only for real trading accounts. If you attempt to create an ACH relationship for a paper trading account, the request will fall through.
+Establishment of ACH relationships is available only for real trading accounts. If you attempt to establish an ACH relationship for a paper trading account, the request will fall through.
 {% endhint %}
 
 There are five required parameters that must be provided in the request:
@@ -26,7 +26,7 @@ There are five required parameters that must be provided in the request:
 
 ### Request Body
 
-The body of this request represents the information about the to-be-created ACH relationship. It must be sent in the JSON format with the parameters described in the following table:
+The body of this request represents the information about the to-be-established ACH relationship. It must be sent in the JSON format with the parameters described in the following table:
 
 | Parameter | Description |
 | :--- | :--- |
@@ -52,7 +52,7 @@ POST apiURL/v1.0/accounts/{accountId}/ach-relationships/plaid
 
 ### Response
 
-In response to this API request, you will receive a JSON dictionary containing detailed information about the newly created ACH relationship.
+In response to this API request, you will receive a JSON dictionary containing detailed information about the newly established ACH relationship.
 
 ```javascript
 {
@@ -73,14 +73,14 @@ where:
 
 | Parameter | Description |
 | :--- | :--- |
-| Id | This is the internal identifier of the newly created ACH relationship in ETNA Trader. |
+| Id | This is the internal identifier of the newly established ACH relationship in ETNA Trader. |
 | AccountId | This is an ETNA Trader's trading account to which the ACH relationship. |
 | RoutingNumber | This is the routing number of the bank who opened the banking account. You can view sample routing number on [this page](https://bankorganizer.com/list-of-routing-numbers/#bank-of-america). |
 | AccountNumber | This is the number of the banking account in the target bank. For example: **987654321222**. |
 | AccountOwnerName | This is the name of the banking account owner. For example: **Robert**. |
 | Name | This is the name of the target bank. For example: **Citi Bank**. |
 | Status | This is the status of the ACH relationship. |
-| CreatedAt | This is the precise time and date at which the ACH relationship was created. |
+| CreatedAt | This is the precise time and date at which the ACH relationship was established. |
 | ApprovalMethod | This is the approval method. The value of this parameter can be either **Instant** \(Plaid\) or **Manual** \(Micro deposits\). |
 | Default | This boolean value indicates if this ACH relationship is the default one for this trading account. |
 
