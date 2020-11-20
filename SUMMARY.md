@@ -204,6 +204,8 @@
   * [Managing Transactions](web-api/trading-api/managing-transactions/README.md)
     * [Get Transactions](web-api/trading-api/managing-transactions/get-transactions/README.md)
       * [Syntax](web-api/trading-api/managing-transactions/get-transactions/transactions_getactionspage.md)
+  * [Agreements](web-api/trading-api/agreements/README.md)
+    * [Get a Trader's Agreements](web-api/trading-api/agreements/get-a-traders-agreements.md)
   * [Streaming Data](web-api/trading-api/streaming-data/README.md)
     * [Quotes](web-api/trading-api/streaming-data/quotes.md)
     * [Orders](web-api/trading-api/streaming-data/orders.md)
