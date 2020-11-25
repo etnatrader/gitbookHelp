@@ -1,3 +1,7 @@
+---
+description: Create and manage watchlists in ETNA Trader
+---
+
 # Watchlists
 
 ### Exploring the Watchlists Widget
