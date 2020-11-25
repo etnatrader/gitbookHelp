@@ -32,3 +32,13 @@ Shortly after, the new watchlist will be added to your **Watchlist** widget:
 
 ![](../../../.gitbook/assets/screenshot-2020-02-27-at-15.10.49.png)
 
+### System Watchlists
+
+In addition to custom user-created watchlists, the **Watchlist** widget also comes with several pre-defined system watchlists. These watchlists are marked with the `*` prefix:
+
+![](../../../.gitbook/assets/screenshot-2020-11-25-at-20.45.33.png)
+
+The content of these watchlists is generated automatically so there's no need to provide the initial data or update it. 
+
+The selection of system widgets available by default can be configured by contacting the support team \(they can be enabled or disabled individually\).
+
