@@ -46,3 +46,7 @@ The content of these watchlists is generated automatically so there's no need to
 
 The selection of system widgets available by default can be configured by contacting the support team \(they can be enabled or disabled individually\).
 
+### Cross-Platform Synchronization of Watchlists
+
+ETNA Trader being a cross-platform solution, all user data is always in sync in both ETNA Trader Web and the mobile apps. That also applies to watchlists — any modification made to the contents of any watchlist in ETNA Trader Web will immediately be reflected in the mobile apps and vice versa. In this way you can always be sure that there's no mismatch between watchlist data in any ETNA Trader app you use in you day-to-day trading.
+
