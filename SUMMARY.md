@@ -26,6 +26,7 @@
     * [Options](user-guide/web-terminal/user-widgets/options.md)
     * [Hotkeys](user-guide/web-terminal/user-widgets/hotkeys.md)
     * [Click IPO](user-guide/web-terminal/user-widgets/click-ipo.md)
+  * [Document Retrieval](user-guide/web-terminal/document-retrieval.md)
 * [ETNA Digital Advisor](user-guide/digital-advisor/README.md)
   * [Getting Started](user-guide/digital-advisor/getting-started.md)
   * [Selecting an Investment Model](user-guide/digital-advisor/selecting-an-investment-model.md)
