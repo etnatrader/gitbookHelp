@@ -8,9 +8,9 @@ description: Reset the password of a trader
 
 In ETNA Trader, the process of resetting a trader's passwords consists of four steps:
 
-1. Determining whether this trader must provide the answer to a secret question
-2. Resetting the password by providing the answer to the secret question \(if neccessary\)
-3. Confirming the trader's intention to reset the password by sending a verification code to their email address
+1. Determining whether this trader must provide the answer to a secret question.
+2. Resetting the password by providing the answer to the secret question \(if neccessary\).
+3. Confirming the trader's intention to reset the password by sending a verification code to their email address.
 4. Updating the old password.
 
 The following diagram provides the step-by-step algorithm for resetting the password of a trader:
