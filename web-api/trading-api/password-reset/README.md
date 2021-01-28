@@ -6,7 +6,7 @@ description: Reset the password of a trader
 
 ### Resetting Traders' Password via API
 
-In ETNA Trader, the process of resettings passwords consists of four steps:
+In ETNA Trader, the process of resetting a trader's passwords consists of four steps:
 
 1. Determining whether this trader must provide the answer to a secret question
 2. Resetting the password by providing the answer to the secret question \(if neccessary\)
