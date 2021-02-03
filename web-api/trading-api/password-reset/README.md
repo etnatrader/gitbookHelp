@@ -14,7 +14,7 @@ In ETNA Trader, the process of resetting a trader's passwords consists of four s
 
 The following diagram provides the step-by-step algorithm for resetting the password of a trader:
 
-![](../../../.gitbook/assets/screenshot-2021-02-03-at-14.41.18.png)
+![](../../../.gitbook/assets/screenshot-2021-02-03-at-15.33.48.png)
 
 Once you understand the password reset workflow, proceed to reset the trader's password:
 
