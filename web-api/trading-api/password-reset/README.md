@@ -16,7 +16,7 @@ The following diagram provides the step-by-step algorithm for resetting the pass
 
 ![](../../../.gitbook/assets/screenshot-2021-02-03-at-14.41.18.png)
 
-Once you understand the password reset workflow, proceed to retrieve the trader's secret question:
+Once you understand the password reset workflow, proceed to reset the trader's password:
 
 {% page-ref page="1.-reset-traders-password.md" %}
 
