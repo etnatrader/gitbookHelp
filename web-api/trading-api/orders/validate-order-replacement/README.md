@@ -17,6 +17,10 @@ There are six required parameters that must be provided in the request:
 5. **orderId** \(path\). This is the id of the order which parameter replacement must be verified. You can retrieve IDs of orders of a particular trading account using this [API request](../get-filtered-orders/).
 6. **modifyParams** \(body\). This is a JSON file that contains the parameters that need to be modified in an existing order. 
 
+Optionally, you may add another header that will return localized error messages in the required language:
+
+* **language**. Possible values: `en-US`, `ja-JP`, `ru-RU`, `zh-CN`, `zh-TW`.  For example: `'language': 'ja-JP'`
+
 Here's the final template for this API request:
 
 * For orders that will only be verified by the API but not the execution venue \(quick\):

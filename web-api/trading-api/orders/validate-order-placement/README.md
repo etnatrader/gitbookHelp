@@ -16,6 +16,10 @@ There are five required parameters that must be provided in the request:
 4. **Trading Account ID** \(path\). This is the numeric ID of the trading account on which an existing order replacement must be verified.
 5. **placeParams** \(body\). This is a JSON file that contains the parameters of a new order that must be verified.
 
+Optionally, you may add another header that will return localized error messages in the required language:
+
+* **language**. Possible values: `en-US`, `ja-JP`, `ru-RU`, `zh-CN`, `zh-TW`.  For example: `'language': 'ja-JP'`
+
 Here's the final template for this API request:
 
 * For orders that will only be verified by the API but not the execution venue \(quick\):
