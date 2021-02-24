@@ -13,10 +13,9 @@ This POST endpoint enables you to register a new user. Before doing so, first le
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. You can retrieve this key in the **BO Companies** widget on the WebApi tab of the company modification window.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](https://github.com/etnatrader/brokerHelp/tree/71413a5ba46dc7f36c6b6a1efe3b529c20afcd6d/rest-api/trading-api/authentication/requesting-tokens/README.md).
-3. **origin** \(header\). This is the URL of the domain from which the request is made. The value must be consistent with the value of the hostname in the environment settings \(BO Companies - Edit - hostname\).
-4. **API version** \(path\). Unless necessary, leave it at "v1.0".
-5. **registrationRequest** \(body\). This is JSON dictionary containing information about the new user.
+2. **origin** \(header\). This is the URL of the domain from which the request is made. The value must be consistent with the value of the hostname in the environment settings \(BO Companies - Edit - hostname\).
+3. **API version** \(path\). Unless necessary, leave it at "v1.0".
+4. **registrationRequest** \(body\). This is JSON dictionary containing information about the new user.
 
 #### Body Syntax
 
