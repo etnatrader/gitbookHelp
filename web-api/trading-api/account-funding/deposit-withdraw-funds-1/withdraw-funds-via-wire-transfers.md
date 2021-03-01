@@ -34,6 +34,14 @@ The body of the request represents a JSON file containing all required parameter
 | RoutingNumber | True | This is the ABA Routing Number. |
 | AccountNumber | True | This is the target banking account number. |
 | ForFurtherCredit | False | Set it to `true` if the wire is meant to be sent further to a different bank. |
+| IntermediaryName | True if `ForFurtherCredit` is set to `true` | The name of the intermediary bank. |
+| IntermediaryAccountNumber | True if `ForFurtherCredit` is set to `true` | The number of the account at the intermediary bank. |
+| IntermediaryAddress1 | True if `ForFurtherCredit` is set to `true` | The address of the intermediary bank \(line 1\). |
+| IntermediaryAddress2 | False | The address of the intermediary bank \(line 2\). |
+| IntermediaryCity | True if `ForFurtherCredit` is set to `true` | The city in which the intermediary bank is located. |
+| IntermediaryCountry | True if `ForFurtherCredit` is set to `true` | The country in which the intermediary bank is located. |
+| IntermediaryPostalCode | True if `ForFurtherCredit` is set to `true` | The postal code of the intermediary bank. |
+| IntermediaryState | True if `ForFurtherCredit` is set to `true` | The state of the intermediary bank. |
 
 For example:
 
@@ -44,7 +52,15 @@ For example:
     "IsDomesticWire":true,
     "RoutingNumber":"23894829384",
     "AccountNumber":"2348902384098",
-    "ForFurtherCredit":false
+    "ForFurtherCredit":true,
+    "IntermediaryName":"Citi Bank",
+    "IntermediaryAccountNumber":"48484848484848",
+    "IntermediaryAddress1":"Baker Street 15",
+    "IntermediaryAddress2":"",
+    "IntermediaryCity":"New York",
+    "IntermediaryCountry":"US",
+    "IntermediaryPostalCode":"10036",
+    "IntermediaryState":"NY"
 }
 ```
 {% endtab %}
