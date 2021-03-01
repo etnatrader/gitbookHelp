@@ -109,7 +109,7 @@
     * [Approve an ACH Relationship](web-api/trading-api/account-funding/approve-an-ach-relationship.md)
     * [Deposit / Withdraw Funds](web-api/trading-api/account-funding/deposit-withdraw-funds-1/README.md)
       * [Deposit / Withdraw Funds via ACH](web-api/trading-api/account-funding/deposit-withdraw-funds-1/deposit-withdraw-funds.md)
-      * [Withdraw Funds via Check](web-api/trading-api/account-funding/deposit-withdraw-funds-1/withdraw-funds-via-check.md)
+      * [Withdraw Funds via Checks](web-api/trading-api/account-funding/deposit-withdraw-funds-1/withdraw-funds-via-check.md)
       * [Withdraw Funds via Wire Transfers](web-api/trading-api/account-funding/deposit-withdraw-funds-1/withdraw-funds-via-wire-transfers.md)
     * [Cancel a Transfer](web-api/trading-api/account-funding/cancel-an-ach-transfer.md)
     * [Get All Transfers](web-api/trading-api/account-funding/get-all-transfers.md)

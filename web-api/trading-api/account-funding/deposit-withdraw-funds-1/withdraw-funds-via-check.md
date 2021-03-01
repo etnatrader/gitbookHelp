@@ -2,7 +2,7 @@
 description: Withdraw funds via checks
 ---
 
-# Withdraw Funds via Check
+# Withdraw Funds via Checks
 
 ### Introduction <a id="withdrawing-funds-with-checks"></a>
 
