@@ -1,12 +1,12 @@
 ---
-description: Cancel an outstanding ACH Transfer
+description: Cancel an active deposit/withdrawal
 ---
 
-# Cancel an ACH Transfer
+# Cancel a Transfer
 
 ### Overview
 
-This DELETE endpoint enables you to cancel an outstanding ACH deposit or withdrawal.
+This DELETE endpoint enables you to cancel an outstanding deposit or withdrawal.
 
 There are six required parameters that must be provided in the request:
 
