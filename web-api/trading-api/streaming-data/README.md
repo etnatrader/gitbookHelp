@@ -22,7 +22,7 @@ To create a new connection to the streamer following conditions must be satisfie
 
 **GET** &lt;**URL&gt;СreateSession.txt**?User=**&lt;UserLogin&gt;**&Password=**&lt;UserPassword&gt;**&HttpClientType=**WebSocket**
 
-Example: [**ws://etnatrader.etnasoft.us:9999**](ws://etnatrader.etnasoft.us:9999/CreateSession.txt?User=)\*\*\*\*[**/CreateSession.txt?User=trader&Password=trader&HttpClientType=WebSocket**](wss://etnatrader-dev.etnasoft.us:9999/CreateSession.txt?User=trader&Password=trader&HttpClientType=WebSocket)\*\*\*\*
+**Example**: [wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=trader&Password=trader&HttpClientType=WebSocket](wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=trader&Password=trader&HttpClientType=WebSocket)
 
 | Param | Description |
 | :--- | :--- |
@@ -33,7 +33,7 @@ Example: [**ws://etnatrader.etnasoft.us:9999**](ws://etnatrader.etnasoft.us:9999
 
 **GET** &lt;**URL&gt;**?User=**&lt;UserID&gt;**:**&lt;SessionID&gt;**&Password=**&lt;StreamerSessionID&gt;**&HttpClientType=**WebSocket**
 
-**Example:** [ws://etnatrader.etnasoft.us:9999/CreateSession.txt?User=](ws://etnatrader.etnasoft.us:9999/CreateSession.txt?User=)**someUser:sessionID**&Password=**StreamerSessionID**&HttpClientType=**WebSocket**
+**Example:** [wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=**someUser:sessionID**&Password=**StreamerSessionID**&HttpClientType=**WebSocket**](wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=someUser:sessionID&Password=StreamerSessionID&HttpClientType=WebSocket)\*\*\*\*
 
 <table>
   <thead>

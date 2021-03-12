@@ -38,14 +38,14 @@ In response to this request, you will receive all account-related information in
 
 **Example:**
 
+```javascript
 {
-
-* "EntityType":"AccountBalance",
-* "AccountId":"140",
-* "CashBalance":"0",
-* "PendingCash":"0",
-* "PendingOrdersCount":"0",
-* "Items":"\[{\"Name\":\"dayTrades\",\"Value\":0},{\"Name\":\"pendingCash\",\"Value\":0},{\"Name\":\"equityTotal\",\"Value\":1195352.7446300000},{\"Name\":\"stockLongMarketValue\",\"Value\":21501.0000000},{\"Name\":\"stockShortMarketValue\",\"Value\":69404.0000000},{\"Name\":\"optionLongMarketValue\",\"Value\":167420.000000},{\"Name\":\"optionShortMarketValue\",\"Value\":213550.0000000},{\"Name\":\"maintenanceMargin\",\"Value\":313439.900000000000},{\"Name\":\"optionMaintenanceMargin\",\"Value\":267647.50000000},{\"Name\":\"excess\",\"Value\":928042.844630000000},{\"Name\":\"stockBuyingPower\",\"Value\":928042.844630000000},{\"Name\":\"optionBuyingPower\",\"Value\":928042.844630000000},{\"Name\":\"openPL\",\"Value\":3519.0000000000},{\"Name\":\"closePL\",\"Value\":0},{\"Name\":\"netLiquidity\",\"Value\":-94033.0000000},{\"Name\":\"availableCash\",\"Value\":1262425.744630000000000},{\"Name\":\"pendingOrdersCount\",\"Value\":0}\]"
-
+    "EntityType": "AccountBalance",
+    "AccountId": "140",
+    "CashBalance": "0",
+    "PendingCash": "0",
+    "PendingOrdersCount": "0",
+    "Items": "[{\"Name\":\"cash\",\"Value\":1084543.57000000},{\"Name\":\"netCash\",\"Value\":1084543.57000000},{\"Name\":\"excess\",\"Value\":1084543.57000000},{\"Name\":\"changeAbsolute\",\"Value\":-1214.31400000000000000000},{\"Name\":\"changePercent\",\"Value\":-0.1031318408562315568923557400},{\"Name\":\"equityTotal\",\"Value\":1176224.18600000000000000000},{\"Name\":\"pendingOrdersCount\",\"Value\":0},{\"Name\":\"netLiquidity\",\"Value\":91680.61600000000000000000},{\"Name\":\"stockLongMarketValue\",\"Value\":135293.16600000000000000000},{\"Name\":\"stockShortMarketValue\",\"Value\":-43612.550000000000000000},{\"Name\":\"optionLongMarketValue\",\"Value\":0},{\"Name\":\"optionShortMarketValue\",\"Value\":0},{\"Name\":\"forexLongMarketValue\",\"Value\":0},{\"Name\":\"forexShortMarketValue\",\"Value\":0},{\"Name\":\"dayTrades\",\"Value\":0},{\"Name\":\"stockBuyingPower\",\"Value\":1084543.57},{\"Name\":\"optionBuyingPower\",\"Value\":1084543.57000000},{\"Name\":\"forexBuyingPower\",\"Value\":1084543.57},{\"Name\":\"dayTradingBuyingPower\",\"Value\":4338174.28000000},{\"Name\":\"pendingCash\",\"Value\":0},{\"Name\":\"maintenanceMargin\",\"Value\":0},{\"Name\":\"optionMaintenanceMargin\",\"Value\":0},{\"Name\":\"openPL\",\"Value\":40344.455996740000000000000000},{\"Name\":\"openPLDay\",\"Value\":-1214.31400000000000000000},{\"Name\":\"openPLPercent\",\"Value\":78.588768607114373461918599730},{\"Name\":\"closePL\",\"Value\":0.00000000},{\"Name\":\"marketValue\",\"Value\":91680.61600000000000000000},{\"Name\":\"totalPL\",\"Value\":40344.455996740000000000000000}]"
 }
+```
 
