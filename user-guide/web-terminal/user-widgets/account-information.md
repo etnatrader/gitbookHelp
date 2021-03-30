@@ -112,5 +112,7 @@ $$
 + optionLongMarketValue + optionShortMarketValue
 $$
 
+### Trade Data Balance
 
+Trade data balance is a parameter that is retrieved daily from the clearing firm but is not used in our platform in any capacity. You may encounter it in the API and in the `Account Info` widget of the web terminal, but it doesn't affect anything as far as ETNA Trader is concerned.
 
