@@ -137,8 +137,8 @@ The body of this request represents the information about the to-be-created orde
         <p></p>
         <p>Execution instructions of the order. May include the following data:</p>
         <ul>
-          <li><code>PerTradeCommission&quot;: &quot;1&quot;</code>. Specified in <b>dollars</b> ($1
-            per trade).</li>
+          <li><code>&quot;PerTradeCommission&quot;: &quot;1&quot;</code>. Specified
+            in <b>dollars</b> ($1 per trade).</li>
           <li><code>&quot;PerContractCommission&quot;:&quot;1&quot;</code>. Specified
             in <b>cents </b>(1 cent per contract).</li>
         </ul>
