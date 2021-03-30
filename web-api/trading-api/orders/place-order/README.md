@@ -133,7 +133,16 @@ The body of this request represents the information about the to-be-created orde
     </tr>
     <tr>
       <td style="text-align:left">ExecutionInstructions</td>
-      <td style="text-align:left">Execution instructions for algorithmic trades.</td>
+      <td style="text-align:left">
+        <p></p>
+        <p>Execution instructions of the order. May include the following data:</p>
+        <ul>
+          <li><code>PerTradeCommission&quot;: &quot;1&quot;</code>. Specified in <b>dollars</b> ($1
+            per trade).</li>
+          <li><code>&quot;PerContractCommission&quot;:&quot;1&quot;</code>. Specified
+            in <b>cents </b>(1 cent per contract).</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">Legs</td>
@@ -281,7 +290,9 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Price": 190,
   "Exchange": "XNAS",
   "ExtendedHours": "REGPOST",
-  "Comment": "Expecting a remarkable Q4 report"
+  "Comment": "Expecting a remarkable Q4 report",
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging 1 cent for each stock
 }
 ```
 
@@ -298,6 +309,8 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Quantity": 445,
   "Exchange": "XNAS",
   "ExtendedHours": "PRE",
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging 1 cent for each stock
 }
 ```
 
@@ -315,6 +328,8 @@ The type of a multi-leg order must be either **market** or **limit**.
   "StopPrice" : 200,
   "Exchange": "XNAS",
   "ExtendedHours": "REG",
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging 1 cent for each stock
 }
 ```
 
@@ -331,8 +346,10 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Quantity": 105,
   "Exchange": "XNAS",
   "ExtendedHours": "REGPOST",
-   "Price" : 201,
-   "StopPrice" : 200,
+  "Price" : 201,
+  "StopPrice" : 200,
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging 1 cent for each stock
 }
 ```
 
@@ -350,7 +367,9 @@ The type of a multi-leg order must be either **market** or **limit**.
   "Exchange": "XNAS",
   "ExtendedHours": "REGPOST",
   "TrailingStopAmountType" : "Persentage",
-  "TrailingStopAmount" : 2
+  "TrailingStopAmount" : 2,
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging 1 cent for each stock
 }
 ```
 
@@ -371,6 +390,8 @@ The type of a multi-leg order must be either **market** or **limit**.
   "ExtendedHours": "REGPOST",
   "TrailingStopAmountType" : "Absolute", //Trailing Stop
   "TrailingStopAmount" : 10,
+  "ExecutionInstructions" : {"PerTradeCommission": "1", //Charging $1 for the entire transaction
+                             "PerContractCommission":"1"}, //Charging 1 cent for each stock
 }
 ```
 
