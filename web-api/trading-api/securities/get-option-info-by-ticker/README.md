@@ -70,7 +70,7 @@ where:
       <td style="text-align:left">Symbol</td>
       <td style="text-align:left">
         <p>This is the ticker symbol under which the option is listed on the exchange.
-          Note that the length of this parameter must be equal for all options &#x2014;
+          Note that the length of this parameter must be equal for all options, and
           this is achieved by adding spaces between the underlying ticker and the
           option&apos;s details (the underlying ticker + the spaces must add up to <code>6</code>).
           For example:</p>
