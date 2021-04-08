@@ -8,11 +8,10 @@ description: Get a set of parameters that must be specified when creating users
 
 This GET endpoint enables you to retrieve the list of required fields for registration of users. This might be useful for determining the required text fields and drop-down menus when designing a custom UI for user registration.
 
-There are three required parameters that must be provided in the request:
+There are two required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. You can retrieve this key in the **BO Companies** widget on the WebApi tab of the company modification window.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
-3. **API version** \(path\). Unless necessary, leave it at "v1.0".
+2. **API version** \(path\). Unless necessary, leave it at "v1.0".
 
 The request ought to be sent to the following URL:
 
