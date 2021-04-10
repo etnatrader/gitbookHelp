@@ -42,6 +42,7 @@ The body of the request represents a JSON file containing all required parameter
 | IntermediaryCountry | True if `ForFurtherCredit` is set to `true` | The country in which the intermediary bank is located. |
 | IntermediaryPostalCode | True if `ForFurtherCredit` is set to `true` | The postal code of the intermediary bank. |
 | IntermediaryState | True if `ForFurtherCredit` is set to `true` | The state of the intermediary bank. |
+| IraDistribution | True if the account type is IRA. | Contains parameters related to te IRA withdrawal. |
 
 For example:
 
@@ -60,7 +61,14 @@ For example:
     "IntermediaryCity":"New York",
     "IntermediaryCountry":"US",
     "IntermediaryPostalCode":"10036",
-    "IntermediaryState":"NY"
+    "IntermediaryState":"NY",
+    "IraDistribution": { \
+     "Reason": "string", \
+     "FederalTaxType": "string", \
+     "StateTaxType": "string", \
+     "FederalTaxAmount": 0, \
+     "StateTaxAmount": 0 \
+   } \
 }
 ```
 {% endtab %}
