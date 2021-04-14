@@ -7,7 +7,7 @@ This POST endpoint enables to send a request for opening a new trading account. 
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **userId** \(query\). This is the ID of the user account to which the new trading account will be bound.
 5. **model** \(body\). This is a JSON file that contains detailed information about the new account opening request.

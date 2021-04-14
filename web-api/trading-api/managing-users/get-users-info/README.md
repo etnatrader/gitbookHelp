@@ -11,7 +11,7 @@ This endpoint enables you to request a user's information by supplying their uni
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **Internal user ID** \(path\). This is the numeric ID of the user  whose information you'd like to receive. 
 4. **API version** \(path\). Unless necessary, leave it at "1.0"
 
