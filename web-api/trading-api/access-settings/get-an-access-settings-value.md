@@ -45,7 +45,7 @@ In response to this API request, you'll receive a JSON file containing the value
 
 ```javascript
 {
-  "AccountInfoFooter": "asdfasdfas"
+  "AccountInfoFooter": "<span>Footer data</span>"
 }
 ```
 
