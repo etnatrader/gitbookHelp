@@ -11,7 +11,7 @@ This endpoint enables you to retrieve the historical value of a particular tradi
 There are seven required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **Trading Account Number** \(path\). This is the numeric ID of the trading account whose historical value you'd like to retrieve. You can get the list of a user's trading accounts with [this API call](../list-users-accounts/).
 4. **API version** \(path\). Unless necessary, leave it at "1.0".
 5. **startDate** \(query\). This is the starting date from which the account value history will be retrieved.

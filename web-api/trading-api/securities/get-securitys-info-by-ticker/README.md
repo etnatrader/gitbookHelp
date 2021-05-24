@@ -11,7 +11,7 @@ This GET endpoint enables you to retrieve information about a particular securit
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **Ticker symbol** \(path\). This is the ticker symbol of the security \(as displayed on the exchange\) whose information you'd like to retrieve. 
 

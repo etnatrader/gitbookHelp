@@ -13,7 +13,7 @@ This GET endpoint enables you to retrieve a list of securities with a certain pa
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **mask** \(query\). This is the target keyword that will be searched for in all equities' symbol, exchange, and description fields. 
 5. **count** \(query\). This is the maximum number of equities that must be retrieved.

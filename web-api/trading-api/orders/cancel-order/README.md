@@ -11,7 +11,7 @@ This DELETE endpoint enables you to cancel an outstanding order of the user whos
 There are five required parameters that must be provided in the request header:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **orderId** \(path\). This is the numeric ID of the order that must be cancelled. 
 4. **version** \(path\). Unless necessary, leave it at "1.0"
 5. **accountID** \(path\). This is the numeric ID of the trading account on which the order must be canceled.

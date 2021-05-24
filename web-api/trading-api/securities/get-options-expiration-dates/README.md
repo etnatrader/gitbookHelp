@@ -11,7 +11,7 @@ This endpoint enables you to retrieve the expiration dates of all options in whi
 There are four required parameters that must be provided in the request's header and query:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **underlying** \(query\). This is the ticker symbol of the option's underlying security.
 

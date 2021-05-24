@@ -11,7 +11,7 @@ This GET endpoint enables you to retrieve the collective market value of differe
 There are five required parameters that must be provided in the request:‌
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to retrieve this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **accountID** \(path\). This is the internal ID of the trading account whose market value of different security groups must be listed.‌
 

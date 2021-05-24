@@ -51,7 +51,7 @@ where:
 | Parameter | Description |
 | :--- | :--- |
 | State | This is the state of the request. Usually the value is set to `Succeeded`, meaning that the request has been successfully made. |
-| Token | This is the token that must be provided in all subsequent API requests as the authentication bearer token. |
+| Token | This is the token that must be provided in all subsequent API requests as the authentication bearer token. Ensure that this token is provided in the following format: The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\). |
 
 {% hint style="info" %}
 The authorization token lifetime is 24 hours.

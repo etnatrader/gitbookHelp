@@ -11,7 +11,7 @@ This POST endpoint enables you to verify an order before placing it in ETNA Trad
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **Trading Account ID** \(path\). This is the numeric ID of the trading account on which an existing order replacement must be verified.
 5. **placeParams** \(body\). This is a JSON file that contains the parameters of a new order that must be verified.

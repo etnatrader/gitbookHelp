@@ -17,7 +17,7 @@ Deposits and withdrawals performed through ACH relationships will be reflected i
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **accountId** \(path\). This is the [internal identifier](../../user-accounts/list-users-accounts/) of the trading account in ETNA Trader.
 5. **model** \(body\). This is a JSON file containing detailed information about the funds transfer.

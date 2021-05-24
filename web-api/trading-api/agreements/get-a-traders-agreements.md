@@ -11,7 +11,7 @@ This GET endpoint enables you to fetch the list of all outstanding agreements th
 There are four required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **userID** \(path\). The internal ID of the trader whose agreements are to be retrieved. If the request is sent on behalf of the trader whose authorization token is provided in the second header, simply set this parameter to `@me`.
 

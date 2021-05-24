@@ -13,7 +13,7 @@ This GET endpoint enables you to retrieve information about an outstanding order
 There are five required parameters that must be provided in the request header:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service.  It can be found it in the **BO Companies** widget. When editing the company's settings, navigate to the **WebApi** tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\). 
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](https://github.com/etnatrader/gitbookHelp/tree/6c42ded62b3c38323fe9c79d5284ef0387d6f690/rest-api/public-api/authentication/requesting-tokens/README.md).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](https://github.com/etnatrader/gitbookHelp/tree/6c42ded62b3c38323fe9c79d5284ef0387d6f690/rest-api/public-api/authentication/requesting-tokens/README.md). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **orderId** \(path\). This is the numeric ID of the order whose information you need to retrieve. 
 4. **version** \(path\). Unless necessary, leave it at "1.0"
 5. **accountID** \(path\). This is the numeric ID of the trading account on which the order is registered.

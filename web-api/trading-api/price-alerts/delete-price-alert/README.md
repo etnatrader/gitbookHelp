@@ -11,7 +11,7 @@ This DELETE endpoint enables you to remove a particular price alert of the user 
 There are five required parameters that must be provided in the request:
 
 1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/).
+2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
 3. **API version** \(path\). Unless necessary, leave it at "1.0".
 4. **userID** \(path\). This is the ID of the user whose particular price alert's must be deleted.
 5. **alertId** \(path\). This is the ID of the price alert that must be deleted.
