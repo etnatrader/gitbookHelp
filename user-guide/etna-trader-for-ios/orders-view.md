@@ -56,9 +56,9 @@ To place a new order, you can tap on the **Quick Trade** text field underneath t
 
 ![](../../.gitbook/assets/img_0049_iphonexspacegrey_portrait.png)
 
-### Order Modification
+### Order Modification and Cancellation
 
-Any order, if it hasn't been filled yet, can be modified right within ETNA Trader for iOS. To do that, reveal the action sheet by swiping left on the order. This will bring up four actions:
+Any order, if it hasn't been filled yet, can be modified or cancelled right within ETNA Trader for iOS. To do that, reveal the action sheet by swiping left on the order. This will bring up four actions:
 
 1. **Cancel**. Tapping this button will cancel the order.
 2. **Replace**. Tapping this button will redirect you to the order modification view where you can modify some of the order's properties.
