@@ -65,7 +65,7 @@ Any order, if it hasn't been filled yet, can be modified right within ETNA Trade
 3. **Opposite**. Tapping this button will place the opposite order \(e.g.`Buy` if it's a `Sell` order\).
 4. **Similar**. Tapping this button will bring up the order placement view with pre-filled order details duplicating this order.
 
-![](../../.gitbook/assets/ezgif-3-e735ed55cfb8.gif)
+![](../../.gitbook/assets/rpreplay_final1623087152.gif)
 
 ### Order Details
 
