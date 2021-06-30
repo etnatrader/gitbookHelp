@@ -584,16 +584,33 @@ When attempting to verify an order whose value exceeds the trading account's buy
 
 ### Failing to Specify the Limit Price for Limit Orders
 
-An attempt to verify a limit order without specifying its price will result in an error; in response you'll receive a JSON file with the `ErrorDescription` parameter equaling `QuotePriceIsInvalid`.
+An attempt to verify a limit order without specifying its price will result in an error; in response you'll receive a JSON file with the `ErrorDescription` parameter equaling `LimitPriceUndefined`.
 
 ```javascript
 {
   "IsSuccessful": false,
-  "ErrorDescription": "QuotePriceIsInvalid",
-  "Commission": 0,
-  "Commissions": {},
+  "ErrorDescription": "LimitPriceUndefined",
+  "ErrorDescriptionText": "Limit price is not defined.",
+  "ErrorDescriptionArgs": [],
+  "Commission": 10,
+  "Commissions": {
+    "Per Trade Commission": 10
+  },
   "Cost": 0,
-  "NetCost": 0,
+  "NetCost": 10,
+  "TotalCost": 10,
+  "Quotes": [
+    {
+      "Ask": 135.86,
+      "Bid": 135.5,
+      "Last": 136.3201,
+      "Volume": 26,
+      "OpenInterest": 0,
+      "Symbol": "AAPL",
+      "SecurityId": 4,
+      "Timestamp": "2021-06-30T09:40:47.53Z"
+    }
+  ],
   "MarginChange": 0
 }
 ```
@@ -611,6 +628,21 @@ An attempt to verify a stop-loss order without specifying its price will result 
   "Cost": 0,
   "NetCost": 0,
   "MarginChange": 0
+}
+```
+
+### Misformatting the Payload
+
+If the payload is somehow misformatted, the following error will be returned:
+
+```javascript
+{
+  "Message": "Validation error occured while processing entity",
+  "ModelState": {
+    "placeParams.Type": [
+      "An error has occurred."
+    ]
+  }
 }
 ```
 
