@@ -64,13 +64,18 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-### Specifying the Regular User ID Instead of the Internal One
+### Specifying the Username Instead of User ID
 
-Another common mistake when making this request is specifying the regular user ID instead of the internal ETNA Trader ID. Doing so will result in the 400 status code and the following error message:
+Another common mistake when making this request is specifying the user's username instead of their user ID. Doing so will result in the 422 status code and the following error message:
 
 ```javascript
 {
-    "Message": "The request is invalid."
+  "Message": "Validation error occured while processing entity",
+  "ModelState": {
+    "userId": [
+      "The value 'john' is not valid for Int32."
+    ]
+  }
 }
 ```
 

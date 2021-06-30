@@ -95,13 +95,18 @@ where:
 
 Here are some of the common mistakes that developers make when requesting a user's trading settings:
 
-### Failing to Specify the Et-App-Key Parameter
+### Specifying ID of a Non-Existent User
 
-If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
+If you specify the ID of a non-existent user, you'll get the following error:
 
 ```javascript
 {
-    "error": "Application key is not defined or does not exist"
+  "Model": null,
+  "Errors": [
+    "User or user layout is not found"
+  ],
+  "StatusCode": 400,
+  "IsSucceed": false
 }
 ```
 

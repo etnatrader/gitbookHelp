@@ -212,7 +212,12 @@ Even if the user has one trading account, it's not possible to get the balance i
 
 ```javascript
 {
-    "Message": "The request is invalid."
+  "Message": "Validation error occured while processing entity",
+  "ModelState": {
+    "accountId": [
+      "The value '@me' is not valid for Int32."
+    ]
+  }
 }
 ```
 

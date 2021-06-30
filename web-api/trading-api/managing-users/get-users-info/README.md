@@ -67,13 +67,18 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 }
 ```
 
-### Specifying the Regular User ID Instead of the Internal One
+### Specifying a Non-Existent User ID Instead of the Internal One
 
-Another common mistake when making this request is specifying the regular user ID instead of the internal ETNA Trader ID. Doing so will result in the 400 status code and the following error message:
+Another common mistake when making this request is specifying a non-existent user ID. Doing so will result in the 500 status code and the following error message:
 
 ```javascript
 {
-    "Message": "The request is invalid."
+  "Model": null,
+  "Errors": [
+    "Value cannot be null.\r\nParameter name: user"
+  ],
+  "StatusCode": 500,
+  "IsSucceed": false
 }
 ```
 

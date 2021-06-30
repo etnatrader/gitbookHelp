@@ -105,10 +105,14 @@ If you fail to specify all of the parameters required for registration of users 
 
 ```javascript
 {
+  "Model": null,
   "Errors": [
-    "Email was not set."
+    "User with specified login  already exists",
+    "Email is equal to existing user Login",
+    "Provided value is not a valid email address."
   ],
-  "Reason": "SchemaValidationFail"
+  "StatusCode": 409,
+  "IsSucceed": false
 }
 ```
 
