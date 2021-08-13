@@ -22,7 +22,7 @@ Unlike regular orders that have the **New** status, orders sent to ClickIPO have
 
 #### Prevention of Order Placement Before Trading Commencement
 
-It's worth to mention that Click IPO orders cannot be modified. Attempting to do so will prompt the following message:
+It's worth mentioning that Click IPO orders cannot be modified. Attempting to do so will prompt the following message:
 
 {% hint style="warning" %}
 `Click IPO orders are forbidden from modification. Instead, please cancel the existing order and then place a new order with updated parameters.`
