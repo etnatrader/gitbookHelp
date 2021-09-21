@@ -73,7 +73,7 @@ Unable to find the transfer by its ID.
 {% endapi-method-response-example-description %}
 
 ```
-
+No response
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
