@@ -44,4 +44,38 @@ The ID of the trading account from which the order was placed.
 {% swagger-parameter in="path" required="true" name="orderID" type="String" %}
 The ID of the order that is to be validated.
 {% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description=" Successful request, the order's validation information is returned." %}
+```javascript
+{
+  "Model": {
+    "OrderId": 1153288,
+    "IsSuccessful": true,
+    "Commission": 11,
+    "Commissions": {
+      "Per Trade Commission": 6,
+      "Per Contract Commission": 5
+    },
+    "Cost": 2,
+    "NetCost": 13,
+    "TotalCost": 13,
+    "Quotes": [
+      {
+        "Ask": 10,
+        "Bid": 10,
+        "Last": 10,
+        "Volume": 0,
+        "OpenInterest": 0,
+        "Symbol": "MLXAU",
+        "SecurityId": 30708874,
+        "Timestamp": "2021-07-09T09:45:02.221093Z"
+      }
+    ],
+    "MarginChange": 2
+  },
+  "Errors": [],
+  "IsSucceed": true
+}
+```
+{% endswagger-response %}
 {% endswagger %}
