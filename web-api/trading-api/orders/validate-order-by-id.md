@@ -45,7 +45,7 @@ The ID of the trading account from which the order was placed.
 The ID of the order that is to be validated.
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description=" Successful request, the order's validation information is returned." %}
+{% swagger-response status="200: OK" description="Successful request, the order's validation information is returned." %}
 ```javascript
 {
   "Model": {
