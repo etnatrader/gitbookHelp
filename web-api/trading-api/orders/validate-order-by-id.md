@@ -1,5 +1,5 @@
 ---
-description: Validate an existing order by pro
+description: Validate an existing order by providing its ID
 ---
 
 # Validate Order by ID
