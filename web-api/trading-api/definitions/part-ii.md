@@ -4,263 +4,262 @@
 
 ### OptionExpirationResource
 
-| Name | Schema |
-| :--- | :--- |
-| **ExpirationDate**   _optional_ | string \(date-time\) |
-| **ExpirationType**   _optional_ | enum \(Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard\) |
-| **SeriesId**   _optional_ | integer \(int32\) |
-| **SeriesType**   _optional_ | enum \(Standard, NonStandard, Binary, Flex, Undefined\) |
+| Name                                                          | Schema                                                                |
+| ------------------------------------------------------------- | --------------------------------------------------------------------- |
+| <p><strong>ExpirationDate</strong>  <br><em>optional</em></p> | string (date-time)                                                    |
+| <p><strong>ExpirationType</strong>  <br><em>optional</em></p> | enum (Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard) |
+| <p><strong>SeriesId</strong>  <br><em>optional</em></p>       | integer (int32)                                                       |
+| <p><strong>SeriesType</strong>  <br><em>optional</em></p>     | enum (Standard, NonStandard, Binary, Flex, Undefined)                 |
 
 ### OptionResource
 
-| Name | Schema |
-| :--- | :--- |
-| **AddedDate**   _optional_ | string \(date-time\) |
-| **AllowMargin**   _optional_ | boolean |
-| **AllowShort**   _optional_ | boolean |
-| **AllowTrade**   _optional_ | boolean |
-| **ContractSize**   _optional_ | number \(double\) |
-| **Currency**   _optional_ | string |
-| **Description**   _optional_ | string |
-| **Enabled**   _optional_ | boolean |
-| **Exchange**   _optional_ | string |
-| **ExpirationDate**   _optional_ | string \(date-time\) |
-| **ExpirationType**   _optional_ | enum \(Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard\) |
-| **Id**   _optional_ | integer \(int32\) |
-| **ModifyDate**   _optional_ | string \(date-time\) |
-| **OptionType**   _optional_ | enum \(Call, Put, Undefined\) |
-| **Precision**   _optional_ | integer \(int32\) |
-| **SeriesId**   _optional_ | integer \(int32\) |
-| **StrikePrice**   _optional_ | number \(double\) |
-| **Symbol**   _optional_ | string |
-| **TickSize**   _optional_ | number \(double\) |
-| **Type**   _optional_ | enum \(BankersAcceptance, CertificateOfDeposit, CollateralizeMortgageObligation, CorporateBond, CommercialPaper, CorporatePrivatePlacement, CommonStock, FederalHousingAuthority, FederalHomeLoan, FederalNationalMortgageAssociation, ForeignExchangeContract, Future, GovernmentNationalMortgageAssociation, TreasuriesPlusAgencyDebenture, MutualFund, MortgageInterestOnly, MortgagePrincipleOnly, MortgagePrivatePlacement, MiscellaneousPassThru, MunicipalBond, NoIsitcSecurityType, Option, PreferredStock, RepurchaseAgreement, ReverseRepurchaseAgreement, StudentLoanMarketingAssociation, TimeDeposit, UsTreasuryBill, Warrant, CatsTigersLions, WildcardEntry, ConvertibleBond, MortgageIoette, Index, FakeStockForNonStandartOption, Right, Cryptocurrency, ETF, DepositoryReceipt, CoveredWarrant, Unit\) |
-| **UnderlyingAssetSymbol**   _optional_ | string |
-| **VolumePrecision**   _optional_ | integer \(int32\) |
+| Name                                                                 | Schema                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>AddedDate</strong>  <br><em>optional</em></p>             | string (date-time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <p><strong>AllowMargin</strong>  <br><em>optional</em></p>           | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>AllowShort</strong>  <br><em>optional</em></p>            | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>AllowTrade</strong>  <br><em>optional</em></p>            | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>ContractSize</strong>  <br><em>optional</em></p>          | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Currency</strong>  <br><em>optional</em></p>              | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Description</strong>  <br><em>optional</em></p>           | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Enabled</strong>  <br><em>optional</em></p>               | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>Exchange</strong>  <br><em>optional</em></p>              | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>ExpirationDate</strong>  <br><em>optional</em></p>        | string (date-time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <p><strong>ExpirationType</strong>  <br><em>optional</em></p>        | enum (Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| <p><strong>Id</strong>  <br><em>optional</em></p>                    | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>ModifyDate</strong>  <br><em>optional</em></p>            | string (date-time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <p><strong>OptionType</strong>  <br><em>optional</em></p>            | enum (Call, Put, Undefined)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| <p><strong>Precision</strong>  <br><em>optional</em></p>             | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>SeriesId</strong>  <br><em>optional</em></p>              | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>StrikePrice</strong>  <br><em>optional</em></p>           | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Symbol</strong>  <br><em>optional</em></p>                | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>TickSize</strong>  <br><em>optional</em></p>              | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Type</strong>  <br><em>optional</em></p>                  | enum (BankersAcceptance, CertificateOfDeposit, CollateralizeMortgageObligation, CorporateBond, CommercialPaper, CorporatePrivatePlacement, CommonStock, FederalHousingAuthority, FederalHomeLoan, FederalNationalMortgageAssociation, ForeignExchangeContract, Future, GovernmentNationalMortgageAssociation, TreasuriesPlusAgencyDebenture, MutualFund, MortgageInterestOnly, MortgagePrincipleOnly, MortgagePrivatePlacement, MiscellaneousPassThru, MunicipalBond, NoIsitcSecurityType, Option, PreferredStock, RepurchaseAgreement, ReverseRepurchaseAgreement, StudentLoanMarketingAssociation, TimeDeposit, UsTreasuryBill, Warrant, CatsTigersLions, WildcardEntry, ConvertibleBond, MortgageIoette, Index, FakeStockForNonStandartOption, Right, Cryptocurrency, ETF, DepositoryReceipt, CoveredWarrant, Unit) |
+| <p><strong>UnderlyingAssetSymbol</strong>  <br><em>optional</em></p> | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>VolumePrecision</strong>  <br><em>optional</em></p>       | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ### OrderResource
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **AccountId**   _optional_ | Account id. Assigned by OMS. | integer \(int32\) |
-| **AveragePrice**   _optional_ | Average execution price. Assigned by executor. | number \(double\) |
-| **ClientId**   _optional_ | Client order id \(ClOrdID\). Assigned by OMS. | string |
-| **Comment**   _optional_ | Client side comments. Assigned by client. | string |
-| **CounterPartyOrderId**   _optional_ | Executor order id. Assigned by executor. | string |
-| **CreateDate**   _optional_ | Creation date. Assigned by OMS. | string \(date-time\) |
-| **Date**   _optional_ | Last modification date. Assigned by OMS. | string \(date-time\) |
-| **Description**   _optional_ | Used to indicate reject reason or broker comment. Assigned by executor. | string |
-| **Exchange**   _optional_ | Desired exchange. Assigned by client. | string |
-| **ExecBrocker**   _optional_ | Order route name. Assigned by executor. | string |
-| **ExecId**   _optional_ | Execution id. | string |
-| **ExecInst**   _optional_ | Execution instruction. Assigned by client. | enum \(DoNotIncrease, DoNotReduce, AllOrNone\) |
-| **ExecutedQuantity**   _optional_ | Executed quantity. Assigned by executor. | number \(double\) |
-| **ExecutionInstructions**   _optional_ | Algo order execution instructions. | &lt; string, string &gt; map |
-| **ExecutionStatus**   _optional_ | Last modification status. Assigned by OMS or executor. | enum \(New, PartiallyFilled, Filled, DoneForDay, Canceled, Replaced, PendingCancel, Stopped, Rejected, Suspended, PendingNew, Calculated, Expired, AcceptedForBidding, PendingReplace, Error, Held\) |
-| **ExecutionVenue**   _optional_ | Executor name, to which the order was routed. Assigned by OMS router. | string |
-| **ExpireDate**   _optional_ | Expire date. Assigned by client. | string \(date-time\) |
-| **ExtendedHours**   _optional_ | indicates the extended trading session for GTX order execution \(pre-market session, post-market session\) if empty - than there is no specific requirement for extended session | string |
-| **Id**   _optional_ | Unique order id. Assigned by OMS. | integer \(int32\) |
-| **InitialType**   _optional_ | Initial type. Assigned by OMS. | enum \(Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External\) |
-| **IsExternal**   _optional_ | This property indicates that order was accepted from external system and fields like ClientOrderId should be persisted. It's a hack for orders from MessageAcceptor. Assigned be client. | boolean |
-| **LastMarket**   _optional_ | Exchange where order was filled. Assigned by executor. | string |
-| **LastPrice**   _optional_ | Last quote. Assigned by executor. | number \(double\) |
-| **LastQuantity**   _optional_ | Last transaction executed quantity. Assigned by executor. | number \(double\) |
-| **LeavesQuantity**   _optional_ | Unfilled quantity. Assigned by executor. | number \(double\) |
-| **Legs**   _optional_ | Multileg order legs. Assigned by client. | &lt; [OrderResource](./#orderresource) &gt; array |
-| **OrigClientId**   _optional_ | Client order id \(ClOrdID\). Assigned by OMS. | string |
-| **ParentClientId**   _optional_ | Client order id \(ClOrdID\) of parent order in a case of mleg order. | string |
-| **ParentId**   _optional_ | Parent order id. Assigned by OMS. | integer \(int32\) |
-| **ParentRequestId**   _optional_ |  | integer \(int32\) |
-| **Price**   _optional_ | Price \(not used for some order types\). Assigned by client. | number \(double\) |
-| **Quantity**   _optional_ | Quantity. Assigned by client. | number \(double\) |
-| **RequestId**   _optional_ | Request id. Assigned by OMS. | integer \(int32\) |
-| **RequestStatus**   _optional_ | Indicate order processing status within OMS. Assigned by OMS. | enum \(RequireValidation, Validated, Rejected, Executing, Complete, Error\) |
-| **SecurityId**   _optional_ | Security internal id; | integer \(int32\) |
-| **SettDate**   _optional_ | date of settlement. Received from execution venue or calculated by OMS, assigned by OMS or executor. | string \(date-time\) |
-| **SettlementDate**   _optional_ | Date of settlement deal | string \(date-time\) |
-| **Side**   _optional_ | Side. Assigned by client. | enum \(Buy, Sell, SellShort, BuyToCover\) |
-| **StateId**   _optional_ | State id. Assigned by OMS. | integer \(int32\) |
-| **Status**   _optional_ | Current order status. Assigned by OMS or executor. | enum \(New, PartiallyFilled, Filled, DoneForDay, Canceled, Replaced, PendingCancel, Stopped, Rejected, Suspended, PendingNew, Calculated, Expired, AcceptedForBidding, PendingReplace, Error, Held\) |
-| **StopPrice**   _optional_ | Stop price \(used for stop orders\). Assigned by client. | number \(double\) |
-| **Symbol**   _optional_ |  | string |
-| **Target**   _optional_ | Execution target. Assigned by OMS. | enum \(Ignore, New, Modify, Cancel, Execution, Status, CancelReject, Reject, Error, All\) |
-| **TimeInForce**   _optional_ | Time in force. Assigned by client. | enum \(Day, GoodTillCancel, AtTheOpening, ImmediateOrCancel, FillOrKill, GoodTillCrossing, GoodTillDate, GoodTillTime\) |
-| **Token**   _optional_ | Additional identity key \(usid in market scanner\). | string |
-| **TrailingLimitAmount**   _optional_ | Assigned by client. | number \(double\) |
-| **TrailingLimitAmountType**   _optional_ | Assigned by client. | enum \(Absolute, Persentage\) |
-| **TrailingStopAmount**   _optional_ | Assigned by client. | number \(double\) |
-| **TrailingStopAmountType**   _optional_ | Assigned by client. | enum \(Absolute, Persentage\) |
-| **TransType**   _optional_ | Execution transaction type. | enum \(New, Cancel, Correct, Status\) |
-| **TransactionDate**   _optional_ | Last transaction date. Assigned by OMS or executor. | string \(date-time\) |
-| **Type**   _optional_ | Type. Assigned by client. | enum \(Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External\) |
-| **UserId**   _optional_ | User id. Assigned by OMS. | integer \(int32\) |
-| **ValidationsToBypass**   _optional_ | Flag property indicating validation rules to bypass | integer \(int32\) |
+| Name                                                                   | Description                                                                                                                                                                                           | Schema                                                                                                                                                                                             |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>AccountId</strong>  <br><em>optional</em></p>               | Account id. Assigned by OMS.                                                                                                                                                                          | integer (int32)                                                                                                                                                                                    |
+| <p><strong>AveragePrice</strong>  <br><em>optional</em></p>            | Average execution price. Assigned by executor.                                                                                                                                                        | number (double)                                                                                                                                                                                    |
+| <p><strong>ClientId</strong>  <br><em>optional</em></p>                | Client order id (ClOrdID). Assigned by OMS.                                                                                                                                                           | string                                                                                                                                                                                             |
+| <p><strong>Comment</strong>  <br><em>optional</em></p>                 | Client side comments. Assigned by client.                                                                                                                                                             | string                                                                                                                                                                                             |
+| <p><strong>CounterPartyOrderId</strong>  <br><em>optional</em></p>     | Executor order id. Assigned by executor.                                                                                                                                                              | string                                                                                                                                                                                             |
+| <p><strong>CreateDate</strong>  <br><em>optional</em></p>              | Creation date. Assigned by OMS.                                                                                                                                                                       | string (date-time)                                                                                                                                                                                 |
+| <p><strong>Date</strong>  <br><em>optional</em></p>                    | Last modification date. Assigned by OMS.                                                                                                                                                              | string (date-time)                                                                                                                                                                                 |
+| <p><strong>Description</strong>  <br><em>optional</em></p>             | Used to indicate reject reason or broker comment. Assigned by executor.                                                                                                                               | string                                                                                                                                                                                             |
+| <p><strong>Exchange</strong>  <br><em>optional</em></p>                | Desired exchange. Assigned by client.                                                                                                                                                                 | string                                                                                                                                                                                             |
+| <p><strong>ExecBrocker</strong>  <br><em>optional</em></p>             | Order route name. Assigned by executor.                                                                                                                                                               | string                                                                                                                                                                                             |
+| <p><strong>ExecId</strong>  <br><em>optional</em></p>                  | Execution id.                                                                                                                                                                                         | string                                                                                                                                                                                             |
+| <p><strong>ExecInst</strong>  <br><em>optional</em></p>                | Execution instruction. Assigned by client.                                                                                                                                                            | enum (DoNotIncrease, DoNotReduce, AllOrNone)                                                                                                                                                       |
+| <p><strong>ExecutedQuantity</strong>  <br><em>optional</em></p>        | Executed quantity. Assigned by executor.                                                                                                                                                              | number (double)                                                                                                                                                                                    |
+| <p><strong>ExecutionInstructions</strong>  <br><em>optional</em></p>   | Algo order execution instructions.                                                                                                                                                                    | < string, string > map                                                                                                                                                                             |
+| <p><strong>ExecutionStatus</strong>  <br><em>optional</em></p>         | Last modification status. Assigned by OMS or executor.                                                                                                                                                | enum (New, PartiallyFilled, Filled, DoneForDay, Canceled, Replaced, PendingCancel, Stopped, Rejected, Suspended, PendingNew, Calculated, Expired, AcceptedForBidding, PendingReplace, Error, Held) |
+| <p><strong>ExecutionVenue</strong>  <br><em>optional</em></p>          | Executor name, to which the order was routed. Assigned by OMS router.                                                                                                                                 | string                                                                                                                                                                                             |
+| <p><strong>ExpireDate</strong>  <br><em>optional</em></p>              | Expire date. Assigned by client.                                                                                                                                                                      | string (date-time)                                                                                                                                                                                 |
+| <p><strong>ExtendedHours</strong>  <br><em>optional</em></p>           | <p>indicates the extended trading session for GTX order execution (pre-market session, post-market session)<br>if empty - than there is no specific requirement for extended session</p>              | string                                                                                                                                                                                             |
+| <p><strong>Id</strong>  <br><em>optional</em></p>                      | Unique order id. Assigned by OMS.                                                                                                                                                                     | integer (int32)                                                                                                                                                                                    |
+| <p><strong>InitialType</strong>  <br><em>optional</em></p>             | Initial type. Assigned by OMS.                                                                                                                                                                        | enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External)                                                |
+| <p><strong>IsExternal</strong>  <br><em>optional</em></p>              | <p>This property indicates that order was accepted from external system and fields like ClientOrderId should be persisted.<br>It's a hack for orders from MessageAcceptor.<br>Assigned be client.</p> | boolean                                                                                                                                                                                            |
+| <p><strong>LastMarket</strong>  <br><em>optional</em></p>              | Exchange where order was filled. Assigned by executor.                                                                                                                                                | string                                                                                                                                                                                             |
+| <p><strong>LastPrice</strong>  <br><em>optional</em></p>               | Last quote. Assigned by executor.                                                                                                                                                                     | number (double)                                                                                                                                                                                    |
+| <p><strong>LastQuantity</strong>  <br><em>optional</em></p>            | Last transaction executed quantity. Assigned by executor.                                                                                                                                             | number (double)                                                                                                                                                                                    |
+| <p><strong>LeavesQuantity</strong>  <br><em>optional</em></p>          | Unfilled quantity. Assigned by executor.                                                                                                                                                              | number (double)                                                                                                                                                                                    |
+| <p><strong>Legs</strong>  <br><em>optional</em></p>                    | Multileg order legs. Assigned by client.                                                                                                                                                              | < [OrderResource](./#orderresource) > array                                                                                                                                                        |
+| <p><strong>OrigClientId</strong>  <br><em>optional</em></p>            | Client order id (ClOrdID). Assigned by OMS.                                                                                                                                                           | string                                                                                                                                                                                             |
+| <p><strong>ParentClientId</strong>  <br><em>optional</em></p>          | Client order id (ClOrdID) of parent order in a case of mleg order.                                                                                                                                    | string                                                                                                                                                                                             |
+| <p><strong>ParentId</strong>  <br><em>optional</em></p>                | Parent order id. Assigned by OMS.                                                                                                                                                                     | integer (int32)                                                                                                                                                                                    |
+| <p><strong>ParentRequestId</strong>  <br><em>optional</em></p>         |                                                                                                                                                                                                       | integer (int32)                                                                                                                                                                                    |
+| <p><strong>Price</strong>  <br><em>optional</em></p>                   | Price (not used for some order types). Assigned by client.                                                                                                                                            | number (double)                                                                                                                                                                                    |
+| <p><strong>Quantity</strong>  <br><em>optional</em></p>                | Quantity. Assigned by client.                                                                                                                                                                         | number (double)                                                                                                                                                                                    |
+| <p><strong>RequestId</strong>  <br><em>optional</em></p>               | Request id. Assigned by OMS.                                                                                                                                                                          | integer (int32)                                                                                                                                                                                    |
+| <p><strong>RequestStatus</strong>  <br><em>optional</em></p>           | Indicate order processing status within OMS. Assigned by OMS.                                                                                                                                         | enum (RequireValidation, Validated, Rejected, Executing, Complete, Error)                                                                                                                          |
+| <p><strong>SecurityId</strong>  <br><em>optional</em></p>              | Security internal id;                                                                                                                                                                                 | integer (int32)                                                                                                                                                                                    |
+| <p><strong>SettDate</strong>  <br><em>optional</em></p>                | date of settlement. Received from execution venue or calculated by OMS, assigned by OMS or executor.                                                                                                  | string (date-time)                                                                                                                                                                                 |
+| <p><strong>SettlementDate</strong>  <br><em>optional</em></p>          | Date of settlement deal                                                                                                                                                                               | string (date-time)                                                                                                                                                                                 |
+| <p><strong>Side</strong>  <br><em>optional</em></p>                    | Side. Assigned by client.                                                                                                                                                                             | enum (Buy, Sell, SellShort, BuyToCover)                                                                                                                                                            |
+| <p><strong>StateId</strong>  <br><em>optional</em></p>                 | State id. Assigned by OMS.                                                                                                                                                                            | integer (int32)                                                                                                                                                                                    |
+| <p><strong>Status</strong>  <br><em>optional</em></p>                  | Current order status. Assigned by OMS or executor.                                                                                                                                                    | enum (New, PartiallyFilled, Filled, DoneForDay, Canceled, Replaced, PendingCancel, Stopped, Rejected, Suspended, PendingNew, Calculated, Expired, AcceptedForBidding, PendingReplace, Error, Held) |
+| <p><strong>StopPrice</strong>  <br><em>optional</em></p>               | Stop price (used for stop orders). Assigned by client.                                                                                                                                                | number (double)                                                                                                                                                                                    |
+| <p><strong>Symbol</strong>  <br><em>optional</em></p>                  |                                                                                                                                                                                                       | string                                                                                                                                                                                             |
+| <p><strong>Target</strong>  <br><em>optional</em></p>                  | Execution target. Assigned by OMS.                                                                                                                                                                    | enum (Ignore, New, Modify, Cancel, Execution, Status, CancelReject, Reject, Error, All)                                                                                                            |
+| <p><strong>TimeInForce</strong>  <br><em>optional</em></p>             | Time in force. Assigned by client.                                                                                                                                                                    | enum (Day, GoodTillCancel, AtTheOpening, ImmediateOrCancel, FillOrKill, GoodTillCrossing, GoodTillDate, GoodTillTime)                                                                              |
+| <p><strong>Token</strong>  <br><em>optional</em></p>                   | Additional identity key (usid in market scanner).                                                                                                                                                     | string                                                                                                                                                                                             |
+| <p><strong>TrailingLimitAmount</strong>  <br><em>optional</em></p>     | Assigned by client.                                                                                                                                                                                   | number (double)                                                                                                                                                                                    |
+| <p><strong>TrailingLimitAmountType</strong>  <br><em>optional</em></p> | Assigned by client.                                                                                                                                                                                   | enum (Absolute, Persentage)                                                                                                                                                                        |
+| <p><strong>TrailingStopAmount</strong>  <br><em>optional</em></p>      | Assigned by client.                                                                                                                                                                                   | number (double)                                                                                                                                                                                    |
+| <p><strong>TrailingStopAmountType</strong>  <br><em>optional</em></p>  | Assigned by client.                                                                                                                                                                                   | enum (Absolute, Persentage)                                                                                                                                                                        |
+| <p><strong>TransType</strong>  <br><em>optional</em></p>               | Execution transaction type.                                                                                                                                                                           | enum (New, Cancel, Correct, Status)                                                                                                                                                                |
+| <p><strong>TransactionDate</strong>  <br><em>optional</em></p>         | Last transaction date. Assigned by OMS or executor.                                                                                                                                                   | string (date-time)                                                                                                                                                                                 |
+| <p><strong>Type</strong>  <br><em>optional</em></p>                    | Type. Assigned by client.                                                                                                                                                                             | enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External)                                                |
+| <p><strong>UserId</strong>  <br><em>optional</em></p>                  | User id. Assigned by OMS.                                                                                                                                                                             | integer (int32)                                                                                                                                                                                    |
+| <p><strong>ValidationsToBypass</strong>  <br><em>optional</em></p>     | Flag property indicating validation rules to bypass                                                                                                                                                   | integer (int32)                                                                                                                                                                                    |
 
-### PagingResult\[HotkeyMapModel\]
+### PagingResult\[HotkeyMapModel]
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **NextPageLink**   _optional_ | Next page | string |
-| **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [HotkeyMapModel](./#hotkeymapmodel) &gt; array |
-| **TotalCount**   _optional_ | Items total count | integer \(int32\) |
+| Name                                                            | Description       | Schema                                        |
+| --------------------------------------------------------------- | ----------------- | --------------------------------------------- |
+| <p><strong>NextPageLink</strong>  <br><em>optional</em></p>     | Next page         | string                                        |
+| <p><strong>PreviousPageLink</strong>  <br><em>optional</em></p> | Previous page     | string                                        |
+| <p><strong>Result</strong>  <br><em>optional</em></p>           | Result collection | < [HotkeyMapModel](./#hotkeymapmodel) > array |
+| <p><strong>TotalCount</strong>  <br><em>optional</em></p>       | Items total count | integer (int32)                               |
 
-### PagingResult\[PositionResource\]
+### PagingResult\[PositionResource]
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **NextPageLink**   _optional_ | Next page | string |
-| **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [PositionResource](./#positionresource) &gt; array |
-| **TotalCount**   _optional_ | Items total count | integer \(int32\) |
+| Name                                                            | Description       | Schema                                            |
+| --------------------------------------------------------------- | ----------------- | ------------------------------------------------- |
+| <p><strong>NextPageLink</strong>  <br><em>optional</em></p>     | Next page         | string                                            |
+| <p><strong>PreviousPageLink</strong>  <br><em>optional</em></p> | Previous page     | string                                            |
+| <p><strong>Result</strong>  <br><em>optional</em></p>           | Result collection | < [PositionResource](./#positionresource) > array |
+| <p><strong>TotalCount</strong>  <br><em>optional</em></p>       | Items total count | integer (int32)                                   |
 
-### PagingResult\[PriceAlertInfoModel\]
+### PagingResult\[PriceAlertInfoModel]
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **NextPageLink**   _optional_ | Next page | string |
-| **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [PriceAlertInfoModel](./#pricealertinfomodel) &gt; array |
-| **TotalCount**   _optional_ | Items total count | integer \(int32\) |
+| Name                                                            | Description       | Schema                                                  |
+| --------------------------------------------------------------- | ----------------- | ------------------------------------------------------- |
+| <p><strong>NextPageLink</strong>  <br><em>optional</em></p>     | Next page         | string                                                  |
+| <p><strong>PreviousPageLink</strong>  <br><em>optional</em></p> | Previous page     | string                                                  |
+| <p><strong>Result</strong>  <br><em>optional</em></p>           | Result collection | < [PriceAlertInfoModel](./#pricealertinfomodel) > array |
+| <p><strong>TotalCount</strong>  <br><em>optional</em></p>       | Items total count | integer (int32)                                         |
 
-### PagingResult\[RebalanceFrame\]
+### PagingResult\[RebalanceFrame]
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **NextPageLink**   _optional_ | Next page | string |
-| **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [RebalanceFrame](./#rebalanceframe) &gt; array |
-| **TotalCount**   _optional_ | Items total count | integer \(int32\) |
+| Name                                                            | Description       | Schema                                        |
+| --------------------------------------------------------------- | ----------------- | --------------------------------------------- |
+| <p><strong>NextPageLink</strong>  <br><em>optional</em></p>     | Next page         | string                                        |
+| <p><strong>PreviousPageLink</strong>  <br><em>optional</em></p> | Previous page     | string                                        |
+| <p><strong>Result</strong>  <br><em>optional</em></p>           | Result collection | < [RebalanceFrame](./#rebalanceframe) > array |
+| <p><strong>TotalCount</strong>  <br><em>optional</em></p>       | Items total count | integer (int32)                               |
 
-### PagingResult\[SubmitFeedbackModel\]
+### PagingResult\[SubmitFeedbackModel]
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **NextPageLink**   _optional_ | Next page | string |
-| **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [SubmitFeedbackModel](./#submitfeedbackmodel) &gt; array |
-| **TotalCount**   _optional_ | Items total count | integer \(int32\) |
+| Name                                                            | Description       | Schema                                                  |
+| --------------------------------------------------------------- | ----------------- | ------------------------------------------------------- |
+| <p><strong>NextPageLink</strong>  <br><em>optional</em></p>     | Next page         | string                                                  |
+| <p><strong>PreviousPageLink</strong>  <br><em>optional</em></p> | Previous page     | string                                                  |
+| <p><strong>Result</strong>  <br><em>optional</em></p>           | Result collection | < [SubmitFeedbackModel](./#submitfeedbackmodel) > array |
+| <p><strong>TotalCount</strong>  <br><em>optional</em></p>       | Items total count | integer (int32)                                         |
 
-### PagingResult\[TransactionMapModel\]
+### PagingResult\[TransactionMapModel]
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **NextPageLink**   _optional_ | Next page | string |
-| **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [TransactionMapModel](./#transactionmapmodel) &gt; array |
-| **TotalCount**   _optional_ | Items total count | integer \(int32\) |
+| Name                                                            | Description       | Schema                                                  |
+| --------------------------------------------------------------- | ----------------- | ------------------------------------------------------- |
+| <p><strong>NextPageLink</strong>  <br><em>optional</em></p>     | Next page         | string                                                  |
+| <p><strong>PreviousPageLink</strong>  <br><em>optional</em></p> | Previous page     | string                                                  |
+| <p><strong>Result</strong>  <br><em>optional</em></p>           | Result collection | < [TransactionMapModel](./#transactionmapmodel) > array |
+| <p><strong>TotalCount</strong>  <br><em>optional</em></p>       | Items total count | integer (int32)                                         |
 
-### PagingResult\[WebActionMapModel\]
+### PagingResult\[WebActionMapModel]
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **NextPageLink**   _optional_ | Next page | string |
-| **PreviousPageLink**   _optional_ | Previous page | string |
-| **Result**   _optional_ | Result collection | &lt; [WebActionMapModel](./#webactionmapmodel) &gt; array |
-| **TotalCount**   _optional_ | Items total count | integer \(int32\) |
+| Name                                                            | Description       | Schema                                              |
+| --------------------------------------------------------------- | ----------------- | --------------------------------------------------- |
+| <p><strong>NextPageLink</strong>  <br><em>optional</em></p>     | Next page         | string                                              |
+| <p><strong>PreviousPageLink</strong>  <br><em>optional</em></p> | Previous page     | string                                              |
+| <p><strong>Result</strong>  <br><em>optional</em></p>           | Result collection | < [WebActionMapModel](./#webactionmapmodel) > array |
+| <p><strong>TotalCount</strong>  <br><em>optional</em></p>       | Items total count | integer (int32)                                     |
 
 ### PhoneNumberModel
 
-| Name | Schema |
-| :--- | :--- |
-| **PhoneNumber**   _optional_ | string |
-| **PhoneNumberState**   _optional_ | enum \(NotLinked, Active, Suspended, NotVerified\) |
+| Name                                                            | Schema                                           |
+| --------------------------------------------------------------- | ------------------------------------------------ |
+| <p><strong>PhoneNumber</strong>  <br><em>optional</em></p>      | string                                           |
+| <p><strong>PhoneNumberState</strong>  <br><em>optional</em></p> | enum (NotLinked, Active, Suspended, NotVerified) |
 
 ### PositionResource
 
-| Name | Schema |
-| :--- | :--- |
-| **AccountId**   _optional_ | integer \(int32\) |
-| **AverageClosePrice**   _optional_ | number \(double\) |
-| **AverageOpenPrice**   _optional_ | number \(double\) |
-| **CompanyName**   _optional_ | string |
-| **ContractSize**   _optional_ | number \(double\) |
-| **CostBasis**   _optional_ | number \(double\) |
-| **CreateDate**   _optional_ | string \(date-time\) |
-| **DailyCloseProfitLoss**   _optional_ | number \(double\) |
-| **DailyCostBasis**   _optional_ | number \(double\) |
-| **DayQuantity**   _optional_ | number \(double\) |
-| **ExcessChanges**   _optional_ | number \(double\) |
-| **Id**   _optional_ | integer \(int32\) |
-| **ModifyDate**   _optional_ | string \(date-time\) |
-| **Name**   _optional_ | string |
-| **Quantity**   _optional_ | number \(double\) |
-| **RealizedProfitLoss**   _optional_ | number \(double\) |
-| **SecurityCurrency**   _optional_ | string |
-| **SecurityId**   _optional_ | integer \(int32\) |
-| **SecurityType**   _optional_ | string |
-| **StopLossPrice**   _optional_ | number \(double\) |
-| **Symbol**   _optional_ | string |
-| **TakeProfitPrice**   _optional_ | number \(double\) |
+| Name                                                                | Schema             |
+| ------------------------------------------------------------------- | ------------------ |
+| <p><strong>AccountId</strong>  <br><em>optional</em></p>            | integer (int32)    |
+| <p><strong>AverageClosePrice</strong>  <br><em>optional</em></p>    | number (double)    |
+| <p><strong>AverageOpenPrice</strong>  <br><em>optional</em></p>     | number (double)    |
+| <p><strong>CompanyName</strong>  <br><em>optional</em></p>          | string             |
+| <p><strong>ContractSize</strong>  <br><em>optional</em></p>         | number (double)    |
+| <p><strong>CostBasis</strong>  <br><em>optional</em></p>            | number (double)    |
+| <p><strong>CreateDate</strong>  <br><em>optional</em></p>           | string (date-time) |
+| <p><strong>DailyCloseProfitLoss</strong>  <br><em>optional</em></p> | number (double)    |
+| <p><strong>DailyCostBasis</strong>  <br><em>optional</em></p>       | number (double)    |
+| <p><strong>DayQuantity</strong>  <br><em>optional</em></p>          | number (double)    |
+| <p><strong>ExcessChanges</strong>  <br><em>optional</em></p>        | number (double)    |
+| <p><strong>Id</strong>  <br><em>optional</em></p>                   | integer (int32)    |
+| <p><strong>ModifyDate</strong>  <br><em>optional</em></p>           | string (date-time) |
+| <p><strong>Name</strong>  <br><em>optional</em></p>                 | string             |
+| <p><strong>Quantity</strong>  <br><em>optional</em></p>             | number (double)    |
+| <p><strong>RealizedProfitLoss</strong>  <br><em>optional</em></p>   | number (double)    |
+| <p><strong>SecurityCurrency</strong>  <br><em>optional</em></p>     | string             |
+| <p><strong>SecurityId</strong>  <br><em>optional</em></p>           | integer (int32)    |
+| <p><strong>SecurityType</strong>  <br><em>optional</em></p>         | string             |
+| <p><strong>StopLossPrice</strong>  <br><em>optional</em></p>        | number (double)    |
+| <p><strong>Symbol</strong>  <br><em>optional</em></p>               | string             |
+| <p><strong>TakeProfitPrice</strong>  <br><em>optional</em></p>      | number (double)    |
 
 ### PriceAlertEditableModel
 
 Editable price alert
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **Argument**   _optional_ | Trigger value   **Minimum value** : `0` | number \(double\) |
-| **ExpirationDate**   _optional_ | Expiration date | integer \(int64\) |
-| **Field**   _required_ | Alert type | string |
-| **Operator**   _required_ | Alert trigger operator | string |
-| **SecurityId**   _optional_ | Alert trigger security id   **Minimum value** : `0`   **Maximum value** : `2147483647` | integer \(int32\) |
-| **State**   _optional_ | Target alert state | enum \(New, Expired, Completed, Stopped\) |
+| Name                                                          | Description                                                                                                                                         | Schema                                  |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| <p><strong>Argument</strong>  <br><em>optional</em></p>       | <p>Trigger value  <br><strong>Minimum value</strong> : <code>0</code></p>                                                                           | number (double)                         |
+| <p><strong>ExpirationDate</strong>  <br><em>optional</em></p> | Expiration date                                                                                                                                     | integer (int64)                         |
+| <p><strong>Field</strong>  <br><em>required</em></p>          | Alert type                                                                                                                                          | string                                  |
+| <p><strong>Operator</strong>  <br><em>required</em></p>       | Alert trigger operator                                                                                                                              | string                                  |
+| <p><strong>SecurityId</strong>  <br><em>optional</em></p>     | <p>Alert trigger security id  <br><strong>Minimum value</strong> : <code>0</code>  <br><strong>Maximum value</strong> : <code>2147483647</code></p> | integer (int32)                         |
+| <p><strong>State</strong>  <br><em>optional</em></p>          | Target alert state                                                                                                                                  | enum (New, Expired, Completed, Stopped) |
 
 ### PriceAlertInfoModel
 
 Price alert info
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **Argument**   _optional_ | Trigger value | number \(double\) |
-| **CreatedDate**   _optional_ | Created Date | integer \(int64\) |
-| **ExpirationDate**   _optional_ | Expiration date | integer \(int64\) |
-| **Field**   _optional_ | Alert type | string |
-| **Id**   _optional_ | Internal price alert identifier | integer \(int32\) |
-| **Operator**   _optional_ | Alert trigger operator | string |
-| **SecurityId**   _optional_ | Alert trigger security id | integer \(int32\) |
-| **State**   _optional_ | Target alert state | enum \(New, Expired, Completed, Stopped\) |
+| Name                                                          | Description                     | Schema                                  |
+| ------------------------------------------------------------- | ------------------------------- | --------------------------------------- |
+| <p><strong>Argument</strong>  <br><em>optional</em></p>       | Trigger value                   | number (double)                         |
+| <p><strong>CreatedDate</strong>  <br><em>optional</em></p>    | Created Date                    | integer (int64)                         |
+| <p><strong>ExpirationDate</strong>  <br><em>optional</em></p> | Expiration date                 | integer (int64)                         |
+| <p><strong>Field</strong>  <br><em>optional</em></p>          | Alert type                      | string                                  |
+| <p><strong>Id</strong>  <br><em>optional</em></p>             | Internal price alert identifier | integer (int32)                         |
+| <p><strong>Operator</strong>  <br><em>optional</em></p>       | Alert trigger operator          | string                                  |
+| <p><strong>SecurityId</strong>  <br><em>optional</em></p>     | Alert trigger security id       | integer (int32)                         |
+| <p><strong>State</strong>  <br><em>optional</em></p>          | Target alert state              | enum (New, Expired, Completed, Stopped) |
 
 ### QuoteModel
 
-| Name | Schema |
-| :--- | :--- |
-| **Ask**   _optional_ | number \(double\) |
-| **Bid**   _optional_ | number \(double\) |
-| **Last**   _optional_ | number \(double\) |
-| **OpenInterest**   _optional_ | number \(double\) |
-| **Volume**   _optional_ | number \(double\) |
+| Name                                                        | Schema          |
+| ----------------------------------------------------------- | --------------- |
+| <p><strong>Ask</strong>  <br><em>optional</em></p>          | number (double) |
+| <p><strong>Bid</strong>  <br><em>optional</em></p>          | number (double) |
+| <p><strong>Last</strong>  <br><em>optional</em></p>         | number (double) |
+| <p><strong>OpenInterest</strong>  <br><em>optional</em></p> | number (double) |
+| <p><strong>Volume</strong>  <br><em>optional</em></p>       | number (double) |
 
 ### RebalanceFrame
 
-| Name | Schema |
-| :--- | :--- |
-| **Descendants**   _optional_ | &lt; [RebalanceFrame](./#rebalanceframe) &gt; array |
-| **Description**   _optional_ | string |
-| **Id**   _optional_ | integer \(int32\) |
-| **IsReferenced**   _optional_ | boolean |
-| **Name**   _optional_ | string |
-| **TargetPercent**   _optional_ | number \(double\) |
-| **Tolerance**   _optional_ | number \(double\) |
-| **UnitType**   _optional_   _read-only_ | enum \(Node, SecurityLeaf, Cash\) |
+| Name                                                                            | Schema                                        |
+| ------------------------------------------------------------------------------- | --------------------------------------------- |
+| <p><strong>Descendants</strong>  <br><em>optional</em></p>                      | < [RebalanceFrame](./#rebalanceframe) > array |
+| <p><strong>Description</strong>  <br><em>optional</em></p>                      | string                                        |
+| <p><strong>Id</strong>  <br><em>optional</em></p>                               | integer (int32)                               |
+| <p><strong>IsReferenced</strong>  <br><em>optional</em></p>                     | boolean                                       |
+| <p><strong>Name</strong>  <br><em>optional</em></p>                             | string                                        |
+| <p><strong>TargetPercent</strong>  <br><em>optional</em></p>                    | number (double)                               |
+| <p><strong>Tolerance</strong>  <br><em>optional</em></p>                        | number (double)                               |
+| <p><strong>UnitType</strong>  <br><em>optional</em>  <br><em>read-only</em></p> | enum (Node, SecurityLeaf, Cash)               |
 
 ### RebalanceModel
 
-| Name | Schema |
-| :--- | :--- |
-| **AbsoluteActualPercent**   _optional_ | number \(double\) |
-| **AbsoluteTargetPercent**   _optional_ | number \(double\) |
-| **AbsoluteTolerance**   _optional_ | number \(double\) |
-| **ActualPercent**   _optional_ | number \(double\) |
-| **Descendants**   _optional_ | &lt; [RebalanceModel](./#rebalancemodel) &gt; array |
-| **Description**   _optional_ | string |
-| **Gain**   _optional_ | number \(double\) |
-| **GainPercent**   _optional_ | number \(double\) |
-| **Id**   _optional_ | integer \(int32\) |
-| **Name**   _optional_ | string |
-| **TargetPercent**   _optional_ | number \(double\) |
-| **Tolerance**   _optional_ | number \(double\) |
-| **UnitType**   _optional_   _read-only_ | enum \(Node, SecurityLeaf, Cash\) |
-| **Value**   _optional_ | number \(double\) |
-
+| Name                                                                            | Schema                                        |
+| ------------------------------------------------------------------------------- | --------------------------------------------- |
+| <p><strong>AbsoluteActualPercent</strong>  <br><em>optional</em></p>            | number (double)                               |
+| <p><strong>AbsoluteTargetPercent</strong>  <br><em>optional</em></p>            | number (double)                               |
+| <p><strong>AbsoluteTolerance</strong>  <br><em>optional</em></p>                | number (double)                               |
+| <p><strong>ActualPercent</strong>  <br><em>optional</em></p>                    | number (double)                               |
+| <p><strong>Descendants</strong>  <br><em>optional</em></p>                      | < [RebalanceModel](./#rebalancemodel) > array |
+| <p><strong>Description</strong>  <br><em>optional</em></p>                      | string                                        |
+| <p><strong>Gain</strong>  <br><em>optional</em></p>                             | number (double)                               |
+| <p><strong>GainPercent</strong>  <br><em>optional</em></p>                      | number (double)                               |
+| <p><strong>Id</strong>  <br><em>optional</em></p>                               | integer (int32)                               |
+| <p><strong>Name</strong>  <br><em>optional</em></p>                             | string                                        |
+| <p><strong>TargetPercent</strong>  <br><em>optional</em></p>                    | number (double)                               |
+| <p><strong>Tolerance</strong>  <br><em>optional</em></p>                        | number (double)                               |
+| <p><strong>UnitType</strong>  <br><em>optional</em>  <br><em>read-only</em></p> | enum (Node, SecurityLeaf, Cash)               |
+| <p><strong>Value</strong>  <br><em>optional</em></p>                            | number (double)                               |

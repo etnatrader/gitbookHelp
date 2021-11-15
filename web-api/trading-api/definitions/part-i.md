@@ -4,303 +4,302 @@
 
 ### AccountValueItem
 
-| Name | Schema |
-| :--- | :--- |
-| **Date**   _optional_ | string \(date-time\) |
-| **Value**   _optional_ | number \(double\) |
+| Name                                                 | Schema             |
+| ---------------------------------------------------- | ------------------ |
+| <p><strong>Date</strong>  <br><em>optional</em></p>  | string (date-time) |
+| <p><strong>Value</strong>  <br><em>optional</em></p> | number (double)    |
 
 ### Base64FileMapModel
 
-| Name | Schema |
-| :--- | :--- |
-| **Data**   _optional_ | string |
-| **Name**   _optional_ | string |
-| **Type**   _optional_ | string |
+| Name                                                | Schema |
+| --------------------------------------------------- | ------ |
+| <p><strong>Data</strong>  <br><em>optional</em></p> | string |
+| <p><strong>Name</strong>  <br><em>optional</em></p> | string |
+| <p><strong>Type</strong>  <br><em>optional</em></p> | string |
 
 ### ChartCompareRequestModel
 
-| Name | Schema |
-| :--- | :--- |
-| **Securities**   _optional_ | &lt; [SecuritySignature](./#securitysignature) &gt; array |
-| **SecuritiesHistorySettings**   _optional_ | [SecurityHistoryRequestSettings](./#securityhistoryrequestsettings) |
+| Name                                                                     | Schema                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| <p><strong>Securities</strong>  <br><em>optional</em></p>                | < [SecuritySignature](./#securitysignature) > array                 |
+| <p><strong>SecuritiesHistorySettings</strong>  <br><em>optional</em></p> | [SecurityHistoryRequestSettings](./#securityhistoryrequestsettings) |
 
 ### ChartHistoryModel
 
-| Name | Schema |
-| :--- | :--- |
-| **IndicatorsHistory**   _optional_ | &lt; &lt; [IndicatorHistoryMapModel](./#indicatorhistorymapmodel) &gt; array &gt; array |
-| **SecurityHistory**   _optional_ | &lt; &lt; [TimeSeriesValueCandleMapModel](./#timeseriesvaluecandlemapmodel) &gt; array &gt; array |
-| **SupportResistanceHistory**   _optional_ | [SupportResistanceMapModel](./#supportresistancemapmodel) |
+| Name                                                                    | Schema                                                                                |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| <p><strong>IndicatorsHistory</strong>  <br><em>optional</em></p>        | < < [IndicatorHistoryMapModel](./#indicatorhistorymapmodel) > array > array           |
+| <p><strong>SecurityHistory</strong>  <br><em>optional</em></p>          | < < [TimeSeriesValueCandleMapModel](./#timeseriesvaluecandlemapmodel) > array > array |
+| <p><strong>SupportResistanceHistory</strong>  <br><em>optional</em></p> | [SupportResistanceMapModel](./#supportresistancemapmodel)                             |
 
 ### ChartHistoryRequestModel
 
-| Name | Schema |
-| :--- | :--- |
-| **IndicatorsHistorySettings**   _optional_ | &lt; [IndicatorHistoryRequestSettings](./#indicatorhistoryrequestsettings) &gt; array |
-| **Security**   _optional_ | [SecuritySignature](./#securitysignature) |
-| **SecurityHistorySettings**   _optional_ | [SecurityHistoryRequestSettings](./#securityhistoryrequestsettings) |
+| Name                                                                     | Schema                                                                          |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| <p><strong>IndicatorsHistorySettings</strong>  <br><em>optional</em></p> | < [IndicatorHistoryRequestSettings](./#indicatorhistoryrequestsettings) > array |
+| <p><strong>Security</strong>  <br><em>optional</em></p>                  | [SecuritySignature](./#securitysignature)                                       |
+| <p><strong>SecurityHistorySettings</strong>  <br><em>optional</em></p>   | [SecurityHistoryRequestSettings](./#securityhistoryrequestsettings)             |
 
 ### CreateOrderResource
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **ClientId**   _optional_ | Client order id. | string |
-| **Exchange**   _optional_ | Desired exchange. | string |
-| **ExecInst**   _optional_ | Execution instruction. | enum \(DoNotIncrease, DoNotReduce, AllOrNone\) |
-| **ExecutionInstructions**   _optional_ | Algo order execution instructions. | &lt; string, string &gt; map |
-| **ExpireDate**   _optional_ | Expire date. Assigned by client. | string \(date-time\) |
-| **ExtendedHours**   _optional_ | indicates the extended trading session for GTX order execution \(pre-market session, post-market session\) if empty - than there is no specific requirement for extended session | string |
-| **Legs**   _optional_ | Order legs | &lt; [CreateOrderResource](./#createorderresource) &gt; array |
-| **Price**   _optional_ | Price \(not used for some order types\). | number \(double\) |
-| **Quantity**   _optional_ | Quantity. Assigned by client.   **Minimum value** : `0` | number \(double\) |
-| **Side**   _optional_ | Client side comments. | enum \(Buy, Sell, SellShort, BuyToCover\) |
-| **StopPrice**   _optional_ | Stop price \(used for stop orders\). | number \(double\) |
-| **Symbol**   _optional_ | Security symbol. | string |
-| **TimeInforce**   _optional_ | Time in force. | enum \(Day, GoodTillCancel, AtTheOpening, ImmediateOrCancel, FillOrKill, GoodTillCrossing, GoodTillDate, GoodTillTime\) |
-| **Token**   _optional_ | Additional identity key \(usid in market scanner\). | string |
-| **TrailingLimitAmount**   _optional_ |  | number \(double\) |
-| **TrailingLimitAmountType**   _optional_ |  | enum \(Absolute, Persentage\) |
-| **TrailingStopAmount**   _optional_ |  | number \(double\) |
-| **TrailingStopAmountType**   _optional_ |  | enum \(Absolute, Persentage\) |
-| **Type**   _optional_ | Type. Assigned by client. | enum \(Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External\) |
-| **ValidationsToBypass**   _optional_ | Flag property indicating validation rules to bypass | integer \(int32\) |
+| Name                                                                   | Description                                                                                                                                                                              | Schema                                                                                                                                              |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>ClientId</strong>  <br><em>optional</em></p>                | Client order id.                                                                                                                                                                         | string                                                                                                                                              |
+| <p><strong>Exchange</strong>  <br><em>optional</em></p>                | Desired exchange.                                                                                                                                                                        | string                                                                                                                                              |
+| <p><strong>ExecInst</strong>  <br><em>optional</em></p>                | Execution instruction.                                                                                                                                                                   | enum (DoNotIncrease, DoNotReduce, AllOrNone)                                                                                                        |
+| <p><strong>ExecutionInstructions</strong>  <br><em>optional</em></p>   | Algo order execution instructions.                                                                                                                                                       | < string, string > map                                                                                                                              |
+| <p><strong>ExpireDate</strong>  <br><em>optional</em></p>              | Expire date. Assigned by client.                                                                                                                                                         | string (date-time)                                                                                                                                  |
+| <p><strong>ExtendedHours</strong>  <br><em>optional</em></p>           | <p>indicates the extended trading session for GTX order execution (pre-market session, post-market session)<br>if empty - than there is no specific requirement for extended session</p> | string                                                                                                                                              |
+| <p><strong>Legs</strong>  <br><em>optional</em></p>                    | Order legs                                                                                                                                                                               | < [CreateOrderResource](./#createorderresource) > array                                                                                             |
+| <p><strong>Price</strong>  <br><em>optional</em></p>                   | Price (not used for some order types).                                                                                                                                                   | number (double)                                                                                                                                     |
+| <p><strong>Quantity</strong>  <br><em>optional</em></p>                | <p>Quantity. Assigned by client.  <br><strong>Minimum value</strong> : <code>0</code></p>                                                                                                | number (double)                                                                                                                                     |
+| <p><strong>Side</strong>  <br><em>optional</em></p>                    | Client side comments.                                                                                                                                                                    | enum (Buy, Sell, SellShort, BuyToCover)                                                                                                             |
+| <p><strong>StopPrice</strong>  <br><em>optional</em></p>               | Stop price (used for stop orders).                                                                                                                                                       | number (double)                                                                                                                                     |
+| <p><strong>Symbol</strong>  <br><em>optional</em></p>                  | Security symbol.                                                                                                                                                                         | string                                                                                                                                              |
+| <p><strong>TimeInforce</strong>  <br><em>optional</em></p>             | Time in force.                                                                                                                                                                           | enum (Day, GoodTillCancel, AtTheOpening, ImmediateOrCancel, FillOrKill, GoodTillCrossing, GoodTillDate, GoodTillTime)                               |
+| <p><strong>Token</strong>  <br><em>optional</em></p>                   | Additional identity key (usid in market scanner).                                                                                                                                        | string                                                                                                                                              |
+| <p><strong>TrailingLimitAmount</strong>  <br><em>optional</em></p>     |                                                                                                                                                                                          | number (double)                                                                                                                                     |
+| <p><strong>TrailingLimitAmountType</strong>  <br><em>optional</em></p> |                                                                                                                                                                                          | enum (Absolute, Persentage)                                                                                                                         |
+| <p><strong>TrailingStopAmount</strong>  <br><em>optional</em></p>      |                                                                                                                                                                                          | number (double)                                                                                                                                     |
+| <p><strong>TrailingStopAmountType</strong>  <br><em>optional</em></p>  |                                                                                                                                                                                          | enum (Absolute, Persentage)                                                                                                                         |
+| <p><strong>Type</strong>  <br><em>optional</em></p>                    | Type. Assigned by client.                                                                                                                                                                | enum (Market, Limit, Stop, StopLimit, Pegged, TrailingStop, TrailingStopLimit, OneCancelOther, OneTriggerOther, OneTriggerOneCancelOther, External) |
+| <p><strong>ValidationsToBypass</strong>  <br><em>optional</em></p>     | Flag property indicating validation rules to bypass                                                                                                                                      | integer (int32)                                                                                                                                     |
 
 ### CreateWatchlistModel
 
-| Name | Schema |
-| :--- | :--- |
-| **Name**   _optional_ | string |
-| **Securities**   _optional_ | &lt; integer \(int32\) &gt; array |
+| Name                                                      | Schema                    |
+| --------------------------------------------------------- | ------------------------- |
+| <p><strong>Name</strong>  <br><em>optional</em></p>       | string                    |
+| <p><strong>Securities</strong>  <br><em>optional</em></p> | < integer (int32) > array |
 
 ### EarningInfo
 
-| Name | Schema |
-| :--- | :--- |
-| **Percent**   _optional_ | number \(double\) |
-| **Value**   _optional_ | number \(double\) |
+| Name                                                   | Schema          |
+| ------------------------------------------------------ | --------------- |
+| <p><strong>Percent</strong>  <br><em>optional</em></p> | number (double) |
+| <p><strong>Value</strong>  <br><em>optional</em></p>   | number (double) |
 
 ### EditableHotkeyModel
 
-| Name | Schema |
-| :--- | :--- |
-| **ActionId**   _optional_ | integer \(int32\) |
-| **Description**   _optional_ | string |
-| **KeyboardShortcut**   _optional_ | string |
-| **Parameters**   _optional_ | &lt; [HotkeyParameterMapModel](./#hotkeyparametermapmodel) &gt; array |
+| Name                                                            | Schema                                                          |
+| --------------------------------------------------------------- | --------------------------------------------------------------- |
+| <p><strong>ActionId</strong>  <br><em>optional</em></p>         | integer (int32)                                                 |
+| <p><strong>Description</strong>  <br><em>optional</em></p>      | string                                                          |
+| <p><strong>KeyboardShortcut</strong>  <br><em>optional</em></p> | string                                                          |
+| <p><strong>Parameters</strong>  <br><em>optional</em></p>       | < [HotkeyParameterMapModel](./#hotkeyparametermapmodel) > array |
 
 ### EquityResource
 
-| Name | Schema |
-| :--- | :--- |
-| **AddedDate**   _optional_ | string \(date-time\) |
-| **AllowMargin**   _optional_ | boolean |
-| **AllowShort**   _optional_ | boolean |
-| **AllowTrade**   _optional_ | boolean |
-| **Currency**   _optional_ | string |
-| **Description**   _optional_ | string |
-| **Enabled**   _optional_ | boolean |
-| **Exchange**   _optional_ | string |
-| **Id**   _optional_ | integer \(int32\) |
-| **ModifyDate**   _optional_ | string \(date-time\) |
-| **Precision**   _optional_ | integer \(int32\) |
-| **Symbol**   _optional_ | string |
-| **TickSize**   _optional_ | number \(double\) |
-| **Type**   _optional_ | enum \(BankersAcceptance, CertificateOfDeposit, CollateralizeMortgageObligation, CorporateBond, CommercialPaper, CorporatePrivatePlacement, CommonStock, FederalHousingAuthority, FederalHomeLoan, FederalNationalMortgageAssociation, ForeignExchangeContract, Future, GovernmentNationalMortgageAssociation, TreasuriesPlusAgencyDebenture, MutualFund, MortgageInterestOnly, MortgagePrincipleOnly, MortgagePrivatePlacement, MiscellaneousPassThru, MunicipalBond, NoIsitcSecurityType, Option, PreferredStock, RepurchaseAgreement, ReverseRepurchaseAgreement, StudentLoanMarketingAssociation, TimeDeposit, UsTreasuryBill, Warrant, CatsTigersLions, WildcardEntry, ConvertibleBond, MortgageIoette, Index, FakeStockForNonStandartOption, Right, Cryptocurrency, ETF, DepositoryReceipt, CoveredWarrant, Unit\) |
-| **VolumePrecision**   _optional_ | integer \(int32\) |
+| Name                                                           | Schema                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>AddedDate</strong>  <br><em>optional</em></p>       | string (date-time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <p><strong>AllowMargin</strong>  <br><em>optional</em></p>     | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>AllowShort</strong>  <br><em>optional</em></p>      | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>AllowTrade</strong>  <br><em>optional</em></p>      | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>Currency</strong>  <br><em>optional</em></p>        | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Description</strong>  <br><em>optional</em></p>     | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Enabled</strong>  <br><em>optional</em></p>         | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>Exchange</strong>  <br><em>optional</em></p>        | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Id</strong>  <br><em>optional</em></p>              | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>ModifyDate</strong>  <br><em>optional</em></p>      | string (date-time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <p><strong>Precision</strong>  <br><em>optional</em></p>       | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Symbol</strong>  <br><em>optional</em></p>          | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>TickSize</strong>  <br><em>optional</em></p>        | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Type</strong>  <br><em>optional</em></p>            | enum (BankersAcceptance, CertificateOfDeposit, CollateralizeMortgageObligation, CorporateBond, CommercialPaper, CorporatePrivatePlacement, CommonStock, FederalHousingAuthority, FederalHomeLoan, FederalNationalMortgageAssociation, ForeignExchangeContract, Future, GovernmentNationalMortgageAssociation, TreasuriesPlusAgencyDebenture, MutualFund, MortgageInterestOnly, MortgagePrincipleOnly, MortgagePrivatePlacement, MiscellaneousPassThru, MunicipalBond, NoIsitcSecurityType, Option, PreferredStock, RepurchaseAgreement, ReverseRepurchaseAgreement, StudentLoanMarketingAssociation, TimeDeposit, UsTreasuryBill, Warrant, CatsTigersLions, WildcardEntry, ConvertibleBond, MortgageIoette, Index, FakeStockForNonStandartOption, Right, Cryptocurrency, ETF, DepositoryReceipt, CoveredWarrant, Unit) |
+| <p><strong>VolumePrecision</strong>  <br><em>optional</em></p> | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ### Expecting
 
-| Name | Schema |
-| :--- | :--- |
-| **Reason**   _optional_ | string |
-| **State**   _optional_   _read-only_ | string |
-| **Step**   _optional_ | string |
-| **Token**   _optional_ | string |
+| Name                                                                         | Schema |
+| ---------------------------------------------------------------------------- | ------ |
+| <p><strong>Reason</strong>  <br><em>optional</em></p>                        | string |
+| <p><strong>State</strong>  <br><em>optional</em>  <br><em>read-only</em></p> | string |
+| <p><strong>Step</strong>  <br><em>optional</em></p>                          | string |
+| <p><strong>Token</strong>  <br><em>optional</em></p>                         | string |
 
 ### Failed
 
-| Name | Schema |
-| :--- | :--- |
-| **Reason**   _optional_ | string |
-| **State**   _optional_   _read-only_ | string |
-| **Step**   _optional_ | string |
+| Name                                                                         | Schema |
+| ---------------------------------------------------------------------------- | ------ |
+| <p><strong>Reason</strong>  <br><em>optional</em></p>                        | string |
+| <p><strong>State</strong>  <br><em>optional</em>  <br><em>read-only</em></p> | string |
+| <p><strong>Step</strong>  <br><em>optional</em></p>                          | string |
 
 ### FeeModel
 
-| Name | Schema |
-| :--- | :--- |
-| **CommissionId**   _optional_ | string |
-| **Id**   _optional_ | integer \(int32\) |
-| **Leverage**   _optional_ | number \(double\) |
-| **Seizure**   _optional_ | enum \(Placement, Execution, Fill, Proportional, Order\) |
-| **Value**   _optional_ | number \(double\) |
-| **ValueType**   _optional_ | enum \(Absolute, Coefficient\) |
+| Name                                                        | Schema                                                 |
+| ----------------------------------------------------------- | ------------------------------------------------------ |
+| <p><strong>CommissionId</strong>  <br><em>optional</em></p> | string                                                 |
+| <p><strong>Id</strong>  <br><em>optional</em></p>           | integer (int32)                                        |
+| <p><strong>Leverage</strong>  <br><em>optional</em></p>     | number (double)                                        |
+| <p><strong>Seizure</strong>  <br><em>optional</em></p>      | enum (Placement, Execution, Fill, Proportional, Order) |
+| <p><strong>Value</strong>  <br><em>optional</em></p>        | number (double)                                        |
+| <p><strong>ValueType</strong>  <br><em>optional</em></p>    | enum (Absolute, Coefficient)                           |
 
 ### Formula
 
 Formula model
 
-| Name | Schema |
-| :--- | :--- |
-| **Expression**   _optional_ | string |
-| **Id**   _optional_ | integer \(int32\) |
-| **Name**   _optional_ | string |
+| Name                                                      | Schema          |
+| --------------------------------------------------------- | --------------- |
+| <p><strong>Expression</strong>  <br><em>optional</em></p> | string          |
+| <p><strong>Id</strong>  <br><em>optional</em></p>         | integer (int32) |
+| <p><strong>Name</strong>  <br><em>optional</em></p>       | string          |
 
 ### FrameParams
 
-| Name | Schema |
-| :--- | :--- |
-| **Description**   _optional_ | string |
-| **Name**   _optional_ | string |
-| **TargetPercent**   _optional_ | number \(double\) |
-| **Tolerance**   _optional_ | number \(double\) |
+| Name                                                         | Schema          |
+| ------------------------------------------------------------ | --------------- |
+| <p><strong>Description</strong>  <br><em>optional</em></p>   | string          |
+| <p><strong>Name</strong>  <br><em>optional</em></p>          | string          |
+| <p><strong>TargetPercent</strong>  <br><em>optional</em></p> | number (double) |
+| <p><strong>Tolerance</strong>  <br><em>optional</em></p>     | number (double) |
 
 ### HistoricalTradeDataExportDataModel
 
-| Name | Schema |
-| :--- | :--- |
-| **DefaultFileName**   _optional_ | string |
-| **Indicators**   _optional_ | &lt; [HistoricalTradeDataExportIndicatorModel](./#historicaltradedataexportindicatormodel) &gt; array |
-| **Securities**   _optional_ | &lt; integer \(int32\) &gt; array |
-| **TimeFrame**   _optional_ | [TimeFrameModel](./#timeframemodel) |
+| Name                                                           | Schema                                                                                          |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| <p><strong>DefaultFileName</strong>  <br><em>optional</em></p> | string                                                                                          |
+| <p><strong>Indicators</strong>  <br><em>optional</em></p>      | < [HistoricalTradeDataExportIndicatorModel](./#historicaltradedataexportindicatormodel) > array |
+| <p><strong>Securities</strong>  <br><em>optional</em></p>      | < integer (int32) > array                                                                       |
+| <p><strong>TimeFrame</strong>  <br><em>optional</em></p>       | [TimeFrameModel](./#timeframemodel)                                                             |
 
 ### HistoricalTradeDataExportIndicatorModel
 
-| Name | Schema |
-| :--- | :--- |
-| **Args**   _optional_ | &lt; object &gt; array |
-| **Name**   _optional_ | string |
-| **Text**   _optional_ | string |
-| **Type**   _optional_ | string |
+| Name                                                | Schema           |
+| --------------------------------------------------- | ---------------- |
+| <p><strong>Args</strong>  <br><em>optional</em></p> | < object > array |
+| <p><strong>Name</strong>  <br><em>optional</em></p> | string           |
+| <p><strong>Text</strong>  <br><em>optional</em></p> | string           |
+| <p><strong>Type</strong>  <br><em>optional</em></p> | string           |
 
 ### HotkeyMapModel
 
-| Name | Schema |
-| :--- | :--- |
-| **ActionId**   _optional_ | integer \(int32\) |
-| **ActionName**   _optional_ | string |
-| **ActionResource**   _optional_ | [WebActionMapModel](./#webactionmapmodel) |
-| **Description**   _optional_ | string |
-| **Id**   _optional_ | integer \(int32\) |
-| **KeyboardShortcut**   _optional_ | string |
-| **Parameters**   _optional_ | &lt; [HotkeyParameterMapModel](./#hotkeyparametermapmodel) &gt; array |
+| Name                                                            | Schema                                                          |
+| --------------------------------------------------------------- | --------------------------------------------------------------- |
+| <p><strong>ActionId</strong>  <br><em>optional</em></p>         | integer (int32)                                                 |
+| <p><strong>ActionName</strong>  <br><em>optional</em></p>       | string                                                          |
+| <p><strong>ActionResource</strong>  <br><em>optional</em></p>   | [WebActionMapModel](./#webactionmapmodel)                       |
+| <p><strong>Description</strong>  <br><em>optional</em></p>      | string                                                          |
+| <p><strong>Id</strong>  <br><em>optional</em></p>               | integer (int32)                                                 |
+| <p><strong>KeyboardShortcut</strong>  <br><em>optional</em></p> | string                                                          |
+| <p><strong>Parameters</strong>  <br><em>optional</em></p>       | < [HotkeyParameterMapModel](./#hotkeyparametermapmodel) > array |
 
 ### HotkeyParameterMapModel
 
-| Name | Schema |
-| :--- | :--- |
-| **HotkeyId**   _optional_ | integer \(int32\) |
-| **Id**   _optional_ | integer \(int32\) |
-| **ParameterId**   _optional_ | integer \(int32\) |
-| **ParameterName**   _optional_ | string |
-| **ParameterType**   _optional_ | integer \(int32\) |
-| **Value**   _optional_ | string |
+| Name                                                         | Schema          |
+| ------------------------------------------------------------ | --------------- |
+| <p><strong>HotkeyId</strong>  <br><em>optional</em></p>      | integer (int32) |
+| <p><strong>Id</strong>  <br><em>optional</em></p>            | integer (int32) |
+| <p><strong>ParameterId</strong>  <br><em>optional</em></p>   | integer (int32) |
+| <p><strong>ParameterName</strong>  <br><em>optional</em></p> | string          |
+| <p><strong>ParameterType</strong>  <br><em>optional</em></p> | integer (int32) |
+| <p><strong>Value</strong>  <br><em>optional</em></p>         | string          |
 
 ### IFileUpload
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **Data**   _optional_ | **Pattern** : `"^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==\|[A-Za-z0-9+/]{3}=)?$"` | string \(byte\) |
-| **Description**   _optional_ |  | string |
-| **FileKey**   _optional_ |  | string |
-| **FileName**   _optional_ |  | string |
-| **Id**   _optional_ |  | integer \(int32\) |
-| **Timestamp**   _optional_ |  | string \(date-time\) |
-| **Type**   _optional_ |  | enum \(Other, ImageJpeg, ImageGif, ImagePng, ImageBitmap, ImageIco, TextHtml, TextPlain, VideoMpeg, VideoQuicktime\) |
+| Name                                                       | Description                                                                          | Schema                                                                                                             |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| <p><strong>Data</strong>  <br><em>optional</em></p>        | **Pattern** : `"^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==\\|[A-Za-z0-9+/]{3}=)?$"` | string (byte)                                                                                                      |
+| <p><strong>Description</strong>  <br><em>optional</em></p> |                                                                                      | string                                                                                                             |
+| <p><strong>FileKey</strong>  <br><em>optional</em></p>     |                                                                                      | string                                                                                                             |
+| <p><strong>FileName</strong>  <br><em>optional</em></p>    |                                                                                      | string                                                                                                             |
+| <p><strong>Id</strong>  <br><em>optional</em></p>          |                                                                                      | integer (int32)                                                                                                    |
+| <p><strong>Timestamp</strong>  <br><em>optional</em></p>   |                                                                                      | string (date-time)                                                                                                 |
+| <p><strong>Type</strong>  <br><em>optional</em></p>        |                                                                                      | enum (Other, ImageJpeg, ImageGif, ImagePng, ImageBitmap, ImageIco, TextHtml, TextPlain, VideoMpeg, VideoQuicktime) |
 
 ### ISecurity
 
-| Name | Schema |
-| :--- | :--- |
-| **AddedDate**   _optional_   _read-only_ | string \(date-time\) |
-| **AllowMargin**   _optional_   _read-only_ | boolean |
-| **AllowShort**   _optional_   _read-only_ | boolean |
-| **AllowTrade**   _optional_   _read-only_ | boolean |
-| **BaseCurrency**   _optional_   _read-only_ | string |
-| **CmsSuffix**   _optional_   _read-only_ | string |
-| **ContractSize**   _optional_   _read-only_ | number \(double\) |
-| **CqsSuffix**   _optional_   _read-only_ | string |
-| **Currency**   _optional_   _read-only_ | string |
-| **Cusip**   _optional_   _read-only_ | string |
-| **Description**   _optional_   _read-only_ | string |
-| **Enabled**   _optional_   _read-only_ | boolean |
-| **Exchange**   _optional_   _read-only_ | string |
-| **ExpirationDate**   _optional_   _read-only_ | string \(date-time\) |
-| **ExpirationName**   _optional_   _read-only_ | string |
-| **ExpirationType**   _optional_   _read-only_ | enum \(Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard\) |
-| **Id**   _optional_   _read-only_ | integer \(int32\) |
-| **Industry**   _optional_   _read-only_ | string |
-| **Isin**   _optional_   _read-only_ | string |
-| **Leverage**   _optional_   _read-only_ | number \(double\) |
-| **MarginRate**   _optional_   _read-only_ | number \(double\) |
-| **ModifyDate**   _optional_   _read-only_ | string \(date-time\) |
-| **Name**   _optional_   _read-only_ | string |
-| **NasdaqSuffix**   _optional_   _read-only_ | string |
-| **OptionType**   _optional_   _read-only_ | enum \(Call, Put, Undefined\) |
-| **ParentId**   _optional_   _read-only_ | integer \(int32\) |
-| **Precision**   _optional_   _read-only_ | integer \(int32\) |
-| **Price**   _optional_   _read-only_ | number \(double\) |
-| **QuoteSubscriptionKey**   _optional_   _read-only_ | string |
-| **Sector**   _optional_   _read-only_ | string |
-| **Sedol**   _optional_   _read-only_ | string |
-| **SeriesId**   _optional_   _read-only_ | integer \(int32\) |
-| **Source**   _optional_   _read-only_ | integer \(int32\) |
-| **SourceId**   _optional_   _read-only_ | string |
-| **StrikePrice**   _optional_   _read-only_ | number \(double\) |
-| **Suffix**   _optional_   _read-only_ | string |
-| **Symbol**   _optional_   _read-only_ | string |
-| **TickSize**   _optional_   _read-only_ | number \(double\) |
-| **Type**   _optional_   _read-only_ | enum \(BankersAcceptance, CertificateOfDeposit, CollateralizeMortgageObligation, CorporateBond, CommercialPaper, CorporatePrivatePlacement, CommonStock, FederalHousingAuthority, FederalHomeLoan, FederalNationalMortgageAssociation, ForeignExchangeContract, Future, GovernmentNationalMortgageAssociation, TreasuriesPlusAgencyDebenture, MutualFund, MortgageInterestOnly, MortgagePrincipleOnly, MortgagePrivatePlacement, MiscellaneousPassThru, MunicipalBond, NoIsitcSecurityType, Option, PreferredStock, RepurchaseAgreement, ReverseRepurchaseAgreement, StudentLoanMarketingAssociation, TimeDeposit, UsTreasuryBill, Warrant, CatsTigersLions, WildcardEntry, ConvertibleBond, MortgageIoette, Index, FakeStockForNonStandartOption, Right, Cryptocurrency, ETF, DepositoryReceipt, CoveredWarrant, Unit\) |
-| **UnderlyingSecuritySymbol**   _optional_   _read-only_ | string |
-| **Unit**   _optional_   _read-only_ | string |
-| **VolumePrecision**   _optional_   _read-only_ | integer \(int32\) |
+| Name                                                                                            | Schema                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>AddedDate</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                | string (date-time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <p><strong>AllowMargin</strong>  <br><em>optional</em>  <br><em>read-only</em></p>              | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>AllowShort</strong>  <br><em>optional</em>  <br><em>read-only</em></p>               | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>AllowTrade</strong>  <br><em>optional</em>  <br><em>read-only</em></p>               | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>BaseCurrency</strong>  <br><em>optional</em>  <br><em>read-only</em></p>             | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>CmsSuffix</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>ContractSize</strong>  <br><em>optional</em>  <br><em>read-only</em></p>             | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>CqsSuffix</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Currency</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                 | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Cusip</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                    | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Description</strong>  <br><em>optional</em>  <br><em>read-only</em></p>              | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Enabled</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                  | boolean                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <p><strong>Exchange</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                 | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>ExpirationDate</strong>  <br><em>optional</em>  <br><em>read-only</em></p>           | string (date-time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <p><strong>ExpirationName</strong>  <br><em>optional</em>  <br><em>read-only</em></p>           | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>ExpirationType</strong>  <br><em>optional</em>  <br><em>read-only</em></p>           | enum (Regular, Quarterly, Weekly, Flex, Undefined, Mini, NonStandard)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| <p><strong>Id</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                       | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Industry</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                 | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Isin</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                     | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Leverage</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                 | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>MarginRate</strong>  <br><em>optional</em>  <br><em>read-only</em></p>               | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>ModifyDate</strong>  <br><em>optional</em>  <br><em>read-only</em></p>               | string (date-time)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| <p><strong>Name</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                     | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>NasdaqSuffix</strong>  <br><em>optional</em>  <br><em>read-only</em></p>             | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>OptionType</strong>  <br><em>optional</em>  <br><em>read-only</em></p>               | enum (Call, Put, Undefined)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| <p><strong>ParentId</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                 | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Precision</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Price</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                    | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>QuoteSubscriptionKey</strong>  <br><em>optional</em>  <br><em>read-only</em></p>     | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Sector</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                   | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Sedol</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                    | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>SeriesId</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                 | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Source</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                   | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>SourceId</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                 | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>StrikePrice</strong>  <br><em>optional</em>  <br><em>read-only</em></p>              | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Suffix</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                   | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Symbol</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                   | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>TickSize</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                 | number (double)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <p><strong>Type</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                     | enum (BankersAcceptance, CertificateOfDeposit, CollateralizeMortgageObligation, CorporateBond, CommercialPaper, CorporatePrivatePlacement, CommonStock, FederalHousingAuthority, FederalHomeLoan, FederalNationalMortgageAssociation, ForeignExchangeContract, Future, GovernmentNationalMortgageAssociation, TreasuriesPlusAgencyDebenture, MutualFund, MortgageInterestOnly, MortgagePrincipleOnly, MortgagePrivatePlacement, MiscellaneousPassThru, MunicipalBond, NoIsitcSecurityType, Option, PreferredStock, RepurchaseAgreement, ReverseRepurchaseAgreement, StudentLoanMarketingAssociation, TimeDeposit, UsTreasuryBill, Warrant, CatsTigersLions, WildcardEntry, ConvertibleBond, MortgageIoette, Index, FakeStockForNonStandartOption, Right, Cryptocurrency, ETF, DepositoryReceipt, CoveredWarrant, Unit) |
+| <p><strong>UnderlyingSecuritySymbol</strong>  <br><em>optional</em>  <br><em>read-only</em></p> | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>Unit</strong>  <br><em>optional</em>  <br><em>read-only</em></p>                     | string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <p><strong>VolumePrecision</strong>  <br><em>optional</em>  <br><em>read-only</em></p>          | integer (int32)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ### IndicatorHistoryMapModel
 
-| Name | Schema |
-| :--- | :--- |
-| **Date**   _optional_ | integer \(int32\) |
-| **Values**   _optional_ | &lt; number \(double\) &gt; array |
+| Name                                                  | Schema                    |
+| ----------------------------------------------------- | ------------------------- |
+| <p><strong>Date</strong>  <br><em>optional</em></p>   | integer (int32)           |
+| <p><strong>Values</strong>  <br><em>optional</em></p> | < number (double) > array |
 
 ### IndicatorHistoryRequestSettings
 
-| Name | Schema |
-| :--- | :--- |
-| **CandlesCount**   _optional_ | integer \(int32\) |
-| **EndDate**   _optional_ | integer \(int32\) |
-| **IncludeNonMarketData**   _optional_ | boolean |
-| **Interval**   _optional_ | integer \(int32\) |
-| **Offset**   _optional_ | integer \(int32\) |
-| **Period**   _optional_ | string |
-| **Signature**   _optional_ | string |
-| **StartDate**   _optional_ | integer \(int32\) |
+| Name                                                                | Schema          |
+| ------------------------------------------------------------------- | --------------- |
+| <p><strong>CandlesCount</strong>  <br><em>optional</em></p>         | integer (int32) |
+| <p><strong>EndDate</strong>  <br><em>optional</em></p>              | integer (int32) |
+| <p><strong>IncludeNonMarketData</strong>  <br><em>optional</em></p> | boolean         |
+| <p><strong>Interval</strong>  <br><em>optional</em></p>             | integer (int32) |
+| <p><strong>Offset</strong>  <br><em>optional</em></p>               | integer (int32) |
+| <p><strong>Period</strong>  <br><em>optional</em></p>               | string          |
+| <p><strong>Signature</strong>  <br><em>optional</em></p>            | string          |
+| <p><strong>StartDate</strong>  <br><em>optional</em></p>            | integer (int32) |
 
 ### LevelInfoMapModel
 
-| Name | Schema |
-| :--- | :--- |
-| **BottomPrice**   _optional_ | number \(double\) |
-| **GreenCandles**   _optional_ | &lt; integer \(int32\) &gt; array |
-| **RedCandles**   _optional_ | &lt; integer \(int32\) &gt; array |
-| **TopPrice**   _optional_ | number \(double\) |
+| Name                                                        | Schema                    |
+| ----------------------------------------------------------- | ------------------------- |
+| <p><strong>BottomPrice</strong>  <br><em>optional</em></p>  | number (double)           |
+| <p><strong>GreenCandles</strong>  <br><em>optional</em></p> | < integer (int32) > array |
+| <p><strong>RedCandles</strong>  <br><em>optional</em></p>   | < integer (int32) > array |
+| <p><strong>TopPrice</strong>  <br><em>optional</em></p>     | number (double)           |
 
 ### ModifyOrderResource
 
 Modify order parameters
 
-| Name | Description | Schema |
-| :--- | :--- | :--- |
-| **ClientId**   _optional_ | Client order id. | string |
-| **ExecutionInstructions**   _optional_ | Algo order execution instructions. | &lt; string, string &gt; map |
-| **ExpireDate**   _optional_ | Expire date. Assigned by client. | string \(date-time\) |
-| **Id**   _required_ | Internal order id.   **Minimum value** : `1`   **Maximum value** : `2147483647` | integer \(int32\) |
-| **Legs**   _optional_ | Order legs | &lt; [ModifyOrderResource](./#modifyorderresource) &gt; array |
-| **Price**   _optional_ | Price \(not used for some order types\). | number \(double\) |
-| **Quantity**   _optional_ | Quantity. Assigned by client.   **Minimum value** : `0` | number \(double\) |
-| **StopPrice**   _optional_ | Stop price \(used for stop orders\). | number \(double\) |
-| **TrailingLimitAmount**   _optional_ |  | number \(double\) |
-| **TrailingLimitAmountType**   _optional_ |  | enum \(Absolute, Persentage\) |
-| **TrailingStopAmount**   _optional_ |  | number \(double\) |
-| **TrailingStopAmountType**   _optional_ |  | enum \(Absolute, Persentage\) |
-| **ValidationsToBypass**   _optional_ | Flag property indicating validation rules to bypass | integer \(int32\) |
-
+| Name                                                                   | Description                                                                                                                                  | Schema                                                  |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| <p><strong>ClientId</strong>  <br><em>optional</em></p>                | Client order id.                                                                                                                             | string                                                  |
+| <p><strong>ExecutionInstructions</strong>  <br><em>optional</em></p>   | Algo order execution instructions.                                                                                                           | < string, string > map                                  |
+| <p><strong>ExpireDate</strong>  <br><em>optional</em></p>              | Expire date. Assigned by client.                                                                                                             | string (date-time)                                      |
+| <p><strong>Id</strong>  <br><em>required</em></p>                      | <p>Internal order id.  <br><strong>Minimum value</strong> : <code>1</code>  <br><strong>Maximum value</strong> : <code>2147483647</code></p> | integer (int32)                                         |
+| <p><strong>Legs</strong>  <br><em>optional</em></p>                    | Order legs                                                                                                                                   | < [ModifyOrderResource](./#modifyorderresource) > array |
+| <p><strong>Price</strong>  <br><em>optional</em></p>                   | Price (not used for some order types).                                                                                                       | number (double)                                         |
+| <p><strong>Quantity</strong>  <br><em>optional</em></p>                | <p>Quantity. Assigned by client.  <br><strong>Minimum value</strong> : <code>0</code></p>                                                    | number (double)                                         |
+| <p><strong>StopPrice</strong>  <br><em>optional</em></p>               | Stop price (used for stop orders).                                                                                                           | number (double)                                         |
+| <p><strong>TrailingLimitAmount</strong>  <br><em>optional</em></p>     |                                                                                                                                              | number (double)                                         |
+| <p><strong>TrailingLimitAmountType</strong>  <br><em>optional</em></p> |                                                                                                                                              | enum (Absolute, Persentage)                             |
+| <p><strong>TrailingStopAmount</strong>  <br><em>optional</em></p>      |                                                                                                                                              | number (double)                                         |
+| <p><strong>TrailingStopAmountType</strong>  <br><em>optional</em></p>  |                                                                                                                                              | enum (Absolute, Persentage)                             |
+| <p><strong>ValidationsToBypass</strong>  <br><em>optional</em></p>     | Flag property indicating validation rules to bypass                                                                                          | integer (int32)                                         |

@@ -10,122 +10,36 @@ This GET endpoint enables you to list all existing positions of the user whose a
 
 There are eight required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **accountId** \(path\). This is the numeric ID of the trading account whose positions must be listed.
-5. **pageNumber** \(query\). This is the number of the page \(all positions are split in pages\).
-6. **pageSize** \(query\). This is the preferable size of the page \(maximum value is 99\).
-7. **sortField** \(query\). This is a position parameter by which all returned positions must be sorted.
-8. **desc** \(query\). This boolean parameter indicates if the returned positions should be sorted in ascending \(false\) or descending \(true\) order.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **accountId** (path). This is the numeric ID of the trading account whose positions must be listed.
+5. **pageNumber **(query). This is the number of the page (all positions are split in pages).
+6. **pageSize **(query). This is the preferable size of the page (maximum value is 99).
+7. **sortField **(query). This is a position parameter by which all returned positions must be sorted.
+8. **desc **(query). This boolean parameter indicates if the returned positions should be sorted in ascending (false) or descending (true) order.
 
 There's also one optional parameter worth examining:
 
-* filter \(query\). This is an SQL query used to retrieve only those positions that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+* filter (query). This is an SQL query used to retrieve only those positions that satisfy the conditions of the query. The following table outlines the parameter's syntax.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Syntax</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>CreateDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
-          <li>CreateDate between Range</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve positions that were created in the
-        time period specified in the Range parameter or exactly at the time specified
-        in the Date parameter.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>CreateDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
-          <li>CreateDate &gt;= #2019-03-13T18:31:42#</li>
-          <li>CreateDate &lt; #2019-03-12T19:31:42#</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>ModifyDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
-          <li>ModifyDate between Range</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve positions that were modified in the
-        time period specified in the Range parameter or exactly at the time specified
-        in the Date parameter.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>ModifyDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
-          <li>ModifyDate &gt;= #2019-03-13T18:31:42#</li>
-          <li>ModifyDate &lt; #2019-03-12T19:31:42#</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>Quantity (&gt;, &gt;=, &lt;, &lt;=) Number</li>
-          <li>Quantity between Range</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve positions with the number of securities
-        being in the range indicated in the Range parameter or equal to the number
-        in the Number parameter.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>Quantity = 100</li>
-          <li>Quantity &gt;= 100</li>
-          <li>Quantity between 100 and 1000</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>SecurityId = Number</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve positions whose securityId parameter
-        is equal to the Id provided in the query.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>SecurityId = 4</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>Symbol = String</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve positions whose underlying security&apos;s
-        ticker symbol is equal to the string provided in the query.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>Symbol = &apos;AAPL&apos;</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Syntax                                                                                      | Description                                                                                                                                                                    | Example                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>CreateDate (>, >=, &#x3C;, &#x3C;=) Date</li><li>CreateDate between Range</li></ul> | This query enables you to retrieve positions that were created in the time period specified in the Range parameter or exactly at the time specified in the Date parameter.     | <ul><li>CreateDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li><li>CreateDate >= #2019-03-13T18:31:42#</li><li>CreateDate &#x3C; #2019-03-12T19:31:42#</li></ul> |
+| <ul><li>ModifyDate (>, >=, &#x3C;, &#x3C;=) Date</li><li>ModifyDate between Range</li></ul> | This query enables you to retrieve positions that were modified in the time period specified in the Range parameter or exactly at the time specified in the Date parameter.    | <ul><li>ModifyDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li><li>ModifyDate >= #2019-03-13T18:31:42#</li><li>ModifyDate &#x3C; #2019-03-12T19:31:42#</li></ul> |
+| <ul><li>Quantity (>, >=, &#x3C;, &#x3C;=) Number</li><li>Quantity between Range</li></ul>   | This query enables you to retrieve positions with the number of securities being in the range indicated in the Range parameter or equal to the number in the Number parameter. | <ul><li>Quantity = 100</li><li>Quantity >= 100</li><li>Quantity between 100 and 1000</li></ul>                                                                                   |
+| <ul><li>SecurityId = Number</li></ul>                                                       | This query enables you to retrieve positions whose securityId parameter is equal to the Id provided in the query.                                                              | <ul><li>SecurityId = 4</li></ul>                                                                                                                                                 |
+| <ul><li>Symbol = String</li></ul>                                                           | This query enables you to retrieve positions whose underlying security's ticker symbol is equal to the string provided in the query.                                           | <ul><li>Symbol = 'AAPL'</li></ul>                                                                                                                                                |
 
 {% hint style="info" %}
 Note that you can combine different queries to create more complex requests:
 
-* SecurityId = 4 and CreateDate &gt;= \#2019-03-13T18:31:42\#
+* SecurityId = 4 and CreateDate >= #2019-03-13T18:31:42#
 {% endhint %}
 
 Here's the final template for this API request:
 
-```text
+```
 GET apiURL/v1.0/accounts/{accountId}/positions?pageNumber=0&pageSize=10&sortField=Id&desc=true
 ```
 
@@ -161,35 +75,35 @@ GET apiURL/v1.0/accounts/{accountId}/positions?pageNumber=0&pageSize=10&sortFiel
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| Id | This is the internal ID of the position |
-| AccountID | This is the account ID that was provided in the request's header |
-| SecurityId | This is the internal ID of the underlying security in the position |
-| Symbol | This is the ticker symbol |
-| Name | In most cases this field is identical to Symbol |
-| CompanyName | This is the full name of the listed company |
-| SecurityCurrency | This is the currency in which the security is denominated |
-| SecurityType | This is the type of the underlying security.  The range of possible values is listed in the following table. |
-| ContractSize | This is the minimum contract size for this financial instrument. |
-| CostBasis | This is the average execution price multiplied by the number of shares |
-| DailyCostBasis | This is the gross market value of all transactions in this order |
-| CreateDate | This is the date on which the order was created |
-| ModifyDate | This is the date on which the order was last modified |
-| Quantity | This is the number of shares in the order |
-| RealizedProfitLoss | This is the realized profit or loss of this position |
-| AverageOpenPrice | The average opening price of all positions. This variable is calculated for positions of the same type — either Long or Short \(you can't simultaneously open a long and a short position on the same instrument\) |
-| AverageClosePrice | The average closing price of all positions. This variable is calculated for positions of the same type — either Long or Short \(you can't simultaneously open a long and a short position on the same instrument\) |
-| StopLossPrice | This the price at which the position should be terminated \(if this price point is reached\) |
-| TakeProfitPrice | This is the price point at which the profit should be realized \(if this price point is reached\). |
-| DailyCloseProfitLoss | This is the gross profit or loss of all trades of this security made during the current trading session. |
-| Excess Changes | This indicates how much this position affects your account's excess. |
-| DayQuantity | This is the gross number of shares of this security that have been traded during the current trading session. |
-| MarketValueEOD | This is the market value of the position registered at the end of the previous trading session. |
+| Parameter            | Description                                                                                                                                                                                                      |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Id                   | This is the internal ID of the position                                                                                                                                                                          |
+| AccountID            | This is the account ID that was provided in the request's header                                                                                                                                                 |
+| SecurityId           | This is the internal ID of the underlying security in the position                                                                                                                                               |
+| Symbol               | This is the ticker symbol                                                                                                                                                                                        |
+| Name                 | In most cases this field is identical to Symbol                                                                                                                                                                  |
+| CompanyName          | This is the full name of the listed company                                                                                                                                                                      |
+| SecurityCurrency     | This is the currency in which the security is denominated                                                                                                                                                        |
+| SecurityType         | This is the type of the underlying security.  The range of possible values is listed in the following table.                                                                                                     |
+| ContractSize         | This is the minimum contract size for this financial instrument.                                                                                                                                                 |
+| CostBasis            | This is the average execution price multiplied by the number of shares                                                                                                                                           |
+| DailyCostBasis       | This is the gross market value of all transactions in this order                                                                                                                                                 |
+| CreateDate           | This is the date on which the order was created                                                                                                                                                                  |
+| ModifyDate           | This is the date on which the order was last modified                                                                                                                                                            |
+| Quantity             | This is the number of shares in the order                                                                                                                                                                        |
+| RealizedProfitLoss   | This is the realized profit or loss of this position                                                                                                                                                             |
+| AverageOpenPrice     | The average opening price of all positions. This variable is calculated for positions of the same type — either Long or Short (you can't simultaneously open a long and a short position on the same instrument) |
+| AverageClosePrice    | The average closing price of all positions. This variable is calculated for positions of the same type — either Long or Short (you can't simultaneously open a long and a short position on the same instrument) |
+| StopLossPrice        | This the price at which the position should be terminated (if this price point is reached)                                                                                                                       |
+| TakeProfitPrice      | This is the price point at which the profit should be realized (if this price point is reached).                                                                                                                 |
+| DailyCloseProfitLoss | This is the gross profit or loss of all trades of this security made during the current trading session.                                                                                                         |
+| Excess Changes       | This indicates how much this position affects your account's excess.                                                                                                                                             |
+| DayQuantity          | This is the gross number of shares of this security that have been traded during the current trading session.                                                                                                    |
+| MarketValueEOD       | This is the market value of the position registered at the end of the previous trading session.                                                                                                                  |
 
 ### Security Type
 
-```text
+```
 BankersAcceptance                     = 0,
 CertificateOfDeposit                  = 1,
 CollateralizeMortgageObligation       = 2,
@@ -269,4 +183,3 @@ It's critical to understand that when you use the authorization token of a parti
 ```
 
 In the following article we provide in-depth coverage of the syntax for this API request.
-

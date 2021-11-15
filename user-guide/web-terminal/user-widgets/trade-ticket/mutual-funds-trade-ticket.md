@@ -10,7 +10,7 @@ Mutual funds are a popular investment vehicle for investors who wish to delegate
 
 ### Mutual Funds Trading in ETNA Trader Web
 
-In ETNA Trader Web, trading of mutual funds transpires on the __**Mutual Funds Trade Ticket** widget. This widget is responsible for purchasing, selling, exchanging, and liquidating of mutual funds. Here a trader can also indicate if they would like to reinvest dividends and capital gains.
+In ETNA Trader Web, trading of mutual funds transpires on the_ _**Mutual Funds Trade Ticket **widget. This widget is responsible for purchasing, selling, exchanging, and liquidating of mutual funds. Here a trader can also indicate if they would like to reinvest dividends and capital gains.
 
 ![](../../../../.gitbook/assets/screenshot-2020-07-09-at-19.11.38.png)
 
@@ -28,7 +28,7 @@ When you buy a mutual fund, you may instruct the managers of the mutual fund to 
 
 #### Selling Mutual Funds
 
-Mutual funds can be sold in either a specific dollar amount \(Even Dollar\) or in a specific quantity \(Shares\):
+Mutual funds can be sold in either a specific dollar amount (Even Dollar) or in a specific quantity (Shares):
 
 ![](../../../../.gitbook/assets/screenshot-2020-07-09-at-19.29.28.png)
 
@@ -62,13 +62,12 @@ If you navigate to the **Orders** widget, you will notice the newly placed order
 
 Mutual funds trading can also be performed on the go using our mobile apps that have complete functionality on par with their web counterpart. You can use ETNA Trader for iOS and Android to purchase, sell, exchange, or liquidate mutual funds. Dividends, short-term, and long-term gains can similarly be reinvested.
 
-![](../../../../.gitbook/assets/file_001-3-_iphonexspacegrey_portrait.png)
+![](../../../../.gitbook/assets/file\_001-3-\_iphonexspacegrey\_portrait.png)
 
 ### Mutual Funds Trading Schedule
 
-During the night, from 12 AM to 9:30 AM Eastern Time, ETNA Trader collects the ticker symbols and quotes for all available mutual funds. 
+During the night, from 12 AM to 9:30 AM Eastern Time, ETNA Trader collects the ticker symbols and quotes for all available mutual funds.&#x20;
 
-Mutual fund orders are accepted from 9:30 AM ET until the cut-off time \(defined by the broker\). 
+Mutual fund orders are accepted from 9:30 AM ET until the cut-off time (defined by the broker).&#x20;
 
 Prior to the start of the following trading session, positions in mutual funds will either appear or disappear depending on the order's type and status.
-

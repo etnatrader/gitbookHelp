@@ -12,7 +12,7 @@ ETNA Trader's account information is designed to display the user's real-time in
 
 ### Account Value Chart
 
-The chart on the right displays the trading account's value for a certain period. Specify the starting date, the end date, and the account value for the period will be graphed. To export the chart data in the Excel \(.xlsx\) format, click **Export**.
+The chart on the right displays the trading account's value for a certain period. Specify the starting date, the end date, and the account value for the period will be graphed. To export the chart data in the Excel (.xlsx) format, click **Export**.
 
 ### Cash
 
@@ -20,7 +20,7 @@ Cash indicates the amount of funds that the account's user has deposited themsel
 
 For example, if you crate a new trading account, its Cash parameter is initially equal to $0. After every deposit, Cash increases by the deposited amount — if you deposit $100, it'll increase from $0 to $100.
 
-Now let's investigate how opening new positions affects Cash. Suppose your Cash is equal to $200 and you want to purchase $800 worth of Apple stock \($200 is your own money and the remaining $600 are margin debt\). The applicable commission for this transaction is $3.75 and it has to be included in the order cost — so you'll only be able to purchase $796.25 worth of stocks while the remaining $3.75 will be charged for the commission. In total, your Cash will be decreased by $800 and will be equal to —$600. In addition to negative Cash, your account will also have $796.25 worth of Apple stock.
+Now let's investigate how opening new positions affects Cash. Suppose your Cash is equal to $200 and you want to purchase $800 worth of Apple stock ($200 is your own money and the remaining $600 are margin debt). The applicable commission for this transaction is $3.75 and it has to be included in the order cost — so you'll only be able to purchase $796.25 worth of stocks while the remaining $3.75 will be charged for the commission. In total, your Cash will be decreased by $800 and will be equal to —$600. In addition to negative Cash, your account will also have $796.25 worth of Apple stock.
 
 {% hint style="info" %}
 Cash is a base parameter that is retrieved daily from the clearing firm. Throughout the trading session it is dynamically re-calculated whenever a new transaction is made.
@@ -36,7 +36,7 @@ $$
 
 ### Pending Order Count
 
-Pending Order Count indicates the number of current outstanding orders \(the ones that are yet to be executed\).
+Pending Order Count indicates the number of current outstanding orders (the ones that are yet to be executed).
 
 ### Stock Buying Power
 
@@ -56,7 +56,7 @@ $$
 
 ### Day Trading Buying Power
 
-Day trading buying power is a critical indicator that represents the amount of funds that the user can spend to open new positions. At the beginning of every trading session, this value is retrieved from the clearing firm. Throughout the trading session, Day Trading Buying Power fluctuates based on the performed trades — it decreases with each new long position and it increases with each position closing \(only for `Day Trader` accounts\). If the account type is not `Day Trader`,  day trading buying power will not be updated during the trading session.
+Day trading buying power is a critical indicator that represents the amount of funds that the user can spend to open new positions. At the beginning of every trading session, this value is retrieved from the clearing firm. Throughout the trading session, Day Trading Buying Power fluctuates based on the performed trades — it decreases with each new long position and it increases with each position closing (only for `Day Trader` accounts). If the account type is not `Day Trader`,  day trading buying power will not be updated during the trading session.
 
 It's calculated differently for stocks and options. For stocks, when you open a new long position, Day Trading Buying Power decreases according to the following formula:
 
@@ -66,12 +66,12 @@ $$
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| OrderCost | This is the cost of the order calculated as the order price multiplied by the number of purchased securities. |
-| 4 | Because brokers let their users borrow up to three times as much money to finance positions, the buying power of the entire account has to be decreased by the position cost multiplied by four \(1 is the user's funds and 3 is the margin debt\). |
-| MarginRate | This is the fraction of funds that the user must contribute if they're using margin debt. |
-| Commission | This is the commission that was applied to this order. |
+| Parameter  | Description                                                                                                                                                                                                                                       |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OrderCost  | This is the cost of the order calculated as the order price multiplied by the number of purchased securities.                                                                                                                                     |
+| 4          | Because brokers let their users borrow up to three times as much money to finance positions, the buying power of the entire account has to be decreased by the position cost multiplied by four (1 is the user's funds and 3 is the margin debt). |
+| MarginRate | This is the fraction of funds that the user must contribute if they're using margin debt.                                                                                                                                                         |
+| Commission | This is the commission that was applied to this order.                                                                                                                                                                                            |
 
 Please bear in mind that if you manually increase the initial margin rate in your environment, the day trading buying power might end up being higher than the actual amount of funds that traders will be able to expend to open a new position. The initial margin rate will always take precedence over the day trading buying power.
 
@@ -93,9 +93,9 @@ Unrealized PL is **Open Profit/Loss** and it represents the amount of unrealized
 
 ### Realized P/L Today
 
-Realized P/L Today is **Realized Profit/Loss Today** and it represents the amount of realized profit or loss during the current trading session.
+Realized P/L Today is **Realized Profit/Loss Today **and it represents the amount of realized profit or loss during the current trading session.
 
-### Market Value \(or Net Liquidation Value\)
+### Market Value (or Net Liquidation Value)
 
 Market Value is the market value of all positions in all asset classes and is equal to the sum of four other parameters:
 
@@ -115,4 +115,3 @@ $$
 ### Trade Data Balance
 
 Trade data balance is a parameter that is retrieved daily from the clearing firm but is not used in our platform in any capacity. You may encounter it in the API and in the `Account Info` widget of the web terminal, but it doesn't affect anything as far as ETNA Trader is concerned.
-

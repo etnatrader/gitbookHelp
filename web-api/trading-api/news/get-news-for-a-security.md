@@ -6,18 +6,18 @@ description: Fetch all recent news for a specific security
 
 ### Introduction
 
-This GET endpoint enables you to fetch the list of all recent news for a specific security by providing its ticker symbol. 
+This GET endpoint enables you to fetch the list of all recent news for a specific security by providing its ticker symbol.&#x20;
 
 There are four required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **symbol** \(query\). This is the ticker symbol of the security for which the news must be fetched.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **symbol **(query). This is the ticker symbol of the security for which the news must be fetched.
 
 Here's the final template for this API request:
 
-```text
+```
 GET apiURL/v1.0/news?symbol=AAPL
 ```
 
@@ -59,15 +59,15 @@ In response to this API request, you'll receive a JSON file containing the list 
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| Key | This is the ticker symbol of the security for which the news were fetched. |
-| Date | This is the date of the news article. |
-| Source | This is the ticker symbol of the security for which the news were fetched. |
-| Header | This is the header of the news article. |
-| Attachment | This is the URL of the news. |
-| Content | This is a preview of the news article. |
-| NewsId | This is the ID of the news article. |
+| Parameter  | Description                                                                |
+| ---------- | -------------------------------------------------------------------------- |
+| Key        | This is the ticker symbol of the security for which the news were fetched. |
+| Date       | This is the date of the news article.                                      |
+| Source     | This is the ticker symbol of the security for which the news were fetched. |
+| Header     | This is the header of the news article.                                    |
+| Attachment | This is the URL of the news.                                               |
+| Content    | This is a preview of the news article.                                     |
+| NewsId     | This is the ID of the news article.                                        |
 
 ### Common Mistakes
 
@@ -86,4 +86,3 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
 #### Failing to Specify the Query Parameters
 
 It's crucial to understand that the _**security**_ parameter must be provided in the request; otherwise you'll receive the 404 status code.
-

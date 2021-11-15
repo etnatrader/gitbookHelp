@@ -8,13 +8,13 @@ description: Perform two-factor authentication in ETNA Trader
 
 All API requests in ETNA Trader require a unique authentication token that must be provided in the request header. Without this token, it's impossible to place orders, retrieve charts, create users, etc. To get the token, use the following API endpoint:
 
-```text
+```
 POST APIBaseURL + /token
 ```
 
 {% hint style="info" %}
-API base URL is unique for every environment; if you're testing the API on our demo environment, the final endpoint URL will be as follows:  
-[`https://pub-api-et-demo-prod.etnasoft.us/api/token`](https://pub-api-et-demo-prod.etnasoft.us/api/token) 
+API base URL is unique for every environment; if you're testing the API on our demo environment, the final endpoint URL will be as follows:\
+[`https://pub-api-et-demo-prod.etnasoft.us/api/token`](https://pub-api-et-demo-prod.etnasoft.us/api/token)&#x20;
 {% endhint %}
 
 If the user's account has two-factor authentication enabled, the authentication process involves two separate requests:
@@ -37,8 +37,8 @@ The header of the second request must contain the following three parameters:
 1. **Et-App-Key**. This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
 2. **Username**. This is the username of the user on whose behalf all future requests will be made.
 3. **Password**. This is the password of the user on whose behalf all future requests will be made.
-4. **VerificationCode** \(header\). This is the verification code that's sent by email or as an SMS message \(depending on the the user's settings\).
-5. **Authorization** \(header\). This is the authorization token that will be returned in response to the initial request.
+4. **VerificationCode** (header). This is the verification code that's sent by email or as an SMS message (depending on the the user's settings).
+5. **Authorization** (header). This is the authorization token that will be returned in response to the initial request.
 
 ### CURL
 
@@ -46,7 +46,7 @@ The following are sample CURLs for performing two-factor authentication:
 
 #### First Request
 
-```text
+```
 curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
 	-H "Username: yourUsername" \
 	-H "Password: yourPassword" \
@@ -56,7 +56,7 @@ curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
 
 #### Second Request
 
-```text
+```
 curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
 	-H "Username: yourUsername" \
 	-H "Password: yourPassword" \
@@ -85,11 +85,11 @@ Also notice that the response contains the **Token** parameter that must be used
 
 In total, the header of the second request must contain five parameters:
 
-1. **Username** \(identical to the first request\);
-2. **Password** \(identical to the first request\);
-3. **Et-App-Key** \(identical to the first request\);
-4. **Authorization** \(Bearer + token\);
-5. **VerificationCode** \(the code received by email or SMS\).
+1. **Username **(identical to the first request);
+2. **Password **(identical to the first request);
+3. **Et-App-Key **(identical to the first request);
+4. **Authorization** (Bearer + token);
+5. **VerificationCode** (the code received by email or SMS).
 
 In response to the second request, you'll receive the following JSON dictionary:
 
@@ -147,4 +147,3 @@ Another common mistake that developers make during authentication is failure to 
 To see how two-factor authentication can be performed in code, feel free to examine our [sample requests](../../code-samples/two-factor-autentication.md) in a dedicated article.
 
 In the following article we provide in-depth coverage of the syntax for this API request.
-

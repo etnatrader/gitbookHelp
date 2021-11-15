@@ -8,44 +8,40 @@ description: Retrieve information about a check transfer
 
 This GET endpoint enables you to retrieve detailed information about a check transfer.
 
-{% api-method method="get" host="baseURL" path="/v{apiVersion}/transfers/check/{transferID}" %}
-{% api-method-summary %}
-Get a Check Transfer's Info
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="baseURL" path="/v{apiVersion}/transfers/check/{transferID}" method="get" summary="Get a Check Transfer's Info" %}
+{% swagger-description %}
 Returns the detailed information about the target transfer.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="apiVersion" required=true type="number" %}
-The version of the API. By default it's `1.0`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="path" name="apiVersion" type="number" %}
+The version of the API. By default it's 
 
-{% api-method-parameter name="transferId" required=true type="integer" %}
+`1.0`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="transferId" type="integer" %}
 The ID of the target check transfer.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Et-App-Key" type="string" required=true %}
+{% swagger-parameter in="header" name="Et-App-Key" type="string" %}
 The unique key of your app that identifies it when communicating with our service. Contact your administrator to get this key.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Authorization token. Must be provided in the following format: `Bearer token` \(`Bearer` + 1 space + the token\)
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Authorization token. Must be provided in the following format: 
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Successful request, the check transfer's information is returned.
-{% endapi-method-response-example-description %}
+`Bearer token `
 
+(
+
+`Bearer`
+
+ \+ 1 space + the token)
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Successful request, the check transfer's information is returned." %}
 ```javascript
 {
   "transferId": "78c6c7cc-d046-4411-44ea-08d9098ea314",
@@ -65,18 +61,11 @@ Successful request, the check transfer's information is returned.
   }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=409 %}
-{% api-method-response-example-description %}
-Unable to find the transfer by its ID.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="409" description="Unable to find the transfer by its ID." %}
 ```
 No response
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

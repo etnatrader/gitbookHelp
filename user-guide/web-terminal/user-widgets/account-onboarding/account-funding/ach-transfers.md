@@ -12,7 +12,7 @@ ACH transfers facilitate deposits and withdrawal of funds to/from your trading a
 
 To create a new ACH Relationships, navigate to the **Funds Account Transfer** widget and open the **ACH Relationship** sub-tab. Click **Link a Bank Account**.
 
-![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-16.49.39%20%281%29.png)
+![](<../../../../../.gitbook/assets/screenshot-2020-03-04-at-16.49.39 (1).png>)
 
 This will bring up the ACH relationship establishment page. Click **Agree**.
 
@@ -22,7 +22,7 @@ Next, select your bank from the list of the most frequently used banks.
 
 ![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-16.12.40.png)
 
-If your bank is not visible, you can search for it by entering its name in the **Search** field.
+If your bank is not visible, you can search for it by entering its name in the** Search** field.
 
 ![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-16.15.03.png)
 
@@ -52,11 +52,10 @@ ACH relationships can be renamed at any time by clicking on the **Edit** icon in
 
 ### Depositing and Withdrawing Funds
 
-To deposit or withdraw funds, go back to the **Funds Transfer** tab. At the top, select the **ACH Transfer** radio button. Next, select the preferred transaction type: **ACH Deposit** or **ACH Withdraw**. Specify the required amount of funds to be transferred \(in USD\), select the newly added banking account, and finally click **Submit**.
+To deposit or withdraw funds, go back to the **Funds Transfer** tab. At the top, select the **ACH Transfer** radio button. Next, select the preferred transaction type: **ACH Deposit** or **ACH Withdraw**. Specify the required amount of funds to be transferred (in USD), select the newly added banking account, and finally click **Submit**.
 
 ![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-17.02.50.png)
 
 ### Monitoring ACH Transfers
 
-Once you've submitted a deposit or withdrawal request, its state will change to **Submitted**, meaning that it's currently under review by an administrator. Once they approve the request, its state will change to **FundsPosted** — i.e., the funds have been transferred and are now waiting for clearance. The final state of the request is **Complete** — i.e., the funds have been cleared and can be used to place trades.
-
+Once you've submitted a deposit or withdrawal request, its state will change to **Submitted**, meaning that it's currently under review by an administrator. Once they approve the request, its state will change to **FundsPosted **— i.e., the funds have been transferred and are now waiting for clearance. The final state of the request is **Complete** — i.e., the funds have been cleared and can be used to place trades.

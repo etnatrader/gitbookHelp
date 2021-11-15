@@ -4,31 +4,31 @@ description: Subscribe to positions
 
 # Positions
 
-### Subscription Parameters <a id="Positions-Subscribe"></a>
+### Subscription Parameters <a href="positions-subscribe" id="positions-subscribe"></a>
 
-| Parameter | Value |
-| :---: | :---: |
-| **Cmd** | Subscribe.txt |
-| **SessionId** | Session ID from the authentication request |
-| **Keys** | The ID of the trading account whose positions you would like to retrieve |
-| **EntityType** | Position |
-| **HttpClientType** | WebSocket |
+|      Parameter     |                                   Value                                  |
+| :----------------: | :----------------------------------------------------------------------: |
+|       **Cmd**      |                               Subscribe.txt                              |
+|    **SessionId**   |                Session ID from the authentication request                |
+|      **Keys**      | The ID of the trading account whose positions you would like to retrieve |
+|   **EntityType**   |                                 Position                                 |
+| **HttpClientType** |                                 WebSocket                                |
 
 **Example:** { "Cmd":"Subscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"Position","HttpClientType":"WebSocket"}
 
-### Unsubscription Parameters <a id="Positions-Unsubscribe"></a>
+### Unsubscription Parameters <a href="positions-unsubscribe" id="positions-unsubscribe"></a>
 
-| Parameter | Value |
-| :---: | :---: |
-| **Cmd** | Unsubscribe.txt |
-| **SessionId** | Session ID from the authentication request |
-| **Keys** | The ID of the trading account whose positions you would like to unsubscribe from |
-| **EntityType** | Position |
-| **HttpClientType** | WebSocket |
+|      Parameter     |                                       Value                                      |
+| :----------------: | :------------------------------------------------------------------------------: |
+|       **Cmd**      |                                  Unsubscribe.txt                                 |
+|    **SessionId**   |                    Session ID from the authentication request                    |
+|      **Keys**      | The ID of the trading account whose positions you would like to unsubscribe from |
+|   **EntityType**   |                                     Position                                     |
+| **HttpClientType** |                                     WebSocket                                    |
 
-**Example:** { "Cmd":"Unsubscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"Position","HttpClientType":"WebSocket"}
+**Example: **{ "Cmd":"Unsubscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"Position","HttpClientType":"WebSocket"}
 
-### Message <a id="Positions-Message"></a>
+### Message <a href="positions-message" id="positions-message"></a>
 
 In response to this request, you will receive all position-related information in the JSON format.
 
@@ -64,4 +64,3 @@ In response to this request, you will receive all position-related information i
 * "UnderlyingExpirationType":"Regular"
 
 }
-

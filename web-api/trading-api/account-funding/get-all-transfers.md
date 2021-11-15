@@ -6,22 +6,22 @@ description: Retrieve all deposits and withdrawals of a particular trading accou
 
 ### Overview
 
-This GET endpoint enables you to retrieve all deposits and withdrawals of a particular trading account. 
+This GET endpoint enables you to retrieve all deposits and withdrawals of a particular trading account.&#x20;
 
 There are eight required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **accountId** \(path\). This is the [internal identifier](../user-accounts/list-users-accounts/) of the trading account in ETNA Trader.
-5. **pageNumber** \(query\). This is the number of the page \(all transfers are split in pages\).
-6. **pageSize** \(query\). This is the preferable size of the page \(maximum value is 99\).
-7. **sortField** \(query\). This is a parameter by which all returned transfers must be sorted.
-8. **desc** \(query\). This boolean parameter indicates if the returned transfers should be sorted in ascending \(false\) or descending \(true\) order.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **accountId** (path). This is the [internal identifier](../user-accounts/list-users-accounts/) of the trading account in ETNA Trader.
+5. **pageNumber **(query). This is the number of the page (all transfers are split in pages).
+6. **pageSize **(query). This is the preferable size of the page (maximum value is 99).
+7. **sortField **(query). This is a parameter by which all returned transfers must be sorted.
+8. **desc **(query). This boolean parameter indicates if the returned transfers should be sorted in ascending (false) or descending (true) order.
 
 Here's the final template for this API request:
 
-```text
+```
 GET apiURL/v1.0/accounts/{accountId}/transfers
 ```
 
@@ -66,74 +66,17 @@ In response to this API request, you will receive an array of JSON dictionaries 
 
 where:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Id</td>
-      <td style="text-align:left">Internal ID of the transfer.</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">AccountId</td>
-      <td style="text-align:left">Internal ID of the trading account on whose behalf the transfer was performed.</td>
-      <td
-      style="text-align:left">Integer</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Mechanism</td>
-      <td style="text-align:left">
-        <p>The transfer mechanism.
-          <br />Possible values:</p>
-        <ul>
-          <li>ACH,</li>
-          <li>Check,</li>
-          <li>Wire.</li>
-        </ul>
-      </td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">IsDeposit</td>
-      <td style="text-align:left">Indicates if this transfer is a deposit.</td>
-      <td style="text-align:left">Boolean</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Status</td>
-      <td style="text-align:left">The status of the transfer.</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Comment</td>
-      <td style="text-align:left">An accompanying comment.</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Amount</td>
-      <td style="text-align:left">The amount transferred in USD.</td>
-      <td style="text-align:left">Double</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TransferDate</td>
-      <td style="text-align:left">The date on which the transfer was finalized at the clearing firm. The
-        funds will be available in the trading account the following trading session
-        when ETNA Trader receives Start-of-Day files from the clearing firm.</td>
-      <td
-      style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CreatedAt</td>
-      <td style="text-align:left">The date on which the transfer was initiated.</td>
-      <td style="text-align:left">String</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter    | Description                                                                                                                                                                                                              | Value   |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| Id           | Internal ID of the transfer.                                                                                                                                                                                             | String  |
+| AccountId    | Internal ID of the trading account on whose behalf the transfer was performed.                                                                                                                                           | Integer |
+| Mechanism    | <p>The transfer mechanism. <br>Possible values:</p><ul><li>ACH,</li><li>Check,</li><li>Wire.</li></ul>                                                                                                                   | String  |
+| IsDeposit    | Indicates if this transfer is a deposit.                                                                                                                                                                                 | Boolean |
+| Status       | The status of the transfer.                                                                                                                                                                                              | String  |
+| Comment      | An accompanying comment.                                                                                                                                                                                                 | String  |
+| Amount       | The amount transferred in USD.                                                                                                                                                                                           | Double  |
+| TransferDate | The date on which the transfer was finalized at the clearing firm. The funds will be available in the trading account the following trading session when ETNA Trader receives Start-of-Day files from the clearing firm. | String  |
+| CreatedAt    | The date on which the transfer was initiated.                                                                                                                                                                            | String  |
 
 ### Common Mistakes
 
@@ -148,4 +91,3 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
     "error": "Application key is not defined or does not exist"
 }
 ```
-
