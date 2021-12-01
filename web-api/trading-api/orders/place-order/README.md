@@ -10,23 +10,23 @@ This POST endpoint enables you to place a new order in ETNA Trader. The order is
 
 There are five required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **Trading Account ID** \(path\). This is the numeric ID of the trading account on which a new order must be placed. 
-4. **API version** \(path\). Unless necessary, leave it at "1.0".
-5. **body** \(body of the request\). This is a JSON file that contains the order's characteristics. 
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **Trading Account ID** (path). This is the numeric ID of the trading account on which a new order must be placed.&#x20;
+4. **API version** (path). Unless necessary, leave it at "1.0".
+5. **body** (body of the request). This is a JSON file that contains the order's characteristics.&#x20;
 
 Here's the final template for this API request:
 
-* For orders that will only be verified by the API but not the execution venue \(quick\):
+* For orders that will only be verified by the API but not the execution venue (quick):
 
-```text
+```
 POST apiURL/v1.0/accounts/{accountID}/orders
 ```
 
-* For orders that will be verified by the API and the execution venue too \(slow\):
+* For orders that will be verified by the API and the execution venue too (slow):
 
-```text
+```
 POST apiURL/v1.0/accounts/{accountID}/syncorders
 ```
 
@@ -34,122 +34,26 @@ POST apiURL/v1.0/accounts/{accountID}/syncorders
 
 The body of this request represents the information about the to-be-created order. It must be sent in the JSON format with the parameters described in the following table:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Symbol</td>
-      <td style="text-align:left">This is the ticker symbol of the underlying security in the new order.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ClientId</td>
-      <td style="text-align:left">This is the order ID on the client&apos;s side.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExpireDate</td>
-      <td style="text-align:left">This is the expiration of the order. If the order isn&apos;t executed
-        until the specified date, it&apos;ll automatically be cancelled.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Type</td>
-      <td style="text-align:left">This is the type of the order. The range of possible values includes: <b>Market</b>, <b>Limit</b>, <b>Stop</b>, <b>Stop Limit</b>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Side</td>
-      <td style="text-align:left">This is the side of the trade. The range of possible values includes: <b>Buy</b>, <b>Sell</b>, <b>SellShort</b>, <b>Buy to Cover</b>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExecInst</td>
-      <td style="text-align:left">Indicates if the order should be filled either entirely in one transaction
-        or not at all. Possible values: <b>&apos;DoNotIncrease&apos;</b>, <b>&apos;DoNotReduce&apos;</b>, <b>&apos;AllOrNone&apos;</b>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TimeInforce</td>
-      <td style="text-align:left">
-        <p>Indicates the time frame in which the order will be active. Possible Values:</p>
-        <ol>
-          <li><b>Day</b>. The order automatically expires at the end of the regular
-            trading session if it weren&apos;t executed.</li>
-          <li><b>GoodTillCancel </b>(Good-till-Canceled). The order persists indefinitely
-            until it is executed or manually cancelled.</li>
-          <li><b>AtTheOpening</b>. The order should be filled at the opening of the
-            marketplace or cancelled.</li>
-          <li><b>ImmediateOrCancel</b>. The order should be completely or partially
-            filled immediately. If partially filled, the remaining part of the order
-            should be cancelled.</li>
-          <li><b>FillOrKill</b>. The order should be filled immediately and entirely
-            or cancelled right away.</li>
-          <li><b>GoodTillCrossing</b>. The order will be active until the market enters
-            the auction phase.</li>
-          <li><b>GoodTillDate</b>. The order will be active until the date specified
-            in the ExpireDate attribute (unless it is executed or cancelled).</li>
-          <li><b>GoodTillTime</b>. The order will be active until a certain time point.</li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Quantity</td>
-      <td style="text-align:left">The number of shares in the order.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Price</td>
-      <td style="text-align:left">The price at which the shares must be purchased.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">StopPrice</td>
-      <td style="text-align:left">When this price is reached, the order will automatically be converted
-        into a market order.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Exchange</td>
-      <td style="text-align:left">This is the exchange on which the order should be executed.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TrailingStopAmountType</td>
-      <td style="text-align:left">This is the type of the trailing stop (<b>Absolute</b> or <b>Persentage</b>).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TrailingStopAmount</td>
-      <td style="text-align:left">This is the trailing amount of the trailing stop (in percentage terms
-        or in the currency units).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TrailingLimitAmountType</td>
-      <td style="text-align:left">This is the type of the trailing limit (<b>Absolute</b> or <b>Persentage</b>).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TrailingLimitAmount</td>
-      <td style="text-align:left">This is the trailing amount (in percentage terms or in the currency units).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExtendedHours</td>
-      <td style="text-align:left">Indicates if the order should be placed during the extended hours (pre-market
-        session, post-market session).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExecutionInstructions</td>
-      <td style="text-align:left">
-        <p></p>
-        <p>Execution instructions of the order. May include the following data:</p>
-        <ul>
-          <li><code>&quot;PerTradeCommission&quot;: &quot;1&quot;</code>. Specified
-            in <b>dollars</b> ($1 per trade).</li>
-          <li><code>&quot;PerContractCommission&quot;:&quot;1&quot;</code>. Specified
-            in <b>cents </b>(1 cent per contract).</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Legs</td>
-      <td style="text-align:left">These are the legs of a multi-leg order.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Symbol                  | This is the ticker symbol of the underlying security in the new order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ClientId                | This is the order ID on the client's side.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ExpireDate              | This is the expiration of the order. If the order isn't executed until the specified date, it'll automatically be cancelled.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Type                    | This is the type of the order. The range of possible values includes: **Market**, **Limit**, **Stop**, **Stop Limit**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Side                    | This is the side of the trade. The range of possible values includes: **Buy**, **Sell**, **SellShort**, **BuyToCover**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ExecInst                | Indicates if the order should be filled either entirely in one transaction or not at all. Possible values: **'DoNotIncrease'**, **'DoNotReduce'**, **'AllOrNone'**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| TimeInforce             | <p>Indicates the time frame in which the order will be active. Possible Values:</p><ol><li><strong>Day</strong>. The order automatically expires at the end of the regular trading session if it weren't executed.</li><li><strong>GoodTillCancel</strong> (Good-till-Canceled). The order persists indefinitely until it is executed or manually cancelled.</li><li><strong>AtTheOpening</strong>. The order should be filled at the opening of the marketplace or cancelled.</li><li><strong>ImmediateOrCancel</strong>. The order should be completely or partially filled immediately. If partially filled, the remaining part of the order should be cancelled.</li><li><strong>FillOrKill</strong>. The order should be filled immediately and entirely or cancelled right away.</li><li><strong>GoodTillCrossing</strong>. The order will be active until the market enters the auction phase.</li><li><strong>GoodTillDate</strong>. The order will be active until the date specified in the ExpireDate attribute (unless it is executed or cancelled).</li><li><strong>GoodTillTime</strong>. The order will be active until a certain time point.</li></ol> |
+| Quantity                | The number of shares in the order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Price                   | The price at which the shares must be purchased.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| StopPrice               | When this price is reached, the order will automatically be converted into a market order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Exchange                | This is the exchange on which the order should be executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| TrailingStopAmountType  | This is the type of the trailing stop (**Absolute** or **Persentage**).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| TrailingStopAmount      | This is the trailing amount of the trailing stop (in percentage terms or in the currency units).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| TrailingLimitAmountType | This is the type of the trailing limit (**Absolute** or **Persentage**).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| TrailingLimitAmount     | This is the trailing amount (in percentage terms or in the currency units).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ExtendedHours           | Indicates if the order should be placed during the extended hours (pre-market session, post-market session).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ExecutionInstructions   | <p></p><p>Execution instructions of the order. May include the following data:</p><ul><li><code>"PerTradeCommission": "1"</code>. Specified in <strong>dollars</strong> ($1 per trade).</li><li><code>"PerContractCommission":"1"</code>. Specified in <strong>cents</strong> (1 cent per contract).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Legs                    | These are the legs of a multi-leg order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ```javascript
 {
@@ -197,7 +101,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-### Smallest Limit Order Sample \(Options\)
+### Smallest Limit Order Sample (Options)
 
 ```javascript
 {
@@ -212,7 +116,7 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-### Complex Order Sample \(Options\)
+### Complex Order Sample (Options)
 
 ```javascript
 {
@@ -234,9 +138,9 @@ The body of this request represents the information about the to-be-created orde
 }
 ```
 
-### Multi-Leg Order Sample \(Option + Option\)
+### Multi-Leg Order Sample (Option + Option)
 
-All legs of a multi-leg order should contain only three parameters: 
+All legs of a multi-leg order should contain only three parameters:&#x20;
 
 1. Ticker symbol
 2. Quantity
@@ -514,7 +418,7 @@ In response to this request, you'll receive a JSON file with comprehensive infor
 ```
 
 {% hint style="warning" %}
-Please note that you may receive the 200 status code even if the order was improperly configured. For example, if you attempt to create a limit order and specify the stop price instead of the limit price, the order will be registered in the system but will eventually be rejected. Please monitor the order's status \(it's _PendingNew_ by default\) to determine if the order has been rejected or placed.
+Please note that you may receive the 200 status code even if the order was improperly configured. For example, if you attempt to create a limit order and specify the stop price instead of the limit price, the order will be registered in the system but will eventually be rejected. Please monitor the order's status (it's _PendingNew_ by default) to determine if the order has been rejected or placed.
 {% endhint %}
 
 ## Common Mistakes
@@ -619,4 +523,3 @@ An attempt to place a stop-loss order without specifying its price will result i
 Feel free to examine our [Code Samples](../../code-samples/placing-new-orders.md#placing-new-orders-and-checking-their-status) article that demonstrates how to place a new order with the help of a Python script.
 
 The following article covers the syntax for this API request in detail.
-
