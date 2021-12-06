@@ -34,7 +34,7 @@ The body of this request represents the information about the to-be-established 
 | AccountNumber    | This is the number of the banking account in the target bank. For example: **987654321222**. The number of digits must not be lower than ten.                                                 |
 | AccountOwnerName | This is the name of the banking account owner. For example: **Robert**.                                                                                                                       |
 | Name             | This is the name of the target bank. For example: **Citi Bank**.                                                                                                                              |
-| ApprovalMethod   | This is the approval method. The value of this parameter can be either **Instant **(Plaid) or **Manual** (Micro deposits).                                                                    |
+| ApprovalMethod   | This is the approval method. The value of this parameter can be either **Instant** (Plaid) or **Manual** (Micro deposits).                                                                    |
 
 ```javascript
 {
@@ -83,7 +83,7 @@ where:
 | Name             | This is the name of the target bank. For example: **Citi Bank**.                                                                                                                              |
 | Status           | This is the status of the ACH relationship.                                                                                                                                                   |
 | CreatedAt        | This is the precise time and date at which the ACH relationship was established.                                                                                                              |
-| ApprovalMethod   | This is the approval method. The value of this parameter can be either **Instant **(Plaid) or **Manual** (Micro deposits).                                                                    |
+| ApprovalMethod   | This is the approval method. The value of this parameter can be either **Instant** (Plaid) or **Manual** (Micro deposits).                                                                    |
 | Default          | This boolean value indicates if this ACH relationship is the default one for this trading account.                                                                                            |
 
 ### Common Mistakes

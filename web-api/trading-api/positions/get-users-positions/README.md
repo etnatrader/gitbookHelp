@@ -14,10 +14,10 @@ There are eight required parameters that must be provided in the request:
 2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
 3. **API version** (path). Unless necessary, leave it at "1.0".
 4. **accountId** (path). This is the numeric ID of the trading account whose positions must be listed.
-5. **pageNumber **(query). This is the number of the page (all positions are split in pages).
-6. **pageSize **(query). This is the preferable size of the page (maximum value is 99).
-7. **sortField **(query). This is a position parameter by which all returned positions must be sorted.
-8. **desc **(query). This boolean parameter indicates if the returned positions should be sorted in ascending (false) or descending (true) order.
+5. **pageNumber** (query). This is the number of the page (all positions are split in pages).
+6. **pageSize** (query). This is the preferable size of the page (maximum value is 99).
+7. **sortField** (query). This is a position parameter by which all returned positions must be sorted.
+8. **desc** (query). This boolean parameter indicates if the returned positions should be sorted in ascending (false) or descending (true) order.
 
 There's also one optional parameter worth examining:
 

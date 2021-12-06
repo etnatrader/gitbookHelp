@@ -22,7 +22,7 @@ Next, select your bank from the list of the most frequently used banks.
 
 ![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-16.12.40.png)
 
-If your bank is not visible, you can search for it by entering its name in the** Search** field.
+If your bank is not visible, you can search for it by entering its name in the **Search** field.
 
 ![](../../../../../.gitbook/assets/screenshot-2019-10-21-at-16.15.03.png)
 
@@ -58,4 +58,4 @@ To deposit or withdraw funds, go back to the **Funds Transfer** tab. At the top,
 
 ### Monitoring ACH Transfers
 
-Once you've submitted a deposit or withdrawal request, its state will change to **Submitted**, meaning that it's currently under review by an administrator. Once they approve the request, its state will change to **FundsPosted **— i.e., the funds have been transferred and are now waiting for clearance. The final state of the request is **Complete** — i.e., the funds have been cleared and can be used to place trades.
+Once you've submitted a deposit or withdrawal request, its state will change to **Submitted**, meaning that it's currently under review by an administrator. Once they approve the request, its state will change to **FundsPosted** — i.e., the funds have been transferred and are now waiting for clearance. The final state of the request is **Complete** — i.e., the funds have been cleared and can be used to place trades.

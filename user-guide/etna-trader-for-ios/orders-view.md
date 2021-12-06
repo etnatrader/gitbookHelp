@@ -34,7 +34,7 @@ The layout of the tab represents a four-segment view that sorts all orders by th
 
 The Orders tab lists all orders of the specified trading account. Looking closer at each order you can view the following information about the order:
 
-* The** ticker symbol** of the order's underlying security;
+* The **ticker symbol** of the order's underlying security;
 * The current **Mark** price of the security;
 * The transaction **type** (Buy, Sell, Sell Short, Buy to cover);
 * The **number of securities** transacted in this order;

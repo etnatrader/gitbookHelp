@@ -10,7 +10,7 @@ Mutual funds are a popular investment vehicle for investors who wish to delegate
 
 ### Mutual Funds Trading in ETNA Trader Web
 
-In ETNA Trader Web, trading of mutual funds transpires on the_ _**Mutual Funds Trade Ticket **widget. This widget is responsible for purchasing, selling, exchanging, and liquidating of mutual funds. Here a trader can also indicate if they would like to reinvest dividends and capital gains.
+In ETNA Trader Web, trading of mutual funds transpires on the __ **Mutual Funds Trade Ticket** widget. This widget is responsible for purchasing, selling, exchanging, and liquidating of mutual funds. Here a trader can also indicate if they would like to reinvest dividends and capital gains.
 
 ![](../../../../.gitbook/assets/screenshot-2020-07-09-at-19.11.38.png)
 

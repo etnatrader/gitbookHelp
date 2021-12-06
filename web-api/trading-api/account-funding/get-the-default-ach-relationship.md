@@ -52,7 +52,7 @@ where:
 | Name             | This is the name of the target bank. For example: **Citi Bank**.                                                                                                                              |
 | Status           | This is the status of the ACH relationship.                                                                                                                                                   |
 | CreatedAt        | This is the precise time and date at which the ACH relationship was created.                                                                                                                  |
-| ApprovalMethod   | This is the approval method. The value of this parameter can be either **Instant **(Plaid) or **Manual** (Micro deposits).                                                                    |
+| ApprovalMethod   | This is the approval method. The value of this parameter can be either **Instant** (Plaid) or **Manual** (Micro deposits).                                                                    |
 | Default          | This boolean value indicates if this ACH relationship is a default one for this trading account.                                                                                              |
 
 ### Common Mistakes

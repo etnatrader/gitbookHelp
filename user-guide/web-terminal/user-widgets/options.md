@@ -63,9 +63,9 @@ $$Intrinsic = 0$$
 
 The `Intrinsic` parameter is calculated as the difference between the underlying security's mark price and the option's strike price. For out-of-the-money options, `Intrinsic` is equal to 0.
 
-**   **2.** Time**
+&#x20;  ****   2. **Time**
 
-****$$Time = Option Mark - Intrinsic$$** **
+****$$Time = Option Mark - Intrinsic$$ ****&#x20;
 
 The `Time` parameter is calculated as the difference between the option's mark price and the **Intrinsic** parameter (or vice versa).
 

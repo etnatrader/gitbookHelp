@@ -93,7 +93,7 @@ Unrealized PL is **Open Profit/Loss** and it represents the amount of unrealized
 
 ### Realized P/L Today
 
-Realized P/L Today is **Realized Profit/Loss Today **and it represents the amount of realized profit or loss during the current trading session.
+Realized P/L Today is **Realized Profit/Loss Today** and it represents the amount of realized profit or loss during the current trading session.
 
 ### Market Value (or Net Liquidation Value)
 

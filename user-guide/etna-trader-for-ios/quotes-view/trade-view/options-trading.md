@@ -32,7 +32,7 @@ It's also possible to determine the number of options that must be displayed by 
 
 ![](../../../../.gitbook/assets/img\_0175\_iphonexspacegrey\_portrait.png)
 
-Once the options are filtered, proceed to select options that you'd like to trade: you can select either one options or multiple options (to enter into a complex strategy). Once you're done, tap **Trade Options**. This will bring up the order confirmation view where you can review the information about the order and finally tap **Verify Order **if everything is properly set.
+Once the options are filtered, proceed to select options that you'd like to trade: you can select either one options or multiple options (to enter into a complex strategy). Once you're done, tap **Trade Options**. This will bring up the order confirmation view where you can review the information about the order and finally tap **Verify Order** if everything is properly set.
 
 ![](../../../../.gitbook/assets/img\_0177\_iphonexspacegrey\_portrait.png)
 

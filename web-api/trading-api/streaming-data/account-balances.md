@@ -4,7 +4,7 @@ description: Subscribe to changes in traders' account balances
 
 # Account Balances
 
-### Subscription Parameters <a href="positions-subscribe" id="positions-subscribe"></a>
+### Subscription Parameters <a href="#positions-subscribe" id="positions-subscribe"></a>
 
 |      Parameter     |                                      Value                                      |
 | :----------------: | :-----------------------------------------------------------------------------: |
@@ -20,7 +20,7 @@ description: Subscribe to changes in traders' account balances
 If you need to stream account balances for multiple trading accounts, simply send multiple subscription commands and ETNA Trader will start outputting individual messages for each trading account.
 {% endhint %}
 
-### Unsubscription Parameters <a href="positions-unsubscribe" id="positions-unsubscribe"></a>
+### Unsubscription Parameters <a href="#positions-unsubscribe" id="positions-unsubscribe"></a>
 
 |      Parameter     |                                          Value                                          |
 | :----------------: | :-------------------------------------------------------------------------------------: |
@@ -30,9 +30,9 @@ If you need to stream account balances for multiple trading accounts, simply sen
 |   **EntityType**   |                                      AccountBalance                                     |
 | **HttpClientType** |                                        WebSocket                                        |
 
-**Example: **{ "Cmd":"Unsubscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"Position","HttpClientType":"WebSocket"}
+**Example:** { "Cmd":"Unsubscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"Position","HttpClientType":"WebSocket"}
 
-### Message <a href="positions-message" id="positions-message"></a>
+### Message <a href="#positions-message" id="positions-message"></a>
 
 In response to this request, you will receive all account-related information in the JSON format.
 

@@ -16,11 +16,11 @@ To create a new connection to the streamer following conditions must be satisfie
 * Session ID should be valid.
 * User ID should be valid.
 
-### Request <a href="websocketsapi-request" id="websocketsapi-request"></a>
+### Request <a href="#websocketsapi-request" id="websocketsapi-request"></a>
 
 #### Option 1: Via Login and Password
 
-**GET **<**URL>СreateSession.txt**?User=**\<UserLogin>**\&Password=**\<UserPassword>**\&HttpClientType=**WebSocket**
+**GET** <**URL>СreateSession.txt**?User=**\<UserLogin>**\&Password=**\<UserPassword>**\&HttpClientType=**WebSocket**
 
 **Example**: [wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=trader\&Password=trader\&HttpClientType=WebSocket](wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=trader\&Password=trader\&HttpClientType=WebSocket)
 
@@ -31,7 +31,7 @@ To create a new connection to the streamer following conditions must be satisfie
 
 #### Option 2: Via Streamer Session ID
 
-**GET **<**URL>**?User=**\<UserID>**:**\<SessionID>**\&Password=**\<StreamerSessionID>**\&HttpClientType=**WebSocket**
+**GET** <**URL>**?User=**\<UserID>**:**\<SessionID>**\&Password=**\<StreamerSessionID>**\&HttpClientType=**WebSocket**
 
 **Example:** [wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=**someUser:sessionID**\&Password=**StreamerSessionID**\&HttpClientType=**WebSocket**](wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=someUser:sessionID\&Password=StreamerSessionID\&HttpClientType=WebSocket)****
 
@@ -41,7 +41,7 @@ To create a new connection to the streamer following conditions must be satisfie
 | **SessionID**         | Result.SessionID                                                                                                              | User's session identifier.                  |
 | **StreamerSessionID** | <p>For trade data streamer: Result.DataAddresses.SessionID</p><p>For quote data streamer: Result.QuoteAddresses.SessionID</p> | Session identifier for the target streamer. |
 
-### Response <a href="websocketsapi-response" id="websocketsapi-response"></a>
+### Response <a href="#websocketsapi-response" id="websocketsapi-response"></a>
 
 | Param          | Value                     | Description             |
 | -------------- | ------------------------- | ----------------------- |
@@ -49,11 +49,11 @@ To create a new connection to the streamer following conditions must be satisfie
 | **StatusCode** | Connection Status         | —                       |
 | **SessionID**  | User's session identifier | —                       |
 
-**Example: **{"Cmd":"CreateSession.txt", "StatusCode":"Ok", "SessionId":"6210cb85-c6bb-44f1-a53b-0e43669bd6f4" }
+**Example:** {"Cmd":"CreateSession.txt", "StatusCode":"Ok", "SessionId":"6210cb85-c6bb-44f1-a53b-0e43669bd6f4" }
 
 **Example 2:** {"Cmd":"CreateSession.txt", "StatusCode":"Error"}
 
-## Subscribe/Unsubscribe <a href="websocketsapi-subscribe-unsubscribe" id="websocketsapi-subscribe-unsubscribe"></a>
+## Subscribe/Unsubscribe <a href="#websocketsapi-subscribe-unsubscribe" id="websocketsapi-subscribe-unsubscribe"></a>
 
 Used for start/stop receiving data changes. Once applications subscribe to a streaming endpoint, they are delivered a feed of data, without needing to worry about polling or REST API rate limits.
 

@@ -4,7 +4,7 @@ description: Subscribe to positions
 
 # Positions
 
-### Subscription Parameters <a href="positions-subscribe" id="positions-subscribe"></a>
+### Subscription Parameters <a href="#positions-subscribe" id="positions-subscribe"></a>
 
 |      Parameter     |                                   Value                                  |
 | :----------------: | :----------------------------------------------------------------------: |
@@ -16,7 +16,7 @@ description: Subscribe to positions
 
 **Example:** { "Cmd":"Subscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"Position","HttpClientType":"WebSocket"}
 
-### Unsubscription Parameters <a href="positions-unsubscribe" id="positions-unsubscribe"></a>
+### Unsubscription Parameters <a href="#positions-unsubscribe" id="positions-unsubscribe"></a>
 
 |      Parameter     |                                       Value                                      |
 | :----------------: | :------------------------------------------------------------------------------: |
@@ -26,9 +26,9 @@ description: Subscribe to positions
 |   **EntityType**   |                                     Position                                     |
 | **HttpClientType** |                                     WebSocket                                    |
 
-**Example: **{ "Cmd":"Unsubscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"Position","HttpClientType":"WebSocket"}
+**Example:** { "Cmd":"Unsubscribe.txt", "SessionId":"7e83072e-09e7-43ed-91d5-f2b747bf162e", "Keys":"140","EntityType":"Position","HttpClientType":"WebSocket"}
 
-### Message <a href="positions-message" id="positions-message"></a>
+### Message <a href="#positions-message" id="positions-message"></a>
 
 In response to this request, you will receive all position-related information in the JSON format.
 

@@ -12,7 +12,7 @@ In addition to ACH transfers and check transfers, ETNA Trader also provides trad
 Check transfers are relevant only for withdrawing funds.
 {% endhint %}
 
-To withdraw funds using wire transfers, select **Wire Transfer **on the **Funds Transfer** tab. Next, specify the amount to be withdrawn (in USD). If you would like to withdraw all funds altogether and close the account, select the **Total distribution and close account** checkbox.
+To withdraw funds using wire transfers, select **Wire Transfer** on the **Funds Transfer** tab. Next, specify the amount to be withdrawn (in USD). If you would like to withdraw all funds altogether and close the account, select the **Total distribution and close account** checkbox.
 
 ![](../../../../../.gitbook/assets/screenshot-2020-03-04-at-17.05.48.png)
 

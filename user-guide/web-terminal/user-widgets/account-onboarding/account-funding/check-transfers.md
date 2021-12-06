@@ -12,7 +12,7 @@ In addition to ACH transfers, ETNA Trader also enables traders to withdraw funds
 Check transfers are relevant only for withdrawing funds.
 {% endhint %}
 
-To withdraw funds using checks, select **Check Request **on the Funds Transfer tab. Specify the amount to be withdrawn (in USD). If you would like to withdraw all funds altogether and close the account, select the **Total distribution and close account** checkbox. Specify the memo if necessary, and the select the preferred delivery method:
+To withdraw funds using checks, select **Check Request** on the Funds Transfer tab. Specify the amount to be withdrawn (in USD). If you would like to withdraw all funds altogether and close the account, select the **Total distribution and close account** checkbox. Specify the memo if necessary, and the select the preferred delivery method:
 
 * Standard;
 * Overnight;

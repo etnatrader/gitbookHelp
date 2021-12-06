@@ -22,7 +22,7 @@ Moving downward, there's a line chart that displays the value of the portfolio o
 
 The bottom of the page features a visual representation of the portfolio's value in the form of a pie chart. Next to it there's a table that breaks down the structure of the portfolio by asset classes. Each asset class has four corresponding parameters:
 
-1. **Value**.** **The collective dollar value of all securities of this asset class in the portfolio.
+1. **Value**. **** The collective dollar value of all securities of this asset class in the portfolio.
 2. **Gain**. The dollar return of this asset class in the portfolio.
 3. **Actual**. The percentage return of this asset class in the portfolio.
 4. **Target**. The expected return of this asset class in the portfolio.
