@@ -79,15 +79,19 @@ In response to the first API request, you'll receive a JSON file that contains t
 }
 ```
 
+If `State` is equal to `BaseAuthentication` and `Reason` is equal to `Your Password has expired and must be changed`, proceed to [reset the password](../../password-reset/password-expiration.md).
+
+If `State` is equal to `Expecting` and `Reason` is equal to `PIN code is not init`, proceed to reset the user's pin code.
+
 Also notice that the response contains the **Token** parameter that must be used in the subsequent request as a header parameter in the following format:
 
 * `"Authorization" : "Bearer + tokenFromTheFirstRequest"`
 
 In total, the header of the second request must contain five parameters:
 
-1. **Username **(identical to the first request);
-2. **Password **(identical to the first request);
-3. **Et-App-Key **(identical to the first request);
+1. **Username** (identical to the first request);
+2. **Password** (identical to the first request);
+3. **Et-App-Key** (identical to the first request);
 4. **Authorization** (Bearer + token);
 5. **VerificationCode** (the code received by email or SMS).
 
