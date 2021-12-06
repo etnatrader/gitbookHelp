@@ -96,7 +96,7 @@
     * [2. Retrieve the Secret Question](web-api/trading-api/password-reset/2.-retrieve-the-secret-question.md)
     * [3. Generate a Token For a New Password](web-api/trading-api/password-reset/2.-generate-a-token-for-a-new-password.md)
     * [4. Update the Password](web-api/trading-api/password-reset/3.-update-the-password.md)
-    * [Pin Code Management](web-api/trading-api/password-reset/pin-code-management/README.md)
+    * [Pin Code Management](web-api/trading-api/password-reset/pin-code-management.md)
       * [Set a New Pin Code](web-api/trading-api/password-reset/pin-code-management/set-a-new-pin-code.md)
       * [Retrieve Security Images](web-api/trading-api/password-reset/pin-code-management/retrieve-security-images.md)
     * [Password Expiration](web-api/trading-api/password-reset/password-expiration.md)
