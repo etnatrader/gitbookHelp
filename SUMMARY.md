@@ -35,7 +35,7 @@
   * [Trading Tab](user-guide/digital-advisor/trading-tab.md)
   * [Activity Tab](user-guide/digital-advisor/activity-tab.md)
   * [Funding Tab](user-guide/digital-advisor/funding-tab.md)
-* [ETNA Trader for iOS](user-guide/etna-trader-for-ios/README.md)
+* [ETNA Trader Mobile](user-guide/etna-trader-for-ios/README.md)
   * [Getting Started](user-guide/etna-trader-for-ios/getting-started.md)
   * [App Layout](user-guide/etna-trader-for-ios/app-layout.md)
   * [Watchlist & Quotes View](user-guide/etna-trader-for-ios/quotes-view/README.md)
