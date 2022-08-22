@@ -6,30 +6,30 @@ description: Download the app from the App Store and sign up
 
 ### Introduction
 
-ETNA Trader for iOS serves as an extension of ETNA Trader Web and provides similar functionality, including:
+ETNA Trader for Mobile serves as an extension of ETNA Trader Web and provides similar functionality, including:
 
 1. Placing orders;
 2. Examining the profit and loss figures for open positions;
 3. Managing and viewing watchlists;
 4. Creating price alerts;
-5. Analyzing charts;
+5. Analysing charts;
 6. Exploring the market depth of various securities.
 
-To take a quick look at ETNA Trader for iOS in action, feel free to watch our vide overview of the app:
+To take a quick look at ETNA Trader in action, feel free to watch our vide overview of the app:
 
 {% embed url="https://www.youtube.com/watch?v=mypMwSeuYl4&t=2s" %}
 
-### Downloading ETNA Trader for iOS
+### Downloading ETNA Trader Mobile
 
 ETNA Trader for iOS is available on the [App Store](https://itunes.apple.com/us/app/etna-trader/id658778917?mt=8) for both iPhone and iPad. It also features an extension for the Apple Watch that enables users to track their positions, profit and loss figures, account information, etc.
 
-![](../../.gitbook/assets/img_4eaf831e2b67-1-2_iphonexspacegrey_portrait.png)
+![](../../.gitbook/assets/img\_4eaf831e2b67-1-2\_iphonexspacegrey\_portrait.png)
 
 ### Signing Up
 
-After you've downloaded the app, launch the app and tap on **Sign up**. if you've already signed up in ETNA Trader Web, you can use those credentials to log into the mobile app. 
+After you've downloaded the app, launch the app and tap on **Sign up**. if you've already signed up in ETNA Trader Web, you can use those credentials to log into the mobile app.&#x20;
 
-![](../../.gitbook/assets/img_0007_iphonexspacegrey_portrait.png)
+![](../../.gitbook/assets/img\_0007\_iphonexspacegrey\_portrait.png)
 
 On the sign-up window, proceed to specify your information:
 
@@ -41,11 +41,9 @@ On the sign-up window, proceed to specify your information:
 * Password confirmation;
 * Secret question-answer for password resets.
 
-![](../../.gitbook/assets/img_0008_iphonexspacegrey_portrait.png)
+![](../../.gitbook/assets/img\_0008\_iphonexspacegrey\_portrait.png)
 
 Once you're done filling in the form, tap **Done**, accept the privacy policy, and tap **OK**.
 
 Now that your new account has been created, proceed to log in.
-
-
 
