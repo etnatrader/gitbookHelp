@@ -6,7 +6,7 @@ description: Track active, filled, and cancelled orders.
 
 ### Introduction
 
-The third tab of ETNA Trader for iOS — **Orders** — is responsible for displaying the list of current orders of the current trading account: outstanding orders, filled orders, rejected, orders, etc. Here you can quickly inspect which of your orders have already been filled and which ones are under review or were rejected.&#x20;
+The third tab of ETNA Trader Mobile — **Orders** — is responsible for displaying the list of current orders of the current trading account: outstanding orders, filled orders, rejected, orders, etc. Here you can quickly inspect which of your orders have already been filled and which ones are under review or were rejected.&#x20;
 
 {% hint style="info" %}
 The number of the trading account is displayed in the navigation bar under the _Orders_ label.
@@ -58,7 +58,7 @@ To place a new order, you can tap on the **Quick Trade** text field underneath t
 
 ### Order Modification and Cancellation
 
-Any order, if it hasn't been filled yet, can be modified or cancelled right within ETNA Trader for iOS. To do that, reveal the action sheet by swiping left on the order. This will bring up four actions:
+Any order, if it hasn't been filled yet, can be modified or cancelled right within ETNA Trader Mobile. To do that, reveal the action sheet by swiping left on the order. This will bring up four actions:
 
 1. **Cancel**. Tapping this button will cancel the order.
 2. **Replace**. Tapping this button will redirect you to the order modification view where you can modify some of the order's properties.

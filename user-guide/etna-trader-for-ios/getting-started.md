@@ -12,7 +12,7 @@ ETNA Trader for Mobile serves as an extension of ETNA Trader Web and provides si
 2. Examining the profit and loss figures for open positions;
 3. Managing and viewing watchlists;
 4. Creating price alerts;
-5. Analysing charts;
+5. Analyzing charts;
 6. Exploring the market depth of various securities.
 
 To take a quick look at ETNA Trader in action, feel free to watch our vide overview of the app:

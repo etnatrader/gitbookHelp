@@ -6,7 +6,7 @@ description: Learn how to place a trade for stocks
 
 ### Introduction
 
-To place a new order transacting a stock in ETNA Trader for iOS, tap on any security in the **Quotes** view and then tap the **Trade** button in the top-right corner. This will prompt the trade view where you will proceed to specify the details of the new transaction.
+To place a new order transacting a stock in ETNA Trader Mobile, tap on any security in the **Quotes** view and then tap the **Trade** button in the top-right corner. This will prompt the trade view where you will proceed to specify the details of the new transaction.
 
 ![](<../../../../.gitbook/assets/img\_ff96693f5a2f-1\_iphonexspacegrey\_portrait (1).png>)
 
