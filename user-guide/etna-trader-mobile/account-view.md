@@ -16,16 +16,9 @@ Once you open the Account tab, the first thing you encounter is the account valu
 
 ![](../../.gitbook/assets/img\_0068\_iphonexspacegrey\_landscape.png)
 
-Moving downward, here you can inspect the current cash position, account's market value, and a detailed breakdown of all positions by types:
+Here you can inspect the account number, account's market value, current cash value, positions value, open profit/loss and buying power:
 
-* Long positions in stocks;
-* Short positions in stocks;
-* Long positions in options;
-* Short options in stocks;
-* Long positions in forex instruments;
-* Short positions in forex instruments.
-
-![](<../../.gitbook/assets/img\_0062\_iphonexspacegrey\_portrait (1).png>)
+![](../../.gitbook/assets/Account1.png)
 
 The next section covers the Buying Power available on the account, including:
 
@@ -41,20 +34,13 @@ The next section covers the Buying Power available on the account, including:
 You can learn in-depth about these terms in our dedicated article on [trading accounts](https://brokerhelp.etnatrader.com/administrator-guide/glossary/trading-accounts).
 {% endhint %}
 
-![](../../.gitbook/assets/img\_0062\_iphonexspacegrey\_portrait.png)
-
-In the last two sections of the _Account_ tab you can explore the following four parameters:
-
-1. **Day Open Profit/Loss**. This is the profit/loss for the current trading session.
-2. **Day Close Profit/Loss**. This is the amount of unrealized profit or loss of the trading account at the closing of the current trading session.
-3. **Pending Order Count**. This is the number of orders that have been placed but are yet to be executed.
-4. **Day Trades**. This is the number of day trades that have been executed on this trading account during the last five trading sessions (including the current one). According to FINRA, a day trade is the purchase and sale (or sale and purchase) of the same security during the same trading session in a margin account.
+![](../../.gitbook/assets/Account2.png)
 
 ### Configuring Settings
 
 The app's settings can be configured on a dedicated screen by tapping on the little gear icon in the top-right corner.&#x20;
 
-![](../../.gitbook/assets/img\_0067\_iphonexspacegrey\_portrait.png)
+![](../../.gitbook/assets/Account3.png)
 
 In the appeared pop-up window you can configure the following settings:
 
