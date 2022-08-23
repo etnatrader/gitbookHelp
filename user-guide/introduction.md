@@ -30,8 +30,8 @@ Separate sections are designated for all components of the platform:
 
 * ETNA Trader for iOS (including the extension for the Apple Watch):
 
-{% content-ref url="etna-trader-for-ios/" %}
-[etna-trader-for-ios](etna-trader-for-ios/)
+{% content-ref url="etna-trader-mobile/" %}
+[etna-trader-mobile](etna-trader-mobile/)
 {% endcontent-ref %}
 
 * ETNA Trader for Android:

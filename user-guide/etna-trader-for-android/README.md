@@ -1,2 +1,0 @@
-# ETNA Trader for Android
-
