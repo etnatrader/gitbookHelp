@@ -9,7 +9,7 @@ description: Withdraw funds using wire transfers
 In addition to ACH transfers and check transfers, ETNA Trader also provides traders with the ability to withdraw funds from their trading accounts by means of wire transfers. Specifically, the funds could be withdrawn via either a domestic wire or a foreign wire.
 
 {% hint style="warning" %}
-Check transfers are relevant only for withdrawing funds.
+Wire transfers are relevant only for withdrawing funds.
 {% endhint %}
 
 To withdraw funds using wire transfers, select **Wire Transfer** on the **Funds Transfer** tab. Next, specify the amount to be withdrawn (in USD). If you would like to withdraw all funds altogether and close the account, select the **Total distribution and close account** checkbox.
