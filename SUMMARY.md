@@ -56,6 +56,7 @@
       * [How to Create a New Trading Account](user-guide/knowledge-base/how-to-guides/trading-accounts/how-to-create-a-new-trading-account.md)
     * [Security](user-guide/knowledge-base/how-to-guides/security/README.md)
       * [How to Enable Two-Factor Authentication](user-guide/knowledge-base/how-to-guides/security/how-to-enable-two-factor-authentication.md)
+    * [ACATS Asset Transfer](user-guide/knowledge-base/how-to-guides/acats-asset-transfer.md)
 
 ## WEB API
 

@@ -10,104 +10,46 @@ This GET endpoint enables to you list all outstanding and executed orders of the
 
 There are six required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **Trading Account ID** \(path\). This is the numeric ID of the trading account whose orders must be retrieved. 
-4. **API version** \(path\). Unless necessary, leave it at "1.0".
-5. **pageNumber** \(query\). Because there can be dozens of outstanding orders, we split them into pages which you can individually retrieve by specifying this parameter.
-6. **pageSize** \(query\). This parameter indicates the number of orders from a particular page that must be returned in the response. The maximum value for this parameter is 100.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **Trading Account ID** (path). This is the numeric ID of the trading account whose orders must be retrieved.&#x20;
+4. **API version** (path). Unless necessary, leave it at "1.0".
+5. **pageNumber** (query). Because there can be dozens of outstanding orders, we split them into pages which you can individually retrieve by specifying this parameter.
+6. **pageSize** (query). This parameter indicates the number of orders from a particular page that must be returned in the response. The maximum value for this parameter is 100.
 
 There's also three optional parameters worth examining:
 
-* **filter** \(query\). This is a query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
-* **sortField** \(query\).This is a parameter by which the returned orders must be sorted. For example, if you set this parameter to `Quantity`, all returned orders will be sorted by the number of purchased lots.
-* **desc** \(query\). This parameter indicated if the returned orders should be sorted in ascending or descending order.
+* **filter** (query). This is a query used to retrieve only those orders that satisfy the conditions of the query. The following table outlines the parameter's syntax.
+* **sortField** (query).This is a parameter by which the returned orders must be sorted. For example, if you set this parameter to `Quantity`, all returned orders will be sorted by the number of purchased lots.
+* **desc** (query). This parameter indicated if the returned orders should be sorted in ascending or descending order.
 
 {% hint style="warning" %}
 Sample queries below must be converted depending on the used encoding. For example, the `#` sign must be converted to `%23` and so on.
 {% endhint %}
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Syntax</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>CreateDate (&gt;, &gt;=, &lt;, &lt;=) Date</li>
-          <li>CreateDate between Range</li>
-        </ul>
-      </td>
-      <td style="text-align:left">
-        <p>This query enables you to retrieve orders that were created in the time
-          period specified in the Range parameter or exactly at the time specified
-          in the Date parameter.</p>
-        <p></p>
-        <p><b>(This filter will be supported starting from version 2.70)</b>
-        </p>
-      </td>
-      <td style="text-align:left">
-        <ul>
-          <li>CreateDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li>
-          <li>CreateDate &gt;= #2019-03-13T18:31:42#</li>
-          <li>CreateDate &lt; #2019-03-12T19:31:42#</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>SecurityId = Number</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve orders whose securityId parameter is
-        equal to the Id provided in the query.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>SecurityId = 4</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <ul>
-          <li>Status in (value1, value2, etc.)</li>
-        </ul>
-      </td>
-      <td style="text-align:left">This query enables you to retrieve orders whose Status parameter is contained
-        in the query set.</td>
-      <td style="text-align:left">
-        <ul>
-          <li>Status in (0,1,4,5,7)</li>
-          <li>Status in (0)</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Syntax                                                                                       | Description                                                                                                                                                                                                                                                             | Example                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>CreateDate (>, >=, &#x3C;, &#x3C;=) Date</li><li>CreateDate between Range </li></ul> | <p>This query enables you to retrieve orders that were created in the time period specified in the Range parameter or exactly at the time specified in the Date parameter.</p><p></p><p><strong>(This filter will be supported starting from version 2.70)</strong></p> | <ul><li>CreateDate between #2019-03-13T18:31:42# and #2019-03-17T18:31:42#</li><li>CreateDate >= #2019-03-13T18:31:42#</li><li>CreateDate &#x3C; #2019-03-12T19:31:42#</li></ul> |
+| <ul><li>SecurityId = Number</li></ul>                                                        | This query enables you to retrieve orders whose securityId parameter is equal to the Id provided in the query.                                                                                                                                                          | <ul><li>SecurityId = 4</li></ul>                                                                                                                                                 |
+| <ul><li>Status in (value1, value2, etc.)</li></ul>                                           | This query enables you to retrieve orders whose Status parameter is contained in the query set.                                                                                                                                                                         | <ul><li>Status in (0,1,4,5,7)</li><li>Status in (0)</li></ul>                                                                                                                    |
 
 {% hint style="info" %}
 Note that you can combine different queries to create more complex requests:
 
-* SecurityId = 4 and Status in \(0,1,2,3,4,5,6,7,8,9,20\)
+* SecurityId = 4 and Status in (0,1,2,3,4,5,6,7,8,9,20)
 {% endhint %}
 
 Here's the final template for this API request:
 
-* For orders that will only be verified by the API but not the execution venue \(quick\):
+* For orders that will only be verified by the API but not the execution venue (quick):
 
-```text
+```
 apiURL/v1.0/accounts/{accountNumber}/orders?pageNumber=0&pageSize=2&sortField=Id&desc=true
 ```
 
-* For orders that will be verified by the API and the execution venue too \(slow\):
+* For orders that will be verified by the API and the execution venue too (slow):
 
-```text
+```
 apiURL/v1.0/accounts/{accountNumber}/syncorders?pageNumber=0&pageSize=2&sortField=Id&desc=true
 ```
 
@@ -222,124 +164,24 @@ In response to this API request, you'll receive the following JSON file that lis
 
 where:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Id</td>
-      <td style="text-align:left">This is the internal ID of the order.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">SecurityId</td>
-      <td style="text-align:left">This is the internal ID of the underlying security of the order.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Quantity</td>
-      <td style="text-align:left">This is the number of shares in the order.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">StopPrice</td>
-      <td style="text-align:left">This is the stop price of the order (if there&apos;s no stop price &#x2014;
-        the value of this parameter will be 0).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ClientId</td>
-      <td style="text-align:left">This is the order ID on the client&apos;s side.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExecutedQuantity</td>
-      <td style="text-align:left">This is the number of shares that have been purchased or sold.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">LastPrice</td>
-      <td style="text-align:left">This is the price of the last executed order for the underlying security.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">LastQuantity</td>
-      <td style="text-align:left">This is the number of shares that were traded in the last transaction.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">LeavesQuantity</td>
-      <td style="text-align:left">This is the number of shares in the order that are yet to be purchased.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">AveragePrice</td>
-      <td style="text-align:left">This is the average price at which the order was executed.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Side</td>
-      <td style="text-align:left">This is the type of order (could be &quot;Buy&quot;, &quot;Sell&quot;,
-        &quot;SellShort&quot;, or &quot;BuyToCover&quot;).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Date</td>
-      <td style="text-align:left">This is the date on which the order was placed by the user.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TransactionDate</td>
-      <td style="text-align:left">This is the date on which the transaction took place.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Status</td>
-      <td style="text-align:left">
-        <p>This is the current status of the order. Possible values:</p>
-        <p>0 - New</p>
-        <p>1 - Partially Filled</p>
-        <p>2 - Filled</p>
-        <p>3 - Done For Day</p>
-        <p>4 - Canceled</p>
-        <p>5 - Replaced</p>
-        <p>6 - Pending Cancel</p>
-        <p>7 - Stopped</p>
-        <p>8 - Rejected</p>
-        <p>9 - Suspended</p>
-        <p>10 - Pending New</p>
-        <p>11 - Calculated</p>
-        <p>12 - Expired</p>
-        <p>13 - Accepted For Bidding</p>
-        <p>14 - Pending Replace</p>
-        <p>15 - Error</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ExecutionStatus</td>
-      <td style="text-align:left">The status of the current operation with the order. The value is usually
-        identical to <code>Status</code> except for cases in which the order&apos;s
-        status was manually modified. For brokers developing their own UI, it&apos;s
-        preferable to use the <code>Status</code> parameter to display the current
-        status of the order.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">TimeInForce</td>
-      <td style="text-align:left">
-        <p>Indicates the time frame in which the order will be active. Possible Values:</p>
-        <ol>
-          <li><b>Day</b>. The order automatically expires at the end of the regular
-            trading session if it weren&apos;t executed.</li>
-          <li><b>GTC</b> (Good-till-Canceled). The order persists indefinitely until
-            it is executed or manually cancelled.</li>
-          <li><b>AtTheOpening</b>. The order should be filled at the opening of the
-            marketplace or cancelled.</li>
-          <li><b>ImmediateOrCancel</b>. The order should be completely or partially
-            filled immediately. If partially filled, the remaining part of the order
-            should be cancelled.</li>
-          <li><b>FillOrKill</b>. The order should be filled immediately and entirely
-            or cancelled right away.</li>
-          <li><b>GoodTillCrossing</b>. The order will be active until the market enters
-            the auction phase.</li>
-          <li><b>GoodTillDate</b>. The order will be active until the date specified
-            in the ExpireDate attribute (unless it is executed or cancelled).</li>
-          <li><b>GoodTillTime</b>. The order will be active until a certain time point.</li>
-        </ol>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameter        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Id               | This is the internal ID of the order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| SecurityId       | This is the internal ID of the underlying security of the order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Quantity         | This is the number of shares in the order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| StopPrice        | This is the stop price of the order (if there's no stop price — the value of this parameter will be 0).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ClientId         | This is the order ID on the client's side.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ExecutedQuantity | This is the number of shares that have been purchased or sold.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| LastPrice        | This is the price of the last executed order for the underlying security.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| LastQuantity     | This is the number of shares that were traded in the last transaction.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| LeavesQuantity   | This is the number of shares in the order that are yet to be purchased.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| AveragePrice     | This is the average price at which the order was executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Side             | This is the type of order (could be "Buy", "Sell", "SellShort", or "BuyToCover").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Date             | This is the date on which the order was placed by the user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| TransactionDate  | This is the date on which the transaction took place.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Status           | <p>This is the current status of the order. Possible values:</p><p>0 - New</p><p>1 - Partially Filled</p><p>2 - Filled</p><p>3 - Done For Day</p><p>4 - Canceled</p><p>5 - Replaced</p><p>6 - Pending Cancel</p><p>7 - Stopped</p><p>8 - Rejected</p><p>9 - Suspended</p><p>10 - Pending New</p><p>11 - Calculated</p><p>12 - Expired</p><p>13 - Accepted For Bidding</p><p>14 - Pending Replace</p><p>15 - Error</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ExecutionStatus  | The status of the current operation with the order. The value is usually identical to `Status` except for cases in which the order's status was manually modified. For brokers developing their own UI, it's preferable to use the `Status` parameter to display the current status of the order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| TimeInForce      | <p>Indicates the time frame in which the order will be active. Possible Values:</p><ol><li><strong>Day</strong>. The order automatically expires at the end of the regular trading session if it weren't executed.</li><li><strong>GTC</strong> (Good-till-Canceled). The order persists indefinitely until it is executed or manually cancelled.</li><li><strong>AtTheOpening</strong>. The order should be filled at the opening of the marketplace or cancelled.</li><li><strong>ImmediateOrCancel</strong>. The order should be completely or partially filled immediately. If partially filled, the remaining part of the order should be cancelled.</li><li><strong>FillOrKill</strong>. The order should be filled immediately and entirely or cancelled right away.</li><li><strong>GoodTillCrossing</strong>. The order will be active until the market enters the auction phase.</li><li><strong>GoodTillDate</strong>. The order will be active until the date specified in the ExpireDate attribute (unless it is executed or cancelled).</li><li><strong>GoodTillTime</strong>. The order will be active until a certain time point.</li></ol> |
 
 ## Common Mistakes
 
@@ -377,4 +219,3 @@ It's critical to understand that when you use the authorization token of a parti
 ```
 
 In the following article we provide in-depth coverage of the syntax for this API request.
-

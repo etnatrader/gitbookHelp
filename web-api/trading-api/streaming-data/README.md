@@ -33,7 +33,7 @@ To create a new connection to the streamer following conditions must be satisfie
 
 **GET** <**URL>**?User=**\<UserID>**:**\<SessionID>**\&Password=**\<StreamerSessionID>**\&HttpClientType=**WebSocket**
 
-**Example:** [wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=**someUser:sessionID**\&Password=**StreamerSessionID**\&HttpClientType=**WebSocket**](wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=someUser:sessionID\&Password=StreamerSessionID\&HttpClientType=WebSocket)****
+**Example:** [wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=**someUser:sessionID**\&Password=**StreamerSessionID**\&HttpClientType=**WebSocket**](wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=someUser:sessionID\&Password=StreamerSessionID\&HttpClientType=WebSocket)
 
 | Param                 | JSON Key                                                                                                                      | Description                                 |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |

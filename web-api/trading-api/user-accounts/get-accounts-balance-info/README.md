@@ -10,10 +10,10 @@ This endpoint enables you to retrieve balance information of a particular tradin
 
 There are four required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **Trading Account Number** \(path\). This is the numeric ID of the trading account whose information you'd like to retrieve. You can get the list of a user's trading accounts with [this API call](../list-users-accounts/).
-4. **API version** \(path\). Unless necessary, leave it at "1.0".
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **Trading Account Number** (path). This is the numeric ID of the trading account whose information you'd like to retrieve. You can get the list of a user's trading accounts with [this API call](../list-users-accounts/).
+4. **API version** (path). Unless necessary, leave it at "1.0".
 
 {% hint style="info" %}
 Trading accounts are identical to clearing accounts.
@@ -21,7 +21,7 @@ Trading accounts are identical to clearing accounts.
 
 The request ought to be sent to the following URL:
 
-```text
+```
 apiURL/v1.0/accounts/{tradingAccountNumber}/info
 ```
 
@@ -61,136 +61,32 @@ In response to this request, you'll receive a JSON file with all of the pertinen
 
 where:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">cash</td>
-      <td style="text-align:left">This is the amount of funds available on the trading account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">netCash</td>
-      <td style="text-align:left">This the amount of funds available on the account minus the options margin
-        requirement.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">excess</td>
-      <td style="text-align:left">
-        <p>This is the amount of funds that can either be withdrawn or used to open
-          new positions. This value is used as the basis for calculating buying power.</p>
-        <p><b>Excess = Equity - TMMR - Pending Cash - Uncleared Cash</b>, where TMMR
-          - Total Maintenance Margin Requirement (the sum of margin requirements
-          for all positions of this account)</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">changeAbsolute</td>
-      <td style="text-align:left">This is the difference between the account&apos;s value and the account&apos;s
-        equity at the closing of the previous trading session. The account&apos;s
-        value is the sum of the available Cash and the aggregate market value of
-        all long and short positions.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">changePercent</td>
-      <td style="text-align:left">Identical to <code>changeAbsolute</code> but expressed in percentage terms.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">equityTotal</td>
-      <td style="text-align:left">This is the gross valuation of all equity on the trading account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">pendingOrdersCount</td>
-      <td style="text-align:left">This is the number of pending orders on the account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">netLiquidity</td>
-      <td style="text-align:left">This is the amount of funds that will be available to the user after all
-        active positions are terminated.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">stockLongMarketValue</td>
-      <td style="text-align:left">This is the gross market value of all long stock positions on the trading
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">stockShortMarketValue</td>
-      <td style="text-align:left">This is the gross market value of all short stock positions on the trading
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">optionLongMarketValue</td>
-      <td style="text-align:left">This is the gross market value of all long option positions on the trading
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">optionShortMarketValue</td>
-      <td style="text-align:left">This is the gross market value of all short option positions on the trading
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">forexLongMarketValue</td>
-      <td style="text-align:left">This is the gross market value of all long forex positions on the trading
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">forexShortMarketValue</td>
-      <td style="text-align:left">This is the gross market value of all short forex positions on the trading
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">dayTrades</td>
-      <td style="text-align:left">This is the number of day trades that have been executed during the last
-        five trading sessions (including the current one).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">stockBuyingPower</td>
-      <td style="text-align:left">This is the gross amount of stocks that can be purchased on this trading
-        account, adjusted for the available margin debt.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">optionBuyingPower</td>
-      <td style="text-align:left">This is the gross amount of options that can be purchased on this trading
-        account, adjusted for the available margin debt.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">forexBuyingPower</td>
-      <td style="text-align:left">This is the gross amount of forex positions that can be opened on this
-        trading account, adjusted for the available margin debt.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">pendingCash</td>
-      <td style="text-align:left">This is the amount of funds reserved to complete pending transactions.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">maintenanceMargin</td>
-      <td style="text-align:left">This is the minimum amount of equity that must be maintained in a margin
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">optionMaintenanceMargin</td>
-      <td style="text-align:left">This is the minimum amount of equity that must be maintained for option
-        securities.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">openPL</td>
-      <td style="text-align:left">This is the amount of unrealized profit or loss for all positions.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">closePL</td>
-      <td style="text-align:left">This is the amount of realized profit or loss during the current trading
-        session.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">marketValue</td>
-      <td style="text-align:left">This is the market value of all open long and short positions.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter               | Description                                                                                                                                                                                                                                                                                                                                                      |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cash                    | This is the amount of funds available on the trading account.                                                                                                                                                                                                                                                                                                    |
+| netCash                 | This the amount of funds available on the account minus the options margin requirement.                                                                                                                                                                                                                                                                          |
+| excess                  | <p>This is the amount of funds that can either be withdrawn or used to open new positions. This value is used as the basis for calculating buying power.</p><p><strong>Excess = Equity - TMMR - Pending Cash - Uncleared Cash</strong>, where TMMR - Total Maintenance Margin Requirement (the sum of margin requirements for all positions of this account)</p> |
+| changeAbsolute          | This is the difference between the account's value and the account's equity at the closing of the previous trading session. The account's value is the sum of the available Cash and the aggregate market value of all long and short positions.                                                                                                                 |
+| changePercent           | Identical to `changeAbsolute` but expressed in percentage terms.                                                                                                                                                                                                                                                                                                 |
+| equityTotal             | This is the gross valuation of all equity on the trading account.                                                                                                                                                                                                                                                                                                |
+| pendingOrdersCount      | This is the number of pending orders on the account.                                                                                                                                                                                                                                                                                                             |
+| netLiquidity            | This is the amount of funds that will be available to the user after all active positions are terminated.                                                                                                                                                                                                                                                        |
+| stockLongMarketValue    | This is the gross market value of all long stock positions on the trading account.                                                                                                                                                                                                                                                                               |
+| stockShortMarketValue   | This is the gross market value of all short stock positions on the trading account.                                                                                                                                                                                                                                                                              |
+| optionLongMarketValue   | This is the gross market value of all long option positions on the trading account.                                                                                                                                                                                                                                                                              |
+| optionShortMarketValue  | This is the gross market value of all short option positions on the trading account.                                                                                                                                                                                                                                                                             |
+| forexLongMarketValue    | This is the gross market value of all long forex positions on the trading account.                                                                                                                                                                                                                                                                               |
+| forexShortMarketValue   | This is the gross market value of all short forex positions on the trading account.                                                                                                                                                                                                                                                                              |
+| dayTrades               | This is the number of day trades that have been executed during the last five trading sessions (including the current one).                                                                                                                                                                                                                                      |
+| stockBuyingPower        | This is the gross amount of stocks that can be purchased on this trading account, adjusted for the available margin debt.                                                                                                                                                                                                                                        |
+| optionBuyingPower       | This is the gross amount of options that can be purchased on this trading account, adjusted for the available margin debt.                                                                                                                                                                                                                                       |
+| forexBuyingPower        | This is the gross amount of forex positions that can be opened on this trading account, adjusted for the available margin debt.                                                                                                                                                                                                                                  |
+| pendingCash             | This is the amount of funds reserved to complete pending transactions.                                                                                                                                                                                                                                                                                           |
+| maintenanceMargin       | This is the minimum amount of equity that must be maintained in a margin account.                                                                                                                                                                                                                                                                                |
+| optionMaintenanceMargin | This is the minimum amount of equity that must be maintained for option securities.                                                                                                                                                                                                                                                                              |
+| openPL                  | This is the amount of unrealized profit or loss for all positions.                                                                                                                                                                                                                                                                                               |
+| closePL                 | This is the amount of realized profit or loss during the current trading session.                                                                                                                                                                                                                                                                                |
+| marketValue             | This is the market value of all open long and short positions.                                                                                                                                                                                                                                                                                                   |
 
 #### Common Mistakes
 
@@ -222,4 +118,3 @@ Even if the user has one trading account, it's not possible to get the balance i
 ```
 
 In the following article we provide in-depth coverage of the syntax for this API request.
-

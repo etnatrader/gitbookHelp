@@ -51,7 +51,7 @@ The pop-up contains two parameters:
 
 * For in-the-money Call options:
 
-****$$Intrinsic = |StockMark - Strike|$$****
+$$Intrinsic = |StockMark - Strike|$$
 
 * &#x20;For in-the-money Put Options**:**
 
@@ -63,9 +63,9 @@ $$Intrinsic = 0$$
 
 The `Intrinsic` parameter is calculated as the difference between the underlying security's mark price and the option's strike price. For out-of-the-money options, `Intrinsic` is equal to 0.
 
-&#x20;  ****   2. **Time**
+&#x20;  2\. **Time**
 
-****$$Time = Option Mark - Intrinsic$$ ****&#x20;
+$$Time = Option Mark - Intrinsic$$&#x20;
 
 The `Time` parameter is calculated as the difference between the option's mark price and the **Intrinsic** parameter (or vice versa).
 
