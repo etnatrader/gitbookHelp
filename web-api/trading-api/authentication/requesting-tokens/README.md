@@ -8,18 +8,18 @@ description: Perform regular authentication in ETNA Trader
 
 All API requests in ETNA Trader require a unique authentication token that must be provided in the request header. Without this token, it's impossible to place orders, retrieve charts, create users, etc. To get the token, use the following API endpoint:
 
-```text
+```
 POST APIBaseURL + /token
 ```
 
 {% hint style="info" %}
-API base URL is unique for every environment; if you're testing the API on our demo environment, the final endpoint URL will be as follows:  
-[`https://pub-api-et-demo-prod.etnasoft.us/api/token`](https://pub-api-et-demo-prod.etnasoft.us/api/token) 
+API base URL is unique for every environment; if you're testing the API on our demo environment, the final endpoint URL will be as follows:\
+`https://pub-api-`trader`-demo-prod.etnasoft.us/api/token`&#x20;
 {% endhint %}
 
 The header of the request must contain the following three parameters:
 
-1. **Et-App-Key**. This is the API key of your company that can be found it in the BO Companies widget. When editing the company's settings, navigate to the WebApi tab and look for the required key \(it could be a key for the web terminal, the mobile app, or a custom key\).
+1. **Et-App-Key**. This is the API key of your company that can be found it in the BO Companies widget. When editing the company's settings, navigate to the WebApi tab and look for the required key (it could be a key for the web terminal, the mobile app, or a custom key).
 2. **Username**. This is the username of the user on whose behalf all future requests will be made.
 3. **Password**. This is the password of the user on whose behalf all future requests will be made.
 
@@ -27,8 +27,8 @@ The header of the request must contain the following three parameters:
 
 The following is a sample CURL for performing single-factor authentication:
 
-```text
-curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
+```
+curl -X POST "https://pub-api-trader-demo-prod.etnasoft.us/api/token" \
 	-H "Username: yourUsername" \
 	-H "Password: yourPassword" \
 	-H "Et-App-Key: yourEttAppKey" \
@@ -48,10 +48,10 @@ In response to this API request, you'll receive a JSON file that contains the to
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| State | This is the state of the request. Usually the value is set to `Succeeded`, meaning that the request has been successfully made. |
-| Token | This is the token that must be provided in all subsequent API requests as the authentication bearer token. Ensure that this token is provided in the following format: The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\). |
+| Parameter | Description                                                                                                                                                                                                                                                                            |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| State     | This is the state of the request. Usually the value is set to `Succeeded`, meaning that the request has been successfully made.                                                                                                                                                        |
+| Token     | This is the token that must be provided in all subsequent API requests as the authentication bearer token. Ensure that this token is provided in the following format: The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token). |
 
 {% hint style="info" %}
 The authorization token lifetime is 24 hours.
@@ -88,4 +88,3 @@ If you specify the wrong user credentials or fail to include them in the request
 To see how initial authentication can be performed in code, feel free to examine our [sample requests](../../code-samples/) in a dedicated article.
 
 In the following article we provide in-depth coverage of the syntax for this API request.
-
