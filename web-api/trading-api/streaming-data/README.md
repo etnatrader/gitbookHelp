@@ -22,7 +22,7 @@ To create a new connection to the streamer following conditions must be satisfie
 
 **GET** <**URL>СreateSession.txt**?User=**\<UserLogin>**\&Password=**\<UserPassword>**\&HttpClientType=**WebSocket**
 
-**Example**: [wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=trader\&Password=trader\&HttpClientType=WebSocket](wss://et-demo-prod.etnasoft.us:9999/CreateSession.txt?User=trader\&Password=trader\&HttpClientType=WebSocket)
+**Example**: wss://trader-demo-prod.etnasoft.us:9999/CreateSession.txt?User=trader\&Password=trader\&HttpClientType=WebSocket
 
 | Param            | Description                   |
 | ---------------- | ----------------------------- |
