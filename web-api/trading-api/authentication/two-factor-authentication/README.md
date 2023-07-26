@@ -14,7 +14,7 @@ POST APIBaseURL + /token
 
 {% hint style="info" %}
 API base URL is unique for every environment; if you're testing the API on our demo environment, the final endpoint URL will be as follows:\
-[`https://pub-api-et-demo-prod.etnasoft.us/api/token`](https://pub-api-et-demo-prod.etnasoft.us/api/token)&#x20;
+`https://pub-api-`trader`-demo-prod.etnasoft.us/api/token`&#x20;
 {% endhint %}
 
 If the user's account has two-factor authentication enabled, the authentication process involves two separate requests:
@@ -47,7 +47,7 @@ The following are sample CURLs for performing two-factor authentication:
 #### First Request
 
 ```
-curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
+curl -X POST "https://pub-api-trader-demo-prod.etnasoft.us/api/token" \
 	-H "Username: yourUsername" \
 	-H "Password: yourPassword" \
 	-H "Et-App-Key: yourEttAppKey" \
@@ -57,7 +57,7 @@ curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
 #### Second Request
 
 ```
-curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
+curl -X POST "https://pub-api-trader-demo-prod.etnasoft.us/api/token" \
 	-H "Username: yourUsername" \
 	-H "Password: yourPassword" \
 	-H "Authorization: Bearer {tokenFromTheFirstRequest}" \

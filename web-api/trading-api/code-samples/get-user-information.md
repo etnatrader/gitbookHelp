@@ -2,7 +2,9 @@
 
 ## Get a User's Information
 
-{% page-ref page="../managing-users/get-users-info/" %}
+{% content-ref url="../managing-users/get-users-info/" %}
+[get-users-info](../managing-users/get-users-info/)
+{% endcontent-ref %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -11,7 +13,7 @@ import requests
 
 class EtnaAPIRequest:
 
-    baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
+    baseURL = "https://pub-api-trader-demo-prod.etnasoft.us/api/"
     EtAppKey = "Et App Key from the BO Companies widget"
 
     token = 'uninitialized'
@@ -61,7 +63,6 @@ This method — `getUsersInfo()` — enables you to retrieve detailed informatio
 
 ### CURL
 
-```text
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer yourToken+wefx0MhIL' --header 'Et-App-Key: yourKey' --header 'Content-Length: 0' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/users/7420/info'
 ```
-
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer yourToken+wefx0MhIL' --header 'Et-App-Key: yourKey' --header 'Content-Length: 0' 'https://pub-api-trader-demo-prod.etnasoft.us/api/v1.0/users/7420/info'
+```

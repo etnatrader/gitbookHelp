@@ -2,7 +2,9 @@
 
 ### Get Candles and Indicators for a Security
 
-{% page-ref page="../historical-data/get-candles-and-indicators-for-charts/" %}
+{% content-ref url="../historical-data/get-candles-and-indicators-for-charts/" %}
+[get-candles-and-indicators-for-charts](../historical-data/get-candles-and-indicators-for-charts/)
+{% endcontent-ref %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -11,7 +13,7 @@ import requests
 
 class EtnaAPIRequest:
 
-	baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
+	baseURL = "https://pub-api-trader-demo-prod.etnasoft.us/api/"
 	EtAppKey = "Et App Key from the BO Companies widget"
 
 	token = 'uninitialized'
@@ -98,21 +100,21 @@ chartDataModel = {
 sampleRequest.getCandlesAndIndicators(chartDataModel)
 ```
 
-This method — `getCandlesAndIndicators()` — enables you to retrieve chart data \(candles and indicators\) for a specific security. In response to this request, you'll receive a JSON file with the pricing data that can be used to draw charts. 
+This method — `getCandlesAndIndicators()` — enables you to retrieve chart data (candles and indicators) for a specific security. In response to this request, you'll receive a JSON file with the pricing data that can be used to draw charts.&#x20;
 {% endtab %}
 
 {% tab title="JavaScript" %}
 
 {% endtab %}
 
-{% tab title="C\#" %}
+{% tab title="C#" %}
 
 {% endtab %}
 {% endtabs %}
 
 #### CURL
 
-```text
+```
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer yourToken' --header 'Et-App-Key: yourKey' -d '{"Security": \ 
  	{"Symbol":"AAPL", \ 
  	"Exchange":"XNAS", \ 
@@ -153,6 +155,5 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
  			"showLastValue":true, \ 
  			"showCurrentPoint":true, \ 
  			"showLevelBands":false}}}] \ 
- }' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/history/symbols'
+ }' 'https://pub-api-trader-demo-prod.etnasoft.us/api/v1.0/history/symbols'
 ```
-

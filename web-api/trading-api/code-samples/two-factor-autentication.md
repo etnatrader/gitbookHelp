@@ -1,8 +1,10 @@
 # Two-Factor Autentication
 
-### Two-Factor Authentication 
+### Two-Factor Authentication&#x20;
 
-{% page-ref page="../authentication/" %}
+{% content-ref url="../authentication/" %}
+[authentication](../authentication/)
+{% endcontent-ref %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -11,7 +13,7 @@ import requests
 
 class EtnaAPIRequest:
 
-	baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
+	baseURL = "https://pub-api-trader-demo-prod.etnasoft.us/api/"
 	EtAppKey = "Et App Key from the BO Companies widget"
 
 	token = 'uninitialized'
@@ -78,8 +80,8 @@ The following are sample CURLs for performing two-factor authentication:
 
 #### First Request
 
-```text
-curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
+```
+curl -X POST "https://pub-api-trader-demo-prod.etnasoft.us/api/token" \
 	-H "Username: yourUsername" \
 	-H "Password: yourPassword" \
 	-H "Et-App-Key: yourEttAppKey" \
@@ -88,8 +90,8 @@ curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
 
 #### Second Request
 
-```text
-curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
+```
+curl -X POST "https://pub-api-trader-demo-prod.etnasoft.us/api/token" \
 	-H "Username: yourUsername" \
 	-H "Password: yourPassword" \
 	-H "Authorization: Bearer {tokenFromTheFirstRequest}" \
@@ -97,4 +99,3 @@ curl -X POST "https://pub-api-et-demo-prod.etnasoft.us/api/token" \
 	-H "Et-App-Key: yourEttAppKey" \
 	-H "Content-Length: 0"
 ```
-

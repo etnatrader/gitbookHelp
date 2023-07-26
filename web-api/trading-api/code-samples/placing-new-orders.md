@@ -2,7 +2,9 @@
 
 ### Placing New Orders  & Checking Their Status
 
-{% page-ref page="../orders/place-order/" %}
+{% content-ref url="../orders/place-order/" %}
+[place-order](../orders/place-order/)
+{% endcontent-ref %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -12,7 +14,7 @@ import requests
 
 class EtnaAPIRequest:
 
-	baseURL = "https://pub-api-et-demo-prod.etnasoft.us/api/"
+	baseURL = "https://pub-api-trader-demo-prod.etnasoft.us/api/"
 	EtAppKey = "Et App Key from the BO Companies widget"
 
 	token = 'uninitialized'
@@ -92,7 +94,7 @@ If the authorization token provided in the request header was generated using an
 
 #### Sample CURL for Order Placement
 
-```text
+```
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: theToken' --header 'Et-App-Key: EtAppKey' -d '{ \ 
    "Symbol": "AAPL", \ 
    "ExpireDate": "2019-12-20T10:07:59.181Z", \ 
@@ -107,6 +109,5 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
    "ExtendedHours": "REGPOST", \ 
    "TrailingStopAmountType" : "Absolute",  \ 
    "TrailingStopAmount" : 10, \ 
- }' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/accounts/6303/orders'
+ }' 'https://pub-api-trader-demo-prod.etnasoft.us/api/v1.0/accounts/6303/orders'
 ```
-
