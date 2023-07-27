@@ -10,15 +10,15 @@ This GET endpoint enables you to retrieve the list of watchlists of a user whose
 
 There are five required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **userID** \(path\). This is the ID of the user whose watchlists need to be retrieved.
-5. **includeSecurities** \(query\). This field indicates if the retrieved watchlists should include their corresponding stocks.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **userID** (path). This is the ID of the user whose watchlists need to be retrieved.
+5. **includeSecurities** (query). This field indicates if the retrieved watchlists should include their corresponding stocks.
 
 Here's the final template for this API request:
 
-```text
+```
 apiURL/v1.0/users/{userID}/watchlists?includeSecurities=true
 ```
 
@@ -119,15 +119,15 @@ If the _**includeSecurities**_ query parameter is set to true, the retrieved wat
 
 #### Watchlist Parameters
 
-| Parameter | Description |
-| :--- | :--- |
-| Id | This is the internal identifier of the watchlist in ETNA Trader. |
-| Name | This is the name of the watchlist in ETNA Trader. |
-| Type | This is the type of the watchlist. It could either be a user-created watchlist or a default watchlist provided by the system. |
-| CreateDate | This is the date on which the watchlist was created. |
-| ModifyDate | This is the date on which the watchlist was last modified. |
-| ReadOnly | This field indicates if the watchlist is modifiable. |
-| SecurityList | This is a collection of securities in the watchlist. |
+| Parameter    | Description                                                                                                                   |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| Id           | This is the internal identifier of the watchlist in ETNA Trader.                                                              |
+| Name         | This is the name of the watchlist in ETNA Trader.                                                                             |
+| Type         | This is the type of the watchlist. It could either be a user-created watchlist or a default watchlist provided by the system. |
+| CreateDate   | This is the date on which the watchlist was created.                                                                          |
+| ModifyDate   | This is the date on which the watchlist was last modified.                                                                    |
+| ReadOnly     | This field indicates if the watchlist is modifiable.                                                                          |
+| SecurityList | This is a collection of securities in the watchlist.                                                                          |
 
 ## Common Mistakes
 
@@ -149,9 +149,8 @@ It's crucial to understand that the _**includeSecurities**_ parameter must be in
 
 ```javascript
 {
-    "Message": "No HTTP resource was found that matches the request URI 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/users/@me/watchlists'."
+    "Message": "No HTTP resource was found that matches the request URI 'https://pub-api-trader-demo-prod.etnasoft.us/api/v1.0/users/@me/watchlists'."
 }
 ```
 
 The following article covers the syntax for this API request in detail.
-

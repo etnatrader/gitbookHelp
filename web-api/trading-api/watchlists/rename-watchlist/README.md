@@ -10,16 +10,16 @@ This PUT endpoint enables you to rename a specific watchlist of the user whose i
 
 There are six required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **userID** \(path\). This is the ID of the user whose particular watchlist needs to be have one security removed.
-5. **watchlistID** \(path\). This is the internal identifier of the watchlist from which a security must be removed. You can retrieve the list of a user's watchlists with [this method](../remove-security-from-watchlist-by-id/).
-6. **name** \(query\). This is a string that contains the new name for an existing watchlist.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **userID** (path). This is the ID of the user whose particular watchlist needs to be have one security removed.
+5. **watchlistID** (path). This is the internal identifier of the watchlist from which a security must be removed. You can retrieve the list of a user's watchlists with [this method](../remove-security-from-watchlist-by-id/).
+6. **name** (query). This is a string that contains the new name for an existing watchlist.
 
 Here's the final template for this API request:
 
-```text
+```
 PUT apiURL/v1.0/users/@me/watchlists/17973/name?name=New Name
 ```
 
@@ -54,9 +54,8 @@ It's crucial to understand that the _**name**_ parameter must be provided in the
 
 ```javascript
 {
-    "Message": "No HTTP resource was found that matches the request URI 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/users/@me/watchlists/17973/name'."
+    "Message": "No HTTP resource was found that matches the request URI 'https://pub-api-trader-demo-prod.etnasoft.us/api/v1.0/users/@me/watchlists/17973/name'."
 }
 ```
 
 The following article covers the syntax for this API request in detail.
-
