@@ -7,7 +7,7 @@ This endpoint allows users to retrieve paperless settings for a specific trading
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="apiVersion" type="" required="true" %}
+{% swagger-parameter in="path" name="apiVersion" type="String" required="true" %}
 The version of API. By default, set it to 
 
 `1.0`
@@ -19,7 +19,7 @@ The version of API. By default, set it to
 Internal ETNA ID of the trading account.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" required="true" %}
+{% swagger-parameter in="header" name="Authorization" required="true" type="String" %}
 This is the authorization token from the token request. The value of this header must have the following format: 
 
 `Bearer BQ898r9fefi`
@@ -31,7 +31,7 @@ This is the authorization token from the token request. The value of this header
  \+ 1 space + the token).
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Et-App-Key" required="true" %}
+{% swagger-parameter in="header" name="Et-App-Key" required="true" type="String" %}
 This is your app’s unique key that can be retrieved from the BO Companies widget in ETNA Trader.
 {% endswagger-parameter %}
 
