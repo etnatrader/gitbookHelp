@@ -6,19 +6,19 @@ This POST endpoint enables to send a request for opening a new trading account. 
 
 There are five required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **userId** \(query\). This is the ID of the user account to which the new trading account will be bound.
-5. **model** \(body\). This is a JSON file that contains detailed information about the new account opening request.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **userId** (query). This is the ID of the user account to which the new trading account will be bound.
+5. **model** (body). This is a JSON file that contains detailed information about the new account opening request.
 
 ### Request Body
 
 The body of this request represents the information about the to-be-created account opening request. It must be sent in the JSON format with the parameters described in the following table:
 
-| Parameter | Description |
-| :--- | :--- |
-| FormType | For paper trading, the parameter must be equal to **Direct**. |
+| Parameter       | Description                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| FormType        | For paper trading, the parameter must be equal to **Direct**.                                                     |
 | AccountProvider | This is the clearing firm responsible for handling account requests. For paper trading, specify **PaperTrading**. |
 
 ```javascript
@@ -30,7 +30,7 @@ The body of this request represents the information about the to-be-created acco
 
 Here's the final template for this API request:
 
-```text
+```
 POST apiURL/v1.0/user/{userId}/account-requests/open
 ```
 
@@ -42,7 +42,7 @@ To create a new account opening request on behalf of the user whose authorizatio
 
 In response to this API request, you will receive a JSON file containing information about the status of the request.
 
-```text
+```
 {
   "Id": "ed8fcaac-70d6-4045-afb8-febe2d4a6af7",
   "UserId": "7125",
@@ -54,11 +54,13 @@ In response to this API request, you will receive a JSON file containing informa
 }
 ```
 
-For convenience purposes, paper trading accounts need not be approved by administrators \(unlike regular accounts that must be approved by both administrators and the clearing firm\). Once a paper trading account opening request has been created, a new account will immediately be created and bound to the user whose ID was provided as a query parameter.
+For convenience purposes, paper trading accounts need not be approved by administrators (unlike regular accounts that must be approved by both administrators and the clearing firm). Once a paper trading account opening request has been created, a new account will immediately be created and bound to the user whose ID was provided as a query parameter.
 
 You may list the user's trading accounts via the following API endpoint:
 
-{% page-ref page="../user-accounts/list-users-accounts/" %}
+{% content-ref url="../user-accounts/list-users-accounts.md" %}
+[list-users-accounts.md](../user-accounts/list-users-accounts.md)
+{% endcontent-ref %}
 
 ### Common Mistakes
 
@@ -84,4 +86,3 @@ Another common mistake when making this request is failing to specify all of the
     "error": "Unexpected server error"
 }
 ```
-

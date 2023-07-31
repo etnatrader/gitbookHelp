@@ -8,31 +8,31 @@ description: >-
 
 ### Overview
 
-This POST endpoint enables you to deposit or withdraw funds to/from an ACH-based banking account. 
+This POST endpoint enables you to deposit or withdraw funds to/from an ACH-based banking account.&#x20;
 
 {% hint style="info" %}
-Deposits and withdrawals performed through ACH relationships will be reflected in trading account balances before the start of the following trading session \(after ETNA Trader receives SOD files\).
+Deposits and withdrawals performed through ACH relationships will be reflected in trading account balances before the start of the following trading session (after ETNA Trader receives SOD files).
 {% endhint %}
 
 There are five required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **accountId** \(path\). This is the [internal identifier](../../user-accounts/list-users-accounts/) of the trading account in ETNA Trader.
-5. **model** \(body\). This is a JSON file containing detailed information about the funds transfer.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **accountId** (path). This is the [internal identifier](../../user-accounts/list-users-accounts.md) of the trading account in ETNA Trader.
+5. **model** (body). This is a JSON file containing detailed information about the funds transfer.
 
 #### Body Syntax
 
 The body of the request represents a JSON file containing all required parameters for performing a funds transfer.
 
-| Parameter | Description |
-| :--- | :--- |
-| AchRelationshipId | This is the ACH relationship through which the transfer will be performed. |
-| Amount | This is the amount of funds to be transferred. The value must be provided in US dollars. |
-| CloseAccount | This boolean value indicates if the trading account must be closed after the transfer is performed. Only applicable to withdrawal operations. |
-| DaysToHoldFunds | This is the number of days by which the transfer must be delayed. |
-| IsIncoming | This boolean value indicates the transaction type. To perform a deposit, set it to `true`. Conversely, to perform a withdrawal, set it to `false`. |
+| Parameter         | Description                                                                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AchRelationshipId | This is the ACH relationship through which the transfer will be performed.                                                                         |
+| Amount            | This is the amount of funds to be transferred. The value must be provided in US dollars.                                                           |
+| CloseAccount      | This boolean value indicates if the trading account must be closed after the transfer is performed. Only applicable to withdrawal operations.      |
+| DaysToHoldFunds   | This is the number of days by which the transfer must be delayed.                                                                                  |
+| IsIncoming        | This boolean value indicates the transaction type. To perform a deposit, set it to `true`. Conversely, to perform a withdrawal, set it to `false`. |
 
 For example:
 
@@ -48,7 +48,7 @@ For example:
 
 Here's the final template for this API request:
 
-```text
+```
 POST apiURL/v1.0/accounts/{accountId}/transfers/ach
 ```
 
@@ -83,4 +83,3 @@ If you specify the wrong Et-App-Key parameter or fail to include it in the heade
     "error": "Application key is not defined or does not exist"
 }
 ```
-

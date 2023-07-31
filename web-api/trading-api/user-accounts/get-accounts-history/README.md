@@ -10,13 +10,13 @@ This endpoint enables you to retrieve the historical value of a particular tradi
 
 There are seven required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **Trading Account Number** \(path\). This is the numeric ID of the trading account whose historical value you'd like to retrieve. You can get the list of a user's trading accounts with [this API call](../list-users-accounts/).
-4. **API version** \(path\). Unless necessary, leave it at "1.0".
-5. **startDate** \(query\). This is the starting date from which the account value history will be retrieved.
-6. **endDate** \(query\). This is the end date until which the account value history will be retrieved.
-7. **step** \(query\). This is the number of items that must be retrieved.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **Trading Account Number** (path). This is the numeric ID of the trading account whose historical value you'd like to retrieve. You can get the list of a user's trading accounts with [this API call](../list-users-accounts.md).
+4. **API version** (path). Unless necessary, leave it at "1.0".
+5. **startDate** (query). This is the starting date from which the account value history will be retrieved.
+6. **endDate** (query). This is the end date until which the account value history will be retrieved.
+7. **step** (query). This is the number of items that must be retrieved.
 
 {% hint style="info" %}
 The **step** parameter is currently ignored by the service. You can assign any value to it without affecting the content of the response.
@@ -24,7 +24,7 @@ The **step** parameter is currently ignored by the service. You can assign any v
 
 This API request must be sent to the following URL:
 
-```text
+```
 apiURL/v1.0/accounts/accountNumber/history?startDate=2019-01-01T14:20:10.837Z&endDate=2019-02-08T14:20:10.837Z&step=5
 ```
 
@@ -95,10 +95,10 @@ In response to this request, you'll receive a JSON file with the list of account
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| Date | The precise date on the valuation |
-| Value | The value of the account for the date |
+| Parameter | Description                           |
+| --------- | ------------------------------------- |
+| Date      | The precise date on the valuation     |
+| Value     | The value of the account for the date |
 
 ## Common Mistakes
 
@@ -133,4 +133,3 @@ If the query parameters are missing or incorrectly specified , the following err
 ```
 
 In the following article we provide in-depth coverage of the syntax for this API request.
-
