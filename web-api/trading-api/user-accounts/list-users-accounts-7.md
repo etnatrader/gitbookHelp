@@ -1,4 +1,4 @@
-# Account To User By Username
+# Add Account To User By Username
 
 ## Overview
 
@@ -6,7 +6,7 @@ This API endpoint enables you to bind a new or an existing trading account to an
 
 
 
-{% swagger method="put" path="/v{version}/accounts/{accountId}/username/{username}" baseUrl="baseURL" summary="Account To User By Username" %}
+{% swagger method="put" path="/v{version}/accounts/{accountId}/username/{username}" baseUrl="baseURL" summary="Add Account To User By Username" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -39,8 +39,8 @@ This is the authorization token from the token request. The value of this header
 This is your app’s unique key that can be retrieved from the BO Companies widget in ETNA Trader.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" required="true" name="username" %}
-
+{% swagger-parameter in="path" required="true" name="username" type="String" %}
+This field represents the username of the user to whom an existing trading account should be bound.
 
 \
 
