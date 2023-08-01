@@ -81,8 +81,6 @@
     * [Update User's Password](web-api/trading-api/managing-users/update-users-password.md)
   * [Trading Accounts](web-api/trading-api/user-accounts/README.md)
     * [Get Account's Balance Info](web-api/trading-api/user-accounts/get-accounts-balance-info.md)
-    * [Get Account's History](web-api/trading-api/user-accounts/get-accounts-history/README.md)
-      * [Syntax](web-api/trading-api/user-accounts/get-accounts-history/useraccounts\_getaccounthistory.md)
     * [Get All Accounts Of A User](web-api/trading-api/user-accounts/list-users-accounts.md)
     * [Get All Users Of An Account](web-api/trading-api/user-accounts/list-users-accounts-1.md)
     * [Get Account Info](web-api/trading-api/user-accounts/list-users-accounts-2.md)
