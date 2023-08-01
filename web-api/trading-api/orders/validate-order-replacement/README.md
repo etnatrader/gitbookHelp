@@ -10,12 +10,12 @@ This PUT endpoint enables you to verify an order replacement before using it to 
 
 There are six required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **Trading Account ID** \(path\). This is the numeric ID of the trading account on which an existing order replacement must be verified.
-5. **orderId** \(path\). This is the id of the order which parameter replacement must be verified. You can retrieve IDs of orders of a particular trading account using this [API request](../get-filtered-orders/).
-6. **modifyParams** \(body\). This is a JSON file that contains the parameters that need to be modified in an existing order. 
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **Trading Account ID** (path). This is the numeric ID of the trading account on which an existing order replacement must be verified.
+5. **orderId** (path). This is the id of the order which parameter replacement must be verified. You can retrieve IDs of orders of a particular trading account using this [API request](../get-filtered-orders/).
+6. **modifyParams** (body). This is a JSON file that contains the parameters that need to be modified in an existing order.&#x20;
 
 Optionally, you may add another header that will return localized error messages in the required language:
 
@@ -23,15 +23,15 @@ Optionally, you may add another header that will return localized error messages
 
 Here's the final template for this API request:
 
-* For orders that will only be verified by the API but not the execution venue \(quick\):
+* For orders that will only be verified by the API but not the execution venue (quick):
 
-```text
+```
 PUT apiURL/v1.0/accounts/{accountID}/preview/orders/{existingOrderID}
 ```
 
-* For orders that will be verified by the API and the execution venue too \(slow\):
+* For orders that will be verified by the API and the execution venue too (slow):
 
-```text
+```
 PUT apiURL/v1.0/accounts/{accountID}/preview/syncorders/{existingOrderID}
 ```
 
@@ -57,7 +57,7 @@ The first four parameters — **ID**, **Quantity**, **Price**, **ExecutionInstru
 
 ## Response
 
-In response to this request, you'll receive a JSON file confirming \(or rejecting\) that the order replacement has been properly constructed.
+In response to this request, you'll receive a JSON file confirming (or rejecting) that the order replacement has been properly constructed.
 
 ```javascript
 {
@@ -72,14 +72,36 @@ In response to this request, you'll receive a JSON file confirming \(or rejectin
   "TotalCost": 1.00000002,
   "Quotes": [
     {
-      "Ask": 266.7,
-      "Bid": 266.61,
-      "Last": 266.5,
-      "Volume": 50,
+      "Ask": 0,
+      "Bid": 0,
+      "Last": 0,
+      "Volume": 0,
       "OpenInterest": 0,
-      "Symbol": "AAPL",
-      "SecurityId": 4,
-      "Timestamp": "2019-11-28T01:00:00Z"
+      "Symbol": "string",
+      "SecurityId": 0,
+      "Timestamp": "2023-08-01T16:14:51.128Z",
+      "QuoteTypes": 0,
+      "Mark": 0,
+      "Price": 0,
+      "Key": 0,
+      "Date": "2023-08-01T16:14:51.128Z",
+      "High": 0,
+      "Low": 0,
+      "Open": 0,
+      "Close": 0,
+      "Change": 0,
+      "ChangePc": 0,
+      "Week52Low": 0,
+      "Week52High": 0,
+      "TotalDailyVolume": 0,
+      "AskSize": 0,
+      "BidSize": 0,
+      "PreviousClose": 0,
+      "IsHalted": true,
+      "BidExchange": "string",
+      "AskExchange": "string",
+      "LastExchange": "string",
+      "Channel": "string"
     }
   ],
   "MarginChange": 0
@@ -88,16 +110,16 @@ In response to this request, you'll receive a JSON file confirming \(or rejectin
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| IsSuccessful | This field indicates if the order replacement has been successfully executed. |
-| Commission | This is the total commission applicable to the order. |
-| Commissions | This is an array that breaks down the applicable commissions. |
-| Cost | This is the total cost of the order \(including commission\). |
-| NetCost | This is the cost of the order less commission. |
-| TotalCost | This is the gross commission applied to the order \(including all other commissions\). |
-| Quotes | This is the last batch of quotes for this security \(includes the security's ticker symbol, its internal identifier in ETNA Trader, and the quote's timestamp\). |
-| MarginChange | This is the amount by which the trading account margin requirements will be affected once this order is filled. |
+| Parameter    | Description                                                                                                                                                    |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IsSuccessful | This field indicates if the order replacement has been successfully executed.                                                                                  |
+| Commission   | This is the total commission applicable to the order.                                                                                                          |
+| Commissions  | This is an array that breaks down the applicable commissions.                                                                                                  |
+| Cost         | This is the total cost of the order (including commission).                                                                                                    |
+| NetCost      | This is the cost of the order less commission.                                                                                                                 |
+| TotalCost    | This is the gross commission applied to the order (including all other commissions).                                                                           |
+| Quotes       | This is the last batch of quotes for this security (includes the security's ticker symbol, its internal identifier in ETNA Trader, and the quote's timestamp). |
+| MarginChange | This is the amount by which the trading account margin requirements will be affected once this order is filled.                                                |
 
 ## Common Mistakes
 
@@ -137,4 +159,3 @@ Another common mistake made when sending this API request is failing to provide 
 ```
 
 The following article covers the syntax for this API request in detail.
-
