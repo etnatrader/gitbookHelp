@@ -243,4 +243,3 @@
     * [Part I](web-api/trading-api/definitions/part-i.md)
     * [Part II](web-api/trading-api/definitions/part-ii.md)
     * [Part III](web-api/trading-api/definitions/part-iii.md)
-  * [Pin Code Reset](web-api/trading-api/pin-code-reset.md)

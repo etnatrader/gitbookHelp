@@ -12,10 +12,10 @@ This PUT endpoint enables you to retrieve candles and indicators for a particula
 
 There are four required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **model** \(body\). This is a JSON dictionary that contains information about the enquired security.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **model** (body). This is a JSON dictionary that contains information about the enquired security.
 
 #### Enquired Security Syntax
 
@@ -45,112 +45,20 @@ Here's an example of the request body with the information about the enquired se
 
 where:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Securities</td>
-      <td style="text-align:left">This is an array with the enquired securities.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Symbol</td>
-      <td style="text-align:left">This is the ticker symbol of the security under which it is listed on
-        the exchange.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Exchange (optional)</td>
-      <td style="text-align:left">This is the exchange on which the enquired security is listed.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Currency (optional)</td>
-      <td style="text-align:left">This is the currency in which the enquired security is denominated. Possible
-        values: &quot;USD&quot;.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Id</td>
-      <td style="text-align:left">This is the internal ID of the security in ETNA Trader. You can retrieve
-        this ID with <a href="../../securities/get-securitys-info-by-ticker/">this API endpoint</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">StartDate</td>
-      <td style="text-align:left">This is the beginning of the period for which the data will be retrieved.
-        The value must be provided in <a href="https://www.unixtimestamp.com/">UNIX Time Stamps</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">EndDate</td>
-      <td style="text-align:left">This is the end of the period for which the data will be retrieved. The
-        value must be provided in <a href="https://www.unixtimestamp.com/">UNIX Time Stamps</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CandlesCount</td>
-      <td style="text-align:left">This is the number of reference points for the chart. For example, if
-        this parameter is set to 5, that chart will be drawn using five values.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Period</td>
-      <td style="text-align:left">
-        <p>This is the preferred time frame for the chart. Possible values:</p>
-        <ul>
-          <li>&quot;1m&quot;;</li>
-          <li>&quot;2m&quot;;</li>
-          <li>&quot;3m&quot;;</li>
-          <li>&quot;5m&quot;;</li>
-          <li>&quot;10m&quot;;</li>
-          <li>&quot;15m&quot;;</li>
-          <li>&quot;30m&quot;;</li>
-          <li>&quot;1h&quot;;</li>
-          <li>&quot;2h&quot;;</li>
-          <li>&quot;4h&quot;;</li>
-          <li>&quot;1D&quot;;</li>
-          <li>&quot;1W&quot;;</li>
-          <li>&quot;1M&quot;;</li>
-          <li>&quot;3M&quot;;</li>
-          <li>&quot;6M&quot;;</li>
-          <li>&quot;1Y&quot;.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Interval</td>
-      <td style="text-align:left">
-        <p>This is the required time period for the specified time period. Possible
-          values:</p>
-        <ol>
-          <li>Candles = 0,</li>
-          <li>All = -1,</li>
-          <li>YearToDate = -2,</li>
-          <li>Custom = -3,</li>
-          <li>Day1 = -4,</li>
-          <li>Week1 = -5,</li>
-          <li>Month1 = -6,</li>
-          <li>Month3 = -7,</li>
-          <li>Month6 = -8,</li>
-          <li>Year1 = -9,</li>
-          <li>Year3 = -10,</li>
-          <li>CustomCandles = -11,</li>
-          <li>Day3 = -12,</li>
-          <li>Today = -13</li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Offset</td>
-      <td style="text-align:left">This is the number of data points by which the technical indicator will
-        be offset.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">IndicatorsHistorySettings</td>
-      <td style="text-align:left">This is a string that contains information about the required technical
-        indicator. If the technical indicator is not necessary, set this parameter
-        to <code>[]</code>.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter                 | Description                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Securities                | This is an array with the enquired securities.                                                                                                                                                                                                                                                                                                                                                                         |
+| Symbol                    | This is the ticker symbol of the security under which it is listed on the exchange.                                                                                                                                                                                                                                                                                                                                    |
+| Exchange (optional)       | This is the exchange on which the enquired security is listed.                                                                                                                                                                                                                                                                                                                                                         |
+| Currency (optional)       | This is the currency in which the enquired security is denominated. Possible values: "USD".                                                                                                                                                                                                                                                                                                                            |
+| Id                        | This is the internal ID of the security in ETNA Trader. You can retrieve this ID with [this API endpoint](../../securities/get-securitys-info-by-ticker/).                                                                                                                                                                                                                                                             |
+| StartDate                 | This is the beginning of the period for which the data will be retrieved. The value must be provided in [UNIX Time Stamps](https://www.unixtimestamp.com/).                                                                                                                                                                                                                                                            |
+| EndDate                   | This is the end of the period for which the data will be retrieved. The value must be provided in [UNIX Time Stamps](https://www.unixtimestamp.com/).                                                                                                                                                                                                                                                                  |
+| CandlesCount              | This is the number of reference points for the chart. For example, if this parameter is set to 5, that chart will be drawn using five values.                                                                                                                                                                                                                                                                          |
+| Period                    | <p>This is the preferred time frame for the chart. Possible values: </p><ul><li>"1m";</li><li>"2m";</li><li>"3m";</li><li>"5m";</li><li>"10m";</li><li>"15m";</li><li>"30m";</li><li>"1h";</li><li>"2h";</li><li>"4h";</li><li>"1D";</li><li>"1W";</li><li>"1M";</li><li>"3M";</li><li>"6M";</li><li>"1Y".</li></ul>                                                                                                   |
+| Interval                  | <p>This is the required time period for the specified time period. Possible values:</p><ol><li>Candles = 0, </li><li>All = -1,</li><li> YearToDate = -2, </li><li>Custom = -3, </li><li>Day1 = -4, </li><li>Week1 = -5, </li><li>Month1 = -6, </li><li>Month3 = -7, </li><li>Month6 = -8, </li><li>Year1 = -9, </li><li>Year3 = -10, </li><li>CustomCandles = -11,</li><li> Day3 = -12, </li><li>Today = -13</li></ol> |
+| Offset                    | This is the number of data points by which the technical indicator will be offset.                                                                                                                                                                                                                                                                                                                                     |
+| IndicatorsHistorySettings | This is a string that contains information about the required technical indicator. If the technical indicator is not necessary, set this parameter to `[]`.                                                                                                                                                                                                                                                            |
 
 {% hint style="warning" %}
 All parameters must be provided in the body JSON; otherwise the chart data will not be retrieved.
@@ -158,13 +66,13 @@ All parameters must be provided in the body JSON; otherwise the chart data will 
 
 Here's the final template for this API request:
 
-```text
+```
 PUT apiURL/v1.0/history/symbols
 ```
 
 ### Sample CURL
 
-```text
+```
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer Token' --header 'Et-App-Key: yourKey' -d 
 '{"Security":  
  		{ 
@@ -180,7 +88,7 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
  			"IncludeNonMarketData":false 
  		}, 
   	   "IndicatorsHistorySettings":[] 
- }' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/history/symbols'
+ }' 'https://pub-api-trader-demo-prod.etnasoft.us/api/v1.0/history/symbols'
  
 ```
 
@@ -326,17 +234,17 @@ In response to this API request, you'll receive the chart data for the specified
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| IsMarket | This field indicates if the candle is positioned during the regular trading hours. If so, the value will be set to true; if not, the value will be set to false. |
-| Volume | This is the trading volume for the specified period. |
-| OpenInterest | This is the total number of outstanding derivative contracts that have not been settled yet \(only applicable for derivatives\). |
-| Time | This is the date and time \(in ticks\) at which this particular candle was registered. |
-| DateTime | This is the date and time \(in UTC time\) at which this particular candle was registered. |
-| Open | This is the opening price of the security. |
-| Close | This is the closing price of the security. |
-| High | This is the highest price point for the security during the specified time period. |
-| Low | This is the lowest price point for the security during the specified time period. |
+| Parameter    | Description                                                                                                                                                      |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IsMarket     | This field indicates if the candle is positioned during the regular trading hours. If so, the value will be set to true; if not, the value will be set to false. |
+| Volume       | This is the trading volume for the specified period.                                                                                                             |
+| OpenInterest | This is the total number of outstanding derivative contracts that have not been settled yet (only applicable for derivatives).                                   |
+| Time         | This is the date and time (in ticks) at which this particular candle was registered.                                                                             |
+| DateTime     | This is the date and time (in UTC time) at which this particular candle was registered.                                                                          |
+| Open         | This is the opening price of the security.                                                                                                                       |
+| Close        | This is the closing price of the security.                                                                                                                       |
+| High         | This is the highest price point for the security during the specified time period.                                                                               |
+| Low          | This is the lowest price point for the security during the specified time period.                                                                                |
 
 ### Common Mistakes
 
@@ -364,4 +272,3 @@ Another common mistake when attempting to retrieve the chart data for a particul
 ```
 
 The following article covers the syntax for this API request in detail.
-

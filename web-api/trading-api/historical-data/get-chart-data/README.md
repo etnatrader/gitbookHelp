@@ -12,10 +12,10 @@ This PUT endpoint enables you to retrieve and compare historical trading data fo
 
 There are four required parameters that must be provided in the request:
 
-1. **Et-App-Key** \(header\). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** \(header\). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` \(`Bearer` + 1 space + the token\).
-3. **API version** \(path\). Unless necessary, leave it at "1.0".
-4. **model** \(body\). This is a JSON dictionary that contains information about the enquired securities.
+1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
+2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/requesting-tokens/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
+3. **API version** (path). Unless necessary, leave it at "1.0".
+4. **model** (body). This is a JSON dictionary that contains information about the enquired securities.
 
 #### Enquired Securities Syntax
 
@@ -67,97 +67,18 @@ Here's an example of the request body with the information about the enquired se
 
 where:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Securities</td>
-      <td style="text-align:left">This is an array with the enquired securities.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Symbol</td>
-      <td style="text-align:left">This is the ticker symbol of the security under which it is listed on
-        the exchange.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Exchange (optional)</td>
-      <td style="text-align:left">This is the exchange on which the enquired security is listed.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Currency (optional)</td>
-      <td style="text-align:left">This is the currency in which the enquired security is denominated. Possible
-        values: &quot;USD&quot;.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Id</td>
-      <td style="text-align:left">This is the internal ID of the security in ETNA Trader. You can retrieve
-        this ID with <a href="../../securities/get-securitys-info-by-internal-id/">this API endpoint</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">StartDate</td>
-      <td style="text-align:left">This is the beginning of the period for which the data will be retrieved.
-        The value must be provided in <a href="https://www.unixtimestamp.com/">UNIX Time Stamps</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">EndDate</td>
-      <td style="text-align:left">This is the end of the period for which the data will be retrieved. The
-        value must be provided in <a href="https://www.unixtimestamp.com/">UNIX Time Stamps</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">CandlesCount</td>
-      <td style="text-align:left">This is the number of reference points for the chart. For example, if
-        this parameter is set to 5, that chart will be drawn using five values.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Period</td>
-      <td style="text-align:left">
-        <p>This is the preferred time frame for the chart. Possible values:</p>
-        <ul>
-          <li>&quot;1m&quot;;</li>
-          <li>&quot;2m&quot;;</li>
-          <li>&quot;3m&quot;;</li>
-          <li>&quot;5m&quot;;</li>
-          <li>&quot;10m&quot;;</li>
-          <li>&quot;15m&quot;;</li>
-          <li>&quot;30m&quot;;</li>
-          <li>&quot;1h&quot;;</li>
-          <li>&quot;2h&quot;;</li>
-          <li>&quot;4h&quot;;</li>
-          <li>&quot;1D&quot;;</li>
-          <li>&quot;1W&quot;;</li>
-          <li>&quot;1M&quot;;</li>
-          <li>&quot;3M&quot;;</li>
-          <li>&quot;6M&quot;;</li>
-          <li>&quot;1Y&quot;.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Interval</td>
-      <td style="text-align:left">
-        <p>This is the required time period for the specified time period. Possible
-          values:</p>
-        <ol>
-          <li>&quot;TDY&quot;;</li>
-          <li>&quot;1D&quot;;</li>
-          <li>&quot;1W&quot;;</li>
-          <li>&quot;1M&quot;;</li>
-          <li>&quot;3M&quot;;</li>
-          <li>&quot;6M&quot;;</li>
-          <li>&quot;YTD&quot;;</li>
-          <li>&quot;1Y&quot;;</li>
-          <li>&quot;3Y&quot;;</li>
-          <li>&quot;ALL&quot;.</li>
-        </ol>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameter           | Description                                                                                                                                                                                                                                                                                                          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Securities          | This is an array with the enquired securities.                                                                                                                                                                                                                                                                       |
+| Symbol              | This is the ticker symbol of the security under which it is listed on the exchange.                                                                                                                                                                                                                                  |
+| Exchange (optional) | This is the exchange on which the enquired security is listed.                                                                                                                                                                                                                                                       |
+| Currency (optional) | This is the currency in which the enquired security is denominated. Possible values: "USD".                                                                                                                                                                                                                          |
+| Id                  | This is the internal ID of the security in ETNA Trader. You can retrieve this ID with [this API endpoint](../../securities/get-securitys-info-by-internal-id/).                                                                                                                                                      |
+| StartDate           | This is the beginning of the period for which the data will be retrieved. The value must be provided in [UNIX Time Stamps](https://www.unixtimestamp.com/).                                                                                                                                                          |
+| EndDate             | This is the end of the period for which the data will be retrieved. The value must be provided in [UNIX Time Stamps](https://www.unixtimestamp.com/).                                                                                                                                                                |
+| CandlesCount        | This is the number of reference points for the chart. For example, if this parameter is set to 5, that chart will be drawn using five values.                                                                                                                                                                        |
+| Period              | <p>This is the preferred time frame for the chart. Possible values: </p><ul><li>"1m";</li><li>"2m";</li><li>"3m";</li><li>"5m";</li><li>"10m";</li><li>"15m";</li><li>"30m";</li><li>"1h";</li><li>"2h";</li><li>"4h";</li><li>"1D";</li><li>"1W";</li><li>"1M";</li><li>"3M";</li><li>"6M";</li><li>"1Y".</li></ul> |
+| Interval            | <p>This is the required time period for the specified time period. Possible values:</p><ol><li>"TDY";</li><li>"1D";</li><li>"1W";</li><li>"1M";</li><li>"3M";</li><li>"6M";</li><li>"YTD";</li><li>"1Y";</li><li>"3Y";</li><li>"ALL".</li></ol>                                                                      |
 
 {% hint style="warning" %}
 All parameters must be provided in the body JSON; otherwise the chart data will not be retrieved.
@@ -165,19 +86,19 @@ All parameters must be provided in the body JSON; otherwise the chart data will 
 
 Here's the final template for this API request:
 
-```text
+```
 PUT apiURL/v1.0/history/compare
 ```
 
 ### Sample CURLs
 
-```text
+```
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer token' --header 'Et-App-Key: yourEttAppKey' -d '{"Securities": [{"Symbol":"MSFT","Exchange":"XNAS","Currency":"USD","Id":6},
  {"Symbol":"AAPL","Exchange":"XNAS","Currency":"USD","Id":4}],
  "SecuritiesHistorySettings":
  { "CandlesCount":14,
  "Period":"4h"
- } }' 'https://pub-api-et-demo-prod.etnasoft.us/api/v1.0/history/compare'
+ } }' 'https://pub-api-trader-demo-prod.etnasoft.us/api/v1.0/history/compare'
 ```
 
 ### Response
@@ -219,12 +140,12 @@ In response to this API request, you'll receive the chart data for the list of s
 
 where:
 
-| Parameter | Description |
-| :--- | :--- |
-| Volume | This is the trading volume at the time specified in `Time`. |
-| Time | This is the date and time \(in UNIX timestamps\) at which this chart data point was registered. |
-| Difference | This is the difference between the price at the `StartDate` and `Price`. |
-| Price | The price registered at `Time`. |
+| Parameter  | Description                                                                                   |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| Volume     | This is the trading volume at the time specified in `Time`.                                   |
+| Time       | This is the date and time (in UNIX timestamps) at which this chart data point was registered. |
+| Difference | This is the difference between the price at the `StartDate` and `Price`.                      |
+| Price      | The price registered at `Time`.                                                               |
 
 ### Common Mistakes
 
@@ -252,4 +173,3 @@ Another common mistake when attempting to retrieve the chart data for a set of s
 ```
 
 The following article covers the syntax for this API request in detail.
-
