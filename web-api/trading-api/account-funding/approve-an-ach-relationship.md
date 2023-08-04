@@ -4,61 +4,69 @@ description: Approve an ACH relationship based on micro deposits
 
 # Approve an ACH Relationship
 
-### Overview
+This endpoint enables you to approve a new ACH relationship based on micro deposits (as opposed to Plaid-based ACH relationships).&#x20;
 
-This POST endpoint enables you to approve a new ACH relationship that are based on micro deposits (as opposed to Plaid-based ACH relationships). When you attempt to create such relationship, you will see two values in your banking account statement (e.g., `0.34` and `0.21`). These two values will have to provided in this endpoint to confirm the creation of the ACH relationship.
+When you attempt to create such relationship, you will see two values in your banking account statement (e.g., `0.34` and `0.21`).&#x20;
+
+Provide these two values in this endpoint to confirm the creation of the ACH relationship.
 
 {% hint style="warning" %}
 This endpoint cannot be used for approving Plaid-based ACH relationships, as they are automatically approved.
 {% endhint %}
 
-There are six required parameters that must be provided in the request:
+{% swagger baseUrl="baseURL" path="/v{version}/accounts/{accountId}/ach-relationships/{id}/approve" method="post" summary="Approve An ACH Relationship" %}
+{% swagger-description %}
 
-1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** (header). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
-3. **API version** (path). Unless necessary, leave it at "1.0".
-4. **accountId** (path). This is the [internal identifier](../user-accounts/list-users-accounts.md) of the trading account in ETNA Trader to which the ACH relationship is bound.
-5. **id** (path). This is the ID of the to-be-approved ACH relationship in ETNA Trader.
-6. **model** (body). This is a JSON dictionary containing two values from the banking statement.
+{% endswagger-description %}
 
-#### Request Body
+{% swagger-parameter in="path" name="apiVersion" type="String" required="true" %}
+The version of the API. By default it's 
 
-The body of this request represents the two values from the banking statement. They can be provided in any order.
+`1.0`
 
-| Parameter | Description                                               |
-| --------- | --------------------------------------------------------- |
-| Amount1   | This is one of the two values from the banking statement. |
-| Amount2   | This is the other value from the banking statement.       |
+.
+{% endswagger-parameter %}
 
-For example:
+{% swagger-parameter in="path" name="accountId" type="Integer" required="true" %}
+ID of the trading account.
+{% endswagger-parameter %}
 
-```javascript
-{
-  "Amount1": 0.32,
-  "Amount2": 0.19
+{% swagger-parameter in="header" name="Et-App-Key" type="String" required="true" %}
+The unique key of your app that identifies it when communicating with our service. Contact your administrator to get this key.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="String" required="true" %}
+Authorization token. Must be provided in the following format: 
+
+`Bearer token`
+
+ (
+
+`Bearer`
+
+ \+ 1 space + the token)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="id" type="String" required="true" %}
+This is the ID of the ACH relationship in ETNA Trader.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="model" type="String" required="true" %}
+JSON object containing two charges from the banking statement.
+
+
+
+{&#x20;
+
+"Amount1": 0.32, "Amount2": 0.19&#x20;
+
 }
+
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Successful request, the ACH relationship has been approved." %}
 ```
-
-Here's the final template for this API request:
-
 ```
-POST apiURL/v1.0/accounts/{accountId}/ach-relationships/{id}/approve
-```
-
-### Response
-
-In response to this API request, you will receive the 200 status code and no error message.
-
-### Common Mistakes
-
-Here are some of the common mistakes that developers make when attempting to send a request to approve an ACH relationship.
-
-#### Failing to Specify the Et-App-Key Parameter
-
-If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
-
-```javascript
-{
-    "error": "Application key is not defined or does not exist"
-}
-```
+{% endswagger-response %}
+{% endswagger %}

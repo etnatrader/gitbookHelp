@@ -4,31 +4,62 @@ description: List all ACH relationships of a particular trading account
 
 # Get All ACH Relationships
 
-### Overview
+This endpoint enables you to retrieve information about all ACH relationships of a particular trading account.
 
-This GET endpoint enables you to retrieve information about all ACH relationships of a particular trading account.
+{% swagger baseUrl="baseURL" path="/v{version}/accounts/{accountId}/ach-relationships" method="get" summary="Get An Account's ACH Relationships" %}
+{% swagger-description %}
 
-There are five required parameters that must be provided in the request:
+{% endswagger-description %}
 
-1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** (header). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
-3. **API version** (path). Unless necessary, leave it at "1.0".
-4. **accountId** (path). This is the [internal identifier](../user-accounts/list-users-accounts.md) of the trading account in ETNA Trader whose ACH relationships must be listed.
-5. **pageNumber** (query). This is the number of the page (all ACH relationships are split in pages).
-6. **pageSize** (query). This is the preferable size of the page (maximum value is 99).
-7. **sortBy** (query). This is a parameter by which all returned ACH relationships must be sorted.
-8. **desc** (query). This boolean parameter indicates if the returned ACH relationships should be sorted in ascending (false) or descending (true) order.
+{% swagger-parameter in="path" name="apiVersion" type="String" required="true" %}
+The version of the API. By default it's 
 
-Here's the final template for this API request:
+`1.0`
 
-```
-GET apiURL/v1.0/accounts/{accountId}/ach-relationships/
-```
+.
+{% endswagger-parameter %}
 
-### Response
+{% swagger-parameter in="path" name="accountId" type="Integer" required="true" %}
+ID of the trading account.
+{% endswagger-parameter %}
 
-In response to this API request, you will receive an array of JSON dictionaries, each containing detailed information about some ACH relationship.
+{% swagger-parameter in="header" name="Et-App-Key" type="String" required="true" %}
+The unique key of your app that identifies it when communicating with our service. Contact your administrator to get this key.
+{% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Authorization" type="String" required="true" %}
+Authorization token. Must be provided in the following format: 
+
+`Bearer token`
+
+ (
+
+`Bearer`
+
+ \+ 1 space + the token)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="pageSize" type="Integer" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="pageNumber" type="Integer" required="true" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="sortBy" type="String" required="true" %}
+Parameter by which the returned ACH relationships must be sorted.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="isDesc" type="Boolean" required="true" %}
+Determines if returned ACH relationships must be sorted in descending or ascending order.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="status" type="String" %}
+Filters ACH relationships by status: Pending, Approved, Canceled, Error, PendingCancel, PendingApproval.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Successful request, a collection of ACH relationships is returned." %}
 ```javascript
 {
   "Result": [
@@ -91,32 +122,5 @@ In response to this API request, you will receive an array of JSON dictionaries,
   "TotalCount": 4
 }
 ```
-
-where:
-
-| Parameter        | Description                                                                                                                                                                                   |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Id               | This is the internal identifier of the ACH relationship in ETNA Trader.                                                                                                                       |
-| AccountId        | This is an ETNA Trader's trading account to which the ACH relationship.                                                                                                                       |
-| RoutingNumber    | This is the routing number of the bank who opened the banking account. You can view sample routing number on [this page](https://bankorganizer.com/list-of-routing-numbers/#bank-of-america). |
-| AccountNumber    | This is the number of the banking account in the target bank. For example: **987654321222**.                                                                                                  |
-| AccountOwnerName | This is the name of the banking account owner. For example: **Robert**.                                                                                                                       |
-| Name             | This is the name of the target bank. For example: **Citi Bank**.                                                                                                                              |
-| Status           | This is the status of the ACH relationship.                                                                                                                                                   |
-| CreatedAt        | This is the precise time and date at which the ACH relationship was created.                                                                                                                  |
-| ApprovalMethod   | This is the approval method. The value of this parameter can be either **Instant** (Plaid) or **Manual** (Micro deposits).                                                                    |
-| Default          | This boolean value indicates if this ACH relationship is a default one for this trading account.                                                                                              |
-
-### Common Mistakes
-
-Here are some of the common mistakes that developers make when attempting to retrieve a list of ACH relationships.&#x20;
-
-#### Failing to Specify the Et-App-Key Parameter
-
-If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
-
-```javascript
-{
-    "error": "Application key is not defined or does not exist"
-}
-```
+{% endswagger-response %}
+{% endswagger %}

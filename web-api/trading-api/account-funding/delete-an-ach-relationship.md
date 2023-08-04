@@ -1,33 +1,48 @@
----
-description: Delete an existing ACH relationship
----
-
-# Delete an ACH Relationship
+# Remove an ACH Relationship
 
 ### Overview
 
-This DELETE endpoint enables you to delete an existing ACH relationship from a particular trading account.
+This endpoint enables you to delete an existing ACH relationship from a particular trading account.
 
-There are six required parameters that must be provided in the request:
+{% swagger baseUrl="baseURL" path="/v{version}/accounts/{accountId}/ach-relationships/{id}" method="delete" summary="Remove An ACH Relationship" %}
+{% swagger-description %}
 
-1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** (header). This is the authorization token from the very first [token request](../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
-3. **API version** (path). Unless necessary, leave it at "1.0".
-4. **accountId** (path). This is the [internal identifier](../user-accounts/list-users-accounts.md) of the trading account in ETNA Trader to which the ACH relationship is bound.
-5. **id** (path). This is the ID of the to-be-deleted ACH relationship in ETNA Trader.
-6. **reason** (query). This is a string that contains the reason for closing the ACH relationship.
+{% endswagger-description %}
 
-Here's the final template for this API request:
+{% swagger-parameter in="path" name="apiVersion" type="String" required="true" %}
+The version of the API. By default it's 
 
+`1.0`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="accountId" type="Integer" required="true" %}
+ID of the trading account.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Et-App-Key" type="String" required="true" %}
+The unique key of your app that identifies it when communicating with our service. Contact your administrator to get this key.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="String" required="true" %}
+Authorization token. Must be provided in the following format: 
+
+`Bearer token`
+
+ (
+
+`Bearer`
+
+ \+ 1 space + the token)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="id" type="String" required="true" %}
+This is the ID of the ACH relationship in ETNA Trader.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Successful request, the ACH relationship has been removed." %}
 ```
-DELETE apiURL/v1.0/accounts/{accountId}/ach-relationships/{id}?reason=Closed%20the%20banking%20account
-```
-
-### Response
-
-In response to this API request, you will receive a JSON dictionary containing information about the deleted ACH relationship, including the **Canceled** status and the cancelation reason.
-
-```javascript
 {
   "Id": "40ee3617-7a67-45dd-0609-08d7bacaad26",
   "AccountId": 0,
@@ -44,17 +59,5 @@ In response to this API request, you will receive a JSON dictionary containing i
   "Default": false
 }
 ```
-
-### Common Mistakes
-
-Here are some of the common mistakes that developers make when attempting to send a request to delete an existing ACH relationship.
-
-#### Failing to Specify the Et-App-Key Parameter
-
-If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
-
-```javascript
-{
-    "error": "Application key is not defined or does not exist"
-}
-```
+{% endswagger-response %}
+{% endswagger %}

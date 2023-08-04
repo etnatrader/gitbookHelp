@@ -1,26 +1,69 @@
----
-description: >-
-  Deposit and withdraw funds to/from a specific trading account via ACH
-  relationships
----
-
 # Deposit / Withdraw Funds via ACH
 
-### Overview
-
-This POST endpoint enables you to deposit or withdraw funds to/from an ACH-based banking account.&#x20;
+This endpoint enables you to deposit or withdraw funds to/from an ACH-based banking account.&#x20;
 
 {% hint style="info" %}
 Deposits and withdrawals performed through ACH relationships will be reflected in trading account balances before the start of the following trading session (after ETNA Trader receives SOD files).
 {% endhint %}
 
-There are five required parameters that must be provided in the request:
+{% swagger baseUrl="baseURL" path="/v{version}/accounts/{accountId}/transfers/ach" method="post" summary="Send An ACH Transfer To The Clearing Firm" %}
+{% swagger-description %}
 
-1. **Et-App-Key** (header). This is the unique key of your app that identifies your app when communicating with our service. Contact your administrator to get this key.
-2. **Authorization** (header). This is the authorization token from the very first [token request](../../authentication/). The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
-3. **API version** (path). Unless necessary, leave it at "1.0".
-4. **accountId** (path). This is the [internal identifier](../../user-accounts/list-users-accounts.md) of the trading account in ETNA Trader.
-5. **model** (body). This is a JSON file containing detailed information about the funds transfer.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="apiVersion" type="String" required="true" %}
+The version of the API. By default it's 
+
+`1.0`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="accountId" type="Integer" required="true" %}
+ID of the trading account.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Et-App-Key" type="String" required="true" %}
+The unique key of your app that identifies it when communicating with our service. Contact your administrator to get this key.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="String" required="true" %}
+Authorization token. Must be provided in the following format: 
+
+`Bearer token`
+
+ (
+
+`Bearer`
+
+ \+ 1 space + the token)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="model" type="String" required="true" %}
+JSON object with the detailed information about a transfer.
+
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Successful request, the ACH transfer was successfully sent to the clearing firm." %}
+```
+{
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "AccountId": 0,
+  "ExternalId": "string",
+  "Mechanism": "string",
+  "IsDeposit": true,
+  "Status": "string",
+  "Comment": "string",
+  "Amount": 0,
+  "TotalAmount": 0,
+  "TransferDate": "2023-08-04T10:18:53.817Z",
+  "CreatedAt": "2023-08-04T10:18:53.817Z",
+  "ClearingAccountNumber": "string"
+}
+```
+{% endswagger-response %}
+{% endswagger %}
 
 #### Body Syntax
 
@@ -43,43 +86,5 @@ For example:
    "CloseAccount":false,
    "DaysToHoldFunds":0,
    "IsIncoming":true
-}
-```
-
-Here's the final template for this API request:
-
-```
-POST apiURL/v1.0/accounts/{accountId}/transfers/ach
-```
-
-### Response
-
-In response to this API request, you will receive a JSON dictionary containing detailed information about the transfer.
-
-```javascript
-{
-  "Id": "0306a11e-a13c-4741-6cec-08d7bc5cbf81",
-  "AccountId": 0,
-  "Mechanism": "ACH",
-  "IsDeposit": true,
-  "Status": "Submitted",
-  "Amount": 50,
-  "TotalAmount": 0,
-  "CreatedAt": "2020-03-17T17:00:17.0566667Z",
-  "ClearingAccountNumber": "5DP05506"
-}
-```
-
-### Common Mistakes
-
-Here are some of the common mistakes that developers make when attempting to send a request to deposit or withdraw funds.
-
-#### Failing to Specify the Et-App-Key Parameter
-
-If you specify the wrong Et-App-Key parameter or fail to include it in the header altogether, you'll get the following error:
-
-```javascript
-{
-    "error": "Application key is not defined or does not exist"
 }
 ```

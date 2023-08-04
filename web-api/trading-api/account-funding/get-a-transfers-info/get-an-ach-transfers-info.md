@@ -6,7 +6,7 @@ description: Retrieve information about an ACH transfer
 
 ### Overview
 
-This GET endpoint enables you to retrieve detailed information about an ACH transfer.
+This endpoint enables you to retrieve detailed information about an ACH transfer.
 
 {% swagger baseUrl="baseURL" path="/v{apiVersion}/transfers/ach/{transferID}" method="get" summary="Get an ACH Transfer's Info" %}
 {% swagger-description %}
@@ -32,9 +32,9 @@ The unique key of your app that identifies it when communicating with our servic
 {% swagger-parameter in="header" name="Authorization" type="string" %}
 Authorization token. Must be provided in the following format: 
 
-`Bearer token `
+`Bearer token`
 
-(
+ (
 
 `Bearer`
 
