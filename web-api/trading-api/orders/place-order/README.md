@@ -41,7 +41,7 @@ The body of this request represents the information about the to-be-created orde
 | ExpireDate              | This is the expiration of the order. If the order isn't executed until the specified date, it'll automatically be cancelled.                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Type                    | This is the type of the order. The range of possible values includes: **Market**, **Limit**, **Stop**, **Stop Limit**.                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Side                    | This is the side of the trade. The range of possible values includes: **Buy**, **Sell**, **SellShort**, **BuyToCover**.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ExecInst                | Indicates if the order should be filled either entirely in one transaction or not at all. Possible values: **'DoNotIncrease'**, **'DoNotReduce'**, **'AllOrNone'**.                                                                                                                                                                                                                                                                                                                                                               |
+| ExecInst                | Indicates if the order should be filled either entirely in one transaction or not at all. Possible value: **'AllOrNone'**.                                                                                                                                                                                                                                                                                                                                                                                                        |
 | TimeInforce             | <p>Indicates the time frame in which the order will be active. Possible Values:</p><ol><li><strong>Day</strong>. The order automatically expires at the end of the regular trading session if it weren't executed.</li><li><strong>GoodTillCancel</strong> (Good-till-Canceled). The order persists indefinitely until it is executed or manually cancelled.</li><li><strong>GoodTillDate</strong>. The order will be active until the date specified in the ExpireDate attribute (unless it is executed or cancelled).</li></ol> |
 | Quantity                | The number of shares in the order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Price                   | The price at which the shares must be purchased.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -110,7 +110,7 @@ The body of this request represents the information about the to-be-created orde
   "Type": "Limit",
   "Side": "Buy",
   "Price":170,
-  "ExecInst": "DoNotIncrease",
+  "ExecInst": "AllOrNone",
   "TimeInforce": "Day",
   "Quantity": 1,
 }
@@ -125,7 +125,7 @@ The body of this request represents the information about the to-be-created orde
   "Type": "Limit",
   "Side": "Buy",
   "Price":170,
-  "ExecInst": "DoNotIncrease",
+  "ExecInst": "AllOrNone",
   "TimeInforce": "Day",
   "Quantity": 1,
   "Legs": [{ //simultaneously buying the Apple stock
