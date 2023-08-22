@@ -2,7 +2,7 @@
 
 ### Exploring the Trade Ticket Widget
 
-By using the Trade Ticket widget, you can place three types of trades: Simple, OTO or OCO. To place an order, you enter the symbol name, number of securities, the exchange market \(auto, Nasdaq, NYSE, KNIGHT\), order type \(Market, Limit, Stop, Stop Limit, Trailing Stop, Trailing Stop Limit\) and the duration of the trade: Day or Good Till Canceled. You can place your order right after you finish filling the entries of the ticket.
+By using the Trade Ticket widget, you can place three types of trades: Simple, OTO or OCO. To place an order, you enter the symbol name, number of securities, the exchange market (auto, Nasdaq, NYSE, KNIGHT), order type (Market, Limit, Stop, Stop Limit, Trailing Stop, Trailing Stop Limit) and the duration of the trade: Day or Good Till Canceled. You can place your order right after you finish filling the entries of the ticket.
 
 ### Trade Types
 
@@ -12,15 +12,15 @@ This is the regular trade in which securities are purchased, sold, sold short, o
 
 ![](../../../../.gitbook/assets/screenshot-2020-03-20-at-19.30.47.png)
 
-#### OTO \(One Triggers the Other\)
+#### OTO (One Triggers the Other)
 
 A one triggers the other orders involves two orders—a primary order and a secondary order. The primary order may be a live order at the marketplace. The secondary order, held in a separate order file, will be triggered automatically once the primary order gets executed.
 
 ![](../../../../.gitbook/assets/screenshot-2020-03-20-at-19.34.11.png)
 
-#### OCO \(One Cancels the Other\)
+#### OCO (One Cancels the Other)
 
-A one-cancels-the-other order \(OCO\) combines a stop order with a limit order on an automated trading platform. When either the stop or limit level is reached and the order executed, the other order will be automatically canceled.
+A one-cancels-the-other order (OCO) combines a stop order with a limit order on an automated trading platform. When either the stop or limit level is reached and the order executed, the other order will be automatically canceled.
 
 ![](../../../../.gitbook/assets/screenshot-2020-03-20-at-19.34.39.png)
 
@@ -28,11 +28,11 @@ A one-cancels-the-other order \(OCO\) combines a stop order with a limit order o
 
 Whenever a new order is placed, be it a limit or a stop order, it is important to consider which price will trigger the execution of the order and at which price it'll eventually be executed. The following table outlines which price types will serve as references for triggering and execution of various order types:
 
-| Event | Buy order | Sell orders |
-| :---: | :---: | :---: |
-| Triggering of **Limit** orders | **Ask** | **Bid** |
-| Triggering of **Stop** orders | **Last** | **Last** |
-| Order Execution | **Ask** \(if there's no Ask price, the order will be filled at the Last price\) | **Bid** \(if there's no Bid price, the order will be filled at the Last price\) |
+|              Event             |                                   Buy order                                   |                                  Sell orders                                  |
+| :----------------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| Triggering of **Limit** orders |                                    **Ask**                                    |                                    **Bid**                                    |
+|  Triggering of **Stop** orders |                                    **Last**                                   |                                    **Last**                                   |
+|         Order Execution        | **Ask** (if there's no Ask price, the order will be filled at the Last price) | **Bid** (if there's no Bid price, the order will be filled at the Last price) |
 
 #### Chart Price Technicalities
 
@@ -46,5 +46,10 @@ For example, suppose you place a buy stop order with a stop price of $14.7. On t
 This behavior happens only in ETNA Trader's demo emulation environment. Once you proceed to use a live trading environment, all of your orders will be properly executed at the execution venue.
 {% endhint %}
 
- 
+### Solicited Orders
 
+A solicited order is an order to buy or sell a security that is suggested by a broker.&#x20;
+
+Based on your broker's settings, you might have the option to specify whether the order was solicited by checking the 'Is Solicited' checkbox within the Trade Ticket.
+
+<figure><img src="../../../../.gitbook/assets/isSolicited.png" alt=""><figcaption></figcaption></figure>
