@@ -45,11 +45,3 @@ For example, suppose you place a buy stop order with a stop price of $14.7. On t
 {% hint style="info" %}
 This behavior happens only in ETNA Trader's demo emulation environment. Once you proceed to use a live trading environment, all of your orders will be properly executed at the execution venue.
 {% endhint %}
-
-### Solicited Orders
-
-A solicited order is an order to buy or sell a security that is suggested by a broker.&#x20;
-
-Based on your broker's settings, you might have the option to specify whether the order was solicited by checking the 'Is Solicited' checkbox within the Trade Ticket.
-
-<figure><img src="../../../../.gitbook/assets/isSolicited.png" alt=""><figcaption></figcaption></figure>
