@@ -241,6 +241,7 @@
     * [Positions](web-api/trading-api/streaming-data/positions.md)
     * [Watchlists](web-api/trading-api/streaming-data/watchlists.md)
     * [Account Balances](web-api/trading-api/streaming-data/account-balances.md)
+    * [User Balance](web-api/trading-api/streaming-data/account-balances-1.md)
   * [Investigations](web-api/trading-api/investigations/README.md)
     * [Get An Account's Investigations](web-api/trading-api/investigations/get-an-accounts-investigations.md)
     * [Get A Request's Investigation Details](web-api/trading-api/investigations/get-a-requests-investigation-details.md)
