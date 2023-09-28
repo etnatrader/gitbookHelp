@@ -79,6 +79,7 @@
     * [Get User's Exchanges](web-api/trading-api/managing-users/get-users-exchanges.md)
     * [Modify User's Settings](web-api/trading-api/managing-users/modify-users-settings.md)
     * [Update User's Password](web-api/trading-api/managing-users/update-users-password.md)
+    * [Get Balance Information For A User](web-api/trading-api/managing-users/get-balance-information-for-a-user.md)
   * [Trading Accounts](web-api/trading-api/user-accounts/README.md)
     * [Get Account's Balance Info](web-api/trading-api/user-accounts/get-accounts-balance-info.md)
     * [Get All Accounts Of A User](web-api/trading-api/user-accounts/list-users-accounts.md)
