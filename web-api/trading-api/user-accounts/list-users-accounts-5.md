@@ -10,11 +10,7 @@ This API endpoint enables you to unbind a particular trading account from an exi
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="apiVersion" type="" required="true" %}
-The version of API. By default, set it to 
-
-`1.0`
-
-.
+The version of API. By default, set it to `1.0`.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="accountId" required="true" type="integer" %}
@@ -22,15 +18,7 @@ This is the internal id of the trading account which is to be unbound from an ex
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
-This is the authorization token from the token request. The value of this header must have the following format: 
-
-`Bearer BQ898r9fefi`
-
- (
-
-`Bearer`
-
- \+ 1 space + the token).
+This is the authorization token from the token request. The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Et-App-Key" required="true" %}

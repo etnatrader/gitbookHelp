@@ -8,11 +8,7 @@ This endpoint enables you to modify a bank name of the existing ACH relationship
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="apiVersion" type="String" required="true" %}
-The version of the API. By default it's 
-
-`1.0`
-
-.
+The version of the API. By default it's `1.0`.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="accountId" type="Integer" required="true" %}
@@ -24,15 +20,7 @@ The unique key of your app that identifies it when communicating with our servic
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="String" required="true" %}
-Authorization token. Must be provided in the following format: 
-
-`Bearer token`
-
- (
-
-`Bearer`
-
- \+ 1 space + the token)
+Authorization token. Must be provided in the following format: `Bearer token` (`Bearer` + 1 space + the token)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="id" type="String" required="true" %}

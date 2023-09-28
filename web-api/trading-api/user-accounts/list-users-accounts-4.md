@@ -10,23 +10,11 @@ This endpoint, depending on your permissions, enables you to retrieve the list o
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="apiVersion" type="" required="true" %}
-The version of API. By default, set it to 
-
-`1.0`
-
-.
+The version of API. By default, set it to `1.0`.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
-This is the authorization token from the token request. The value of this header must have the following format: 
-
-`Bearer BQ898r9fefi`
-
- (
-
-`Bearer`
-
- \+ 1 space + the token).
+This is the authorization token from the token request. The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Et-App-Key" required="true" %}
@@ -46,7 +34,7 @@ This field specifies the number of trading accounts to be displayed on a single 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="propertyName" type="String" %}
-This field determines the sorting order for the retrieved trading accounts. When you set this parameter, the trading accounts will be sorted based on the specified criterion. For instance, if you set the value to "Cash," the accounts will be sorted by their cash balance in ascending or descending order, depending on the isAscending parameter. 
+This field determines the sorting order for the retrieved trading accounts. When you set this parameter, the trading accounts will be sorted based on the specified criterion. For instance, if you set the value to "Cash," the accounts will be sorted by their cash balance in ascending or descending order, depending on the isAscending parameter.&#x20;
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="isAscending" type="Boolean" %}
@@ -58,26 +46,10 @@ This is a filter query used to retrieve trading accounts that meet the specified
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="mask" type="String" %}
-Mask field refers to a pattern that can be used to find a specific account.
-
+Mask field refers to a pattern that can be used to find a specific account.\
 \
-
-
-
-
+It allows to search accounts by phone, email, account number, first and last name.\
 \
-
-
-It allows to search accounts by phone, email, account number, first and last name.
-
-\
-
-
-
-
-\
-
-
 To use the "mask" field, simply provide the value you are searching for. For example, if you are looking for an account with the email "johnsmith@gmail.com," you can provide that exact string as the argument. The API will then return any matching accounts based on the provided value.
 {% endswagger-parameter %}
 

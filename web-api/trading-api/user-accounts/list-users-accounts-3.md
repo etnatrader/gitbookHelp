@@ -16,11 +16,7 @@ It is an ISO 8601 timestamp representing a date and time in Coordinated Universa
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="apiVersion" type="" required="true" %}
-The version of API. By default, set it to 
-
-`1.0`
-
-.
+The version of API. By default, set it to `1.0`.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="accountId" required="true" type="integer" %}
@@ -28,15 +24,7 @@ Internal ETNA Trader ID of the trading account.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
-This is the authorization token from the token request. The value of this header must have the following format: 
-
-`Bearer BQ898r9fefi`
-
- (
-
-`Bearer`
-
- \+ 1 space + the token).
+This is the authorization token from the token request. The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Et-App-Key" required="true" %}
@@ -44,11 +32,11 @@ This is your app’s unique key that can be retrieved from the BO Companies widg
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="startDate	" required="true" type="date-time" %}
-The start date of the target period. 
+The start date of the target period.&#x20;
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="endDate" required="true" type="date-time" %}
-The end date of the target period. 
+The end date of the target period.&#x20;
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="step" required="true" type="integer" %}

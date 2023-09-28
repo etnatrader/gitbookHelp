@@ -14,15 +14,7 @@ Version of the API. By default, set it to 1.0
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="String" required="true" %}
-This is the authorization token from the very first token request. The value of this header must have the following format: 
-
-`Bearer BQ898r9fefi`
-
- (
-
-`Bearer`
-
- \+ 1 space + the token).
+This is the authorization token from the very first token request. The value of this header must have the following format: `Bearer BQ898r9fefi` (`Bearer` + 1 space + the token).
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Successful request, the list of security images is returned." %}
