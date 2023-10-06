@@ -29,7 +29,7 @@ Find more information about features of ETNA Trader here: [https://www.etnasoft.
 
 Open  a demo account:  [http://demo.etnatrader.com/User/UserInformationEntry](http://demo.etnatrader.com/User/UserInformationEntry)
 
-Watch a video overview of a web trading platform:
+Watch a video overview of a web trading platform: [https://www.youtube.com/watch?v=yS12523JVN8](https://www.youtube.com/watch?v=yS12523JVN8)
 
-{% embed url="https://www.youtube.com/watch?v=yS12523JVN8" %}
+
 
