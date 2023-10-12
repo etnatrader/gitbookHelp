@@ -176,6 +176,7 @@
     * [Get an Option Chain](web-api/trading-api/securities/get-an-option-chain.md)
     * [Get Filtered Options](web-api/trading-api/securities/get-filtered-options/README.md)
       * [Syntax](web-api/trading-api/securities/get-filtered-options/securities\_getoptions.md)
+    * [Get Company Logo By Symbol](web-api/trading-api/securities/get-company-logo-by-symbol.md)
   * [Watchlists](web-api/trading-api/watchlists/README.md)
     * [Add Security to Watchlist by ID](web-api/trading-api/watchlists/add-security-to-watchlist-by-id/README.md)
       * [Syntax](web-api/trading-api/watchlists/add-security-to-watchlist-by-id/watchlists\_addsecuritybyid.md)
