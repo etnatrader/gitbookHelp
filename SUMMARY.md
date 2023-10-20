@@ -17,7 +17,7 @@
         * [Wire Transfers](user-guide/web-terminal/user-widgets/account-onboarding/account-funding/wire-transfers.md)
     * [Chart](user-guide/web-terminal/user-widgets/chart.md)
     * [News](user-guide/web-terminal/user-widgets/news.md)
-    * [Apollo News](user-guide/web-terminal/user-widgets/news-1.md)
+    * [Apollo News](user-guide/web-terminal/user-widgets/apollo-news.md)
     * [Trade Ticket](user-guide/web-terminal/user-widgets/trade-ticket/README.md)
       * [Mutual Funds Trade Ticket](user-guide/web-terminal/user-widgets/trade-ticket/mutual-funds-trade-ticket.md)
     * [Watchlists](user-guide/web-terminal/user-widgets/watchlists.md)
